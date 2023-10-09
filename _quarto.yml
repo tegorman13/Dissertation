@@ -43,3 +43,8 @@ format:
       - style.scss
     code-link: true
     html-math-method: mathjax
+    citations-hover: true
+
+
+bibliography: [Bib/IGAS.bib]
+csl: Bib/apa7.csl
