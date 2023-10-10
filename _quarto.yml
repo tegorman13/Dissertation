@@ -1,6 +1,8 @@
 project:
-  type: book
+  type: website
   output-dir: docs
+  preview:
+    port: 4205
   render:
     - "*.qmd"
     - "!ME*"
@@ -12,29 +14,25 @@ exclude: ["*.rds","*.tex","*.csl","*.bib","docs*","404.html","_old*","out.bib",
 
 # Exclude all files in HTW_Analysis folder, recursively
 
-book:
+
+
+website:
   title: "Dissertation"
   reader-mode: true
-  chapters:
-    - index.md
-    - plan.qmd
-    - outline.qmd
-    - Introduction.qmd
-    - IGAS.qmd
-    - HTW.qmd
-    - Discussion.qmd
-
-   
-
-# book:
-#   title: "Dissertation"
-#   navbar:
-#     left:
-#       - text: Outline
-#         file: Outline.qmd
-      
-
-
+  page-navigation: true
+  sidebar:
+    style: "docked"
+    border: false
+    collapse-level: 2
+    pinned: false
+    contents:
+      - index.md
+      - plan.qmd
+      - outline.qmd
+      - Introduction.qmd
+      - IGAS.qmd
+      - HTW.qmd
+      - Discussion.qmd
 
 format:
   html:
@@ -48,3 +46,31 @@ format:
 
 bibliography: [Bib/IGAS.bib]
 csl: Bib/apa7.csl
+
+
+
+
+# book:
+#   title: "Dissertation"
+#   reader-mode: true
+#   chapters:
+#     - index.md
+#     - plan.qmd
+#     - outline.qmd
+#     - Introduction.qmd
+#     - IGAS.qmd
+#     - HTW.qmd
+#     - Discussion.qmd
+
+   
+
+# book:
+#   title: "Dissertation"
+#   navbar:
+#     left:
+#       - text: Outline
+#         file: Outline.qmd
+      
+
+
+
