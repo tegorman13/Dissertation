@@ -17,7 +17,9 @@ book:
   reader-mode: true
   chapters:
     - index.md
+    - plan.qmd
     - outline.qmd
+    - Introduction.qmd
     - IGAS.qmd
     - HTW.qmd
     - Discussion.qmd
@@ -40,3 +42,9 @@ format:
       - cosmo
       - style.scss
     code-link: true
+    html-math-method: mathjax
+    citations-hover: true
+
+
+bibliography: [Bib/IGAS.bib]
+csl: Bib/apa7.csl
