@@ -18,6 +18,8 @@ exclude: ["*.rds","*.tex","*.csl","*.bib","docs*","404.html","_old*","out.bib",
 
 website:
   title: "Dissertation"
+  repo-url: https://github.com/tegorman13/Dissertation
+  site-url: "https://tegorman13.github.io/Dissertation/"
   reader-mode: true
   page-navigation: true
   sidebar:
