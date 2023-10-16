@@ -395,7 +395,10 @@ on how many units away the ball was from the exact center of the target.
 [Link to abbrevaited example of
 task](https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html){target="_blank"}.
 
-![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](../Assets/methodsFig1.png){#fig-igasTask}
+![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](Assets/methodsFig1.png){#fig-igasTask}
+
+
+
 
 ### Results
 

@@ -2,7 +2,7 @@
 title: HTW Project
 date: last-modified
 page-layout: full
-bibliography: "Bib/HTW.bib"
+bibliography: "Assets/Bib/HTW.bib"
 code-fold: true
 code-tools: true
 execute: 

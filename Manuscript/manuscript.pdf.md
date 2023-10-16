@@ -316,7 +316,10 @@ on how many units away the ball was from the exact center of the target.
 [Link to abbrevaited example of
 task](https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html){target="_blank"}.
 
-![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](../Assets/methodsFig1.png){#fig-igasTask}
+![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](Assets/methodsFig1.png){#fig-igasTask}
+
+
+
 
 ### Results
 
@@ -1467,9 +1470,9 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 \hline
 Condition & Q\_0\%\_mean & Q\_25\%\_mean & Q\_50\%\_mean & Q\_75\%\_mean & Q\_100\%\_mean\\
 \hline
-Constant & -0.110 & 0.483 & 0.692 & 0.931 & 1.39\\
+Constant & -0.106 & 0.478 & 0.690 & 0.932 & 1.39\\
 \hline
-Varied & -0.204 & 0.273 & 0.586 & 0.903 & 1.30\\
+Varied & -0.199 & 0.266 & 0.588 & 0.900 & 1.29\\
 \hline
 \end{tabular}
 

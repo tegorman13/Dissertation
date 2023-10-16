@@ -313,7 +313,10 @@ on how many units away the ball was from the exact center of the target.
 [Link to abbrevaited example of
 task](https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html){target="_blank"}.
 
-![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](../Assets/methodsFig1.png){#fig-igasTask}
+![The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square](Assets/methodsFig1.png){#fig-igasTask}
+
+
+
 
 ### Results
 
@@ -1924,18 +1927,18 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 <tbody>
   <tr>
    <td style="text-align:left;"> Constant </td>
-   <td style="text-align:right;"> -0.110 </td>
-   <td style="text-align:right;"> 0.482 </td>
-   <td style="text-align:right;"> 0.688 </td>
-   <td style="text-align:right;"> 0.928 </td>
+   <td style="text-align:right;"> -0.11 </td>
+   <td style="text-align:right;"> 0.480 </td>
+   <td style="text-align:right;"> 0.691 </td>
+   <td style="text-align:right;"> 0.931 </td>
    <td style="text-align:right;"> 1.4 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Varied </td>
-   <td style="text-align:right;"> -0.203 </td>
-   <td style="text-align:right;"> 0.270 </td>
-   <td style="text-align:right;"> 0.583 </td>
-   <td style="text-align:right;"> 0.896 </td>
+   <td style="text-align:right;"> -0.20 </td>
+   <td style="text-align:right;"> 0.266 </td>
+   <td style="text-align:right;"> 0.584 </td>
+   <td style="text-align:right;"> 0.893 </td>
    <td style="text-align:right;"> 1.3 </td>
   </tr>
 </tbody>
