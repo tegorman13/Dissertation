@@ -13,8 +13,8 @@ execute:
 ```{r}
 pacman::p_load(tidyverse,knitr,kableExtra)
 
-```
 
+```
 # Introduction 
 
 In project 1, we applied model-based techniques to quantify and control for the
@@ -355,7 +355,7 @@ root-mean squared deviation (RMSE), and by maximizing log likelihood. Because AL
 has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also
 fit the extended EXAM version of the model, which operates identically to ALM during training, 
 but includes a linear extrapolation mechanism for generating novel responses during testing. 
-
+[@albaretDifferentialEffectsTask1998]
 \
 \
 \

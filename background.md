@@ -1,6 +1,200 @@
----
-title: Introduction
----
+
+
+# An instance-based model account of the benefits of varied practice in visuomotor skill
+
+## Abstract
+
+Exposing learners to variability during training has been demonstrated
+to improve performance in subsequent transfer testing. Such variability
+benefits are often accounted for by assuming that learners are
+developing some general task schema or structure. However much of this
+research has neglected to account for differences in similarity between
+varied and constant training conditions. In a between-groups
+manipulation, we trained participants on a simple projectile launching
+task, with either varied or constant conditions. We replicate previous
+findings showing a transfer advantage of varied over constant training.
+Furthermore, we show that a standard similarity model is insufficient to
+account for the benefits of variation, but, if the model is adjusted to
+assume that varied learners are tuned towards a broader generalization
+gradient, then a similarity-based model is sufficient to explain the
+observed benefits of variation. Our results therefore suggest that some
+variability benefits can be accommodated within instance-based models
+without positing the learning of some schemata or structure.
+
+The past century of research on human learning has produced ample
+evidence that although learners can improve at almost any task, such
+improvements are often specific to the trained task, with unreliable or
+even nonexistent transfer to novel tasks or conditions
+[@barnettWhenWhereWe2002; @dettermanCaseProsecutionTransfer1993]. Such
+transfer challenges are of noteworthy practical relevance, given that
+educators, trainers, and rehabilitators typically intend for their
+students to be able to apply what they have learned to new situations.
+It is therefore important to better understand the factors that
+influence transfer, and to develop cognitive models that can predict
+when transfer is likely to occur. The factor of interest to the present
+investigation is variation during training. Our experiments add to the
+longstanding empirical investigation of the controversial relationship
+between training variation, and subsequent transfer. We also offer a
+novel explanation for such results in the form of an instance-based
+model that accounts for the benefits of variation in simple terms of
+psychological similarity. We first review the relevant concepts and
+literature.
+
+## Similarity and instance-based approaches to transfer of learning
+
+Notions of similarity have long played a central role in many prominent
+models of generalization of learning, as well as in the longstanding
+theoretical issue of whether learners abstract an aggregate, summary
+representation, or if they simply store individual instances. Early
+models of learning often assumed that discrete experiences with some
+task or category were not stored individually in memory, but instead
+promoted the formation of a summary representation, often referred to as
+a prototype or schema, and that exposure to novel examples would then
+prompt the retrieval of whichever preexisting prototype was most similar
+[@posnerGenesisAbstractIdeas1968]. Prototype
+models were later challenged by the success of instance-based or
+exemplar models -- which were shown to provide an account of
+generalization as good or better than prototype models, with the
+advantage of not assuming the explicit construction of an internal
+prototype [@estesClassificationCognition1994;
+@hintzmanMINERVASimulationModel1984;
+@medinContextTheoryClassification1978;
+@nosofskyAttentionSimilarityIdentificationcategorization1986 ].
+Instance-based models assume that learners encode each experience with a
+task as a separate instance/exemplar/trace, and that each encoded trace
+is in turn compared against novel stimuli. As the number of stored
+instances increases, so does the likelihood that some previously stored
+instance will be retrieved to aid in the performance of a novel task.
+Stored instances are retrieved in the context of novel stimuli or tasks
+if they are sufficiently similar, thus suggesting that the process of
+computing similarity is of central importance to generalization.
+
+Similarity, defined in this literature as a function of psychological
+distance between instances or categories, has provided a successful
+account of generalization across numerous tasks and domains. In an
+influential study demonstrating an ordinal similarity effect,
+experimenters employed a numerosity judgment task in which participants
+quickly report the number of dots flashed on a screen. Performance (in
+terms of response times to new patterns) on novel dot configurations
+varied as an inverse function of their similarity to previously trained
+dot configurations @palmeriExemplarSimilarityDevelopment1997. That is, performance was better on
+novel configurations moderately similar to trained configurations than
+to configurations with low-similarity, and also better on low-similarity
+configurations than to even less similar, unrelated configurations.
+Instance-based approaches have had some success accounting for
+performance in certain sub-domains of motor learning [@cohenWhereGraspsAre2004; @crumpEpisodicContributionsSequential2010; @meighWhatMemoryRepresentation2018; @poldrackRelationshipSkillLearning1999; @wifallReachingResponseSelection2017; @crumpEpisodicContributionsSequential2010] trained participants to type words on an unfamiliar keyboard, while constraining the letters composing the training words to a pre-specified letter set. Following
+training, typing speed was tested on previously experienced words
+composed of previously experienced letters; novel words composed of
+letters from the trained letter set; and novel words composed of letters
+from an untrained letter set. Consistent with an instance-based account,
+transfer performance was graded such that participants were fastest at
+typing the words they had previously trained on, followed by novel words
+composed of letters they had trained on, and slowest performance for new
+words composed of untrained letters.
+
+## The effect of training variability on transfer
+
+While similarity-based models account for transfer by the degree of
+similarity between previous and new experiences, a largely separate body
+of research has focused on improving transfer by manipulating
+characteristics of the initial training stage. Such characteristics have
+included training difficulty, spacing, temporal order, feedback
+schedules, and the primary focus of the current work -- variability of
+training examples.
+
+Research on the effects of varied training typically compares
+participants trained under constant, or minimal variability conditions
+to those trained from a variety of examples or conditions [@czyzVariabilityPracticeInformation2021; @soderstromLearningPerformanceIntegrative2015]. Varied training has been shown to influence
+learning in myriad domains including categorization of simple stimuli [@hahnEffectsCategoryDiversity2005; @maddoxStimulusRangeDiscontinuity2011; @posnerGenesisAbstractIdeas1968],
+complex categorization [@nosofskyModelguidedSearchOptimal2018], language learning [@jonesDensityDistinctivenessEarly2020; @perryLearnLocallyThink2010; @twomeyAllRightNoises2018; @wonnacottInputEffectsAcquisition2012], anagram completion [@goodeSuperiorityVariableRepeated2008], trajectory
+extrapolation [@fulvioTaskSpecificResponseStrategy2014], task switching [@sabahWhenLessMore2019], associative learning [@leeEvidentialDiversityIncreases2019], visual search [@georgeStimulusVariabilityTask2021; @gonzalezDiversityTrainingEnhances2011; @kelleyLearningAttendEffects2009], voice
+identity learning [@lavanEffectsHighVariability2019], simple motor learning [@braunMotorTaskVariation2009; @kerrSpecificVariedPractice1978; @rollerVariablePracticeLenses2001; @willeyLimitedGeneralizationVaried2018],
+sports training  [@greenPracticeVariabilityTransfer1995; @greenPracticeVariabilityTransfer1995a @northEffectConsistentVaried2019], and training
+on a complex video game [@seowTransferEffectsVaried2019].
+
+Training variation has received a particularly large amount of attention
+within the domain of visuomotor skill learning. Much of this research
+has been influenced by the work of @schmidtSchemaTheoryDiscrete1975, who proposed a
+schema-based account of motor learning as an attempt to address the
+longstanding problem of how novel movements are produced. According to
+Schema Theory, learners possess general motor programs for classes of
+movements (e.g. throwing a ball with an underhand movement), as well as
+schema rules that determine how a motor program is parameterized or
+scaled for a particular movement. Schema theory predicts that varied
+training results in the formation of a more general schema-rule, which
+can allow for transfer to novel movements within a given movement class.
+Experiments that test this hypothesis are often designed to compare the
+transfer performance of a constant-trained group against that of a
+varied-trained group. Both groups train on the same task, but the varied
+group practices from multiple levels of a task-relevant dimension that
+remains invariant for the constant group. For example, investigators
+might train two groups of participants to throw a projectile at a
+target, with a constant group that throws from a single location, and a
+varied group that throws from multiple locations. Both groups are then
+tested from novel locations. Empirically observed benefits of the
+varied-trained group are then attributed to the variation they received
+during training, a finding observed in numerous studies [@catalanoDistantTransferCoincident1984a; @chuaPracticeVariabilityPromotes2019; @goodwinEffectDifferentQuantities1998; @kerrSpecificVariedPractice1978; @wulfEffectTypePractice1991], and the benefits of this variation are typically
+thought to be mediated by the development of a more general schema for
+the throwing motion.
+
+Of course, the relationship between training variability and transfer is
+unlikely to be a simple function wherein increased variation is always
+beneficial. Numerous studies have found null, or in some cases negative
+effects of training variation [@deloshExtrapolationSineQua1997; @sinkeviciuteRoleInputVariability2019; @wrisbergVariabilityPracticeHypothesis1987], and many more have suggested that the
+benefits of variability may depend on additional factors such as prior
+task experience, the order of training trials, or the type of transfer
+being measured [@bernikerEffectsTrainingBreadth2014; @braithwaiteEffectsVariationPrior2015; @hahnEffectsCategoryDiversity2005; @lavanEffectsHighVariability2019; @northEffectConsistentVaried2019; @sadakataIndividualAptitudeMandarin2014; @zamanPerceptualVariabilityImplications2021]. 
+
+## Issues with Previous Research
+
+Although the benefits of training variation in visuomotor skill learning
+have been observed many times, null findings have also been repeatedly
+found, leading some researchers to question the veracity of the
+variability of practice hypothesis [@newellSchemaTheory19752003; @vanrossumSchmidtSchemaTheory1990].
+Critics have also pointed out that investigations of the effects of
+training variability, of the sort described above, often fail to control
+for the effect of similarity between training and testing conditions.
+For training tasks in which participants have numerous degrees of
+freedom (e.g. projectile throwing tasks where participants control the x
+and y velocity of the projectile), varied groups are likely to
+experience a wider range of the task space over the course of their
+training (e.g. more unique combinations of x and y velocities).
+Experimenters may attempt to account for this possibility by ensuring
+that the training location(s) of the varied and constant groups are an
+equal distance away from the eventual transfer locations, such that
+their training throws are, on average, equally similar to throws that
+would lead to good performance at the transfer locations. However, even
+this level of experimental control may still be insufficient to rule out
+the effect of similarity on transfer. Given that psychological
+similarity is typically best described as either a Gaussian or
+exponentially decaying function of psychological distance [@ennisMultidimensionalStochasticTheory1988; @ghahramaniGeneralizationLocalRemappings1996; @loganInstanceTheoryAutomatization1988; @nosofskySimilarityScalingCognitive1992; @shepardUniversalLawGeneralization1987; @thoroughmanRapidReshapingHuman2005 ], it is plausible that a subset of the
+most similar training instances could have a disproportionate impact on
+generalization to transfer conditions, even if the average distance
+between training and transfer conditions is identical between groups.
+Figure 1 demonstrates the consequences of a generalization gradient that
+drops off as a Gaussian function of distance from training, as compared
+to a linear drop-off.
+
+In addition to largely overlooking the potential for non-linear
+generalization to confound interpretations of training manipulations,
+the visuomotor skill learning literature also rarely considers
+alternatives to schema representations [@chamberlinMemoryRepresentationMotor1992].
+Although schema-theory remains influential within certain literatures,
+instance or exemplar-based models have accounted for human behavior
+across myriad domains [@jamiesonInstanceTheoryDomaingeneral2022; @loganInstanceTheoryAttention2002a]. As mentioned above, instance based accounts have been shown to perform well on a
+variety of different tasks with motoric components [@crumpEpisodicContributionsSequential2010;@gandolfoMotorLearningField1996a;  @meighWhatMemoryRepresentation2018; @rosenbaumPlanningReachesEvaluating1995; @vandamMappingShapeVisuomotor2015]. However, such accounts have received little
+attention within the subdomain of visuomotor skill learning focused on
+the benefits of varied training.
+
+The present work examines whether the commonly observed benefits of
+varied training can be accounted for by between-group differences in
+similarity between training and testing throws. We first attempt to
+replicate previous work finding an advantage of varied training over
+constant training in a projectile launching task. We then examine the
+extent to which this advantage can be explained by an instance-based
+similarity model.
+
+# Quals
 
 # Variability and Generalization
 
@@ -70,3 +264,5 @@ In addition to the influence of prior experiences described above, ample evidenc
 A final important influence of particular relevance to the practice-sequence literature concerns the exact structure of "random" sequencing. Although the term random is commonly used for convenience, experimenters do not typically leave the order of training entirely up to chance. Rather, the training sequence is often constrained such that each condition must occur a minimum number of times in each quartile of the training phase, thus resulting in an even distribution the conditions throughout training. While the assurance of the conditions being evenly spread throughout training is consistent across studies, other aspects of the sequence structure are a bit more idiosyncratic. Some researchers report setting a maximum number of consecutive repetitions, e.g. no more than 2 consecutive trials of the same condition (Del Rey et al., 1982; J. B. Shea & Morgan, 1979), or structure the random trials such that the same condition never occurs consecutively (Wulf, 1991). Also common is to structure experiments such that random condition really consists of many small blocks, where participants do a few trials of one condition consecutively and then switch to another condition [@willeyLongtermMotorLearning2018; @chuaPracticeVariabilityPromotes2019; @wrisbergVariabilityPracticeHypothesis1987], resulting in much more switches than would arise if training was perfectly blocked. The question of whether such differences in the structure of random sequencing are consequential has been addressed experimentally a few times, in all cases consisting of a 1) a no-repeat random condition; 2) a blocked random condition (typically 3 or 4 repeats before a switch); and 3) a standard fully-blocked condition. Blocked-random training resulted in better performance than either repeat-random, or fully - blocked training in both a bean-bag throwing (Pigott & Shapiro, 1984), and basketball shot training study (Landin & Hebert, 1997), and in a replication plus extension of the seminal Shea and Morgan (1979) study, blocked-random training was equally effective as no-repeat random training, with both random structures leading to better performance than the fully-blocked training condition. Consequences on different study schedules have also been repeatedly observed in the category learning literature (Carvalho & Goldstone, 2014, 2017). This line of research has revealed that the effects of blocking vs. interleaving can depend on the structure of the category being learned, and also that the different schedules can result in the participants requiring different representations. A fruitful line of inquiry in the motor skill learning literature may be to attempt to identify whether structural aspects of the motor task interact with different training sequences in a reliable manner.
 
 Numerous researchers have attempted to provide coherent frameworks to account for the full range of influences of training variation and sequencing described above (along with many other effects not discussed). Such accounts are generally quite similar, invoking ideas of desirable levels of difficulty(Bjork & Bjork, 2011; R.A. Schmidt & Bjork, 1992), or optimal challenge points (Guadagnoli & Lee, 2004). They tend to start by describing the dissociation between acquisition performance (performance during training) and testing performance (delayed retention and/or transfer), most strikingly observed as varied/random training participants performing worse than their constant/blocked counterparts during the training stage of the study, but then outperforming the constant/blocked comparisons at a later retention or transfer stage. This observation is then used to justify the idea that the most enduring and generalizable learning occurs by training at an optimal level of training difficulty, with difficulty being some function of the experience of the learner, and the cognitive or visuomotor processing demands of the task. It then follows that the factors that tend to make training more difficult (i.e. increased variability or randomization), are more likely to be beneficial when the learner has some experience, or when the processing demands of the task are not too extreme (which may only occur after some experience with the task). Such frameworks may be helpful heuristics in some cases, but they also seem to be overly flexible such that any null result of some intervention might be accounted for by a suboptimal amount of training trials, or by suggesting the training task was too difficult. The development of computational models that can account for how changes in the parameters of the motor-skill task scale with difficulty, would be a great step forward.
+
+

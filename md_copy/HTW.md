@@ -13,8 +13,8 @@ execute:
 ```{r}
 pacman::p_load(tidyverse,knitr,kableExtra)
 
-```
 
+```
 # Introduction 
 
 In project 1, we applied model-based techniques to quantify and control for the
@@ -300,6 +300,7 @@ See Table 2A for a full specification of the equations that define ALM and EXAM.
 ## Model Equations
 
 ```{r ALM_Table }
+#| results: 'asis'
 
 text_tbl <- data.frame(
     'Step'=c("Input Activation","Output Activation","Output Probability","Mean Output","Feedback Activation","Update Weights","Extrapolation",""),
@@ -336,7 +337,7 @@ almTable=kable(text_tbl, 'html',
   pack_rows("ALM Learning",5,6,bold=FALSE,italic=TRUE) %>%
   pack_rows("EXAM",7,8,bold=FALSE,italic=TRUE)
   #save_kable(file="almTable.html",self_contained=T)
-almTable
+cat(almTable)
 
 
 
@@ -354,7 +355,7 @@ root-mean squared deviation (RMSE), and by maximizing log likelihood. Because AL
 has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also
 fit the extended EXAM version of the model, which operates identically to ALM during training, 
 but includes a linear extrapolation mechanism for generating novel responses during testing. 
-
+[@albaretDifferentialEffectsTask1998]
 \
 \
 \

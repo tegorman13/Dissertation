@@ -1,5 +1,5 @@
 ---
-title: IGAS Project
+title: An instance-based model account of the benefits of varied practice in visuomotor skill
 date: last-modified
 #page-layout: full
 code-fold: true
@@ -50,6 +50,7 @@ gradient, then a similarity-based model is sufficient to explain the
 observed benefits of variation. Our results therefore suggest that some
 variability benefits can be accommodated within instance-based models
 without positing the learning of some schemata or structure.
+
 
 ```{r load, include=FALSE}
 source('Functions/IGAS_ProcessFunctions.R')
@@ -120,7 +121,7 @@ models were later challenged by the success of instance-based or
 exemplar models -- which were shown to provide an account of
 generalization as good or better than prototype models, with the
 advantage of not assuming the explicit construction of an internal
-prototype [@estesArrayModelsCategory1986;
+prototype [@estesClassificationCognition1994;
 @hintzmanMINERVASimulationModel1984;
 @medinContextTheoryClassification1978;
 @nosofskyAttentionSimilarityIdentificationcategorization1986 ].

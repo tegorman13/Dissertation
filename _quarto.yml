@@ -41,9 +41,9 @@ format:
     theme:
       - cosmo
       - style.scss
-    code-link: true
+    code-link: false
     html-math-method: mathjax
-    citations-hover: true
+    citations-hover: false
 
 
 bibliography: [Bib/IGAS.bib]

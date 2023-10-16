@@ -1,5 +1,6 @@
 {
 	"nodes":[
+		{"id":"6a537402f6f4664e","x":-1607,"y":-773,"width":400,"height":400,"type":"file","file":"IGAS.qmd"},
 		{"type":"file","file":"Dissertation_Proposal/tg.png","id":"2ea32363fb3a37f0","x":-2120,"y":-2600,"width":280,"height":615},
 		{"type":"file","file":"md_copy/plan.md","id":"2dc44d58c1f175dc","x":-1680,"y":-3003,"width":875,"height":711},
 		{"type":"file","file":"md_copy/Outline.md","id":"1864a0b2c71afd3c","x":-1772,"y":-2240,"width":1412,"height":1040}
