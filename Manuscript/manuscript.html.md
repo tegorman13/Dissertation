@@ -1927,19 +1927,19 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 <tbody>
   <tr>
    <td style="text-align:left;"> Constant </td>
-   <td style="text-align:right;"> -0.11 </td>
-   <td style="text-align:right;"> 0.480 </td>
-   <td style="text-align:right;"> 0.691 </td>
-   <td style="text-align:right;"> 0.931 </td>
-   <td style="text-align:right;"> 1.4 </td>
+   <td style="text-align:right;"> -0.108 </td>
+   <td style="text-align:right;"> 0.478 </td>
+   <td style="text-align:right;"> 0.689 </td>
+   <td style="text-align:right;"> 0.936 </td>
+   <td style="text-align:right;"> 1.39 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Varied </td>
-   <td style="text-align:right;"> -0.20 </td>
-   <td style="text-align:right;"> 0.266 </td>
-   <td style="text-align:right;"> 0.584 </td>
-   <td style="text-align:right;"> 0.893 </td>
-   <td style="text-align:right;"> 1.3 </td>
+   <td style="text-align:right;"> -0.198 </td>
+   <td style="text-align:right;"> 0.265 </td>
+   <td style="text-align:right;"> 0.587 </td>
+   <td style="text-align:right;"> 0.903 </td>
+   <td style="text-align:right;"> 1.30 </td>
   </tr>
 </tbody>
 </table>

@@ -4,6 +4,7 @@ project:
   render: 
     - "*.qmd"
    #- "!submissions/*.qmd"
+    - "!test_igas.qmd"
 
 bibliography: [../Assets/Bib/htw.bib]
 csl: ../Assets/Bib/apa7.csl
