@@ -1,0 +1,16 @@
+---
+title: "Dissertation"
+comments: false
+date-format: 'MMM YYYY'
+format:
+  html:
+    grid:
+      sidebar-width: 250px
+      body-width: 1400px
+      margin-width: 170px
+      gutter-width: 1.5rem
+    self-contained: false
+---
+
+
+# An instance-based model account of the benefits of varied practice in visuomotor skill

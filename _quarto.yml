@@ -34,8 +34,11 @@ website:
     border: false
     collapse-level: 2
     pinned: false
+    tools:
+    - icon: github
+      href: https://github.com/tegorman13/Dissertation
     contents:
-      - index.md
+      - index.qmd
       - text: "---"
       - paper.qmd
       - text: "---"
