@@ -5,6 +5,7 @@ project:
     port: 4205
   render:
     - "*.qmd"
+    - "!_*"
     - "!ME*"
     - "!Dissertation_Proposal"
     - "!_Dissertation_Proposal"
@@ -13,11 +14,10 @@ project:
 
   resources: 
     - "Manuscript/output/"
-    - "Manuscript/Assets"
 
 
-exclude: ["*.rds","*.tex","*.csl","*.bib","docs*","404.html","_old*","out.bib",
-"*.pdf","*.R",".obsidian","Rproj","R","Bib","_site","exp","HTW_Analysis/**","*HTW_Modelling/**","Motivated*","Manuscript*"]
+exclude: ["*.rds","*.tex","docs*","404.html","_old*","out.bib",
+"*.pdf","*.R",".obsidian","Rproj","R","Bib","_site","exp","HTW_Analysis/**","*HTW_Modelling/**","Motivated*"]
 
 # Exclude all files in HTW_Analysis folder, recursively
 
