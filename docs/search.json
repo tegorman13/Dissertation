@@ -154,6 +154,16 @@
     ]
   },
   {
+    "objectID": "Discussion.html",
+    "href": "Discussion.html",
+    "title": "Discussion",
+    "section": "",
+    "text": "library(xaringanthemer) # Create a xaringan style in a temporary file xaringan_themer_css &lt;- tempfile(“xaringan-themer-”, fileext = “.css”)\nstyle_xaringan( text_color = “#4a4a4a”, header_color = “#9f2042”, background_color = “#fcfcfc”, inverse_background_color = “#222222”, link_color = “#9f2042”, # code_highlight_color = rgba(255,255,0,0.5), inverse_text_color= “#4a4a4a”, inverse_header_color= “#222222”, inverse_link_color= “#9f2042”, title_slide_background_color= “#fcfcfc”, title_slide_text_color= “#9f2042”, header_background_color= “#222222”, header_background_text_color= “#222222”, outfile = “Style/xaringan_themer_css.css” # omit in your slides to write the # styles to xaringan-themer.css )\ne2&lt;- readRDS(‘data/igas_e2_cleanedData-final.rds’)%&gt;% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity) solSpace &lt;- e2 %&gt;% filter(trialType==11) #solSpace %&gt;% ggplot(aes(x=X_Velocity,y=Y_Velocity)) + geom_point(aes(colour=ThrowPosition),alpha=0.58) + ggtitle(““)\nsolSpace\\(Result = ifelse(solSpace\\)ThrowPosition==400,“400”,solSpace\\(ThrowPosition) solSpace\\)Result = ifelse(solSpace\\(ThrowPosition==500,\"500\",solSpace\\)Result) solSpace\\(Result= ifelse(solSpace\\)ThrowPosition==625,“625”,solSpace\\(Result) solSpace\\)Result = ifelse(solSpace\\(ThrowPosition==675,\"675\",solSpace\\)Result) solSpace\\(Result = ifelse(solSpace\\)ThrowPosition==800,“800”,solSpace\\(Result) solSpace\\)Result = ifelse(solSpace\\(ThrowPosition==900,\"900\",solSpace\\)Result) theme_set(theme_classic())",
+    "crumbs": [
+      "Discussion"
+    ]
+  },
+  {
     "objectID": "IGAS.html",
     "href": "IGAS.html",
     "title": "An instance-based model account of the benefits of varied practice in visuomotor skill",
