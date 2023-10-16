@@ -11,6 +11,7 @@ mutate <- dplyr::mutate
 filter <- dplyr::filter
 rename <- dplyr::rename
 summarise <- dplyr::summarise
+summarize <- dplyr::summarise
 #rm(list=ls())
 dodge <- position_dodge(width = 0.9)
 

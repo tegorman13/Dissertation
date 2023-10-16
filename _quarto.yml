@@ -7,6 +7,10 @@ project:
     - "*.qmd"
     - "!ME*"
     - "!Dissertation_Proposal"
+    - "!Manuscript/"
+
+  resources: 
+    - "Manuscript/output/"
 
 
 exclude: ["*.rds","*.tex","*.csl","*.bib","docs*","404.html","_old*","out.bib",
@@ -29,6 +33,9 @@ website:
     pinned: false
     contents:
       - index.md
+      - text: "---"
+      - paper.qmd
+      - text: "---"
       - plan.qmd
       - outline.qmd
       - Introduction.qmd
@@ -46,8 +53,8 @@ format:
     citations-hover: false
 
 
-bibliography: [Bib/IGAS.bib]
-csl: Bib/apa7.csl
+bibliography: [Assets/Bib/Dissertation.bib]
+csl: Assets/Bib/apa7.csl
 
 
 
