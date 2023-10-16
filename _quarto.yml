@@ -9,6 +9,7 @@ project:
     - "!Dissertation_Proposal"
     - "!_Dissertation_Proposal"
     - "!Manuscript/"
+    - "!Scratch/"
 
   resources: 
     - "Manuscript/output/"
