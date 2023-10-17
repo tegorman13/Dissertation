@@ -42,7 +42,6 @@ website:
       - text: "---"
       - paper.qmd
       - text: "---"
-      - plan.qmd
       - outline.qmd
       - Introduction.qmd
       - IGAS.qmd

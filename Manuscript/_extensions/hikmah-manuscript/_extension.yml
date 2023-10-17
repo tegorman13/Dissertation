@@ -28,8 +28,8 @@ contributes:
 
       # Template pieces
       template-partials:
-        - "partials/title.tex"
-        - "partials/before-body.tex"
+         - "partials/title.tex"
+        # - "partials/before-body.tex"
       include-in-header:
         - "include-in-header.tex"
       

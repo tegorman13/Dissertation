@@ -1,30 +1,199 @@
 ---
-title: "Dissertation"
-short-title: "Variability and Generalization"
-date: 10-11-2023
-author:
-- name: Thomas Gorman
-  affiliation: Indiana University
-  url: www.tegorman13.github.io
-  email: tegorman@iu.edu
-  orcid: 0000-0001-5366-5442
-
-abstract: |
-  In project 1, we applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training - as varied training has often been purported to be particularly beneficial in such situations. 
-keywords:
-  - Learning Generalization
-  - Function Learning
-  - Visuomotor learning
-  - Training Variability
 code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
 bibliography: ../Assets/Bib/Dissertation.bib
 link-citations: true
 keep-md: true
+toc: false
+toc-depth: 3
+toc-location: body
 execute: 
   warning: false
   eval: true
   include: false
 ---
+
+
+
+
+::: {.content-visible when-format="html"}
+
+<div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
+  Variability and Generalization - A Similarity-Based Account
+</div>
+
+<div style="text-align: center; margin-top: 300px; font-size: 32px;">
+  Thomas E. Gorman
+</div>
+
+<!-- Second Page and so on... -->
+<div style="text-align: justify; margin-top: 700px;">
+  Submitted to the faculty of the University Graduate School in partial fulfillment of the
+  requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+  Sciences and the Cognitive Science Program, Indiana University
+  Indiana University
+</div>
+
+<div style="margin-top: 400px;">
+  <!-- Your page numbering if needed -->
+</div>
+
+<div style="page-break-before: always;"></div>
+
+<!-- Committee Members Page -->
+<div style="text-align: center; margin-top: 300px;">
+  Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+  requirements for the degree of Doctor of Philosophy.
+</div>
+
+<div style="text-align: center; margin-top: 300px;">
+  _____________________________  Robert L. Goldstone<br><br>
+  _____________________________  Robert Nosofsky<br><br>
+  _____________________________  Peter Todd<br><br>
+  _____________________________  Mike Jones
+</div>
+
+<div style="page-break-before: always;"></div>
+
+
+
+<div style="page-break-before: always;"></div>
+
+<!-- Acknowledgements -->
+<div style="text-align: center; font-weight: bold; font-size: 24px;">
+  Acknowledgements
+</div>
+
+<div style="page-break-before: always;"></div>
+
+## Table of contentsa
+<div id="html-toc"></div>
+
+
+```{=html}
+<script>
+<!-- document.addEventListener("DOMContentLoaded", function(){ -->
+<!--   var toc = document.getElementById("TOC"); -->
+<!--   var placeholder = document.getElementById("toc-placeholder"); -->
+<!--   if (toc && placeholder) { -->
+<!--     placeholder.appendChild(toc); -->
+<!--   } -->
+<!-- }); -->
+document.addEventListener("DOMContentLoaded", function(){
+    var tocDiv = document.getElementById("html-toc");
+    var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth
+    var tocList = document.createElement("ul");
+
+    headings.forEach(function(heading) {
+        var listItem = document.createElement("li");
+        var link = document.createElement("a");
+        link.textContent = heading.textContent;
+        link.href = "#" + heading.id;
+        listItem.appendChild(link);
+
+        if (heading.tagName == "H2") {
+            listItem.style.marginLeft = "20px";
+        } else if (heading.tagName == "H3") {
+            listItem.style.marginLeft = "40px";
+        }
+        tocList.appendChild(listItem);
+    });
+    
+    tocDiv.appendChild(tocList);
+});
+
+
+
+</script>
+```
+
+
+
+
+<!-- Manually insert the table of contents here -->
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+\begin{centering}
+\LARGE
+{Variability and Generalization - A Similarity-Based Account}
+
+ 
+\vspace*{1.5cm}
+
+\LARGE
+{Thomas E. Gorman}
+
+\vspace{11.5cm}
+
+\end{centering}
+
+Submitted to the faculty of the University Graduate School in partial fulfillment of the
+requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+Sciences and the Cognitive Science Program, Indiana University
+Indiana University
+
+\vspace{6cm}
+
+\pagenumbering{gobble}
+
+
+\newpage
+
+Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+requirements for the degree of Doctor of Philosophy.
+\vspace{4cm}
+
+\
+\_____________________________  Robert L. Goldstone
+\vspace{2.5cm}
+\
+\
+\_____________________________  Robert Nosofsky
+\vspace{2.5cm}
+\
+\_____________________________  Peter Todd
+\vspace{2.5cm}
+\
+\_____________________________  Mike Jones
+
+\newpage
+
+\begin{centering}
+
+\vspace*{6.5cm}
+
+@2023 \\
+\vspace{1cm} 
+
+Thomas E. Gorman
+\vspace{.2cm}
+
+\vspace{5cm}
+
+\end{centering}
+
+\newpage
+\begin{center}
+\textbf{Acknowledgements}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+
+
+:::
+
+
+
+
 
 
 
@@ -555,11 +724,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2train-1.pdf){#fig-e2train-1 fig-align='center' width=100%}
-:::
-
-::: {.cell-output-display}
-![Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2train-2.pdf){#fig-e2train-2 fig-align='center' width=100%}
+![Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2train-1.pdf){#fig-e2train fig-align='center' width=100%}
 :::
 :::
 
@@ -757,11 +922,11 @@ summed each of the trial-level similarities to produce a single
 similarity for each testing position score relating how the participant
 threw the ball during training and the solutions that would result in
 target hits from each of the six testing positions -- thus resulting in
-six separate similarity scores for each participant. @fig-taskSpace
+six separate similarity scores for each participant. @fig-taskSpace1
 visualizes the solution space for each location and illustrates how
 different combinations of x and y velocity result in successfully
 striking the target from different launching positions. As illustrated
-in @fig-taskSpace, the solution throws represent just a small fraction of the
+in @fig-taskSpace1, the solution throws represent just a small fraction of the
 entire space of velocity combinations used by participants throughout
 the experiment.
 
@@ -771,11 +936,7 @@ the experiment.
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.](manuscript_files/figure-pdf/fig-taskSpace-1.pdf){#fig-taskSpace-1 fig-align='center' width=100%}
-:::
-
-::: {.cell-output-display}
-![A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.](manuscript_files/figure-pdf/fig-taskSpace-2.pdf){#fig-taskSpace-2 fig-align='center' width=100%}
+![A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.](manuscript_files/figure-pdf/fig-taskSpace1-1.pdf){#fig-taskSpace1 fig-align='center' width=100%}
 :::
 :::
 
@@ -1014,7 +1175,7 @@ visuomotor skill task. Although IGAS was inspired by work in the domain
 of category learning, its success in a distinct domain may not be
 surprising in light of the numerous prior observations that at least
 certain aspects of learning and generalization may operate under common
-principles across different tasks and domains [@censorCommonMechanismsHuman2012; @hillsCentralExecutiveSearch2010; @jamiesonInstanceTheoryDomaingeneral2022; @lawSharedMechanismsPerceptual2010; @roarkComparingPerceptualCategory2021; @rosenbaumAcquisitionIntellectualPerceptualMotor2001a; @vigoLearningDifficultyVisual2018; @wallIdentifyingRelationshipsCognitive2021; @wuSimilaritiesDifferencesSpatial2020; @yangGeneralLearningAbility2020].
+principles across different tasks and domains [@censorCommonMechanismsHuman2012; @hillsCentralExecutiveSearch2010; @jamiesonInstanceTheoryDomaingeneral2022; @lawSharedMechanismsPerceptual2010; @roarkComparingPerceptualCategory2021; @rosenbaumAcquisitionIntellectualPerceptualMotor2001; @vigoLearningDifficultyVisual2018; @wallIdentifyingRelationshipsCognitive2021; @wuSimilaritiesDifferencesSpatial2020; @yangGeneralLearningAbility2020].
 
 
 Our modelling approach does differ from category learning
@@ -1173,7 +1334,7 @@ After completing the experiment, participants were debriefed and provided with a
 
 
 
-:::{.cell .column-screen-inset-right fig-width="6" fig-height="2.5" fig-responsive=false}
+:::{.cell fig-width="6" fig-height="2.5" fig-responsive=false}
 
 :::{.cell-output-display}
 
@@ -1197,7 +1358,7 @@ Experiment 1 Design. Constant and Varied participants complete different trainin
 
 ## Analyses Strategy
 
-All data processing and statistical analyses were performed in R version 4.31 @rcoreteamLanguageEnvironmentStatistical2020. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R @burknerBrmsPackageBayesian2017, and descriptive stats and tables were extracted with the BayestestR package @makowskiBayestestRDescribingEffects2019a. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as circumventing convergence issues common to the frequentist analogues of our mixed models. For each model, we report the median values of the posterior distribution, and 95% credible intervals.
+All data processing and statistical analyses were performed in R version 4.31 @rcoreteamLanguageEnvironmentStatistical2020. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R @burknerBrmsPackageBayesian2017, and descriptive stats and tables were extracted with the BayestestR package @makowskiBayestestRDescribingEffects2019. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as circumventing convergence issues common to the frequentist analogues of our mixed models. For each model, we report the median values of the posterior distribution, and 95% credible intervals.
 
 Each model was set to run with 4 chains, 5000 iterations per chain, with the first 2500 of which were discarded as warmup chains. Rhat values were generally within an acceptable range, with values \<=1.02 (see appendix for diagnostic plots). We used uninformative priors for the fixed effects of the model (condition and velocity band), and weakly informative Student T distributions for for the random effects.
 
@@ -1470,9 +1631,9 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 \hline
 Condition & Q\_0\%\_mean & Q\_25\%\_mean & Q\_50\%\_mean & Q\_75\%\_mean & Q\_100\%\_mean\\
 \hline
-Constant & -0.109 & 0.481 & 0.696 & 0.930 & 1.4\\
+Constant & -0.108 & 0.481 & 0.690 & 0.932 & 1.4\\
 \hline
-Varied & -0.200 & 0.268 & 0.584 & 0.899 & 1.3\\
+Varied & -0.204 & 0.268 & 0.587 & 0.899 & 1.3\\
 \hline
 \end{tabular}
 
@@ -1520,7 +1681,7 @@ Subset of Varied and Constant Participants with the smallest and largest estimat
 
 
 
-:::{.cell .column-screen-inset-right fig-width="6" fig-height="2.5" fig-responsive=false}
+:::{.cell fig-width="6" fig-height="2.5" fig-responsive=false layout-align="left"}
 
 :::{.cell-output-display}
 

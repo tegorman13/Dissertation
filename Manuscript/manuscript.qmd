@@ -1,37 +1,35 @@
 ---
-title: "Dissertation"
-short-title: "Variability and Generalization"
-date: 10-11-2023
-author:
-- name: Thomas Gorman
-  affiliation: Indiana University
-  url: www.tegorman13.github.io
-  email: tegorman@iu.edu
-  orcid: 0000-0001-5366-5442
-
-abstract: |
-  In project 1, we applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training - as varied training has often been purported to be particularly beneficial in such situations. 
-keywords:
-  - Learning Generalization
-  - Function Learning
-  - Visuomotor learning
-  - Training Variability
 code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
 bibliography: ../Assets/Bib/Dissertation.bib
 link-citations: true
 keep-md: true
+toc: false
+toc-depth: 3
+toc-location: body
 execute: 
   warning: false
   eval: true
   include: false
 ---
 
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/pre_html.qmd >}}
+<!-- Manually insert the table of contents here -->
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+{{< include pre_sections/pre_pdf.qmd >}}
+:::
+
+
+
 
 ```{r setup}
 here::set_here(path='..')
 source(here::here("Functions", "packages.R"))
-
-
 
 if (is.null(knitr::pandoc_to())) {
   fmt_out <- "interactive"
@@ -39,11 +37,8 @@ if (is.null(knitr::pandoc_to())) {
   fmt_out <- knitr::pandoc_to()
 }
 
-
 knitr::opts_chunk$set(echo = FALSE, include =TRUE, 
                       warning = FALSE, message = FALSE, eval=TRUE)
-
-
 
 knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
                       fig.width = 6, fig.height = (6 * 0.618),
@@ -52,9 +47,24 @@ knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
 options(digits = 3, width = 120,
         dplyr.summarise.inform = FALSE,
         knitr.kable.NA = "")
-# 
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```{r}
@@ -63,7 +73,6 @@ source(here::here('Functions/IGAS_ProcessFunctions.R'))
 e1 <- readRDS(here::here("data/igas_e1_cleanedData-final.rds")) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity,stageInt=as.numeric(as.character(experimentStage)))
 
 # load the processed data from experiment 1 and 2
-
 
 e2<- readRDS(here::here('data/igas_e2_cleanedData-final.rds')) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity)
 
@@ -288,11 +297,11 @@ plotSpecs <- list(geom_line(alpha=.7,size=.4),scale_color_manual(values=colorVec
                   scale_x_continuous(breaks=seq(200,1000,by=200)),
                   xlab("Test Stimulus"),
                   annotate(geom="text",x=447,y=1.05,label="Varied",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=450,y=1.02,label="Training",size=3.1,fontface="plain"),
+                  annotate(geom="text",x=450,y=.97,label="Training",size=3.1,fontface="plain"),
                   annotate(geom="text",x=659,y=1.05,label="Constant",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=657,y=1.02,label="Training",size=3.1,fontface="plain"),
+                  annotate(geom="text",x=657,y=.97,label="Training",size=3.1,fontface="plain"),
                   annotate(geom="text",x=847,y=1.05,label="Varied",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=850,y=1.02,label="Training",size=3.1,fontface="plain"),
+                  annotate(geom="text",x=850,y=.97,label="Training",size=3.1,fontface="plain"),
                   theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=1),
                         legend.position="none"))
 
@@ -740,6 +749,8 @@ exp2.Test7.agg2 <- exp2.Test7  %>%group_by(sbjCode,conditType) %>%
 ```{r}
 #| label: fig-e2train
 #| fig.cap: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
+#| fig.width: 11
+#| fig.height: 10
 
 ### New - 3 stage
 e2train1<-exp2TrainPosition3 %>% ggplot(aes(x=stage,y=MeanTargetDistance))+
@@ -759,8 +770,7 @@ e2train2<-exp2TrainPosition3 %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
 
 #plot_grid(e2train1,e2train2,ncol=1)
 
-e2train1
-e2train2
+e2train1 / e2train2
 
 ```
 
@@ -965,20 +975,21 @@ summed each of the trial-level similarities to produce a single
 similarity for each testing position score relating how the participant
 threw the ball during training and the solutions that would result in
 target hits from each of the six testing positions -- thus resulting in
-six separate similarity scores for each participant. @fig-taskSpace
+six separate similarity scores for each participant. @fig-taskSpace1
 visualizes the solution space for each location and illustrates how
 different combinations of x and y velocity result in successfully
 striking the target from different launching positions. As illustrated
-in @fig-taskSpace, the solution throws represent just a small fraction of the
+in @fig-taskSpace1, the solution throws represent just a small fraction of the
 entire space of velocity combinations used by participants throughout
 the experiment.
 
 
 
 ```{r}
-#| label: fig-taskSpace
+#| label: fig-taskSpace1
 #| fig.cap: A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
-#| 
+#| fig.height: 10
+#| fig.width: 11
 taskspace <- e2 %>% filter(AbsDistFromCenter<900)
 taskspace$hitOrMiss <- ifelse(taskspace$trialType==11,"Hit Target","Missed Target")
 
@@ -1011,8 +1022,7 @@ fs<- fullSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1,colour=Result)) +
   labs(colour="Target Hit or Miss From Position:") + xlab("X Release Velocity") + ylab("Y Release Velocity") +ggtitle("B")
 
 
-ss
-fs
+ss / fs
 
 
 ```
@@ -1299,7 +1309,7 @@ visuomotor skill task. Although IGAS was inspired by work in the domain
 of category learning, its success in a distinct domain may not be
 surprising in light of the numerous prior observations that at least
 certain aspects of learning and generalization may operate under common
-principles across different tasks and domains [@censorCommonMechanismsHuman2012; @hillsCentralExecutiveSearch2010; @jamiesonInstanceTheoryDomaingeneral2022; @lawSharedMechanismsPerceptual2010; @roarkComparingPerceptualCategory2021; @rosenbaumAcquisitionIntellectualPerceptualMotor2001a; @vigoLearningDifficultyVisual2018; @wallIdentifyingRelationshipsCognitive2021; @wuSimilaritiesDifferencesSpatial2020; @yangGeneralLearningAbility2020].
+principles across different tasks and domains [@censorCommonMechanismsHuman2012; @hillsCentralExecutiveSearch2010; @jamiesonInstanceTheoryDomaingeneral2022; @lawSharedMechanismsPerceptual2010; @roarkComparingPerceptualCategory2021; @rosenbaumAcquisitionIntellectualPerceptualMotor2001; @vigoLearningDifficultyVisual2018; @wallIdentifyingRelationshipsCognitive2021; @wuSimilaritiesDifferencesSpatial2020; @yangGeneralLearningAbility2020].
 
 
 Our modelling approach does differ from category learning
@@ -1461,7 +1471,7 @@ After completing the experiment, participants were debriefed and provided with a
 //| fig-width: 6.0
 //| fig-height: 2.5
 //| fig-responsive: false
-//| column: screen-inset-right
+
 digraph {
   graph [layout = dot, rankdir = LR]
 
@@ -1492,7 +1502,7 @@ digraph {
 
 ## Analyses Strategy
 
-All data processing and statistical analyses were performed in R version 4.31 @rcoreteamLanguageEnvironmentStatistical2020. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R @burknerBrmsPackageBayesian2017, and descriptive stats and tables were extracted with the BayestestR package @makowskiBayestestRDescribingEffects2019a. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as circumventing convergence issues common to the frequentist analogues of our mixed models. For each model, we report the median values of the posterior distribution, and 95% credible intervals.
+All data processing and statistical analyses were performed in R version 4.31 @rcoreteamLanguageEnvironmentStatistical2020. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R @burknerBrmsPackageBayesian2017, and descriptive stats and tables were extracted with the BayestestR package @makowskiBayestestRDescribingEffects2019. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as circumventing convergence issues common to the frequentist analogues of our mixed models. For each model, we report the median values of the posterior distribution, and 95% credible intervals.
 
 Each model was set to run with 4 chains, 5000 iterations per chain, with the first 2500 of which were discarded as warmup chains. Rhat values were generally within an acceptable range, with values \<=1.02 (see appendix for diagnostic plots). We used uninformative priors for the fixed effects of the model (condition and velocity band), and weakly informative Student T distributions for for the random effects.
 
@@ -1565,7 +1575,6 @@ test |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
 #| tbl-subcap: ["Constant Testing1 - Deviation", "Varied Testing - Deviation"]
 #| include: true
 #| echo: false
-#| eval: true
 modelName <- "e1_testDistBand_RF_5K"
 e1_distBMM <- brm(dist ~ condit * bandInt + (1 + bandInt|id),
                       data=test,file=paste0(here::here("data/model_cache",modelName)),
@@ -1631,7 +1640,6 @@ result$varied |> kbl(booktabs = TRUE)
 #| tbl-cap: "Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
 #| tbl-subcap: ["Model fit to all 6 bands", "Model fit to 3 extrapolation bands"]
 #| include: true
-#| eval: true
 e1_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
                         data=test,file=paste0(here::here("data/model_cache", "e1_testVxBand_RF_5k")),
                         iter=5000,chains=4,silent=0,
@@ -1787,7 +1795,7 @@ testE2Avg <- testE2 %>% group_by(id, condit, vb, bandInt,bandType,tOrder) %>%
 //| fig-width: 6.0
 //| fig-height: 2.5
 //| fig-responsive: false
-//| column: screen-inset-right
+//| fig-align: left
 digraph {
   graph [layout = dot, rankdir = LR]
 
@@ -1862,7 +1870,6 @@ testE2 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
 ```{r}
 #| label: tbl-e2-bmm-dist
 #| tbl-cap: "Experiment 2. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band"
-#| eval: true
 
 modelName <- "e2_testDistBand_RF_5K"
 e2_distBMM <- brm(dist ~ condit * bandInt + (1 + bandInt|id),
@@ -1946,7 +1953,6 @@ testE3 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
 ```{r}
 #| label: tbl-e3-bmm-dist
 #| tbl-cap: "Experiment 3. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band"
-#| eval: true
 
 modelName <- "e3_testDistBand_RF_5K"
 e3_distBMM <- brm(dist ~ condit * bandInt + (1 + bandInt|id),
@@ -2031,7 +2037,7 @@ resultRev$varied |> kbl()
 ```{r}
 #| label: tbl-e3-bmm-vx
 #| tbl-cap: "Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
-#| eval: true
+
 e3_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
                         data=testE3,file=paste0(here::here("data/model_cache", "e3_testVxBand_RF_5k")),
                         iter=5000,chains=4,silent=0,

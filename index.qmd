@@ -1,5 +1,6 @@
 ---
 title: "Dissertation"
+author: Thomas E. Gorman
 comments: false
 date-format: 'MMM YYYY'
 format:
@@ -13,4 +14,3 @@ format:
 ---
 
 
-# An instance-based model account of the benefits of varied practice in visuomotor skill

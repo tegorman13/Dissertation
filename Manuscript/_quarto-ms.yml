@@ -1,5 +1,5 @@
 project:
-  output-dir: output-ms
+  output-dir: output
 
 format:
   # Manuscript-y PDF output
@@ -20,6 +20,7 @@ format:
         \usepackage{float}
         \floatplacement{figure}{H}
         \floatplacement{table}{H}
+        \usepackage{setspace}
 
     knitr:
       opts_chunk:

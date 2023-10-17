@@ -1,0 +1,27 @@
+project:
+  output-dir: output
+
+format:
+  # Manuscript-y PDF output
+  quarto-thesis-pdf:
+    output-file: "thesis-format.pdf"
+    # Custom fonts
+    mainfont: "Linux Libertine O"
+    mainfontoptions:
+      - "Numbers=Proportional"
+      - "Numbers=OldStyle"
+    mathfont: "Libertinus Math"
+
+    include-in-header:
+      # The \everydisplay thing makes all math blocks use \small font
+      text: |
+        \usepackage{mathtools}
+        \everydisplay\expandafter{\the\everydisplay\small }
+        \usepackage{float}
+        \floatplacement{figure}{H}
+        \floatplacement{table}{H}
+        \usepackage{setspace}
+
+    knitr:
+      opts_chunk:
+        dev: "cairo_pdf"

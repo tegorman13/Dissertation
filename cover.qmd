@@ -1,0 +1,23 @@
+---
+title: "Dissertation"
+---
+
+<style>
+  body {
+    text-align: center;
+  }
+</style>
+
+
+\
+\
+Thomas Gorman
+\
+\
+\
+\
+Submitted to the faculty of the University Graduate School in partial fulfillment of the
+requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+Sciences and the Cognitive Science Program, Indiana University
+Indiana University
+Fall 2023

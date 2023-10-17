@@ -1,21 +1,4 @@
 ---
-title: "Dissertation"
-short-title: "Variability and Generalization"
-date: 10-11-2023
-author:
-- name: Thomas Gorman
-  affiliation: Indiana University
-  url: www.tegorman13.github.io
-  email: tegorman@iu.edu
-  orcid: 0000-0001-5366-5442
-
-abstract: |
-  In project 1, we applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training - as varied training has often been purported to be particularly beneficial in such situations. 
-keywords:
-  - Learning Generalization
-  - Function Learning
-  - Visuomotor learning
-  - Training Variability
 code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
 bibliography: ../Assets/Bib/Dissertation.bib
 link-citations: true
@@ -25,6 +8,144 @@ execute:
   eval: true
   include: false
 ---
+
+
+
+
+::: {.content-visible when-format="html"}
+
+<div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
+  Variability and Generalization - A Similarity-Based Account
+</div>
+
+<div style="text-align: center; margin-top: 300px; font-size: 32px;">
+  Thomas E. Gorman
+</div>
+
+<!-- Second Page and so on... -->
+<div style="text-align: justify; margin-top: 700px;">
+  Submitted to the faculty of the University Graduate School in partial fulfillment of the
+  requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+  Sciences and the Cognitive Science Program, Indiana University
+  Indiana University
+</div>
+
+<div style="margin-top: 400px;">
+  <!-- Your page numbering if needed -->
+</div>
+
+<div style="page-break-before: always;"></div>
+
+<!-- Committee Members Page -->
+<div style="text-align: center; margin-top: 300px;">
+  Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+  requirements for the degree of Doctor of Philosophy.
+</div>
+
+<div style="text-align: center; margin-top: 300px;">
+  _____________________________  Robert L. Goldstone<br><br>
+  _____________________________  Robert Nosofsky<br><br>
+  _____________________________  Peter Todd<br><br>
+  _____________________________  Mike Jones
+</div>
+
+<div style="page-break-before: always;"></div>
+
+
+
+<div style="page-break-before: always;"></div>
+
+<!-- Acknowledgements -->
+<div style="text-align: center; font-weight: bold; font-size: 24px;">
+  Acknowledgements
+</div>
+
+<div style="page-break-before: always;"></div>
+
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+\begin{centering}
+\LARGE
+{Variability and Generalization - A Similarity-Based Account}
+
+ 
+\vspace*{1.5cm}
+
+\LARGE
+{Thomas E. Gorman}
+
+\vspace{11.5cm}
+
+\end{centering}
+
+Submitted to the faculty of the University Graduate School in partial fulfillment of the
+requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+Sciences and the Cognitive Science Program, Indiana University
+Indiana University
+
+\vspace{6cm}
+
+\pagenumbering{gobble}
+
+
+\newpage
+
+Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+requirements for the degree of Doctor of Philosophy.
+\vspace{4cm}
+
+\
+\_____________________________  Robert L. Goldstone
+\vspace{2.5cm}
+\
+\
+\_____________________________  Robert Nosofsky
+\vspace{2.5cm}
+\
+\_____________________________  Peter Todd
+\vspace{2.5cm}
+\
+\_____________________________  Mike Jones
+
+\newpage
+
+\begin{centering}
+
+\vspace*{6.5cm}
+
+@2023 \\
+\vspace{1cm} 
+
+Thomas E. Gorman
+\vspace{.2cm}
+
+\vspace{5cm}
+
+\end{centering}
+
+\newpage
+\begin{center}
+\textbf{Acknowledgements}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+
+
+:::
+
+
+
+
 
 
 
@@ -1470,9 +1591,9 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 \hline
 Condition & Q\_0\%\_mean & Q\_25\%\_mean & Q\_50\%\_mean & Q\_75\%\_mean & Q\_100\%\_mean\\
 \hline
-Constant & -0.109 & 0.481 & 0.696 & 0.930 & 1.4\\
+Constant & -0.109 & 0.479 & 0.686 & 0.926 & 1.4\\
 \hline
-Varied & -0.200 & 0.268 & 0.584 & 0.899 & 1.3\\
+Varied & -0.203 & 0.269 & 0.588 & 0.900 & 1.3\\
 \hline
 \end{tabular}
 

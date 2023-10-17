@@ -33,7 +33,7 @@ format:
   hikmah-pdf:
     cite-method: citeproc
     keep-md: true
-    output-file: "Full_Dissertation-nice.pdf"
+    output-file: "Full_Dissertation-nice3.pdf"
 
     # Custom fonts
     mainfont: "Linux Libertine O"
@@ -52,6 +52,7 @@ format:
         \usepackage{float}
         \floatplacement{figure}{H}
         \floatplacement{table}{H}
+        \usepackage{setspace}
 
     knitr:
       opts_chunk:
