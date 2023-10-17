@@ -61,17 +61,70 @@ execute:
 
 <div style="page-break-before: always;"></div>
 
-<div id="toc-placeholder"></div>
+## Table of contents
+<div id="html-toc"></div>
 
 ```{=html}
 <script>
+<!-- document.addEventListener("DOMContentLoaded", function(){ -->
+<!--   var toc = document.getElementById("TOC"); -->
+<!--   var placeholder = document.getElementById("toc-placeholder"); -->
+<!--   if (toc && placeholder) { -->
+<!--     placeholder.appendChild(toc); -->
+<!--   } -->
+<!-- }); -->
+
+
+<!-- document.addEventListener("DOMContentLoaded", function(){ -->
+<!--     var tocDiv = document.getElementById("html-toc"); -->
+<!--     var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth -->
+<!--     var tocList = document.createElement("ul"); -->
+
+<!--     headings.forEach(function(heading) { -->
+<!--         var listItem = document.createElement("li"); -->
+<!--         var link = document.createElement("a"); -->
+<!--         link.textContent = heading.textContent; -->
+<!--         link.href = "#" + heading.id; -->
+<!--         listItem.appendChild(link); -->
+
+<!--         if (heading.tagName == "H2") { -->
+<!--             listItem.style.marginLeft = "20px"; -->
+<!--         } else if (heading.tagName == "H3") { -->
+<!--             listItem.style.marginLeft = "40px"; -->
+<!--         } -->
+<!--         tocList.appendChild(listItem); -->
+<!--     }); -->
+
+<!--     tocDiv.appendChild(tocList); -->
+<!-- }); -->
+
 document.addEventListener("DOMContentLoaded", function(){
-  var toc = document.getElementById("TOC");
-  var placeholder = document.getElementById("toc-placeholder");
-  if (toc && placeholder) {
-    placeholder.appendChild(toc);
-  }
+    var tocDiv = document.getElementById("html-toc");
+    var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth
+    var tocList = document.createElement("ul");
+
+    headings.forEach(function(heading, index) {
+        // Create or get the ID for the heading
+        if (!heading.id) {
+            heading.id = heading.textContent.replace(/[^a-z0-9]+/gi, '-').toLowerCase() + "-" + index;
+        }
+        var listItem = document.createElement("li");
+        var link = document.createElement("a");
+        link.textContent = heading.textContent;
+        link.href = "#" + heading.id;
+        listItem.appendChild(link);
+
+        if (heading.tagName == "H2") {
+            listItem.style.marginLeft = "20px";
+        } else if (heading.tagName == "H3") {
+            listItem.style.marginLeft = "40px";
+        }
+        tocList.appendChild(listItem);
+    });
+    
+    tocDiv.appendChild(tocList);
 });
+
 </script>
 ```
 
@@ -194,3 +247,14 @@ without positing the learning of some schemata or structure.
 ## Intro
 
 ## Methods
+ test
+ 
+## Discussion
+ 
+ 
+ test2
+ 
+ 
+# References
+
+ref 1

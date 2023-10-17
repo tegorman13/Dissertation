@@ -10,8 +10,9 @@ execute:
   eval: true
 ---
 
-[Link HTW project page](https://tegorman13.github.io/htw/){target="_blank"}
+[Link HTW project page](https://tegorman13.github.io/htw/){target="_blank"} \
 
+[Working Draft of HTW Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
 ```{r}
 pacman::p_load(tidyverse,knitr,kableExtra)
 
@@ -69,37 +70,6 @@ only the x-dimension was relevant for the task.\
 
 4)  Feedback testing for each of the 3 extrapolation bands. 10 trials
     each.
-
-```{r design, echo=FALSE, fig.cap="Experiment Procedure"}
-DiagrammeR::grViz("digraph {
-graph [layout = dot, rankdir = LR]
-# define the global styles of the nodes. We can override these in box if we wish
-node [shape = rectangle, style = filled, fillcolor = Linen]
-data1 [label = <<b>Varied Training</b>  
-<br ALIGN = 'LEFT' /> 800-1000
-<br/> 1000-1200
-<br/>1200-1400>]
-data2 [label = <<b>Constant Training</b>  
-<br/> 800-1000 >]
-Test1 [label = <<b>Testing - No Feedback</b>  
-<br ALIGN = 'LEFT' /> 100-300
-<br/> 350-550
-<br/>600-800>]
-Test2 [label = <<b>Test From Train</b>  
-<br ALIGN = 'LEFT' /> 800-1000
-<br/> 1000-1200
-<br/>1200-1400>]
-Test3[label = <<b>Testing -Feedback</b>  
-<br ALIGN = 'LEFT' /> 100-300
-<br/> 350-550
-<br/>600-800>]
-
-# edge definitions with the node IDs
-{data1 data2}  -> Test1 -> Test2 -> Test3
-}
-",width=700,height=250)
-
-```
 
 
 ```{dot}

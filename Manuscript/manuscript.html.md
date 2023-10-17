@@ -64,7 +64,7 @@ execute:
 
 <div style="page-break-before: always;"></div>
 
-## Table of contentsa
+## Table of contents
 <div id="html-toc"></div>
 
 ```{=html}
@@ -76,12 +76,41 @@ execute:
 <!--     placeholder.appendChild(toc); -->
 <!--   } -->
 <!-- }); -->
+
+
+<!-- document.addEventListener("DOMContentLoaded", function(){ -->
+<!--     var tocDiv = document.getElementById("html-toc"); -->
+<!--     var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth -->
+<!--     var tocList = document.createElement("ul"); -->
+
+<!--     headings.forEach(function(heading) { -->
+<!--         var listItem = document.createElement("li"); -->
+<!--         var link = document.createElement("a"); -->
+<!--         link.textContent = heading.textContent; -->
+<!--         link.href = "#" + heading.id; -->
+<!--         listItem.appendChild(link); -->
+
+<!--         if (heading.tagName == "H2") { -->
+<!--             listItem.style.marginLeft = "20px"; -->
+<!--         } else if (heading.tagName == "H3") { -->
+<!--             listItem.style.marginLeft = "40px"; -->
+<!--         } -->
+<!--         tocList.appendChild(listItem); -->
+<!--     }); -->
+
+<!--     tocDiv.appendChild(tocList); -->
+<!-- }); -->
+
 document.addEventListener("DOMContentLoaded", function(){
     var tocDiv = document.getElementById("html-toc");
     var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth
     var tocList = document.createElement("ul");
 
-    headings.forEach(function(heading) {
+    headings.forEach(function(heading, index) {
+        // Create or get the ID for the heading
+        if (!heading.id) {
+            heading.id = heading.textContent.replace(/[^a-z0-9]+/gi, '-').toLowerCase() + "-" + index;
+        }
         var listItem = document.createElement("li");
         var link = document.createElement("a");
         link.textContent = heading.textContent;
@@ -98,8 +127,6 @@ document.addEventListener("DOMContentLoaded", function(){
     
     tocDiv.appendChild(tocList);
 });
-
-
 
 </script>
 ```
@@ -2084,18 +2111,18 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 <tbody>
   <tr>
    <td style="text-align:left;"> Constant </td>
-   <td style="text-align:right;"> -0.107 </td>
-   <td style="text-align:right;"> 0.479 </td>
+   <td style="text-align:right;"> -0.111 </td>
+   <td style="text-align:right;"> 0.480 </td>
    <td style="text-align:right;"> 0.691 </td>
-   <td style="text-align:right;"> 0.935 </td>
+   <td style="text-align:right;"> 0.928 </td>
    <td style="text-align:right;"> 1.39 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Varied </td>
-   <td style="text-align:right;"> -0.201 </td>
-   <td style="text-align:right;"> 0.266 </td>
-   <td style="text-align:right;"> 0.588 </td>
-   <td style="text-align:right;"> 0.897 </td>
+   <td style="text-align:right;"> -0.204 </td>
+   <td style="text-align:right;"> 0.272 </td>
+   <td style="text-align:right;"> 0.589 </td>
+   <td style="text-align:right;"> 0.895 </td>
    <td style="text-align:right;"> 1.30 </td>
   </tr>
 </tbody>
