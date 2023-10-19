@@ -26,7 +26,7 @@ page-layout: full
   <iconify-icon inline="" icon="fa6-solid:file-word"></iconify-icon> &ensp;DOCX <small>(download)</small>
   </a>
   
-  <a class="btn btn-info btn-sm mb-1" target="_blank" href="/Manuscript/manuscript.html.md">
+  <a class="btn btn-info btn-sm mb-1" target="_blank" href="/Manuscript/manuscript.md">
   <iconify-icon inline="" icon="fa6-solid:file-word"></iconify-icon> &ensp;md <small>(download)</small>
   </a>
   
