@@ -13,6 +13,11 @@ execute:
 [Link HTW project page](https://tegorman13.github.io/htw/){target="_blank"} \
 
 [Working Draft of HTW Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
+
+
+![htw](https://tegorman13.github.io/htw/paper.html){width="900" height="600"}
+
+
 ```{r}
 pacman::p_load(tidyverse,knitr,kableExtra)
 

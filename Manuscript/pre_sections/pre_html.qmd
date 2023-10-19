@@ -27,10 +27,10 @@
 </div>
 
 <div style="text-align: center; margin-top: 300px;">
-  _____________________________  Robert L. Goldstone<br><br>
-  _____________________________  Robert Nosofsky<br><br>
-  _____________________________  Peter Todd<br><br>
-  _____________________________  Mike Jones
+  _____________________________  Robert L. Goldstone, PhD<br><br>
+  _____________________________  Robert Nosofsky, PhD<br><br>
+  _____________________________  Peter Todd, PhD<br><br>
+  _____________________________  Mike Jones, PhD
 </div>
 
 <div style="page-break-before: always;"></div>

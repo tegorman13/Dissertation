@@ -15,6 +15,7 @@ execute:
 
 
 
+
 ::: {.content-visible when-format="html"}
 
 <div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
@@ -46,10 +47,10 @@ execute:
 </div>
 
 <div style="text-align: center; margin-top: 300px;">
-  _____________________________  Robert L. Goldstone<br><br>
-  _____________________________  Robert Nosofsky<br><br>
-  _____________________________  Peter Todd<br><br>
-  _____________________________  Mike Jones
+  _____________________________  Robert L. Goldstone, PhD<br><br>
+  _____________________________  Robert Nosofsky, PhD<br><br>
+  _____________________________  Peter Todd, PhD<br><br>
+  _____________________________  Mike Jones, PhD
 </div>
 
 <div style="page-break-before: always;"></div>
@@ -106,17 +107,17 @@ requirements for the degree of Doctor of Philosophy.
 \vspace{4cm}
 
 \
-\_____________________________  Robert L. Goldstone
+\_____________________________  Robert L. Goldstone, PhD
 \vspace{2.5cm}
 \
 \
-\_____________________________  Robert Nosofsky
+\_____________________________  Robert Nosofsky, PhD
 \vspace{2.5cm}
 \
-\_____________________________  Peter Todd
+\_____________________________  Peter Todd, PhD
 \vspace{2.5cm}
 \
-\_____________________________  Mike Jones
+\_____________________________  Mike Jones, PhD
 
 \newpage
 
@@ -152,9 +153,48 @@ Thomas E. Gorman
 
 :::
 
+::: {.content-visible when-format="docx"}
+
+# The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach
+
+## Thomas E. Gorman
+
+Submitted to the faculty of the University Graduate School in partial fulfillment of the
+requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+Sciences and the Cognitive Science Program, Indiana University.
+
+---
+
+Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+requirements for the degree of Doctor of Philosophy.
+
+- Robert L. Goldstone, PhD
+- Robert Nosofsky, PhD
+- Peter Todd, PhD
+- Mike Jones, PhD
+
+---
+
+## @2023
+
+### Thomas E. Gorman
+
+---
+
+## Acknowledgements
+
+---
+
+
+:::
+
+
+
 
 
 {{< pagebreak >}}
+
+
 
 
 
@@ -171,6 +211,7 @@ This dissertation seeks to explore the cognitive underpinnings that govern the g
 
 # Table of contents
 <div id="html-toc"></div>
+
 
 
 ```{=html}
@@ -241,6 +282,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -261,7 +303,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+
 {{< pagebreak >}}
+
+
 
 
 
@@ -275,9 +320,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+
 ---
 #title: Introduction
 ---
+
 
 
 
@@ -369,9 +416,11 @@ Numerous researchers have attempted to provide coherent frameworks to account fo
 
 
 
+
 ::: {.cell layout-align="center"}
 
 :::
+
 
 
 
@@ -556,11 +605,13 @@ to a linear drop-off.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)](manuscript_files/figure-pdf/fig-toy-model1-1.pdf){#fig-toy-model1 fig-align='center' width=100%}
 :::
 :::
+
 
 
 
@@ -711,11 +762,13 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-IGAS-Training1-1.pdf){#fig-IGAS-Training1 fig-align='center' width=100%}
 :::
 :::
+
 
 
 
@@ -735,6 +788,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-IGAS-Testing1-1.pdf){#fig-IGAS-Testing1 fig-align='center' width=100%}
@@ -743,8 +797,10 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 
 
+
 \
 \
+
 
 
 
@@ -767,6 +823,7 @@ Position & Constant & Varied\\
 
 :::
 :::
+
 
 
 
@@ -889,6 +946,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 
 
+
 ::: {.cell layout-align="center"}
 
 :::
@@ -898,6 +956,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 ![Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2train-1.pdf){#fig-e2train fig-align='center' width=100%}
 :::
 :::
+
 
 
 
@@ -926,6 +985,7 @@ groups.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2testa-1.pdf){#fig-e2testa fig-align='center' width=100%}
@@ -934,7 +994,9 @@ groups.
 
 
 
+
 \
+
 
 
 
@@ -963,6 +1025,7 @@ Position & Constant & Varied\\
 
 
 
+
 Next, we compared the testing performance of constant and varied groups
 from only positions that participants had not encountered during
 training. Constant participants each had 5 novel positions, whereas
@@ -971,6 +1034,7 @@ first standardized performance within in each position, and then
 averaged across positions. Here again, we found a significant effect of
 condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 .02 .
+
 
 
 
@@ -999,6 +1063,7 @@ Position & Constant & Varied\\
 
 
 
+
 Finally, corresponding to the comparison of position 760 from experiment
 1, we compared the test performance of the varied group against the
 constant group from only the positions that the constant groups trained.
@@ -1013,6 +1078,7 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2test1-1.pdf){#fig-e2test1 fig-align='center' width=100%}
@@ -1021,7 +1087,9 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 
 
+
 \
+
 
 
 
@@ -1044,6 +1112,7 @@ Position & Constant & Varied\\
 
 :::
 :::
+
 
 
 
@@ -1105,11 +1174,13 @@ the experiment.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.](manuscript_files/figure-pdf/fig-taskSpace1-1.pdf){#fig-taskSpace1 fig-align='center' width=100%}
 :::
 :::
+
 
 
 
@@ -1320,11 +1391,13 @@ throws, resulting in a non-zero dissimilarity.
 
 
 
+
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization =  $e^{(c\\cdot|x-800|)}  +e^{(c\\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\\cdot e^{(c\\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(cvaried\\cdot|x-800|)}  +e^{(cvaried\\cdot|x-400|)}$.](manuscript_files/figure-pdf/fig-Toy-Model2-1.pdf){#fig-Toy-Model2 fig-align='center' width=100%}
 :::
 :::
+
 
 
 
@@ -1462,9 +1535,11 @@ approach towards better understanding skill generalization and transfer.
 
 
 
+
 ::: {.cell layout-align="center"}
 
 :::
+
 
 
 
@@ -1504,6 +1579,7 @@ After completing the experiment, participants were debriefed and provided with a
 
 
 
+
 :::{.cell fig-width="6" fig-height="2.5" fig-responsive=false}
 
 :::{.cell-output-display}
@@ -1512,7 +1588,7 @@ After completing the experiment, participants were debriefed and provided with a
 
 :::{}
 
-![](manuscript_files/figure-latex/dot-figure-1.png){width="6in" height="2.5in" fig-pos='H' fig-env='figure'}
+![](manuscript_files/figure-latex/dot-figure-3.png){width="6in" height="2.5in" fig-pos='H' fig-env='figure'}
 :::
 
 
@@ -1526,6 +1602,7 @@ Experiment 1 Design. Constant and Varied participants complete different trainin
 
 
 
+
 ## Analyses Strategy
 
 All data processing and statistical analyses were performed in R version 4.31 @rcoreteamLanguageEnvironmentStatistical2020. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R @burknerBrmsPackageBayesian2017, and descriptive stats and tables were extracted with the BayestestR package @makowskiBayestestRDescribingEffects2019. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as circumventing convergence issues common to the frequentist analogues of our mixed models. For each model, we report the median values of the posterior distribution, and 95% credible intervals.
@@ -1533,6 +1610,7 @@ All data processing and statistical analyses were performed in R version 4.31 @r
 Each model was set to run with 4 chains, 5000 iterations per chain, with the first 2500 of which were discarded as warmup chains. Rhat values were generally within an acceptable range, with values \<=1.02 (see appendix for diagnostic plots). We used uninformative priors for the fixed effects of the model (condition and velocity band), and weakly informative Student T distributions for for the random effects.
 
 We compared varied and constant performance across two measures, deviation and discrimination. Deviation was quantified as the absolute deviation from the nearest boundary of the velocity band, or set to 0 if the throw velocity fell anywhere inside the target band. Thus, when the target band was 600-800, throws of 400, 650, and 1100 would result in deviation values of 200, 0, and 300, respectively. Discrimination was measured by fitting a linear model to the testing throws of each subjects, with the lower end of the target velocity band as the predicted variable, and the x velocity produced by the participants as the predictor variable. Participants who reliably discriminated between velocity bands tended to have positive slopes with values \~1, while participants who made throws irrespective of the current target band would have slopes \~0.
+
 
 
 
@@ -1597,6 +1675,7 @@ Band & Band Type & Mean & Median & Sd\\
 
 
 
+
 ## Results
 
 ### Testing Phase - No feedback.
@@ -1606,6 +1685,7 @@ In the first part of the testing phase, participants are tested from each of the
 #### Deviation From Target Band
 
 Descriptive summaries testing deviation data are provided in @tbl-e1-test-nf-deviation and @fig-e1-test-dev. To model differences in accuracy between groups, we used Bayesian mixed effects regression models to the trial level data from the testing phase. The primary model predicted the absolute deviation from the target velocity band (dist) as a function of training condition (condit), target velocity band (band), and their interaction, with random intercepts and slopes for each participant (id).
+
 
 
 
@@ -1667,12 +1747,14 @@ Constant - Varied & 1200 & 33.96 & -11.9 & 81.01 & 0.92\\
 
 
 
+
 The model predicting absolute deviation (dist) showed clear effects of both training condition and target velocity band (Table X). Overall, the varied training group showed a larger deviation relative to the constant training group (β = 157.44, 95% CI \[60.53, 254.9\]). Deviation also depended on target velocity band, with lower bands showing less deviation. See @tbl-e1-bmm-dist for full model output.
 
 
 #### Discrimination between bands
 
 In addition to accuracy/deviation, we also assessed the ability of participants to reliably discriminate between the velocity bands (i.e. responding differently when prompted for band 600-800 than when prompted for band 150-350). @tbl-e1-test-nf-vx shows descriptive statistics of this measure, and Figure 1 visualizes the full distributions of throws for each combination of condition and velocity band. To quantify discrimination, we again fit Bayesian Mixed Models as above, but this time the dependent variable was the raw x velocity generated by participants on each testing trial.
+
 
 
 
@@ -1774,9 +1856,11 @@ condit*Band & -0.07 & -0.17 & 0.04 & 0.89\\
 
 
 
+
 See @tbl-e1-bmm-vx for the full model results. The estimated coefficient for training condition ($B$ = 164.05, 95% CrI \[45.5, 278.85\]) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the slope on Velocity Band ($B$ = 0.71, 95% CrI \[0.62, 0.8\]). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($B$ = -0.14, 95% CrI \[-0.26, -0.01\]), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less senitivity between vands than the constant condition. This difference is depicted visually in @fig-e1-bmm-vx.@tbl-e1-slope-quartile shows the average slope coefficients for varied and constant participants separately for each quartile. The constant participant participants appear to have larger slopes across quartiles, but the difference between conditions may be less pronounced for the top quartiles of subjects who show the strongest discrimination. Figure @fig-e1-bmm-bx2 shows the distributions of slope values for each participant, and the compares the probability density of slope coefficients between training conditions. @fig-e1-indv-slopes 
 
 The second model, which focused solely on extrapolation bands, revealed similar patterns. The Velocity Band term ($B$ = 0.5, 95% CrI \[0.42, 0.57\]) still demonstrates a high degree of discrimination ability. However, the posterior distribution for interaction term ($B$ = -0.07, 95% CrI \[-0.17, 0.04\] ) does across over 0, suggesting that the evidence for decreased discrimination ability for the varied participants is not as strong when considering only the three extrapolation bands.
+
 
 
 
@@ -1801,9 +1885,9 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 \hline
 Condition & Q\_0\%\_mean & Q\_25\%\_mean & Q\_50\%\_mean & Q\_75\%\_mean & Q\_100\%\_mean\\
 \hline
-Constant & -0.111 & 0.483 & 0.691 & 0.934 & 1.39\\
+Constant & -0.107 & 0.477 & 0.688 & 0.937 & 1.39\\
 \hline
-Varied & -0.201 & 0.268 & 0.586 & 0.903 & 1.30\\
+Varied & -0.208 & 0.268 & 0.588 & 0.899 & 1.30\\
 \hline
 \end{tabular}
 
@@ -1838,7 +1922,10 @@ Subset of Varied and Constant Participants with the smallest and largest estimat
 
 
 
+
 # Experiment 2
+
+
 
 
 
@@ -1851,6 +1938,7 @@ Subset of Varied and Constant Participants with the smallest and largest estimat
 
 
 
+
 :::{.cell fig-width="6" fig-height="2.5" fig-responsive=false layout-align="left"}
 
 :::{.cell-output-display}
@@ -1859,7 +1947,7 @@ Subset of Varied and Constant Participants with the smallest and largest estimat
 
 :::{}
 
-![](manuscript_files/figure-latex/dot-figure-2.png){width="6in" height="2.5in" fig-pos='H' fig-env='figure'}
+![](manuscript_files/figure-latex/dot-figure-4.png){width="6in" height="2.5in" fig-pos='H' fig-env='figure'}
 :::
 
 
@@ -1867,6 +1955,7 @@ Experiment 2 Design. Constant and Varied participants complete different trainin
 :::
 :::
 :::
+
 
 
 
@@ -1892,6 +1981,7 @@ To model differences in accuracy between groups, we used Bayesian mixed effects 
 \begin{equation}
 dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \beta_3 \cdot condit_{ij} \cdot band_{ij} + b_{0i} + b_{1i} \cdot band_{ij} + \epsilon_{ij}
 \end{equation}
+
 
 
 
@@ -1997,11 +2087,14 @@ Constant - Varied & 1200 & -79.6 & -139.5 & -15.45 & 0.99\\
 
 
 
+
 The model predicting absolute deviation showed a modest tendency for the varied training group to have lower deviation compared to the constant training group (β = -70.33, 95% CI \[-156.87, 16.66\]),with 94% of the posterior distribution being less than 0. This suggests a potential benefit of training with variation, though the evidence is not definitive.
 
 
 
 # Experiment 3
+
+
 
 
 
@@ -2023,6 +2116,7 @@ In the first part of the testing phase, participants are tested from each of the
 
 Descriptive summaries testing deviation data are provided in @tbl-e3-test-nf-deviation and @fig-e3-test-dev. 
 To model differences in accuracy between groups, we fit Bayesian mixed effects regression models to the trial level data from the testing phase. The primary model predicted the absolute deviation from the target velocity band (dist) as a function of training condition (condit), target velocity band (band), and their interaction, with random intercepts and slopes for each participant (id). 
+
 
 
 
@@ -2148,7 +2242,9 @@ condit*Band & 0.09 & -0.01 & 0.19 & 0.96\\
 
 
 
+
 The effect of training condition in Experiment 3 showed a similar pattern to Experiment 2, with the varied group tending to have lower deviation than the constant group (β = -90.65, 95% CrI \[-182.79, 3.75\]), with 97% of the posterior distribution falling under 0. 
+
 
 
 
@@ -2164,6 +2260,7 @@ The effect of training condition in Experiment 3 showed a similar pattern to Exp
 
 
 
+
 #### Discrimination between Velocity Bands
 
 In addition to accuracy/deviation. We also assessed the ability of participants to reliably discriminate between the velocity bands (i.e. responding differently when prompted for band 600-800 than when prompted for band 150-350). @tbl-e3-test-nf-vx shows descriptive statistics of this measure, and Figure 1 visualizes the full distributions of throws for each combination of condition and velocity band. To quantify discrimination, we again fit Bayesian Mixed Models as above, but this time the dependent variable was the raw x velocity generated by participants. 
@@ -2171,6 +2268,7 @@ In addition to accuracy/deviation. We also assessed the ability of participants 
 \begin{equation}
 vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
 \end{equation}
+
 
 
 
@@ -2297,6 +2395,7 @@ condit*Band & 0.18 & 0.06 & 0.31 & 1\\
 
 
 
+
 See @tbl-e3-bmm-vx for the full model results. 
 
 Slope estimates for experiment 3 suggest that participants were capable of distinguishing between velocity bands even when provided only ordinal feedback during training (β = 0.44, 95% CrI \[0.35, 0.52\]). Unlike the previous two experiments, the posterior distribution for the interaction between condition and band was consistently positive, suggestive of superior discrimination for the varied participants 
@@ -2319,7 +2418,10 @@ See  for a full specification of the equations that define ALM and EXAM.
 
 
 
+
 {{< pagebreak >}}
+
+
 
 
 
@@ -2347,7 +2449,10 @@ See  for a full specification of the equations that define ALM and EXAM.
 
 
 
+
 {{< pagebreak >}}
+
+
 
 
 
