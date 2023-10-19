@@ -2,7 +2,7 @@
 code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
 bibliography: ../Assets/Bib/Dissertation.bib
 link-citations: true
-keep-md: true
+# keep-md: true
 toc: false
 toc-depth: 3
 toc-location: body
@@ -15,15 +15,39 @@ execute:
 ::: {.content-visible when-format="html"}
 
 {{< include pre_sections/pre_html.qmd >}}
-<!-- Manually insert the table of contents here -->
-
 
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 {{< include pre_sections/pre_pdf.qmd >}}
+
+:::
+{{< pagebreak >}}
+
+# Abstract
+
+This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/toc_html.qmd >}}
+
 :::
 
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/toc_pdf.qmd >}}
+
+:::
+
+
+
+{{< pagebreak >}}
+
+
+
+# Literature Review
 
 {{< include ../Introduction.qmd >}}
 
@@ -1628,7 +1652,6 @@ test %>% group_by(id,vb,condit) |> plot_distByCondit()
 ```{r}
 #| label: tbl-e1-test-nf-vx
 #| tbl-cap: "Testing vx - Empirical Summary"
-#| layout-ncol: 1
 #| include: true
 
 result <- test_summary_table(test, "vx","X Velocity", mfun = list(mean = mean, median = median, sd = sd))

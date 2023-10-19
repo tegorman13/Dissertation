@@ -1,6 +1,6 @@
 \begin{centering}
 \LARGE
-{Variability and Generalization - A Similarity-Based Account}
+{The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach}
 
  
 \vspace*{1.5cm}
