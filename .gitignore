@@ -48,7 +48,7 @@ Scratch/*
 *.log
 *.rdx
 *.rdb
-*.knit.md
+#*.knit.md
 *.results
 
 # other
@@ -69,4 +69,4 @@ mturk-and-gmail.txt
 # specific file keep
 !readme.md
 !/original....pdf
-
+!TG_Full_Dissertation.docx
