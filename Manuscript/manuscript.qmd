@@ -23,6 +23,11 @@ execute:
 {{< include pre_sections/pre_pdf.qmd >}}
 
 :::
+
+::: {.content-visible when-format="docx"}
+{{< include pre_sections/pre_docx.qmd >}}
+:::
+
 {{< pagebreak >}}
 
 # Abstract
