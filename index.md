@@ -24,7 +24,9 @@
 [@brunsteinPreparingNoveltyDiverse2011]
 
 
+[@linvilleExemplarAbstractionModels1993]
 
+[@gershmanStructureLearningPrinciples2023]
 
 At least to me, it's not obvious that a purely 'exemplar-based similarity' learning agent would not not be able to show considerable gains in the learning phase, even without any stimulus repetitions [@huExemplarmodelAccountCategorization2021]. Exemplar-based similarity models have frequently been used to account for human learning in rule-based categories, even for categories that are defined entirely via rules
 [@nosofskyExemplarbasedAccountsMultiplesystem2000; @rodriguesRulesplusexceptionTasksProblem2007; 
