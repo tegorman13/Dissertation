@@ -16,10 +16,12 @@ editor:
     wrap: 72
 ---
 
-[Pdf of the journal
+____________________________________________________
+[pdf of the journal
 article](Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}\
 [Link to online version of journal
 article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
+
 
 ```{r}
 pacman::p_load(tidyr,papaja, knitr, tinytex, RColorBrewer, kableExtra, cowplot, patchwork)
