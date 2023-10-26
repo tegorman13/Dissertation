@@ -321,7 +321,7 @@ simdat <- data.frame(x=rep(seq(200,1000),3),condit=c(rep("varied",1602),rep("con
   #group_by(condit) %>% mutate(scaleLinear=(genLinear-min(genLinear))/(max(genLinear)-min(genLinear))) 
   group_by(x,condit) %>%
   reframe(genGauss=mean(genGauss),genLinear=mean(genLinear)/linScale,.groups = 'keep')
-colorVec=c("darkblue","darkred")
+colorVec=c("darkableue","darkred")
 plotSpecs <- list(geom_line(alpha=.7,size=.4),scale_color_manual(values=colorVec),
                   geom_vline(alpha=.55,xintercept = c(400,800),color=colorVec[2]),
                   geom_vline(alpha=.55,xintercept = c(600),color=colorVec[1]),
@@ -1293,7 +1293,7 @@ simdat <- data.frame(x=rep(seq(200,1000),3),condit=c(rep("varied",1602),rep("con
 
 #plot(x,exp(c*(trainingTestingDifference+abs(x-800)))+exp(c*(trainingTestingDifference+abs(x-400)))
 
-colorVec=c("darkblue","darkred")
+colorVec=c("darkableue","darkred")
 plotSpecs <- list(geom_line(alpha=.7),scale_color_manual(values=colorVec),
                   geom_vline(alpha=.55,xintercept = c(400,800),color=colorVec[2]),
                   geom_vline(alpha=.55,xintercept = c(600),color=colorVec[1]),
@@ -1556,13 +1556,13 @@ We compared varied and constant performance across two measures, deviation and d
 result <- test_summary_table(test, "dist","Deviation", mfun = list(mean = mean, median = median, sd = sd))
 
 
-result$constant |>kbl(booktabs = TRUE,
+result$constant |>kable(booktabs = TRUE,
                         linesep = "\\addlinespace[0.5em]",
                         caption = paste("Summary of Deviation- Constant"))
 # |>
 #   kable_styling(font_size = ifelse(fmt_out == "latex", 8.5, NA))
 
-result$varied |> kbl(booktabs = TRUE,
+result$varied |> kable(booktabs = TRUE,
                         linesep = "\\addlinespace[0.5em]",
                         caption = paste("Summary of Deviation- Varied"))
 
@@ -1611,7 +1611,7 @@ modelName <- "e1_testDistBand_RF_5K"
 e1_distBMM <- brm(dist ~ condit * bandInt + (1 + bandInt|id),
                       data=test,file=paste0(here::here("data/model_cache",modelName)),
                       iter=5000,chains=4)
-GetModelStats(e1_distBMM) |> kbl(booktabs = TRUE,caption = paste("Coefficients"))
+GetModelStats(e1_distBMM) |> kable(booktabs = TRUE,caption = paste("Coefficients"))
 
 
 e1_distBMM |> 
@@ -1621,9 +1621,9 @@ e1_distBMM |>
    summarize(median_qi(.value),pd=sum(.value>0)/n()) |>
    select(contrast,Band=bandInt,value=y,lower=ymin,upper=ymax,pd) |> 
    mutate(across(where(is.numeric), \(x) round(x, 2)),
-          pd=ifelse(value<0,1-pd,pd)) |> kbl(booktabs = TRUE)
+          pd=ifelse(value<0,1-pd,pd)) |> kable(booktabs = TRUE)
 # |> 
-#   kbl(caption="Contrasts")
+#   kable(caption="Contrasts")
 
 coef_details <- get_coef_details(e1_distBMM, "conditVaried")
 
@@ -1660,8 +1660,8 @@ test %>% group_by(id,vb,condit) |> plot_distByCondit()
 #| include: true
 
 result <- test_summary_table(test, "vx","X Velocity", mfun = list(mean = mean, median = median, sd = sd))
-result$constant |> kbl(booktabs = TRUE)
-result$varied |> kbl(booktabs = TRUE)
+result$constant |> kable(booktabs = TRUE)
+result$varied |> kable(booktabs = TRUE)
 
 ```
 
@@ -1675,7 +1675,7 @@ e1_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
                         data=test,file=paste0(here::here("data/model_cache", "e1_testVxBand_RF_5k")),
                         iter=5000,chains=4,silent=0,
                         control=list(adapt_delta=0.94, max_treedepth=13))
-GetModelStats(e1_vxBMM ) |> kbl(booktabs=T, caption="Fit to all 6 bands")
+GetModelStats(e1_vxBMM ) |> kable(booktabs=T, caption="Fit to all 6 bands")
 
 cd1 <- get_coef_details(e1_vxBMM, "conditVaried")
 sc1 <- get_coef_details(e1_vxBMM, "bandInt")
@@ -1770,7 +1770,7 @@ random_effects <- e1_vxBMM |>
     reframe(enframe(quantile(SlopeInt, c(0.0,0.25, 0.5, 0.75,1)), "quantile", "SlopeInt")) |> 
   pivot_wider(names_from=quantile,values_from=SlopeInt,names_prefix="Q_") |>
   group_by(Condition) |>
-  summarise(across(starts_with("Q"), list(mean = mean))) |> kbl()
+  summarise(across(starts_with("Q"), list(mean = mean))) |> kable()
 
 ```
 
@@ -1880,10 +1880,10 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 #| tbl-subcap: ["Constant Testing - Deviation", "Varied Testing - Deviation"]
 
 result <- test_summary_table(testE2, "dist","Deviation", mfun = list(mean = mean, median = median, sd = sd))
-result$constant |> kbl()
-result$varied |> kbl()
+result$constant |> kable()
+result$varied |> kable()
 # make kable table with smaller font size
-# result$constant |> kbl(caption="Constant Testing - Deviation",booktabs=T,escape=F) |> kable_styling(font_size = 7)
+# result$constant |> kable(caption="Constant Testing - Deviation",booktabs=T,escape=F) |> kable_styling(font_size = 7)
 ```
 
 ```{r}
@@ -1917,7 +1917,7 @@ e2_distBMM |>
    select(contrast,Band=bandInt,value=y,lower=ymin,upper=ymax,pd) |> 
    mutate(across(where(is.numeric), \(x) round(x, 2)),
           pd=ifelse(value<0,1-pd,pd)) |>
-   kbl(caption="Contrasts")
+   kable(caption="Contrasts")
 
 coef_details <- get_coef_details(e2_distBMM, "conditVaried")
 
@@ -1925,8 +1925,85 @@ coef_details <- get_coef_details(e2_distBMM, "conditVaried")
 ```
 
 
+
+
+
 The model predicting absolute deviation showed a modest tendency for the varied training group to have lower deviation compared to the constant training group (β = `r coef_details$estimate`, 95% CI \[`r coef_details$conf.low`, `r coef_details$conf.high`\]),with 94% of the posterior distribution being less than 0. This suggests a potential benefit of training with variation, though the evidence is not definitive.
 
+
+#### Discrimination between Velocity Bands
+
+In addition to accuracy/deviation. We also assessed the ability of participants to reliably discriminate between the velocity bands (i.e. responding differently when prompted for band 600-800 than when prompted for band 150-350). @tbl-e2-test-nf-vx shows descriptive statistics of this measure, and Figure 1 visualizes the full distributions of throws for each combination of condition and velocity band. To quantify discrimination, we again fit Bayesian Mixed Models as above, but this time the dependent variable was the raw x velocity generated by participants. 
+
+\begin{equation}
+vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
+\end{equation}
+
+
+
+
+```{r}
+#| label: fig-e2-test-vx
+#| fig-cap: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band. 
+#| fig-width: 11
+#| fig-height: 9
+testE2 %>% group_by(id,vb,condit) |> plot_distByCondit()
+
+```
+
+
+```{r}
+#| label: tbl-e2-test-nf-vx
+#| tbl-cap: "Testing vx - Empirical Summary"
+#| tbl-subcap: ["Constant Testing - vx", "Varied Testing - vx"]
+#| layout-ncol: 2
+
+result <- test_summary_table(testE2, "vx","X Velocity" ,mfun = list(mean = mean, median = median, sd = sd))
+result$constant |> kable()
+result$varied |> kable()
+
+```
+
+
+
+
+```{r}
+#| label: tbl-e2-bmm-vx
+#| tbl-cap: "Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
+e2_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
+                        data=testE2,file=paste0(here::here("data/model_cache", "e2_testVxBand_RF_5k")),
+                        iter=5000,chains=4,silent=0,
+                        control=list(adapt_delta=0.94, max_treedepth=13))
+mt3 <-GetModelStats(e2_vxBMM ) |> kable(escape=F,booktabs=T)
+mt3
+
+cd1 <- get_coef_details(e2_vxBMM, "conditVaried")
+sc1 <- get_coef_details(e2_vxBMM, "bandInt")
+intCoef1 <- get_coef_details(e2_vxBMM, "conditVaried:bandInt")
+```
+
+
+
+See @tbl-e2-bmm-vx for the full model results. 
+
+When examining discrimination ability using the model predicting raw x-velocity, the results were less clear than those of the absolute deviation analysis. The slope on Velocity Band (β = `r sc1$estimate`, 95% CrI \[`r sc1$conf.low`, `r sc1$conf.high`\]) indicates that participants showed good discrimination between bands overall. However, the interaction term suggested this effect was not modulated by training condition (β = `r intCoef1$estimate`, 95% CrI \[`r intCoef1$conf.low`, `r intCoef1$conf.high`\]) Thus, while varied training may provide some advantage for accuracy, both training conditions seem to have similar abilities to discriminate between velocity bands.
+
+```{r}
+#| label: fig-e2-bmm-vx
+#| fig-cap: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. 
+
+e2_vxBMM |> emmeans( ~condit + bandInt, 
+                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
+  gather_emmeans_draws() |>
+  ggplot(aes(x = bandInt, y = .value, color = condit, fill = condit)) + 
+  stat_dist_pointinterval() +
+  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
+  ylab("Predicted X Velocity") + xlab("Band")+
+  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
+                     labels = levels(testE2$vb), 
+                     limits = c(0, 1400)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
 
 
 # Experiment 3
@@ -1960,12 +2037,12 @@ To model differences in accuracy between groups, we fit Bayesian mixed effects r
 #| tbl-subcap: ["Constant Testing - Deviation", "Varied Testing - Deviation"]
 
 resultOrig <- test_summary_table(testE3 |> filter(bandOrder=="Original"), "dist","Deviation", mfun = list(mean = mean, median = median, sd = sd))
-resultOrig$constant |> kbl()
-resultOrig$varied |> kbl()
+resultOrig$constant |> kable()
+resultOrig$varied |> kable()
 
 resultRev <- test_summary_table(testE3 |> filter(bandOrder=="Reverse"), "dist","Deviation", mfun = list(mean = mean, median = median, sd = sd))
-resultRev$constant |> kbl()
-resultRev$varied |> kbl()
+resultRev$constant |> kable()
+resultRev$varied |> kable()
 
 ```
 
@@ -2056,12 +2133,12 @@ testE3 |> group_by(id,vb,condit,bandOrder) |> plot_distByCondit() +
 #| tbl-subcap: ["Constant Testing - vx", "Varied Testing - vx"]
 
 resultOrig <- test_summary_table(testE3 |> filter(bandOrder=="Original"), "vx","X Velocity", mfun = list(mean = mean, median = median, sd = sd))
-resultOrig$constant |> kbl()
-resultOrig$varied |> kbl()
+resultOrig$constant |> kable()
+resultOrig$varied |> kable()
 
 resultRev <- test_summary_table(testE3 |> filter(bandOrder=="Reverse"), "vx","X Velocity", mfun = list(mean = mean, median = median, sd = sd))
-resultRev$constant |> kbl()
-resultRev$varied |> kbl()
+resultRev$constant |> kable()
+resultRev$varied |> kable()
 ```
 
 

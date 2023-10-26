@@ -1,5 +1,18 @@
 ## Title Page
 
+[@kruschkeModelsAttentionalLearning2011]
+
+[@mezzadriHowFitTransfer2023]
+
+@ciccioneCanHumansPerform2021a
+
+[@mezzadriOrderdependentTransferModel2022a]
+
+[@busemeyerLearningFunctionalRelations1997]
+
+[@mindaLearningCategoriesMaking2004]
+
+[@collsiooNumericalInformationAlways2023]
 
 [@onnisVariabilitySpiceLearning2004]
 
