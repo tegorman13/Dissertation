@@ -1,0 +1,82 @@
+---
+code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
+bibliography: ../Assets/Bib/Dissertation.bib
+link-citations: true
+# keep-md: true
+toc: false
+# toc-depth: 3
+# toc-location: body
+execute: 
+  warning: false
+  eval: true
+  include: false
+---
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/pre_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/pre_pdf.qmd >}}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+{{< include pre_sections/pre_docx.qmd >}}
+
+:::
+
+{{< pagebreak >}}
+
+# Abstract
+
+This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+
+{{< pagebreak >}}
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/toc_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/toc_pdf.qmd >}}
+
+:::
+
+
+
+{{< pagebreak >}}
+
+
+## Main body
+
+Following the procedure used by @mcdanielPredictingTransferPerformance2009, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models will be fit directly to the trial by trial data of each individual participants, both by minimizing the root-mean squared deviation (RMSE), and by maximizing log likelihood. Because ALM has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also fit the extended EXAM version of the model, which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.
+
+quarto pandoc --citeproc --pdf-engine xelatex -t pdf \
+  --bibliography=../Assets/Bib/Dissertation.bib \
+  --standalone \
+  -f markdown igas_e1.pdf.md \
+  -o refer-test.pdf
+
+quarto render igas_e1.qmd --citeproc --pdf-engine xelatex -t pdf \
+  --bibliography=../Assets/Bib/Dissertation.bib \
+  --standalone \
+  -o refer-test.pdf
+
+
+# Appendix
+
+{{< include ../Appendix/E1_Appendix.qmd >}}
+
+::: {.content-visible when-format="pdf"}
+
+# References
+
+:::

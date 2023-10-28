@@ -141,13 +141,6 @@ Thomas E. Gorman
 \end{center}
 \newpage
 
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
-
 
 
 
@@ -329,8 +322,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 # Variability and Generalization
-
-## Introduction
 
 The factors that influence the generalization of learning are of considerable interest to both researchers exploring the human learning system and practitioners aiming to enhance the effectiveness of educational and training interventions. The present effort will focus specifically on the role of variability in the learning input. Variability manipulations typically regulate either the number of distinct instances presented to learners during training, or the dispersion of these instances. Such manipulations have been empirically demonstrated to affect subsequent generalization performance. This essay will offer an in-depth review of the extant literature on the influence of variability, spanning multiple relevant domains.
 
@@ -806,19 +797,14 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 ::: {#tbl-IGAS-Table1 .cell layout-align="center" tab.cap='Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.'}
 ::: {.cell-output-display}
-\begin{table}
-\centering
-\begin{tabular}{lll}
-\toprule
-Position & Constant & Varied\\
-\midrule
-610 & 132.48(50.85) & 104.2(38.92)\\
-760 & 207.26(89.19) & 167.12(72.29)\\
-835 & 249.13(105.92) & 197.22(109.71)\\
-910 & 289.36(122.48) & 212.86(113.93)\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+
+|Position |Constant       |Varied         |
+|:--------|:--------------|:--------------|
+|610      |132.48(50.85)  |104.2(38.92)   |
+|760      |207.26(89.19)  |167.12(72.29)  |
+|835      |249.13(105.92) |197.22(109.71) |
+|910      |289.36(122.48) |212.86(113.93) |
 
 
 :::
@@ -1002,22 +988,16 @@ groups.
 
 ::: {#tbl-e2table1 .cell layout-align="center" tbl-cap='Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.'}
 ::: {.cell-output-display}
-\begin{table}
-\centering
-\begin{tabular}{lll}
-\toprule
-Position & Constant & Varied\\
-\midrule
-400 & 100.59(46.3) & 83.92(33.76)\\
-500 & 152.28(69.82) & 134.38(61.38)\\
-625 & 211.21(90.95) & 183.51(75.92)\\
-675 & 233.32(93.35) & 206.32(94.64)\\
-800 & 283.24(102.85) & 242.65(89.73)\\
-\addlinespace
-900 & 343.51(114.33) & 289.62(110.07)\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+
+|Position |Constant       |Varied         |
+|:--------|:--------------|:--------------|
+|400      |100.59(46.3)   |83.92(33.76)   |
+|500      |152.28(69.82)  |134.38(61.38)  |
+|625      |211.21(90.95)  |183.51(75.92)  |
+|675      |233.32(93.35)  |206.32(94.64)  |
+|800      |283.24(102.85) |242.65(89.73)  |
+|900      |343.51(114.33) |289.62(110.07) |
 
 
 :::
@@ -1040,22 +1020,16 @@ condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 
 ::: {#tbl-e2table2 .cell layout-align="center" tbl-cap='Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.'}
 ::: {.cell-output-display}
-\begin{table}
-\centering
-\begin{tabular}{lll}
-\toprule
-Position & Constant & Varied\\
-\midrule
-400 & 98.84(45.31) & 83.92(33.76)\\
-500 & 152.12(69.94) & \\
-625 & 212.91(92.76) & 183.51(75.92)\\
-675 & 232.9(95.53) & 206.32(94.64)\\
-800 & 285.91(102.81) & \\
-\addlinespace
-900 & 346.96(111.35) & 289.62(110.07)\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+
+|Position |Constant       |Varied         |
+|:--------|:--------------|:--------------|
+|400      |98.84(45.31)   |83.92(33.76)   |
+|500      |152.12(69.94)  |               |
+|625      |212.91(92.76)  |183.51(75.92)  |
+|675      |232.9(95.53)   |206.32(94.64)  |
+|800      |285.91(102.81) |               |
+|900      |346.96(111.35) |289.62(110.07) |
 
 
 :::
@@ -1095,19 +1069,14 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 ::: {#tbl-e2tab3 .cell layout-align="center" tbl-cap='Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.'}
 ::: {.cell-output-display}
-\begin{table}
-\centering
-\begin{tabular}{lll}
-\toprule
-Position & Constant & Varied\\
-\midrule
-400 & 108.85(50.63) & 83.92(33.76)\\
-625 & 204.75(84.66) & 183.51(75.92)\\
-675 & 235.75(81.15) & 206.32(94.64)\\
-900 & 323.5(130.9) & 289.62(110.07)\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+
+|Position |Constant      |Varied         |
+|:--------|:-------------|:--------------|
+|400      |108.85(50.63) |83.92(33.76)   |
+|625      |204.75(84.66) |183.51(75.92)  |
+|675      |235.75(81.15) |206.32(94.64)  |
+|900      |323.5(130.9)  |289.62(110.07) |
 
 
 :::
@@ -1547,7 +1516,32 @@ approach towards better understanding skill generalization and transfer.
 
 # Introduction
 
-In project 1, we applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training - as varied training has often been purported to be particularly beneficial in such situations. Extrapolation has long been a focus of the literature on function learning [@brehmerHypothesesRelationsScaled1974; @carrollFunctionalLearningLearning1963]. Central questions of the function learning literature have included the relative difficulties of learning various functional forms (e.g. linear vs.bilinear vs. quadratic), and the relative effectiveness of rule-based vs. association-based exemplar models vs. various hybrid models [@bottNonmonotonicExtrapolationFunction2004; @deloshExtrapolationSineQua1997; @jonesActiveFunctionLearning2018; @kalishPopulationLinearExperts2004; @mcdanielConceptualBasisFunction2005; @mcdanielPredictingTransferPerformance2009]. However the issue of training variation has received surprisingly little attention in this area.
+In project 1, I applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training. Although varied training has often been purported to be particularly beneficial for generalization or transfer, few experiments have compared varied and constant training in contexts with unambiguous extrapolation testing. 
+
+## Function Learning and Extrapolation
+
+The study of human function learning investigates how people learn relationships between continuous input and output values.  Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs [@deloshExtrapolationSineQua1997; @mcdanielEffectsSpacedMassed2013], or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don't contain data [@ciccioneCanHumansPerform2021a; @courrieuQuickApproximationBivariate2012; @saidExtrapolationAccuracyUnderestimates2021;@schulzCommunicatingCompositionalPatterns2020].
+
+@carrollFunctionalLearningLearning1963 conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function.  Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by @brehmerHypothesesRelationsScaled1974,testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but  given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. @kohFunctionLearningInduction1991 employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh & Meyer developed the log-polynomial adaptive-regression model to account for their results. 
+
+The first significant challenge to the rule-based accounts of function learning was put forth by @deloshExtrapolationSineQua1997 .  In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in @fig-delosh-extrap.
+
+The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model [@carrollFunctionalLearningLearning1963; @brehmerHypothesesRelationsScaled1974] tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data.  The log-polynomial adaptive regression model [@kohFunctionLearningInduction1991] was able to mimic some of the  systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred. 
+
+The authors also introduced two new function-learning models. The Associative Learning Model (ALM) and the extrapolation-association model (EXAM). ALM is a two layer connectionist model adapted from the ALCOVE model in the category learning literature [@kruschkeALCOVEExemplarbasedConnectionist1992]. ALM belongs to the general class of radial-basis function neural networks, and can be considered a similarity-based model in the sense that the nodes in the input layer of the network are activated as a function of distance. The EXAM model retains the same similarity based activation and associative learning mechanisms as ALM, while being augmented with a linear rule response mechanism. When presented with novel  stimuli, EXAM will retrieve the most similar input-output examples encountered during training, and from those examples compute a local slope. ALM was able to provide a good account of participant training and interpolation data in all three function conditions, however it was unable to extrapolate. EXAM, on the other hand, was able to reproduce both the extrapolation underestimation, as well as the quadratic and exponential overestimation patterns exhibited by the human participants. Subsequent research identified some limitations in EXAM's ability to account for cases where human participants learn and extrapolate sinusoidal function @bottNonmonotonicExtrapolationFunction2004 or to scenarios where different functions apply to different regions of the input space @kalishPopulationLinearExperts2004, though EXAM has been shown to provide a good account of human learning and extrapolation in tasks with bi-linear, V shaped input spaces @mcdanielPredictingTransferPerformance2009.
+
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples.](manuscript_files/figure-pdf/fig-delosh-extrap-1.pdf){#fig-delosh-extrap fig-align='center' width=100%}
+:::
+:::
+
+
+
+
 
 
 # Methods
@@ -1619,55 +1613,35 @@ We compared varied and constant performance across two measures, deviation and d
 
 ::: {#tbl-e1-test-nf-deviation .cell layout-ncol="1" layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Full datasets","Intersection of samples with all labels available"]'}
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e1-test-nf-deviation}Summary of Deviation- Constant}
-\centering
-\begin{tabular}[t]{llrrr}
-\toprule
-Band & Band Type & Mean & Median & Sd\\
-\midrule
-100-300 & Extrapolation & 254 & 148 & 298\\
-\addlinespace[0.5em]
-350-550 & Extrapolation & 191 & 110 & 229\\
-\addlinespace[0.5em]
-600-800 & Extrapolation & 150 & 84 & 184\\
-\addlinespace[0.5em]
-800-1000 & Trained & 184 & 106 & 242\\
-\addlinespace[0.5em]
-1000-1200 & Extrapolation & 233 & 157 & 282\\
-\addlinespace[0.5em]
-1200-1400 & Extrapolation & 287 & 214 & 290\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+Table: Summary of Deviation- Constant
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  254|    148| 298|
+|350-550   |Extrapolation |  191|    110| 229|
+|600-800   |Extrapolation |  150|     84| 184|
+|800-1000  |Trained       |  184|    106| 242|
+|1000-1200 |Extrapolation |  233|    157| 282|
+|1200-1400 |Extrapolation |  287|    214| 290|
 
 
 :::
 
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e1-test-nf-deviation}Summary of Deviation- Varied}
-\centering
-\begin{tabular}[t]{llrrr}
-\toprule
-Band & Band Type & Mean & Median & Sd\\
-\midrule
-100-300 & Extrapolation & 386 & 233 & 426\\
-\addlinespace[0.5em]
-350-550 & Extrapolation & 285 & 149 & 340\\
-\addlinespace[0.5em]
-600-800 & Extrapolation & 234 & 144 & 270\\
-\addlinespace[0.5em]
-800-1000 & Trained & 221 & 149 & 248\\
-\addlinespace[0.5em]
-1000-1200 & Trained & 208 & 142 & 226\\
-\addlinespace[0.5em]
-1200-1400 & Trained & 242 & 182 & 235\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+Table: Summary of Deviation- Varied
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  386|    233| 426|
+|350-550   |Extrapolation |  285|    149| 340|
+|600-800   |Extrapolation |  234|    144| 270|
+|800-1000  |Trained       |  221|    149| 248|
+|1000-1200 |Trained       |  208|    142| 226|
+|1200-1400 |Trained       |  242|    182| 235|
 
 
 :::
@@ -1705,40 +1679,31 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 
 ::: {#tbl-e1-bmm-dist .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Constant Testing1 - Deviation","Varied Testing - Deviation"]'}
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e1-bmm-dist}Coefficients}
-\centering
-\begin{tabular}[t]{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 205.09 & 136.86 & 274.06 & 1.00\\
-conditVaried & 157.44 & 60.53 & 254.90 & 1.00\\
-Band & 0.01 & -0.07 & 0.08 & 0.57\\
-condit*Band & -0.16 & -0.26 & -0.06 & 1.00\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+Table: Coefficients
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   205.09|        136.86|        274.06| 1.00|
+|conditVaried |   157.44|         60.53|        254.90| 1.00|
+|Band         |     0.01|         -0.07|          0.08| 0.57|
+|condit*Band  |    -0.16|         -0.26|         -0.06| 1.00|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{lrrrrr}
-\toprule
-contrast & Band & value & lower & upper & pd\\
-\midrule
-Constant - Varied & 100 & -141.49 & -229.2 & -53.83 & 1.00\\
-Constant - Varied & 350 & -101.79 & -165.6 & -36.32 & 1.00\\
-Constant - Varied & 600 & -62.02 & -106.2 & -14.77 & 1.00\\
-Constant - Varied & 800 & -30.11 & -65.1 & 6.98 & 0.94\\
-Constant - Varied & 1000 & 2.05 & -33.5 & 38.41 & 0.54\\
-\addlinespace
-Constant - Varied & 1200 & 33.96 & -11.9 & 81.01 & 0.92\\
-\bottomrule
-\end{tabular}
+
+|contrast          | Band|   value|  lower|  upper|   pd|
+|:-----------------|----:|-------:|------:|------:|----:|
+|Constant - Varied |  100| -141.49| -229.2| -53.83| 1.00|
+|Constant - Varied |  350| -101.79| -165.6| -36.32| 1.00|
+|Constant - Varied |  600|  -62.02| -106.2| -14.77| 1.00|
+|Constant - Varied |  800|  -30.11|  -65.1|   6.98| 0.94|
+|Constant - Varied | 1000|    2.05|  -33.5|  38.41| 0.54|
+|Constant - Varied | 1200|   33.96|  -11.9|  81.01| 0.92|
 
 
 :::
@@ -1775,38 +1740,30 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 ::: {#tbl-e1-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary'}
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{llrrr}
-\toprule
-Band & Band Type & Mean & Median & Sd\\
-\midrule
-100-300 & Extrapolation & 524 & 448 & 327\\
-350-550 & Extrapolation & 659 & 624 & 303\\
-600-800 & Extrapolation & 770 & 724 & 300\\
-800-1000 & Trained & 1001 & 940 & 357\\
-1000-1200 & Extrapolation & 1167 & 1104 & 430\\
-\addlinespace
-1200-1400 & Extrapolation & 1283 & 1225 & 483\\
-\bottomrule
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  524|    448| 327|
+|350-550   |Extrapolation |  659|    624| 303|
+|600-800   |Extrapolation |  770|    724| 300|
+|800-1000  |Trained       | 1001|    940| 357|
+|1000-1200 |Extrapolation | 1167|   1104| 430|
+|1200-1400 |Extrapolation | 1283|   1225| 483|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{llrrr}
-\toprule
-Band & Band Type & Mean & Median & Sd\\
-\midrule
-100-300 & Extrapolation & 664 & 533 & 448\\
-350-550 & Extrapolation & 768 & 677 & 402\\
-600-800 & Extrapolation & 876 & 813 & 390\\
-800-1000 & Trained & 1064 & 1029 & 370\\
-1000-1200 & Trained & 1180 & 1179 & 372\\
-\addlinespace
-1200-1400 & Trained & 1265 & 1249 & 412\\
-\bottomrule
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  664|    533| 448|
+|350-550   |Extrapolation |  768|    677| 402|
+|600-800   |Extrapolation |  876|    813| 390|
+|800-1000  |Trained       | 1064|   1029| 370|
+|1000-1200 |Trained       | 1180|   1179| 372|
+|1200-1400 |Trained       | 1265|   1249| 412|
 
 
 :::
@@ -1814,41 +1771,31 @@ Band & Band Type & Mean & Median & Sd\\
 
 ::: {#tbl-e1-bmm-vx .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Model fit to all 6 bands","Model fit to 3 extrapolation bands"]'}
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e1-bmm-vx}Fit to all 6 bands}
-\centering
-\begin{tabular}[t]{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 408.55 & 327.00 & 490.61 & 1.00\\
-conditVaried & 164.05 & 45.50 & 278.85 & 1.00\\
-Band & 0.71 & 0.62 & 0.80 & 1.00\\
-condit*Band & -0.14 & -0.26 & -0.01 & 0.98\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+Table: Fit to all 6 bands
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   408.55|        327.00|        490.61| 1.00|
+|conditVaried |   164.05|         45.50|        278.85| 1.00|
+|Band         |     0.71|          0.62|          0.80| 1.00|
+|condit*Band  |    -0.14|         -0.26|         -0.01| 0.98|
 
 
 :::
 
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e1-bmm-vx}Fit to 3 extrapolation bands}
-\centering
-\begin{tabular}[t]{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 478.47 & 404.00 & 551.45 & 1.00\\
-conditVaried & 142.04 & 37.17 & 247.59 & 1.00\\
-Band & 0.50 & 0.42 & 0.57 & 1.00\\
-condit*Band & -0.07 & -0.17 & 0.04 & 0.89\\
-\bottomrule
-\end{tabular}
-\end{table}
+
+Table: Fit to 3 extrapolation bands
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   478.47|        404.00|        551.45| 1.00|
+|conditVaried |   142.04|         37.17|        247.59| 1.00|
+|Band         |     0.50|          0.42|          0.57| 1.00|
+|condit*Band  |    -0.07|         -0.17|          0.04| 0.89|
 
 
 :::
@@ -1866,7 +1813,7 @@ The second model, which focused solely on extrapolation bands, revealed similar 
 
 
 
-::: {#fig-e1-bmm-vx .cell layout-ncol="2" layout-align="center"}
+::: {#fig-e1-bmm-vx .cell layout-ncol="1" layout-align="center"}
 ::: {.cell-output-display}
 ![Model fit to all 6 bands](manuscript_files/figure-pdf/fig-e1-bmm-vx-1.pdf){#fig-e1-bmm-vx-1 fig-align='center' width=100%}
 :::
@@ -1881,15 +1828,11 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 ::: {#tbl-e1-slope-quartile .cell layout-align="center" tbl-cap='Slope coefficients by quartile, per condition'}
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|r|r|r|r|r}
-\hline
-Condition & Q\_0\%\_mean & Q\_25\%\_mean & Q\_50\%\_mean & Q\_75\%\_mean & Q\_100\%\_mean\\
-\hline
-Constant & -0.107 & 0.477 & 0.688 & 0.937 & 1.39\\
-\hline
-Varied & -0.208 & 0.268 & 0.588 & 0.899 & 1.30\\
-\hline
-\end{tabular}
+
+|Condition | Q_0%_mean| Q_25%_mean| Q_50%_mean| Q_75%_mean| Q_100%_mean|
+|:---------|---------:|----------:|----------:|----------:|-----------:|
+|Constant  |    -0.109|      0.482|      0.691|      0.932|        1.39|
+|Varied    |    -0.206|      0.270|      0.586|      0.901|        1.29|
 
 
 :::
@@ -1988,46 +1931,30 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 ::: {#tbl-e2-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]'}
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 206 & 48 & 317\\
-\hline
-350-550 & Extrapolation & 194 & 86 & 268\\
-\hline
-600-800 & Trained & 182 & 112 & 240\\
-\hline
-800-1000 & Extrapolation & 200 & 129 & 233\\
-\hline
-1000-1200 & Extrapolation & 238 & 190 & 234\\
-\hline
-1200-1400 & Extrapolation & 311 & 254 & 288\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  206|     48| 317|
+|350-550   |Extrapolation |  194|     86| 268|
+|600-800   |Trained       |  182|    112| 240|
+|800-1000  |Extrapolation |  200|    129| 233|
+|1000-1200 |Extrapolation |  238|    190| 234|
+|1200-1400 |Extrapolation |  311|    254| 288|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Trained & 153 & 25 & 266\\
-\hline
-350-550 & Trained & 138 & 53 & 233\\
-\hline
-600-800 & Trained & 160 & 120 & 183\\
-\hline
-800-1000 & Extrapolation & 261 & 207 & 257\\
-\hline
-1000-1200 & Extrapolation & 305 & 258 & 273\\
-\hline
-1200-1400 & Extrapolation & 363 & 314 & 297\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Trained       |  153|     25| 266|
+|350-550   |Trained       |  138|     53| 233|
+|600-800   |Trained       |  160|    120| 183|
+|800-1000  |Extrapolation |  261|    207| 257|
+|1000-1200 |Extrapolation |  305|    258| 273|
+|1200-1400 |Extrapolation |  363|    314| 297|
 
 
 :::
@@ -2042,53 +1969,131 @@ Band & Band Type & Mean & Median & Sd\\
 ::: {#tbl-e2-bmm-dist .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band'}
 ::: {.cell-output-display}
 
-\begin{tabular}{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 151.71 & 90.51 & 215.86 & 1.00\\
-conditVaried & -70.33 & -156.87 & 16.66 & 0.94\\
-Band & 0.10 & 0.02 & 0.18 & 1.00\\
-condit*Band & 0.12 & 0.02 & 0.23 & 0.99\\
-\bottomrule
-\end{tabular}
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   151.71|         90.51|        215.86| 1.00|
+|conditVaried |   -70.33|       -156.87|         16.66| 0.94|
+|Band         |     0.10|          0.02|          0.18| 1.00|
+|condit*Band  |     0.12|          0.02|          0.23| 0.99|
 
 
 :::
 
 ::: {.cell-output-display}
-\begin{table}
 
-\caption{\label{tab:tbl-e2-bmm-dist}Contrasts}
-\centering
-\begin{tabular}[t]{l|r|r|r|r|r}
-\hline
-contrast & Band & value & lower & upper & pd\\
-\hline
-Constant - Varied & 100 & 57.6 & -20.5 & 135.32 & 0.93\\
-\hline
-Constant - Varied & 350 & 26.6 & -30.9 & 83.84 & 0.83\\
-\hline
-Constant - Varied & 600 & -4.3 & -46.7 & 38.52 & 0.58\\
-\hline
-Constant - Varied & 800 & -29.3 & -69.4 & 11.29 & 0.92\\
-\hline
-Constant - Varied & 1000 & -54.6 & -101.1 & -5.32 & 0.98\\
-\hline
-Constant - Varied & 1200 & -79.6 & -139.5 & -15.45 & 0.99\\
-\hline
-\end{tabular}
-\end{table}
+
+Table: Contrasts
+
+|contrast          | Band| value|  lower|  upper|   pd|
+|:-----------------|----:|-----:|------:|------:|----:|
+|Constant - Varied |  100|  57.6|  -20.5| 135.32| 0.93|
+|Constant - Varied |  350|  26.6|  -30.9|  83.84| 0.83|
+|Constant - Varied |  600|  -4.3|  -46.7|  38.52| 0.58|
+|Constant - Varied |  800| -29.3|  -69.4|  11.29| 0.92|
+|Constant - Varied | 1000| -54.6| -101.1|  -5.32| 0.98|
+|Constant - Varied | 1200| -79.6| -139.5| -15.45| 0.99|
 
 
 :::
 :::
+
+
+
 
 
 
 
 
 The model predicting absolute deviation showed a modest tendency for the varied training group to have lower deviation compared to the constant training group (β = -70.33, 95% CI \[-156.87, 16.66\]),with 94% of the posterior distribution being less than 0. This suggests a potential benefit of training with variation, though the evidence is not definitive.
+
+
+#### Discrimination between Velocity Bands
+
+In addition to accuracy/deviation. We also assessed the ability of participants to reliably discriminate between the velocity bands (i.e. responding differently when prompted for band 600-800 than when prompted for band 150-350). @tbl-e2-test-nf-vx shows descriptive statistics of this measure, and Figure 1 visualizes the full distributions of throws for each combination of condition and velocity band. To quantify discrimination, we again fit Bayesian Mixed Models as above, but this time the dependent variable was the raw x velocity generated by participants. 
+
+\begin{equation}
+vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
+\end{equation}
+
+
+
+
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.](manuscript_files/figure-pdf/fig-e2-test-vx-1.pdf){#fig-e2-test-vx fig-align='center' width=100%}
+:::
+:::
+
+::: {#tbl-e2-test-nf-vx .cell layout-ncol="1" layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]'}
+::: {.cell-output-display}
+
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  457|    346| 354|
+|350-550   |Extrapolation |  597|    485| 368|
+|600-800   |Trained       |  728|    673| 367|
+|800-1000  |Extrapolation |  953|    913| 375|
+|1000-1200 |Extrapolation | 1064|   1012| 408|
+|1200-1400 |Extrapolation | 1213|   1139| 493|
+
+
+:::
+
+::: {.cell-output-display}
+
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Trained       |  410|    323| 297|
+|350-550   |Trained       |  582|    530| 303|
+|600-800   |Trained       |  696|    641| 316|
+|800-1000  |Extrapolation |  910|    848| 443|
+|1000-1200 |Extrapolation | 1028|    962| 482|
+|1200-1400 |Extrapolation | 1095|   1051| 510|
+
+
+:::
+:::
+
+::: {#tbl-e2-bmm-vx .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band'}
+::: {.cell-output-display}
+
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   362.64|        274.85|        450.02| 1.00|
+|conditVaried |    -8.56|       -133.97|        113.98| 0.55|
+|Band         |     0.71|          0.58|          0.84| 1.00|
+|condit*Band  |    -0.06|         -0.24|          0.13| 0.73|
+
+
+:::
+:::
+
+
+
+
+
+
+See @tbl-e2-bmm-vx for the full model results. 
+
+When examining discrimination ability using the model predicting raw x-velocity, the results were less clear than those of the absolute deviation analysis. The slope on Velocity Band (β = 0.71, 95% CrI \[0.58, 0.84\]) indicates that participants showed good discrimination between bands overall. However, the interaction term suggested this effect was not modulated by training condition (β = -0.06, 95% CrI \[-0.24, 0.13\]) Thus, while varied training may provide some advantage for accuracy, both training conditions seem to have similar abilities to discriminate between velocity bands.
+
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Conditional effect of training condition and Band. Ribbons indicate 95% HDI.](manuscript_files/figure-pdf/fig-e2-bmm-vx-1.pdf){#fig-e2-bmm-vx fig-align='center' width=100%}
+:::
+:::
+
+
 
 
 
@@ -2124,92 +2129,60 @@ To model differences in accuracy between groups, we fit Bayesian mixed effects r
 ::: {#tbl-e3-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]'}
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 396 & 325 & 350\\
-\hline
-350-550 & Extrapolation & 278 & 176 & 299\\
-\hline
-600-800 & Extrapolation & 173 & 102 & 215\\
-\hline
-800-1000 & Trained & 225 & 126 & 284\\
-\hline
-1000-1200 & Extrapolation & 253 & 192 & 271\\
-\hline
-1200-1400 & Extrapolation & 277 & 210 & 262\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  396|    325| 350|
+|350-550   |Extrapolation |  278|    176| 299|
+|600-800   |Extrapolation |  173|    102| 215|
+|800-1000  |Trained       |  225|    126| 284|
+|1000-1200 |Extrapolation |  253|    192| 271|
+|1200-1400 |Extrapolation |  277|    210| 262|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 383 & 254 & 385\\
-\hline
-350-550 & Extrapolation & 287 & 154 & 318\\
-\hline
-600-800 & Extrapolation & 213 & 140 & 244\\
-\hline
-800-1000 & Trained & 199 & 142 & 209\\
-\hline
-1000-1200 & Trained & 222 & 163 & 221\\
-\hline
-1200-1400 & Trained & 281 & 227 & 246\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  383|    254| 385|
+|350-550   |Extrapolation |  287|    154| 318|
+|600-800   |Extrapolation |  213|    140| 244|
+|800-1000  |Trained       |  199|    142| 209|
+|1000-1200 |Trained       |  222|    163| 221|
+|1200-1400 |Trained       |  281|    227| 246|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 403 & 334 & 383\\
-\hline
-350-550 & Extrapolation & 246 & 149 & 287\\
-\hline
-600-800 & Trained & 155 & 82 & 209\\
-\hline
-800-1000 & Extrapolation & 207 & 151 & 241\\
-\hline
-1000-1200 & Extrapolation & 248 & 220 & 222\\
-\hline
-1200-1400 & Extrapolation & 322 & 281 & 264\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  403|    334| 383|
+|350-550   |Extrapolation |  246|    149| 287|
+|600-800   |Trained       |  155|     82| 209|
+|800-1000  |Extrapolation |  207|    151| 241|
+|1000-1200 |Extrapolation |  248|    220| 222|
+|1200-1400 |Extrapolation |  322|    281| 264|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Trained & 153 & 0 & 307\\
-\hline
-350-550 & Trained & 147 & 55 & 258\\
-\hline
-600-800 & Trained & 159 & 107 & 192\\
-\hline
-800-1000 & Extrapolation & 221 & 160 & 235\\
-\hline
-1000-1200 & Extrapolation & 244 & 185 & 235\\
-\hline
-1200-1400 & Extrapolation & 324 & 264 & 291\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Trained       |  153|      0| 307|
+|350-550   |Trained       |  147|     55| 258|
+|600-800   |Trained       |  159|    107| 192|
+|800-1000  |Extrapolation |  221|    160| 235|
+|1000-1200 |Extrapolation |  244|    185| 235|
+|1200-1400 |Extrapolation |  324|    264| 291|
 
 
 :::
@@ -2224,16 +2197,13 @@ Band & Band Type & Mean & Median & Sd\\
 ::: {#tbl-e3-bmm-dist .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band'}
 ::: {.cell-output-display}
 
-\begin{tabular}{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 306.47 & 243.89 & 368.75 & 1.00\\
-conditVaried & -90.65 & -182.79 & 3.75 & 0.97\\
-Band & -0.07 & -0.13 & 0.00 & 0.97\\
-condit*Band & 0.09 & -0.01 & 0.19 & 0.96\\
-\bottomrule
-\end{tabular}
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper|   pd|
+|:------------|--------:|-------------:|-------------:|----:|
+|Intercept    |   306.47|        243.89|        368.75| 1.00|
+|conditVaried |   -90.65|       -182.79|          3.75| 0.97|
+|Band         |    -0.07|         -0.13|          0.00| 0.97|
+|condit*Band  |     0.09|         -0.01|          0.19| 0.96|
 
 
 :::
@@ -2274,7 +2244,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 
 
 
-::: {.cell .column-screen-inset-right layout-align="center"}
+::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.](manuscript_files/figure-pdf/fig-e3-test-vx-1.pdf){#fig-e3-test-vx fig-align='center' width=100%}
 :::
@@ -2283,92 +2253,60 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 ::: {#tbl-e3-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]'}
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 680 & 625 & 370\\
-\hline
-350-550 & Extrapolation & 771 & 716 & 357\\
-\hline
-600-800 & Extrapolation & 832 & 786 & 318\\
-\hline
-800-1000 & Trained & 1006 & 916 & 417\\
-\hline
-1000-1200 & Extrapolation & 1149 & 1105 & 441\\
-\hline
-1200-1400 & Extrapolation & 1180 & 1112 & 443\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  680|    625| 370|
+|350-550   |Extrapolation |  771|    716| 357|
+|600-800   |Extrapolation |  832|    786| 318|
+|800-1000  |Trained       | 1006|    916| 417|
+|1000-1200 |Extrapolation | 1149|   1105| 441|
+|1200-1400 |Extrapolation | 1180|   1112| 443|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 667 & 554 & 403\\
-\hline
-350-550 & Extrapolation & 770 & 688 & 383\\
-\hline
-600-800 & Extrapolation & 869 & 814 & 358\\
-\hline
-800-1000 & Trained & 953 & 928 & 359\\
-\hline
-1000-1200 & Trained & 1072 & 1066 & 388\\
-\hline
-1200-1400 & Trained & 1144 & 1093 & 426\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  667|    554| 403|
+|350-550   |Extrapolation |  770|    688| 383|
+|600-800   |Extrapolation |  869|    814| 358|
+|800-1000  |Trained       |  953|    928| 359|
+|1000-1200 |Trained       | 1072|   1066| 388|
+|1200-1400 |Trained       | 1144|   1093| 426|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Extrapolation & 684 & 634 & 406\\
-\hline
-350-550 & Extrapolation & 729 & 679 & 350\\
-\hline
-600-800 & Trained & 776 & 721 & 318\\
-\hline
-800-1000 & Extrapolation & 941 & 883 & 387\\
-\hline
-1000-1200 & Extrapolation & 1014 & 956 & 403\\
-\hline
-1200-1400 & Extrapolation & 1072 & 1014 & 442\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Extrapolation |  684|    634| 406|
+|350-550   |Extrapolation |  729|    679| 350|
+|600-800   |Trained       |  776|    721| 318|
+|800-1000  |Extrapolation |  941|    883| 387|
+|1000-1200 |Extrapolation | 1014|    956| 403|
+|1200-1400 |Extrapolation | 1072|   1014| 442|
 
 
 :::
 
 ::: {.cell-output-display}
 
-\begin{tabular}[t]{l|l|r|r|r}
-\hline
-Band & Band Type & Mean & Median & Sd\\
-\hline
-100-300 & Trained & 392 & 270 & 343\\
-\hline
-350-550 & Trained & 540 & 442 & 343\\
-\hline
-600-800 & Trained & 642 & 588 & 315\\
-\hline
-800-1000 & Extrapolation & 943 & 899 & 394\\
-\hline
-1000-1200 & Extrapolation & 1081 & 1048 & 415\\
-\hline
-1200-1400 & Extrapolation & 1185 & 1129 & 500\\
-\hline
-\end{tabular}
+
+|Band      |Band Type     | Mean| Median|  Sd|
+|:---------|:-------------|----:|------:|---:|
+|100-300   |Trained       |  392|    270| 343|
+|350-550   |Trained       |  540|    442| 343|
+|600-800   |Trained       |  642|    588| 315|
+|800-1000  |Extrapolation |  943|    899| 394|
+|1000-1200 |Extrapolation | 1081|   1048| 415|
+|1200-1400 |Extrapolation | 1185|   1129| 500|
 
 
 :::
@@ -2377,16 +2315,13 @@ Band & Band Type & Mean & Median & Sd\\
 ::: {#tbl-e3-bmm-vx .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band'}
 ::: {.cell-output-display}
 
-\begin{tabular}{lrrrr}
-\toprule
-Term & Estimate & 95\% CrI Lower & 95\% CrI Upper & pd\\
-\midrule
-Intercept & 607.67 & 536.02 & 679.87 & 1\\
-conditVaried & -167.76 & -277.14 & -64.08 & 1\\
-Band & 0.44 & 0.35 & 0.52 & 1\\
-condit*Band & 0.18 & 0.06 & 0.31 & 1\\
-\bottomrule
-\end{tabular}
+
+|Term         | Estimate| 95% CrI Lower| 95% CrI Upper| pd|
+|:------------|--------:|-------------:|-------------:|--:|
+|Intercept    |   607.67|        536.02|        679.87|  1|
+|conditVaried |  -167.76|       -277.14|        -64.08|  1|
+|Band         |     0.44|          0.35|          0.52|  1|
+|condit*Band  |     0.18|          0.06|          0.31|  1|
 
 
 :::
@@ -2466,4 +2401,102 @@ See  for a full specification of the equations that define ALM and EXAM.
 
 Following the procedure used by @mcdanielPredictingTransferPerformance2009, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models will be fit directly to the trial by trial data of each individual participants, both by minimizing the root-mean squared deviation (RMSE), and by maximizing log likelihood. Because ALM has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also fit the extended EXAM version of the model, which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.
 
+::: {.content-visible when-format="html"}
 # References
+
+::: {#refs}
+:::
+
+:::
+
+## Appendix
+
+### Appendix - Project 2 - Experiment 1
+
+
+
+### Appendix - Project 2 - Experiment 1 
+
+
+
+::: {.cell layout-align="center"}
+
+:::
+
+::: {.cell layout-align="center"}
+
+:::
+
+
+
+
+
+
+## E1 Appendix
+
+### Posterior Predictive Distributions
+
+
+
+::: {#fig-post-pred .cell layout-align="center"}
+::: {.cell-output-display}
+![Posterior Predictive Distribution - Deviation](manuscript_files/figure-pdf/fig-post-pred-1.pdf){#fig-post-pred-1 fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![Posterior Predictive Distribution - X Velocity](manuscript_files/figure-pdf/fig-post-pred-2.pdf){#fig-post-pred-2 fig-align='center' width=100%}
+:::
+
+Posterior Predictive distributions for Deviation and Vx. Posterior Draws in Blue, colored lines are empirical data.
+:::
+
+
+
+
+
+### Empirical vs. Predicted
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![Bayesian Mixed Model predictions vs. Empirical Predictions - X velocity](manuscript_files/figure-pdf/fig-empVsPred-1.pdf){#fig-empVsPred fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+### Different Aggregations
+
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![E1. Distribution of vx at Participant and Trial level](manuscript_files/figure-pdf/fig-empirical-vxGrp-1.pdf){#fig-empirical-vxGrp fig-align='center' width=100%}
+:::
+:::
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![E1. Distribution of Vx  at Participant and Trial level](manuscript_files/figure-pdf/fig-empirical-distGrp-1.pdf){#fig-empirical-distGrp fig-align='center' width=100%}
+:::
+:::
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)](manuscript_files/figure-pdf/fig-e1-ame-1.pdf){#fig-e1-ame fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+
+
+::: {.content-visible when-format="pdf"}
+
+# References
+
+:::

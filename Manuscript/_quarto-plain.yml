@@ -2,7 +2,6 @@ project:
   output-dir: output
 
 
-
 format:
   docx:
     prefer-html: true

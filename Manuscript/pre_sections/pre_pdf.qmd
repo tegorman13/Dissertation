@@ -63,10 +63,3 @@ Thomas E. Gorman
 \end{center}
 \newpage
 
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
-

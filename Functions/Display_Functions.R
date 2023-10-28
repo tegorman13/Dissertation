@@ -82,6 +82,7 @@ indv_model_plot <- function(combined_df, indv_coefs, testAvg,slopeVar, rank_vari
     scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
                        labels = levels(testAvg$vb), 
                        limits = c(0, 1400)) +
+    labs(x="Velocity Band",y="Vx") +
     theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5,size=8.5)) +
     ggh4x::facet_nested_wrap(vars(condit, id),ncol=3)
 }
