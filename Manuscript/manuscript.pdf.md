@@ -423,7 +423,7 @@ Numerous researchers have attempted to provide coherent frameworks to account fo
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-1_42ca9c15e99b12a3aca73f749bdec90e'}
 
 :::
 
@@ -612,7 +612,7 @@ to a linear drop-off.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-toy-model1_ecec26074c7d7412035dabfe0e05eded'}
 ::: {.cell-output-display}
 ![Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)](manuscript_files/figure-pdf/fig-toy-model1-1.pdf){#fig-toy-model1 fig-align='center' width=100%}
 :::
@@ -769,7 +769,7 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-IGAS-Training1_efb1cbef5d6d7b44f3d182a1b874ae59'}
 ::: {.cell-output-display}
 ![Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-IGAS-Training1-1.pdf){#fig-IGAS-Training1 fig-align='center' width=100%}
 :::
@@ -795,7 +795,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-IGAS-Testing1_8d8e177122af3596f25c061688774c06'}
 ::: {.cell-output-display}
 ![Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-IGAS-Testing1-1.pdf){#fig-IGAS-Testing1 fig-align='center' width=100%}
 :::
@@ -810,7 +810,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 
 
-::: {#tbl-IGAS-Table1 .cell layout-align="center" tab.cap='Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.'}
+::: {#tbl-IGAS-Table1 .cell layout-align="center" tab.cap='Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.' hash='manuscript_cache/pdf/tbl-IGAS-Table1_a4aece7e570f3a0183838cac8020c9cf'}
 ::: {.cell-output-display}
 
 
@@ -948,11 +948,11 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-6_88fb7c45004daf3734a6ca178bc5e484'}
 
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2train_50a4e311fb95a398e223af04882b3622'}
 ::: {.cell-output-display}
 ![Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2train-1.pdf){#fig-e2train fig-align='center' width=100%}
 :::
@@ -987,7 +987,7 @@ groups.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2testa_8ac14c45e635653d0b7e1aedc6b429f1'}
 ::: {.cell-output-display}
 ![Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2testa-1.pdf){#fig-e2testa fig-align='center' width=100%}
 :::
@@ -1001,7 +1001,7 @@ groups.
 
 
 
-::: {#tbl-e2table1 .cell layout-align="center" tbl-cap='Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.'}
+::: {#tbl-e2table1 .cell layout-align="center" tbl-cap='Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.' hash='manuscript_cache/pdf/tbl-e2table1_80121f64833bd1a8f63f4a8d2f34b410'}
 ::: {.cell-output-display}
 
 
@@ -1033,7 +1033,7 @@ condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 
 
 
-::: {#tbl-e2table2 .cell layout-align="center" tbl-cap='Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.'}
+::: {#tbl-e2table2 .cell layout-align="center" tbl-cap='Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.' hash='manuscript_cache/pdf/tbl-e2table2_f7b41434ce82d0349334ef7cd94d0d21'}
 ::: {.cell-output-display}
 
 
@@ -1068,7 +1068,7 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2test1_ee44df44db861edca0f6cb1467e53c1b'}
 ::: {.cell-output-display}
 ![A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.](manuscript_files/figure-pdf/fig-e2test1-1.pdf){#fig-e2test1 fig-align='center' width=100%}
 :::
@@ -1082,7 +1082,7 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 
 
-::: {#tbl-e2tab3 .cell layout-align="center" tbl-cap='Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.'}
+::: {#tbl-e2tab3 .cell layout-align="center" tbl-cap='Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.' hash='manuscript_cache/pdf/tbl-e2tab3_5c5bd2849cfb030dbe95f56ec743ad54'}
 ::: {.cell-output-display}
 
 
@@ -1159,7 +1159,7 @@ the experiment.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-taskSpace1_63113a7ce821e2ada10eb794c485eaa6'}
 ::: {.cell-output-display}
 ![A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.](manuscript_files/figure-pdf/fig-taskSpace1-1.pdf){#fig-taskSpace1 fig-align='center' width=100%}
 :::
@@ -1376,7 +1376,7 @@ throws, resulting in a non-zero dissimilarity.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-Toy-Model2_b11a4f7dbfd767cee38c8a5724e36fcc'}
 ::: {.cell-output-display}
 ![A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization =  $e^{(c\\cdot|x-800|)}  +e^{(c\\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\\cdot e^{(c\\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(cvaried\\cdot|x-800|)}  +e^{(cvaried\\cdot|x-400|)}$.](manuscript_files/figure-pdf/fig-Toy-Model2-1.pdf){#fig-Toy-Model2 fig-align='center' width=100%}
 :::
@@ -1520,7 +1520,7 @@ approach towards better understanding skill generalization and transfer.
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-15_f4928d611c68cd308c7fa11385b0a096'}
 
 :::
 
@@ -1548,7 +1548,7 @@ The authors also introduced two new function-learning models. The Associative Le
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-delosh-extrap_01676cd4b20295c2aa5103259f07f78f'}
 ::: {.cell-output-display}
 ![Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples.](manuscript_files/figure-pdf/fig-delosh-extrap-1.pdf){#fig-delosh-extrap fig-align='center' width=100%}
 :::
@@ -1626,7 +1626,7 @@ We compared varied and constant performance across two measures, deviation and d
 
 
 
-::: {#tbl-e1-test-nf-deviation .cell layout-ncol="1" layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Full datasets","Intersection of samples with all labels available"]'}
+::: {#tbl-e1-test-nf-deviation .cell layout-ncol="1" layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Full datasets","Intersection of samples with all labels available"]' hash='manuscript_cache/pdf/tbl-e1-test-nf-deviation_c0e52cd0c25c54d84cd4b3a16e0fbebc'}
 ::: {.cell-output-display}
 
 
@@ -1686,13 +1686,13 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 ```
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e1-test-dev_ea13b8a46a06b251a3439b95f4c71cf1'}
 ::: {.cell-output-display}
 ![E1. Deviations from target band during testing without feedback stage.](manuscript_files/figure-pdf/fig-e1-test-dev-1.pdf){#fig-e1-test-dev fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e1-bmm-dist .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Constant Testing1 - Deviation","Varied Testing - Deviation"]'}
+::: {#tbl-e1-bmm-dist .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Constant Testing1 - Deviation","Varied Testing - Deviation"]' hash='manuscript_cache/pdf/tbl-e1-bmm-dist_b09dcdadc7bc68c363f074e522af384c'}
 ::: {.cell-output-display}
 
 
@@ -1746,13 +1746,13 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 ```
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e1-test-vx_ce3eeb065fe5087738e59e4683e5c08c'}
 ::: {.cell-output-display}
 ![E1 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.](manuscript_files/figure-pdf/fig-e1-test-vx-1.pdf){#fig-e1-test-vx fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e1-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant","Varied"]'}
+::: {#tbl-e1-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant","Varied"]' hash='manuscript_cache/pdf/tbl-e1-test-nf-vx_56d419f9836142bc35127d257b56e9d9'}
 ::: {.cell-output-display}
 
 
@@ -1784,7 +1784,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 :::
 :::
 
-::: {#tbl-e1-bmm-vx .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Model fit to all 6 bands","Model fit to 3 extrapolation bands"]'}
+::: {#tbl-e1-bmm-vx .cell layout-align="center" tbl-cap='Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band' tbl-subcap='["Model fit to all 6 bands","Model fit to 3 extrapolation bands"]' hash='manuscript_cache/pdf/tbl-e1-bmm-vx_d4fe505aaeabb81787f40a5c98bd584b'}
 ::: {.cell-output-display}
 
 
@@ -1828,7 +1828,7 @@ The second model, which focused solely on extrapolation bands, revealed similar 
 
 
 
-::: {#fig-e1-bmm-vx .cell layout-ncol="1" layout-align="center"}
+::: {#fig-e1-bmm-vx .cell layout-ncol="1" layout-align="center" hash='manuscript_cache/pdf/fig-e1-bmm-vx_107369fcd44f9cc7c98eab3daeccc3fc'}
 ::: {.cell-output-display}
 ![Model fit to all 6 bands](manuscript_files/figure-pdf/fig-e1-bmm-vx-1.pdf){#fig-e1-bmm-vx-1 fig-align='center' width=100%}
 :::
@@ -1840,20 +1840,20 @@ The second model, which focused solely on extrapolation bands, revealed similar 
 Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.
 :::
 
-::: {#tbl-e1-slope-quartile .cell layout-align="center" tbl-cap='Slope coefficients by quartile, per condition'}
+::: {#tbl-e1-slope-quartile .cell layout-align="center" tbl-cap='Slope coefficients by quartile, per condition' hash='manuscript_cache/pdf/tbl-e1-slope-quartile_1e6109887ce3fc5d37536e311cf23d66'}
 ::: {.cell-output-display}
 
 
 |Condition | Q_0%_mean| Q_25%_mean| Q_50%_mean| Q_75%_mean| Q_100%_mean|
 |:---------|---------:|----------:|----------:|----------:|-----------:|
-|Constant  |    -0.104|      0.476|      0.692|      0.928|        1.40|
-|Varied    |    -0.201|      0.269|      0.589|      0.900|        1.29|
+|Constant  |    -0.107|      0.478|      0.690|      0.930|        1.39|
+|Varied    |    -0.203|      0.272|      0.586|      0.902|        1.30|
 
 
 :::
 :::
 
-::: {#fig-e1-bmm-bx2 .cell layout-ncol="2" layout-align="center"}
+::: {#fig-e1-bmm-bx2 .cell layout-ncol="2" layout-align="center" hash='manuscript_cache/pdf/fig-e1-bmm-bx2_84dd93bcd1e1e2403dd1c9db1850d194'}
 ::: {.cell-output-display}
 ![Slope estimates by participant - ordered from lowest to highest within each condition. ](manuscript_files/figure-pdf/fig-e1-bmm-bx2-1.pdf){#fig-e1-bmm-bx2-1 fig-align='center' width=100%}
 :::
@@ -1865,7 +1865,7 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 Slope distributions between condition
 :::
 
-::: {#fig-e1-indv-slopes .cell layout-align="center"}
+::: {#fig-e1-indv-slopes .cell layout-align="center" hash='manuscript_cache/pdf/fig-e1-indv-slopes_9698b9afb7cc12553ff9a026ae448d1a'}
 ::: {.cell-output-display}
 ![subset with largest slopes](manuscript_files/figure-pdf/fig-e1-indv-slopes-1.pdf){#fig-e1-indv-slopes-1 fig-align='center' width=100%}
 :::
@@ -1943,7 +1943,7 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 
 
 
-::: {#tbl-e2-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]'}
+::: {#tbl-e2-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]' hash='manuscript_cache/pdf/tbl-e2-test-nf-deviation_65106c1c82eda7a85e0321bfe85988eb'}
 ::: {.cell-output-display}
 
 
@@ -1975,13 +1975,13 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2-test-dev_650d48ffab3ce5102bb4206c86708f27'}
 ::: {.cell-output-display}
 ![E2. Deviations from target band during testing without feedback stage.](manuscript_files/figure-pdf/fig-e2-test-dev-1.pdf){#fig-e2-test-dev fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e2-bmm-dist .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band'}
+::: {#tbl-e2-bmm-dist .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band' hash='manuscript_cache/pdf/tbl-e2-bmm-dist_06c9cf649d827197eec0ed7d7957e551'}
 ::: {.cell-output-display}
 
 
@@ -2037,13 +2037,13 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2-test-vx_0195939101c355818530418eff5a339d'}
 ::: {.cell-output-display}
 ![E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.](manuscript_files/figure-pdf/fig-e2-test-vx-1.pdf){#fig-e2-test-vx fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e2-test-nf-vx .cell layout-ncol="1" layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]'}
+::: {#tbl-e2-test-nf-vx .cell layout-ncol="1" layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]' hash='manuscript_cache/pdf/tbl-e2-test-nf-vx_2ac01879028c609577cb3a1a90abf482'}
 ::: {.cell-output-display}
 
 
@@ -2075,7 +2075,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 :::
 :::
 
-::: {#tbl-e2-bmm-vx .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band'}
+::: {#tbl-e2-bmm-vx .cell layout-align="center" tbl-cap='Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band' hash='manuscript_cache/pdf/tbl-e2-bmm-vx_95c1d9ed846bacc13049e39142772efe'}
 ::: {.cell-output-display}
 
 
@@ -2102,7 +2102,7 @@ When examining discrimination ability using the model predicting raw x-velocity,
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e2-bmm-vx_7d703dcd7265964a1bcf2e1c64d8bceb'}
 ::: {.cell-output-display}
 ![Conditional effect of training condition and Band. Ribbons indicate 95% HDI.](manuscript_files/figure-pdf/fig-e2-bmm-vx-1.pdf){#fig-e2-bmm-vx fig-align='center' width=100%}
 :::
@@ -2141,7 +2141,7 @@ To model differences in accuracy between groups, we fit Bayesian mixed effects r
 
 
 
-::: {#tbl-e3-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]'}
+::: {#tbl-e3-test-nf-deviation .cell layout-align="center" tbl-cap='Testing Deviation - Empirical Summary' tbl-subcap='["Constant Testing - Deviation","Varied Testing - Deviation"]' hash='manuscript_cache/pdf/tbl-e3-test-nf-deviation_f0bb2ce5e046f53eb6746d00027e80ec'}
 ::: {.cell-output-display}
 
 
@@ -2203,13 +2203,13 @@ To model differences in accuracy between groups, we fit Bayesian mixed effects r
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e3-test-dev_42c65430a8771e8302954d0bcb365362'}
 ::: {.cell-output-display}
 ![e3. Deviations from target band during testing without feedback stage.](manuscript_files/figure-pdf/fig-e3-test-dev-1.pdf){#fig-e3-test-dev fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e3-bmm-dist .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band'}
+::: {#tbl-e3-bmm-dist .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band' hash='manuscript_cache/pdf/tbl-e3-bmm-dist_752cd2d4620c73c27248093ec20b337f'}
 ::: {.cell-output-display}
 
 
@@ -2235,7 +2235,7 @@ The effect of training condition in Experiment 3 showed a similar pattern to Exp
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e3-bmm-dist_bc7fe4bbc24089df1be341d914023e8f'}
 ::: {.cell-output-display}
 ![e3. Conditioinal Effect of Training Condition and Band. Ribbon indicated 95% Credible Intervals.](manuscript_files/figure-pdf/fig-e3-bmm-dist-1.pdf){#fig-e3-bmm-dist fig-align='center' width=100%}
 :::
@@ -2259,13 +2259,13 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e3-test-vx_a2a0232a3d62356caea4d38c465eb07e'}
 ::: {.cell-output-display}
 ![e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.](manuscript_files/figure-pdf/fig-e3-test-vx-1.pdf){#fig-e3-test-vx fig-align='center' width=100%}
 :::
 :::
 
-::: {#tbl-e3-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]'}
+::: {#tbl-e3-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant Testing - vx","Varied Testing - vx"]' hash='manuscript_cache/pdf/tbl-e3-test-nf-vx_017909cc8b0da80eb7359b6a29207de5'}
 ::: {.cell-output-display}
 
 
@@ -2327,7 +2327,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 :::
 :::
 
-::: {#tbl-e3-bmm-vx .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band'}
+::: {#tbl-e3-bmm-vx .cell layout-align="center" tbl-cap='Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band' hash='manuscript_cache/pdf/tbl-e3-bmm-vx_a9b70c50d6284fb7513b912c8f69a3d5'}
 ::: {.cell-output-display}
 
 
@@ -2475,7 +2475,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 ### exponential learning models fit to individual subjects
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-44_894a68d4c20223ef365749f23514d197'}
 
 :::
 
@@ -2484,7 +2484,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 ### Group comparison of learning rate fits
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-45_0495fcfc272d65f347985aec83a33085'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-45-1.pdf){fig-align='center' width=100%}
 :::
@@ -2500,7 +2500,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 ### First vs. second half of testing stage
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-46_f72523d21e1df1502ccb9513a860ceaf'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-46-1.pdf){fig-align='center' width=100%}
 :::
@@ -2516,7 +2516,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 ### Group Comparison for asymptote-starting performance
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-47_a221e4c1851f6d63c1dc456c8ecb78f8'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-47-1.pdf){fig-align='center' width=100%}
 :::
@@ -2546,7 +2546,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### experiment 1 training - relative distances
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-48_7845866c9536bc23104a7c1e0b5f9c67'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-48-1.pdf){fig-align='center' width=100%}
 :::
@@ -2595,7 +2595,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### experiment 2 training - relative distances
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-49_65a3fd382d518dc8f230e004f327fac6'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-49-1.pdf){fig-align='center' width=100%}
 :::
@@ -2610,7 +2610,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### Experiment 1 Testing - relative distances
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-50_f51608aa42af2bf6dbc0d1591bc97e3c'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-50-1.pdf){fig-align='center' width=100%}
 :::
@@ -2640,7 +2640,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### Experiment 2 Testing - relative distances
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-51_3432659cdd3b95278e93d8c46ae53694'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-51-1.pdf){fig-align='center' width=100%}
 :::
@@ -2657,7 +2657,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### Experimenet 1 - intermittent testing
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-52_1d39b36c61baed3e893c675f106c0787'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-52-1.pdf){fig-align='center' width=100%}
 :::
@@ -2680,7 +2680,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 ### Training plots - Experiment 1
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-53_6f6036d27c6f9ca39bd138bbc602c62b'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-53-1.pdf){fig-align='center' width=100%}
 :::
@@ -2706,7 +2706,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### fit to testing performance averaged across positions
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-54_4f610608a93b952d3cbd74e4dc74f3ed'}
 ::: {.cell-output-display}
 ![](manuscript_files/figure-pdf/unnamed-chunk-54-1.pdf){fig-align='center' width=100%}
 :::
@@ -2727,7 +2727,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### statistical tests for starting performance
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-55_38708ca2268f0a791e45ad898b971d37'}
 
 ```
 ## ANOVA Table (type III tests)
@@ -2748,7 +2748,7 @@ In addition to absolute errors (which is related to variance), the authors shoul
 #### statistical tests for asymptote
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-56_a9f33ffdd6912bd3bd3055803b5a4f82'}
 
 ```
 ## ANOVA Table (type III tests)
@@ -2781,11 +2781,11 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-57_c85c1869b794783c0d436d425eee5ffb'}
 
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-58_b82d359d60437cb10916c96d56500562'}
 
 :::
 
@@ -2800,13 +2800,13 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-post-pred-dist_2b680dce4756d129083399d754aeb7e1'}
 ::: {.cell-output-display}
 ![Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data.](manuscript_files/figure-pdf/fig-post-pred-dist-1.pdf){#fig-post-pred-dist fig-align='center' width=100%}
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-post-pred-vx_6b3da153206ad943d9cc8150a1ef7dbd'}
 ::: {.cell-output-display}
 ![Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data.](manuscript_files/figure-pdf/fig-post-pred-vx-1.pdf){#fig-post-pred-vx fig-align='center' width=100%}
 :::
@@ -2819,13 +2819,13 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-empVsPred_66a878b45bd86c647fe7411f55379143'}
 ::: {.cell-output-display}
 ![Bayesian Mixed Model predictions vs. Empirical Predictions - X velocity](manuscript_files/figure-pdf/fig-empVsPred-1.pdf){#fig-empVsPred fig-align='center' width=100%}
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/unnamed-chunk-62_8ebdf68676ded83e03921a78a768d5fe'}
 
 :::
 
@@ -2838,19 +2838,19 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-empirical-distGrp1_0d0d9f81b44316df729c9a8a10803234'}
 ::: {.cell-output-display}
 ![E1. Distribution of Vx  at Participant level](manuscript_files/figure-pdf/fig-empirical-distGrp1-1.pdf){#fig-empirical-distGrp1 fig-align='center' width=100%}
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-empirical-distGrp2_3442b8597fc1ffd021058686b0b8954c'}
 ::: {.cell-output-display}
 ![E1. Distribution of Vx at Trial level](manuscript_files/figure-pdf/fig-empirical-distGrp2-1.pdf){#fig-empirical-distGrp2 fig-align='center' width=100%}
 :::
 :::
 
-::: {.cell layout-align="center"}
+::: {.cell layout-align="center" hash='manuscript_cache/pdf/fig-e1-ame_836cce3964210d1c2e9181eccdc5995b'}
 ::: {.cell-output-display}
 ![E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)](manuscript_files/figure-pdf/fig-e1-ame-1.pdf){#fig-e1-ame fig-align='center' width=100%}
 :::
