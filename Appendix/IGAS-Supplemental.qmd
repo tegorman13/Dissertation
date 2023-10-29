@@ -98,7 +98,7 @@ h4
 
 
 ### First vs. second half of testing stage
-```{r,fig.height=7,fig.width=8}
+```{r}
 
 testSplit <- transfer %>%
   group_by(sbjCode, conditType, positionX, testHalfSbj) %>%
@@ -162,22 +162,6 @@ h3 <- tsw %>% ggplot(aes(x=positionX,y=endMinusStart))+
 
 (h1 + h2) / (h3 + h4)
 
-# 
- #testSplit2 %>% anova_test(dv=MeanScaledDev,between=conditType,within = c(testHalfSbj),wid=sbjCode,type=3)
- #testSplit %>% anova_test(dv=MeanTargetDistance,between=conditType,covariate=testHalfSbj,within=(positionX),wid=sbjCode)
-# testSplit %>% lmer(MeanTargetDistance ~ conditType*testHalfSbj + (1|sbjCode)+(1+testHalfSbj|positionX),data=.) %>% summary()
-
-# testSplit %>% anova_test(dv=MeanTargetDistance,between=conditType,within=positionX,wid=sbjCode,type=3)
-# 
-# print("Testing End - Testing Start Comparison")
-# tsw %>% anova_test(dv=endMinusStart,between=conditType,within=positionX,wid=sbjCode,type=3)
-# tsw2 %>% anova_test(dv=endMinusStartScaled,between=conditType,wid=sbjCode,type=3)
-# 
-# print("2nd Half of testing only comparison")
-# testSplit %>% filter(testHalfSbj=="2nd-Half")%>%  anova_test(dv=MeanTargetDistance,between=conditType,within=(positionX),wid=sbjCode)
-# testSplit2 %>% filter(testHalfSbj=="2nd-Half")%>%  anova_test(dv=MeanScaledDev,between=conditType,wid=sbjCode,type=3)
-# 
-# testSplit2 %>% filter(testHalfSbj=="2nd-Half")%>% group_by(conditType) %>% get_summary_stats(type = "mean_sd")
 
 ```
 
@@ -192,8 +176,14 @@ h3 <- tsw %>% ggplot(aes(x=positionX,y=endMinusStart))+
 # ma1=e2TestFits %>% filter()%>% anova_test(dv=Asymptote.Minus.Start,between=conditType,wid=sbjCode,within=positionX,type=3);show(ma1)
 # ma2=exp2.fit2 %>% anova_test(dv=asymMinusStart,between=conditType,wid=sbjCode,type=3);show(ma2) 
 
-e2TestFits %>% ggplot(aes(x=conditType,y=Asymptote.Minus.Start,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+facet_grid(~positionX)+ggtitle("e2 testing (asymptote - start performance)  ")
+e2TestFits %>% ggplot(aes(x=conditType,y=Asymptote.Minus.Start,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("e2 testing (asymptote - start performance)") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+
+
+
 ```
 
 
@@ -300,13 +290,6 @@ e1Var <- paste("Varied Train Position","Constant Train Position", "Novel Positio
 e1Labels<- paste(c("610\n Varied Trained","760\n Constant Trained","835\n Novel Location","910\n Varied Trained"),sep="")
 
 
-# exp1Transfer3 %>% ggplot(aes(x=positionX,y=MeanTargetDeviance,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+theme_classic()+scale_x_discrete(name="Testing Location",breaks=e1Pos,labels=e1Labels)
-
-# exp1Transfer3 %>% ggplot(aes(x=positionX,y=meanRelativeDist,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+theme_classic()+scale_x_discrete(name="Testing Location",breaks=e1Pos,labels=e1Labels)+ggtitle("Experiment 1 Test -Relative Distance")
-# 
-# 
-# 
-# exp1Transfer3 %>% ggplot(aes(x=positionX,y=MeanTargetDeviance,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+theme_classic()+scale_x_discrete(name="Testing Location",breaks=e1Pos,labels=e1Labels)+facet_grid(.~devianceDirection)
 
 exp1Transfer3 %>% ggplot(aes(x=positionX,y=meanRelativeDist,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+ylab("Mean Signed Deviation From Target Center") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+scale_x_discrete(name="Testing Location",breaks=e1Pos,labels=e1Labels)+facet_grid(.~devianceDirection)
 
@@ -351,33 +334,8 @@ exp2Transfer3$ThrowPosition <- exp2Transfer3$positionX
 exp2Transfer4 <- e2 %>% filter(stage=="Transfer",mode==1,AbsDistFromCenter<1500,trialType!=44) %>% group_by(Group2,sbjCode,positionX,devianceDirection,Group) %>% summarise(MeanTargetDeviance = mean(AbsDistFromCenter),meanRelativeDist=mean(relativeDeviance)) 
 
 
-
-# exp2Transfer3 %>% ggplot(aes(x=ThrowPosition,y=meanRelativeDist,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+theme_classic()+ggtitle("Experiment 2 Test - Relative Distance")
-# 
-# exp2Transfer3 %>% ggplot(aes(x=ThrowPosition,y=MeanTargetDeviance,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+theme_classic()+facet_grid(.~devianceDirection)+ggtitle("Absolute Dist - Split by Over/Under")
-
 exp2Transfer3 %>% ggplot(aes(x=ThrowPosition,y=meanRelativeDist,group=conditType2,fill=conditType2))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Signed Deviation From Target Center") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+facet_grid(.~devianceDirection)
 
-
-
-# 
-# exp2Transfer4 %>% ggplot(aes(x=positionX,y=MeanTargetDeviance,group=Group2,fill=Group2))+geom_bar(stat="summary",position=position_dodge(),fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=position_dodge())+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Position"))+theme(legend.title.align=.25)+theme_classic()+facet_grid(.~devianceDirection)+ggtitle("Absolute Dist - Split by Over/Under")
-# 
-# 
-# exp2Transfer4 %>% ggplot(aes(x=positionX,y=meanRelativeDist,group=Group2,fill=Group2))+geom_bar(stat="summary",position=position_dodge(),fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=position_dodge())+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Position"))+theme(legend.title.align=.25)+theme_classic()+facet_grid(.~devianceDirection)+ggtitle("Experiment 2 Test - Relative Distance")
-
-
-# 
-# t= exp2Transfer3  %>% 
-#   mutate(Condition=conditType2) %>%
-#   group_by(Condition,positionX) %>% 
-#   summarise(Mean.signed=round(mean(meanRelativeDist),2),
-#             sd.signed=round(sd(meanRelativeDist),2),
-#             msds=paste(Mean.signed,"(",sd.signed,")",sep=""),
-#             .groups="keep") %>% ungroup() %>%
-#    select(-Mean.signed,-sd.signed) %>% 
-#   pivot_wider(names_from = positionX,values_from=c(msds)) %>% as.data.frame() %>%stargazer(.,type="text",summary=FALSE,rownames = FALSE)
-#             
 
 ```
 
@@ -388,36 +346,10 @@ exp2Transfer3 %>% ggplot(aes(x=ThrowPosition,y=meanRelativeDist,group=conditType
 
 
 #### Experimenet 1 - intermittent testing
-```{r,fig.width=9}
-# first 3 trials - 1 throw from 610, 760 and 910
-# interleaved every 20 trials, 2 throws from 610, 760, 910
-# 10 full intermittent tests (6 trials each), plus 3 at beginning = 63 total per subject. 
-#[1] 0  2  3  5  6  8  9  11 12 14 15 17 18 20 21 23 24 26 27 29 30
-# First final testing trial is 264. So 1-263 = training and intermittent testing. 
-# 
-# intTest.third <- exp1.inter %>% filter(intStage!="int1")%>% group_by(sbjCode,conditType,stage,intStage,positionX) %>%
-#   summarise(MeanTargetDistance=mean(AbsDistFromCenter,trim=.05)) %>% group_by(sbjCode,conditType,stage,positionX) %>%
-#   summarise(MeanTargetDistance=mean(MeanTargetDistance))
-# 
-# intTest.third %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
-#   geom_bar(aes(group=stage,fill=stage),stat="summary",fun=mean,position=dodge)+
-#   facet_wrap(~conditType,ncol=2)+
-#   stat_summary(aes(x=positionX,group=stage),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
-#   ylab("Mean Distance From Center Of Target")+
-#   xlab("Throw Location")+theme(plot.title = element_text(hjust = 0.5))+
-#   guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)
-# 
-# intTest.half %>% anova_test(dv=MeanTargetDistance,between=conditType,within=trainHalf,covariate=positionX,wid=sbjCode)
-# intTest.half %>% anova_test(dv=MeanTargetDistance,between=conditType,within=c(trainHalf,positionX),wid=sbjCode)
-
+```{r}
 
 intTest.half <- readRDS(here::here("data/e1_intTest.rds"))
 
-
-# intTest.half <- exp1.inter %>%filter(AbsDistFromCenter<1550)%>% 
-#   group_by(sbjCode,conditType,trainHalf,positionX) %>%
-#   summarise(MeanTargetDistance=mean(AbsDistFromCenter,trim=.01))
-  
 intTest.half %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
   geom_bar(aes(group=trainHalf,fill=trainHalf),stat="summary",fun=mean,position=dodge)+
   facet_wrap(~conditType,ncol=2)+
@@ -453,10 +385,6 @@ exp1TrainTrials <- e1 %>% filter(stage!="Transfer",mode==1,trialType!=44) %>% gr
 
 
 
-
-# exp1TrainTrials %>% filter(AbsDistFromCenter<1000) %>% ggplot(aes(x=trainIndex,y=AbsDistFromCenter,group=conditType2)) +geom_point()+geom_smooth(method="lm",se=FALSE) +facet_grid(~positionX)
-
-
 # manuscript plot - original
 ggplot(data = exp1Train, aes(x=stage, y=MeanTargetDistance)) + geom_boxplot(aes(fill=conditType),position=position_dodge(1))+stat_summary(fun="mean",aes(group=conditType),position=position_dodge(1))+
 ylab("Mean Distance From Center Of Target") +xlab("Training Stage")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.5)+theme_classic()
@@ -478,18 +406,27 @@ lineplot.CI(data=exp1Train,x.factor=stage,group=conditType,response=MeanTargetDi
 #### Not in manuscript #####
 
 
-# fit to testing performance averaged across positions
+#### fit to testing performance averaged across positions
 ```{r}
 e2Fits.AggPos <- readRDS(here::here('data/IGAS-e2Fits.AggPos-April_12.rds'))
 
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pStart,fill=Group))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("experiment 2 - starting performance per position")
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pStart,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("experiment 2 - starting performance per position") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
 
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pAsym,fill=Group))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("e2 testing performance asymptote per position ")
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pAsym,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("e2 testing performance asymptote per position ") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
 
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pRate,fill=Group))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("e2 testing performance asymptote per position ")
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pRate,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("e2 testing performance asymptote per position ") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
 
 #mr1=e2Fits.AggPos %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,type=3);show(mr1)
 
@@ -505,8 +442,11 @@ ms2=exp2.fit2 %>% anova_test(dv=MeanStart,between=conditType,wid=sbjCode,type=3)
 #ms1
 ms2 
 
-e2TestFits %>% ggplot(aes(x=conditType,y=pStart,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+facet_grid(~positionX)+ggtitle("experiment 2 - starting performance per position")
+e2TestFits %>% ggplot(aes(x=conditType,y=pStart,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("experiment 2 - starting performance per position") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
 
 ```
 
@@ -519,8 +459,11 @@ ma1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pAsym,between=condit
 ma2=exp2.fit2 %>% anova_test(dv=MeanAsym,between=conditType,wid=sbjCode,type=3);
 ma2
 
-e2TestFits %>% ggplot(aes(x=conditType,y=pAsym,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+facet_grid(~positionX)+ggtitle("e2 testing performance asymptote per position ")
+e2TestFits %>% ggplot(aes(x=conditType,y=pAsym,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("e2 testing performance asymptote per position ") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
 
 ```
 

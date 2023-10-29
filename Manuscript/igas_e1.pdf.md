@@ -15,7 +15,6 @@ execute:
 
 
 
-
 ::: {.content-visible when-format="html"}
 
 <div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
@@ -86,7 +85,7 @@ execute:
 \LARGE
 {Thomas E. Gorman}
 
-\vspace{11.5cm}
+\vspace{16.5cm}
 
 \end{centering}
 
@@ -186,10 +185,7 @@ requirements for the degree of Doctor of Philosophy.
 
 
 
-
 {{< pagebreak >}}
-
-
 
 
 
@@ -204,10 +200,7 @@ This dissertation seeks to explore the cognitive underpinnings that govern the g
 
 
 
-
 {{< pagebreak >}}
-
-
 
 
 
@@ -220,7 +213,6 @@ This dissertation seeks to explore the cognitive underpinnings that govern the g
 
 # Table of contents
 <div id="html-toc"></div>
-
 
 
 ```{=html}
@@ -291,7 +283,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -312,10 +303,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
 {{< pagebreak >}}
-
-
 
 
 
@@ -355,13 +343,9 @@ quarto render igas_e1.qmd --citeproc --pdf-engine xelatex -t pdf \
 
 
 
-
-
 ## E1 Appendix
 
 ### Posterior Predictive Distributions
-
-
 
 
 
@@ -376,11 +360,7 @@ quarto render igas_e1.qmd --citeproc --pdf-engine xelatex -t pdf \
 
 
 
-
-
 ### Different Aggregations
-
-
 
 
 

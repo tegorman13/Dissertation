@@ -8,7 +8,7 @@
 \LARGE
 {Thomas E. Gorman}
 
-\vspace{11.5cm}
+\vspace{16.5cm}
 
 \end{centering}
 

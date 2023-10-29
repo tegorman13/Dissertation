@@ -86,7 +86,7 @@ execute:
 \LARGE
 {Thomas E. Gorman}
 
-\vspace{11.5cm}
+\vspace{16.5cm}
 
 \end{centering}
 
@@ -198,6 +198,21 @@ requirements for the degree of Doctor of Philosophy.
 # Abstract
 
 This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+
+
+
+
+
+{{< pagebreak >}}
+
+
+
+
+
+
+
+
+
 
 ::: {.content-visible when-format="html"}
 
@@ -1737,7 +1752,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 :::
 :::
 
-::: {#tbl-e1-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary'}
+::: {#tbl-e1-test-nf-vx .cell layout-align="center" tbl-cap='Testing vx - Empirical Summary' tbl-subcap='["Constant","Varied"]'}
 ::: {.cell-output-display}
 
 
@@ -1804,7 +1819,7 @@ Table: Fit to 3 extrapolation bands
 
 
 
-See @tbl-e1-bmm-vx for the full model results. The estimated coefficient for training condition ($B$ = 164.05, 95% CrI \[45.5, 278.85\]) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the slope on Velocity Band ($B$ = 0.71, 95% CrI \[0.62, 0.8\]). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($B$ = -0.14, 95% CrI \[-0.26, -0.01\]), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less senitivity between vands than the constant condition. This difference is depicted visually in @fig-e1-bmm-vx.@tbl-e1-slope-quartile shows the average slope coefficients for varied and constant participants separately for each quartile. The constant participant participants appear to have larger slopes across quartiles, but the difference between conditions may be less pronounced for the top quartiles of subjects who show the strongest discrimination. Figure @fig-e1-bmm-bx2 shows the distributions of slope values for each participant, and the compares the probability density of slope coefficients between training conditions. @fig-e1-indv-slopes 
+See @tbl-e1-bmm-vx for the full model results. The estimated coefficient for training condition ($B$ = 164.05, 95% CrI \[45.5, 278.85\]) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the slope on Velocity Band ($B$ = 0.71, 95% CrI \[0.62, 0.8\]). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($B$ = -0.14, 95% CrI \[-0.26, -0.01\]), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less senitivity between vands than the constant condition. This difference is depicted visually in @fig-e1-bmm-vx.Slope coefficients are broken down by quartile in @tbl-e1-slope-quartile. The constant participant participants appear to have larger slopes across quartiles, but the difference between conditions may be less pronounced for the top quartiles of subjects who show the strongest discrimination. Figure @fig-e1-bmm-bx2 shows the distributions of slope values for each participant, and the compares the probability density of slope coefficients between training conditions. @fig-e1-indv-slopes 
 
 The second model, which focused solely on extrapolation bands, revealed similar patterns. The Velocity Band term ($B$ = 0.5, 95% CrI \[0.42, 0.57\]) still demonstrates a high degree of discrimination ability. However, the posterior distribution for interaction term ($B$ = -0.07, 95% CrI \[-0.17, 0.04\] ) does across over 0, suggesting that the evidence for decreased discrimination ability for the varied participants is not as strong when considering only the three extrapolation bands.
 
@@ -1831,8 +1846,8 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 
 |Condition | Q_0%_mean| Q_25%_mean| Q_50%_mean| Q_75%_mean| Q_100%_mean|
 |:---------|---------:|----------:|----------:|----------:|-----------:|
-|Constant  |    -0.109|      0.482|      0.691|      0.932|        1.39|
-|Varied    |    -0.206|      0.270|      0.586|      0.901|        1.29|
+|Constant  |    -0.104|      0.476|      0.692|      0.928|        1.40|
+|Varied    |    -0.201|      0.269|      0.589|      0.900|        1.29|
 
 
 :::
@@ -1859,7 +1874,7 @@ Slope distributions between condition
 ![subset with smallest slopes](manuscript_files/figure-pdf/fig-e1-indv-slopes-2.pdf){#fig-e1-indv-slopes-2 fig-align='center' width=100%}
 :::
 
-Subset of Varied and Constant Participants with the smallest and largest estimated slope values. Red lines represent the best fitting line for each participant, gray lines are 200 random samples from the posterior distribution. Colored points and intervals at each band represent the empirical median and 95% HDI.
+Subset of Varied and Constant Participants with the smallest and largest estimated slope values. Red lines represent the best fitting line for each participant, gray lines are 200 random samples from the posterior distribution. Black points and intervals at each band represent the estimated median and 95% HDI. Blue points are empirical means.
 :::
 
 
@@ -2401,6 +2416,20 @@ See  for a full specification of the equations that define ALM and EXAM.
 
 Following the procedure used by @mcdanielPredictingTransferPerformance2009, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models will be fit directly to the trial by trial data of each individual participants, both by minimizing the root-mean squared deviation (RMSE), and by maximizing log likelihood. Because ALM has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also fit the extended EXAM version of the model, which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.
 
+
+
+
+
+{{< pagebreak >}}
+
+
+
+
+
+
+
+
+
 ::: {.content-visible when-format="html"}
 # References
 
@@ -2409,9 +2438,338 @@ Following the procedure used by @mcdanielPredictingTransferPerformance2009, we w
 
 :::
 
-## Appendix
+# Appendix
 
-### Appendix - Project 2 - Experiment 1
+
+### Appendix - Project 1 
+
+
+
+
+---
+# title: "R Notebook"
+# output: html_notebook
+execute: 
+  warning: false
+  eval: true
+---
+
+
+
+
+
+
+
+
+
+Reviewer #2: This study addresses a question that is important both theoretically and practically. However, the authors need to rule out the following, less interesting alternative. Namely, the results could be due to task practice effect, as follows.
+
+Since there was no pre-training test, and no practice trials (as far as I can tell), and since the task was an online motor task that participants could not rely on their prior motor experience, trying to launch the ball to the target could only be done via trial and error. For the varied training group, they got to practice at two distances. Therefore, they had a better "calibration" in terms of the relationship between launching speed and target distance. This was likely beneficial both in Exp.1 when both transfer distances were interpolations from the two trained distances, and in Exp.2 when two transfer distances were interpolations and two were extrapolations but the latter two were immediately next to the training distances.
+
+In comparison, since the constant group trained at only a single distance, any transfer distance (or at least the first transfer distance tested) was extrapolation even if this transfer distance was shorter than the trained, because the participants did not know beforehand how to shoot the ball to the shortest distance due to the existence of the barrier. If the transfer distance was longer, for sure that was extrapolation.
+
+
+Regardless, the above analysis suggests that the constant group would always be a step behind the varied group. The number of trials at each transfer distance may not be sufficient for them to catch up the varied group either (whether there was learning during testing should be checked). If such disadvantage for the constant group is indeed due to the lack of tryout opportunities, then the authors should verify whether the same results still hold if all groups were provided opportunities to practice, or if pre-training tests across all distances were offered.
+
+
+### exponential learning models fit to individual subjects
+
+
+::: {.cell layout-align="center"}
+
+:::
+
+
+
+### Group comparison of learning rate fits
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-45-1.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-45-2.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+### First vs. second half of testing stage
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-46-1.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+
+
+
+### Group Comparison for asymptote-starting performance
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-47-1.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+
+
+
+
+
+### Relative distance and under/overshooting
+
+Reviewer 3
+Absolute versus relative distance: From a methodological standpoint, I understand the need to differentiate these two types of distance. However, from a theoretical perspective there may be some issue in differentiating these two concepts. Schema theory relies on relative (or invariant) information to inform the motor program. However, both distances would be important to an instance or exemplar representation. You may want to consider commenting on this issue. 
+
+
+Reviewer 2
+For the same reason, the plots showing improvement during training could be due to participants learning the task, rather than fine motor skills. Although task learning and motor learning are impossible to separate cleanly, the common practice in the field is indeed to offer practice trials to reduce the task learning aspects. The authors should address this.
+
+In addition to absolute errors (which is related to variance), the authors should also provide other measures of performance, e.g., the mean of the signed errors, so that readers have a better idea whether there was any meaningful over- or undershooting.
+
+
+#### experiment 1 training - relative distances
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-48-1.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-48-2.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-48-3.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-48-4.pdf){fig-align='center' width=100%}
+:::
+
+```
+## 
+## =========================================================================
+## conditType devianceDirection      610            760            910      
+## -------------------------------------------------------------------------
+## constant       Overshoot                    311.84(307.92)               
+## constant      Undershoot                    188.05(163.62)               
+## varied         Overshoot     211.69(234.97)                360.14(322.01)
+## varied        Undershoot     107.35(81.21)                 244.85(196.47)
+## -------------------------------------------------------------------------
+## 
+## ======================================================
+## conditType      610           760            910      
+## ------------------------------------------------------
+## constant                 121.03(269.17)               
+## varied     39.91(178.12)                150.53(290.04)
+## ------------------------------------------------------
+## 
+## ====================================================================
+## conditType     610           760            835            910      
+## --------------------------------------------------------------------
+## constant   7.13(124.02) 107.02(218.49) 142.42(252.34) 122.92(282.58)
+## varied     3.19(96.67)   92.1(173.9)   103.84(214.4)  108.12(234.59)
+## --------------------------------------------------------------------
+```
+:::
+
+
+
+#### experiment 2 training - relative distances
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-49-1.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-49-2.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+#### Experiment 1 Testing - relative distances
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-50-1.pdf){fig-align='center' width=100%}
+:::
+
+```
+## 
+## ====================================================================================================================================
+## conditType2         msdu_610       msdu_760       msdu_835       msdu_910      msds_610      msds_760      msds_835      msds_910   
+## ------------------------------------------------------------------------------------------------------------------------------------
+## Constant Training 136.27(84.29) 191.65(112.65) 219.46(139.91) 276.75(153.09) 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
+## Varied Training   105.12(51.39)  149.37(93.4)  180.54(129.52) 198.64(137.84) 13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
+## ------------------------------------------------------------------------------------------------------------------------------------
+## 
+## =========================================================================
+## Condition              610           760           835           910     
+## -------------------------------------------------------------------------
+## Constant Training 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
+## Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
+## -------------------------------------------------------------------------
+```
+:::
+
+
+
+
+
+#### Experiment 2 Testing - relative distances
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-51-1.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+
+
+
+
+#### Experimenet 1 - intermittent testing
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-52-1.pdf){fig-align='center' width=100%}
+:::
+
+```
+## 
+## ======================================================================================================
+## Condition 610_First Half 760_First Half 910_First Half 610_Second Half 760_Second Half 910_Second Half
+## ------------------------------------------------------------------------------------------------------
+## constant  206.64(82.08)  286.51(121.07) 406.93(145.2)   187.2(55.24)    238.21(95.16)  313.27(114.86) 
+## varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(108.04)   276.86(110.5) 
+## ------------------------------------------------------------------------------------------------------
+```
+:::
+
+
+
+
+
+### Training plots - Experiment 1
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-53-1.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-53-2.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-53-3.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+
+
+#### Not in manuscript #####
+
+
+#### fit to testing performance averaged across positions
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-54-1.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-54-2.pdf){fig-align='center' width=100%}
+:::
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-54-3.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+#### statistical tests for starting performance
+
+
+::: {.cell layout-align="center"}
+
+```
+## ANOVA Table (type III tests)
+## 
+##       Effect DFn DFd    F     p p<.05   ges
+## 1 conditType   1 206 3.04 0.083       0.015
+```
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-55-1.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+
+
+
+#### statistical tests for asymptote
+
+
+::: {.cell layout-align="center"}
+
+```
+## ANOVA Table (type III tests)
+## 
+##       Effect DFn DFd    F     p p<.05   ges
+## 1 conditType   1 206 3.38 0.067       0.016
+```
+
+::: {.cell-output-display}
+![](manuscript_files/figure-pdf/unnamed-chunk-56-1.pdf){fig-align='center' width=100%}
+:::
+:::
+
+
+{{< pagebreak >}}
+
+
+
+
+
+
 
 
 
@@ -2419,6 +2777,10 @@ Following the procedure used by @mcdanielPredictingTransferPerformance2009, we w
 
 
 
+
+
+
+
 ::: {.cell layout-align="center"}
 
 :::
@@ -2432,29 +2794,28 @@ Following the procedure used by @mcdanielPredictingTransferPerformance2009, we w
 
 
 
-## E1 Appendix
-
-### Posterior Predictive Distributions
 
 
+#### Posterior Predictive Distributions
 
-::: {#fig-post-pred .cell layout-align="center"}
+
+
+::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![Posterior Predictive Distribution - Deviation](manuscript_files/figure-pdf/fig-post-pred-1.pdf){#fig-post-pred-1 fig-align='center' width=100%}
+![Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data.](manuscript_files/figure-pdf/fig-post-pred-dist-1.pdf){#fig-post-pred-dist fig-align='center' width=100%}
+:::
 :::
 
+::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![Posterior Predictive Distribution - X Velocity](manuscript_files/figure-pdf/fig-post-pred-2.pdf){#fig-post-pred-2 fig-align='center' width=100%}
+![Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data.](manuscript_files/figure-pdf/fig-post-pred-vx-1.pdf){#fig-post-pred-vx fig-align='center' width=100%}
+:::
 :::
 
-Posterior Predictive distributions for Deviation and Vx. Posterior Draws in Blue, colored lines are empirical data.
-:::
 
 
 
-
-
-### Empirical vs. Predicted
+#### Empirical vs. Predicted
 
 
 
@@ -2464,22 +2825,28 @@ Posterior Predictive distributions for Deviation and Vx. Posterior Draws in Blue
 :::
 :::
 
+::: {.cell layout-align="center"}
+
+:::
 
 
 
-### Different Aggregations
+
+
+#### Different Aggregations
+
 
 
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![E1. Distribution of vx at Participant and Trial level](manuscript_files/figure-pdf/fig-empirical-vxGrp-1.pdf){#fig-empirical-vxGrp fig-align='center' width=100%}
+![E1. Distribution of Vx  at Participant level](manuscript_files/figure-pdf/fig-empirical-distGrp1-1.pdf){#fig-empirical-distGrp1 fig-align='center' width=100%}
 :::
 :::
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![E1. Distribution of Vx  at Participant and Trial level](manuscript_files/figure-pdf/fig-empirical-distGrp-1.pdf){#fig-empirical-distGrp fig-align='center' width=100%}
+![E1. Distribution of Vx at Trial level](manuscript_files/figure-pdf/fig-empirical-distGrp2-1.pdf){#fig-empirical-distGrp2 fig-align='center' width=100%}
 :::
 :::
 
@@ -2488,6 +2855,8 @@ Posterior Predictive distributions for Deviation and Vx. Posterior Draws in Blue
 ![E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)](manuscript_files/figure-pdf/fig-e1-ame-1.pdf){#fig-e1-ame fig-align='center' width=100%}
 :::
 :::
+
+
 
 
 

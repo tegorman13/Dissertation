@@ -23,7 +23,6 @@ article](Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){
 article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
 
 
-
 ```{r}
 pacman::p_load(tidyr,papaja, knitr, tinytex, RColorBrewer, kableExtra, cowplot, patchwork)
 source('Functions/IGAS_ProcessFunctions.R')
@@ -1370,13 +1369,13 @@ Instance-based models augmented with this assumption may be a valuable
 approach towards better understanding skill generalization and transfer.
 
 
-## References
+# References
 
 
 ::: {#refs}
 :::
 
 
-## Appendix
+# Appendix
 
 {{< include Appendix/IGAS-Supplemental.qmd >}}
