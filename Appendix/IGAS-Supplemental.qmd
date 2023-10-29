@@ -84,8 +84,8 @@ exp2.fit2 <- e2TestFits %>% ungroup() %>% group_by(sbjCode,conditType) %>%
 # mr1=e2TestFits %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
 # mr2=exp2.fit2 %>% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) 
 
-h4<-e2TestFits %>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
-h4
+# h4<-e2TestFits %>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
+# h4
 
 
 # mr1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
@@ -99,6 +99,9 @@ h4
 
 ### First vs. second half of testing stage
 ```{r}
+#| fig.height: 8 
+#| fig.width: 10
+
 
 testSplit <- transfer %>%
   group_by(sbjCode, conditType, positionX, testHalfSbj) %>%
@@ -137,14 +140,17 @@ tsw2 <- tsw %>%
 h1=testSplit %>% filter(testHalfSbj=="1st-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
  geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
  scale_y_continuous(name="Mean Absolute Deviation From Target",limits=c(0,400))+ 
- ggtitle("Testing Performance - 1st half")+
-  ylab("Mean Absolute Deviation From Target")+xlab("Testing Location")+theme(legend.position="none")
+ ggtitle("Testing - 1st half")+
+  ylab("Mean Absolute Deviation From Target")+xlab("Testing Location")+theme(legend.position="top")
 
 h2=testSplit %>% filter(testHalfSbj=="2nd-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
- geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8) + 
+ geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
+  stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8) + 
  scale_y_continuous(name="",limits=c(0,400))+ 
- ggtitle("Testing Performance - 2nd half")+
-  xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+
+ ggtitle("Testing - 2nd half")+
+  xlab("Testing Location")+
+  theme(plot.title = element_text(hjust = 0.5))+
+  theme(legend.position="top") +
   guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)
 
 #egg::ggarrange(h1,h2,ncol=2)
@@ -154,14 +160,15 @@ h3 <- tsw %>% ggplot(aes(x=positionX,y=endMinusStart))+
   geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
   stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
   ylab("2nd Half Deviation - 1st Half Deviation")+ 
-  ggtitle("Improvement Per Testing Location")+
+  ggtitle("Improvement Per Location")+
   xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+
-  guides(fill=guide_legend(title="Testing Location"))+theme(legend.position="none")
+  guides(fill=guide_legend(title="Testing Location")) +theme(legend.position="none")
 
 #ggarrange(h1,h2,h3,h4,ncol=2)
 
-(h1 + h2) / (h3 + h4)
+#(h1 + h2) / (h3)
 
+(h1+h2)/h3
 
 ```
 

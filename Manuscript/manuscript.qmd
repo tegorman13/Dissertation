@@ -9,7 +9,8 @@ toc-location: body
 execute: 
   warning: false
   eval: true
-  include: false
+  include: true
+  #echo: false
 ---
 
 ::: {.content-visible when-format="html"}
@@ -64,6 +65,8 @@ This dissertation seeks to explore the cognitive underpinnings that govern the g
 
 
 ```{r setup}
+#| echo: false
+#| 
 here::set_here(path='..')
 source(here::here("Functions", "packages.R"))
 
@@ -89,6 +92,7 @@ options(digits = 3, width = 120,
 
 
 ```{r}
+#| echo: false
 source(here::here('Functions/IGAS_ProcessFunctions.R'))
 
 e1 <- readRDS(here::here("data/igas_e1_cleanedData-final.rds")) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity,stageInt=as.numeric(as.character(experimentStage)))
@@ -1080,8 +1084,8 @@ similarity score is construable as index of how accurate the throws a
 participant made during the training phase would be for each of the
 testing positions.
 
-**Equation 1:** \[ Similarity\_{I,J} = \sum*{i = I}*\sum{j=J}
-e^{-c^\cdot dp\_{i,j}} \]
+**Equation 1:** $$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J}
+(e^{-c^\cdot d^{p}_{i,j}}) $$
 
 **Equation 2:**
 $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$

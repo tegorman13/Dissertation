@@ -3,28 +3,28 @@ project:
 
 
 format:
-  # docx:
-  #   prefer-html: true
-  #   output-file: "TG_Full_Dissertation.docx"
-  #   toc: true
-  html:
+  docx:
+    #prefer-html: true
+    output-file: "TG_Full_Dissertation.docx"
     toc: true
-    language: 
-      title-block-published: "Latest version"
-    shift-heading-level-by: 1
-    theme: 
-       #- ../Assets/Style/lux-modified.scss 
-       - zephyr
-       - custom.scss
-    citeproc: false
-    filters: 
-      - "_extensions/wordcount/citeproc.lua"
-      - "_extensions/wordcount/wordcount.lua"
-    lightbox: auto
-    knitr:
-      opts_chunk:
-        dev: "ragg_png"
-        dpi: 300
+  # html:
+  #   toc: true
+  #   language: 
+  #     title-block-published: "Latest version"
+  #   shift-heading-level-by: 1
+  #   theme: 
+  #      #- ../Assets/Style/lux-modified.scss 
+  #      - zephyr
+  #      - custom.scss
+  #   citeproc: false
+  #   filters: 
+  #     - "_extensions/wordcount/citeproc.lua"
+  #     - "_extensions/wordcount/wordcount.lua"
+  #   lightbox: auto
+  #   knitr:
+  #     opts_chunk:
+  #       dev: "ragg_png"
+  #       dpi: 300
 
 
   # pdf:

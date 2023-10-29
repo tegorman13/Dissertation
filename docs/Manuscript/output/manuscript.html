@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -239,6 +273,27 @@ document.addEventListener("DOMContentLoaded", function(){
 <p>In addition to the influence of prior experiences described above, ample evidence also suggests that numerous aspects of the experiment may also interact with the influence of variation. One important study examined the impact of the amount of training completed in a force production task <span class="citation" data-cites="sheaContextualInterferenceContributions1990">(<a href="#ref-sheaContextualInterferenceContributions1990" role="doc-biblioref">C. H. Shea et al., 1990</a>)</span>. This study employed a typical blocked vs.&nbsp;random training procedure, but with the additional manipulation of separate groups receiving 50, 200, or 400 total training trials. For the group that received only 50 training trials retention was best when training had been blocked. However, for the conditions that received 200 or 400 training trials the pattern was reversed, with random training resulting in superior retention than blocked training. These results were taken to suggest that the benefits of randomization may take time to emerge. Another experimental factor shown to interact with training sequence is the complexity of the training task <span class="citation" data-cites="albaretDifferentialEffectsTask1998">(<a href="#ref-albaretDifferentialEffectsTask1998" role="doc-biblioref">Albaret &amp; Thon, 1998</a>)</span>. In addition to random or blocked training, participants in this study were assigned to train on a drawing task at one of three different levels of complexity (reproducing from memory shapes composed of two, three or four components). On a transfer task 48 hours after the completion of training, only participants trained at the lower levels of task complexity (2 or 3 components) showed superior performance to the blocked condition. The authors suggest that the benefits of random sequencing, thought to arise from more elaborate cognitive processing, or the necessity of continually recalling task information from long term into short term memory, are more likely to be obscured as the complexity of the task forces the blocked participants to also engage in such processes.</p>
 <p>A final important influence of particular relevance to the practice-sequence literature concerns the exact structure of “random” sequencing. Although the term random is commonly used for convenience, experimenters do not typically leave the order of training entirely up to chance. Rather, the training sequence is often constrained such that each condition must occur a minimum number of times in each quartile of the training phase, thus resulting in an even distribution the conditions throughout training. While the assurance of the conditions being evenly spread throughout training is consistent across studies, other aspects of the sequence structure are a bit more idiosyncratic. Some researchers report setting a maximum number of consecutive repetitions, e.g.&nbsp;no more than 2 consecutive trials of the same condition <span class="citation" data-cites="delreyEffectsContextualInterference1982 sheaContextualInterferenceEffects1979">(<a href="#ref-delreyEffectsContextualInterference1982" role="doc-biblioref">Del Rey et al., 1982</a>; <a href="#ref-sheaContextualInterferenceEffects1979" role="doc-biblioref">J. B. Shea &amp; Morgan, 1979</a>)</span>, or structure the random trials such that the same condition never occurs consecutively <span class="citation" data-cites="wulfEffectTypePractice1991">(<a href="#ref-wulfEffectTypePractice1991" role="doc-biblioref">Wulf, 1991</a>)</span>. Also common is to structure experiments such that random condition really consists of many small blocks, where participants do a few trials of one condition consecutively and then switch to another condition <span class="citation" data-cites="willeyLongtermMotorLearning2018 chuaPracticeVariabilityPromotes2019 wrisbergVariabilityPracticeHypothesis1987">(<a href="#ref-chuaPracticeVariabilityPromotes2019" role="doc-biblioref">Chua et al., 2019</a>; <a href="#ref-willeyLongtermMotorLearning2018" role="doc-biblioref">Willey &amp; Liu, 2018b</a>; <a href="#ref-wrisbergVariabilityPracticeHypothesis1987" role="doc-biblioref">Wrisberg et al., 1987</a>)</span>, resulting in many more switches than would arise if training was perfectly blocked. The question of whether such differences in the structure of random sequencing are consequential has been addressed experimentally a few times, in all cases consisting of a 1) a no-repeat random condition; 2) a blocked random condition (typically 3 or 4 repeats before a switch); and 3) a standard fully-blocked condition. Blocked-random training resulted in better performance than either repeat-random, or fully - blocked training in both a bean-bag throwing <span class="citation" data-cites="pigottMotorSchemaStructure1984">(<a href="#ref-pigottMotorSchemaStructure1984" role="doc-biblioref">Pigott &amp; Shapiro, 1984</a>)</span>, and basketball shot training study <span class="citation" data-cites="landinComparisonThreePractice1997">(<a href="#ref-landinComparisonThreePractice1997" role="doc-biblioref">Landin &amp; Hebert, 1997</a>)</span>, and in a replication plus extension of the seminal <span class="citation" data-cites="sheaContextualInterferenceEffects1979">(<a href="#ref-sheaContextualInterferenceEffects1979" role="doc-biblioref">J. B. Shea &amp; Morgan, 1979</a>)</span> study, blocked-random training was equally effective as no-repeat random training, with both random structures leading to better performance than the fully-blocked training condition. Consequences on different study schedules have also been repeatedly observed in the category learning literature <span class="citation" data-cites="carvalhoSequenceStudyChanges2017 carvalhoPuttingCategoryLearning2014">(<a href="#ref-carvalhoPuttingCategoryLearning2014" role="doc-biblioref">Carvalho &amp; Goldstone, 2014</a>, <a href="#ref-carvalhoSequenceStudyChanges2017" role="doc-biblioref">2017</a>)</span>. This line of research has revealed that the effects of blocking vs.&nbsp;interleaving can depend on the structure of the category being learned, and also that the different schedules can result in the participants requiring different representations. A fruitful line of inquiry in the motor skill learning literature may be to attempt to identify whether structural aspects of the motor task interact with different training sequences in a reliable manner.</p>
 <p>Numerous researchers have attempted to provide coherent frameworks to account for the full range of influences of training variation and sequencing described above (along with many other effects not discussed). Such accounts are generally quite similar, invoking ideas of desirable levels of difficulty <span class="citation" data-cites="bjorkNewTheoryDisuse1992 schmidtNewConceptualizationsPractice1992">(<a href="#ref-bjorkNewTheoryDisuse1992" role="doc-biblioref">Bjork &amp; Bjork, 1992</a>; <a href="#ref-schmidtNewConceptualizationsPractice1992" role="doc-biblioref">Schmidt &amp; Bjork, 1992</a>)</span>, or optimal challenge points <span class="citation" data-cites="guadagnoliChallengePointFramework2004">(<a href="#ref-guadagnoliChallengePointFramework2004" role="doc-biblioref">Guadagnoli &amp; Lee, 2004</a>)</span>. They tend to start by describing the dissociation between acquisition performance (performance during training) and testing performance (delayed retention and/or transfer), most strikingly observed as varied/random training participants performing worse than their constant/blocked counterparts during the training stage of the study, but then outperforming the constant/blocked comparisons at a later retention or transfer stage. This observation is then used to justify the idea that the most enduring and generalizable learning occurs by training at an optimal level of training difficulty, with difficulty being some function of the experience of the learner, and the cognitive or visuomotor processing demands of the task. It then follows that the factors that tend to make training more difficult (i.e.&nbsp;increased variability or randomization), are more likely to be beneficial when the learner has some experience, or when the processing demands of the task are not too extreme (which may only occur after some experience with the task). Such frameworks may be helpful heuristics in some cases, but they also seem to be overly flexible such that any null result of some intervention might be accounted for by a suboptimal amount of training trials, or by suggesting the training task was too difficult. The development of computational models that can account for how changes in the parameters of the motor-skill task scale with difficulty, would be a great step forward.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">set_here</span>(<span class="at">path=</span><span class="st">'..'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"Functions"</span>, <span class="st">"packages.R"</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">is.null</span>(knitr<span class="sc">::</span><span class="fu">pandoc_to</span>())) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  fmt_out <span class="ot">&lt;-</span> <span class="st">"interactive"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  fmt_out <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">pandoc_to</span>()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>, <span class="at">include =</span><span class="cn">TRUE</span>, </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                      <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="at">eval=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="at">fig.retina =</span> <span class="dv">3</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                      <span class="at">fig.width =</span> <span class="dv">6</span>, <span class="at">fig.height =</span> (<span class="dv">6</span> <span class="sc">*</span> <span class="fl">0.618</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                      <span class="at">out.width =</span> <span class="st">"100%"</span>, <span class="at">collapse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">width =</span> <span class="dv">120</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">dplyr.summarise.inform =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">knitr.kable.NA =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="project-1" class="level2">
@@ -265,12 +320,12 @@ document.addEventListener("DOMContentLoaded", function(){
 <section id="issues-with-previous-research" class="level4">
 <h4 class="anchored" data-anchor-id="issues-with-previous-research">Issues with Previous Research</h4>
 <p>Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis <span class="citation" data-cites="newellSchemaTheory19752003 vanrossumSchmidtSchemaTheory1990">(<a href="#ref-newellSchemaTheory19752003" role="doc-biblioref">Newell, 2003</a>; <a href="#ref-vanrossumSchmidtSchemaTheory1990" role="doc-biblioref">Van Rossum, 1990</a>)</span>. Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g.&nbsp;projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g.&nbsp;more unique combinations of x and y velocities). Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance <span class="citation" data-cites="ennisMultidimensionalStochasticTheory1988 ghahramaniGeneralizationLocalRemappings1996 loganInstanceTheoryAutomatization1988 nosofskySimilarityScalingCognitive1992 shepardUniversalLawGeneralization1987 thoroughmanRapidReshapingHuman2005">(<a href="#ref-ennisMultidimensionalStochasticTheory1988" role="doc-biblioref">Ennis et al., 1988</a>; <a href="#ref-ghahramaniGeneralizationLocalRemappings1996" role="doc-biblioref">Ghahramani et al., 1996</a>; <a href="#ref-loganInstanceTheoryAutomatization1988" role="doc-biblioref">Logan, 1988</a>; <a href="#ref-nosofskySimilarityScalingCognitive1992" role="doc-biblioref">Nosofsky, 1992</a>; <a href="#ref-shepardUniversalLawGeneralization1987" role="doc-biblioref">Shepard, 1987</a>; <a href="#ref-thoroughmanRapidReshapingHuman2005" role="doc-biblioref">Thoroughman &amp; Taylor, 2005</a> )</span>, it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure&nbsp;1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-toy-model1_c33d87f7318cef2f40c7a6bf53a69ecc">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-toy-model1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-toy-model1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-toy-model1-1.png" class="lightbox" data-description="Figure&nbsp;1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)" data-gallery="quarto-lightbox-gallery-1"><img src="manuscript_files/figure-html/fig-toy-model1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-toy-model1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="Figure&nbsp;1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)"><img src="manuscript_files/figure-html/fig-toy-model1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-toy-model1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
@@ -302,7 +357,7 @@ Figure&nbsp;1: Left panel- Generalization predicted from a simple model that ass
 <div id="fig-igasTask" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-igasTask-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Assets/methodsFig1.png" class="lightbox" data-description="Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square" data-gallery="quarto-lightbox-gallery-2"><img src="Assets/methodsFig1.png" class="img-fluid figure-img"></a>
+<a href="Assets/methodsFig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square"><img src="Assets/methodsFig1.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-igasTask-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square
@@ -321,12 +376,12 @@ Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the parti
 <h5 class="anchored" data-anchor-id="training-phase">Training Phase</h5>
 <p><a href="#fig-IGAS-Training1" class="quarto-xref">Figure&nbsp;3</a> below shows aggregate training performance binned into three stages representing the beginning, middle, and end of the training phase. Because the two conditions trained from target distances that were not equally difficult, it was not possible to directly compare performance between conditions in the training phase. Our focus for the training data analysis was instead to establish that participants did improve their performance over the course of training, and to examine whether there was any interaction between training stage and condition. Descriptive statistics for the intermittent testing phase are provided in the supplementary materials.</p>
 <p>We performed an ANOVA comparison with stage as a within-group factor and condition as between-group factor. The analysis revealed a significant effect of training stage F(2,142)=62.4, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> = .17, such that performance improved over the course of training There was no significant effect of condition F(1,71)=1.42, p=.24, <span class="math inline">\(\eta^{2}_G\)</span> = .02, and no significant interaction between condition and training stage, F(2,142)=.10, p=.91, <span class="math inline">\(\eta^{2}_G\)</span> &lt; .01.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-IGAS-Training1_d24bf581262080dc683f161e83acc31d">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-IGAS-Training1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-IGAS-Training1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-IGAS-Training1-1.png" class="lightbox" data-description="Figure&nbsp;3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean." data-gallery="quarto-lightbox-gallery-3"><img src="manuscript_files/figure-html/fig-IGAS-Training1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-IGAS-Training1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="Figure&nbsp;3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean."><img src="manuscript_files/figure-html/fig-IGAS-Training1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-IGAS-Training1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean.
@@ -340,12 +395,12 @@ Figure&nbsp;3: Training performance for varied and constant participants binned 
 <section id="testing-phase" class="level4">
 <h4 class="anchored" data-anchor-id="testing-phase">Testing Phase</h4>
 <p>In Experiment 1, a single constant-trained group was compared against a single varied-trained group. At the transfer phase, all participants were tested from 3 positions: 1) the positions(s) from their own training, 2) the training position(s) of the other group, and 3) a position novel to both groups. Overall, group performance was compared with a mixed type III ANOVA, with condition (varied vs.&nbsp;constant) as a between-subject factor and throwing location as a within-subject variable. The effect of throwing position was strong, F(3,213) = 56.12, p&lt;.001, η2G = .23. The effect of training condition was significant F(1,71)=8.19, p&lt;.01, η2G = .07. There was no significant interaction between group and position, F(3,213)=1.81, p=.15, η2G = .01.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-IGAS-Testing1_c2e34805237ef039ed7d67273de50725">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-IGAS-Testing1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-IGAS-Testing1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-IGAS-Testing1-1.png" class="lightbox" data-description="Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean." data-gallery="quarto-lightbox-gallery-4"><img src="manuscript_files/figure-html/fig-IGAS-Testing1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-IGAS-Testing1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean."><img src="manuscript_files/figure-html/fig-IGAS-Testing1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-IGAS-Testing1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean.
@@ -357,7 +412,7 @@ Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared
 <p><br>
 <br>
 </p>
-<div id="tbl-IGAS-Table1" class="cell anchored" data-layout-align="center" data-tab.cap="Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis." data-hash="manuscript_cache/html/tbl-IGAS-Table1_e19e1597553b5cea70c5ba71740a22b4">
+<div id="tbl-IGAS-Table1" class="cell anchored" data-layout-align="center" data-tab.cap="Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <thead>
@@ -424,12 +479,12 @@ Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared
 <section id="training-phase-1" class="level5">
 <h5 class="anchored" data-anchor-id="training-phase-1">Training Phase</h5>
 <p>The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. <a href="#fig-e2train" class="quarto-xref">Figure&nbsp;5</a> depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs.&nbsp;the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,412)=77.91, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,172)=56.29, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2train_09e0d83f94d665198b53066ffcb6a534">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2train" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2train-1.png" class="lightbox" data-description="Figure&nbsp;5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." data-gallery="quarto-lightbox-gallery-5"><img src="manuscript_files/figure-html/fig-e2train-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2train-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-description="Figure&nbsp;5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean."><img src="manuscript_files/figure-html/fig-e2train-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
@@ -442,12 +497,12 @@ Figure&nbsp;5: Training performance for the six constant conditions, and the var
 <section id="testing-phase-1" class="level5">
 <h5 class="anchored" data-anchor-id="testing-phase-1">Testing Phase</h5>
 <p>In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs. varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> =.02. Descriptive statistics for each condition are shown in table 2. In <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> shows performance between the varied condition and the individual constant groups.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2testa_077e6f4eb7f9d834844955e421dca1c2">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2testa" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2testa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2testa-1.png" class="lightbox" data-description="Figure&nbsp;6: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean." data-gallery="quarto-lightbox-gallery-6"><img src="manuscript_files/figure-html/fig-e2testa-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2testa-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-description="Figure&nbsp;6: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean."><img src="manuscript_files/figure-html/fig-e2testa-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2testa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
@@ -458,8 +513,8 @@ Figure&nbsp;6: Testing phase performance from each of the six testing positions.
 </div>
 <p><br>
 </p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2table1_e603392e7d77136c2683f00c167cbe20">
-<div id="tbl-e2table1" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2table1_e603392e7d77136c2683f00c167cbe20">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2table1" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
@@ -513,8 +568,8 @@ Table&nbsp;1: Transfer performance from each of the 6 throwing locations from wh
 </div>
 </div>
 <p>Next, we compared the testing performance of constant and varied groups from only positions that participants had not encountered during training. Constant participants each had 5 novel positions, whereas varied participants tested from 4 novel positions (400,625,675,900). We first standardized performance within in each position, and then averaged across positions. Here again, we found a significant effect of condition (constant vs.&nbsp;varied): F(1,206)=4.30, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> = .02 .</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2table2_696f773d36776179c49ae1cecf59cfb5">
-<div id="tbl-e2table2" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2table2_696f773d36776179c49ae1cecf59cfb5">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2table2" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2table2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g.&nbsp;excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
@@ -568,12 +623,12 @@ Table&nbsp;2: Testing performance from novel positions. Includes data only from 
 </div>
 </div>
 <p>Finally, corresponding to the comparison of position 760 from experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure&nbsp;7</a> displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, <span class="math inline">\(\eta^{2}_G\)</span> = .02. Table 4 provides descriptive statistics.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2test1_1095de46b3ab4ca2b10fa3f0ce8998aa">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2test1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2test1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2test1-1.png" class="lightbox" data-description="Figure&nbsp;7: A comparison of throwing location that are identical to those trained by the constant participants (e.g.&nbsp;constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." data-gallery="quarto-lightbox-gallery-7"><img src="manuscript_files/figure-html/fig-e2test1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2test1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-description="Figure&nbsp;7: A comparison of throwing location that are identical to those trained by the constant participants (e.g.&nbsp;constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean."><img src="manuscript_files/figure-html/fig-e2test1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2test1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: A comparison of throwing location that are identical to those trained by the constant participants (e.g.&nbsp;constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.
@@ -584,8 +639,8 @@ Figure&nbsp;7: A comparison of throwing location that are identical to those tra
 </div>
 <p><br>
 </p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2tab3_6a14de25afda6096b09d24590ec9f2f7">
-<div id="tbl-e2tab3" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2tab3_6a14de25afda6096b09d24590ec9f2f7">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2tab3" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2tab3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3: Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.
@@ -637,12 +692,12 @@ Table&nbsp;3: Testing performance from the locations trained by constant partici
 <section id="computational-model" class="level4">
 <h4 class="anchored" data-anchor-id="computational-model">Computational Model</h4>
 <p>Controlling for the similarity between training and testing The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions – thus resulting in six separate similarity scores for each participant. <a href="#fig-taskSpace1" class="quarto-xref">Figure&nbsp;8</a> visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in <a href="#fig-taskSpace1" class="quarto-xref">Figure&nbsp;8</a>, the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-taskSpace1_f7009af0b37049e7b4becc128137fba0">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-taskSpace1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-taskSpace1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-taskSpace1-1.png" class="lightbox" data-description="Figure&nbsp;8: A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment." data-gallery="quarto-lightbox-gallery-8"><img src="manuscript_files/figure-html/fig-taskSpace1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-taskSpace1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-description="Figure&nbsp;8: A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment."><img src="manuscript_files/figure-html/fig-taskSpace1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-taskSpace1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;8: A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. Figure 8B shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
@@ -669,12 +724,12 @@ Figure&nbsp;8: A visual representation of the combinations of throw parameters (
 <h4 class="anchored" data-anchor-id="general-discussion">General Discussion</h4>
 <p>Across two experiments, we found evidence in support of the benefits of variability hypothesis in a simple, computerized projectile throwing task. Generalization was observed in both constant and varied participants, in that both groups tended to perform better at novel positions in the testing phase than did participants who started with those positions in the training phase. However, varied trained participants consistently performed better than constant trained participants, in terms of both the testing phase in general, and in a comparison that only included untrained positions. We also found some evidence for the less commonly observed pattern wherein varied-trained participants outperform constant-trained participants even from conditions identical to the constant group training <span class="citation" data-cites="goodeSuperiorityVariableRepeated2008 greenPracticeVariabilityTransfer1995a kerrSpecificVariedPractice1978">(<a href="#ref-goodeSuperiorityVariableRepeated2008" role="doc-biblioref">Goode et al., 2008</a>; <a href="#ref-greenPracticeVariabilityTransfer1995a" role="doc-biblioref">Green et al., 1995</a>; <a href="#ref-kerrSpecificVariedPractice1978" role="doc-biblioref">Kerr &amp; Booth, 1978</a>)</span>. In experiment 1 varied participants performed significantly better on this identity comparison. In Experiment 2, the comparison was not significant initially, but became significant after controlling for the similarity measure that incorporates only a single value for the steepness of similarity-based generalization (c). Furthermore, we showed that the general pattern of results from Experiment 2 could be parsimoniously accommodated by an instance-based similarity model, but only with the assumption that constant and varied participants generalize their training experience to different degrees. Our results thus suggest that the benefits of variation cannot be explained by the varied-trained participants simply covering a broader range of the task space. Rather, the modeling suggests that varied participants also learn to adaptively tune their generalization function such that throwing locations generalize more broadly to one another than they do in the constant condition. A learning system could end up adopting a higher c value in the constant than variable training conditions by monitoring the trial-by-trial variability of the training items. The c parameter would be adapted downwards when adjacent training items are dissimilar to each other and adapted upwards when adjacent training items are the same. In this fashion, contextually appropriate c values could be empirically learned. This learning procedure would capture the insight that if a situation has a high amount variability, then the learner should be predisposed toward thinking that subsequent test items will also show considerable variability, in which case generalization gradients should be broad, as is achieved by low values for c.</p>
 <p>Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in <a href="#fig-Toy-Model2" class="quarto-xref">Figure&nbsp;9</a> we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model – namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-Toy-Model2_ca5dc05a44a6fb1364d4279b6ba60d6b">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-Toy-Model2" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Toy-Model2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-Toy-Model2-1.png" class="lightbox" data-description="Figure&nbsp;9: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = e^{(c\\cdot|x-800|)} +e^{(c\\cdot|x-400|)}, whereas the constant group generalization is generated from 2\\cdot e^{(c\\cdot|x-600|)}. For the top right panel, the c constants in the original equations are different for the 2 conditions, with c=-.002 for the varied condition, and c=-.008 for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = e^{(cvaried\\cdot|x-800|)} +e^{(cvaried\\cdot|x-400|)}." data-gallery="quarto-lightbox-gallery-9"><img src="manuscript_files/figure-html/fig-Toy-Model2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-Toy-Model2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-description="Figure&nbsp;9: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = e^{(c\\cdot|x-800|)} +e^{(c\\cdot|x-400|)}, whereas the constant group generalization is generated from 2\\cdot e^{(c\\cdot|x-600|)}. For the top right panel, the c constants in the original equations are different for the 2 conditions, with c=-.002 for the varied condition, and c=-.008 for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = e^{(cvaried\\cdot|x-800|)} +e^{(cvaried\\cdot|x-400|)}."><img src="manuscript_files/figure-html/fig-Toy-Model2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Toy-Model2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;9: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = <span class="math inline">\(e^{(c\\cdot|x-800|)} +e^{(c\\cdot|x-400|)}\)</span>, whereas the constant group generalization is generated from <span class="math inline">\(2\\cdot e^{(c\\cdot|x-600|)}\)</span>. For the top right panel, the c constants in the original equations are different for the 2 conditions, with <span class="math inline">\(c=-.002\)</span> for the varied condition, and <span class="math inline">\(c=-.008\)</span> for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = <span class="math inline">\(e^{(cvaried\\cdot|x-800|)} +e^{(cvaried\\cdot|x-400|)}\)</span>.
@@ -711,12 +766,12 @@ Figure&nbsp;9: A simple model depicting the necessity of both of two separately 
 <p>The first significant challenge to the rule-based accounts of function learning was put forth by <span class="citation" data-cites="deloshExtrapolationSineQua1997">DeLosh et al. (<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">1997</a>)</span> . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in <a href="#fig-delosh-extrap" class="quarto-xref">Figure&nbsp;10</a>.</p>
 <p>The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model <span class="citation" data-cites="carrollFunctionalLearningLearning1963 brehmerHypothesesRelationsScaled1974">(<a href="#ref-brehmerHypothesesRelationsScaled1974" role="doc-biblioref">Brehmer, 1974</a>; <a href="#ref-carrollFunctionalLearningLearning1963" role="doc-biblioref">Carroll, 1963</a>)</span> tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data. The log-polynomial adaptive regression model <span class="citation" data-cites="kohFunctionLearningInduction1991">(<a href="#ref-kohFunctionLearningInduction1991" role="doc-biblioref">Koh &amp; Meyer, 1991</a>)</span> was able to mimic some of the systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred.</p>
 <p>The authors also introduced two new function-learning models. The Associative Learning Model (ALM) and the extrapolation-association model (EXAM). ALM is a two layer connectionist model adapted from the ALCOVE model in the category learning literature <span class="citation" data-cites="kruschkeALCOVEExemplarbasedConnectionist1992">(<a href="#ref-kruschkeALCOVEExemplarbasedConnectionist1992" role="doc-biblioref">Kruschke, 1992</a>)</span>. ALM belongs to the general class of radial-basis function neural networks, and can be considered a similarity-based model in the sense that the nodes in the input layer of the network are activated as a function of distance. The EXAM model retains the same similarity based activation and associative learning mechanisms as ALM, while being augmented with a linear rule response mechanism. When presented with novel stimuli, EXAM will retrieve the most similar input-output examples encountered during training, and from those examples compute a local slope. ALM was able to provide a good account of participant training and interpolation data in all three function conditions, however it was unable to extrapolate. EXAM, on the other hand, was able to reproduce both the extrapolation underestimation, as well as the quadratic and exponential overestimation patterns exhibited by the human participants. Subsequent research identified some limitations in EXAM’s ability to account for cases where human participants learn and extrapolate sinusoidal function <span class="citation" data-cites="bottNonmonotonicExtrapolationFunction2004">Bott &amp; Heit (<a href="#ref-bottNonmonotonicExtrapolationFunction2004" role="doc-biblioref">2004</a>)</span> or to scenarios where different functions apply to different regions of the input space <span class="citation" data-cites="kalishPopulationLinearExperts2004">Kalish et al. (<a href="#ref-kalishPopulationLinearExperts2004" role="doc-biblioref">2004</a>)</span>, though EXAM has been shown to provide a good account of human learning and extrapolation in tasks with bi-linear, V shaped input spaces <span class="citation" data-cites="mcdanielPredictingTransferPerformance2009">Mcdaniel et al. (<a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">2009</a>)</span>.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-delosh-extrap_4cacdb7c65217b1209a1ee46c3d3c220">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-delosh-extrap" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-delosh-extrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-delosh-extrap-1.png" class="lightbox" data-description="Figure&nbsp;10: Generalization reproduced patterns from DeLosh et al.&nbsp;(1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples." data-gallery="quarto-lightbox-gallery-10"><img src="manuscript_files/figure-html/fig-delosh-extrap-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-delosh-extrap-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-description="Figure&nbsp;10: Generalization reproduced patterns from DeLosh et al.&nbsp;(1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples."><img src="manuscript_files/figure-html/fig-delosh-extrap-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-delosh-extrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10: Generalization reproduced patterns from DeLosh et al.&nbsp;(1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples.
@@ -1005,12 +1060,12 @@ Table&nbsp;4: Testing Deviation - Empirical Summary
 <span class="math display">\[\begin{equation}
 dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \beta_3 \cdot condit_{ij} \cdot band_{ij} + b_{0i} + b_{1i} \cdot band_{ij} + \epsilon_{ij}
 \end{equation}\]</span>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e1-test-dev_c9cbdbdd91f7d7cc56f6d7248c687416">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e1-test-dev" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-test-dev-1.png" class="lightbox" data-description="Figure&nbsp;12: E1. Deviations from target band during testing without feedback stage." data-gallery="quarto-lightbox-gallery-11"><img src="manuscript_files/figure-html/fig-e1-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e1-test-dev-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-description="Figure&nbsp;12: E1. Deviations from target band during testing without feedback stage."><img src="manuscript_files/figure-html/fig-e1-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e1-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;12: E1. Deviations from target band during testing without feedback stage.
@@ -1019,8 +1074,8 @@ Figure&nbsp;12: E1. Deviations from target band during testing without feedback 
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-bmm-dist_f02145452eaa4cc04c2d98e559c04903">
-<div id="tbl-e1-bmm-dist" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-bmm-dist_f02145452eaa4cc04c2d98e559c04903">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e1-bmm-dist" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e1-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;5: Experiment 1. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -1163,12 +1218,12 @@ Table&nbsp;5: Experiment 1. Bayesian Mixed Model predicting absolute deviation a
 <span class="math display">\[\begin{equation}
 vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
 \end{equation}\]</span>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e1-test-vx_5e01182fb6d5331e2ab48a39f236ba7a">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e1-test-vx" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-test-vx-1.png" class="lightbox" data-description="Figure&nbsp;13: E1 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." data-gallery="quarto-lightbox-gallery-12"><img src="manuscript_files/figure-html/fig-e1-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e1-test-vx-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-description="Figure&nbsp;13: E1 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band."><img src="manuscript_files/figure-html/fig-e1-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e1-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;13: E1 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
@@ -1177,8 +1232,8 @@ Figure&nbsp;13: E1 testing x velocities. Translucent bands with dash lines indic
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-test-nf-vx_ad3d9c21c17fd20355cca923194a35a6">
-<div id="tbl-e1-test-nf-vx" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-test-nf-vx_ad3d9c21c17fd20355cca923194a35a6">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e1-test-nf-vx" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e1-test-nf-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;6: Testing vx - Empirical Summary
@@ -1320,8 +1375,8 @@ Table&nbsp;6: Testing vx - Empirical Summary
 </figure>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-bmm-vx_9f07168fb0e5defd78c608dd6fdb7ace">
-<div id="tbl-e1-bmm-vx" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-bmm-vx_9f07168fb0e5defd78c608dd6fdb7ace">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e1-bmm-vx" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e1-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;7: Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -1445,7 +1500,7 @@ Table&nbsp;7: Experiment 1. Bayesian Mixed Model Predicting Vx as a function of 
 <div id="fig-e1-bmm-vx-1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-bmm-vx-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-bmm-vx-1.png" class="lightbox" data-description="Figure&nbsp;14&nbsp;(a): Model fit to all 6 bands" data-gallery="fig-e1-bmm-vx"><img src="manuscript_files/figure-html/fig-e1-bmm-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-vx"></a>
+<a href="manuscript_files/figure-html/fig-e1-bmm-vx-1.png" class="lightbox" data-gallery="fig-e1-bmm-vx" data-description="Figure&nbsp;14&nbsp;(a): Model fit to all 6 bands"><img src="manuscript_files/figure-html/fig-e1-bmm-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-vx"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-bmm-vx-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Model fit to all 6 bands
@@ -1459,7 +1514,7 @@ Table&nbsp;7: Experiment 1. Bayesian Mixed Model Predicting Vx as a function of 
 <div id="fig-e1-bmm-vx-2" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-bmm-vx-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-bmm-vx-2.png" class="lightbox" data-description="Figure&nbsp;14&nbsp;(b): Model fit to only 3 extrapolation bands" data-gallery="fig-e1-bmm-vx"><img src="manuscript_files/figure-html/fig-e1-bmm-vx-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-vx"></a>
+<a href="manuscript_files/figure-html/fig-e1-bmm-vx-2.png" class="lightbox" data-gallery="fig-e1-bmm-vx" data-description="Figure&nbsp;14&nbsp;(b): Model fit to only 3 extrapolation bands"><img src="manuscript_files/figure-html/fig-e1-bmm-vx-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-vx"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-bmm-vx-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Model fit to only 3 extrapolation bands
@@ -1474,8 +1529,8 @@ Figure&nbsp;14: Conditional effect of training condition and Band. Ribbons indic
 </figcaption>
 </figure>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-slope-quartile_f73bf7582aa6c7a433e9781f130a8d4f">
-<div id="tbl-e1-slope-quartile" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e1-slope-quartile_f73bf7582aa6c7a433e9781f130a8d4f">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e1-slope-quartile" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e1-slope-quartile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;8: Slope coefficients by quartile, per condition
@@ -1496,19 +1551,19 @@ Table&nbsp;8: Slope coefficients by quartile, per condition
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Constant</td>
-<td style="text-align: right;">-0.108</td>
-<td style="text-align: right;">0.475</td>
-<td style="text-align: right;">0.687</td>
-<td style="text-align: right;">0.935</td>
-<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">-0.113</td>
+<td style="text-align: right;">0.480</td>
+<td style="text-align: right;">0.691</td>
+<td style="text-align: right;">0.931</td>
+<td style="text-align: right;">1.39</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Varied</td>
-<td style="text-align: right;">-0.203</td>
-<td style="text-align: right;">0.270</td>
-<td style="text-align: right;">0.584</td>
-<td style="text-align: right;">0.904</td>
-<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">-0.208</td>
+<td style="text-align: right;">0.268</td>
+<td style="text-align: right;">0.590</td>
+<td style="text-align: right;">0.900</td>
+<td style="text-align: right;">1.30</td>
 </tr>
 </tbody>
 </table>
@@ -1525,7 +1580,7 @@ Table&nbsp;8: Slope coefficients by quartile, per condition
 <div id="fig-e1-bmm-bx2-1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-bmm-bx2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-bmm-bx2-1.png" class="lightbox" data-description="Figure&nbsp;15&nbsp;(a): Slope estimates by participant - ordered from lowest to highest within each condition." data-gallery="fig-e1-bmm-bx2"><img src="manuscript_files/figure-html/fig-e1-bmm-bx2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-bx2"></a>
+<a href="manuscript_files/figure-html/fig-e1-bmm-bx2-1.png" class="lightbox" data-gallery="fig-e1-bmm-bx2" data-description="Figure&nbsp;15&nbsp;(a): Slope estimates by participant - ordered from lowest to highest within each condition."><img src="manuscript_files/figure-html/fig-e1-bmm-bx2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-bx2"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-bmm-bx2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Slope estimates by participant - ordered from lowest to highest within each condition.
@@ -1537,7 +1592,7 @@ Table&nbsp;8: Slope coefficients by quartile, per condition
 <div id="fig-e1-bmm-bx2-2" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-bmm-bx2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-bmm-bx2-2.png" class="lightbox" data-description="Figure&nbsp;15&nbsp;(b): Destiny of slope coefficients by training group" data-gallery="fig-e1-bmm-bx2"><img src="manuscript_files/figure-html/fig-e1-bmm-bx2-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-bx2"></a>
+<a href="manuscript_files/figure-html/fig-e1-bmm-bx2-2.png" class="lightbox" data-gallery="fig-e1-bmm-bx2" data-description="Figure&nbsp;15&nbsp;(b): Destiny of slope coefficients by training group"><img src="manuscript_files/figure-html/fig-e1-bmm-bx2-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-bmm-bx2"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-bmm-bx2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Destiny of slope coefficients by training group
@@ -1552,15 +1607,15 @@ Figure&nbsp;15: Slope distributions between condition
 </figcaption>
 </figure>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e1-indv-slopes_bcec6efbc1c2d47122a46681a35ee100">
-<div id="fig-e1-indv-slopes" class="cell quarto-figure quarto-figure-center anchored" data-layout-align="center" data-hash="manuscript_cache/html/fig-e1-indv-slopes_bcec6efbc1c2d47122a46681a35ee100">
+<div class="cell" data-layout-align="center">
+<div id="fig-e1-indv-slopes" class="cell quarto-figure quarto-figure-center anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-indv-slopes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div id="fig-e1-indv-slopes-1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-indv-slopes-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-indv-slopes-1.png" class="lightbox" data-description="Figure&nbsp;16&nbsp;(a): subset with largest slopes" data-gallery="fig-e1-indv-slopes"><img src="manuscript_files/figure-html/fig-e1-indv-slopes-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-indv-slopes"></a>
+<a href="manuscript_files/figure-html/fig-e1-indv-slopes-1.png" class="lightbox" data-gallery="fig-e1-indv-slopes" data-description="Figure&nbsp;16&nbsp;(a): subset with largest slopes"><img src="manuscript_files/figure-html/fig-e1-indv-slopes-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-indv-slopes"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-indv-slopes-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) subset with largest slopes
@@ -1572,7 +1627,7 @@ Figure&nbsp;15: Slope distributions between condition
 <div id="fig-e1-indv-slopes-2" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-e1-indv-slopes-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-indv-slopes-2.png" class="lightbox" data-description="Figure&nbsp;16&nbsp;(b): subset with smallest slopes" data-gallery="fig-e1-indv-slopes"><img src="manuscript_files/figure-html/fig-e1-indv-slopes-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-indv-slopes"></a>
+<a href="manuscript_files/figure-html/fig-e1-indv-slopes-2.png" class="lightbox" data-gallery="fig-e1-indv-slopes" data-description="Figure&nbsp;16&nbsp;(b): subset with smallest slopes"><img src="manuscript_files/figure-html/fig-e1-indv-slopes-2.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%" data-ref-parent="fig-e1-indv-slopes"></a>
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-e1-indv-slopes-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) subset with smallest slopes
@@ -1701,8 +1756,8 @@ Figure&nbsp;17: Experiment 2 Design. Constant and Varied participants complete d
 <p><span class="math display">\[\begin{equation}
 dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \beta_3 \cdot condit_{ij} \cdot band_{ij} + b_{0i} + b_{1i} \cdot band_{ij} + \epsilon_{ij}
 \end{equation}\]</span></p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-test-nf-deviation_697a9c4bc08ecd8c72a2e965973afdc3">
-<div id="tbl-e2-test-nf-deviation" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-test-nf-deviation_697a9c4bc08ecd8c72a2e965973afdc3">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2-test-nf-deviation" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2-test-nf-deviation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;9: Testing Deviation - Empirical Summary
@@ -1844,12 +1899,12 @@ Table&nbsp;9: Testing Deviation - Empirical Summary
 </figure>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2-test-dev_c98b48e50ee18499f7c227668c370f13">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2-test-dev" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2-test-dev-1.png" class="lightbox" data-description="Figure&nbsp;18: E2. Deviations from target band during testing without feedback stage." data-gallery="quarto-lightbox-gallery-19"><img src="manuscript_files/figure-html/fig-e2-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2-test-dev-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" data-description="Figure&nbsp;18: E2. Deviations from target band during testing without feedback stage."><img src="manuscript_files/figure-html/fig-e2-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;18: E2. Deviations from target band during testing without feedback stage.
@@ -1858,8 +1913,8 @@ Figure&nbsp;18: E2. Deviations from target band during testing without feedback 
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-bmm-dist_53aa46e86bed280ef9c5086922370dd3">
-<div id="tbl-e2-bmm-dist" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-bmm-dist_53aa46e86bed280ef9c5086922370dd3">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2-bmm-dist" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;10: Experiment 2. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -1985,12 +2040,12 @@ Table&nbsp;10: Experiment 2. Bayesian Mixed Model predicting absolute deviation 
 <p><span class="math display">\[\begin{equation}
 vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
 \end{equation}\]</span></p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2-test-vx_c7fbe56d72d5921269079580bcfec283">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2-test-vx" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2-test-vx-1.png" class="lightbox" data-description="Figure&nbsp;19: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." data-gallery="quarto-lightbox-gallery-20"><img src="manuscript_files/figure-html/fig-e2-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2-test-vx-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" data-description="Figure&nbsp;19: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band."><img src="manuscript_files/figure-html/fig-e2-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;19: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
@@ -2144,8 +2199,8 @@ Table&nbsp;11: Testing vx - Empirical Summary
 </div>
 </figure>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-bmm-vx_9e3f5a162be2e2a51bf5142cdf54c447">
-<div id="tbl-e2-bmm-vx" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e2-bmm-vx_9e3f5a162be2e2a51bf5142cdf54c447">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e2-bmm-vx" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e2-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;12: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -2200,12 +2255,12 @@ Table&nbsp;12: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of
 </div>
 <p>See <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table&nbsp;12</a> for the full model results.</p>
 <p>When examining discrimination ability using the model predicting raw x-velocity, the results were less clear than those of the absolute deviation analysis. The slope on Velocity Band (β = 0.71, 95% CrI [0.58, 0.84]) indicates that participants showed good discrimination between bands overall. However, the interaction term suggested this effect was not modulated by training condition (β = -0.06, 95% CrI [-0.24, 0.13]) Thus, while varied training may provide some advantage for accuracy, both training conditions seem to have similar abilities to discriminate between velocity bands.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e2-bmm-vx_a70f3a313ad8ed8b557fba48a65d7396">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e2-bmm-vx" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e2-bmm-vx-1.png" class="lightbox" data-description="Figure&nbsp;20: Conditional effect of training condition and Band. Ribbons indicate 95% HDI." data-gallery="quarto-lightbox-gallery-21"><img src="manuscript_files/figure-html/fig-e2-bmm-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e2-bmm-vx-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" data-description="Figure&nbsp;20: Conditional effect of training condition and Band. Ribbons indicate 95% HDI."><img src="manuscript_files/figure-html/fig-e2-bmm-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e2-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;20: Conditional effect of training condition and Band. Ribbons indicate 95% HDI.
@@ -2229,8 +2284,8 @@ Figure&nbsp;20: Conditional effect of training condition and Band. Ribbons indic
 <section id="deviation-from-target-band-2" class="level5">
 <h5 class="anchored" data-anchor-id="deviation-from-target-band-2">Deviation From Target Band</h5>
 <p>Descriptive summaries testing deviation data are provided in <a href="#tbl-e3-test-nf-deviation" class="quarto-xref">Table&nbsp;13</a> and <a href="#fig-e3-test-dev" class="quarto-xref">Figure&nbsp;21</a>. To model differences in accuracy between groups, we fit Bayesian mixed effects regression models to the trial level data from the testing phase. The primary model predicted the absolute deviation from the target velocity band (dist) as a function of training condition (condit), target velocity band (band), and their interaction, with random intercepts and slopes for each participant (id).</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-test-nf-deviation_46b471388c4ddf2b67cbe2abb18abb36">
-<div id="tbl-e3-test-nf-deviation" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-test-nf-deviation_46b471388c4ddf2b67cbe2abb18abb36">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e3-test-nf-deviation" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e3-test-nf-deviation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;13: Testing Deviation - Empirical Summary
@@ -2486,12 +2541,12 @@ Table&nbsp;13: Testing Deviation - Empirical Summary
 </figure>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e3-test-dev_049f6ec44c1d0116d65b2b80c24c546f">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e3-test-dev" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e3-test-dev-1.png" class="lightbox" data-description="Figure&nbsp;21: e3. Deviations from target band during testing without feedback stage." data-gallery="quarto-lightbox-gallery-22"><img src="manuscript_files/figure-html/fig-e3-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e3-test-dev-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" data-description="Figure&nbsp;21: e3. Deviations from target band during testing without feedback stage."><img src="manuscript_files/figure-html/fig-e3-test-dev-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e3-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;21: e3. Deviations from target band during testing without feedback stage.
@@ -2500,8 +2555,8 @@ Figure&nbsp;21: e3. Deviations from target band during testing without feedback 
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-bmm-dist_3e97a15a1bf8f5a1f116c3edc8cff240">
-<div id="tbl-e3-bmm-dist" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-bmm-dist_3e97a15a1bf8f5a1f116c3edc8cff240">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e3-bmm-dist" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e3-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;14: Experiment 3. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -2555,12 +2610,12 @@ Table&nbsp;14: Experiment 3. Bayesian Mixed Model predicting absolute deviation 
 </div>
 </div>
 <p>The effect of training condition in Experiment 3 showed a similar pattern to Experiment 2, with the varied group tending to have lower deviation than the constant group (β = -90.65, 95% CrI [-182.79, 3.75]), with 97% of the posterior distribution falling under 0.</p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e3-bmm-dist_61cdc6dd31c10959a61aad851388d895">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e3-bmm-dist" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e3-bmm-dist-1.png" class="lightbox" data-description="Figure&nbsp;22: e3. Conditioinal Effect of Training Condition and Band. Ribbon indicated 95% Credible Intervals." data-gallery="quarto-lightbox-gallery-23"><img src="manuscript_files/figure-html/fig-e3-bmm-dist-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e3-bmm-dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" data-description="Figure&nbsp;22: e3. Conditioinal Effect of Training Condition and Band. Ribbon indicated 95% Credible Intervals."><img src="manuscript_files/figure-html/fig-e3-bmm-dist-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e3-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;22: e3. Conditioinal Effect of Training Condition and Band. Ribbon indicated 95% Credible Intervals.
@@ -2576,12 +2631,12 @@ Figure&nbsp;22: e3. Conditioinal Effect of Training Condition and Band. Ribbon i
 <p><span class="math display">\[\begin{equation}
 vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \beta_3 \cdot condit_{ij} \cdot bandInt_{ij} + b_{0i} + b_{1i} \cdot bandInt_{ij} + \epsilon_{ij}
 \end{equation}\]</span></p>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e3-test-vx_fe167a0c675cd937a49a63ba5a9a03e9">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e3-test-vx" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e3-test-vx-1.png" class="lightbox" data-description="Figure&nbsp;23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." data-gallery="quarto-lightbox-gallery-24"><img src="manuscript_files/figure-html/fig-e3-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e3-test-vx-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" data-description="Figure&nbsp;23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band."><img src="manuscript_files/figure-html/fig-e3-test-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e3-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
@@ -2590,8 +2645,8 @@ Figure&nbsp;23: e3 testing x velocities. Translucent bands with dash lines indic
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-test-nf-vx_bb639c7e744048bf52514731e2a2983e">
-<div id="tbl-e3-test-nf-vx" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-test-nf-vx_bb639c7e744048bf52514731e2a2983e">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e3-test-nf-vx" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e3-test-nf-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;15: Testing vx - Empirical Summary
@@ -2847,8 +2902,8 @@ Table&nbsp;15: Testing vx - Empirical Summary
 </figure>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-bmm-vx_376e1a8333aebc88c287d27b7af7a4ae">
-<div id="tbl-e3-bmm-vx" class="cell anchored" data-layout-align="center" data-hash="manuscript_cache/html/tbl-e3-bmm-vx_376e1a8333aebc88c287d27b7af7a4ae">
+<div class="cell" data-layout-align="center">
+<div id="tbl-e3-bmm-vx" class="cell anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-e3-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;16: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band
@@ -3419,7 +3474,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="group-comparison-of-learning-rate-fits" class="level4">
 <h4 class="anchored" data-anchor-id="group-comparison-of-learning-rate-fits">Group comparison of learning rate fits</h4>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-45_7ab9466f81dcfbdcffda921181f42153">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-45-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="manuscript_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3430,7 +3485,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="first-vs.-second-half-of-testing-stage" class="level4">
 <h4 class="anchored" data-anchor-id="first-vs.-second-half-of-testing-stage">First vs.&nbsp;second half of testing stage</h4>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-46_1e2963fc2a568d55d2a77f49e6f8b3ce">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-46-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="manuscript_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3438,7 +3493,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="group-comparison-for-asymptote-starting-performance" class="level4">
 <h4 class="anchored" data-anchor-id="group-comparison-for-asymptote-starting-performance">Group Comparison for asymptote-starting performance</h4>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-47_7a293fbf58fa44c0df9c58f354ea7dcb">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-47-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="manuscript_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3451,7 +3506,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 <p>In addition to absolute errors (which is related to variance), the authors should also provide other measures of performance, e.g., the mean of the signed errors, so that readers have a better idea whether there was any meaningful over- or undershooting.</p>
 <section id="experiment-1-training---relative-distances" class="level5">
 <h5 class="anchored" data-anchor-id="experiment-1-training---relative-distances">experiment 1 training - relative distances</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-48_5bf6a06bbc4bd95502b65dc38d8b423f">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-48-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="manuscript_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3491,7 +3546,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="experiment-2-training---relative-distances" class="level5">
 <h5 class="anchored" data-anchor-id="experiment-2-training---relative-distances">experiment 2 training - relative distances</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-49_71fbcdc85077d172e66b7910ca94da34">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-49-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="manuscript_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3502,7 +3557,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="experiment-1-testing---relative-distances" class="level5">
 <h5 class="anchored" data-anchor-id="experiment-1-testing---relative-distances">Experiment 1 Testing - relative distances</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-50_8a07a619e9722cb9dce0d51d06482ea0">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-50-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="manuscript_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3524,7 +3579,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="experiment-2-testing---relative-distances" class="level5">
 <h5 class="anchored" data-anchor-id="experiment-2-testing---relative-distances">Experiment 2 Testing - relative distances</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-51_4dfaa1a5cbace358c61d1c580a407268">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-51-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="manuscript_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3532,7 +3587,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="experimenet-1---intermittent-testing" class="level5">
 <h5 class="anchored" data-anchor-id="experimenet-1---intermittent-testing">Experimenet 1 - intermittent testing</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-52_1b7f48596c59c9bc0d941007fc550d1d">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-52-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="manuscript_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3548,7 +3603,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="training-plots---experiment-1" class="level4">
 <h4 class="anchored" data-anchor-id="training-plots---experiment-1">Training plots - Experiment 1</h4>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-53_23af8f695e6132e2cbfe198d8af51e15">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-53-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="manuscript_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3564,7 +3619,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="fit-to-testing-performance-averaged-across-positions" class="level5">
 <h5 class="anchored" data-anchor-id="fit-to-testing-performance-averaged-across-positions">fit to testing performance averaged across positions</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-54_1f1dc4fa86be29b0eb64678c979eee2c">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <p><a href="manuscript_files/figure-html/unnamed-chunk-54-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="manuscript_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid quarto-figure-center" style="width:100.0%"></a></p>
 </div>
@@ -3578,7 +3633,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="statistical-tests-for-starting-performance" class="level5">
 <h5 class="anchored" data-anchor-id="statistical-tests-for-starting-performance">statistical tests for starting performance</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-55_134d446ea9abfbb7fb604e5409ad5f50">
+<div class="cell" data-layout-align="center">
 <pre><code>## ANOVA Table (type III tests)
 ## 
 ##       Effect DFn DFd    F     p p&lt;.05   ges
@@ -3590,7 +3645,7 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 </section>
 <section id="statistical-tests-for-asymptote" class="level5">
 <h5 class="anchored" data-anchor-id="statistical-tests-for-asymptote">statistical tests for asymptote</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/unnamed-chunk-56_bf707e82a786b60d315d9cc99cadfb39">
+<div class="cell" data-layout-align="center">
 <pre><code>## ANOVA Table (type III tests)
 ## 
 ##       Effect DFn DFd    F     p p&lt;.05   ges
@@ -3606,12 +3661,12 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B.,
 <h4 class="anchored" data-anchor-id="appendix---project-2---experiment-1">Appendix - Project 2 - Experiment 1</h4>
 <section id="posterior-predictive-distributions" class="level5">
 <h5 class="anchored" data-anchor-id="posterior-predictive-distributions">Posterior Predictive Distributions</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-post-pred-dist_f94af77325dc9a6623972db25b605df8">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-post-pred-dist" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-post-pred-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-post-pred-dist-1.png" class="lightbox" data-description="Figure&nbsp;24: Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data." data-gallery="quarto-lightbox-gallery-46"><img src="manuscript_files/figure-html/fig-post-pred-dist-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-post-pred-dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46" data-description="Figure&nbsp;24: Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data."><img src="manuscript_files/figure-html/fig-post-pred-dist-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-post-pred-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;24: Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data.
@@ -3620,12 +3675,12 @@ Figure&nbsp;24: Posterior Predictive distributions for Absolute Deviance. Poster
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-post-pred-vx_e7ef649fce07cb5332da62d402ed3f98">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-post-pred-vx" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-post-pred-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-post-pred-vx-1.png" class="lightbox" data-description="Figure&nbsp;25: Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data." data-gallery="quarto-lightbox-gallery-47"><img src="manuscript_files/figure-html/fig-post-pred-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-post-pred-vx-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47" data-description="Figure&nbsp;25: Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data."><img src="manuscript_files/figure-html/fig-post-pred-vx-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-post-pred-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;25: Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data.
@@ -3637,12 +3692,12 @@ Figure&nbsp;25: Posterior Predictive distributions for Vx. Posterior Draws in Bl
 </section>
 <section id="empirical-vs.-predicted" class="level5">
 <h5 class="anchored" data-anchor-id="empirical-vs.-predicted">Empirical vs.&nbsp;Predicted</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-empVsPred_337f91c991adc2d5f453f74f02d93147">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-empVsPred" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-empVsPred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-empVsPred-1.png" class="lightbox" data-description="Figure&nbsp;26: Bayesian Mixed Model predictions vs.&nbsp;Empirical Predictions - X velocity" data-gallery="quarto-lightbox-gallery-48"><img src="manuscript_files/figure-html/fig-empVsPred-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-empVsPred-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48" data-description="Figure&nbsp;26: Bayesian Mixed Model predictions vs.&nbsp;Empirical Predictions - X velocity"><img src="manuscript_files/figure-html/fig-empVsPred-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-empVsPred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;26: Bayesian Mixed Model predictions vs.&nbsp;Empirical Predictions - X velocity
@@ -3654,12 +3709,12 @@ Figure&nbsp;26: Bayesian Mixed Model predictions vs.&nbsp;Empirical Predictions 
 </section>
 <section id="different-aggregations" class="level5">
 <h5 class="anchored" data-anchor-id="different-aggregations">Different Aggregations</h5>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-empirical-distGrp1_9a197d1cbe08444330b6a64daf74d88b">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-empirical-distGrp1" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-empirical-distGrp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-empirical-distGrp1-1.png" class="lightbox" data-description="Figure&nbsp;27: E1. Distribution of Vx at Participant level" data-gallery="quarto-lightbox-gallery-49"><img src="manuscript_files/figure-html/fig-empirical-distGrp1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-empirical-distGrp1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49" data-description="Figure&nbsp;27: E1. Distribution of Vx at Participant level"><img src="manuscript_files/figure-html/fig-empirical-distGrp1-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-empirical-distGrp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;27: E1. Distribution of Vx at Participant level
@@ -3668,12 +3723,12 @@ Figure&nbsp;27: E1. Distribution of Vx at Participant level
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-empirical-distGrp2_3891ebe539d2885b098897408d4fc78b">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-empirical-distGrp2" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-empirical-distGrp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-empirical-distGrp2-1.png" class="lightbox" data-description="Figure&nbsp;28: E1. Distribution of Vx at Trial level" data-gallery="quarto-lightbox-gallery-50"><img src="manuscript_files/figure-html/fig-empirical-distGrp2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-empirical-distGrp2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50" data-description="Figure&nbsp;28: E1. Distribution of Vx at Trial level"><img src="manuscript_files/figure-html/fig-empirical-distGrp2-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-empirical-distGrp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;28: E1. Distribution of Vx at Trial level
@@ -3682,12 +3737,12 @@ Figure&nbsp;28: E1. Distribution of Vx at Trial level
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="manuscript_cache/html/fig-e1-ame_61454054a8b2cd29257bc0856b1af38c">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-e1-ame" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-ame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="manuscript_files/figure-html/fig-e1-ame-1.png" class="lightbox" data-description="Figure&nbsp;29: E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)" data-gallery="quarto-lightbox-gallery-51"><img src="manuscript_files/figure-html/fig-e1-ame-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="manuscript_files/figure-html/fig-e1-ame-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51" data-description="Figure&nbsp;29: E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)"><img src="manuscript_files/figure-html/fig-e1-ame-1.png" class="img-fluid quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-e1-ame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;29: E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)
@@ -4093,7 +4148,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
