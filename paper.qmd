@@ -33,7 +33,8 @@ page-layout: full
   <!--  <a class="btn btn-warning btn-sm mb-1" href="/Manuscript/manuscript.pdf.md" target="manuscript"> -->
   <!-- <iconify-icon inline="" icon="fa6-solid:file-pdf"></iconify-icon> &ensp;Manuscript-md -->
   <!-- </a>  -->
-
+  <br>
+  <span>Click buttons above to select format or download</span>
 </p>
 
 <iframe src="/Manuscript/output/TG_Full_Dissertation.pdf" frameborder="0" style="overflow:hidden;height:95%;width:100%;border:2px solid #ccc;" height="95%" width="100%" name="manuscript"></iframe>
