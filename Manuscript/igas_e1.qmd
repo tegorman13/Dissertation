@@ -9,74 +9,138 @@ toc: false
 execute: 
   warning: false
   eval: true
-  include: false
+  include: true
 ---
 
 ::: {.content-visible when-format="html"}
-
 {{< include pre_sections/pre_html.qmd >}}
-
 :::
 
 ::: {.content-visible when-format="pdf"}
-
 {{< include pre_sections/pre_pdf.qmd >}}
-
 :::
 
 ::: {.content-visible when-format="docx"}
-
 {{< include pre_sections/pre_docx.qmd >}}
-
 :::
 
 {{< pagebreak >}}
 
 # Abstract
 
-This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes.
 
 {{< pagebreak >}}
 
 ::: {.content-visible when-format="html"}
-
 {{< include pre_sections/toc_html.qmd >}}
-
 :::
 
 ::: {.content-visible when-format="pdf"}
-
 {{< include pre_sections/toc_pdf.qmd >}}
-
 :::
 
+```{r}
+pacman::p_load(tidyr,papaja, knitr, tinytex, RColorBrewer, kableExtra, cowplot, patchwork)
+source('../Functions/IGAS_ProcessFunctions.R')
+```
 
+$$e^{(c\cdot|x-800|)}$$
+
+
+
+$$e^{(c\cdot|x-400|)}$$
+
+$$e^{(c\cdot|x-800|)}$$ + $$e^{(c\cdot|x-400|)}$$
+
+$$e^{(c_{varied}\cdot|x-800|)}$$ 
+
+$e^{(c_{varied}\cdot|x-800|)}$
+$+e^{(c_{varied}\cdot|x-400|)}$
+$e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ 
+
+$e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$,
+
+```{r}
+#| label: fig-Toy-Model2
+#| fig.cap: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
+#| fig.width: 11
+#| fig.height: 11.5
+
+# 
+
+p=2
+c<- .000002
+
+trainingTestingDifference=2000;
+cvaried=.00002
+cconstant=.0005
+simdat <- data.frame(x=rep(seq(200,1000),3),condit=c(rep("varied",1602),rep("constant",801)),
+                     train.position=c(rep(400,801),rep(800,801),rep(600,801)),c=.0002,p=2) %>%
+                     mutate(c2=ifelse(condit=="varied",cvaried,cconstant),
+                            genGauss=exp(-c*(abs((x-train.position)^p))),
+                            genGaussDist=exp(-c*(trainingTestingDifference+abs((x-train.position)^p))),
+                            genGauss2=exp(-c2*(abs((x-train.position)^p))),
+                            genGaussDist2=exp(-c2*(trainingTestingDifference+abs((x-train.position)^p))),
+                            ) %>% 
+  group_by(x,condit) %>%
+  summarise(genGauss=mean(genGauss),genGauss2=mean(genGauss2),genGaussDist=mean(genGaussDist),genGaussDist2=mean(genGaussDist2),.groups='keep')
+
+
+#plot(x,exp(c*(trainingTestingDifference+abs(x-800)))+exp(c*(trainingTestingDifference+abs(x-400)))
+
+colorVec=c("darkblue","darkred")
+plotSpecs <- list(geom_line(alpha=.7),scale_color_manual(values=colorVec),
+                  geom_vline(alpha=.55,xintercept = c(400,800),color=colorVec[2]),
+                  geom_vline(alpha=.55,xintercept = c(600),color=colorVec[1]),
+                  ylim(c(0,1.05)),
+                  #xlim(c(250,950)),
+                  scale_x_continuous(breaks=seq(200,1000,by=200)),
+                  xlab("Test Stimulus"),
+                  annotate(geom="text",x=455,y=1.05,label="Varied",size=3.0),
+                  annotate(geom="text",x=455,y=.97,label="Training",size=3.0),
+                  annotate(geom="text",x=662,y=1.05,label="Constant",size=3.0),
+                  annotate(geom="text",x=657,y=.97,label="Training",size=3.0),
+                  annotate(geom="text",x=855,y=1.05,label="Varied",size=3.0),
+                  annotate(geom="text",x=855,y=.97,label="Training",size=3.0),
+                  theme(panel.border = element_rect(colour = "black", fill=NA, size=1),
+                        legend.position="none"))
+
+ip1 <- simdat  %>% ggplot(aes(x,y=genGauss,group=condit,col=condit))+plotSpecs+ylab("Amount of Generalization")+ggtitle("Identical context, 1c")
+ip2 <- simdat %>%  ggplot(aes(x,y=genGauss2,group=condit,col=condit))+plotSpecs+ylab("")+ggtitle("Identical context, 2c")
+ip3 <- simdat  %>% ggplot(aes(x,y=genGaussDist,group=condit,col=condit))+plotSpecs+ylab("Amount of Generalization")+
+  ggtitle("Added distance due to context, 1c")+theme(plot.margin = margin(0, 0, 0, 1))
+ip4 <- simdat %>%  ggplot(aes(x,y=genGaussDist2,group=condit,col=condit))+plotSpecs+ylab("")+
+  ggtitle("Added distance due to context, 2c")+theme(plot.margin = margin(0, 0, 0, 1))
+# gridExtra::grid.arrange(ip1,ip2,ip3,ip4,ncol=2)
+
+gtitle="Figure 9."
+title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
+plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
+
+```
 
 {{< pagebreak >}}
-
 
 ## Main body
 
 Following the procedure used by @mcdanielPredictingTransferPerformance2009, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models will be fit directly to the trial by trial data of each individual participants, both by minimizing the root-mean squared deviation (RMSE), and by maximizing log likelihood. Because ALM has been shown to do poorly at accounting for human patterns extrapolation [@deloshExtrapolationSineQua1997], we will also fit the extended EXAM version of the model, which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.
 
-quarto pandoc --citeproc --pdf-engine xelatex -t pdf \
-  --bibliography=../Assets/Bib/Dissertation.bib \
-  --standalone \
-  -f markdown igas_e1.pdf.md \
-  -o refer-test.pdf
+quarto pandoc --citeproc --pdf-engine xelatex -t pdf\
+--bibliography=../Assets/Bib/Dissertation.bib\
+--standalone\
+-f markdown igas_e1.pdf.md\
+-o refer-test.pdf
 
-quarto render igas_e1.qmd --citeproc --pdf-engine xelatex -t pdf \
-  --bibliography=../Assets/Bib/Dissertation.bib \
-  --standalone \
-  -o refer-test.pdf
-
+quarto render igas_e1.qmd --citeproc --pdf-engine xelatex -t pdf\
+--bibliography=../Assets/Bib/Dissertation.bib\
+--standalone\
+-o refer-test.pdf
 
 # Appendix
 
 {{< include ../Appendix/E1_Appendix.qmd >}}
 
 ::: {.content-visible when-format="pdf"}
-
 # References
-
 :::

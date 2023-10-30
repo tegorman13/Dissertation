@@ -1379,7 +1379,7 @@ throws, resulting in a non-zero dissimilarity.
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization =  $e^{(c\\cdot|x-800|)}  +e^{(c\\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\\cdot e^{(c\\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(cvaried\\cdot|x-800|)}  +e^{(cvaried\\cdot|x-400|)}$.](manuscript_files/figure-pdf/fig-Toy-Model2-1.pdf){#fig-Toy-Model2 fig-align='center' width=100%}
+![A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .](manuscript_files/figure-pdf/fig-Toy-Model2-1.pdf){#fig-Toy-Model2 fig-align='center' width=100%}
 :::
 :::
 
@@ -1847,8 +1847,8 @@ Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The
 
 |Condition | Q_0%_mean| Q_25%_mean| Q_50%_mean| Q_75%_mean| Q_100%_mean|
 |:---------|---------:|----------:|----------:|----------:|-----------:|
-|Constant  |    -0.110|      0.478|      0.693|      0.933|         1.4|
-|Varied    |    -0.194|      0.266|      0.591|      0.899|         1.3|
+|Constant  |    -0.104|      0.477|      0.688|      0.929|         1.4|
+|Varied    |    -0.198|      0.273|      0.589|      0.897|         1.3|
 
 
 :::
