@@ -45,6 +45,7 @@ Scratch/*
 # .pandoc/
 md_extract/assets/
 
+
 # misc knit files
 *.aux
 *.gz
