@@ -54,6 +54,7 @@ md_extract/assets/
 *.rdb
 #*.knit.md
 *.results
+*.canvas
 
 # other
 *.httr-oauth
