@@ -1005,8 +1005,8 @@ similarity score is construable as index of how accurate the throws a
 participant made during the training phase would be for each of the
 testing positions.
 
-**Equation 1:** \[ Similarity\_{I,J} = \sum*{i = I}*\sum{j=J}
-e^{-c^\cdot dp\_{i,j}} \]
+**Equation 1:** $$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J}
+(e^{-c^\cdot d^{p}_{i,j}}) $$
 
 **Equation 2:**
 $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$

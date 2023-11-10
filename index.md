@@ -2,6 +2,11 @@
 
 [@kruschkeModelsAttentionalLearning2011]
 
+
+@spitzerPerformanceErrorsInfluence2022
+
+@gouetBiasNoiseProportion2021
+
 [@mezzadriHowFitTransfer2023]
 
 @ciccioneCanHumansPerform2021a

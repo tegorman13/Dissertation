@@ -1,4 +1,4 @@
-The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach
+# The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach
 
 Thomas E. Gorman
 
