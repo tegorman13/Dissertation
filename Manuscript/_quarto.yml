@@ -1,19 +1,14 @@
 project:
   title: "Manuscript"
 
-  render: 
-    - "manuscript.qmd"
-    - "!igas_e1.qmd"
-   #- "!submissions/*.qmd"
-    - "!test_igas.qmd"
-    - "!pre_sections/1_cover.qmd"
-    - "!pre_sections/*"
+
 
 bibliography: [../Assets/Bib/htw.bib]
 csl: ../Assets/Bib/apa7.csl
 
-profile: 
-  default: plain
+profile:
+  group: 
+    - [plain, nice, thesis, ms, md]
 
 # execute:
 #   freeze: auto

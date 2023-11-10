@@ -1,7 +1,6 @@
 ---
 bibliography: ../Assets/Bib/Dissertation.bib
 link-citations: true
-keep-md: true
 toc: false
 execute: 
   warning: false

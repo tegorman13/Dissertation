@@ -1,5 +1,9 @@
 project:
   output-dir: output
+  render: 
+    - "manuscript.qmd"
+    - "!igas_e1.qmd"
+    - "!test_igas.qmd"
 
 
 format:
@@ -29,7 +33,6 @@ format:
 
   pdf:
     cite-method: citeproc
-    keep-md: true
     output-file: "TG_Full_Dissertation.pdf"
     mathfont: "Libertinus Math"
           # Document styling

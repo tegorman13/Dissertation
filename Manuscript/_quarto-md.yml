@@ -1,0 +1,22 @@
+project:
+  output-dir: output/md
+  render: 
+    - "!manuscript.qmd"
+    - "!test_igas.qmd"
+    - "igas_e1.qmd"
+
+
+format:
+  gfm:
+    html-math-method: 
+      method: webtex
+    output-file: dissertation-gfm.md
+    fig.format: svg
+    echo: false
+  hugo:
+    html-math-method: webtex
+    output-file: dissertation-hugo.md
+    fig.format: svg
+  docusaurus-md:
+    code-fold: false
+    fig.format: svg
