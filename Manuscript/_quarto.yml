@@ -1,9 +1,13 @@
 project:
   title: "Manuscript"
 
+execute: 
+  warning: false
+  eval: true
+  include: true
 
 
-bibliography: [../Assets/Bib/htw.bib]
+bibliography: [../Assets/Bib/Dissertation.bib]
 csl: ../Assets/Bib/apa7.csl
 
 profile:

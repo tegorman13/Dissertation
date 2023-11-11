@@ -5,6 +5,11 @@ project:
     - "!igas_e1.qmd"
     - "!test_igas.qmd"
 
+execute: 
+  warning: false
+  #eval: true
+ # include: true
+  #echo: false
 
 format:
   docx:
@@ -16,6 +21,7 @@ format:
     language: 
       title-block-published: "Latest version"
     shift-heading-level-by: 1
+    link-citations: true
     theme: 
        #- ../Assets/Style/lux-modified.scss 
        - zephyr

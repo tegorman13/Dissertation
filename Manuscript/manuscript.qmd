@@ -1,16 +1,11 @@
 ---
 code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
-bibliography: ../Assets/Bib/Dissertation.bib
-link-citations: true
-# keep-md: true
 toc: false
 toc-depth: 3
 toc-location: body
-execute: 
-  warning: false
-  eval: true
-  include: true
-  #echo: false
+# execute: 
+#   warning: false
+#   include: true
 ---
 
 ::: {.content-visible when-format="html"}
@@ -19,7 +14,7 @@ execute:
 
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible unless-format="pdf"}
 
 {{< include pre_sections/pre_pdf.qmd >}}
 
@@ -65,7 +60,7 @@ This dissertation seeks to explore the cognitive underpinnings that govern the g
 
 
 ```{r setup}
-#| echo: false
+
 #| 
 here::set_here(path='..')
 source(here::here("Functions", "packages.R"))
@@ -76,12 +71,12 @@ if (is.null(knitr::pandoc_to())) {
   fmt_out <- knitr::pandoc_to()
 }
 
-knitr::opts_chunk$set(echo = FALSE, include =TRUE, 
-                      warning = FALSE, message = FALSE, eval=TRUE)
+# knitr::opts_chunk$set(echo = FALSE, include =TRUE, 
+#                       warning = FALSE, message = FALSE, eval=TRUE)
 
-knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
-                      fig.width = 6, fig.height = (6 * 0.618),
-                      out.width = "100%", collapse = TRUE)
+# knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
+#                       fig.width = 6, fig.height = (6 * 0.618),
+#                       out.width = "100%", collapse = TRUE)
 # 
 options(digits = 3, width = 120,
         dplyr.summarise.inform = FALSE,
@@ -92,7 +87,6 @@ options(digits = 3, width = 120,
 
 
 ```{r}
-#| echo: false
 source(here::here('Functions/IGAS_ProcessFunctions.R'))
 
 e1 <- readRDS(here::here("data/igas_e1_cleanedData-final.rds")) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity,stageInt=as.numeric(as.character(experimentStage)))
@@ -231,7 +225,7 @@ learning in myriad domains including categorization of simple stimuli [@hahnEffe
 complex categorization [@nosofskyModelguidedSearchOptimal2018], language learning [@jonesDensityDistinctivenessEarly2020; @perryLearnLocallyThink2010; @twomeyAllRightNoises2018; @wonnacottInputEffectsAcquisition2012], anagram completion [@goodeSuperiorityVariableRepeated2008], trajectory
 extrapolation [@fulvioTaskSpecificResponseStrategy2014], task switching [@sabahWhenLessMore2019], associative learning [@leeEvidentialDiversityIncreases2019], visual search [@georgeStimulusVariabilityTask2021; @gonzalezDiversityTrainingEnhances2011; @kelleyLearningAttendEffects2009], voice
 identity learning [@lavanEffectsHighVariability2019], simple motor learning [@braunMotorTaskVariation2009; @kerrSpecificVariedPractice1978; @rollerVariablePracticeLenses2001; @willeyLimitedGeneralizationVaried2018],
-sports training  [@greenPracticeVariabilityTransfer1995; @greenPracticeVariabilityTransfer1995a @northEffectConsistentVaried2019], and training
+sports training  [@greenPracticeVariabilityTransfer1995a @northEffectConsistentVaried2019], and training
 on a complex video game [@seowTransferEffectsVaried2019].
 
 Training variation has received a particularly large amount of attention
@@ -1486,7 +1480,6 @@ The authors also introduced two new function-learning models. The Associative Le
 ```{r}
 #| label: fig-delosh-extrap
 #| fig-cap: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples. 
-#| echo: false
 #| fig-width: 10
 source(here::here("Functions","deLosh_data.R"))
 
@@ -1602,8 +1595,7 @@ We compared varied and constant performance across two measures, deviation and d
 #|   - "Full datasets"
 #|   - "Intersection of samples with all labels available"
 #| layout-ncol: 1
-#| include: true
-#| echo: false
+
 
 result <- test_summary_table(test, "dist","Deviation", mfun = list(mean = mean, median = median, sd = sd))
 
@@ -1643,7 +1635,6 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 ```{r}
 #| label: fig-e1-test-dev
 #| fig-cap: E1. Deviations from target band during testing without feedback stage. 
-#| include: true
 test |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
     stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
     stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
@@ -1657,8 +1648,6 @@ test |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
 #| label: tbl-e1-bmm-dist
 #| tbl-cap: "Experiment 1. Bayesian Mixed Model predicting absolute deviation as a function of condition (Constant vs. Varied) and Velocity Band"
 #| tbl-subcap: ["Constant Testing1 - Deviation", "Varied Testing - Deviation"]
-#| include: true
-#| echo: false
 modelName <- "e1_testDistBand_RF_5K"
 e1_distBMM <- brm(dist ~ condit * bandInt + (1 + bandInt|id),
                       data=test,file=paste0(here::here("data/model_cache",modelName)),
@@ -1701,7 +1690,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 #| fig-cap: E1 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band. 
 #| fig-width: 11
 #| fig-height: 9
-#| include: true
+
 test %>% group_by(id,vb,condit) |> plot_distByCondit()
 
 ```
@@ -1709,7 +1698,6 @@ test %>% group_by(id,vb,condit) |> plot_distByCondit()
 ```{r}
 #| label: tbl-e1-test-nf-vx
 #| tbl-cap: "Testing vx - Empirical Summary"
-#| include: true
 #| tbl-subcap: ["Constant", "Varied"]
 
 result <- test_summary_table(test, "vx","X Velocity", mfun = list(mean = mean, median = median, sd = sd))
@@ -1723,7 +1711,6 @@ result$varied |> kable(booktabs = TRUE)
 #| label: tbl-e1-bmm-vx
 #| tbl-cap: "Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
 #| tbl-subcap: ["Model fit to all 6 bands", "Model fit to 3 extrapolation bands"]
-#| include: true
 e1_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
                         data=test,file=paste0(here::here("data/model_cache", "e1_testVxBand_RF_5k")),
                         iter=5000,chains=4,silent=0,
@@ -1861,7 +1848,7 @@ indvDraws |> indv_model_plot(indvSlopes, testAvg,SlopeInt, rank_variable=Slope,n
 
 # Experiment 2
 
-```{r setup2b, include=FALSE}
+```{r setup2b}
 testE2 <- readRDS(here::here("data/e2_08-21-23.rds")) |> filter(expMode2 == "Test") 
 e2Sbjs <- testE2 |> group_by(id,condit) |> summarise(n=n())
 testE2Avg <- testE2 %>% group_by(id, condit, vb, bandInt,bandType,tOrder) %>%
@@ -2058,7 +2045,7 @@ e2_vxBMM |> emmeans( ~condit + bandInt,
 
 # Experiment 3
 
-```{r setup3b, include=FALSE}
+```{r setup3b}
 testE3 <- readRDS(here::here("data/e3_08-21-23.rds")) |> filter(expMode2 == "Test") 
 e3Sbjs <- testE3 |> group_by(id,condit) |> summarise(n=n())
 testE3Avg <- testE3 %>% group_by(id, condit, vb, bandInt,bandType,tOrder) %>%
@@ -2257,7 +2244,7 @@ Following the procedure used by @mcdanielPredictingTransferPerformance2009, we w
 
 {{< pagebreak >}}
 
-::: {.content-visible when-format="html"}
+::: {.content-visible unless-format="pdf"}
 # References
 
 ::: {#refs}
