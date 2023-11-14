@@ -55,3 +55,7 @@ stargazer
 data.table
 cowplot
 magick
+latex2exp
+flextable
+igraph
+ggraph

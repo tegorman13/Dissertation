@@ -8,8 +8,8 @@ project:
 execute: 
   warning: false
   #eval: true
- # include: true
-  #echo: false
+  include: true
+  echo: false
 
 format:
   docx:
@@ -35,8 +35,6 @@ format:
       opts_chunk:
         dev: "ragg_png"
         dpi: 300
-
-
   pdf:
     cite-method: citeproc
     output-file: "TG_Full_Dissertation.pdf"
@@ -69,6 +67,13 @@ format:
         \floatplacement{table}{H}
         \usepackage{setspace}
         \pagenumbering{arabic}
+  hugo:
+    html-math-method: mathjax
+    output-file: Dissertation-hugo.md
+    fig-format: jpeg
+    echo: true
+    cite-method: citeproc
+
 
     knitr:
       opts_chunk:
