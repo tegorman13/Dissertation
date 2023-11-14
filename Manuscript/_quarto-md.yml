@@ -7,17 +7,17 @@ project:
 
 
 format:
-  # gfm:
-  #   output-file: dissertation-gfm.md
-  #   fig-format: jpeg
-  #   html-math-method: katex
-  #   cite-method: citeproc
-  # hugo:
-  #   html-math-method: mathjax
-  #   output-file: dissertation-hugo.md
-  #   fig-format: jpeg
-  #   echo: true
-  #   cite-method: citeproc
+  gfm:
+    output-file: dissertation-gfm.md
+    fig-format: jpeg
+    html-math-method: katex
+    cite-method: citeproc
+  hugo:
+    html-math-method: mathjax
+    output-file: dissertation-hugo.md
+    fig-format: jpeg
+    echo: true
+    cite-method: citeproc
   docusaurus-md:
     output-file: dissertation-docu.md
     cite-method: citeproc
@@ -31,6 +31,10 @@ format:
 # - inline images still displayed
 
 
+# echo false if you still want tables, but don't want code. 
+# include false if you want no code or tables. 
+
+# Table and figure captions are lost in all cases. 
 
 # GFM - 65K tokens with code, 40K with include:false;  (12.7K reference tokens)
 # - citations are formated - but in all caps - creating issues with line endings
@@ -44,7 +48,8 @@ format:
 # - images - displayed in standard markdown
 # - equations - all work (with katex) apart for | issue in table
 # - skinnier columns
-
+# - well formated in all respects when viewed on github (except table equation issue)
+# https://github.com/tegorman13/Dissertation/blob/main/Manuscript/output/md/dissertation-gfm.md
 
 # Hugo - 65K with code, 47K no code,  (9.3K reference tokens)
 # formats latex components more similiar to my pdf system
@@ -60,6 +65,8 @@ format:
 # - equations - all work apart for | issue in table
 # - wider column than others
 # - digraph in svg - lots of tokens
+# - well formated in all respects when viewed on github (except table equation issue)
+# https://github.com/tegorman13/Dissertation/blob/main/Manuscript/output/md/dissertation-gfm.md
 
 # Docu - 54K with code, 36K no code
 # - formats latex components more similiar to my pdf system
@@ -72,3 +79,4 @@ format:
 # - tables look nice - same as hugo
 # - equations same as others
 # - skinnier column
+# https://github.com/tegorman13/Dissertation/blob/main/Manuscript/output/md/dissertation-docu.md
