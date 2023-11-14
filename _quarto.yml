@@ -14,6 +14,7 @@ project:
 
   resources: 
     - "Manuscript/output/"
+    - "Manuscript/Assets"
 
 
 exclude: ["*.rds","*.tex","docs*","404.html","_old*","out.bib",
