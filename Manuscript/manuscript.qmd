@@ -3,9 +3,9 @@ code-repo: "Access the code, data, and analysis at <https://github.com/tegorman1
 toc: false
 toc-depth: 3
 toc-location: body
-# execute: 
-#   warning: false
-#   include: true
+execute: 
+  warning: false
+  include: true
 ---
 
 ::: {.content-visible when-format="html"}
