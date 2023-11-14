@@ -5,6 +5,7 @@ execute:
   warning: false
   eval: true
   include: true
+  freeze: auto
 
 
 bibliography: [../Assets/Bib/Dissertation.bib]
