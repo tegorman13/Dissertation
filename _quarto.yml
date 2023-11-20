@@ -35,6 +35,7 @@ website:
     border: false
     collapse-level: 2
     pinned: false
+    target: _blank
     tools:
     - icon: github
       href: https://github.com/tegorman13/Dissertation
@@ -57,6 +58,8 @@ format:
     code-link: false
     html-math-method: mathjax
     citations-hover: false
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.tegorman13.github.io/Dissertation\/custom'
 
 
 bibliography: [Assets/Bib/Dissertation.bib]
