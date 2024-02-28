@@ -14,3 +14,15 @@ format:
 ---
 
 
+
+
+
+## Project 1
+
+
+
+## Project 2 
+
+[Link to HTW project page](https://tegorman13.github.io/htw/){target="_blank"} \
+
+[Working Draft of HTW Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
