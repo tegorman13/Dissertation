@@ -121,9 +121,7 @@ plot_grid(ip1,ip2,ncol=2,rel_heights=c(1))
 
 ```
 
-In addition to largely overlooking the potential for non-linear generalization to confound interpretations of training manipulations, the visuomotor skill learning literature also rarely considers alternatives to schema representations [@chamberlinMemoryRepresentationMotor1992]. Although schema-theory remains influential within certain literatures,
-instance or exemplar-based models have accounted for human behavior
-across myriad domains [@jamiesonInstanceTheoryDomaingeneral2022; @loganInstanceTheoryAttention2002a]. As mentioned above, instance based accounts have been shown to perform well on a variety of different tasks with motoric components [@crumpEpisodicContributionsSequential2010;@gandolfoMotorLearningField1996a;  @meighWhatMemoryRepresentation2018; @rosenbaumPlanningReachesEvaluating1995; @vandamMappingShapeVisuomotor2015]. However, such accounts have received little attention within the subdomain of visuomotor skill learning focused on the benefits of varied training.
+In addition to largely overlooking the potential for non-linear generalization to confound interpretations of training manipulations, the visuomotor skill learning literature also rarely considers alternatives to schema representations [@chamberlinMemoryRepresentationMotor1992]. Although schema-theory remains influential within certain literatures, instance or exemplar-based models have accounted for human behavior across myriad domains [@jamiesonInstanceTheoryDomaingeneral2022; @loganInstanceTheoryAttention2002a]. As mentioned above, instance based accounts have been shown to perform well on a variety of different tasks with motoric components [@crumpEpisodicContributionsSequential2010;@gandolfoMotorLearningField1996a;  @meighWhatMemoryRepresentation2018; @rosenbaumPlanningReachesEvaluating1995; @vandamMappingShapeVisuomotor2015]. However, such accounts have received little attention within the subdomain of visuomotor skill learning focused on the benefits of varied training.
 
 The present work examines whether the commonly observed benefits of varied training can be accounted for by between-group differences in similarity between training and testing throws. We first attempt to replicate previous work finding an advantage of varied training over constant training in a projectile launching task. We then examine the extent to which this advantage can be explained by an instance-based similarity model.
 
@@ -1097,24 +1095,10 @@ certain aspects of learning and generalization may operate under common principl
 
 Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as
 points in a multidimensional space of all of the attributes that define a category item (e.g. size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity
-applied to the ball on each throw. An advantage of many motor learning
-tasks is the relative ease with which task execution variables can be
-directly measured (e.g. movement force, velocity, angle, posture) in
-addition to the decision and response time measures that typically
-exhaust the data generated from more classical cognitive tasks. Of
-course, whether learners actually are storing each individual motor
-instance is a fundamental question beyond the scope of the current work
--- though as described in the introduction there is some evidence in
-support of this idea [@chamberlinNoteSchemaExemplar1992; @crumpEpisodicContributionsSequential2010; @hommelEventFilesEvidence1998; @meighWhatMemoryRepresentation2018; @poldrackRelationshipSkillLearning1999]. A particularly
-noteworthy instance-based model of sensory-motor behavior is the
-Knowledge II model of Rosenbaum and colleagues [@cohenWhereGraspsAre2004; @rosenbaumPlanningReachesEvaluating1995]. Knowledge II explicitly defines instances as
-postures (joint combinations), and is thus far more detailed than IGAS
-in regards to the contents of stored instances. Knowledge II also
-differs from IGAS in that learning is accounted for by both the
-retrieval of stored postures, and the generation of novel postures via
-the modification of retrieved postures. A promising avenue for future
-research would be to combine the adaptive similarity mechanism of IGAS
-with the novel instance generation mechanisms of Knowledge II.
+applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g. movement force, velocity, angle, posture) in addition to the decision and response time measures that typically
+exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor
+instance is a fundamental question beyond the scope of the current work -- though as described in the introduction there is some evidence in
+support of this idea [@chamberlinNoteSchemaExemplar1992; @crumpEpisodicContributionsSequential2010; @hommelEventFilesEvidence1998; @meighWhatMemoryRepresentation2018; @poldrackRelationshipSkillLearning1999]. A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues [@cohenWhereGraspsAre2004; @rosenbaumPlanningReachesEvaluating1995]. Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.
 
 Our findings also have some conceptual overlap with an earlier study on
 the effects of varied training in a coincident timing task [@catalanoDistantTransferCoincident1984a].  In this task, participants observe a series of lamps
