@@ -7,6 +7,13 @@ execute:
 ---
 
 ```{r, include=FALSE, echo=FALSE}
+
+
+packages <- c('ez','plyr','dplyr','sciplot','ggplot2','magrittr','car','psych','tidyr',
+              'Matrix','cluster','emdbook','hexbin','caret','glmnet',
+              'afex','purrr','broom','ggpubr','rstatix','stargazer','data.table','cowplot','magick',
+              'stringr')
+invisible(lapply(packages, require, character.only = TRUE))
 source(here::here('Functions/IGAS_ProcessFunctions.R'))
 library(patchwork)
 #rm(list=ls())
@@ -36,17 +43,17 @@ transfer <- filter(e2, stage=="Transfer") %>% droplevels() %>% select(-trainHalf
 transfer <- transfer %>% group_by(positionX) %>% mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
   group_by(sbjCode,positionX) %>% mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%ungroup()
 transfer <- transfer %>% group_by(sbjCode,positionX) %>% mutate(ind=1,testPosIndex=cumsum(ind),posN=max(testPosIndex)) %>%
-  select(-ind) %>% mutate(testHalf = case_when(testPosIndex<15 ~"1st Half",testPosIndex>=15 ~"2nd Half")) %>% convert_as_factor(testHalf)
+  select(-ind) %>% mutate(testHalf = case_when(testPosIndex<15 ~"1st Half",testPosIndex>=15 ~"2nd Half")) %>% rstatix::convert_as_factor(testHalf)
 variedTest <- transfer %>% filter(condit==7) %>% mutate(extrapolate=ifelse(positionX=="900" | positionX=="400","extrapolation","interpolation")) 
 constantTest <- transfer %>% filter(condit!=7) %>% mutate(extrapolate=ifelse(distFromTrain==0,"interpolation","extrapolation"))
 transfer <- rbind(variedTest,constantTest)
-transfer<- transfer %>% mutate(novel=ifelse(distFromTrain3==0,"trainedLocation","novelLocation"))%>% convert_as_factor(novel,extrapolate)
+transfer<- transfer %>% mutate(novel=ifelse(distFromTrain3==0,"trainedLocation","novelLocation")) %>% rstatix::convert_as_factor(novel,extrapolate)
 transfer <- transfer %>% relocate(sbjCode,condit2,Group,conditType2,stage,trial,novel,extrapolate,positionX,
                                   AbsDistFromCenter,globalAvg,globalSd,scaledDev,distFromTrain3) %>% ungroup()
 
 
 transfer <- transfer %>% group_by(sbjCode,positionX) %>% mutate(halfInd=floor(max(testPosIndex)/2)) %>%
-    mutate(testHalfSbj = case_when(testPosIndex<halfInd ~"1st-Half",testPosIndex>=halfInd ~"2nd-Half")) %>% convert_as_factor(testHalfSbj)
+    mutate(testHalfSbj = case_when(testPosIndex<halfInd ~"1st-Half",testPosIndex>=halfInd ~"2nd-Half")) %>% rstatix::convert_as_factor(testHalfSbj)
 
 
 ```

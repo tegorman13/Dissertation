@@ -1,17 +1,17 @@
-packages <- c('ez','plyr','dplyr','sciplot','ggplot2','magrittr','car','psych','tidyr',
-              'Matrix','cluster','emdbook','hexbin','caret','glmnet',
-              'afex','purrr','broom','ggpubr','rstatix','stargazer','data.table','cowplot','magick',
-              'stringr')
-have = packages %in% rownames(installed.packages())
-if ( any(!have) ) {print("installing missing packages"); install.packages(packages[!have]) }
-invisible(lapply(packages, require, character.only = TRUE))
-#install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
-select <- dplyr::select
-mutate <- dplyr::mutate
-filter <- dplyr::filter
-rename <- dplyr::rename
-summarise <- dplyr::summarise
-summarize <- dplyr::summarise
+# packages <- c('ez','plyr','dplyr','sciplot','ggplot2','magrittr','car','psych','tidyr',
+#               'Matrix','cluster','emdbook','hexbin','caret','glmnet',
+#               'afex','purrr','broom','ggpubr','rstatix','stargazer','data.table','cowplot','magick',
+#               'stringr')
+# have = packages %in% rownames(installed.packages())
+# if ( any(!have) ) {print("installing missing packages"); install.packages(packages[!have]) }
+# invisible(lapply(packages, require, character.only = TRUE))
+# #install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
+# select <- dplyr::select
+# mutate <- dplyr::mutate
+# filter <- dplyr::filter
+# rename <- dplyr::rename
+# summarise <- dplyr::summarise
+# summarize <- dplyr::summarise
 #rm(list=ls())
 dodge <- position_dodge(width = 0.9)
 
@@ -19,20 +19,20 @@ dodge <- position_dodge(width = 0.9)
 
 
 
-startCluster <- function(progressVar=100,ncores=NULL)
-{
-  if(is.null(ncores))
-  {
-  ncores=detectCores(all.tests = FALSE, logical = TRUE)
-  }
-  cl       <<- makeSOCKcluster(ncores)
-  pb       <<- txtProgressBar(max = progressVar, style = 3)
-  progress <- function(n){setTxtProgressBar(pb, n)}
-  sopts     <<- list(progress = progress)
-  registerDoSNOW(cl)
+# startCluster <- function(progressVar=100,ncores=NULL)
+# {
+#   if(is.null(ncores))
+#   {
+#   ncores=detectCores(all.tests = FALSE, logical = TRUE)
+#   }
+#   cl       <<- makeSOCKcluster(ncores)
+#   pb       <<- txtProgressBar(max = progressVar, style = 3)
+#   progress <- function(n){setTxtProgressBar(pb, n)}
+#   sopts     <<- list(progress = progress)
+#   registerDoSNOW(cl)
   
-print(paste0("started cluster with ",ncores," cores"))
-}
+# print(paste0("started cluster with ",ncores," cores"))
+# }
 
 
 

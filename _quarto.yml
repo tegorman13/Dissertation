@@ -42,6 +42,7 @@ website:
       - index.qmd
       - text: "---"
       - paper.qmd
+      - Sections/full.qmd
       - text: "---"
       - Sections/Introduction.qmd
       - Sections/IGAS.qmd

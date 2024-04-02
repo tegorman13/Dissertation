@@ -52,11 +52,12 @@ In the domain of visuomotor learning, @vandamMappingShapeVisuomotor2015 employed
 #| fig-cap: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples. 
 #| echo: false
 #| fig-width: 10
+#| cache: false 
 pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
   brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
   stringr, here,conflicted, patchwork, knitr)
 #options(brms.backend="cmdstanr",mc.cores=4)
-options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
+options(digits=2, scipen=999, dplyr.summarise.inform=FALSE, kableExtra.auto_format=FALSE)
 walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
 
 walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
@@ -66,7 +67,6 @@ source(here::here("Functions","Display_Functions.R"))
 extrapLines <- list(geom_vline(xintercept=30,color="black",alpha=.4,linetype="dashed"),
                     geom_vline(xintercept=70,color="black",alpha=.4,linetype="dashed"))
   
-
 linear_function <- function(x) 2.2 * x + 30
 exponential_function <- function(x) 200 * (1 - exp(-x/25))
 quadratic_function <- function(x) 210 - (x - 50)^2 / 12
@@ -1558,6 +1558,7 @@ bct_table
 #| fig-cap: "Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order)."
 #| fig-height: 6
 #| fig-width: 9
+
 
 #wrap_plots(plot(conditional_effects(e1_ee_brm_ae),points=FALSE,plot=FALSE))
 p1 <- plot(conditional_effects(e2_ee_brm_ae, effects="condit"),points=FALSE, plot=FALSE)$condit + 
