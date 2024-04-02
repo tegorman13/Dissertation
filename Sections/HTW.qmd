@@ -4,6 +4,7 @@ date: last-modified
 page-layout: full
 code-fold: true
 code-tools: true
+cache: true
 toc: true
 toc-location: body
 toc-title: Contents
@@ -18,7 +19,6 @@ _______________________________________________________________________________
 [Working Draft of HTW Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
 
 _______________________________________________________________________________
-
 
 # Introduction
 
@@ -52,7 +52,14 @@ In the domain of visuomotor learning, @vandamMappingShapeVisuomotor2015 employed
 #| fig-cap: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples. 
 #| echo: false
 #| fig-width: 10
-pacman::p_load(dplyr,ggplot2,patchwork) 
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  stringr, here,conflicted, patchwork, knitr)
+#options(brms.backend="cmdstanr",mc.cores=4)
+options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
+walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
+
+walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
 source(here::here("Functions","deLosh_data.R"))
 source(here::here("Functions","Display_Functions.R"))
 
@@ -153,13 +160,13 @@ digraph {
 
 ```{r}
 
-pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
-  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
-  stringr, here,conflicted, patchwork, knitr)
-#options(brms.backend="cmdstanr",mc.cores=4)
-options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
-walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
-walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
+# pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+#   brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+#   stringr, here,conflicted, patchwork, knitr)
+# #options(brms.backend="cmdstanr",mc.cores=4)
+# options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
+# walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
+# walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
 e1 <- readRDS(here("data/e1_08-21-23.rds")) 
 e1Sbjs <- e1 |> group_by(id,condit) |> summarise(n=n())
 testE1 <- e1 |> filter(expMode2 == "Test")
@@ -1045,7 +1052,7 @@ p3
 
 
 ```{r}
-#| cache: false
+####| cache: false
 pacman::p_load(dplyr,purrr,tidyr,ggplot2, data.table, here, patchwork, conflicted, 
                stringr,future,furrr, knitr, reactable,ggstance, htmltools,
                ggdist,ggh4x,brms,tidybayes,emmeans,bayestestR, gt)
