@@ -7,15 +7,35 @@
 #         dplyr.summarise.inform = FALSE,
 #         knitr.kable.NA = "")
 
-
-
-get_coef_details <- function(model, term_name) {
-  broom.mixed::tidy(model) |>
-    filter(term == term_name) |> 
-    select(estimate, conf.low, conf.high) |> 
-    mutate(across(where(is.numeric), \(x) round(x, 2)))
+round_tibble <- function(tbl, rn) {
+  tbl %>% 
+    mutate(across(where(is.numeric), ~round(., rn)))
 }
 
+strip_list_notation <- function(str) {
+  # Remove 'list(' at the beginning
+  str <- gsub("^list\\(", "", str)
+  # Remove ')' at the end
+  str <- gsub("\\)$", "", str)
+  return(str)
+}
+
+get_coef_details <- function(model, term_name) {
+  term_details <- broom.mixed::tidy(model) %>%
+    filter(term == term_name) %>%
+    select(estimate, conf.low, conf.high) %>%
+    mutate(across(where(is.numeric), ~round(.x, 2)))
+  
+  pd_results <- bayestestR::p_direction(model, effects = "fixed", parameters = term_name)
+  # Directly extract the pd value for the specified term
+  pd_value <- ifelse(!is.null(pd_results$pd), pd_results$pd[1], NA_real_)
+  
+  term_details$pd <- paste0(round(pd_value * 100, 2),"%")  # Ensure it's a percentage and rounded
+  return(term_details)
+}
+
+# bayestestR::p_direction(e1_vxBMM)[, "conditVaried"]
+# bayestestR::p_direction(e1_vxBMM, parameter="conditVaried", effects = "fixed")
 
 
 condEffects <- function(m){
@@ -44,8 +64,6 @@ custom_scale <- function(x) {
   }
 }
 
-
-
 # ks2 = model_parameters(e1_testDistRF2_0,effects="random",keep="^r_id*") 
 # ks2 <- ks2 %>%
 #   mutate(
@@ -65,13 +83,6 @@ ks2 <- ks2 |>
   left_join(select(model$data,id,condit) |> distinct(),by=join_by("id"),keep=FALSE) |>
   select(-Group) |> relocate(id,condit,vb)
 }
-
-
-
-
-
-
-
 
 
 
