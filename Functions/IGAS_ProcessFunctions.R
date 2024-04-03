@@ -1,17 +1,17 @@
-# packages <- c('ez','plyr','dplyr','sciplot','ggplot2','magrittr','car','psych','tidyr',
-#               'Matrix','cluster','emdbook','hexbin','caret','glmnet',
-#               'afex','purrr','broom','ggpubr','rstatix','stargazer','data.table','cowplot','magick',
-#               'stringr')
-# have = packages %in% rownames(installed.packages())
-# if ( any(!have) ) {print("installing missing packages"); install.packages(packages[!have]) }
-# invisible(lapply(packages, require, character.only = TRUE))
-# #install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
-# select <- dplyr::select
-# mutate <- dplyr::mutate
-# filter <- dplyr::filter
-# rename <- dplyr::rename
-# summarise <- dplyr::summarise
-# summarize <- dplyr::summarise
+packages <- c('ez','plyr','dplyr','sciplot','ggplot2','magrittr','car','psych','tidyr',
+              'Matrix','cluster','emdbook','hexbin','caret','glmnet',
+              'afex','purrr','broom','ggpubr','rstatix','stargazer','data.table','cowplot','magick',
+              'stringr')
+have = packages %in% rownames(installed.packages())
+if ( any(!have) ) {print("installing missing packages"); install.packages(packages[!have]) }
+invisible(lapply(packages, require, character.only = TRUE))
+#install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
+select <- dplyr::select
+mutate <- dplyr::mutate
+filter <- dplyr::filter
+rename <- dplyr::rename
+summarise <- dplyr::summarise
+summarize <- dplyr::summarise
 #rm(list=ls())
 dodge <- position_dodge(width = 0.9)
 
