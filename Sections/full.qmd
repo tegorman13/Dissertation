@@ -15,7 +15,7 @@ format:
   html: default
   hugo-md:
     echo: false
-    output: asis
+    output: false
     html-math-method: mathjax
     output-file: diss_full_hugo.md
   gfm:
@@ -23,7 +23,7 @@ format:
     output-file: diss_full_gfm.md
   hikmah-manuscript-pdf:
     echo: false
-    output-file: "hikmah-e1.pdf"
+    output-file: "tg_full_disser.pdf"
     mainfont: "Linux Libertine O"
     mainfontoptions:
       - "Numbers=Proportional"

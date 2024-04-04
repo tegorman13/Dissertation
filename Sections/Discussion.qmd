@@ -3,20 +3,192 @@ title: General Discussion
 date: today
 ---
 
-## Comparison to Project 1
+Optional: - emphasize that both tasks involve extrapolation - it's just emphasized more in Project 2, and project 2 is designed to more closely mirror tasks used in the function learning literature.
+
+## Project comparison
+
+To facilitate ease of comparison between the two projects and their respective tasks, we'll now refer to project 1 as Hit The Target (HTT) and project 2 as Hit The Wall (HTW).
+
+Task Structure - hitting target vs. hitting wall with correct force
+
+Feedback - relation between feedback and correction - usefulness of feedback was part of what makes HTW different from HTT. And in general in visuomotor learning tasks, feedback usually is not quite as precise as it is in HTW. - consistency of HTW finding across continuous vs. ordinal makes it seem like this wasn't the sole determinative factor.
+
+Form of Variation - varied vs. constant in both Projects. - varied group in HTT trained on 2 positions, whereas the varied group in HTW trained on 3 velocity bands. - In HTT - distinct positions, in HTW - distinct numbers.
 
 ### Differences between the tasks
 
-There are a number of differences between Project 1's Hit The Target (HTT), and Project 2's Hit The Wall (HTW) tasks. 
+There are a number of differences between Project 1's Hit The Target (HTT), and Project 2's Hit The Wall (HTW) tasks.
 
-- Task Space Complexity: In HTW, the task space is also almost perfectly smooth, at least for the continuous feedback subjects, if they throw 100 units too hard, they'll be told that they were 100 units too hard. Whereas in HTT,  it was possible to produce xy velocity combinations that were technically closer to the empirical solution space than other throws, but which resulted in worse feedback due to striking the barrier.
+-   Task Space Complexity: In HTW, the task space is also almost perfectly smooth, at least for the continuous feedback subjects, if they throw 100 units too hard, they'll be told that they were 100 units too hard. Whereas in HTT,  it was possible to produce xy velocity combinations that were technically closer to the empirical solution space than other throws, but which resulted in worse feedback due to striking the barrier.
 
-- Perceptual Distinctiveness: HTT offers perceptually distinct varied conditions that directly relate to the task's demands, which may increase the sallience between training positions encounted by the varied group. In contrast, HTW's varied conditions differ only in the numerical values displayed, lacking the same level of perceptual differentiation. Conversely in HTW, the only difference between conditions for the varied group are the numbers displayed at the top of the screen which indicate the current target band(e.g. 800-1000, or 1000-1200)
+-   Perceptual Distinctiveness: HTT offers perceptually distinct varied conditions that directly relate to the task's demands, which may increase the sallience between training positions encounted by the varied group. In contrast, HTW's varied conditions differ only in the numerical values displayed, lacking the same level of perceptual differentiation. Conversely in HTW, the only difference between conditions for the varied group are the numbers displayed at the top of the screen which indicate the current target band(e.g. 800-1000, or 1000-1200)
 
-- In HTW, our primary testing stage of interest has no feedback, whereas in HTT testing always included feedback (the intermittent testing in HTT expt 1 being the only exception). Of course, we do collect testing with feedback data at the end of HTW, but we haven't focused on that data at all in our modelling work thus far. It's also interesting to recall that the gap between varied and constant in HTW does seem to close substantially in the testing-with-feedback stage. The difference between no-feedback and feedback testing might be relevant if the benefits of variation have anything to do with improving subsequent learning (as opposed to subsequent immediate performance), OR if the benefits of constant training rely on having the most useful anchor, having the most useful anchor might be a lot less helpful if you're getting feedback from novel positions and can thus immediately begin to form position-specific anchors for the novelties, rather than relying on a training anchor. 
+-   In HTW, our primary testing stage of interest has no feedback, whereas in HTT testing always included feedback (the intermittent testing in HTT expt 1 being the only exception). Of course, we do collect testing with feedback data at the end of HTW, but we haven't focused on that data at all in our modelling work thus far. It's also interesting to recall that the gap between varied and constant in HTW does seem to close substantially in the testing-with-feedback stage. The difference between no-feedback and feedback testing might be relevant if the benefits of variation have anything to do with improving subsequent learning (as opposed to subsequent immediate performance), OR if the benefits of constant training rely on having the most useful anchor, having the most useful anchor might be a lot less helpful if you're getting feedback from novel positions and can thus immediately begin to form position-specific anchors for the novelties, rather than relying on a training anchor. 
 
-- HTW and HTT both have a similar amount of training trials (~200), and thus the constant groups acquire a similar amount of experience with their single position/velocity in both experiments. However, the varied conditions in both HTT experiments train on 2 positions, whereas the varied group in HTW trains on 3 velocity bands. This means that in HTT the varied group gets half as much experience on any one position as the constant group, and in HTW they only get 1/3 as much experience in any one position. There are likely myriad ways in which this might impact the success of the varied group regardless of how you think the benefits of variation might be occurring, e.g. maybe they also need to develop a coherent anchor, maybe they need more experience in order to extract a function, or more experience in order to properly learn to tune their c parameter. 
+-   HTW and HTT both have a similar amount of training trials (\~200), and thus the constant groups acquire a similar amount of experience with their single position/velocity in both experiments. However, the varied conditions in both HTT experiments train on 2 positions, whereas the varied group in HTW trains on 3 velocity bands. This means that in HTT the varied group gets half as much experience on any one position as the constant group, and in HTW they only get 1/3 as much experience in any one position. There are likely myriad ways in which this might impact the success of the varied group regardless of how you think the benefits of variation might be occurring, e.g. maybe they also need to develop a coherent anchor, maybe they need more experience in order to extract a function, or more experience in order to properly learn to tune their c parameter. 
+
+------------------------------------------------------------------------
 
 
 
 
+
+\ \ \ \ \
+
+
+## General Discussion
+
+To facilitate ease of comparison between the two projects and their respective tasks, we'll now refer to project 1 as Hit The Target (HTT) and project 2 as Hit The Wall (HTW). 
+
+
+### Empirical Results Summary
+
+Across two projects, we investigated the influence of training variability on learning and generalization in visuomotor tasks. In Project 1 (HTT), we consistently found that varied training led to superior performance relative to constant training, even when testing at positions that were identical to the constant group's training. In contrast, Project 2 (HTW) found the opposite pattern - the varied training groups exhibited poorer performance than the constant groups, both in terms of final training accuracy and the ability to accurately extrapolate to novel velocity bands during testing. This detrimental effect of variability was observed across three experiments, with the exception of the reverse order condition in Experiment 3, where the varied group was able to match the constant group's performance.
+
+
+### Differences between the two Projects
+
+Although the HTT and HTW tasks are similiar in requiring participants to learn how to correctly launch projectiles,  they nevertheless differ across numerous dimensions that may be relevant to the opposing patterns observed in the two projects (see @tbl-task-diff provides for a detailed comparison of the two tasks).
+
+In HTT, the salient perceptual elements of the task (i.e. the launching box, target and barrier) are subject to variation (i.e. different distances between the launching box and target), and the spatial layout of these perceptually variable elements are intrinsically linked to the task objective of striking the target. Conversely, the perceptual task elements in HTW are invariant across trials, and the task objective is specified by the target velocity value specified as a numeral at the top of the screen. If the benefits of training variation do arise from the formation and flexible retrieval of distinct memory traces, then the lack of perceptual salience between training instances in the HTW task may have limited any potential benefits of variability. Future work could investigate this possibility further employing a modified version of the HTW task wherein the correct velocity value is indicated by some perceptual feature of the task (e.g. the color of the wall, or size of the ball), rather than displaying the target velocity numerically. 
+
+The HTT and HTW tasks also differed in terms of general task complexity. The HTT task was designed to mimic projectile launching tasks commonly employed in visuomotor learning studies, and the parabolic trajectories necessary to strike the target in HTT were sensitive to both the x and y dimensions of the projectiles velocity (and to a lesser extent, the position within the launching box at which the ball was released). Conversely the HTW task was influenced to a greater extent by the tasks commonly utilized in the function learning literature, wherein the correct output respones are determined by a single input dimension. 
+
+
+::: {#tbl-task-diff}
+
+| Dimension                                       | HTT (Project 1)                                                                                                                               | HTW (Project 2)                                                                                                |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Task Description                                | Projectile launching to hit a target                                                                                                          | Projectile launching to hit wall at a specific velocity                                                        |
+| Task Complexity                                 | More complex parabolic trajectory, both x and y velocities relevant to outcome                                                                | Simpler 1D mapping of force to outcome. Only x velocity is relevant.                                           |
+| Task Space                                      | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.           | Simpler: smooth, linear mapping between velocity and feedback.                                                 |
+| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
+| Testing Feedback                                | Testing always included feedback                                                                                                              | Primary testing stage had no feedback.                                                                         |
+| Potential for Learning during Testing           | Limited potential for learning during testing due to feedback.                                                                                | Some potential for learning during no-feedback testing by observing ball trajectory.                           |
+| Position/Velocity Experience                    | Varied group gets half as much experience on any one position as the constant group.                                                          | Varied group gets 1/3 as much experience on any one velocity band as the constant group.                       |
+| Testing Structure                               | Random interleaving of trained/transfer testing distances.                                                                                    | Blocked structure, separately testing trained vs extrapolation testing bands.                                  |
+
+Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+\ \ \ \ \
+
+
+Rework the section on "Differences between the two Projects" include more speculation on how the perceptual distinctiveness of the task conditions may have memory or attentional consequences that relate to when training variation is useful. In particular discussing connections to ideas from instance based, or exemplar-based memory models of learning (e.g. works of Gordan Logan; Nosofsky; Crump, Hintzman, Estes etc.)
+
+
+
+
+
+
+## Tables
+
+**1h-mis**
+
+::: {#t1h}
+
+| Dimension                               | HTT (IGAS)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | HTW (ALM & EXAM)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Task Complexity                        | In HTT, both x and y velocity dimensions are relevant to the outcome, requiring a parabolic trajectory. The task space is more complex, with the possibility of producing xy velocity combinations that are technically closer to the empirical solution space but result in worse feedback due to striking the barrier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | In HTW, only the x velocity dimension is relevant to the outcome, with the trajectory not mattering. The task space is simpler and smoother, with feedback directly related to the force applied.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Dimensionality of Instance-Based Mechanisms | In HTT, the instance-based mechanisms might work well due to the task's multi-dimensional nature, making it easier to retain separate traces.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | In HTW, instance-based mechanisms might not work as well due to the task's simple, 1-dimensional nature, making it more difficult to retain separate traces.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Perceptual Distinctness of Conditions  | In HTT, the different varied conditions are more perceptually distinct and correspond directly to the task at hand (e.g., throwing from 500 vs. 800).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | In HTW, the difference between conditions for the varied group is only the number displayed at the top of the screen (e.g., 800-1000 or 1000-1200), which might be less salient.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Feedback During Testing                 | In HTT, testing always includes feedback, except for intermittent testing in Experiment 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | In HTW, the primary testing stage of interest has no feedback, with feedback testing occurring at the end but not focused on in the modeling work.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Number of Training Positions/Velocities | In HTT, the varied group trains on 2 positions, while the constant group trains on 1 position.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | In HTW, the varied group trains on 3 velocity bands, while the constant group trains on 1 velocity band.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Testing Trial Order                    | In HTT, testing trials are randomly ordered, with participants experiencing trials from their training position and the training position of the other groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | In HTW, no-feedback testing is split into 2 non-overlapping stages, with novel velocity bands encountered in a separate block from the testing of trained positions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Intermittent Testing Trials            | In HTT, intermittent testing trials are included in Experiment 1 with the ball trajectory fully masked.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | In HTW, there are more no-feedback intermittent testing trials.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Episodic Re-activation during Testing  | In HTT, episodic re-activation of training exemplars might occur more frequently due to the randomly ordered testing positions, which include trained positions. This could potentially benefit an episodic mechanism.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | In HTW, the varied subjects are always further away in time and number of trials from re-encountering one of their training locations/bands during testing, which might reduce the potential benefits of episodic re-activation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+
+
+
+:::
+
+
+\ \ \ 
+
+**2a**
+
+::: {#t2a}
+
+| Dimension | Project 1 (HTT) | Project 2 (HTW) |
+|-----------|-----------------|-----------------|
+| Task Type | Projectile launching to hit a target | Projectile launching to hit a wall at a specific velocity |
+| Input Dimensions | Two velocity components (x and y), but only x velocity relevant for hitting the target | One velocity component (x) relevant for hitting the wall |
+| Output Dimensions | Distance from the target | Velocity at which the ball hits the wall |
+| Feedback Type | Continuous feedback indicating distance from the target | Continuous feedback indicating deviation from target velocity band (Exp. 1 and 2); Ordinal feedback (too soft, too hard, or correct) (Exp. 3) |
+| Generalization Type | Generalization to novel locations | Extrapolation to novel velocity bands |
+| Computational Models | Instance-based Generalization with Adaptive Similarity (IGAS) | Associative Learning Model (ALM) and Extrapolation-Association Model (EXAM) |
+| Model Assumptions | Adaptive tuning of generalization function based on training variability | ALM: Similarity-based generalization; EXAM: Linear extrapolation mechanism |
+| Statistical Analysis | Frequentist null hypothesis testing | Bayesian hierarchical modeling |
+:::
+
+\
+**2b**
+
+::: {#t2b}
+
+| Dimension | HTT (Project 1) | HTW (Project 2) |
+|-----------|-----------------|-----------------|
+| Task Type | Visuomotor Skill Learning | Visuomotor Function Learning |
+| Dependent Variable | Accuracy (Distance from Target) | Accuracy (Distance from Target Band) |
+| Training Manipulation | Constant vs. Varied Throwing Locations | Constant vs. Varied Velocity Bands |
+| Testing | Included both trained and novel throwing locations | Included both trained and novel velocity bands |
+| Modeling Approach | Instance-Based Similarity Model (IGAS) | Associative Learning Model (ALM), Extrapolation-Association Model (EXAM) |
+| Model Fitting | Fit to all participants, allowed generalization parameter to vary between conditions | Fit to individual participants using Approximate Bayesian Computation |
+| Key Findings | Varied training led to superior performance, accounted for by adaptive generalization gradient | Varied training led to poorer performance and less band discrimination, better captured by EXAM than ALM |
+| Novelty | First study to apply an instance-based similarity model to explain benefits of varied training in visuomotor skill learning | First study to investigate effects of training variability in a visuomotor function learning task |
+
+:::
+
+
+
+### Outline for "Empirical Results and Modeling Summary" Section
+
+1. **Introduction**
+   - State the section's purpose: to concisely summarize empirical findings and modeling analyses from two projects, HTT and HTW, focusing on the influence of training variability.
+   - Emphasize the integration of empirical data with computational modeling to deepen understanding of learning mechanisms.
+
+2. **Project 1 (HTT) Summary**
+   - **Empirical Results:**
+     - Briefly summarize key findings from Experiments 1 and 2, focusing on training variability's impact on learning and transfer.
+   - **IGAS Model Analysis:**
+     - Describe the Instance-Based Generalization and Adaptation (IGAS) model's role in explaining the empirical results, highlighting how it quantifies the impact of training variability.
+
+3. **Project 2 (HTW) Summary**
+   - **Empirical Results:**
+     - Outline major findings from Experiments 1, 2, and 3, detailing how training variability influenced extrapolation abilities.
+   - **Modeling Results (ALM & EXAM):**
+     - Discuss the application of the Associative Learning Model (ALM) and EXemplar-based Associative Memory (EXAM) model, focusing on their effectiveness in capturing the observed empirical patterns.
+
+4. **Comparative Analysis and Modeling Insights**
+   - Draw connections between empirical findings and model predictions across both projects.
+   - Discuss how modeling provides insights into the cognitive processes underpinning learning and generalization effects observed empirically.
+
+5. **Conclusions**
+   - Highlight the synthesis of empirical and modeling approaches in advancing understanding of training variability's impact.
+   - Suggest directions for future research, incorporating both experimental and computational perspectives.
+
+---
+
+### Empirical Results and Modeling Summary
+
+This summary encapsulates the empirical investigations and computational modeling efforts within the Hit The Target (HTT) and Hit The Wall (HTW) projects, emphasizing the nuanced role of training variability on visuomotor learning and generalization.
+
+**Project 1 (HTT)** explored spatial training variability's effects. **Empirical results** from Experiments 1 and 2 consistently showed that varied training enhances transfer performance, despite initial training challenges. The **Instance-Based Generalization and Adaptation (IGAS) model** was developed to interpret these results, offering a computational perspective that underscores the importance of specific training experiences in shaping generalization. By quantifying similarity across varied training instances, the IGAS model successfully explained why varied training could lead to superior transfer outcomes, validating the hypothesis that broader training experiences foster a more adaptable skill set.
+
+**Project 2 (HTW)** focused on velocity training variability and its influence on function learning tasks. **Empirical findings** across three experiments demonstrated varied training's differential effects on extrapolation capabilities, with notable variations depending on the specific conditions and feedback types. The **Associative Learning Model (ALM) and EXemplar-based Associative Memory (EXAM) models** were applied to these findings, elucidating the mechanisms behind the observed patterns. ALM highlighted the role of associative mechanisms in learning from varied velocity training, while EXAM offered insights into how exemplar-based memory processes might support extrapolation. Together, these models provided a comprehensive understanding of how varied training influences learning and extrapolation, showcasing the complexity of underlying cognitive processes.
+
+**Comparative analysis** between HTT and HTW, supported by the IGAS, ALM, and EXAM models, revealed the multifaceted nature of training variability's impact. While empirical data underscored the beneficial effects of variability on learning and generalization, the models offered a deeper understanding of the cognitive and memory-related mechanisms at play. Specifically, they suggested that the effectiveness of varied training might depend on the task's perceptual features and the cognitive operations required for task performance.
+
+**Conclusions** drawn from both the empirical and modeling efforts highlight the critical role of training variability in enhancing learning outcomes. The integration of computational models with empirical data not only validates the observed benefits of varied training but also advances our understanding of the cognitive foundations underlying these effects. Future research directions may include refining these models to capture additional nuances of learning processes and exploring their applicability to other learning domains. This holistic approach, combining empirical research with computational modeling, promises to yield rich insights into the complexities of learning and generalization.
