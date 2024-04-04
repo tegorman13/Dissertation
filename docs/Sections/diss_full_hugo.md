@@ -16,7 +16,7 @@ format:
   html: default
   hugo-md:
     echo: false
-    output: asis
+    output: false
     html-math-method: mathjax
     output-file: diss_full_hugo.md
   gfm:
@@ -24,7 +24,7 @@ format:
     output-file: diss_full_gfm.md
   hikmah-manuscript-pdf:
     echo: false
-    output-file: hikmah-e1.pdf
+    output-file: tg_full_disser.pdf
     mainfont: Linux Libertine O
     mainfontoptions:
       - Numbers=Proportional
@@ -35,10 +35,6 @@ editor:
     wrap: 72
 prefer-html: true
 ---
-
-
-<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 -   [Variability and Generalization](#variability-and-generalization)
@@ -220,12 +216,7 @@ Of course, the relationship between training variability and transfer is unlikel
 
 Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis (Newell, 2003; Van Rossum, 1990). Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g. projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g. more unique combinations of x and y velocities).
 Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out
-the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance (Ennis et al., 1988; Ghahramani et al., 1996; Logan, 1988; Nosofsky, 1992; Shepard, 1987; Thoroughman & Taylor, 2005 ), it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure 1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
-id="fig-toy-model1"
-alt="Figure 1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)" />
+the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance (Ennis et al., 1988; Ghahramani et al., 1996; Logan, 1988; Nosofsky, 1992; Shepard, 1987; Thoroughman & Taylor, 2005 ), it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. **?@fig-toy-model1** demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.
 
 In addition to largely overlooking the potential for non-linear generalization to confound interpretations of training manipulations, the visuomotor skill learning literature also rarely considers alternatives to schema representations (Chamberlin & Magill, 1992b). Although schema-theory remains influential within certain literatures, instance or exemplar-based models have accounted for human behavior across myriad domains (Jamieson et al., 2022; Logan, 2002). As mentioned above, instance based accounts have been shown to perform well on a variety of different tasks with motoric components (Crump & Logan, 2010; Gandolfo et al., 1996; Meigh et al., 2018; Rosenbaum et al., 1995; van Dam & Ernst, 2015). However, such accounts have received little attention within the subdomain of visuomotor skill learning focused on the benefits of varied training.
 
@@ -280,7 +271,7 @@ locations was scaled such that relative distances were preserved
 regardless of screen size. For the sake of brevity, subsequent mentions
 of this relative distance between stimuli, or the position where the
 ball landed in relation to the center of the target, will be referred to
-simply as distance. <a href="#fig-IGAS_Methods" class="quarto-xref">Figure 2</a> displays the layout of the task, as
+simply as distance. **?@fig-IGAS_Methods** displays the layout of the task, as
 it would appear to a participant at the start of a trial, with the ball
 appearing in the center of the orange square. Using a mouse or trackpad,
 participants click down on the ball to take control of the ball,
@@ -303,11 +294,6 @@ on how many units away the ball was from the exact center of the target.
 
 <a href="https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html" target="_blank">Link to abbrevaited example of
 task</a>.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Methods-1.png"
-id="fig-IGAS_Methods"
-alt="Figure 2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square" />
 
 ## Results
 
@@ -338,7 +324,7 @@ rstatix package (Kassambara, 2021)\*\*\*\*.
 
 ## Training Phase
 
-<a href="#fig-IGAS_Training1" class="quarto-xref">Figure 3</a> below shows aggregate training performance binned into three
+**?@fig-IGAS_Training1** below shows aggregate training performance binned into three
 stages representing the beginning, middle, and end of the training
 phase. Because the two conditions trained from target distances that
 were not equally difficult, it was not possible to directly compare
@@ -357,11 +343,6 @@ significant effect of condition F(1,71)=1.42, p=.24, $\eta^{2}_G$ = .02,
 and no significant interaction between condition and training stage,
 F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
-id="fig-IGAS_Training1"
-alt="Figure 3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
-
 ## Testing Phase
 
 In Experiment 1, a single constant-trained group was compared against a
@@ -376,20 +357,12 @@ p\<.001, η2G = .23. The effect of training condition was significant
 F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction
 between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
-id="fig-IGAS_Testing1"
-alt="Figure 4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
-
   
   
 
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 610      | 132.48(50.85)  | 104.2(38.92)   |
-| 760      | 207.26(89.19)  | 167.12(72.29)  |
-| 835      | 249.13(105.92) | 197.22(109.71) |
-| 910      | 289.36(122.48) | 212.86(113.93) |
+<div id="tbl-IGAS_Table1">
+Table 1
+</div>
 
 ## Discussion
 
@@ -508,16 +481,6 @@ significant effect of training stage F(2,172)=56.29, p\<.001,
 $\eta^{2}_G$ =.11, and no significant interaction between group and
 training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
-id="fig-e2train-1"
-alt="Figure 5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." />
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-2.png"
-id="fig-e2train-2"
-alt="Figure 6: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." />
-
 ### Testing Phase
 
 In Experiment 2, a single varied condition (trained from two positions,
@@ -533,32 +496,17 @@ us to make a simple comparison between training conditions (constant vs.
 varied). A type III between-subjects ANOVA was performed, yielding a
 significant effect of condition F(1,206)=4.33, p=.039, $\eta^{2}_G$
 =.02. Descriptive statistics for each condition are shown in table 2. In
-<a href="#fig-e2testa" class="quarto-xref">Figure 7</a> visualizes the consistent advantage of the varied condition
-over the constant groups across the testing positions. <a href="#fig-e2testa" class="quarto-xref">Figure 7</a> shows
+**?@fig-e2testa** visualizes the consistent advantage of the varied condition
+over the constant groups across the testing positions. **?@fig-e2testa** shows
 performance between the varied condition and the individual constant
 groups.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
-id="fig-e2testa"
-alt="Figure 7: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean." />
 
   
   
   
 
 <div id="tbl-e2table1">
-
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 400      | 100.59(46.3)   | 83.92(33.76)   |
-| 500      | 152.28(69.82)  | 134.38(61.38)  |
-| 625      | 211.21(90.95)  | 183.51(75.92)  |
-| 675      | 233.32(93.35)  | 206.32(94.64)  |
-| 800      | 283.24(102.85) | 242.65(89.73)  |
-| 900      | 343.51(114.33) | 289.62(110.07) |
-
-Table 1: Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
+Table 2: Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
 </div>
 
 Next, we compared the testing performance of constant and varied groups
@@ -571,17 +519,7 @@ condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 .02 .
 
 <div id="tbl-e2table2">
-
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 400      | 98.84(45.31)   | 83.92(33.76)   |
-| 500      | 152.12(69.94)  | NA             |
-| 625      | 212.91(92.76)  | 183.51(75.92)  |
-| 675      | 232.9(95.53)   | 206.32(94.64)  |
-| 800      | 285.91(102.81) | NA             |
-| 900      | 346.96(111.35) | 289.62(110.07) |
-
-Table 2: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
+Table 3: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
 </div>
 
 Finally, corresponding to the comparison of position 760 from experiment
@@ -589,31 +527,18 @@ Finally, corresponding to the comparison of position 760 from experiment
 constant group from only the positions that the constant groups trained.
 Such positions were novel to the varied group (thus this analysis
 omitted two constant groups that trained from positions 500 or 800 as
-those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure 8</a> displays
+those positions were not novel to the varied group). **?@fig-e2test1** displays
 the particular subset of comparisons utilized for this analysis. Again,
 we standardized performance within each position before performing the
 analyses on the aggregated data. In this case, the effect of condition
 did not reach statistical significance F(1,149)=3.14, p=.079,
 $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
-id="fig-e2test1"
-alt="Figure 8: A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." />
-
   
   
 
 <div id="tbl-e2tab3">
-
-| Position | Constant      | Varied         |
-|:---------|:--------------|:---------------|
-| 400      | 108.85(50.63) | 83.92(33.76)   |
-| 625      | 204.75(84.66) | 183.51(75.92)  |
-| 675      | 235.75(81.15) | 206.32(94.64)  |
-| 900      | 323.5(130.9)  | 289.62(110.07) |
-
-Table 3: Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.
+Table 4: Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.
 </div>
 
 ## Discussion
@@ -661,18 +586,13 @@ summed each of the trial-level similarities to produce a single
 similarity for each testing position score relating how the participant
 threw the ball during training and the solutions that would result in
 target hits from each of the six testing positions -- thus resulting in
-six separate similarity scores for each participant. <a href="#fig-taskSpace" class="quarto-xref">Figure 9</a>
+six separate similarity scores for each participant. **?@fig-taskSpace**
 visualizes the solution space for each location and illustrates how
 different combinations of x and y velocity result in successfully
 striking the target from different launching positions. As illustrated
-in <a href="#fig-taskSpace" class="quarto-xref">Figure 9</a>, the solution throws represent just a small fraction of the
+in **?@fig-taskSpace**, the solution throws represent just a small fraction of the
 entire space of velocity combinations used by participants throughout
 the experiment.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
-id="fig-taskSpace"
-alt="Figure 9: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment." />
 
 For each individual trial, the Euclidean distance (Equation 1) was
 computed between the velocity components (x and y) of that trial and the
@@ -867,7 +787,7 @@ Also of interest is whether the IGAS model can predict the pattern of
 results wherein the varied condition outperforms the constant condition
 even from the position on which the constant condition trained. Although
 our models were fit using all of the Experiment 2 training and testing
-data, not just that of the identity comparisons, in **?@fig-Toy_Model2** we
+data, not just that of the identity comparisons, in **?@fig-Toy-Model-dis** we
 demonstrate how a simplified version of the IGAS model could in
 principle produce such a pattern. In addition to the assumption of
 differential generalization between varied and constant conditions, our
@@ -876,11 +796,6 @@ the full IGAS model -- namely that even when being tested from a
 position identical to that which was trained, there are always some
 psychological contextual differences between training and testing
 throws, resulting in a non-zero dissimilarity.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model2-1.png"
-id="fig-Toy-Model2"
-alt="Figure 10: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}, whereas the constant group generalization is generated from 2\cdot e^{(c\cdot|x-600|)}. For the top right panel, the c constants in the original equations are different for the 2 conditions, with c=-.002 for the varied condition, and c=-.008 for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)} ." />
 
 As mentioned above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning (Aha & Goldstone, 1992; Briscoe & Feldman, 2011; Hahn et al., 2005; Lamberts, 1994; Op de Beeck et al., 2008), and sensorimotor adaptation (Marongelli & Thoroughman, 2013; Taylor & Ivry, 2013; Thoroughman & Taylor, 2005). Lamberts (1994) showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been
 trained on categories that differ in their relative variability (Hahn et al., 2005; Sakamoto et al., 2006). However, to the best of our knowledge, IGAS is the first instance-based similarity model that has been put forward to account for the effect of varied training in a visuomotor skill task. Although IGAS was inspired by work in the domain of category learning, its success in a distinct domain may not be surprising in light of the numerous prior observations that at least
@@ -989,7 +904,7 @@ The study of human function learning investigates how people learn relationships
 
 Carroll (1963) conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function. Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by Brehmer (1974),testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. Koh & Meyer (1991) employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh & Meyer developed the log-polynomial adaptive-regression model to account for their results.
 
-The first significant challenge to the rule-based accounts of function learning was put forth by DeLosh et al. (1997) . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in <a href="#fig-delosh-extrap" class="quarto-xref">Figure 11</a>.
+The first significant challenge to the rule-based accounts of function learning was put forth by DeLosh et al. (1997) . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in **?@fig-delosh-extrap**.
 
 The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model (Brehmer, 1974; Carroll, 1963) tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data. The log-polynomial adaptive regression model (Koh & Meyer, 1991) was able to mimic some of the systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred.
 
@@ -1001,11 +916,6 @@ The influence of variability on function learning tasks has received relatively 
 
 In the domain of visuomotor learning, van Dam & Ernst (2015) employed a task which required participants to learn a linear function between the spikiness of shape stimuli and the correct horizontal position to make a rapid pointing response. The shapes ranged from very spiky to completely circular at the extreme ends of the space. Participants trained with intermediate shapes from a lower variation (2 shapes) or higher variation (5 shapes) condition, with the 2 items of the lower varied condition matching the items used on the extreme ends of the higher variation training space. Learning was significantly slower in the higher variation group. However, the two conditions did not differ when tested with novel shapes, with both groups producing extrapolation responses of comparable magnitudes to the most similar training item, rather than in accordance with the true linear function. The authors accounted for both learning and extrapolation performance with a Bayesian learning model. Similar to ALM, the bayesian model assumes that generalization occurs as a Gaussian function of the distance between stimuli. However unlike ALM, the bayesian learning model utilizes more elaborate probabilistic stimulus representations, with a separate Kalman Filter for each shape stimulus.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
-id="fig-delosh-extrap"
-alt="Figure 11: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples." />
-
 ## Overview Of Present Study
 
 The present study investigates the influence of training variability on learning, generalization, and extrapolation in a uni-dimensional visuomotor function learning task. To the best of our knowledge, this research is the first to employ the classic constant vs. varied training manipulation, commonly used in the literature on the benefits of variability, in the context of a uni-dimensional function learning task. Across three experiments, we compare constant and varied training conditions in terms of learning performance, extrapolation accuracy, and the ability to reliably discriminate between stimuli.
@@ -1016,14 +926,11 @@ To account for the empirical results, we will apply a series of computational mo
 
 *Participants* A total of 156 participants were recruited from the Indiana University Introductory Psychology Course. Participants were randomly assigned to one of two training conditions: varied training or constant training.
 
-*Task.* The "Hit The Wall" (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the "wall" at target speed indicated at the top of the screen (see <a href="#fig-htw-task" class="quarto-xref">Figure 12</a>). The target velocities were given as a range, or band, of acceptable velocity values (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
+*Task.* The "Hit The Wall" (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the "wall" at target speed indicated at the top of the screen (see **?@fig-htw-task**). The target velocities were given as a range, or band, of acceptable velocity values (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
 
 /
 
-<img src="../Assets/figs/htw_task_fig.png" id="fig-htw-task"
-alt="Figure 12: The Hit the wall task. Participants launch the blue ball to hit the red wall at the target velocity band indicated at the top of the screen. The ball must be released from within the orange square - but the location of release, and the location at which the ball strikes the wall are both irrelevant to the task feedback." />
-
-*Procedure.* All participants completed the task online. Participants were provided with a description of the experiment and indicated informed consent. <a href="#fig-design-e1" class="quarto-xref">Figure 13</a> illustrates the general procedure. Participants completed a total of 90 trials during the training stage. In the varied training condition, participants encountered three velocity bands (800-1000, 1000-1200, and 1200-1400). Participants in the constant training condition trained on only one velocity band (800-1000) - the closest band to what would be the novel extrapolation bands in the testing stage.
+*Procedure.* All participants completed the task online. Participants were provided with a description of the experiment and indicated informed consent. <a href="#fig-design-e1" class="quarto-xref">Figure 1</a> illustrates the general procedure. Participants completed a total of 90 trials during the training stage. In the varied training condition, participants encountered three velocity bands (800-1000, 1000-1200, and 1200-1400). Participants in the constant training condition trained on only one velocity band (800-1000) - the closest band to what would be the novel extrapolation bands in the testing stage.
 
 Following the training stage, participants proceeded immediately to the testing stage. Participants were tested from all six velocity bands, in two separate stages. In the novel extrapolation testing stage, participants completed "no-feedback" testing from three novel extrapolation bands (100-300, 350-550, and 600-800), with each band consisting of 15 trials. Participants were also tested from the three velocity bands that were trained by the varied condition (800-1000, 1000-1200, and 1200-1400). In the constant training condition, two of these bands were novel, while in the varied training condition, all three bands were encountered during training. The order in which participants completed the novel-extrapolation and testing-from-3-varied bands was counterbalanced across participants.
 A final training stage presented participants with "feedback" testing for each of the three extrapolation bands (100-300, 350-550, and 600-800).
@@ -1112,7 +1019,7 @@ A final training stage presented participants with "feedback" testing for each o
 </g>
 </svg>
 
-Figure 13: Experiment 1 Design. Constant and Varied participants complete different training conditions.
+Figure 1: Experiment 1 Design. Constant and Varied participants complete different training conditions.
 </div>
 
 ### Analyses Strategy
@@ -1133,10 +1040,6 @@ In each experiment we compare varied and constant conditions in terms of 1) accu
 
 ### Results
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
-id="fig-e1-train-dev"
-alt="Figure 14: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
 <div id="tbl-e1-train-dist">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
@@ -1144,12 +1047,12 @@ alt="Figure 14: Experiment 1 Training Stage. Deviations from target band across
 | Intercept    |   106.34 |         95.46 |        117.25 |   1 |
 | conditVaried |    79.64 |         57.92 |        101.63 |   1 |
 
-Table 4: **Experiment 1 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group.
+Table 5: **Experiment 1 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group.
 </div>
 
   
 
-*Training*. <a href="#fig-e1-train-dev" class="quarto-xref">Figure 14</a> displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ($\beta$ = 79.64, 95% CrI \[57.92, 101.63\]; pd = 100%).
+*Training*. **?@fig-e1-train-dev** displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ($\beta$ = 79.64, 95% CrI \[57.92, 101.63\]; pd = 100%).
 
 <div id="tbl-e1-bmm-dist">
 
@@ -1160,15 +1063,10 @@ Table 4: **Experiment 1 - End of training performance**. The Intercept represen
 | bandTypeExtrapolation              |    71.51 |         33.24 |        109.60 | 1.0 |
 | conditVaried:bandTypeExtrapolation |    66.46 |         32.76 |         99.36 | 1.0 |
 
-Table 5: **Experiment 1 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficients indicate larger deviations from the baselines (Condition=constant & bandType=Trained) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands
+Table 6: **Experiment 1 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficients indicate larger deviations from the baselines (Condition=constant & bandType=Trained) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands
 </div>
 
-*Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in <a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 5</a>. The main effect of training condition was not significant ($\beta$ = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands ($\beta$ = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant ($\beta$ = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in <a href="#fig-e1-test-dev" class="quarto-xref">Figure 15</a>, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
-id="fig-e1-test-dev"
-alt="Figure 15: A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% credible intervals." />
+*Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in <a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 6</a>. The main effect of training condition was not significant ($\beta$ = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands ($\beta$ = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant ($\beta$ = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in **?@fig-e1-test-dev**, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
 
   
 
@@ -1181,23 +1079,13 @@ alt="Figure 15: A) Deviations from target band during testing without feedback 
 | Band         |     0.71 |          0.62 |          0.80 | 1.00 |
 | condit\*Band |    -0.14 |         -0.26 |         -0.01 | 0.98 |
 
-Table 6: Experiment 1. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs. Varied) and Velocity Band. Larger coefficients on Band represent greater sensitivity/discrimination.
+Table 7: Experiment 1. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs. Varied) and Velocity Band. Larger coefficients on Band represent greater sensitivity/discrimination.
 </div>
 
-Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 7</a> for the full model results. The estimated coefficient for training condition ($\beta$ = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($\beta$ = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in <a href="#fig-e1-test-vx" class="quarto-xref">Figure 16</a>.
+Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 8</a> for the full model results. The estimated coefficient for training condition ($\beta$ = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($\beta$ = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in **?@fig-e1-test-vx**.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
-id="fig-e1-test-vx"
-alt="Figure 16: Empirical distribution of velocities producing in testing stage. Translucent bands with dash lines indicate the correct range for each velocity band." />
 <div id="tbl-e1-bmm-vx">
-
-<figure>
-<img src="full.markdown_strict_files/figure-markdown_strict/tbl-e1-bmm-vx-1.png" width="1056" alt="Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
-<figcaption aria-hidden="true">Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.</figcaption>
-</figure>
-
-Table 7
+Table 8
 </div>
 
 ## E1 Summary
@@ -1210,7 +1098,7 @@ More importantly, the varied training group exhibited significantly larger devia
 
 ### Methods & Procedure
 
-The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see <a href="#fig-design-e2" class="quarto-xref">Figure 17</a>). The Varied group trained on bands 100-300, 350-550, 600-800, and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).
+The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see <a href="#fig-design-e2" class="quarto-xref">Figure 2</a>). The Varied group trained on bands 100-300, 350-550, 600-800, and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).
 
 <div id="fig-design-e2">
 
@@ -1296,15 +1184,11 @@ The task and procedure of Experiment 2 was identical to Experiment 1, with the e
 </g>
 </svg>
 
-Figure 17: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.
+Figure 2: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.
 </div>
 
 ### Results
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
-id="fig-e2-train-dev"
-alt="Figure 18: Experiment 2 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
 <div id="tbl-e2-train-dist">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
@@ -1312,12 +1196,12 @@ alt="Figure 18: Experiment 2 Training Stage. Deviations from target band across
 | Intercept    |    91.01 |         80.67 |        101.26 |   1 |
 | conditVaried |    36.15 |         16.35 |         55.67 |   1 |
 
-Table 8: **Experiment 2 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.
+Table 9: **Experiment 2 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.
 </div>
 
   
 
-*Training*. <a href="#fig-e2-train-dev" class="quarto-xref">Figure 18</a> presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( $\beta$ = 36.15, 95% CrI \[16.35, 55.67\]; pd = 99.95%).
+*Training*. **?@fig-e2-train-dev** presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( $\beta$ = 36.15, 95% CrI \[16.35, 55.67\]; pd = 99.95%).
 
 <div id="tbl-e2-bmm-dist">
 
@@ -1328,17 +1212,13 @@ Table 8: **Experiment 2 - End of training performance**. The Intercept represen
 | bandTypeExtrapolation              |    38.09 |         -6.94 |         83.63 | 0.95 |
 | conditVaried:bandTypeExtrapolation |    82.00 |         41.89 |        121.31 | 1.00 |
 
-Table 9: **Experiment 2 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant & trained bands) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands
+Table 10: **Experiment 2 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant & trained bands) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands
 </div>
 
    
 
-*Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in <a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 9</a>, reveal no significant main effect of training condition ($\beta$ = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant ($\beta$ = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see <a href="#fig-e2-test-dev" class="quarto-xref">Figure 19</a>).
+*Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in <a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 10</a>, reveal no significant main effect of training condition ($\beta$ = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant ($\beta$ = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see **?@fig-e2-test-dev**).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
-id="fig-e2-test-dev"
-alt="Figure 19: A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals." />
 <div id="tbl-e2-bmm-vx">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -1348,23 +1228,13 @@ alt="Figure 19: A) Deviations from target band during testing without feedback 
 | Band         |     0.71 |          0.58 |          0.84 | 1.00 |
 | condit\*Band |    -0.06 |         -0.24 |          0.13 | 0.73 |
 
-Table 10: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band
+Table 11: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band
 </div>
 
-*Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 11</a>. The overall slope on target velocity band predictor was significantly positive, ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, ($\beta$ = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see <a href="#fig-e2-test-vx" class="quarto-xref">Figure 20</a>).
+*Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 12</a>. The overall slope on target velocity band predictor was significantly positive, ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, ($\beta$ = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see **?@fig-e2-test-vx**).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
-id="fig-e2-test-vx"
-alt="Figure 20: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." />
 <div id="tbl-e2-bmm-vx">
-
-<figure>
-<img src="full.markdown_strict_files/figure-markdown_strict/tbl-e2-bmm-vx-1.png" width="1056" alt="Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
-<figcaption aria-hidden="true">Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.</figcaption>
-</figure>
-
-Table 11
+Table 12
 </div>
 
 ### Experiment 2 Summary
@@ -1388,15 +1258,11 @@ The major adjustment of Experiment 3 is for participants to receive ordinal feed
 | bandOrderReverse              |     1.11 |        -16.02 |         18.16 | 0.55 |
 | conditVaried:bandOrderReverse |   -77.02 |       -114.16 |        -39.61 | 1.00 |
 
-Table 12: **Experiment 3 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.
+Table 13: **Experiment 3 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.
 </div>
 
-*Training*. <a href="#fig-e3-train-dev" class="quarto-xref">Figure 21</a> displays the average deviations from the target band across training blocks, and <a href="#tbl-e3-train-dist" class="quarto-xref">Table 12</a> shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( $\beta$ = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant $\beta$ = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( $\beta$ = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
+*Training*. **?@fig-e3-train-dev** displays the average deviations from the target band across training blocks, and <a href="#tbl-e3-train-dist" class="quarto-xref">Table 13</a> shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( $\beta$ = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant $\beta$ = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( $\beta$ = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
-id="fig-e3-train-dev"
-alt="Figure 21: E3. Deviations from target band during testing without feedback stage." />
 <div id="tbl-e3-bmm-dist">
 
 | Term                                                | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -1410,10 +1276,10 @@ alt="Figure 21: E3. Deviations from target band during testing without feedback
 | bandTypeExtrapolation:bandOrderReverse              |    80.69 |         30.01 |        130.93 | 1.00 |
 | conditVaried:bandTypeExtrapolation:bandOrderReverse |    30.42 |        -21.00 |         81.65 | 0.87 |
 
-Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant training; trained bands & original order) - and a positive interaction coefficient indicates disproportionate deviation for the varied condition on the extrapolation bands
+Table 14: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant training; trained bands & original order) - and a positive interaction coefficient indicates disproportionate deviation for the varied condition on the extrapolation bands
 </div>
 
-*Testing Accuracy.* <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a> presents the results of the Bayesian mixed efects model predicting absolute deviation from the target band during the testing stage. There was no significant main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68, 23.13\]; pd = 89.31%, or band type,$\beta$ = -23.35, 95% CrI \[-57.28, 10.35\]; pd = 91.52%. However the effect of band order was significant, with the reverse order condition showing lower deviations, $\beta$ = -73.72, 95% CrI \[-136.69, -11.07\]; pd = 98.89%. The interaction between training condition and band type was also significant $\beta$ = 52.66, 95% CrI \[14.16, 90.23\]; pd = 99.59%, with the varied condition showing disproprionately large deviations on the extrapolation bands compared to the constant group. There was also a significant interaction between band type and band order, $\beta$ = 80.69, 95% CrI \[30.01, 130.93\]; pd = 99.89%, such that the reverse order condition showed larger deviations on the extrapolation bands. No other interactions were significant.
+*Testing Accuracy.* <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a> presents the results of the Bayesian mixed efects model predicting absolute deviation from the target band during the testing stage. There was no significant main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68, 23.13\]; pd = 89.31%, or band type,$\beta$ = -23.35, 95% CrI \[-57.28, 10.35\]; pd = 91.52%. However the effect of band order was significant, with the reverse order condition showing lower deviations, $\beta$ = -73.72, 95% CrI \[-136.69, -11.07\]; pd = 98.89%. The interaction between training condition and band type was also significant $\beta$ = 52.66, 95% CrI \[14.16, 90.23\]; pd = 99.59%, with the varied condition showing disproprionately large deviations on the extrapolation bands compared to the constant group. There was also a significant interaction between band type and band order, $\beta$ = 80.69, 95% CrI \[30.01, 130.93\]; pd = 99.89%, such that the reverse order condition showed larger deviations on the extrapolation bands. No other interactions were significant.
 
 <!-- ::: {#fig-e3-test-condEffect}
 
@@ -1421,10 +1287,6 @@ Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band
 
 E3. A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 ::: -->
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
-id="fig-e3-test-dev"
-alt="Figure 22: Experiment 3 Testing Accuracy. A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% confidence intervals." />
 <div id="tbl-e3-bmm-vx">
 
 | Term                                  | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -1438,29 +1300,14 @@ alt="Figure 22: Experiment 3 Testing Accuracy. A) Deviations from target band d
 | bandOrderReverse:bandInt              |    -0.10 |         -0.27 |          0.08 | 0.86 |
 | conditVaried:bandOrderReverse:bandInt |     0.42 |          0.17 |          0.70 | 1.00 |
 
-Table 14: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band
+Table 15: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band
 </div>
 
-*Testing Discrimination.* The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, $\beta$ = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in <a href="#fig-e3-test-vx" class="quarto-xref">Figure 23</a>, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
-id="fig-e3-test-vx"
-alt="Figure 23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." />
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
-id="fig-e3-bmm-vx"
-alt="Figure 24: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
+*Testing Discrimination.* The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, $\beta$ = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in **?@fig-e3-test-vx**, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
 
 ### Experiment 3 Summary
 
 ## Computational Model
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
-id="fig-alm-diagram"
-alt="Figure 25: The Associative Learning Model (ALM). The diagram illustrates the basic structure of the ALM model as used in the present work. Input nodes are activated as a function of their similarity to the lower-boundary of the target band. The generalization parameter, c, determines the degree to which nearby input nodes are activated. The output nodes are activated as a function of the weighted sum of the input nodes - weights are updated via the delta rule." />
 
 # Modeling Approach
 
@@ -1470,7 +1317,7 @@ The modeling goal is to implement a full process model capable of both 1) produc
 
 ALM is a localist neural network model (Page, 2000), with each input node corresponding to a particular stimulus, and each output node corresponding to a particular response value. The units in the input layer activate as a function of their Gaussian similarity to the input stimulus. So, for example, an input stimulus of value 55 would induce maximal activation of the input unit tuned to 55. Depending on the value of the generalization parameter, the nearby units (e.g. 54 and 56; 53 and 57) may also activate to some degree. ALM is structured with input and output nodes that correspond to regions of the stimulus space, and response space, respectively. The units in the input layer activate as a function of their similarity to a presented stimulus. As was the case with the exemplar-based models, similarity in ALM is exponentially decaying function of distance. The input layer is fully connected to the output layer, and the activation for any particular output node is simply the weighted sum of the connection weights between that node and the input activations. The network then produces a response by taking the weighted average of the output units (recall that each output unit has a value corresponding to a particular response). During training, the network receives feedback which activates each output unit as a function of its distance from the ideal level of activation necessary to produce the correct response. The connection weights between input and output units are then updated via the standard delta learning rule, where the magnitude of weight changes are controlled by a learning rate parameter. The EXAM model is an extension of ALM, with the same learning rule and representational scheme for input and output units. EXAM differs from ALM only in its response rule, as it includes a linear extrapolation mechanism for generating novel responses. Although this extrapolation rule departs from a strictly similarity-based generalization mechanism, EXAM is distinct from pure rule-based models in that it remains constrained by the weights learned during training. EXAM retrieves the two nearest training inputs, and the ALM responses associated with those inputs, and computes the slope between these two points. The slope is then used to extrapolate the response to the novel test stimulus. Because EXAM requires at least two input-output pairs to generate a response, additional assumptions were required in order for it to generate resposnes for the constant group. We assumed that participants come to the task with prior knowledge of the origin point (0,0), which can serve as a reference point necessary for the model to generate responses for the constant group. This assumption is motivated by previous function learning research (Brown & Lacroix (2017)), which through a series of manipulations of the y intercept of the underlying function, found that participants consistently demonstrated knowledge of, or a bias towards, the origin point (see Kwantes & Neal (2006) for additional evidence of such a bias in function learning tasks).
 
-See <a href="#tbl-alm-exam" class="quarto-xref">Table 15</a> for a full specification of the equations that define ALM and EXAM, and <a href="#fig-alm-diagram" class="quarto-xref">Figure 25</a> for a visual representation of the ALM model.
+See <a href="#tbl-alm-exam" class="quarto-xref">Table 16</a> for a full specification of the equations that define ALM and EXAM, and **?@fig-alm-diagram** for a visual representation of the ALM model.
 
 <div id="tbl-alm-exam">
 
@@ -1489,7 +1336,7 @@ See <a href="#tbl-alm-exam" class="quarto-xref">Table 15</a> for a full specifi
 | Slope Computation  | $S =$ $\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$                      | Slope value, $S$ computed from nearest training instances                                     |
 | Response           | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$                            | ALM response $m(X_i)$ adjusted by slope.                                                      |
 
-Table 15: ALM & EXAM Equations
+Table 16: ALM & EXAM Equations
 </div>
 
 ## Model Fitting
@@ -1526,1686 +1373,29 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
 #### Group level Patterns
 
 <div id="tbl-htw-modelError-e1">
-
-<div id="uluwiarmkk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uluwiarmkk table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#uluwiarmkk thead, #uluwiarmkk tbody, #uluwiarmkk tfoot, #uluwiarmkk tr, #uluwiarmkk td, #uluwiarmkk th {
-  border-style: none;
-}
-
-#uluwiarmkk p {
-  margin: 0;
-  padding: 0;
-}
-
-#uluwiarmkk .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#uluwiarmkk .gt_title {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#uluwiarmkk .gt_subtitle {
-  color: #333333;
-  font-size: 12px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#uluwiarmkk .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 10px;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#uluwiarmkk .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 10px;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#uluwiarmkk .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#uluwiarmkk .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#uluwiarmkk .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#uluwiarmkk .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#uluwiarmkk .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#uluwiarmkk .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#uluwiarmkk .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#uluwiarmkk .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#uluwiarmkk .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#uluwiarmkk .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uluwiarmkk .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#uluwiarmkk .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#uluwiarmkk .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#uluwiarmkk .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uluwiarmkk .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#uluwiarmkk .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uluwiarmkk .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#uluwiarmkk .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uluwiarmkk .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uluwiarmkk .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uluwiarmkk .gt_left {
-  text-align: left;
-}
-
-#uluwiarmkk .gt_center {
-  text-align: center;
-}
-
-#uluwiarmkk .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#uluwiarmkk .gt_font_normal {
-  font-weight: normal;
-}
-
-#uluwiarmkk .gt_font_bold {
-  font-weight: bold;
-}
-
-#uluwiarmkk .gt_font_italic {
-  font-style: italic;
-}
-
-#uluwiarmkk .gt_super {
-  font-size: 65%;
-}
-
-#uluwiarmkk .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#uluwiarmkk .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#uluwiarmkk .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#uluwiarmkk .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#uluwiarmkk .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#uluwiarmkk .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#uluwiarmkk .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Task Stage">Task Stage</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Fit Method">Fit Method</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Varied">Varied</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">199.93</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">103.36</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">104.01</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">85.68</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test &amp; Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">216.97</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">170.28</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">127.94</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">144.86</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">467.73</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">291.38</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">273.30</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">297.91</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">297.82</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">2,016.01</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">53.90</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">184.00</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test &amp; Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">57.40</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">132.32</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">42.92</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">127.90</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">51.77</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">103.48</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">51.43</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">107.03</td></tr>
-  </tbody>
-  
-  
-</table>
+Table 17: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
 
-Table 16: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
-</div>
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
-id="fig-htw-post-dist"
-alt="Figure 26: Posterior Distributions of c and lr parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y axes of the plots for the c parameter are scaled logarithmically." />
+The posterior distributions of the $c$ and $lr$ parameters are shown **?@fig-htw-post-dist**, and model predictions are shown alongside the empirical data in **?@fig-cm-vx-pat**. There were substantial individual differences in the posteriors of both parameters, with the within-group individual differences generally swamped any between-group or between-model differences. The magnitude of these individual differences remains even if we consider only the single best parameter set for each subject.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
-id="fig-htw-resid-pred"
-alt="Figure 27: Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
+We used the posterior distribution of $c$ and $lr$ parameters to generate a posterior predictive distribution of the observed data for each participant, which then allows us to compare the empirical data to the full range of predictions from each model. Aggregated residuals are displayed in **?@fig-htw-resid-pred**. The pattern of training stage residual errors are unsurprising across the combinations of models and fitting method . Differences in training performance between ALM and EXAM are generally minor (the two models have identical learning mechanisms). The differences in the magnitude of residuals across the three fitting methods are also straightforward, with massive errors for the 'fit to Test Only' model, and the smallest errors for the 'fit to train only' models. It is also noteworthy that the residual errors are generally larger for the first block of training, which is likely due to the initial values of the ALM weights being unconstrained by whatever initial biases participants tend to bring to the task. Future work may explore the ability of the models to capture more fine grained aspects of the learning trajectories. However for the present purposes, our primary interest is in the ability of ALM and EXAM to account for the testing patterns while being constrained, or not constrained, by the training data. All subsequent analyses and discussion will thus focus on the testing stage.
 
-The posterior distributions of the $c$ and $lr$ parameters are shown <a href="#fig-htw-post-dist" class="quarto-xref">Figure 26</a>, and model predictions are shown alongside the empirical data in <a href="#fig-cm-vx-pat" class="quarto-xref">Figure 28</a>. There were substantial individual differences in the posteriors of both parameters, with the within-group individual differences generally swamped any between-group or between-model differences. The magnitude of these individual differences remains even if we consider only the single best parameter set for each subject.
-
-We used the posterior distribution of $c$ and $lr$ parameters to generate a posterior predictive distribution of the observed data for each participant, which then allows us to compare the empirical data to the full range of predictions from each model. Aggregated residuals are displayed in <a href="#fig-htw-resid-pred" class="quarto-xref">Figure 27</a>. The pattern of training stage residual errors are unsurprising across the combinations of models and fitting method . Differences in training performance between ALM and EXAM are generally minor (the two models have identical learning mechanisms). The differences in the magnitude of residuals across the three fitting methods are also straightforward, with massive errors for the 'fit to Test Only' model, and the smallest errors for the 'fit to train only' models. It is also noteworthy that the residual errors are generally larger for the first block of training, which is likely due to the initial values of the ALM weights being unconstrained by whatever initial biases participants tend to bring to the task. Future work may explore the ability of the models to capture more fine grained aspects of the learning trajectories. However for the present purposes, our primary interest is in the ability of ALM and EXAM to account for the testing patterns while being constrained, or not constrained, by the training data. All subsequent analyses and discussion will thus focus on the testing stage.
-
-The residuals of the model predictions for the testing stage (<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 27</a>) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also <a href="#fig-ee-e1" class="quarto-xref">Figure 29</a>), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in <a href="#fig-cm-vx-pat" class="quarto-xref">Figure 28</a>, which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
-id="fig-cm-vx-pat"
-alt="Figure 28: Empirical data and Model predictions for mean velocity across target bands. Fitting methods (Test Only, Test &amp; Train, Train Only) - are separated across rows, and Training Condition (Constant vs. Varied) are separated by columns. Each facet contains the predictions of ALM and EXAM, alongside the observed data." />
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
-id="fig-ee-e1" alt="Figure 29" />
+The residuals of the model predictions for the testing stage (**?@fig-htw-resid-pred**) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also **?@fig-ee-e1**), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in **?@fig-cm-vx-pat**, which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
 
 To quantitatively assess whether the differences in performance between models, we fit a bayesian regressions predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs. EXAM) and training condition (Constant vs. Varied).
 
 Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.4, -14.17\], pd = 99.85%) than ALM. There was also a significant interaction between Model and Condition ($\beta$ = 60.42, 95% CrI \[36.17, 83.85\], pd = 100%), indicating that the advantage of EXAM over ALM was significantly greater for the constant group. To assess whether EXAM predicts constant performance significantly better for Constant than for Varied subjects, we calculated the difference in model error between the Constant and Varied conditions specifically for EXAM. The results indicated that the model error for EXAM was significantly lower in the Constant condition compared to the Varied condition, with a mean difference of -22.88 (95% CrI \[-46.02, -0.97\], pd = 0.98).
 
 <div id="tbl-htw-modelError-e23">
-
-<div id="cslqdcvgof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cslqdcvgof table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#cslqdcvgof thead, #cslqdcvgof tbody, #cslqdcvgof tfoot, #cslqdcvgof tr, #cslqdcvgof td, #cslqdcvgof th {
-  border-style: none;
-}
-
-#cslqdcvgof p {
-  margin: 0;
-  padding: 0;
-}
-
-#cslqdcvgof .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#cslqdcvgof .gt_title {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#cslqdcvgof .gt_subtitle {
-  color: #333333;
-  font-size: 12px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#cslqdcvgof .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 10px;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#cslqdcvgof .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 10px;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#cslqdcvgof .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#cslqdcvgof .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#cslqdcvgof .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#cslqdcvgof .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#cslqdcvgof .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#cslqdcvgof .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#cslqdcvgof .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#cslqdcvgof .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#cslqdcvgof .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#cslqdcvgof .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cslqdcvgof .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#cslqdcvgof .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#cslqdcvgof .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#cslqdcvgof .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cslqdcvgof .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#cslqdcvgof .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cslqdcvgof .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#cslqdcvgof .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cslqdcvgof .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cslqdcvgof .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cslqdcvgof .gt_left {
-  text-align: left;
-}
-
-#cslqdcvgof .gt_center {
-  text-align: center;
-}
-
-#cslqdcvgof .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#cslqdcvgof .gt_font_normal {
-  font-weight: normal;
-}
-
-#cslqdcvgof .gt_font_bold {
-  font-weight: bold;
-}
-
-#cslqdcvgof .gt_font_italic {
-  font-style: italic;
-}
-
-#cslqdcvgof .gt_super {
-  font-size: 65%;
-}
-
-#cslqdcvgof .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#cslqdcvgof .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#cslqdcvgof .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#cslqdcvgof .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#cslqdcvgof .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#cslqdcvgof .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#cslqdcvgof .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="1" scope="col" id></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="E2">
-        <span class="gt_column_spanner">E2</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="E3">
-        <span class="gt_column_spanner">E3</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Task Stage">Task Stage</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Test Data">Fit to Test Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Test Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Test Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">239.7</td>
-<td headers="Fit to Test Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">129.8</td>
-<td headers="Fit to Test Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">99.7</td>
-<td headers="Fit to Test Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">88.2</td>
-<td headers="Fit to Test Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">170.1</td>
-<td headers="Fit to Test Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">106.1</td>
-<td headers="Fit to Test Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">92.3</td>
-<td headers="Fit to Test Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">72.8</td></tr>
-    <tr><td headers="Fit to Test Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Test Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">53.1</td>
-<td headers="Fit to Test Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">527.1</td>
-<td headers="Fit to Test Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">108.1</td>
-<td headers="Fit to Test Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">169.3</td>
-<td headers="Fit to Test Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">70.9</td>
-<td headers="Fit to Test Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">543.5</td>
-<td headers="Fit to Test Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">157.8</td>
-<td headers="Fit to Test Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">212.7</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Test &amp;amp; Training Data">Fit to Test &amp; Training Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Test & Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">266.0</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">208.2</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">125.1</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">126.4</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">197.7</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">189.5</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">130.0</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">128.5</td></tr>
-    <tr><td headers="Fit to Test & Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">40.0</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">35.4</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">30.4</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">23.6</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">49.1</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">85.6</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">49.2</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">78.4</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Training Data">Fit to Training Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">357.4</td>
-<td headers="Fit to Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">295.9</td>
-<td headers="Fit to Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">305.1</td>
-<td headers="Fit to Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">234.5</td>
-<td headers="Fit to Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">415.0</td>
-<td headers="Fit to Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">298.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">295.5</td>
-<td headers="Fit to Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">243.7</td></tr>
-    <tr><td headers="Fit to Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">42.5</td>
-<td headers="Fit to Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">23.0</td>
-<td headers="Fit to Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">43.2</td>
-<td headers="Fit to Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">22.6</td>
-<td headers="Fit to Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">51.4</td>
-<td headers="Fit to Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">63.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">51.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">65.3</td></tr>
-  </tbody>
-  
-  
-</table>
+Table 18: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
-
-Table 17: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
-</div>
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
-id="fig-cm-vx-pat-e2-e3"
-alt="Figure 30: Empirical data and Model predictions from Experiment 2 and 3 for the testing stage. Observed data is shown on the right. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 <div id="tbl-htw-ee-e23">
-
-<div id="cwsavcmkqx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cwsavcmkqx table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#cwsavcmkqx thead, #cwsavcmkqx tbody, #cwsavcmkqx tfoot, #cwsavcmkqx tr, #cwsavcmkqx td, #cwsavcmkqx th {
-  border-style: none;
-}
-
-#cwsavcmkqx p {
-  margin: 0;
-  padding: 0;
-}
-
-#cwsavcmkqx .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#cwsavcmkqx .gt_title {
-  color: #333333;
-  font-size: 16px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#cwsavcmkqx .gt_subtitle {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#cwsavcmkqx .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#cwsavcmkqx .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#cwsavcmkqx .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#cwsavcmkqx .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#cwsavcmkqx .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#cwsavcmkqx .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#cwsavcmkqx .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#cwsavcmkqx .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#cwsavcmkqx .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#cwsavcmkqx .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#cwsavcmkqx .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#cwsavcmkqx .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cwsavcmkqx .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#cwsavcmkqx .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#cwsavcmkqx .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#cwsavcmkqx .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cwsavcmkqx .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#cwsavcmkqx .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cwsavcmkqx .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#cwsavcmkqx .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cwsavcmkqx .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cwsavcmkqx .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cwsavcmkqx .gt_left {
-  text-align: left;
-}
-
-#cwsavcmkqx .gt_center {
-  text-align: center;
-}
-
-#cwsavcmkqx .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#cwsavcmkqx .gt_font_normal {
-  font-weight: normal;
-}
-
-#cwsavcmkqx .gt_font_bold {
-  font-weight: bold;
-}
-
-#cwsavcmkqx .gt_font_italic {
-  font-style: italic;
-}
-
-#cwsavcmkqx .gt_super {
-  font-size: 65%;
-}
-
-#cwsavcmkqx .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#cwsavcmkqx .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#cwsavcmkqx .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#cwsavcmkqx .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#cwsavcmkqx .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#cwsavcmkqx .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#cwsavcmkqx .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Experiment">Experiment</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Term">Term</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="Estimate">Estimate</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Credible Interval">
-        <span class="gt_column_spanner">Credible Interval</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="pd">pd</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="95% CrI Lower">95% CrI Lower</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="95% CrI Upper">95% CrI Upper</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 1">Experiment 1</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">176.30</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">156.86</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">194.59</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">−88.44</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">−104.51</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">−71.81</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">−37.54</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">−60.40</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">−14.17</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">60.42</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">36.17</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">83.85</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">1.00</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 2">Experiment 2</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">245.87</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">226.18</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">264.52</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">−137.73</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">−160.20</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">−115.48</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">−86.39</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">−113.52</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">−59.31</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">56.87</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">25.26</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">88.04</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">1.00</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 3">Experiment 3</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">164.83</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">140.05</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">189.44</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−65.66</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−85.97</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−46.02</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−40.61</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−75.90</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−3.02</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.98</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">25.47</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−9.34</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">58.68</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.93</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">41.90</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">11.20</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">72.54</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">0.99</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−7.32</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−34.53</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">21.05</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.70</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">conditVaried:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">30.82</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−19.57</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">83.56</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.88</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:conditVaried:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−60.60</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−101.80</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−18.66</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-  </tbody>
-  
-  
-</table>
+Table 19: Results of Bayesian Regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and the interaction between Model and Condition. The values represent the estimate coefficient for each term, with 95% credible intervals in brackets. The intercept reflects the baseline of ALM and Constant. The other estimates indicate deviations from the baseline for the EXAM mode and varied condition. Lower values indicate better model fit.
 </div>
 
-Table 18: Results of Bayesian Regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and the interaction between Model and Condition. The values represent the estimate coefficient for each term, with 95% credible intervals in brackets. The intercept reflects the baseline of ALM and Constant. The other estimates indicate deviations from the baseline for the EXAM mode and varied condition. Lower values indicate better model fit.
-</div>
+*Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the "fit to training and testing data" models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controleld for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see **?@fig-e2_e3_ae**).
 
-*Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the "fit to training and testing data" models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controleld for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see <a href="#fig-e2_e3_ae" class="quarto-xref">Figure 31</a>).
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
-id="fig-e2_e3_ae"
-alt="Figure 31: Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order)." />
-
-*Computational Model Summary*. Across the model fits to all three experiments, we found greater support for EXAM over ALM (negative coefficients on the ModelEXAM term in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>), and moreover that the constant participants were disproportionately well described by EXAM in comparison to ALM (positive coefficients on ModelEXAM:conditVaried terms in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>). This pattern is also clearly depicted in <a href="#fig-htw-best-model" class="quarto-xref">Figure 32</a>, which plots the difference in model errors between ALM and EXAM for each individual participant. Both varied and constant conditions have a greater proportion of subjects better fit by EXAM (positive error differences), with the magnitude of EXAM's advantage visibly greater for the constant group. It also bears mention that numerous participants were better fit by ALM, or did not show a clear preference for either model. A subset of these participants are shown in <a href="#fig-htw-indv-pred" class="quarto-xref">Figure 33</a>.
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
-id="fig-htw-best-model"
-alt="Figure 32: Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM." />
-
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
-id="fig-htw-indv-pred"
-alt="Figure 33: Model predictions alongside observed data for a subset of individual participants. A) 3 constant and 3 varied participants fit to both the test and training data. B) 3 constant and 3 varied subjects fit to only the trainign data. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
+*Computational Model Summary*. Across the model fits to all three experiments, we found greater support for EXAM over ALM (negative coefficients on the ModelEXAM term in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>), and moreover that the constant participants were disproportionately well described by EXAM in comparison to ALM (positive coefficients on ModelEXAM:conditVaried terms in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>). This pattern is also clearly depicted in **?@fig-htw-best-model**, which plots the difference in model errors between ALM and EXAM for each individual participant. Both varied and constant conditions have a greater proportion of subjects better fit by EXAM (positive error differences), with the magnitude of EXAM's advantage visibly greater for the constant group. It also bears mention that numerous participants were better fit by ALM, or did not show a clear preference for either model. A subset of these participants are shown in **?@fig-htw-indv-pred**.
 
 # General Discussion
 
@@ -3559,15 +1749,9 @@ Regardless, the above analysis suggests that the constant group would always be 
 
 ### Group comparison of learning rate fits
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-60-1.png" width="768" />
-
 ### First vs. second half of testing stage
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-61-1.png" width="960" />
-
 ### Group Comparison for asymptote-starting performance
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-62-1.png" width="768" />
 
 ### Relative distance and under/overshooting
 
@@ -3581,114 +1765,20 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 #### experiment 1 training - relative distances
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-1.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-2.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-3.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-4.png" width="768" />
-
-
-    =========================================================================
-    conditType devianceDirection      610            760            910      
-    -------------------------------------------------------------------------
-    constant       Overshoot                    311.84(307.92)               
-    constant      Undershoot                    188.05(163.62)               
-    varied         Overshoot     211.69(234.97)                360.14(322.01)
-    varied        Undershoot     107.35(81.21)                 244.85(196.47)
-    -------------------------------------------------------------------------
-
-
-    ======================================================
-    conditType      610           760            910      
-    ------------------------------------------------------
-    constant                 121.03(269.17)               
-    varied     39.91(178.12)                150.53(290.04)
-    ------------------------------------------------------
-
-
-    ====================================================================
-    conditType     610           760            835            910      
-    --------------------------------------------------------------------
-    constant   7.13(124.02) 107.02(218.49) 142.42(252.34) 122.92(282.58)
-    varied     3.19(96.67)   92.1(173.9)   103.84(214.4)  108.12(234.59)
-    --------------------------------------------------------------------
-
 #### experiment 2 training - relative distances
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-64-1.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-64-2.png" width="768" />
 
 #### Experiment 1 Testing - relative distances
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-65-1.png" width="960" />
-
-
-    ====================================================================================================================================
-    conditType2         msdu_610       msdu_760       msdu_835       msdu_910      msds_610      msds_760      msds_835      msds_910   
-    ------------------------------------------------------------------------------------------------------------------------------------
-    Constant Training 136.27(84.29) 191.65(112.65) 219.46(139.91) 276.75(153.09) 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
-    Varied Training   105.12(51.39)  149.37(93.4)  180.54(129.52) 198.64(137.84) 13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
-    ------------------------------------------------------------------------------------------------------------------------------------
-
-
-    =========================================================================
-    Condition              610           760           835           910     
-    -------------------------------------------------------------------------
-    Constant Training 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
-    Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
-    -------------------------------------------------------------------------
-
 #### Experiment 2 Testing - relative distances
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-66-1.png" width="768" />
 
 #### Experimenet 1 - intermittent testing
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-67-1.png" width="768" />
-
-
-    ======================================================================================================
-    Condition 610_First Half 760_First Half 910_First Half 610_Second Half 760_Second Half 910_Second Half
-    ------------------------------------------------------------------------------------------------------
-    constant  206.64(82.08)  286.51(121.07) 406.93(145.2)   187.2(55.24)    238.21(95.16)  313.27(114.86) 
-    varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(108.04)   276.86(110.5) 
-    ------------------------------------------------------------------------------------------------------
-
 ### Training plots - Experiment 1
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-1.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-2.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-3.png" width="768" />
 
 #### Not in manuscript
 
 #### fit to testing performance averaged across positions
 
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-1.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-2.png" width="768" />
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-3.png" width="768" />
-
 #### statistical tests for starting performance
 
-    ANOVA Table (type III tests)
-
-          Effect DFn DFd F     p p<.05   ges
-    1 conditType   1 206 3 0.083       0.015
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-70-1.png" width="768" />
-
 #### statistical tests for asymptote
-
-    ANOVA Table (type III tests)
-
-          Effect DFn DFd   F     p p<.05   ges
-    1 conditType   1 206 3.4 0.067       0.016
-
-<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-71-1.png" width="768" />
