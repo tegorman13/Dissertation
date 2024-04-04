@@ -16,6 +16,7 @@ format:
   html: default
   hugo-md:
     echo: false
+    output: asis
     html-math-method: mathjax
     output-file: diss_full_hugo.md
   gfm:
@@ -191,60 +192,6 @@ article</a>
 <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299" target="_blank">Link to online version of journal
 article</a>
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
-  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
-  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
-  ggh4x,htmltools,future,furrr,ez)
-#options(brms.backend="cmdstanr",mc.cores=4)
-#options(digits=2, scipen=999, dplyr.summarise.inform=FALSE, kableExtra.auto_format=FALSE)
-walk(c("brms","dplyr","bayestestR","here"), conflict_prefer_all, quiet = TRUE)
-walk(c("Display_Functions","fun_alm","fun_indv_fit","fun_model", "prep_model_data","org_functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
-#conflicts_prefer(tidybayes::rstudent_t)
-
-# pacman::p_load(dplyr,purrr,tidyr,ggplot2, data.table, here, patchwork, conflicted, 
-#                stringr,future,furrr, knitr, reactable,ggstance, htmltools,
-#                ggdist,ggh4x,brms,tidybayes,emmeans,bayestestR, gt)
-
-
-#pacman::p_load(papaja, tinytex, RColorBrewer, kableExtra, cowplot)
-source(here::here('Functions/IGAS_ProcessFunctions.R'))
-
-#options(brms.backend="cmdstanr",mc.cores=4)
-initial_contrasts <- options("contrasts")$contrasts
-options(digits=2, scipen=999, dplyr.summarise.inform=FALSE, contrasts = c("contr.sum", "contr.poly"))
-defaultContrasts = options()$contrasts
-
-library(tidybayes)
-
-
-theme_set(theme_classic())
-# load the processed data from experiment 1 and 2
-e1 <- readRDS(here::here("data/igas_e1_cleanedData-final.rds")) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity,stageInt=as.numeric(as.character(experimentStage)))
-e2<- readRDS(here::here('data/igas_e2_cleanedData-final.rds')) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity)
-# load subject similarity data - computed with the IGAS model in 'IGAS-SimModel.R'
-e2_sim <- readRDS(here::here('data/IGAS_Similarity-Performance.rds'))
-
-# options(contrasts = c("contr.sum", "contr.poly"), kableExtra.auto_format=FALSE)
-# defaultContrasts = options()$contrasts
-# theme_set(theme_classic())
-
-dodge <- position_dodge(width = 0.9)
-e2GrpPos <- c("400","500","625","675","800","900")
-e2Grp <- paste("Constant","Constant", "Constant","Constant","Constant","Constant", "Varied")
-e2Labels <- paste(c("400\n Constant","500\n Constant","625\n Constant","675\n Constant",
-                   "800\n Constant","900\n Constant","500-800\n Varied"),sep="")
-
-e1Pos <- c("610","760","835","910")
-e1Var <- paste("Varied Train Position","Constant Train Position", "Novel Position", "Varied Training Position")
-e1Labels<- paste(c("610\n Varied Trained","760\n Constant Trained","835\n Novel Location","910\n Varied Trained"),sep="")
-```
-
-</details>
-
 # Abstract
 
 Exposing learners to variability during training has been demonstrated to improve performance in subsequent transfer testing. Such variability benefits are often accounted for by assuming that learners are developing some general task schema or structure. However much of this research has neglected to account for differences in similarity between varied and constant training conditions. In a between-groups manipulation, we trained participants on a simple projectile launching task, with either varied or constant conditions. We replicate previous findings showing a transfer advantage of varied over constant training. Furthermore, we show that a standard similarity model is insufficient to account for the benefits of variation, but, if the model is adjusted to assume that varied learners are tuned towards a broader generalization gradient, then a similarity-based model is sufficient to explain the observed benefits of variation. Our results therefore suggest that some variability benefits can be accommodated within instance-based models without positing the learning of some schemata or structure.
@@ -275,46 +222,8 @@ Although the benefits of training variation in visuomotor skill learning have be
 Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out
 the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance (Ennis et al., 1988; Ghahramani et al., 1996; Logan, 1988; Nosofsky, 1992; Shepard, 1987; Thoroughman & Taylor, 2005 ), it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure 1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-p=2
-c<- .0002
-simdat <- data.frame(x=rep(seq(200,1000),3),condit=c(rep("varied",1602),rep("constant",801)),
-                     train.position=c(rep(400,801),rep(800,801),rep(600,801)),c=.0002,p=2) %>%
-                     mutate(plotjitter=ifelse(condit=="varied",0,7),
-                            linScale=ifelse(condit=="varied",980,1000),
-                            genGauss=exp(-c*(abs((x-train.position)^p))),
-                            genLinear=1000-abs(x-train.position)+plotjitter) %>% 
-  #group_by(condit) %>% mutate(scaleLinear=(genLinear-min(genLinear))/(max(genLinear)-min(genLinear))) 
-  group_by(x,condit) %>%
-  reframe(genGauss=mean(genGauss),genLinear=mean(genLinear)/linScale,.groups = 'keep')
-colorVec=c("darkblue","darkred")
-plotSpecs <- list(geom_line(alpha=.7,size=.4),scale_color_manual(values=colorVec),
-                  geom_vline(alpha=.55,xintercept = c(400,800),color=colorVec[2]),
-                  geom_vline(alpha=.55,xintercept = c(600),color=colorVec[1]),
-                  ylim(c(0,1.05)),
-                  #xlim(c(250,950)),
-                  scale_x_continuous(breaks=seq(200,1000,by=200)),
-                  xlab("Test Stimulus"),
-                  annotate(geom="text",x=447,y=1.05,label="Varied",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=450,y=1.02,label="Training",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=659,y=1.05,label="Constant",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=657,y=1.02,label="Training",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=847,y=1.05,label="Varied",size=3.1,fontface="plain"),
-                  annotate(geom="text",x=850,y=1.02,label="Training",size=3.1,fontface="plain"),
-                  theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=1),
-                        legend.position="none"))
-
-ip1 <- simdat  %>% ggplot(aes(x,y=genGauss,group=condit,col=condit))+plotSpecs+ylab("")
-ip2 <- simdat %>%  ggplot(aes(x,y=genLinear,group=condit,col=condit))+plotSpecs+ylab("Amount of Generalization")
-
-plot_grid(ip1,ip2,ncol=2,rel_heights=c(1))
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-toy-model1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
 id="fig-toy-model1"
 alt="Figure 1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)" />
 
@@ -395,16 +304,8 @@ on how many units away the ball was from the exact center of the target.
 <a href="https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html" target="_blank">Link to abbrevaited example of
 task</a>.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-mf <- cowplot::ggdraw()+cowplot::draw_image(here::here("Assets/methodsFig1.png"),hjust=0)+theme(plot.margin = margin(0, 0, 0, 0))
-plot_grid(mf,ncol=1)
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-IGAS_Methods-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Methods-1.png"
 id="fig-IGAS_Methods"
 alt="Figure 2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square" />
 
@@ -456,42 +357,8 @@ significant effect of condition F(1,71)=1.42, p=.24, $\eta^{2}_G$ = .02,
 and no significant interaction between condition and training stage,
 F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-exp1TrainPosition <- e1 %>% filter(stage!="Transfer",mode==1) %>%ungroup() %>% 
-  group_by(sbjCode,Group,conditType,trainHalf,positionX) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),.groups = 'keep')
-
-exp1TrainPosition3 <- e1 %>% filter(stage!="Transfer",mode==1) %>%ungroup() %>% 
-  group_by(sbjCode,Group,conditType,stage,positionX) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),.groups = 'keep')
-
-exp1Train <- e1 %>% filter(stage!="Transfer",mode==1)  %>%
-  group_by(sbjCode,Group,conditType,trainHalf) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),.groups = 'keep')
-
-exp1Train3 <- e1 %>% filter(stage!="Transfer",mode==1)  %>%
-  group_by(sbjCode,Group,conditType,stage) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),.groups = 'keep')
-
-
-e1train2 <- exp1TrainPosition3 %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
-  geom_bar(aes(group=stage,fill=stage),stat="summary",fun=mean,position=dodge)+
-  facet_wrap(~conditType,ncol=2)+
-  stat_summary(aes(x=positionX,group=stage),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
-  ylab("Mean Distance From Center Of Target")+
-  xlab("Training Location(s)")+theme(plot.title = element_text(hjust = 0.5))+
-  guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)
-
-
-#plot_grid(title,e1train2,capt,ncol=1,rel_heights=c(.18,1,.15))
-plot_grid(e1train2,ncol=1)
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-IGAS_Training1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
 id="fig-IGAS_Training1"
 alt="Figure 3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
 
@@ -509,54 +376,13 @@ p\<.001, η2G = .23. The effect of training condition was significant
 F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction
 between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-exp1.Test <- e1 %>% filter(stage=="Transfer") %>% select(-trainHalf)%>% group_by(positionX) %>% 
-  mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-  group_by(sbjCode,positionX) %>% 
-  mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%
-  ungroup() %>% group_by(sbjCode,conditType,positionX,ThrowPosition) %>%
-summarise(MeanTargetDeviance = mean(AbsDistFromCenter),MeanScaleDev = mean(scaledDev),.groups="keep")%>% as.data.frame()
-
-#manuscript plot
-e1test1=exp1.Test %>% ggplot(aes(x=positionX,y=MeanTargetDeviance,group=conditType,fill=conditType))+
-  geom_bar(stat="summary",fun=mean,position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+scale_x_discrete(name="Testing Location",labels=e1Labels)
-
-e1test1
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-IGAS_Testing1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
 id="fig-IGAS_Testing1"
 alt="Figure 4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
 
   
   
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-exp1.Test <- e1 %>% filter(stage=="Transfer") %>% select(-trainHalf)%>% group_by(positionX) %>% 
-  mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-  group_by(sbjCode,positionX) %>% 
-  mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%
-  ungroup() %>% group_by(sbjCode,conditType,positionX,ThrowPosition) %>%
-summarise(MeanTargetDeviance = mean(AbsDistFromCenter),MeanScaleDev = mean(scaledDev),.groups="keep")%>% as.data.frame()
-
-
-test= exp1.Test %>% dplyr::rename(Condition="conditType") %>% group_by(Condition,positionX) %>%
-   summarise(Mean=round(mean(MeanTargetDeviance),2),sd=round(sd(MeanTargetDeviance),2),.groups="keep")
- test=test %>% group_by(Condition) %>% mutate(GroupAvg=round(mean(Mean),2),groupSd=round(sd(Mean),2))
- test = test %>% mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
- test=test[,1:3]
-
-kable(test,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") # %>%  # kable_classic() #%>% kableExtra::footnote(general=captionText,general_title = "")
-```
-
-</details>
 
 | Position | Constant       | Varied         |
 |:---------|:---------------|:---------------|
@@ -682,115 +508,13 @@ significant effect of training stage F(2,172)=56.29, p\<.001,
 $\eta^{2}_G$ =.11, and no significant interaction between group and
 training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2$stage <- factor(e2$stage, levels = c("Beginning", "Middle", "End","Transfer"),ordered = TRUE)
-
-exp2TrainPosition <- e2  %>% filter(stage!="Transfer") %>%ungroup() %>% 
-  group_by(sbjCode,Group2,conditType,trainHalf,positionX) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter))%>% as.data.frame()
-
-exp2TrainPosition3 <- e2  %>% filter(stage!="Transfer") %>%ungroup() %>% 
-  mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-  group_by(sbjCode,positionX) %>% mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%ungroup() %>%
-  group_by(sbjCode,Group2,conditType,stage,positionX) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),MeanScaledDev=mean(scaledDev,trim=.05))%>% as.data.frame()
-
-exp2Train <- e2  %>% filter(stage!="Transfer")  %>% 
-  group_by(sbjCode,Group2,conditType,trainHalf) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter)) %>% as.data.frame()
-
-exp2Train3 <- e2  %>% filter(stage!="Transfer")  %>% ungroup() %>% 
-  mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-  group_by(sbjCode,positionX) %>% mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%ungroup() %>%
-  group_by(sbjCode,Group2,conditType,stage) %>% 
-  summarise(MeanTargetDistance=mean(AbsDistFromCenter),MeanScaledDev=mean(scaledDev,trim=.05)) %>% as.data.frame()
-
-transfer <- filter(e2, stage=="Transfer") %>% droplevels() %>% select(-trainHalf,-initialVelocityY,ThrowPosition2)%>% ungroup()
-transfer <- transfer %>% group_by(positionX) %>% mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-  group_by(sbjCode,positionX) %>% mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%ungroup()
-
-transfer <- transfer %>% group_by(sbjCode,positionX) %>% mutate(ind=1,testPosIndex=cumsum(ind),posN=max(testPosIndex)) %>%
-  select(-ind) %>% mutate(testHalf = case_when(testPosIndex<15 ~"1st Half",testPosIndex>=15 ~"2nd Half")) %>% rstatix::convert_as_factor(testHalf)
-
-variedTest <- transfer %>% filter(condit==7) %>% mutate(extrapolate=ifelse(positionX=="900" | positionX=="400","extrapolation","interpolation")) 
-constantTest <- transfer %>% filter(condit!=7) %>% mutate(extrapolate=ifelse(distFromTrain==0,"interpolation","extrapolation"))
-
-transfer <- rbind(variedTest,constantTest)
-transfer<- transfer %>% mutate(novel=ifelse(distFromTrain3==0,"trainedLocation","novelLocation"))%>% rstatix::convert_as_factor(novel,extrapolate)
-
-transfer <- transfer %>% relocate(sbjCode,condit2,Group,conditType2,stage,trial,novel,extrapolate,positionX,AbsDistFromCenter,globalAvg,globalSd,scaledDev,distFromTrain3) %>% ungroup()
-
-
-# novelAll <- transfer %>% filter(distFromTrain!=0, distFromTrain3!=0) %>% select(-globalAvg,-globalSd,-scaledDev)%>% droplevels() %>% ungroup()
-# novelAll <- novelAll %>% group_by(positionX) %>%
-#  mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
-#   group_by(sbjCode,positionX) %>% mutate(scaledDev = scaleVar(globalAvg,globalSd,AbsDistFromCenter)) %>%ungroup()
-
-novelAll <- transfer %>% filter(distFromTrain!=0, distFromTrain3!=0)
-novelAllMatched <- novelAll %>% filter(condit!=5,condit!=2)
-
-
-constantIden <- transfer %>% filter(condit !=7,distFromTrain==0) # only constant groups from their training position
-variedTest <- transfer %>% filter(condit==7) # only varied testing
-variedVsIden <- rbind(constantIden,variedTest) # all varied combined with constant identity
-
-
-variedNovel <- variedTest %>% filter(distFromTrain3 !=0) # removes 500 and 800 from varied
-constantIden2 <- transfer %>% filter(condit !=7,condit!=5,condit!=2,distFromTrain==0) # only constant groups from training position 400,625,675,900
-variedVsNovelIden <- rbind(constantIden2,variedNovel) # novel positions for varied, trained for constant
-
-exp2.Test <- transfer %>%group_by(sbjCode,conditType,positionX,ThrowPosition)%>%
-  summarise(MeanTargetDeviance = mean(AbsDistFromCenter,trim=.05),MeanScaledDev=mean(scaledDev,trim=.05)) %>%ungroup() %>% as.data.frame()
-
-exp2.Test2 <- exp2.Test %>% group_by(sbjCode,conditType)%>%
-  summarise(MeanTargetDeviance = mean(MeanTargetDeviance),MeanScaledDev=mean(MeanScaledDev)) %>%ungroup() %>% as.data.frame()
-
-exp2.Test7 <- transfer %>%group_by(Group2,sbjCode,positionX,Group,conditType,ThrowPosition4) %>% 
-  summarise(MeanTargetDeviance = mean(AbsDistFromCenter,trim=.05),MeanScaledDev=mean(scaledDev,trim=.05)) %>% as.data.frame()
-
-exp2.Test7.agg <- exp2.Test7  %>%group_by(Group2,sbjCode,Group,conditType) %>% 
-  summarise(MeanTargetDeviance = mean(MeanTargetDeviance),MeanScaledDev=mean(MeanScaledDev)) %>% as.data.frame()
-
-exp2.Test7.agg2 <- exp2.Test7  %>%group_by(sbjCode,conditType) %>% 
-  summarise(MeanTargetDeviance = mean(MeanTargetDeviance),MeanScaledDev=mean(MeanScaledDev)) %>% as.data.frame()
-```
-
-</details>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-### New - 3 stage
-e2train1<-exp2TrainPosition3 %>% ggplot(aes(x=stage,y=MeanTargetDistance))+
-  geom_bar(aes(group=stage,fill=stage),stat="summary",position=dodge,fun="mean")+
-  stat_summary(aes(x=stage,group=stage),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+facet_wrap(~conditType,ncol=2)+
-  ylab("Mean Distance From Center Of Target") +xlab("Training Stage")+
-  theme(plot.title = element_text(face="bold",hjust = 0.0,size=9),
-        plot.title.position = "plot")+
-  guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)+ggtitle("A")
-
-e2train2<-exp2TrainPosition3 %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
-  geom_bar(aes(group=stage,fill=stage),stat="summary",position=dodge,fun="mean")+
-  facet_wrap(~conditType,ncol=2)+stat_summary(aes(x=positionX,group=stage),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+ylab("Mean Distance From Center Of Target") +xlab("Training Location(s)")+
-  theme(plot.title = element_text(face="bold",hjust = 0,size=9),
-        plot.title.position = "plot")+
-  guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)+ggtitle("B")
-
-#plot_grid(e2train1,e2train2,ncol=1)
-
-e2train1
-e2train2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2train-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
 id="fig-e2train-1"
 alt="Figure 5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." />
 
-<img src="full_files/figure-commonmark/fig-e2train-2.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-2.png"
 id="fig-e2train-2"
 alt="Figure 6: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." />
 
@@ -814,36 +538,8 @@ over the constant groups across the testing positions. <a href="#fig-e2testa" cl
 performance between the varied condition and the individual constant
 groups.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# manuscript plot
-e2test1<-exp2.Test %>% ggplot(aes(x=ThrowPosition,y=MeanTargetDeviance,group=conditType,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+guides(fill=guide_legend(title="Training Condition"))+
-  theme(plot.title=element_text(face="bold",size=9),
-        plot.title.position = "plot",
-        legend.title.align=.25)+
-  ggtitle("A")
-
-
-e2test2<-exp2.Test7 %>% 
-  ggplot(aes(x=Group,y=MeanTargetDeviance,group=conditType,fill=conditType))+
-  geom_bar(stat="summary",position=position_dodge(),fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=position_dodge())+
-  facet_wrap(~ThrowPosition4)+
-  ylab("Mean Distance From Center Of Target")+
-  guides(fill=guide_legend(title="Training Condition"))+
-  theme(plot.title=element_text(face="bold",size=9),
-        plot.title.position = "plot",
-        legend.title.align=.25,
-        axis.text.x = element_text(size = 7,angle=45,hjust=1))+
-  scale_x_discrete(name=" Training Group",labels=e2Labels)+ggtitle("B")
-
-e2test1 / e2test2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2testa-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
 id="fig-e2testa"
 alt="Figure 7: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean." />
 
@@ -851,22 +547,6 @@ alt="Figure 7: Testing phase performance from each of the six testing positions
   
   
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-tab2= exp2.Test %>% rename(Condition="conditType") %>% group_by(Condition,positionX) %>%
-   summarise(Mean=round(mean(MeanTargetDeviance),2),sd=round(sd(MeanTargetDeviance),2),.groups="keep")
- tab2=tab2 %>% group_by(Condition) %>% mutate(GroupAvg=round(mean(Mean),2),groupSd=round(sd(Mean),2))
- tab2 = tab2 %>% mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% 
-   select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
- tab2=tab2[,1:3]
-
-
-kable(tab2,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
-```
-
-</details>
 <div id="tbl-e2table1">
 
 | Position | Constant       | Varied         |
@@ -890,28 +570,6 @@ averaged across positions. Here again, we found a significant effect of
 condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 .02 .
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-sum.novelAll <- novelAll %>% group_by(sbjCode,conditType,positionX) %>% 
-  summarise(MeanTargetDev=mean(AbsDistFromCenter,trim=.05),MeanScaledDev=mean(scaledDev,trim=.05),.groups="keep") %>% as.data.frame()
-
-tab3=sum.novelAll %>% rename(Condition="conditType") %>% group_by(Condition,positionX) %>%
-  summarise(Mean=round(mean(MeanTargetDev),2),sd=round(sd(MeanTargetDev),2),.groups="keep")
-
- tab3=tab3 %>% group_by(Condition) %>% mutate(GroupAvg=round(mean(Mean),2),groupSd=round(sd(Mean),2))
- 
- tab3 = tab3 %>% 
-   mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
- tab3=tab3[,1:3]
-
-
-
-kable(tab3,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
-```
-
-</details>
 <div id="tbl-e2table2">
 
 | Position | Constant       | Varied         |
@@ -938,45 +596,14 @@ analyses on the aggregated data. In this case, the effect of condition
 did not reach statistical significance F(1,149)=3.14, p=.079,
 $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-sum.variedVsNovelIden <- variedVsNovelIden  %>%
-  group_by(sbjCode,conditType,positionX) %>% 
-  summarise(MeanTargetDev=mean(AbsDistFromCenter,trim=.05),MeanScaledDev=mean(scaledDev,trim=.05),.groups="keep") %>% as.data.frame()
-
-e2Test2 <- sum.variedVsNovelIden %>% ggplot(aes(x=positionX,y=MeanTargetDev,group=conditType,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)
-
-
-e2Test2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2test1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
 id="fig-e2test1"
 alt="Figure 8: A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." />
 
   
   
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-tab4=sum.variedVsNovelIden %>% rename(Condition="conditType") %>% group_by(Condition,positionX) %>%
-  summarise(Mean=round(mean(MeanTargetDev),2),sd=round(sd(MeanTargetDev),2),.groups="keep")
-
-tab4=tab4 %>% group_by(Condition) %>% 
-   mutate(GroupAvg=round(mean(Mean),2),groupSd=round(sd(Mean),2))
- 
-tab4 = tab4 %>% mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
- tab4=tab4[,1:3]
-
-kable(tab4,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
-```
-
-</details>
 <div id="tbl-e2tab3">
 
 | Position | Constant      | Varied         |
@@ -1042,47 +669,8 @@ in <a href="#fig-taskSpace" class="quarto-xref">Figure 9</a>, the solution thro
 entire space of velocity combinations used by participants throughout
 the experiment.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-taskspace <- e2 %>% filter(AbsDistFromCenter<900)
-taskspace$hitOrMiss <- ifelse(taskspace$trialType==11,"Hit Target","Missed Target")
-
-solSpace <- e2 %>% filter(trialType==11)
-#solSpace %>% ggplot(aes(x=X_Velocity,y=Y_Velocity)) + geom_point(aes(colour=ThrowPosition),alpha=0.58) + ggtitle("") 
-
-solSpace$Result = ifelse(solSpace$ThrowPosition==400,"400",solSpace$ThrowPosition)
-solSpace$Result = ifelse(solSpace$ThrowPosition==500,"500",solSpace$Result)
-solSpace$Result= ifelse(solSpace$ThrowPosition==625,"625",solSpace$Result)
-solSpace$Result = ifelse(solSpace$ThrowPosition==675,"675",solSpace$Result)
-solSpace$Result = ifelse(solSpace$ThrowPosition==800,"800",solSpace$Result)
-solSpace$Result = ifelse(solSpace$ThrowPosition==900,"900",solSpace$Result)
-
-
-missSpace <- e2 %>% filter(trialType !=11)
-missSpace$Result = "Missed Target"
-solSpace$Result <- solSpace$Result
-
-# the usual method of changing the legend title does not seem to work after the colours are manually scaled. 
-# multiplied velocoties by -1 to make the axes less confusing
-ss=solSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1)) + 
-  geom_point(aes(colour=Result),alpha=0.6) + 
-  scale_color_manual(values =brewer.pal(n=6,name="Set1"))+
-  labs(colour="Target Hit Thrown from Position:") + xlab("X Release Velocity") + ylab("Y Release Velocity")+ggtitle("A")
-
-fullSpace <- rbind(missSpace,solSpace)
-
-fs<- fullSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1,colour=Result)) + 
-  geom_point(aes(),alpha=0.6) + scale_color_manual(values =brewer.pal(n=7,name="Set1"))+
-  labs(colour="Target Hit or Miss From Position:") + xlab("X Release Velocity") + ylab("Y Release Velocity") +ggtitle("B")
-
-library(patchwork)
-ss/fs
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-taskSpace-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
 id="fig-taskSpace"
 alt="Figure 9: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment." />
 
@@ -1289,64 +877,8 @@ position identical to that which was trained, there are always some
 psychological contextual differences between training and testing
 throws, resulting in a non-zero dissimilarity.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# 
-
-p=2
-c<- .000002
-
-trainingTestingDifference=2000;
-cvaried=.00002
-cconstant=.0005
-simdat <- data.frame(x=rep(seq(200,1000),3),condit=c(rep("varied",1602),rep("constant",801)),
-                     train.position=c(rep(400,801),rep(800,801),rep(600,801)),c=.0002,p=2) %>%
-                     mutate(c2=ifelse(condit=="varied",cvaried,cconstant),
-                            genGauss=exp(-c*(abs((x-train.position)^p))),
-                            genGaussDist=exp(-c*(trainingTestingDifference+abs((x-train.position)^p))),
-                            genGauss2=exp(-c2*(abs((x-train.position)^p))),
-                            genGaussDist2=exp(-c2*(trainingTestingDifference+abs((x-train.position)^p))),
-                            ) %>% 
-  group_by(x,condit) %>%
-  summarise(genGauss=mean(genGauss),genGauss2=mean(genGauss2),genGaussDist=mean(genGaussDist),genGaussDist2=mean(genGaussDist2),.groups='keep')
-
-
-#plot(x,exp(c*(trainingTestingDifference+abs(x-800)))+exp(c*(trainingTestingDifference+abs(x-400)))
-
-colorVec=c("darkblue","darkred")
-plotSpecs <- list(geom_line(alpha=.7),scale_color_manual(values=colorVec),
-                  geom_vline(alpha=.55,xintercept = c(400,800),color=colorVec[2]),
-                  geom_vline(alpha=.55,xintercept = c(600),color=colorVec[1]),
-                  ylim(c(0,1.05)),
-                  #xlim(c(250,950)),
-                  scale_x_continuous(breaks=seq(200,1000,by=200)),
-                  xlab("Test Stimulus"),
-                  annotate(geom="text",x=455,y=1.05,label="Varied",size=3.0),
-                  annotate(geom="text",x=455,y=.97,label="Training",size=3.0),
-                  annotate(geom="text",x=662,y=1.05,label="Constant",size=3.0),
-                  annotate(geom="text",x=657,y=.97,label="Training",size=3.0),
-                  annotate(geom="text",x=855,y=1.05,label="Varied",size=3.0),
-                  annotate(geom="text",x=855,y=.97,label="Training",size=3.0),
-                  theme(panel.border = element_rect(colour = "black", fill=NA, size=1),
-                        legend.position="none"))
-
-ip1 <- simdat  %>% ggplot(aes(x,y=genGauss,group=condit,col=condit))+plotSpecs+ylab("Amount of Generalization")+ggtitle("Identical context, 1c")
-ip2 <- simdat %>%  ggplot(aes(x,y=genGauss2,group=condit,col=condit))+plotSpecs+ylab("")+ggtitle("Identical context, 2c")
-ip3 <- simdat  %>% ggplot(aes(x,y=genGaussDist,group=condit,col=condit))+plotSpecs+ylab("Amount of Generalization")+
-  ggtitle("Added distance due to context, 1c")+theme(plot.margin = margin(0, 0, 0, 1))
-ip4 <- simdat %>%  ggplot(aes(x,y=genGaussDist2,group=condit,col=condit))+plotSpecs+ylab("")+
-  ggtitle("Added distance due to context, 2c")+theme(plot.margin = margin(0, 0, 0, 1))
-# gridExtra::grid.arrange(ip1,ip2,ip3,ip4,ncol=2)
-
-gtitle="Figure 9."
-title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
-plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-Toy-Model2-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model2-1.png"
 id="fig-Toy-Model2"
 alt="Figure 10: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}, whereas the constant group generalization is generated from 2\cdot e^{(c\cdot|x-600|)}. For the top right panel, the c constants in the original equations are different for the 2 conditions, with c=-.002 for the varied condition, and c=-.008 for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)} ." />
 
@@ -1469,7 +1001,8 @@ The influence of variability on function learning tasks has received relatively 
 
 In the domain of visuomotor learning, van Dam & Ernst (2015) employed a task which required participants to learn a linear function between the spikiness of shape stimuli and the correct horizontal position to make a rapid pointing response. The shapes ranged from very spiky to completely circular at the extreme ends of the space. Participants trained with intermediate shapes from a lower variation (2 shapes) or higher variation (5 shapes) condition, with the 2 items of the lower varied condition matching the items used on the extreme ends of the higher variation training space. Learning was significantly slower in the higher variation group. However, the two conditions did not differ when tested with novel shapes, with both groups producing extrapolation responses of comparable magnitudes to the most similar training item, rather than in accordance with the true linear function. The authors accounted for both learning and extrapolation performance with a Bayesian learning model. Similar to ALM, the bayesian model assumes that generalization occurs as a Gaussian function of the distance between stimuli. However unlike ALM, the bayesian learning model utilizes more elaborate probabilistic stimulus representations, with a separate Kalman Filter for each shape stimulus.
 
-<img src="full_files/figure-commonmark/fig-delosh-extrap-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
 id="fig-delosh-extrap"
 alt="Figure 11: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples." />
 
@@ -1581,28 +1114,6 @@ A final training stage presented participants with "feedback" testing for each o
 
 Figure 13: Experiment 1 Design. Constant and Varied participants complete different training conditions.
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
-#   brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
-#   stringr, here,conflicted, patchwork, knitr)
-# #options(brms.backend="cmdstanr",mc.cores=4)
-# options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
-# walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
-# walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
-e1 <- readRDS(here("data/e1_08-21-23.rds")) 
-e1Sbjs <- e1 |> group_by(id,condit) |> summarise(n=n())
-testE1 <- e1 |> filter(expMode2 == "Test")
-nbins=5
-trainE1 <-  e1 |> filter(expMode2=="Train") |> group_by(id,condit, vb) |> 
-    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
-trainE1_max <- trainE1 |> filter(Trial_Bin == nbins, bandInt==800)
-trainE1_avg <- trainE1_max |> group_by(id,condit) |> summarise(avg = mean(dist))
-```
-
-</details>
 
 ### Analyses Strategy
 
@@ -1622,53 +1133,10 @@ In each experiment we compare varied and constant conditions in terms of 1) accu
 
 ### Results
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-p1 <- trainE1 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
-    stat_summary(geom = "line", fun = mean) +
-    stat_summary(geom = "errorbar", fun.data = mean_se, width = .4, alpha = .7) +
-    facet_wrap(~vb)+
-    scale_x_continuous(breaks = seq(1, nbins + 1)) +
-    theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
-#ggsave(here("Assets/figs/e1_train_deviation.png"), p1, width = 8, height = 4,bg="white")
-p1
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e1-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
 id="fig-e1-train-dev"
 alt="Figure 14: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| label: tbl-e1-train-dist
-##| tbl-cap: "Experiment 1 - Learning curves. "
-##| output: asis
-
-bmm_e1_train<- trainE1_max %>% 
-  brm(dist ~ condit, 
-      file=here("data/model_cache/e1_train_deviation"),
-      data = .,
-      iter = 2000,
-      chains = 4,
-      control = list(adapt_delta = .94, max_treedepth = 13))
-mtr1 <- as.data.frame(describe_posterior(bmm_e1_train, centrality = "Mean"))[, c(1,2,4,5,6)]
-colnames(mtr1) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-
-# mtr1 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#    kable(booktabs = TRUE)
-
-cdtr1 <- get_coef_details(bmm_e1_train, "conditVaried")
-```
-
-</details>
 <div id="tbl-e1-train-dist">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
@@ -1683,36 +1151,6 @@ Table 4: **Experiment 1 - End of training performance**. The Intercept represen
 
 *Training*. <a href="#fig-e1-train-dev" class="quarto-xref">Figure 14</a> displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ($\beta$ = 79.64, 95% CrI \[57.92, 101.63\]; pd = 100%).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| label: tbl-e1-bmm-dist
-##| tbl-cap: "E1. Training vs. Extrapolation"
-#| 
-modelFile <- paste0(here::here("data/model_cache/"), "e1_dist_Cond_Type_RF_2")
-bmtd <- brm(dist ~ condit * bandType + (1|bandInt) + (1|id), 
-    data=testE1, file=modelFile,
-    iter=5000,chains=4, control = list(adapt_delta = .94, max_treedepth = 13))
-                        
-# mted1 <- as.data.frame(describe_posterior(bmtd, centrality = "Mean"))[, c(1,2,4,5,6)]
-# colnames(mted1) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-
-# r_bandInt_params <- get_variables(bmtd)[grepl("r_bandInt", get_variables(bmtd))]
-# posterior_summary(bmtd,variable=r_bandInt_params)
-# 
-# r_bandInt_params <- get_variables(bmtd)[grepl("r_id:bandInt", get_variables(bmtd))]
-# posterior_summary(bmtd,variable=r_bandInt_params)
-
-# mted1 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |> kable(booktabs = TRUE)
-cdted1 <- get_coef_details(bmtd, "conditVaried")
-cdted2 <-get_coef_details(bmtd, "bandTypeExtrapolation")
-cdted3 <-get_coef_details(bmtd, "conditVaried:bandTypeExtrapolation")
-```
-
-</details>
 <div id="tbl-e1-bmm-dist">
 
 | Term                               | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
@@ -1727,57 +1165,10 @@ Table 5: **Experiment 1 testing accuracy**. Main effects of condition and band 
 
 *Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in <a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 5</a>. The main effect of training condition was not significant ($\beta$ = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands ($\beta$ = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant ($\beta$ = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in <a href="#fig-e1-test-dev" class="quarto-xref">Figure 15</a>, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-pe1td <- testE1 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
-    stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
-    stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x="Band", y="Deviation From Target")
-
-condEffects <- function(m,xvar){
-  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
-  stat_dist_pointinterval() + 
-  stat_halfeye(alpha=.1, height=.5) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-  
-}
-
-pe1ce <- bmtd |> emmeans( ~condit + bandType) |>
-  gather_emmeans_draws() |>
- condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type")
-
-p2 <- (pe1td + pe1ce) + plot_annotation(tag_levels= 'A')
-#ggsave(here::here("Assets/figs", "e1_test-dev.png"), p2, width=8, height=4, bg="white")
-p2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e1-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
 id="fig-e1-test-dev"
 alt="Figure 15: A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% credible intervals." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| label: tbl-e1-bmm-vx
-##| tbl-cap: "Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
-e1_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
-                        data=test,file=paste0(here::here("data/model_cache", "e1_testVxBand_RF_5k")),
-                        iter=5000,chains=4,silent=0,
-                        control=list(adapt_delta=0.94, max_treedepth=13))
-
-#GetModelStats(e1_vxBMM) |> kable(booktabs = TRUE)
-
-cd1 <- get_coef_details(e1_vxBMM, "conditVaried")
-sc1 <- get_coef_details(e1_vxBMM, "bandInt")
-intCoef1 <- get_coef_details(e1_vxBMM, "conditVaried:bandInt")
-```
-
-</details>
 
   
 
@@ -1795,71 +1186,14 @@ Table 6: Experiment 1. Bayesian Mixed Model Predicting velocity as a function o
 
 Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 7</a> for the full model results. The estimated coefficient for training condition ($\beta$ = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($\beta$ = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in <a href="#fig-e1-test-vx" class="quarto-xref">Figure 16</a>.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-testE1 %>% group_by(id,vb,condit) |> plot_distByCondit()
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e1-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
 id="fig-e1-test-vx"
 alt="Figure 16: Empirical distribution of velocities producing in testing stage. Translucent bands with dash lines indicate the correct range for each velocity band." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-pe1vce <- e1_vxBMM |> emmeans( ~condit + bandInt,re_formula=NA, 
-                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
-  gather_emmeans_draws() |> 
-  condEffects(bandInt) +
-  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
-  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
-                     labels = levels(testE1$vb), 
-                     limits = c(0, 1400)) + 
-  scale_y_continuous(expand=expansion(add=100),breaks=round(seq(0,2000,by=200),2)) +
-  theme(legend.title=element_blank()) + 
-  labs(y="Velcoity", x="Band")
-
-fe <- fixef(e1_vxBMM)[,1]
-fixed_effect_bandInt <- fixef(e1_vxBMM)[,1]["bandInt"]
-fixed_effect_interaction <- fixef(e1_vxBMM)[,1]["conditVaried:bandInt"]
-
-re <- data.frame(ranef(e1_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
-  rownames_to_column("id") |> 
-  left_join(e1Sbjs,by="id") |>
-  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction*(condit=="Varied"),slope = Estimate + adjust )
-
-
-pid_den1 <- ggplot(re, aes(x = slope, fill = condit)) + 
-  geom_density(alpha=.5) + 
-  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
-   theme(legend.title=element_blank()) + 
-  labs(x="Slope Coefficient",y="Density")
-
-pid_slopes1 <- re |>  mutate(id=reorder(id,slope)) |>
-  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
-    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
-  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-     theme(legend.title=element_blank(), 
-           axis.text.y = element_text(size=6) ) + 
-    labs(x="Estimated Slope", y="Participant")  + 
-    ggh4x::facet_wrap2(~condit,axes="all",scales="free_y")
-
-
-p3 <- (pe1vce + pid_den1 + pid_slopes1) + plot_annotation(tag_levels= 'A')
-#ggsave(here::here("Assets/figs", "e1_test-vx.png"), p3,width=9,height=11, bg="white",dpi=600)
-p3
-```
-
-</details>
 <div id="tbl-e1-bmm-vx">
 
 <figure>
-<img src="full_files/figure-commonmark/tbl-e1-bmm-vx-1.png" alt="Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
+<img src="full.markdown_strict_files/figure-markdown_strict/tbl-e1-bmm-vx-1.png" width="1056" alt="Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
 <figcaption aria-hidden="true">Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.</figcaption>
 </figure>
 
@@ -1873,25 +1207,6 @@ In Experiment 1, we investigated how variability in training influenced particip
 More importantly, the varied training group exhibited significantly larger deviations from the target velocity bands during the testing phase, particularly for the extrapolation bands that were not encountered by either condition during training.
 
 ## Experiment 2
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)
-# walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
-e2 <- readRDS(here("data/e2_08-04-23.rds")) 
-e2Sbjs <- e2 |> group_by(id,condit) |> summarise(n=n())
-testE2 <- e2 |> filter(expMode2 == "Test")
-nbins=5
-trainE2 <-  e2 |> filter(expMode2=="Train") |> group_by(id,condit, vb) |> 
-    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
-trainE2_max <- trainE2 |> filter(Trial_Bin == nbins, bandInt==600)
-
-# e2 |> group_by(condit, bandOrder) |> summarise(n_distinct(id))
-```
-
-</details>
 
 ### Methods & Procedure
 
@@ -1986,49 +1301,10 @@ Figure 17: Experiment 2 Design. Constant and Varied participants complete diffe
 
 ### Results
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-p1 <- trainE2 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
-    stat_summary(geom = "line", fun = mean) +
-    stat_summary(geom = "errorbar", fun.data = mean_se, width = .4, alpha = .7) +
-    facet_wrap(~vb)+
-    scale_x_continuous(breaks = seq(1, nbins + 1)) +
-    theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
-#ggsave(here("Assets/figs/e2_train_deviation.png"), p1, width = 8, height = 4,bg="white")
-p1
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
 id="fig-e2-train-dev"
 alt="Figure 18: Experiment 2 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-bmm_e2_train <- trainE2_max %>% 
-  brm(dist ~ condit, 
-      file=here("data/model_cache/e2_train_deviation"),
-      data = .,
-      iter = 2000,
-      chains = 4,
-      control = list(adapt_delta = .94, max_treedepth = 13))
-
-mtr2 <- as.data.frame(describe_posterior(bmm_e2_train, centrality = "Mean"))[, c(1,2,4,5,6)]
-colnames(mtr2) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-
-cdtr2 <- get_coef_details(bmm_e2_train, "conditVaried")
-# mtr2 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#   kable(escape=F,booktabs=T) 
-```
-
-</details>
 <div id="tbl-e2-train-dist">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
@@ -2043,28 +1319,6 @@ Table 8: **Experiment 2 - End of training performance**. The Intercept represen
 
 *Training*. <a href="#fig-e2-train-dev" class="quarto-xref">Figure 18</a> presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( $\beta$ = 36.15, 95% CrI \[16.35, 55.67\]; pd = 99.95%).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-modelFile <- paste0(here::here("data/model_cache/"), "e2_dist_Cond_Type_RF_2")
-bmtd2 <- brm(dist ~ condit * bandType + (1|bandInt) + (1|id), 
-    data=testE2, file=modelFile,
-    iter=5000,chains=4, control = list(adapt_delta = .94, max_treedepth = 13))
-                        
-# mted2 <- as.data.frame(describe_posterior(bmtd2, centrality = "Mean"))[, c(1,2,4,5,6)]
-# colnames(mted2) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-# mted2 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#   kable(booktabs=TRUE) 
-
-cd2ted1 <- get_coef_details(bmtd2, "conditVaried")
-cd2ted2 <-get_coef_details(bmtd2, "bandTypeExtrapolation")
-cd2ted3 <-get_coef_details(bmtd2, "conditVaried:bandTypeExtrapolation")
-```
-
-</details>
 <div id="tbl-e2-bmm-dist">
 
 | Term                               | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -2081,59 +1335,10 @@ Table 9: **Experiment 2 testing accuracy**. Main effects of condition and band 
 
 *Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in <a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 9</a>, reveal no significant main effect of training condition ($\beta$ = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant ($\beta$ = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see <a href="#fig-e2-test-dev" class="quarto-xref">Figure 19</a>).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-condEffects <- function(m,xvar){
-  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
-  stat_dist_pointinterval() + 
-  stat_halfeye(alpha=.1, height=.5) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-  
-}
-pe2td <- testE2 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
-    stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
-    stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x="Band", y="Deviation From Target")
-
-
-
-pe2ce <- bmtd2 |> emmeans( ~condit + bandType) |>
-  gather_emmeans_draws() |>
- condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type")
-
-p2 <- (pe2td + pe2ce) + plot_annotation(tag_levels= 'A')
-#ggsave(here::here("Assets/figs", "e2_test-dev.png"), p2, width=8, height=4, bg="white")
-p2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
 id="fig-e2-test-dev"
 alt="Figure 19: A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| label: tbl-e2-bmm-vx
-##| tbl-cap: "Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
-
-e2_vxBMM <- brm(vx ~ condit * bandInt + (1 + bandInt|id),
-                        data=test,file=paste0(here::here("data/model_cache", "e2_testVxBand_RF_5k")),
-                        iter=5000,chains=4,silent=0,
-                        control=list(adapt_delta=0.94, max_treedepth=13))
-
-#GetModelStats(e2_vxBMM ) |> kable(escape=F,booktabs=T, caption="Fit to all 6 bands")
-
-cd2 <- get_coef_details(e2_vxBMM, "conditVaried")
-sc2 <- get_coef_details(e2_vxBMM, "bandInt")
-intCoef2 <- get_coef_details(e2_vxBMM, "conditVaried:bandInt")
-```
-
-</details>
 <div id="tbl-e2-bmm-vx">
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -2148,76 +1353,14 @@ Table 10: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of con
 
 *Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 11</a>. The overall slope on target velocity band predictor was significantly positive, ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, ($\beta$ = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see <a href="#fig-e2-test-vx" class="quarto-xref">Figure 20</a>).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-testE2 %>% group_by(id,vb,condit) |> plot_distByCondit()
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
 id="fig-e2-test-vx"
 alt="Figure 20: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-condEffects <- function(m,xvar){
-  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
-  stat_dist_pointinterval() + 
-  stat_halfeye(alpha=.1, height=.5) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-}
-
-pe2vce <- e2_vxBMM |> emmeans( ~condit + bandInt,re_formula=NA, 
-                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
-  gather_emmeans_draws() |> 
-  condEffects(bandInt) +
-  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
-  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
-                     labels = levels(testE2$vb), 
-                     limits = c(0, 1400)) + 
-scale_y_continuous(expand=expansion(add=100),breaks=round(seq(0,2000,by=200),2)) +
-  theme(legend.title=element_blank()) + 
-  labs(y="Velcoity", x="Band")
-
-fe <- fixef(e2_vxBMM)[,1]
-fixed_effect_bandInt <- fixef(e2_vxBMM)[,1]["bandInt"]
-fixed_effect_interaction <- fixef(e2_vxBMM)[,1]["conditVaried:bandInt"]
-
-re <- data.frame(ranef(e2_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
-  rownames_to_column("id") |> 
-  left_join(e2Sbjs,by="id") |>
-  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction*(condit=="Varied"),slope = Estimate + adjust )
-
-pid_den2 <- ggplot(re, aes(x = slope, fill = condit)) + 
-  geom_density(alpha=.5) + 
-  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
-   theme(legend.title=element_blank()) + 
-  labs(x="Slope Coefficient",y="Density")
-
-pid_slopes2 <- re |>  mutate(id=reorder(id,slope)) |>
-  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
-    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
-  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-      theme(legend.title=element_blank(), 
-        axis.text.y = element_text(size=6) ) + 
-    labs(x="Estimated Slope", y="Participant")  + 
-    ggh4x::facet_wrap2(~condit,axes="all",scales="free_y")
-
-p3 <- (pe2vce + pid_den2 + pid_slopes2) + plot_annotation(tag_levels= 'A')
-#ggsave(here::here("Assets/figs", "e2_test-vx.png"), p3,width=9,height=11, bg="white",dpi=600)
-p3
-```
-
-</details>
 <div id="tbl-e2-bmm-vx">
 
 <figure>
-<img src="full_files/figure-commonmark/tbl-e2-bmm-vx-1.png" alt="Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
+<img src="full.markdown_strict_files/figure-markdown_strict/tbl-e2-bmm-vx-1.png" width="1056" alt="Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
 <figcaption aria-hidden="true">Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.</figcaption>
 </figure>
 
@@ -2230,57 +1373,12 @@ Experiment 2 extended the findings of Experiment 1 by examining the effects of t
 
 ## Experiment 3
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e3 <- readRDS(here("data/e3_08-04-23.rds")) |> 
-    mutate(trainCon=case_when(
-    bandOrder=="Original" ~ "800",
-    bandOrder=="Reverse" ~ "600",
-    TRUE ~ NA_character_
-    ), trainCon=as.numeric(trainCon)) 
-e3Sbjs <- e3 |> group_by(id,condit,bandOrder) |> summarise(n=n())
-testE3 <- e3 |> filter(expMode2 == "Test")
-nbins=5
-trainE3 <-  e3 |> filter(expMode2=="Train") |> group_by(id,condit,bandOrder, vb) |> 
-    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
-trainE3_max <- trainE3 |> filter(Trial_Bin == nbins, bandInt==trainCon)
-```
-
-</details>
-
 ### Methods & Procedure
 
 The major adjustment of Experiment 3 is for participants to receive ordinal feedback during training, in contrast to the continuous feedback of the prior experiments. After each training throw, participants are informed whether a throw was too soft, too hard, or correct (i.e. within the target velocity range). All other aspects of the task and design are identical to Experiments 1 and 2. We utilized the order of training and testing bands from both of the prior experiments, thus assigning participants to both an order condition (Original or Reverse) and a training condition (Constant or Varied). Participants were once again recruited from the online Indiana University Introductory Psychology Course pool. Following exclusions, 195 participants were included in the final analysis, n=51 in the Constant-Original condition, n=59 in the Constant-Reverse condition, n=39 in the Varied-Original condition, and n=46 in the Varied-Reverse condition.
 
 ### Results
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-bmm_e3_train <- trainE3_max %>% 
-  brm(dist ~ condit*bandOrder, 
-      file=here("data/model_cache/e3_train_deviation"),
-      data = .,
-      iter = 2000,
-      chains = 4,
-      control = list(adapt_delta = .94, max_treedepth = 13))
-
-# mtr3 <- as.data.frame(describe_posterior(bmm_e3_train, centrality = "Mean"))[, c(1,2,4,5,6)]
-# colnames(mtr3) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-# mtr3 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#   kable(escape=F,booktabs=T) 
-
-cd3tr1 <- get_coef_details(bmm_e3_train, "conditVaried")
-cd3tr2 <-get_coef_details(bmm_e3_train, "bandOrderReverse")
-cd3tr3 <-get_coef_details(bmm_e3_train, "conditVaried:bandOrderReverse")
-```
-
-</details>
 <div id="tbl-e3-train-dist">
 
 | Term                          | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -2295,58 +1393,10 @@ Table 12: **Experiment 3 - End of training performance**. The Intercept represe
 
 *Training*. <a href="#fig-e3-train-dev" class="quarto-xref">Figure 21</a> displays the average deviations from the target band across training blocks, and <a href="#tbl-e3-train-dist" class="quarto-xref">Table 12</a> shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( $\beta$ = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant $\beta$ = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( $\beta$ = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-p1 <- trainE3 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
-    stat_summary(geom = "line", fun = mean) +
-    stat_summary(geom = "errorbar", fun.data = mean_se, width = .4, alpha = .7) +
-    ggh4x::facet_nested_wrap(~bandOrder*vb,ncol=3)+
-    scale_x_continuous(breaks = seq(1, nbins + 1)) +
-    theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
-#ggsave(here("Assets/figs/e3_train_deviation.png"), p1, width = 9, height = 8,bg="white")
-p1
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e3-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
 id="fig-e3-train-dev"
 alt="Figure 21: E3. Deviations from target band during testing without feedback stage." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-#options(brms.backend="cmdstanr",mc.cores=4)
-modelFile <- paste0(here::here("data/model_cache/"), "e3_dist_Cond_Type_RF_2")
-bmtd3 <- brm(dist ~ condit * bandType*bandOrder + (1|bandInt) + (1|id), 
-    data=testE3, file=modelFile,
-    iter=5000,chains=4, control = list(adapt_delta = .94, max_treedepth = 13))
-                        
-# mted3 <- as.data.frame(describe_posterior(bmtd3, centrality = "Mean"))[, c(1,2,4,5,6)]
-# colnames(mted3) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")
-# mted3 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#   kable(booktabs=TRUE) 
-
-#ce_bmtd3 <- plot(conditional_effects(bmtd3),points=FALSE,plot=FALSE)
-#wrap_plots(ce_bmtd3)
-
-#ggsave(here::here("Assets/figs", "e3_cond_effects_dist.png"), wrap_plots(ce_bmtd3), width=11, height=11, bg="white")
-
-cd3ted1 <- get_coef_details(bmtd3, "conditVaried")
-cd3ted2 <-get_coef_details(bmtd3, "bandTypeExtrapolation")
-cd3ted3 <-get_coef_details(bmtd3, "conditVaried:bandTypeExtrapolation")
-cd3ted4 <-get_coef_details(bmtd3, "bandOrderReverse")
-cd3ted5 <-get_coef_details(bmtd3, "conditVaried:bandOrderReverse")
-cd3ted6 <-get_coef_details(bmtd3, "bandTypeExtrapolation:bandOrderReverse")
-cd3ted7 <-get_coef_details(bmtd3, "conditVaried:bandTypeExtrapolation:bandOrderReverse")
-```
-
-</details>
 <div id="tbl-e3-bmm-dist">
 
 | Term                                                | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -2371,73 +1421,10 @@ Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band
 
 E3. A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 ::: -->
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-condEffects <- function(m,xvar){
-  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
-  stat_dist_pointinterval() + 
-  stat_halfeye(alpha=.1, height=.5) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-  
-}
-
-pe3td <- testE3 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
-    stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
-    stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
-    facet_wrap(~bandOrder,ncol=1) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x="Band", y="Deviation From Target")
-
-
-pe3ce <- bmtd3 |> emmeans( ~condit *bandOrder*bandType) |>
-  gather_emmeans_draws() |>
- condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type") + 
- facet_wrap(~bandOrder,ncol=1)
-
-p2 <- pe3td + pe3ce + plot_annotation(tag_levels= 'A')
-#ggsave(here::here("Assets/figs", "e3_test-dev.png"), p2, width=9, height=8, bg="white")
-p2
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e3-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
 id="fig-e3-test-dev"
 alt="Figure 22: Experiment 3 Testing Accuracy. A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% confidence intervals." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| label: tbl-e3-bmm-vx
-##| tbl-cap: "Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"
-
-e3_vxBMM <- brm(vx ~ condit * bandOrder * bandInt + (1 + bandInt|id),
-                        data=test,file=paste0(here::here("data/model_cache", "e3_testVxBand_RF_5k")),
-                        iter=5000,chains=4,silent=0,
-                        control=list(adapt_delta=0.94, max_treedepth=13))
-
-# m1 <- as.data.frame(describe_posterior(e3_vxBMM, centrality = "Mean"))
-# m2 <- fixef(e3_vxBMM)
-# mp3 <- m1[, c(1,2,4,5,6)]
-# colnames(mp3) <- c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")                       
-# mp3 |> mutate(across(where(is.numeric), \(x) round(x, 2))) |>
-#   tibble::remove_rownames() |> 
-#   mutate(Term = stringr::str_replace_all(Term, "b_bandInt", "Band")) |>
-#   mutate(Term = stringr::str_remove(Term, "b_")) |>
-#   kable(escape=F,booktabs=T)
-
-#wrap_plots(plot(conditional_effects(e3_vxBMM),points=FALSE,plot=FALSE))
-
-cd1 <- get_coef_details(e3_vxBMM, "conditVaried")
-sc1 <- get_coef_details(e3_vxBMM, "bandInt")
-intCoef1 <- get_coef_details(e3_vxBMM, "conditVaried:bandInt")
-intCoef2 <- get_coef_details(e3_vxBMM, "bandOrderReverse:bandInt")
-coef3 <- get_coef_details(e3_vxBMM,"conditVaried:bandOrderReverse:bandInt")
-```
-
-</details>
 <div id="tbl-e3-bmm-vx">
 
 | Term                                  | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
@@ -2456,92 +1443,13 @@ Table 14: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of con
 
 *Testing Discrimination.* The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, $\beta$ = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in <a href="#fig-e3-test-vx" class="quarto-xref">Figure 23</a>, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| column: screen-inset-right
-# testE3 |> filter(bandOrder=="Original")|> group_by(id,vb,condit) |> plot_distByCondit()
-# testE3 |> filter(bandOrder=="Reverse")|> group_by(id,vb,condit) |> plot_distByCondit() +ggtitle("test")
-
-testE3 |> group_by(id,vb,condit,bandOrder) |> plot_distByCondit() + 
-   ggh4x::facet_nested_wrap(bandOrder~condit,scale="free_x")
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e3-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
 id="fig-e3-test-vx"
 alt="Figure 23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." />
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-##| eval: FALSE
-# pe3tv <- testE3 %>% group_by(id,vb,condit,bandOrder) |> plot_distByCondit() + ggh4x::facet_nested_wrap(bandOrder~condit,scale="free_x")
-
-
-condEffects <- function(m,xvar){
-  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
-  stat_dist_pointinterval() + 
-  stat_halfeye(alpha=.1, height=.5) +
-  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-  
-}
-
-pe3vce <- e3_vxBMM |> emmeans( ~condit* bandOrder* bandInt, 
-                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
-  gather_emmeans_draws() |> 
-  condEffects(bandInt) +
-  facet_wrap(~bandOrder,ncol=1) +
-  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
-  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
-                     labels = levels(testE3$vb), 
-                     limits = c(0, 1400)) + 
-scale_y_continuous(expand=expansion(add=100),breaks=round(seq(0,2000,by=200),2)) +
-  theme(legend.title=element_blank()) + 
-  labs(y="Velcoity", x="Band")
-
-fe <- fixef(e3_vxBMM)[,1]
-fixed_effect_bandInt <- fixef(e3_vxBMM)[,1]["bandInt"]
-fixed_effect_interaction1 <- fixef(e3_vxBMM)[,1]["conditVaried:bandInt"]
-fixed_effect_interaction2 <- fixef(e3_vxBMM)[,1]["bandOrderReverse:bandInt"]
-fixed_effect_interaction3 <- fixef(e3_vxBMM)[,1]["conditVaried:bandOrderReverse:bandInt"]
-
-re <- data.frame(ranef(e3_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
-  rownames_to_column("id") |> 
-  left_join(e3Sbjs,by="id") |>
-  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction1*(condit=="Varied") + 
-           fixed_effect_interaction2*(bandOrder=="Reverse") + 
-           fixed_effect_interaction3*(condit=="Varied" & bandOrder=="Reverse"),
-  slope = Estimate + adjust )
-
-pid_den3 <- ggplot(re, aes(x = slope, fill = condit)) + 
-  geom_density(alpha=.5) + 
-  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
-  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-   theme(legend.title=element_blank()) + 
-  labs(x="Slope Coefficient",y="Density") +
-  facet_wrap(~bandOrder,ncol=1)
-
-pid_slopes3 <- re |>  
-    mutate(id=reorder(id,slope)) |>
-  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
-    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
-    geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
-    theme(legend.title=element_blank(), 
-      axis.text.y = element_text(size=6) ) + 
-    labs(x="Estimated Slope", y="Participant")  + 
-    ggh4x::facet_nested_wrap(bandOrder~condit,axes="all",scales="free_y")
-
-p3 <- (pe3vce + pid_den3 + pid_slopes3) + plot_annotation(tag_levels= 'A')
-
-#ggsave(here::here("Assets/figs", "e3_test-vx.png"), p3,width=11,height=13, bg="white",dpi=800)
-p3
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e3-bmm-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
 id="fig-e3-bmm-vx"
 alt="Figure 24: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands." />
 
@@ -2549,44 +1457,8 @@ alt="Figure 24: Conditional effect of training condition and Band. Ribbons indi
 
 ## Computational Model
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-####| cache: false
-# pacman::p_load(dplyr,purrr,tidyr,ggplot2, data.table, here, patchwork, conflicted, 
-#                stringr,future,furrr, knitr, reactable,ggstance, htmltools,
-#                ggdist,ggh4x,brms,tidybayes,emmeans,bayestestR, gt)
-# #walk(c("dplyr"), conflict_prefer_all, quiet = TRUE)
-# #options(brms.backend="cmdstanr",mc.cores=4)
-# options(digits=3, scipen=999, dplyr.summarise.inform=FALSE)
-# walk(c("Display_Functions","fun_alm","fun_indv_fit","fun_model", "prep_model_data","org_functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
-```
-
-</details>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-###| cache: true
-invisible(list2env(load_sbj_data(), envir = .GlobalEnv))
-invisible(list2env(load_e1(), envir = .GlobalEnv))
-e1Sbjs <- e1 |> group_by(id,condit) |> summarise(n=n())
-e2_model <- load_e2()
-e3_model <- load_e3()
-options(contrasts = initial_contrasts)
-```
-
-</details>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-alm_plot()
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-alm-diagram-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
 id="fig-alm-diagram"
 alt="Figure 25: The Associative Learning Model (ALM). The diagram illustrates the basic structure of the ALM model as used in the present work. Input nodes are activated as a function of their similarity to the lower-boundary of the target band. The generalization parameter, c, determines the degree to which nearby input nodes are activated. The output nodes are activated as a function of the weighted sum of the input nodes - weights are updated via the delta rule." />
 
@@ -2653,71 +1525,25 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
 
 #### Group level Patterns
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-post_tabs <- abc_tables(post_dat,post_dat_l)
-train_tab <- abc_train_tables(pd_train,pd_train_l)
-
-e1_tab <- rbind(post_tabs$agg_pred_full |> mutate("Task Stage"="Test"), train_tab$agg_pred_full |> mutate("Task Stage"="Train")) |> mutate(Fit_Method=rename_fm(Fit_Method)) 
-
-e1_tab %>%
-  group_by(`Task Stage`, Fit_Method, Model, condit) %>%
-  summarize(ME = mean(mean_error), .groups = "drop") %>%
-  pivot_wider(
-    names_from = c(Model, condit),
-    values_from = ME,
-    names_sep = "_"  # Add this line to specify the separator for column names
-  ) %>%
-  rename("Fit Method" = Fit_Method) %>%
-  gt() %>%
-  cols_move_to_start(columns = c(`Task Stage`)) %>%
-  cols_label(
-    `Task Stage` = "Task Stage"
-  ) %>%
-  fmt_number(
-    columns = starts_with("ALM") | starts_with("EXAM"),
-    decimals = 2
-  ) %>%
-  tab_spanner_delim(delim = "_") %>%
-  tab_style(
-    style = cell_fill(color = "white"),
-     locations = cells_body(columns = everything(), rows = everything())
-  ) %>%
-  tab_style(
-    style = cell_borders(sides = "top", color = "black", weight = px(1)),
-    locations = cells_column_labels()
-  ) %>%
-  tab_options(
-    column_labels.font.size = 10,
-    heading.title.font.size = 14,
-    heading.subtitle.font.size = 12,
-    table.font.size = 10, 
-    quarto.disable_processing = TRUE
-  ) 
-```
-
-</details>
 <div id="tbl-htw-modelError-e1">
 
-<div id="amktbranaf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#amktbranaf table {
+<div id="uluwiarmkk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uluwiarmkk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#amktbranaf thead, #amktbranaf tbody, #amktbranaf tfoot, #amktbranaf tr, #amktbranaf td, #amktbranaf th {
+#uluwiarmkk thead, #uluwiarmkk tbody, #uluwiarmkk tfoot, #uluwiarmkk tr, #uluwiarmkk td, #uluwiarmkk th {
   border-style: none;
 }
 
-#amktbranaf p {
+#uluwiarmkk p {
   margin: 0;
   padding: 0;
 }
 
-#amktbranaf .gt_table {
+#uluwiarmkk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2743,12 +1569,12 @@ e1_tab %>%
   border-left-color: #D3D3D3;
 }
 
-#amktbranaf .gt_caption {
+#uluwiarmkk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#amktbranaf .gt_title {
+#uluwiarmkk .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -2760,7 +1586,7 @@ e1_tab %>%
   border-bottom-width: 0;
 }
 
-#amktbranaf .gt_subtitle {
+#uluwiarmkk .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -2772,7 +1598,7 @@ e1_tab %>%
   border-top-width: 0;
 }
 
-#amktbranaf .gt_heading {
+#uluwiarmkk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2784,13 +1610,13 @@ e1_tab %>%
   border-right-color: #D3D3D3;
 }
 
-#amktbranaf .gt_bottom_border {
+#uluwiarmkk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#amktbranaf .gt_col_headings {
+#uluwiarmkk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2805,7 +1631,7 @@ e1_tab %>%
   border-right-color: #D3D3D3;
 }
 
-#amktbranaf .gt_col_heading {
+#uluwiarmkk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2825,7 +1651,7 @@ e1_tab %>%
   overflow-x: hidden;
 }
 
-#amktbranaf .gt_column_spanner_outer {
+#uluwiarmkk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2837,15 +1663,15 @@ e1_tab %>%
   padding-right: 4px;
 }
 
-#amktbranaf .gt_column_spanner_outer:first-child {
+#uluwiarmkk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#amktbranaf .gt_column_spanner_outer:last-child {
+#uluwiarmkk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#amktbranaf .gt_column_spanner {
+#uluwiarmkk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2857,11 +1683,11 @@ e1_tab %>%
   width: 100%;
 }
 
-#amktbranaf .gt_spanner_row {
+#uluwiarmkk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#amktbranaf .gt_group_heading {
+#uluwiarmkk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2887,7 +1713,7 @@ e1_tab %>%
   text-align: left;
 }
 
-#amktbranaf .gt_empty_group_heading {
+#uluwiarmkk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2902,15 +1728,15 @@ e1_tab %>%
   vertical-align: middle;
 }
 
-#amktbranaf .gt_from_md > :first-child {
+#uluwiarmkk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#amktbranaf .gt_from_md > :last-child {
+#uluwiarmkk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#amktbranaf .gt_row {
+#uluwiarmkk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2929,7 +1755,7 @@ e1_tab %>%
   overflow-x: hidden;
 }
 
-#amktbranaf .gt_stub {
+#uluwiarmkk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2942,7 +1768,7 @@ e1_tab %>%
   padding-right: 5px;
 }
 
-#amktbranaf .gt_stub_row_group {
+#uluwiarmkk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2956,15 +1782,15 @@ e1_tab %>%
   vertical-align: top;
 }
 
-#amktbranaf .gt_row_group_first td {
+#uluwiarmkk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#amktbranaf .gt_row_group_first th {
+#uluwiarmkk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#amktbranaf .gt_summary_row {
+#uluwiarmkk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2974,16 +1800,16 @@ e1_tab %>%
   padding-right: 5px;
 }
 
-#amktbranaf .gt_first_summary_row {
+#uluwiarmkk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#amktbranaf .gt_first_summary_row.thick {
+#uluwiarmkk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#amktbranaf .gt_last_summary_row {
+#uluwiarmkk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2993,7 +1819,7 @@ e1_tab %>%
   border-bottom-color: #D3D3D3;
 }
 
-#amktbranaf .gt_grand_summary_row {
+#uluwiarmkk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3003,7 +1829,7 @@ e1_tab %>%
   padding-right: 5px;
 }
 
-#amktbranaf .gt_first_grand_summary_row {
+#uluwiarmkk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3013,7 +1839,7 @@ e1_tab %>%
   border-top-color: #D3D3D3;
 }
 
-#amktbranaf .gt_last_grand_summary_row_top {
+#uluwiarmkk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3023,11 +1849,11 @@ e1_tab %>%
   border-bottom-color: #D3D3D3;
 }
 
-#amktbranaf .gt_striped {
+#uluwiarmkk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#amktbranaf .gt_table_body {
+#uluwiarmkk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3036,7 +1862,7 @@ e1_tab %>%
   border-bottom-color: #D3D3D3;
 }
 
-#amktbranaf .gt_footnotes {
+#uluwiarmkk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3050,7 +1876,7 @@ e1_tab %>%
   border-right-color: #D3D3D3;
 }
 
-#amktbranaf .gt_footnote {
+#uluwiarmkk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3059,7 +1885,7 @@ e1_tab %>%
   padding-right: 5px;
 }
 
-#amktbranaf .gt_sourcenotes {
+#uluwiarmkk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3073,7 +1899,7 @@ e1_tab %>%
   border-right-color: #D3D3D3;
 }
 
-#amktbranaf .gt_sourcenote {
+#uluwiarmkk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3081,63 +1907,63 @@ e1_tab %>%
   padding-right: 5px;
 }
 
-#amktbranaf .gt_left {
+#uluwiarmkk .gt_left {
   text-align: left;
 }
 
-#amktbranaf .gt_center {
+#uluwiarmkk .gt_center {
   text-align: center;
 }
 
-#amktbranaf .gt_right {
+#uluwiarmkk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#amktbranaf .gt_font_normal {
+#uluwiarmkk .gt_font_normal {
   font-weight: normal;
 }
 
-#amktbranaf .gt_font_bold {
+#uluwiarmkk .gt_font_bold {
   font-weight: bold;
 }
 
-#amktbranaf .gt_font_italic {
+#uluwiarmkk .gt_font_italic {
   font-style: italic;
 }
 
-#amktbranaf .gt_super {
+#uluwiarmkk .gt_super {
   font-size: 65%;
 }
 
-#amktbranaf .gt_footnote_marks {
+#uluwiarmkk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#amktbranaf .gt_asterisk {
+#uluwiarmkk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#amktbranaf .gt_indent_1 {
+#uluwiarmkk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#amktbranaf .gt_indent_2 {
+#uluwiarmkk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#amktbranaf .gt_indent_3 {
+#uluwiarmkk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#amktbranaf .gt_indent_4 {
+#uluwiarmkk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#amktbranaf .gt_indent_5 {
+#uluwiarmkk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3205,66 +2031,13 @@ e1_tab %>%
 
 Table 16: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-c_post <- post_dat_avg %>%
-    group_by(id, condit, Model, Fit_Method, rank) %>%
-    slice_head(n = 1) |>
-    ggplot(aes(y=log(c), x = Fit_Method,col=condit)) + stat_pointinterval(position=position_dodge(.2)) +
-    ggh4x::facet_nested_wrap(~Model) + labs(title="c parameter") +
-  theme(legend.title = element_blank(), legend.position="right",plot.title=element_text(hjust=.4))
-
-lr_post <- post_dat_avg %>%
-    group_by(id, condit, Model, Fit_Method, rank) %>%
-    slice_head(n = 1) |>
-    ggplot(aes(y=lr, x = Fit_Method,col=condit)) + stat_pointinterval(position=position_dodge(.4)) +
-    ggh4x::facet_nested_wrap(~Model) + labs(title="learning rate parameter") +
-  theme(legend.title = element_blank(), legend.position = "none",plot.title=element_text(hjust=.5))
-c_post + lr_post
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-htw-post-dist-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
 id="fig-htw-post-dist"
 alt="Figure 26: Posterior Distributions of c and lr parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y axes of the plots for the c parameter are scaled logarithmically." />
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-train_resid <- pd_train |> group_by(id,condit,Model,Fit_Method, Block,x) |> 
-  summarise(y=mean(y), pred=mean(pred), mean_error=abs(y-pred)) |>
-  group_by(id,condit,Model,Fit_Method,Block) |>
-  summarise(mean_error=mean(mean_error)) |>
-  ggplot(aes(x=interaction(Block,Model), y = mean_error, fill=factor(Block))) + 
-  stat_bar + 
-  ggh4x::facet_nested_wrap(rename_fm(Fit_Method)~condit, scales="free",ncol=2) +
-   scale_x_discrete(guide = "axis_nested") +
-  scale_fill_manual(values=c("gray10","gray50","gray92"))+
-  labs(title="Model Residual Errors - Training Stage", y="RMSE", x= "Model",fill="Training Block") +
-  theme(legend.position="top")
-
-test_resid <-  post_dat |> 
-   group_by(id,condit,x,Model,Fit_Method,bandType) |>
-    summarise(y=mean(y), pred=mean(pred), error=abs(y-pred)) |> 
-  mutate(vbLab = factor(paste0(x,"-",x+200))) |>
-  ggplot(aes(x = Model, y = abs(error), fill=vbLab,col=ifelse(bandType=="Trained","black",NA),size=ifelse(bandType=="Trained","black",NA))) + 
-  stat_bar + 
-  #scale_fill_manual(values=wes_palette("AsteroidCity2"))+
-  scale_color_manual(values = c("black" = "black"), guide = "none") +
-  scale_size_manual(values = c("black" = .5), guide = "none") +
-  ggh4x::facet_nested_wrap(rename_fm(Fit_Method)~condit, axes = "all",ncol=2,scale="free") +
-  labs(title="Model Residual Errors - Testing Stage",y="RMSE", x="Velocity Band") 
-
-(train_resid / test_resid) +
-  #plot_layout(heights=c(1,1.5)) & 
-  plot_annotation(tag_levels = list(c('A','B')),tag_suffix = ') ') 
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-htw-resid-pred-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
 id="fig-htw-resid-pred"
 alt="Figure 27: Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 
@@ -3274,224 +2047,38 @@ We used the posterior distribution of $c$ and $lr$ parameters to generate a post
 
 The residuals of the model predictions for the testing stage (<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 27</a>) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also <a href="#fig-ee-e1" class="quarto-xref">Figure 29</a>), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in <a href="#fig-cm-vx-pat" class="quarto-xref">Figure 28</a>, which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-post_dat_l |> 
-  group_by(id,condit, Fit_Method,Resp,bandType,x,vb) |> 
- summarize(vx=median(val)) |> 
- #left_join(testAvgE1, by=join_by(id,condit,x==bandInt)) |>
- ggplot(aes(x=Resp,y=vx, fill=vb,col=ifelse(bandType=="Trained","black",NA),size=ifelse(bandType=="Trained","black",NA))) + 
-  stat_bar + 
-    facet_wrap(~rename_fm(Fit_Method)+condit, ncol=2,strip.position = "top", scales = "free_x") +
-        scale_color_manual(values = c("black" = "black"), guide = "none") +
-  scale_size_manual(values = c("black" = .5), guide = "none") +
-    theme(panel.spacing = unit(0, "lines"), 
-         strip.background = element_blank(),
-         strip.placement = "outside",
-         legend.position = "none",plot.title = element_text(hjust=.50),
-         axis.title.x = element_blank(),
-         plot.margin = unit(c(10,0,0,0), "pt")) + 
-         labs(title="Model Predictions - Experiment 1 Data", y="Vx")
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-cm-vx-pat-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
 id="fig-cm-vx-pat"
 alt="Figure 28: Empirical data and Model predictions for mean velocity across target bands. Fitting methods (Test Only, Test &amp; Train, Train Only) - are separated across rows, and Training Condition (Constant vs. Varied) are separated by columns. Each facet contains the predictions of ALM and EXAM, alongside the observed data." />
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-###| eval: false
-
-pacman::p_load(dplyr,purrr,tidyr,ggplot2, data.table, here, patchwork, conflicted, 
-               stringr,future,furrr, knitr, reactable,ggstance, htmltools,
-               ggdist,ggh4x,brms,tidybayes,emmeans,bayestestR, gt)
-
-pdl <- post_dat_l |> rename("bandInt"=x) |> left_join(testAvgE1,by=c("id","condit","bandInt")) |> 
-  filter(rank<=1,Fit_Method=="Test_Train", !(Resp=="Observed")) |> mutate(aerror = abs(error))
-
-# aerror is model error, which is predicted by Model(ALM vs. EXAM) & condit (Constant vs. Varied)
-e1_ee_brm_ae <- brm(data=pdl,
-  aerror ~  Model * condit + (1+bandInt|id), 
-  file = paste0(here("data/model_cache/e1_ae_modelCond_RFint.rds")),
-  chains=4,silent=1, iter=2000, control=list(adapt_delta=0.92, max_treedepth=11))
-
-bct_e1 <- as.data.frame(bayestestR::describe_posterior(e1_ee_brm_ae, centrality = "Mean")) %>%
-  select(1,2,4,5,6) %>%
-  setNames(c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")) %>%
-  mutate(across(where(is.numeric), \(x) round(x, 2))) %>%
-  tibble::remove_rownames() %>%
-  mutate(Term = stringr::str_remove(Term, "b_")) #%>% kable(booktabs = TRUE)
-
-#wrap_plots(plot(conditional_effects(e1_ee_brm_ae),points=FALSE,plot=FALSE))
-
-p1 <- plot(conditional_effects(e1_ee_brm_ae, effects="condit"),points=FALSE, plot=FALSE)$condit + 
-  ggplot2::xlab("Condition") +ylab("Model Error")
-p2 <- plot(conditional_effects(e1_ee_brm_ae, effects="Model"),points=FALSE, plot=FALSE)$Model + 
-  labs(x="Model",y=NULL)
-p3 <- plot(conditional_effects(e1_ee_brm_ae, effects="Model:condit"),points=FALSE, plot=FALSE)$`Model:condit` + 
-  scale_color_manual(values=wes_palette("Darjeeling1")) +
-  labs(x="Model",y=NULL,fill=NULL,col=NULL) + theme(legend.position="right") 
-  
-p_ce_1 <- (p1 + p2+ p3) + plot_annotation(tag_levels = c('A'), tag_suffix=".")
-
-
-# plot_custom_effects <- function(model) {
-#   # Extract posterior samples for fixed effects
-#   post_samples <- posterior_samples(model, pars = c("b_Intercept", "b_ModelEXAM", "b_conditVaried", "b_ModelEXAM:conditVaried"))
-  
-#   # Calculate conditional effects
-#   post_samples <- post_samples %>%
-#     mutate(
-#       ALM_Constant = b_Intercept,
-#       EXAM_Constant = b_Intercept + b_ModelEXAM,
-#       ALM_Varied = b_Intercept + b_conditVaried,
-#       EXAM_Varied = b_Intercept + b_ModelEXAM + b_conditVaried + `b_ModelEXAM:conditVaried`
-#     )
-  
-#   # Reshape data for plotting
-#   plot_data <- post_samples %>%
-#     select(ALM_Constant, EXAM_Constant, ALM_Varied, EXAM_Varied) %>%
-#     pivot_longer(everything(), names_to = "Condition", values_to = "Estimate") %>%
-#     separate(Condition, into = c("Model", "Condit"), sep = "_")
-  
-#   # Plot conditional effects
-#   ggplot(plot_data, aes(x = Model, y = Estimate, color = Condit)) +
-#     geom_boxplot() +
-#     theme_minimal() +
-#     labs(x = "Model", y = "Estimate", color = "Condition")
-# }
-# p_ce_1 <- plot_custom_effects(e1_ee_brm_ae)
-
-
-
-
-bm1 <- get_coef_details(e1_ee_brm_ae, "conditVaried")
-bm2 <- get_coef_details(e1_ee_brm_ae, "ModelEXAM")
-bm3 <- get_coef_details(e1_ee_brm_ae, "ModelEXAM:conditVaried")
-
-posterior_estimates <- as.data.frame(e1_ee_brm_ae) %>%
-  select(starts_with("b_")) %>%
-  setNames(c("Intercept", "ModelEXAM", "conditVaried", "ModelEXAM_conditVaried"))
-
-constant_EXAM <- posterior_estimates$Intercept + posterior_estimates$ModelEXAM
-varied_EXAM <- posterior_estimates$Intercept + posterior_estimates$ModelEXAM + posterior_estimates$conditVaried + posterior_estimates$ModelEXAM_conditVaried
-comparison_EXAM <- constant_EXAM - varied_EXAM
-summary_EXAM <- bayestestR::describe_posterior(comparison_EXAM, centrality = "Mean")
-
-# e1_ee_brm_ae |> emmeans(pairwise ~ Model * condit, re_formula=NULL)
-# e1_ee_brm_ae |> emmeans(pairwise ~ Model * condit, re_formula=NA)
-
-# full set of Model x condit contrasts
-# ALM - EXAM
-# btw_model <- e1_ee_brm_ae |> emmeans(pairwise~ Model | condit, re_formula=NULL)  |> 
-#   pluck("contrasts") |> 
-#   gather_emmeans_draws() |> 
-#   group_by(contrast,.draw,condit) |> summarise(value=mean(.value), n=n()) 
-
-# btw_model |> ggplot(aes(x=value,y=contrast,fill=condit)) +stat_halfeye()
-
-# Constant - Varied
-# emm_condit <- e1_ee_brm_ae |> emmeans(~ condit | Model, re_formula = NULL)
-# btw_con <- emm_condit |>  pairs() |> gather_emmeans_draws() |> 
-#   group_by(contrast,.draw, Model) |> summarise(value=mean(.value), n=n()) 
-# # btw_con |> ggplot(aes(x=value,y=Model,fill=Model)) +stat_halfeye()                              
-
-p_em_1 <- e1_ee_brm_ae |> emmeans(pairwise~ Model*condit, re_formula=NA)  |> 
-  pluck("contrasts") |>
-  gather_emmeans_draws() |> 
-  group_by(contrast,.draw) |> summarise(value=mean(.value), n=n()) |> 
-  filter(!(contrast %in% c("ALM Constant - EXAM Constant","ALM Constant - EXAM Varied","ALM Varied - EXAM Varied ", "EXAM Constant - ALM Varied" ))) |> 
-  ggplot(aes(x=value,y=contrast,fill=contrast)) +stat_halfeye() + labs(x="Model Error Difference",y="Contrast") + theme(legend.position="none") 
-
-p_ce_1 / p_em_1
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-ee-e1-1.png" id="fig-ee-e1"
-alt="Figure 29" />
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
+id="fig-ee-e1" alt="Figure 29" />
 
 To quantitatively assess whether the differences in performance between models, we fit a bayesian regressions predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs. EXAM) and training condition (Constant vs. Varied).
 
 Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.4, -14.17\], pd = 99.85%) than ALM. There was also a significant interaction between Model and Condition ($\beta$ = 60.42, 95% CrI \[36.17, 83.85\], pd = 100%), indicating that the advantage of EXAM over ALM was significantly greater for the constant group. To assess whether EXAM predicts constant performance significantly better for Constant than for Varied subjects, we calculated the difference in model error between the Constant and Varied conditions specifically for EXAM. The results indicated that the model error for EXAM was significantly lower in the Constant condition compared to the Varied condition, with a mean difference of -22.88 (95% CrI \[-46.02, -0.97\], pd = 0.98).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-post_tabs2 <- abc_tables(e2_model$post_dat,e2_model$post_dat_l)
-train_tab2 <- abc_train_tables(e2_model$pd_train,e2_model$pd_train_l)
-
-pdl2 <- e2_model$post_dat_l |> rename("bandInt"=x) |> filter(rank<=1,Fit_Method=="Test_Train", !(Resp=="Observed")) |> mutate(aerror = abs(error))
-
-e2_tab <- rbind(post_tabs2$agg_pred_full |>
- mutate("Task Stage"="Test"), train_tab2$agg_pred_full |> 
- mutate("Task Stage"="Train")) |> 
-  mutate(Fit_Method=rename_fm(Fit_Method)) 
-
-post_tabs3 <- abc_tables(e3_model$post_dat,e3_model$post_dat_l)
-train_tab3 <- abc_train_tables(e3_model$pd_train,e3_model$pd_train_l)
-
-pdl3 <- e3_model$post_dat_l |> rename("bandInt"=x) |> filter(rank<=1,Fit_Method=="Test_Train", !(Resp=="Observed")) |> mutate(aerror = abs(error))
-
-e3_tab <- rbind(post_tabs3$agg_pred_full |> 
-  mutate("Task Stage"="Test"), train_tab3$agg_pred_full |> mutate("Task Stage"="Train")) |> 
-  mutate(Fit_Method=rename_fm(Fit_Method)) 
-
-e23_tab <- rbind(e2_tab |> mutate(Exp="E2"), e3_tab |> mutate(Exp="E3")) 
-gt_table <- e23_tab %>%
-  pivot_wider(
-    names_from = c(Exp, Model, condit),
-    values_from = mean_error,
-    names_glue = "{Exp}_{Model}_{condit}"
-  ) %>%
-  arrange(Fit_Method, `Task Stage`) %>%
-  gt() %>%
-  cols_move_to_start(columns = `Task Stage`) %>%
-  cols_label(`Task Stage` = "Task Stage") %>%
-  fmt_number(columns = matches("E2|E3"), decimals = 1) %>%
-  tab_spanner_delim(delim = "_") %>%
-  tab_style(
-    style = list(
-      cell_fill(color = "white"),
-      cell_borders(sides = "top", color = "black", weight = px(1))
-    ),
-    locations = cells_body(columns = everything(), rows = everything())
-  ) %>%
-  tab_options(
-    column_labels.font.size = 10,
-    heading.title.font.size = 14,
-    heading.subtitle.font.size = 12,
-    table.font.size = 10,
-    quarto.disable_processing = TRUE
-  ) 
-gt_table
-```
-
-</details>
 <div id="tbl-htw-modelError-e23">
 
-<div id="vhgbqpnhqu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vhgbqpnhqu table {
+<div id="cslqdcvgof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cslqdcvgof table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vhgbqpnhqu thead, #vhgbqpnhqu tbody, #vhgbqpnhqu tfoot, #vhgbqpnhqu tr, #vhgbqpnhqu td, #vhgbqpnhqu th {
+#cslqdcvgof thead, #cslqdcvgof tbody, #cslqdcvgof tfoot, #cslqdcvgof tr, #cslqdcvgof td, #cslqdcvgof th {
   border-style: none;
 }
 
-#vhgbqpnhqu p {
+#cslqdcvgof p {
   margin: 0;
   padding: 0;
 }
 
-#vhgbqpnhqu .gt_table {
+#cslqdcvgof .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3517,12 +2104,12 @@ gt_table
   border-left-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_caption {
+#cslqdcvgof .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vhgbqpnhqu .gt_title {
+#cslqdcvgof .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -3534,7 +2121,7 @@ gt_table
   border-bottom-width: 0;
 }
 
-#vhgbqpnhqu .gt_subtitle {
+#cslqdcvgof .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -3546,7 +2133,7 @@ gt_table
   border-top-width: 0;
 }
 
-#vhgbqpnhqu .gt_heading {
+#cslqdcvgof .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3558,13 +2145,13 @@ gt_table
   border-right-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_bottom_border {
+#cslqdcvgof .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_col_headings {
+#cslqdcvgof .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3579,7 +2166,7 @@ gt_table
   border-right-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_col_heading {
+#cslqdcvgof .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -3599,7 +2186,7 @@ gt_table
   overflow-x: hidden;
 }
 
-#vhgbqpnhqu .gt_column_spanner_outer {
+#cslqdcvgof .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -3611,15 +2198,15 @@ gt_table
   padding-right: 4px;
 }
 
-#vhgbqpnhqu .gt_column_spanner_outer:first-child {
+#cslqdcvgof .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vhgbqpnhqu .gt_column_spanner_outer:last-child {
+#cslqdcvgof .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vhgbqpnhqu .gt_column_spanner {
+#cslqdcvgof .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3631,11 +2218,11 @@ gt_table
   width: 100%;
 }
 
-#vhgbqpnhqu .gt_spanner_row {
+#cslqdcvgof .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vhgbqpnhqu .gt_group_heading {
+#cslqdcvgof .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3661,7 +2248,7 @@ gt_table
   text-align: left;
 }
 
-#vhgbqpnhqu .gt_empty_group_heading {
+#cslqdcvgof .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3676,15 +2263,15 @@ gt_table
   vertical-align: middle;
 }
 
-#vhgbqpnhqu .gt_from_md > :first-child {
+#cslqdcvgof .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vhgbqpnhqu .gt_from_md > :last-child {
+#cslqdcvgof .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vhgbqpnhqu .gt_row {
+#cslqdcvgof .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3703,7 +2290,7 @@ gt_table
   overflow-x: hidden;
 }
 
-#vhgbqpnhqu .gt_stub {
+#cslqdcvgof .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3716,7 +2303,7 @@ gt_table
   padding-right: 5px;
 }
 
-#vhgbqpnhqu .gt_stub_row_group {
+#cslqdcvgof .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3730,15 +2317,15 @@ gt_table
   vertical-align: top;
 }
 
-#vhgbqpnhqu .gt_row_group_first td {
+#cslqdcvgof .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vhgbqpnhqu .gt_row_group_first th {
+#cslqdcvgof .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vhgbqpnhqu .gt_summary_row {
+#cslqdcvgof .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3748,16 +2335,16 @@ gt_table
   padding-right: 5px;
 }
 
-#vhgbqpnhqu .gt_first_summary_row {
+#cslqdcvgof .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_first_summary_row.thick {
+#cslqdcvgof .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vhgbqpnhqu .gt_last_summary_row {
+#cslqdcvgof .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3767,7 +2354,7 @@ gt_table
   border-bottom-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_grand_summary_row {
+#cslqdcvgof .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3777,7 +2364,7 @@ gt_table
   padding-right: 5px;
 }
 
-#vhgbqpnhqu .gt_first_grand_summary_row {
+#cslqdcvgof .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3787,7 +2374,7 @@ gt_table
   border-top-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_last_grand_summary_row_top {
+#cslqdcvgof .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3797,11 +2384,11 @@ gt_table
   border-bottom-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_striped {
+#cslqdcvgof .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vhgbqpnhqu .gt_table_body {
+#cslqdcvgof .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3810,7 +2397,7 @@ gt_table
   border-bottom-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_footnotes {
+#cslqdcvgof .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3824,7 +2411,7 @@ gt_table
   border-right-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_footnote {
+#cslqdcvgof .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3833,7 +2420,7 @@ gt_table
   padding-right: 5px;
 }
 
-#vhgbqpnhqu .gt_sourcenotes {
+#cslqdcvgof .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3847,7 +2434,7 @@ gt_table
   border-right-color: #D3D3D3;
 }
 
-#vhgbqpnhqu .gt_sourcenote {
+#cslqdcvgof .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3855,63 +2442,63 @@ gt_table
   padding-right: 5px;
 }
 
-#vhgbqpnhqu .gt_left {
+#cslqdcvgof .gt_left {
   text-align: left;
 }
 
-#vhgbqpnhqu .gt_center {
+#cslqdcvgof .gt_center {
   text-align: center;
 }
 
-#vhgbqpnhqu .gt_right {
+#cslqdcvgof .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vhgbqpnhqu .gt_font_normal {
+#cslqdcvgof .gt_font_normal {
   font-weight: normal;
 }
 
-#vhgbqpnhqu .gt_font_bold {
+#cslqdcvgof .gt_font_bold {
   font-weight: bold;
 }
 
-#vhgbqpnhqu .gt_font_italic {
+#cslqdcvgof .gt_font_italic {
   font-style: italic;
 }
 
-#vhgbqpnhqu .gt_super {
+#cslqdcvgof .gt_super {
   font-size: 65%;
 }
 
-#vhgbqpnhqu .gt_footnote_marks {
+#cslqdcvgof .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vhgbqpnhqu .gt_asterisk {
+#cslqdcvgof .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vhgbqpnhqu .gt_indent_1 {
+#cslqdcvgof .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vhgbqpnhqu .gt_indent_2 {
+#cslqdcvgof .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vhgbqpnhqu .gt_indent_3 {
+#cslqdcvgof .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vhgbqpnhqu .gt_indent_4 {
+#cslqdcvgof .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vhgbqpnhqu .gt_indent_5 {
+#cslqdcvgof .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -4024,161 +2611,29 @@ gt_table
 
 Table 17: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-rbind(e2_model$post_dat_l |> filter( Fit_Method=="Test_Train") |> 
-  group_by(id,condit, Fit_Method,Resp,bandType,x,vb) |> 
- summarize(vx=median(val)) |> mutate(Exp="E2",bandOrder="Reverse"), 
- e3_model$post_dat_l |> filter( Fit_Method=="Test_Train") |> 
-  group_by(id,condit, Fit_Method,Resp,bandType,x,vb,bandOrder) |>
-  summarize(vx=median(val)) |> mutate(Exp="E3")) |>
-  ggplot( aes(x=condit,y=vx, fill=vb,col=ifelse(bandType=="Trained","black",NA),size=ifelse(bandType=="Trained","black",NA))) +
-  stat_bar + 
-    facet_nested_wrap(~Exp+bandOrder+Resp, strip.position = "top", scales = "free_x") +
-    scale_color_manual(values = c("black" = "black"), guide = "none") +
-  scale_size_manual(values = c("black" = .7), guide = "none") +
-    theme(panel.spacing = unit(0, "lines"), 
-        #  strip.background = element_blank(),
-        #  strip.placement = "outside",
-         legend.position = "none",plot.title = element_text(hjust=.50),
-         axis.title.x = element_blank(),
-         plot.margin = unit(c(20,0,0,0), "pt")) + 
-         labs(title="Model Predictions Experiment 2 & 3", y="vx")
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
 id="fig-cm-vx-pat-e2-e3"
 alt="Figure 30: Empirical data and Model predictions from Experiment 2 and 3 for the testing stage. Observed data is shown on the right. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2_ee_brm_ae <- brm(data=pdl2,
-  aerror ~  Model * condit + (1+bandInt|id), 
-  file = paste0(here("data/model_cache/e2_ae_modelCond_RFint.rds")),
-  chains=4,silent=1, iter=2000, control=list(adapt_delta=0.92, max_treedepth=11))
-
-bm1_e2 <- get_coef_details(e2_ee_brm_ae, "conditVaried")
-bm2_e2 <- get_coef_details(e2_ee_brm_ae, "ModelEXAM")
-bm3_e2 <- get_coef_details(e2_ee_brm_ae, "ModelEXAM:conditVaried")
-
-bct_e2 <- as.data.frame(bayestestR::describe_posterior(e2_ee_brm_ae, centrality = "Mean")) %>%
-  select(1,2,4,5,6) %>%
-  setNames(c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")) %>%
-  mutate(across(where(is.numeric), \(x) round(x, 2))) %>%
-  tibble::remove_rownames() %>%
-  mutate(Term = stringr::str_remove(Term, "b_")) # %>% kable(booktabs = TRUE)
-
-e3_ee_brm_ae <- brm(data=pdl3,
-  aerror ~  Model * condit*bandOrder + (1+bandInt|id), 
-  file = paste0(here("data/model_cache/e3_ae_modelCondBo_RFint2.rds")),
-  chains=4,silent=1, iter=2000, control=list(adapt_delta=0.92, max_treedepth=11))
-
-bm1_e3 <- get_coef_details(e3_ee_brm_ae, "conditVaried")
-bm2_e3  <- get_coef_details(e3_ee_brm_ae, "ModelEXAM")
-bm3_e3  <- get_coef_details(e3_ee_brm_ae, "ModelEXAM:conditVaried")
-bm4_e3  <- get_coef_details(e3_ee_brm_ae, "ModelEXAM:conditVaried:bandOrderReverse")
-
-
-bct_e3  <- as.data.frame(bayestestR::describe_posterior(e3_ee_brm_ae, centrality = "Mean")) %>%
-  select(1,2,4,5,6) %>%
-  setNames(c("Term", "Estimate","95% CrI Lower", "95% CrI Upper", "pd")) %>%
-  mutate(across(where(is.numeric), \(x) round(x, 2))) %>%
-  tibble::remove_rownames() %>%
-  mutate(Term = stringr::str_remove(Term, "b_")) #%>% kable(booktabs = TRUE)
-
-bct <- rbind(bct_e1 |> mutate(exp="Exp 1"),bct_e2 |> 
-               mutate(exp= "Exp 2"),bct_e3 |> mutate(exp="Exp 3")) |> 
-  relocate(exp, .before=Term)
-
-bct_table <- bct %>%
-  mutate(
-    across(c(Estimate, `95% CrI Lower`, `95% CrI Upper`), ~ round(., 2)),
-    pd = round(pd, 2)
-  ) %>%
-  gt() %>%
-  # tab_header(
-  #   title = "Bayesian Model Results",
-  #   subtitle = "Estimates and Credible Intervals for Each Term Across Experiments"
-  # ) %>%
-  cols_label(
-    exp = "Experiment",
-    Term = "Term",
-    Estimate = "Estimate",
-    `95% CrI Lower` = "95% CrI Lower",
-    `95% CrI Upper` = "95% CrI Upper",
-    pd = "pd"
-  ) %>%
-  fmt_number(
-    columns = c(Estimate, `95% CrI Lower`, `95% CrI Upper`),
-    decimals = 2
-  ) %>%
-  fmt_number(
-    columns = pd,
-    decimals = 2
-  ) %>%
-  tab_spanner(
-    label = "Credible Interval",
-    columns = c(`95% CrI Lower`, `95% CrI Upper`)
-  ) %>%
-  tab_style(
-    style = list(
-      #cell_fill(color = "lightgray"),
-      cell_text(weight = "bold"), 
-      cell_fill(color = "white"),
-      cell_borders(sides = "top", color = "black", weight = px(1))
-    ),
-    locations = cells_body(
-      columns = c(Estimate, pd),
-      rows = Term=="ModelEXAM:conditVaried"
-    )
-  ) %>%
-   tab_row_group(
-    label = "Experiment 3",
-    rows = exp == "Exp 3"
-  ) %>%
-  tab_row_group(
-    label = "Experiment 2",
-    rows = exp == "Exp 2"
-  ) %>%
-  tab_row_group(
-    label = "Experiment 1",
-    rows = exp == "Exp 1"
-  ) %>%
-  tab_options(
-    table.font.size = 10,
-    heading.title.font.size = 16,
-    heading.subtitle.font.size = 14,
-    quarto.disable_processing = TRUE
-    #row_group.background.color = "gray95"
-  )
-bct_table
-```
-
-</details>
 <div id="tbl-htw-ee-e23">
 
-<div id="yrjycfpolc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yrjycfpolc table {
+<div id="cwsavcmkqx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cwsavcmkqx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yrjycfpolc thead, #yrjycfpolc tbody, #yrjycfpolc tfoot, #yrjycfpolc tr, #yrjycfpolc td, #yrjycfpolc th {
+#cwsavcmkqx thead, #cwsavcmkqx tbody, #cwsavcmkqx tfoot, #cwsavcmkqx tr, #cwsavcmkqx td, #cwsavcmkqx th {
   border-style: none;
 }
 
-#yrjycfpolc p {
+#cwsavcmkqx p {
   margin: 0;
   padding: 0;
 }
 
-#yrjycfpolc .gt_table {
+#cwsavcmkqx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4204,12 +2659,12 @@ bct_table
   border-left-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_caption {
+#cwsavcmkqx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yrjycfpolc .gt_title {
+#cwsavcmkqx .gt_title {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -4221,7 +2676,7 @@ bct_table
   border-bottom-width: 0;
 }
 
-#yrjycfpolc .gt_subtitle {
+#cwsavcmkqx .gt_subtitle {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -4233,7 +2688,7 @@ bct_table
   border-top-width: 0;
 }
 
-#yrjycfpolc .gt_heading {
+#cwsavcmkqx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4245,13 +2700,13 @@ bct_table
   border-right-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_bottom_border {
+#cwsavcmkqx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_col_headings {
+#cwsavcmkqx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4266,7 +2721,7 @@ bct_table
   border-right-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_col_heading {
+#cwsavcmkqx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4286,7 +2741,7 @@ bct_table
   overflow-x: hidden;
 }
 
-#yrjycfpolc .gt_column_spanner_outer {
+#cwsavcmkqx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4298,15 +2753,15 @@ bct_table
   padding-right: 4px;
 }
 
-#yrjycfpolc .gt_column_spanner_outer:first-child {
+#cwsavcmkqx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yrjycfpolc .gt_column_spanner_outer:last-child {
+#cwsavcmkqx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yrjycfpolc .gt_column_spanner {
+#cwsavcmkqx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4318,11 +2773,11 @@ bct_table
   width: 100%;
 }
 
-#yrjycfpolc .gt_spanner_row {
+#cwsavcmkqx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yrjycfpolc .gt_group_heading {
+#cwsavcmkqx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4348,7 +2803,7 @@ bct_table
   text-align: left;
 }
 
-#yrjycfpolc .gt_empty_group_heading {
+#cwsavcmkqx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4363,15 +2818,15 @@ bct_table
   vertical-align: middle;
 }
 
-#yrjycfpolc .gt_from_md > :first-child {
+#cwsavcmkqx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yrjycfpolc .gt_from_md > :last-child {
+#cwsavcmkqx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yrjycfpolc .gt_row {
+#cwsavcmkqx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4390,7 +2845,7 @@ bct_table
   overflow-x: hidden;
 }
 
-#yrjycfpolc .gt_stub {
+#cwsavcmkqx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4403,7 +2858,7 @@ bct_table
   padding-right: 5px;
 }
 
-#yrjycfpolc .gt_stub_row_group {
+#cwsavcmkqx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4417,15 +2872,15 @@ bct_table
   vertical-align: top;
 }
 
-#yrjycfpolc .gt_row_group_first td {
+#cwsavcmkqx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yrjycfpolc .gt_row_group_first th {
+#cwsavcmkqx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yrjycfpolc .gt_summary_row {
+#cwsavcmkqx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4435,16 +2890,16 @@ bct_table
   padding-right: 5px;
 }
 
-#yrjycfpolc .gt_first_summary_row {
+#cwsavcmkqx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_first_summary_row.thick {
+#cwsavcmkqx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yrjycfpolc .gt_last_summary_row {
+#cwsavcmkqx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4454,7 +2909,7 @@ bct_table
   border-bottom-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_grand_summary_row {
+#cwsavcmkqx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4464,7 +2919,7 @@ bct_table
   padding-right: 5px;
 }
 
-#yrjycfpolc .gt_first_grand_summary_row {
+#cwsavcmkqx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4474,7 +2929,7 @@ bct_table
   border-top-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_last_grand_summary_row_top {
+#cwsavcmkqx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4484,11 +2939,11 @@ bct_table
   border-bottom-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_striped {
+#cwsavcmkqx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yrjycfpolc .gt_table_body {
+#cwsavcmkqx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4497,7 +2952,7 @@ bct_table
   border-bottom-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_footnotes {
+#cwsavcmkqx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4511,7 +2966,7 @@ bct_table
   border-right-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_footnote {
+#cwsavcmkqx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4520,7 +2975,7 @@ bct_table
   padding-right: 5px;
 }
 
-#yrjycfpolc .gt_sourcenotes {
+#cwsavcmkqx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4534,7 +2989,7 @@ bct_table
   border-right-color: #D3D3D3;
 }
 
-#yrjycfpolc .gt_sourcenote {
+#cwsavcmkqx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4542,63 +2997,63 @@ bct_table
   padding-right: 5px;
 }
 
-#yrjycfpolc .gt_left {
+#cwsavcmkqx .gt_left {
   text-align: left;
 }
 
-#yrjycfpolc .gt_center {
+#cwsavcmkqx .gt_center {
   text-align: center;
 }
 
-#yrjycfpolc .gt_right {
+#cwsavcmkqx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yrjycfpolc .gt_font_normal {
+#cwsavcmkqx .gt_font_normal {
   font-weight: normal;
 }
 
-#yrjycfpolc .gt_font_bold {
+#cwsavcmkqx .gt_font_bold {
   font-weight: bold;
 }
 
-#yrjycfpolc .gt_font_italic {
+#cwsavcmkqx .gt_font_italic {
   font-style: italic;
 }
 
-#yrjycfpolc .gt_super {
+#cwsavcmkqx .gt_super {
   font-size: 65%;
 }
 
-#yrjycfpolc .gt_footnote_marks {
+#cwsavcmkqx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yrjycfpolc .gt_asterisk {
+#cwsavcmkqx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yrjycfpolc .gt_indent_1 {
+#cwsavcmkqx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yrjycfpolc .gt_indent_2 {
+#cwsavcmkqx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yrjycfpolc .gt_indent_3 {
+#cwsavcmkqx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yrjycfpolc .gt_indent_4 {
+#cwsavcmkqx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yrjycfpolc .gt_indent_5 {
+#cwsavcmkqx .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -4735,149 +3190,20 @@ Table 18: Results of Bayesian Regression models predicting model error as a fun
 
 *Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the "fit to training and testing data" models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controleld for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see <a href="#fig-e2_e3_ae" class="quarto-xref">Figure 31</a>).
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-#wrap_plots(plot(conditional_effects(e1_ee_brm_ae),points=FALSE,plot=FALSE))
-p1 <- plot(conditional_effects(e2_ee_brm_ae, effects="condit"),points=FALSE, plot=FALSE)$condit + 
-  ggplot2::xlab("Condition") +ylab("Model Error") + labs(title="E2. Model Error")
-p2 <- plot(conditional_effects(e2_ee_brm_ae, effects="Model"),points=FALSE, plot=FALSE)$Model + 
-  labs(x="Model",y=NULL)
-p3 <- plot(conditional_effects(e2_ee_brm_ae, effects="Model:condit"),points=FALSE, plot=FALSE)$`Model:condit` + 
-  scale_color_manual(values=wes_palette("Darjeeling1")) +
-  labs(x="Model",y=NULL,fill=NULL,col=NULL) + theme(legend.position="right") 
-  
-  p_e2 <- (p1 + p2+ p3) 
-# #wrap_plots(plot(conditional_effects(e3_ee_brm_ae),points=FALSE,plot=FALSE))
-
-p_e3 <- plot(conditional_effects(e3_ee_brm_ae, 
-                         effects = "Model:condit", 
-                         conditions=make_conditions(e3_ee_brm_ae,vars=c("bandOrder"))),
-     points=FALSE,plot=FALSE)$`Model:condit` + 
-     labs(x="Model",y="Model Error", title="E3. Model Error", fill=NULL, col=NULL) + 
-     theme(legend.position="right") + 
-     scale_color_manual(values=wes_palette("Darjeeling1")) 
-
-p1 <- plot(conditional_effects(e3_ee_brm_ae, effects="condit"),points=FALSE, plot=FALSE)$condit + 
-  ggplot2::xlab("Condition") +ylab("Model Error")
-p2 <- plot(conditional_effects(e3_ee_brm_ae, effects="Model"),points=FALSE, plot=FALSE)$Model + 
-  labs(x="Model",y=NULL)
-p3 <- plot(conditional_effects(e3_ee_brm_ae, effects="Model:condit"),points=FALSE, plot=FALSE)$`Model:condit` + 
-  scale_color_manual(values=wes_palette("Darjeeling1")) +
-  labs(x="Model",y=NULL,fill=NULL,col=NULL) + theme(legend.position="right") 
-  
- p2 <- (p1 + p2+ p3)
- (p_e2 / p_e3) + plot_annotation(tag_levels = c('A'), tag_suffix=".")
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-e2_e3_ae-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
 id="fig-e2_e3_ae"
 alt="Figure 31: Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order)." />
 
 *Computational Model Summary*. Across the model fits to all three experiments, we found greater support for EXAM over ALM (negative coefficients on the ModelEXAM term in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>), and moreover that the constant participants were disproportionately well described by EXAM in comparison to ALM (positive coefficients on ModelEXAM:conditVaried terms in <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>). This pattern is also clearly depicted in <a href="#fig-htw-best-model" class="quarto-xref">Figure 32</a>, which plots the difference in model errors between ALM and EXAM for each individual participant. Both varied and constant conditions have a greater proportion of subjects better fit by EXAM (positive error differences), with the magnitude of EXAM's advantage visibly greater for the constant group. It also bears mention that numerous participants were better fit by ALM, or did not show a clear preference for either model. A subset of these participants are shown in <a href="#fig-htw-indv-pred" class="quarto-xref">Figure 33</a>.
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-tid1 <- post_dat  |> mutate(Exp="E1",bandOrder="Original") |> select(-pred_dist, -dist) |>
-  rbind(e2_model$post_dat |> mutate(Exp="E2",bandOrder="Reverse")) |>
-  rbind(e3_model$post_dat |> mutate(Exp="E3")) |>
-  filter(Fit_Method=="Test_Train") |>
-  group_by(id,condit,Model,Fit_Method,x, Exp) |> 
-    mutate(e2=abs(y-pred)) |> 
-    summarise(y1=median(y), pred1=median(pred),mean_error=abs(y1-pred1)) |>
-    group_by(id,condit,Model,Fit_Method,Exp) |> 
-    summarise(mean_error=mean(mean_error)) |> 
-    arrange(id,condit,Fit_Method) |>
-    round_tibble(1) 
-
-best_id <- tid1 |> 
-  group_by(id,condit,Fit_Method) |> 
-  mutate(best=ifelse(mean_error==min(mean_error),1,0)) 
-
-lowest_error_model <- best_id %>%
-  group_by(id, condit,Fit_Method, Exp) %>%
-  summarise(Best_Model = Model[which.min(mean_error)],
-            Lowest_error = min(mean_error),
-            differential = min(mean_error) - max(mean_error)) %>%
-  ungroup()
-
-error_difference<- best_id %>%
-  select(id, condit, Model,Fit_Method, mean_error) %>%
-  pivot_wider(names_from = Model, values_from = c(mean_error)) %>%
-  mutate(Error_difference = (ALM - EXAM))
-
-full_comparison <- lowest_error_model |> 
-  left_join(error_difference, by=c("id","condit","Fit_Method"))  |> 
-  group_by(condit,Fit_Method,Best_Model) |> 
-  mutate(nGrp=n(), model_rank = nGrp - rank(Error_difference) ) |> 
-  arrange(Fit_Method,-Error_difference)
-
-full_comparison |> 
-  filter(Fit_Method=="Test_Train") |> 
-  ungroup() |>
-  mutate(id = reorder(id, Error_difference)) %>%
-  ggplot(aes(y=id,x=Error_difference,fill=Best_Model))+
-  geom_col() +
-  #ggh4x::facet_grid2(~condit,axes="all",scales="free_y", independent = "y")+
-  ggh4x::facet_nested_wrap(~condit+Exp,scales="free") + 
-  theme(axis.text.y = element_text(size=8)) +
-  labs(fill="Best Model",
-  x="Mean Model Error Difference (ALM - EXAM)",
-  y="Participant")
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-htw-best-model-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
 id="fig-htw-best-model"
 alt="Figure 32: Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM." />
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-cId_tr <- c(137, 181, 11)
-vId_tr <- c(14, 193, 47)
-cId_tt <- c(11, 93, 35)
-vId_tt <- c(1,14,74)
-cId_new <- c(175, 68, 93, 74)
-# filter(id %in% (filter(bestTestEXAM,group_rank<=9, Fit_Method=="Test")
-
-e1_sbjs <- c(49,68,155, 175,74)
-e3_sbjs <-  c(245, 280, 249)
-e2_sbjs <- c(197, 157, 312, 334)
-cFinal <- c(49, 128,202 )
-vFinal <- c(68,70,245)
-
-
-indv_post_l <- post_dat_l  |> mutate(Exp="E1",bandOrder="Original") |> select(-signed_dist) |>
-  rbind(e2_model$post_dat_l |> mutate(Exp="E2",bandOrder="Reverse")) |>
-  rbind(e3_model$post_dat_l |> mutate(Exp="E3") |> select(-fb)) |>
-  filter(Fit_Method=="Test_Train", id %in% c(cFinal,vFinal))
-
-testIndv <- indv_post_l |> 
-#filter(id %in% c(cId_tt,vId_tt,cId_new), Fit_Method=="Test_Train") |> 
-   mutate(x=as.factor(x), Resp=as.factor(Resp)) |>
-  group_by(id,condit,Fit_Method,Model,Resp) |>
-   mutate(flab=paste0("Subject: ",id)) |>
-  ggplot(aes(x = Resp, y = val, fill=vb, col=ifelse(bandType=="Trained","black",NA),size=ifelse(bandType=="Trained","black",NA))) + 
-  stat_bar_sd + 
-  ggh4x::facet_nested_wrap(condit~flab, axes = "all",ncol=3) +
-  scale_color_manual(values = c("black" = "black"), guide = FALSE) +
-  scale_size_manual(values = c("black" = .5), guide = FALSE) + 
-  labs(title="Individual Participant fits from Test & Train Fitting Method",
-       y="X Velocity",fill="Target Velocity") +
-   guides(fill = guide_legend(nrow = 1)) + 
-  theme(legend.position = "bottom",axis.title.x = element_blank())
-
-testIndv 
-```
-
-</details>
-<img src="full_files/figure-commonmark/fig-htw-indv-pred-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
 id="fig-htw-indv-pred"
 alt="Figure 33: Model predictions alongside observed data for a subset of individual participants. A) 3 constant and 3 varied participants fit to both the test and training data. B) 3 constant and 3 varied subjects fit to only the trainign data. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 
@@ -5231,142 +3557,17 @@ Regardless, the above analysis suggests that the constant group would always be 
 
 ### exponential learning models fit to individual subjects
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2TestFits <- readRDS(here::here('data/IGAS-e2TestFits-April4.rds'))
-e2TestFits <- e2TestFits %>% mutate(Asymptote.Minus.Start=pAsym-pStart)
-exp2.fit2 <- e2TestFits %>% ungroup() %>% group_by(sbjCode,conditType) %>%
-  summarise(MeanAsym=mean(pAsym),MeanStart=mean(pStart),
-            MeanRate=mean(pRate),
-            asymMinusStart=mean(Asymptote.Minus.Start),.groups="keep") %>% 
-  ungroup() %>% as.data.frame()
-```
-
-</details>
-
 ### Group comparison of learning rate fits
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# mr1=e2TestFits %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
-# mr2=exp2.fit2 %>% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) 
-
-# h4<-e2TestFits %>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
-# h4
-
-
-# mr1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
-# mr2=exp2.fit2 %>% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) 
-
-h4<-e2TestFits %>%filter(Pval<.4)%>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
-h4
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-60-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-60-1.png" width="768" />
 
 ### First vs. second half of testing stage
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-testSplit <- transfer %>%
-  group_by(sbjCode, conditType, positionX, testHalfSbj) %>%
-  summarise(
-    MeanTargetDistance = mean(AbsDistFromCenter),
-    MeanScaledDev =mean(scaledDev,trim=.05),
-    .groups = "keep"
-  ) %>% 
-  as.data.frame()
-
-testSplit2 <- transfer %>%
-  group_by(sbjCode, conditType, testHalfSbj) %>%
-  summarise(
-    MeanTargetDistance = mean(AbsDistFromCenter, trim = .01),
-    MeanScaledDev =
-      mean(scaledDev, trim = .05),
-    .groups = "keep"
-  ) %>% as.data.frame()
-
-
-tsw <- testSplit %>% ungroup() %>% 
-  pivot_wider(names_from = testHalfSbj,values_from=c(MeanTargetDistance,MeanScaledDev)) %>%
-  mutate(endMinusStart = `MeanTargetDistance_2nd-Half` - `MeanTargetDistance_1st-Half`,
-    endMinusStartScaled = `MeanScaledDev_2nd-Half` - `MeanScaledDev_1st-Half`) %>% 
-    as.data.frame()
-
-tsw2 <- tsw %>% 
-  group_by(sbjCode,conditType) %>% summarise(endMinusStart=mean(endMinusStart),endMinusStartScaled=mean(endMinusStartScaled)) %>% as.data.frame()
-
-# testSplit %>% ggplot(aes(x=testHalfSbj,y=MeanTargetDistance))+
-#   geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge)+
-#   facet_wrap(~positionX,ncol=2)+
-#   stat_summary(aes(x=testHalfSbj,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge)
-
-
-h1=testSplit %>% filter(testHalfSbj=="1st-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
- geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
- scale_y_continuous(name="Mean Absolute Deviation From Target",limits=c(0,400))+ 
- ggtitle("Testing - 1st half")+
-  ylab("Mean Absolute Deviation From Target")+xlab("Testing Location")+theme(legend.position="top")
-
-h2=testSplit %>% filter(testHalfSbj=="2nd-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
- geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
-  stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8) + 
- scale_y_continuous(name="",limits=c(0,400))+ 
- ggtitle("Testing - 2nd half")+
-  xlab("Testing Location")+
-  theme(plot.title = element_text(hjust = 0.5))+
-  theme(legend.position="top") +
-  guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)
-
-#egg::ggarrange(h1,h2,ncol=2)
-
-
-h3 <- tsw %>% ggplot(aes(x=positionX,y=endMinusStart))+
-  geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
-  stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
-  ylab("2nd Half Deviation - 1st Half Deviation")+ 
-  ggtitle("Improvement Per Location")+
-  xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+
-  guides(fill=guide_legend(title="Testing Location")) +theme(legend.position="none")
-
-#ggarrange(h1,h2,h3,h4,ncol=2)
-
-#(h1 + h2) / (h3)
-
-(h1+h2)/h3
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-61-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-61-1.png" width="960" />
 
 ### Group Comparison for asymptote-starting performance
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-# ma1=e2TestFits %>% filter()%>% anova_test(dv=Asymptote.Minus.Start,between=conditType,wid=sbjCode,within=positionX,type=3);show(ma1)
-# ma2=exp2.fit2 %>% anova_test(dv=asymMinusStart,between=conditType,wid=sbjCode,type=3);show(ma2) 
-
-e2TestFits %>% ggplot(aes(x=conditType,y=Asymptote.Minus.Start,fill=conditType))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  facet_grid(~positionX)+ggtitle("e2 testing (asymptote - start performance)") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-62-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-62-1.png" width="768" />
 
 ### Relative distance and under/overshooting
 
@@ -5380,13 +3581,13 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 #### experiment 1 training - relative distances
 
-![](full_files/figure-commonmark/unnamed-chunk-63-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-1.png" width="768" />
 
-![](full_files/figure-commonmark/unnamed-chunk-63-2.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-2.png" width="768" />
 
-![](full_files/figure-commonmark/unnamed-chunk-63-3.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-3.png" width="768" />
 
-![](full_files/figure-commonmark/unnamed-chunk-63-4.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-63-4.png" width="768" />
 
 
     =========================================================================
@@ -5416,13 +3617,13 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 #### experiment 2 training - relative distances
 
-![](full_files/figure-commonmark/unnamed-chunk-64-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-64-1.png" width="768" />
 
-![](full_files/figure-commonmark/unnamed-chunk-64-2.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-64-2.png" width="768" />
 
 #### Experiment 1 Testing - relative distances
 
-![](full_files/figure-commonmark/unnamed-chunk-65-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-65-1.png" width="960" />
 
 
     ====================================================================================================================================
@@ -5442,44 +3643,11 @@ In addition to absolute errors (which is related to variance), the authors shoul
 
 #### Experiment 2 Testing - relative distances
 
-![](full_files/figure-commonmark/unnamed-chunk-66-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-66-1.png" width="768" />
 
 #### Experimenet 1 - intermittent testing
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-intTest.half <- readRDS(here::here("data/e1_intTest.rds"))
-
-intTest.half %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
-  geom_bar(aes(group=trainHalf,fill=trainHalf),stat="summary",fun=mean,position=dodge)+
-  facet_wrap(~conditType,ncol=2)+
-  stat_summary(aes(x=positionX,group=trainHalf),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
-  ylab("Mean Distance From Center Of Target")+
-  xlab("Intermittent Testing Throw Location")+theme(plot.title = element_text(hjust = 0.5))+
-  guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-67-1.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-cnames=c("Condition","610_First Half","760_First Half","910_First Half","610_Second Half","760_Second Half","910_Second Half")
-test= intTest.half %>% rename(Condition="conditType") %>% group_by(Condition,trainHalf,positionX) %>% 
-  summarise(Mean=round(mean(MeanTargetDistance),2),sd=round(sd(MeanTargetDistance),2)) 
-test=test %>% group_by(Condition) %>% mutate(msd=paste(Mean,"(",sd,")",sep="")) %>%
- select(Condition,positionX,trainHalf,msd)%>% pivot_wider(names_from = c(positionX,trainHalf),values_from=c(msd))
-test=test %>% as.data.frame()
-colnames(test) <- cnames
-stargazer(test,type="text",summary=FALSE,rownames=FALSE)
-```
-
-</details>
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-67-1.png" width="768" />
 
 
     ======================================================================================================
@@ -5491,172 +3659,36 @@ stargazer(test,type="text",summary=FALSE,rownames=FALSE)
 
 ### Training plots - Experiment 1
 
-<details class="code-fold">
-<summary>Code</summary>
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-1.png" width="768" />
 
-``` r
-# possible that scaling required loading special package from devtools
-exp1Train <- e1 %>% filter(stage!="Transfer",mode==1) %>% group_by(Group,sbjCode) %>%mutate(scaleDev=scale_this(AbsDistFromCenter)) %>%ungroup() %>% group_by(Group,sbjCode,stage,conditType)
-exp1Train = exp1Train %>% summarise(MeanTargetDistance=mean(AbsDistFromCenter),scaledDist=mean(scaleDev,trim=.05))
-exp1Train$stage <- factor(exp1Train$stage, levels = c("Beginning", "Middle", "End")) #in case the levels get out of order
-exp1TrainTrials <- e1 %>% filter(stage!="Transfer",mode==1,trialType!=44) %>% group_by(Group,sbjCode,positionX) %>% mutate(scaleDev=scale_this(AbsDistFromCenter),ind=1,trainIndex=cumsum(ind)) %>%ungroup() %>% group_by(Group,sbjCode,stage,conditType)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-2.png" width="768" />
 
-
-
-# manuscript plot - original
-ggplot(data = exp1Train, aes(x=stage, y=MeanTargetDistance)) + geom_boxplot(aes(fill=conditType),position=position_dodge(1))+stat_summary(fun="mean",aes(group=conditType),position=position_dodge(1))+
-ylab("Mean Distance From Center Of Target") +xlab("Training Stage")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.5)+theme_classic()
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-68-1.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-lineplot.CI(data=exp1Train,x.factor=stage,group=conditType,response=scaledDist,xlab="Training Stage",x.leg=2,legend=TRUE,ylab="Distance from Target (scaled)",main="Training Performance - Experiment 1",col=c("red","black"))
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-68-2.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-lineplot.CI(data=exp1Train,x.factor=stage,group=conditType,response=MeanTargetDistance,xlab="Training Stage",x.leg=2,legend=TRUE,ylab="Distance From Target",main="Training Performance - Experiment 1",col=c("red","blue"))
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-68-3.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-68-3.png" width="768" />
 
 #### Not in manuscript
 
 #### fit to testing performance averaged across positions
 
-<details class="code-fold">
-<summary>Code</summary>
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-1.png" width="768" />
 
-``` r
-e2Fits.AggPos <- readRDS(here::here('data/IGAS-e2Fits.AggPos-April_12.rds'))
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-2.png" width="768" />
 
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pStart,fill=Group))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  ggtitle("experiment 2 - starting performance per position") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-69-1.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pAsym,fill=Group))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  ggtitle("e2 testing performance asymptote per position ") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-69-2.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2Fits.AggPos %>% ggplot(aes(x=Group,y=pRate,fill=Group))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  ggtitle("e2 testing performance asymptote per position ") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-69-3.png)
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-#mr1=e2Fits.AggPos %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,type=3);show(mr1)
-```
-
-</details>
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-69-3.png" width="768" />
 
 #### statistical tests for starting performance
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-ms1=e2TestFits %>% filter(converged==TRUE) %>% anova_test(dv=pStart,between=conditType,wid=sbjCode,within=positionX,type=3);
-ms2=exp2.fit2 %>% anova_test(dv=MeanStart,between=conditType,wid=sbjCode,type=3);
-#ms1
-ms2 
-```
-
-</details>
 
     ANOVA Table (type III tests)
 
           Effect DFn DFd F     p p<.05   ges
     1 conditType   1 206 3 0.083       0.015
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2TestFits %>% ggplot(aes(x=conditType,y=pStart,fill=conditType))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  facet_grid(~positionX)+ggtitle("experiment 2 - starting performance per position") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-70-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-70-1.png" width="768" />
 
 #### statistical tests for asymptote
-
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-ma1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pAsym,between=conditType,wid=sbjCode,within=positionX,type=3);
-ma2=exp2.fit2 %>% anova_test(dv=MeanAsym,between=conditType,wid=sbjCode,type=3);
-ma2
-```
-
-</details>
 
     ANOVA Table (type III tests)
 
           Effect DFn DFd   F     p p<.05   ges
     1 conditType   1 206 3.4 0.067       0.016
 
-<details class="code-fold">
-<summary>Code</summary>
-
-``` r
-e2TestFits %>% ggplot(aes(x=conditType,y=pAsym,fill=conditType))+
-  geom_bar(stat="summary",position=dodge,fun="mean")+ 
-  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
-  facet_grid(~positionX)+ggtitle("e2 testing performance asymptote per position ") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
-```
-
-</details>
-
-![](full_files/figure-commonmark/unnamed-chunk-71-1.png)
+<img src="full.markdown_strict_files/figure-markdown_strict/unnamed-chunk-71-1.png" width="768" />

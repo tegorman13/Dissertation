@@ -547,6 +547,8 @@ exp2.Test7.agg2 <- exp2.Test7  %>%group_by(sbjCode,conditType) %>%
 ```{r}
 #| label: fig-e2train
 #| fig.cap: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
+#| fig-width: 11
+#| fig-height: 8
 
 ### New - 3 stage
 e2train1<-exp2TrainPosition3 %>% ggplot(aes(x=stage,y=MeanTargetDistance))+
@@ -566,8 +568,7 @@ e2train2<-exp2TrainPosition3 %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
 
 #plot_grid(e2train1,e2train2,ncol=1)
 
-e2train1
-e2train2
+e2train1/e2train2
 
 ```
 
@@ -818,7 +819,7 @@ fs<- fullSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1,colour=Result)) +
   geom_point(aes(),alpha=0.6) + scale_color_manual(values =brewer.pal(n=7,name="Set1"))+
   labs(colour="Target Hit or Miss From Position:") + xlab("X Release Velocity") + ylab("Y Release Velocity") +ggtitle("B")
 
-library(patchwork)
+
 ss/fs
 
 
@@ -1017,7 +1018,7 @@ Also of interest is whether the IGAS model can predict the pattern of
 results wherein the varied condition outperforms the constant condition
 even from the position on which the constant condition trained. Although
 our models were fit using all of the Experiment 2 training and testing
-data, not just that of the identity comparisons, in @fig-Toy_Model2 we
+data, not just that of the identity comparisons, in @fig-Toy-Model-dis we
 demonstrate how a simplified version of the IGAS model could in
 principle produce such a pattern. In addition to the assumption of
 differential generalization between varied and constant conditions, our
@@ -1029,13 +1030,13 @@ throws, resulting in a non-zero dissimilarity.
 
 
 ```{r}
-#| label: fig-Toy-Model2
+#| label: fig-Toy-Model-dis
 #| fig.cap: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
 #| fig.width: 11
-#| fig.height: 11.5
+#| fig.height: 11.0
 
 
-# 
+
 
 p=2
 c<- .000002
@@ -1082,10 +1083,12 @@ ip4 <- simdat %>%  ggplot(aes(x,y=genGaussDist2,group=condit,col=condit))+plotSp
   ggtitle("Added distance due to context, 2c")+theme(plot.margin = margin(0, 0, 0, 1))
 # gridExtra::grid.arrange(ip1,ip2,ip3,ip4,ncol=2)
 
-gtitle="Figure 9."
-title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
-plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
+#gtitle="Figure 9."
+#title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
+#p1 <- plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
+p1 <- (ip1+ip2) / (ip3+ip4)
 
+p1
 ```
 
 As mentioned above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning [@ahaConceptLearningFlexible1992; @briscoeConceptualComplexityBias2011; @hahnEffectsCategoryDiversity2005; @lambertsFlexibleTuningSimilarity1994; @opdebeeckRepresentationPerceivedShape2008], and sensorimotor adaptation [@marongelliAdvantageFlexibleNeuronal2013; @taylorContextdependentGeneralization2013; @thoroughmanRapidReshapingHuman2005]. @lambertsFlexibleTuningSimilarity1994 showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been

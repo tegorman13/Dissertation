@@ -53,7 +53,8 @@ format:
   html:
     theme:
       - cosmo
-      - Assets/style.scss
+      - Assets/Style/style.scss
+    css: Assets/Style/calloutTG.css
     code-link: false
     html-math-method: mathjax
     citations-hover: false
