@@ -1,7 +1,7 @@
 ---
 title: Full Dissertation
 subtitle: An instance-based model account of the benefits of varied practice in visuomotor skill
-date: last-modified
+date: 04/04/24
 #page-layout: full
 code-fold: true
 code-tools: true
