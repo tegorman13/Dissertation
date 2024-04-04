@@ -20,6 +20,14 @@ format:
   gfm:
     echo: true
     output-file: diss_full_gfm.md
+  hikmah-manuscript-pdf:
+    echo: false
+    output-file: "hikmah-e1.pdf"
+    mainfont: "Linux Libertine O"
+    mainfontoptions:
+      - "Numbers=Proportional"
+      - "Numbers=OldStyle"
+    mathfont: "Libertinus Math"
 editor: 
   markdown: 
     wrap: 72
