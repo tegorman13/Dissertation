@@ -882,7 +882,7 @@ training groups.
 
 # Computational Model
 
-Controlling for the similarity between training and testing The primary
+*Controlling for the similarity between training and testing.* The primary
 goal of Experiment 2 was to examine whether the benefits of variability
 would persist after accounting for individual differences in the
 similarity between trained and tested throwing locations. To this end,
