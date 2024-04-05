@@ -967,5 +967,12 @@
     "crumbs": [
       "Full Dissertation"
     ]
+  },
+  {
+    "objectID": "Sections/project_transition.html",
+    "href": "Sections/project_transition.html",
+    "title": "Dissertation",
+    "section": "",
+    "text": "In project 1, we applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model.\nOptional: - emphasize that both tasks involve extrapolation - it’s just emphasized more in Project 2, and project 2 is designed to more closely mirror tasks used in the function learning literature.\nThe HTT and HTW tasks also differed in terms of general task complexity. The HTT task was designed to mimic projectile launching tasks commonly employed in visuomotor learning studies, and the parabolic trajectories necessary to strike the target in HTT were sensitive to both the x and y dimensions of the projectile’s velocity (and to a lesser extent, the position within the launching box at which the ball was released). Conversely, the HTW task was influenced to a greater extent by the tasks commonly utilized in the function learning literature, wherein the correct output responses are determined by a single input dimension. In HTW, the task space is also almost perfectly smooth, at least for the continuous feedback subjects; if they throw 100 units too hard, they’ll be told that they were 100 units too hard. In contrast, in HTT, it was possible to produce xy velocity combinations that were technically closer to the empirical solution space than other throws but resulted in worse feedback due to striking the barrier."
   }
 ]
