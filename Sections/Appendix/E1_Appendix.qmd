@@ -6,7 +6,12 @@
 # print(getwd())
 # here::set_here(path='..')
 # print(getwd())
-source(here::here("Functions", "packages.R"))
+#source(here::here("Functions", "packages.R"))
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
+  ggh4x,htmltools,future,furrr,ez)
+
 
 ```
 

@@ -1,6 +1,18 @@
 ---
 title: General Discussion
 date: today
+format:
+  html: default
+  hugo-md:
+    #echo: false
+    #output: false
+    html-math-method: mathjax
+    output-file: dissc_hugo.md
+    mermaid-format: png
+  gfm:
+    #echo: false
+    output-file: dissc_gfm.md
+    mermaid-format: png
 ---
 
 To facilitate ease of comparison between the two projects and their respective tasks, we'll now refer to project 1 as Hit The Target (HTT) and project 2 as Hit The Wall (HTW). 
@@ -47,3 +59,66 @@ Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).
 In summary, this dissertation provides a comprehensive examination of the effects of training variability on learning and generalization in visuomotor and function learning tasks. The contrasting results obtained from the Hit The Target (HTT) and Hit The Wall (HTW) tasks underscore the complexity inherent to the longstanding pedagogical and scientific goal of identifying training manipulations that consistently benefit learning and generalization. Moreover, through the development and application of computational models, we provide novel theoretical accounts for both the beneficial and detrimental effects of training variability observed in our experiments. These findings highlight the importance of considering task characteristics when designing experiments intended to assess the influence of training interventions, and demonstrate the value of combining empirical and computational modeling approaches to uncover the cognitive mechanisms that support learning and generalization. Future research should continue to investigate the complex interplay between task demands, training manipulations, and individual differences, with the ultimate goal of optimizing educational and training outcomes across a wide range of domains.
 
 \ \ \ \ 
+
+### test
+
+```{r}
+#| echo: false
+#| include: false 
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+print(out_type)
+
+
+fmt_out <- knitr::pandoc_to()
+print(fmt_out)
+
+out_type %in% c("html","pdf")
+
+# out_type = "html"
+out_type == "html" || out_type == "pdf" || out_type == "docx"
+
+
+primary=out_type == "html" || out_type == "pdf" || out_type == "docx"
+
+ifelse(knitr::pandoc_to() %in% c("html","pdf","docx"), TRUE, FALSE)
+
+
+```
+
+::: {.content-visible unless-format="markdown"}
+```{dot}
+//| label: fig-design-e1
+//| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
+//| fig-width: 7.0
+//| fig-height: 2.5
+//| fig-responsive: false
+//| echo: false 
+///| include: !expr "html" || out_type == "pdf" || out_type == "docx"
+
+
+/////| column: screen-inset-right
+digraph {
+  graph [layout = dot, rankdir = LR]
+
+  // define the global styles of the nodes
+  node [shape = rectangle, style = filled]
+
+  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#FF0000"]
+  data2 [label = " Constant Training \n800-1000", fillcolor = "#00A08A"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+
+  // edge definitions with the node IDs
+  data1 -> Test1
+  data2 -> Test1
+
+  subgraph cluster {
+    label = "Test Phase \n(Counterbalanced Order)"
+    Test1 [label = "Test  \nNovel Bands \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+    Test2 [label = "  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
+    Test1 -> Test2
+  }
+
+  Test2 -> Test3
+}
+```
+::: 

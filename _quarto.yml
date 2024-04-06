@@ -44,7 +44,8 @@ website:
       - paper.qmd
       - Sections/full.qmd
       - text: "---"
-      - Sections/Introduction.qmd
+      - text: Intro
+        href: Sections/Introduction.qmd
       - Sections/IGAS.qmd
       - Sections/HTW.qmd
       - Sections/Discussion.qmd

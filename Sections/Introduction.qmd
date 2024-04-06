@@ -1,5 +1,15 @@
 ---
 #title: Introduction
+format:
+  html: default
+  hugo-md:
+    echo: false
+    output: false
+    html-math-method: mathjax
+    output-file: d_intro_hugo.md
+  gfm:
+    echo: true
+    output-file: d_into_gfm.md
 ---
 
 # Variability and Generalization
