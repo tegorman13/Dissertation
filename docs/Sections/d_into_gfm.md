@@ -21,17 +21,17 @@ examples.
 
 Varied training has been shown to influence learning in wide array of
 different tasks and domains, including categorization (Hahn et al.,
-2005; Maddox & Filoteo, 2011; Posner & Keele, 1968;
-**nosofskyModelguidedSearchOptimal2018?**), language learning (Jones &
-Brandt, 2020; Perry et al., 2010; Twomey et al., 2018; Wonnacott et al.,
-2012), anagram completion (Goode et al., 2008), trajectory extrapolation
-(Fulvio et al., 2014), task switching (Sabah et al., 2019), associative
-learning (J. C. Lee et al., 2019), visual search (George & Egner, 2021;
-Gonzalez & Madhavan, 2011; Kelley & Yantis, 2009), voice identity
-learning (Lavan et al., 2019), simple motor learning (Braun et al.,
-2009; Kerr & Booth, 1978; Roller et al., 2001; Willey & Liu, 2018a),
-sports training (Green et al., 1995; North et al., 2019), and training
-on a complex video game (Seow et al., 2019).
+2005; Maddox & Filoteo, 2011; Nosofsky et al., 2019; Posner & Keele,
+1968), language learning (Jones & Brandt, 2020; Perry et al., 2010;
+Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode
+et al., 2008), trajectory extrapolation (Fulvio et al., 2014), task
+switching (Sabah et al., 2019), associative learning (J. C. Lee et al.,
+2019), visual search (George & Egner, 2021; Gonzalez & Madhavan, 2011;
+Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019),
+simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et
+al., 2001; Willey & Liu, 2018a), sports training (Green et al., 1995;
+North et al., 2019), and training on a complex video game (Seow et al.,
+2019).
 
 Research on the effects of varied training typically compares a group of
 participants trained with minimal variability of examples against a
@@ -273,7 +273,7 @@ exemplars (i.e. higher variability), while high repetition training
 produced significantly better performance categorizing the specific
 species they had trained on. A variability advantage was also found in
 the relatively complex domain of rock categorization (Nosofsky et al.,
-2018). For 10 different rock categories, participants were trained with
+2019). For 10 different rock categories, participants were trained with
 either many repetitions of 3 unique examples of each category, or few
 repetitions of 9 unique examples, with an equal number of total training
 trials in each group (the design also included 2 other conditions less
@@ -963,12 +963,12 @@ follow-through practice schedules on learning a table tennis backhand.
 
 </div>
 
-<div id="ref-nosofskyTestsExemplarmemoryModel2018" class="csl-entry">
+<div id="ref-nosofskyModelguidedSearchOptimal2019" class="csl-entry">
 
-Nosofsky, R. M., Sanders, C. A., & McDaniel, M. A. (2018). Tests of an
-exemplar-memory model of classification learning in a high-dimensional
-natural-science category domain. *Journal of Experimental Psychology:
-General*, *147*(3), 328–353. <https://doi.org/10.1037/xge0000369>
+Nosofsky, R. M., Sanders, C. A., Zhu, X., & McDaniel, M. A. (2019).
+Model-guided search for optimal natural-science-category training
+exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1),
+48–76. <https://doi.org/10.3758/s13423-018-1508-8>
 
 </div>
 
