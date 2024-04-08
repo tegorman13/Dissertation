@@ -1,76 +1,41 @@
 
 
-# Variability and Generalization
+# Introduction
 
-The factors that influence the generalization of learning are of
-considerable interest to both researchers exploring the human learning
-system and practitioners aiming to enhance the effectiveness of
-educational and training interventions. The present effort will focus
-specifically on the role of variability in the learning input.
-Variability manipulations typically regulate either the number of
-distinct instances presented to learners during training, or the
-dispersion of these instances. Such manipulations have been empirically
-demonstrated to affect subsequent generalization performance. This essay
-will offer an in-depth review of the extant literature on the influence
-of variability, spanning multiple relevant domains.
+The past century of research on human learning has produced ample
+evidence that although learners can improve at almost any task, such
+improvements are often specific to the trained task, with unreliable or
+even nonexistent transfer or generalization to novel tasks or conditions
+(Barnett & Ceci, 2002; Detterman, 1993). Such generalization challenges
+are of noteworthy practical relevance, given that educators, trainers,
+and rehabilitators typically intend for their students to be able to
+apply what they have learned to new situations. It is therefore
+important to better understand the factors that influence
+generalization, and to develop cognitive models that can predict when
+generalization is likely to occur. Such characteristics have included
+training difficulty, spacing, temporal order, feedback schedules, and
+the primary focus of the current work - the variability of training
+examples.
 
 ## The study of variability
 
-Studies investigating the “benefits of variability” hypothesis usually
-assign participants to either a constant or varied group for the
-training stage of the experiment. Then, subjects in both groups complete
-an identical testing stage which often consists items/conditions seen
-during training, and novel items/conditions. If the varied group
-performs better in the testing stage, this is taken for evidence of the
-benefits of variability hypothesis. Even within this relatively
-straightforward between-groups design, researchers must navigate several
-crucial methodological choices, highlighted below:
+Varied training has been shown to influence learning in wide array of
+different tasks and domains, including categorization (Hahn et al.,
+2005; Maddox & Filoteo, 2011; Posner & Keele, 1968;
+**nosofskyModelguidedSearchOptimal2018?**), language learning (Jones &
+Brandt, 2020; Perry et al., 2010; Twomey et al., 2018; Wonnacott et al.,
+2012), anagram completion (Goode et al., 2008), trajectory extrapolation
+(Fulvio et al., 2014), task switching (Sabah et al., 2019), associative
+learning (J. C. Lee et al., 2019), visual search (George & Egner, 2021;
+Gonzalez & Madhavan, 2011; Kelley & Yantis, 2009), voice identity
+learning (Lavan et al., 2019), simple motor learning (Braun et al.,
+2009; Kerr & Booth, 1978; Roller et al., 2001; Willey & Liu, 2018a),
+sports training (Green et al., 1995; North et al., 2019), and training
+on a complex video game (Seow et al., 2019).
 
-1)  Variables Subject to Variation. In multidimensional tasks,
-    researchers have the option to vary numerous variables. The
-    experimenters must decide the specific dimension(s) across which
-    variation will occur. For instance, in a projectile throwing
-    accuracy task – researchers might vary the distance from the target,
-    the size of the target, the weight of the projectile. They might
-    also vary a contextual variable not directly relevant to the task,
-    but which will still be encoded by the subject on a trial by trial
-    basis, e.g. the background color.
-
-2)  Magnitude of Variation, relative to the control condition. The
-    simplest comparison would be to compare a constant group who trains
-    with 1 example/condition, against a varied group that trains from 2
-    examples/conditions. However, it is not uncommon in the literature
-    for the varied condition to train from 3 or 4 conditions. For
-    example, Catalano & Kleiner (1984) train varied subjects from 4
-    different velocities in their coincident timing task, and (Goode et
-    al., 2008) have varied subjects’ practice with 3 different variants
-    (i.e. different letter scrambles of the same word) of an anagram for
-    a given word, while their constant participants view the same
-    variant 3 different times. Alternatively, rather than a constant
-    vs. varied comparison, subjects in all conditions might experience a
-    variety of training items, but with one group experiencing a greater
-    number of unique items (Nosofsky, Sanders, Zhu, et al., 2018).
-
-3)  Locations within Task-Space. For tasks in which the stimuli or
-    conditions fall within a continuous metric space, the experimenter
-    must decide whether the varied instances are relatively close
-    together (e.g. throwing a ball from a distance of 4 feet and 5
-    feet), or far apart (throwing from 4 feet and 20 feet). Spreading
-    the varied training items further apart may be beneficial in terms
-    of providing a more representative sample of the task space to the
-    learner, however large distances may also result in significant
-    differences in difficulty between the training examples, which can
-    be a common confound in variability studies.
-
-4)  Proximity of Testing to Training Conditions. Intuitively, the
-    fairest form of comparison is to include testing conditions that are
-    of an equivalent distance from both the varied and constant groups.
-    However researchers might also attempt to demonstrate the benefits
-    of variation as being sufficiently powerful to outperform constant
-    training, even in cases where the constant group trained from a
-    closer proximity to the testing conditions, or whose training
-    conditions are identical to the testing conditions (Goode et al.,
-    2008; Kerr & Booth, 1978).
+Research on the effects of varied training typically compares a group of
+participants trained with minimal variability of examples against a
+group with greater variability (Czyż, 2021; Raviv et al., 2022).
 
 ## Variability Literature Review
 
@@ -179,7 +144,7 @@ conditions, and which were not trained on by any of the varied groups,
 e.g. the design of Kerr and Booth. However, in this case the varied
 group did not outperform the constant group. A more recent study
 attempting a slightly more direct replication of the original Kerr &
-Booth study (Willey & Liu, 2018), having subjects throw beanbags at a
+Booth study (Willey & Liu, 2018b), having subjects throw beanbags at a
 target, with the varied group training from positions (5 and 9 feet) on
 either side of the constant group (7 feet). However, this study diverged
 from the original in that the participants were adults; they faced away
@@ -307,17 +272,16 @@ generalized better to novel species following training with more unique
 exemplars (i.e. higher variability), while high repetition training
 produced significantly better performance categorizing the specific
 species they had trained on. A variability advantage was also found in
-the relatively complex domain of rock categorization (Nosofsky, Sanders,
-& McDaniel, 2018). For 10 different rock categories, participants were
-trained with either many repetitions of 3 unique examples of each
-category, or few repetitions of 9 unique examples, with an equal number
-of total training trials in each group (the design also included 2 other
-conditions less amenable to considering the impact of variation). The
-high-variability group, trained with 9 unique examples, showed
-significantly better generalization performance than the other
-conditions. Moreover, the pattern of results in this study could be
-nicely accounted for by an extended version of the Generalized Context
-Model.
+the relatively complex domain of rock categorization (Nosofsky et al.,
+2018). For 10 different rock categories, participants were trained with
+either many repetitions of 3 unique examples of each category, or few
+repetitions of 9 unique examples, with an equal number of total training
+trials in each group (the design also included 2 other conditions less
+amenable to considering the impact of variation). The high-variability
+group, trained with 9 unique examples, showed significantly better
+generalization performance than the other conditions. Moreover, the
+pattern of results in this study could be nicely accounted for by an
+extended version of the Generalized Context Model.
 
 The studies described thus far have studied the benefits of variability
 by exposing participants to a greater or lesser number of distinct
@@ -546,7 +510,7 @@ Magill & Hall, 1990; Van Rossum, 1990 for reviews), and a variety of
 moderators have emerged. In one of the earlier examples of the complex
 relationship between study sequence and learning (Del Rey et al., 1982),
 experimenters recruited participants who self-reported either large
-amounts, or very little experience with athletic actives, and then
+amounts, or very little experience with athletic activities, and then
 trained participants on a coincident timing task under with either a
 single constant training velocity, or with four training velocities
 under either blocked, or random training sequence conditions - resulting
@@ -617,7 +581,7 @@ structure the random trials such that the same condition never occurs
 consecutively (Wulf, 1991). Also common is to structure experiments such
 that random condition really consists of many small blocks, where
 participants do a few trials of one condition consecutively and then
-switch to another condition (Chua et al., 2019; Willey & Liu, 2018;
+switch to another condition (Chua et al., 2019; Willey & Liu, 2018b;
 Wrisberg et al., 1987), resulting in many more switches than would arise
 if training was perfectly blocked. The question of whether such
 differences in the structure of random sequencing are consequential has
@@ -683,6 +647,14 @@ Psychologica*, *100*(1), 9–24.
 
 </div>
 
+<div id="ref-barnettWhenWhereWe2002" class="csl-entry">
+
+Barnett, S. M., & Ceci, S. J. (2002). When and where do we apply what we
+learn?: A taxonomy for far transfer. *Psychological Bulletin*, *128*(4),
+612–637. <https://doi.org/10.1037//0033-2909.128.4.612>
+
+</div>
+
 <div id="ref-battigFacilitationInterference1966" class="csl-entry">
 
 Battig, W. F. (1966). Facilitation and interference. *Acquisition of
@@ -704,6 +676,14 @@ Braithwaite, D. W., & Goldstone, R. L. (2015). Effects of Variation and
 Prior Knowledge on Abstract Concept Learning. *Cognition and
 Instruction*, *33*(3), 226–256.
 <https://doi.org/10.1080/07370008.2015.1067215>
+
+</div>
+
+<div id="ref-braunMotorTaskVariation2009" class="csl-entry">
+
+Braun, D. A., Aertsen, A., Wolpert, D. M., & Mehring, C. (2009). Motor
+Task Variation Induces Structural Learning. *Current Biology*, *19*(4),
+352–357. <https://doi.org/10.1016/j.cub.2009.01.036>
 
 </div>
 
@@ -752,12 +732,53 @@ variability, exemplar similarity, and perceptual classification. *Memory
 
 </div>
 
+<div id="ref-czyzVariabilityPracticeInformation2021" class="csl-entry">
+
+Czyż, S. H. (2021). Variability of Practice, Information Processing, and
+Decision Making—How Much Do We Know? *Frontiers in Psychology*, *12*.
+<https://doi.org/10.3389/fpsyg.2021.639131>
+
+</div>
+
 <div id="ref-delreyEffectsContextualInterference1982" class="csl-entry">
 
 Del Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of
 Contextual Interference on Females With Varied Experience in Open Sport
 Skills. *Research Quarterly for Exercise and Sport*, *53*(2), 108–115.
 <https://doi.org/10.1080/02701367.1982.10605236>
+
+</div>
+
+<div id="ref-dettermanCaseProsecutionTransfer1993" class="csl-entry">
+
+Detterman, D. K. (1993). The case for the prosecution: Transfer as an
+epiphenomenon. In *Transfer on trial: Intelligence, cognition, and
+instruction* (pp. 1–24). Ablex Publishing.
+
+</div>
+
+<div id="ref-fulvioTaskSpecificResponseStrategy2014" class="csl-entry">
+
+Fulvio, J. M., Green, C. S., & Schrater, P. R. (2014). Task-Specific
+Response Strategy Selection on the Basis of Recent Training Experience.
+*PLOS Computational Biology*, *10*(1), e1003425.
+<https://doi.org/10.1371/journal.pcbi.1003425>
+
+</div>
+
+<div id="ref-georgeStimulusVariabilityTask2021" class="csl-entry">
+
+George, N., & Egner, T. (2021). Stimulus variability and task relevance
+modulate binding-learning. *Attention, Perception, & Psychophysics*.
+<https://doi.org/10.3758/s13414-021-02338-6>
+
+</div>
+
+<div id="ref-gonzalezDiversityTrainingEnhances2011" class="csl-entry">
+
+Gonzalez, C., & Madhavan, P. (2011). Diversity during training enhances
+detection of novel stimuli. *Journal of Cognitive Psychology*, *23*(3),
+342–350. <https://doi.org/10.1080/20445911.2011.507187>
 
 </div>
 
@@ -823,6 +844,22 @@ Conference of the Cognitive Science Society*, 7.
 
 </div>
 
+<div id="ref-jonesDensityDistinctivenessEarly2020" class="csl-entry">
+
+Jones, S. D., & Brandt, S. (2020). Density and Distinctiveness in Early
+Word Learning: Evidence From Neural Network Simulations. *Cognitive
+Science*, *44*(1), e12812. <https://doi.org/10.1111/cogs.12812>
+
+</div>
+
+<div id="ref-kelleyLearningAttendEffects2009" class="csl-entry">
+
+Kelley, T. A., & Yantis, S. (2009). Learning to attend: Effects of
+practice on information selection. *Journal of Vision*, *9*(7), 16.
+<https://doi.org/10.1167/9.7.16>
+
+</div>
+
 <div id="ref-kerrSpecificVariedPractice1978" class="csl-entry">
 
 Kerr, R., & Booth, B. (1978). Specific and varied practice of motor
@@ -840,6 +877,23 @@ Quarterly for Exercise and Sport*, *68*(4), 357–361.
 
 </div>
 
+<div id="ref-lavanEffectsHighVariability2019" class="csl-entry">
+
+Lavan, N., Knight, S., Hazan, V., & McGettigan, C. (2019). The effects
+of high variability training on voice identity learning. *Cognition*,
+*193*, 104026. <https://doi.org/10.1016/j.cognition.2019.104026>
+
+</div>
+
+<div id="ref-leeEvidentialDiversityIncreases2019" class="csl-entry">
+
+Lee, J. C., Lovibond, P. F., & Hayes, B. K. (2019). Evidential diversity
+increases generalisation in predictive learning. *Quarterly Journal of
+Experimental Psychology*, *72*(11), 2647–2657.
+<https://doi.org/10.1177/1747021819857065>
+
+</div>
+
 <div id="ref-leeLocusContextualInterference" class="csl-entry">
 
 Lee, T. D., & Magill, R. A. (n.d.). *The Locus of Contextual
@@ -853,6 +907,15 @@ Lee, T. D., Magill, R. A., & Weeks, D. J. (1985). Influence of Practice
 Schedule on Testing Schema Theory Predictions in Adults. *Journal of
 Motor Behavior*, *17*(3), 283–299.
 <https://doi.org/10.1080/00222895.1985.10735350>
+
+</div>
+
+<div id="ref-maddoxStimulusRangeDiscontinuity2011" class="csl-entry">
+
+Maddox, W. T., & Filoteo, J. V. (2011). Stimulus range and discontinuity
+effects on information-integration category learning and generalization.
+*Attention, Perception, & Psychophysics*, *73*(4), 1279–1295.
+<https://doi.org/10.3758/s13414-011-0101-2>
 
 </div>
 
@@ -890,21 +953,22 @@ Learning. *Journal of Motor Behavior*, *8*(3), 233–243.
 
 </div>
 
+<div id="ref-northEffectConsistentVaried2019" class="csl-entry">
+
+North, J. S., Bezodis, N. E., Murphy, C. P., Runswick, O. R., Pocock,
+C., & Roca, A. (2019). The effect of consistent and varied
+follow-through practice schedules on learning a table tennis backhand.
+*Journal of Sports Sciences*, *37*(6), 613–620.
+<https://doi.org/10.1080/02640414.2018.1522683>
+
+</div>
+
 <div id="ref-nosofskyTestsExemplarmemoryModel2018" class="csl-entry">
 
 Nosofsky, R. M., Sanders, C. A., & McDaniel, M. A. (2018). Tests of an
 exemplar-memory model of classification learning in a high-dimensional
 natural-science category domain. *Journal of Experimental Psychology:
 General*, *147*(3), 328–353. <https://doi.org/10.1037/xge0000369>
-
-</div>
-
-<div id="ref-nosofskyModelguidedSearchOptimal2018" class="csl-entry">
-
-Nosofsky, R. M., Sanders, C. A., Zhu, X., & McDaniel, M. A. (2018).
-Model-guided search for optimal natural-science-category training
-exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1),
-48–76. <https://doi.org/10.3758/s13423-018-1508-8>
 
 </div>
 
@@ -952,12 +1016,29 @@ Posner, M. I., & Keele, S. W. (1968). On the genesis of abstract ideas.
 
 </div>
 
+<div id="ref-ravivHowVariabilityShapes2022" class="csl-entry">
+
+Raviv, L., Lupyan, G., & Green, S. C. (2022). How variability shapes
+learning and generalization. *Trends in Cognitive Sciences*,
+S1364661322000651. <https://doi.org/10.1016/j.tics.2022.03.007>
+
+</div>
+
 <div id="ref-rollerVariablePracticeLenses2001" class="csl-entry">
 
 Roller, C. A., Cohen, H. S., Kimball, K. T., & Bloomberg, J. J. (2001).
 Variable practice with lenses improves visuo-motor plasticity.
 *Cognitive Brain Research*, *12*(2), 341–352.
 <https://doi.org/10.1016/S0926-6410(01)00077-5>
+
+</div>
+
+<div id="ref-sabahWhenLessMore2019" class="csl-entry">
+
+Sabah, K., Dolk, T., Meiran, N., & Dreisbach, G. (2019). When less is
+more: Costs and benefits of varied vs. Fixed content and structure in
+short-term task switching training. *Psychological Research*, *83*(7),
+1531–1542. <https://doi.org/10.1007/s00426-018-1006-7>
 
 </div>
 
@@ -987,6 +1068,15 @@ training. *Psychological Science*, *3*(4), 207–217.
 
 </div>
 
+<div id="ref-seowTransferEffectsVaried2019" class="csl-entry">
+
+Seow, R. Y. T., Betts, S., & Anderson, J. R. (2019). Transfer effects of
+varied practice and adaptation to changes in complex skill acquisition.
+*Proceedings of the 17th International Conference on Cognitive
+Modelling*, 222–227.
+
+</div>
+
 <div id="ref-sheaContextualInterferenceContributions1990"
 class="csl-entry">
 
@@ -1012,6 +1102,14 @@ Learning Movement Information. In *Advances in Psychology* (Vol. 12, pp.
 
 </div>
 
+<div id="ref-twomeyAllRightNoises2018" class="csl-entry">
+
+Twomey, K. E., Ma, L., & Westermann, G. (2018). All the Right Noises:
+Background Variability Helps Early Word Learning. *Cognitive Science*,
+*42*(S2), 413–438. <https://doi.org/10.1111/cogs.12539>
+
+</div>
+
 <div id="ref-vanrossumSchmidtSchemaTheory1990" class="csl-entry">
 
 Van Rossum, J. H. A. (1990). Schmidt’s schema theory: The empirical base
@@ -1030,11 +1128,29 @@ learning: Evidence for variability neglect. *Memory & Cognition*,
 
 </div>
 
+<div id="ref-willeyLimitedGeneralizationVaried2018" class="csl-entry">
+
+Willey, C. R., & Liu, Z. (2018a). Limited generalization with varied, as
+compared to specific, practice in short-term motor learning. *Acta
+Psychologica*, *182*, 39–45.
+<https://doi.org/10.1016/j.actpsy.2017.11.008>
+
+</div>
+
 <div id="ref-willeyLongtermMotorLearning2018" class="csl-entry">
 
-Willey, C. R., & Liu, Z. (2018). Long-term motor learning: Effects of
+Willey, C. R., & Liu, Z. (2018b). Long-term motor learning: Effects of
 varied and specific practice. *Vision Research*, *152*, 10–16.
 <https://doi.org/10.1016/j.visres.2017.03.012>
+
+</div>
+
+<div id="ref-wonnacottInputEffectsAcquisition2012" class="csl-entry">
+
+Wonnacott, E., Boyd, J. K., Thomson, J., & Goldberg, A. E. (2012). Input
+effects on the acquisition of a novel phrasal construction in 5year
+olds. *Journal of Memory and Language*, *66*(3), 458–478.
+<https://doi.org/10.1016/j.jml.2011.11.004>
 
 </div>
 

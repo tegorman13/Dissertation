@@ -1,0 +1,17 @@
+
+
+
+
+## The study of variability
+
+Studies investigating the "benefits of variability" hypothesis usually assign participants to either a constant or varied group for the training stage of the experiment. Then, subjects in both groups complete an identical testing stage which often consists items/conditions seen during training, and novel items/conditions. 
+
+If the varied group performs better in the testing stage, this is taken for evidence of the benefits of variability hypothesis. Even within this relatively straightforward between-groups design, researchers must navigate several crucial methodological choices, highlighted below:
+
+1)  Variables Subject to Variation. In multidimensional tasks, researchers have the option to vary numerous variables. The experimenters must decide the specific dimension(s) across which variation will occur. For instance, in a projectile throwing accuracy task -- researchers might vary the distance from the target, the size of the target, the weight of the projectile. They might also vary a contextual variable not directly relevant to the task, but which will still be encoded by the subject on a trial by trial basis, e.g. the background color.
+
+2)  Magnitude of Variation, relative to the control condition. The simplest comparison would be to compare a constant group who trains with 1 example/condition, against a varied group that trains from 2 examples/conditions. However, it is not uncommon in the literature for the varied condition to train from 3 or 4 conditions. For example, @catalanoDistantTransferCoincident1984a train varied subjects from 4 different velocities in their coincident timing task, and [@goodeSuperiorityVariableRepeated2008] have varied subjects' practice with 3 different variants (i.e. different letter scrambles of the same word) of an anagram for a given word, while their constant participants view the same variant 3 different times. Alternatively, rather than a constant vs. varied comparison, subjects in all conditions might experience a variety of training items, but with one group experiencing a greater number of unique items [@nosofskyModelguidedSearchOptimal2018].
+
+3)  Locations within Task-Space. For tasks in which the stimuli or conditions fall within a continuous metric space, the experimenter must decide whether the varied instances are relatively close together (e.g. throwing a ball from a distance of 4 feet and 5 feet), or far apart (throwing from 4 feet and 20 feet). Spreading the varied training items further apart may be beneficial in terms of providing a more representative sample of the task space to the learner, however large distances may also result in significant differences in difficulty between the training examples, which can be a common confound in variability studies.
+
+4)  Proximity of Testing to Training Conditions. Intuitively, the fairest form of comparison is to include testing conditions that are of an equivalent distance from both the varied and constant groups. However researchers might also attempt to demonstrate the benefits of variation as being sufficiently powerful to outperform constant training, even in cases where the constant group trained from a closer proximity to the testing conditions, or whose training conditions are identical to the testing conditions [@goodeSuperiorityVariableRepeated2008; @kerrSpecificVariedPractice1978].
