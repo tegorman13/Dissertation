@@ -2,6 +2,10 @@
 Thomas Gorman
 2024-04-04
 
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
 - [Variability and Generalization](#variability-and-generalization)
   - [The study of variability](#the-study-of-variability)
   - [Variability Literature Review](#variability-literature-review)
@@ -128,7 +132,7 @@ crucial methodological choices, highlighted below:
     variant 3 different times. Alternatively, rather than a constant
     vs. varied comparison, subjects in all conditions might experience a
     variety of training items, but with one group experiencing a greater
-    number of unique items (Nosofsky, Sanders, Zhu, et al., 2018).
+    number of unique items (**nosofskyModelguidedSearchOptimal2018?**).
 
 3)  Locations within Task-Space. For tasks in which the stimuli or
     conditions fall within a continuous metric space, the experimenter
@@ -386,17 +390,16 @@ generalized better to novel species following training with more unique
 exemplars (i.e. higher variability), while high repetition training
 produced significantly better performance categorizing the specific
 species they had trained on. A variability advantage was also found in
-the relatively complex domain of rock categorization (Nosofsky, Sanders,
-& McDaniel, 2018). For 10 different rock categories, participants were
-trained with either many repetitions of 3 unique examples of each
-category, or few repetitions of 9 unique examples, with an equal number
-of total training trials in each group (the design also included 2 other
-conditions less amenable to considering the impact of variation). The
-high-variability group, trained with 9 unique examples, showed
-significantly better generalization performance than the other
-conditions. Moreover, the pattern of results in this study could be
-nicely accounted for by an extended version of the Generalized Context
-Model.
+the relatively complex domain of rock categorization (Nosofsky et al.,
+2018). For 10 different rock categories, participants were trained with
+either many repetitions of 3 unique examples of each category, or few
+repetitions of 9 unique examples, with an equal number of total training
+trials in each group (the design also included 2 other conditions less
+amenable to considering the impact of variation). The high-variability
+group, trained with 9 unique examples, showed significantly better
+generalization performance than the other conditions. Moreover, the
+pattern of results in this study could be nicely accounted for by an
+extended version of the Generalized Context Model.
 
 The studies described thus far have studied the benefits of variability
 by exposing participants to a greater or lesser number of distinct
@@ -869,20 +872,20 @@ to those trained from a variety of examples or conditions (Czyż, 2021;
 Soderstrom & Bjork, 2015). Varied training has been shown to influence
 learning in myriad domains including categorization of simple stimuli
 (Hahn et al., 2005; Maddox & Filoteo, 2011; Posner & Keele, 1968),
-complex categorization (Nosofsky, Sanders, Zhu, et al., 2018), language
-learning (Jones & Brandt, 2020; Perry et al., 2010; Twomey et al., 2018;
-Wonnacott et al., 2012), anagram completion (Goode et al., 2008),
-trajectory extrapolation (Fulvio et al., 2014), task switching (Sabah et
-al., 2019), associative learning (J. C. Lee et al., 2019), visual search
-(George & Egner, 2021; Gonzalez & Madhavan, 2011; T. A. Kelley & Yantis,
-2009), voice identity learning (Lavan et al., 2019), simple motor
-learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al., 2001;
-Willey & Liu, 2018a), sports training (Green et al., 1995; North et al.,
-2019), and training on a complex video game (Seow et al., 2019).
-Training variation has received a particularly large amount of attention
-within the domain of visuomotor skill learning. Much of this research
-has been influenced by the work of Schmidt (1975), who proposed a
-schema-based account of motor learning as an attempt to address the
+complex categorization (**nosofskyModelguidedSearchOptimal2018?**),
+language learning (Jones & Brandt, 2020; Perry et al., 2010; Twomey et
+al., 2018; Wonnacott et al., 2012), anagram completion (Goode et al.,
+2008), trajectory extrapolation (Fulvio et al., 2014), task switching
+(Sabah et al., 2019), associative learning (J. C. Lee et al., 2019),
+visual search (George & Egner, 2021; Gonzalez & Madhavan, 2011; T. A.
+Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019),
+simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et
+al., 2001; Willey & Liu, 2018a), sports training (Green et al., 1995;
+North et al., 2019), and training on a complex video game (Seow et al.,
+2019). Training variation has received a particularly large amount of
+attention within the domain of visuomotor skill learning. Much of this
+research has been influenced by the work of Schmidt (1975), who proposed
+a schema-based account of motor learning as an attempt to address the
 longstanding problem of how novel movements are produced. According to
 Schema Theory, learners possess general motor programs for classes of
 movements (e.g. throwing a ball with an underhand movement), as well as
@@ -1712,8 +1715,8 @@ learning is studied both in tasks where individuals are exposed to a
 sequence of input/output pairs (DeLosh et al., 1997; McDaniel et al.,
 2013), or situations where observers are presented with a an incomplete
 scatterplot or line graph and make predictions about regions of the plot
-that don’t contain data (Ciccione & Dehaene, 2021; Courrieu, 2012; Said
-& Fischer, 2021; Schulz et al., 2020).
+that don’t contain data (Courrieu, 2012; Said & Fischer, 2021; Schulz et
+al., 2020; **ciccioneCanHumansPerform2021a?**).
 
 Carroll (1963) conducted the earliest work on function learning. Input
 stimuli and output responses were both lines of varying length. The
@@ -1962,7 +1965,7 @@ fit a Bayesian mixed effects model predicting deviation from the target
 band as a function of training condition (varied vs. constant) and band
 type (trained vs. extrapolation), with random intercepts for
 participants and bands. The model results are shown in
-<a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 6</a>. The main
+<a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 2</a>. The main
 effect of training condition was not significant ($\beta$ = 39, 95% CrI
 \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a
 significantly greater deviation than the training bands ($\beta$ =
@@ -1985,7 +1988,7 @@ Finally, to assess the ability of both conditions to discriminate
 between velocity bands, we fit a model predicting velocity as a function
 of training condition and velocity band, with random intercepts and
 random slopes for each participant. See
-<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 8</a> for the full
+<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 3</a> for the full
 model results. The estimated coefficient for training condition ($\beta$
 = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the
 varied group tends to produce harder throws than the constant group, but
@@ -2059,7 +2062,7 @@ final training block, ( $\beta$ = 36.15, 95% CrI \[16.35, 55.67\]; pd =
 from the target band as influenced by training condition (Varied
 vs. Constant) and band type (training vs. extrapolation bands). The
 results, summarized in
-<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 10</a>, reveal no
+<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 5</a>, reveal no
 significant main effect of training condition ($\beta$ = -20.58, 95% CrI
 \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between
 training condition and band type was significant ($\beta$ = 82, 95% CrI
@@ -2079,7 +2082,7 @@ conditions to discriminate between velocity bands, we fit a model
 predicting velocity as a function of training condition and velocity
 band, with random intercepts and random slopes for each participant. The
 full model results are shown in
-<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 12</a>. The overall
+<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 6</a>. The overall
 slope on target velocity band predictor was significantly positive,
 ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that
 participants exhibited discrimination between bands. The interaction
@@ -2128,7 +2131,7 @@ n=46 in the Varied-Reverse condition.
 
 *Training*. **?@fig-e3-train-dev** displays the average deviations from
 the target band across training blocks, and
-<a href="#tbl-e3-train-dist" class="quarto-xref">Table 13</a> shows the
+<a href="#tbl-e3-train-dist" class="quarto-xref">Table 7</a> shows the
 results of the Bayesian regression model predicting the deviation from
 the common band at the end of training (600-800 for reversed order, and
 800-1000 for original order conditions). The main effect of training
@@ -2152,7 +2155,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 | conditVaried:bandTypeExtrapolation:bandOrderReverse |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 *Testing Accuracy.*
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a> presents the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 8</a> presents the
 results of the Bayesian mixed efects model predicting absolute deviation
 from the target band during the testing stage. There was no significant
 main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68,
@@ -2187,7 +2190,7 @@ significant.
 
 *Testing Discrimination.* The full results of the discrimination model
 are presented in
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a>. For the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 8</a>. For the
 purposes of assessing group differences in discrimination, only the
 coefficients including the band variable are of interest. The baseline
 effect of band represents the slope cofficient for the constant
@@ -2204,6 +2207,22 @@ where the steepness of the best fitting line for the varied-reversed
 condition is noticably steeper than the other conditions.
 
 ### Experiment 3 Summary
+
+In Experiment 3, we investigated the effects of training condition
+(constant vs. varied) and band type (training vs. extrapolation) on
+participants’ accuracy and discrimination during the testing phase.
+Unlike the previous experiments, participants received ordinal feedback
+during the training phase. Additionally, Experiment 3 included both the
+original order condition from Experiment 1 and the reverse order
+condition from Experiment 2. The results revealed no significant main
+effects of training condition on testing accuracy, nor was there a
+significant difference between groups in band discrimination. However,
+we observed a significant three-way interaction for the discrimination
+analysis, indicating that the varied condition showed a steeper slope
+coefficient on the reverse order bands compared to the constant
+condition. This result suggests that varied training enhanced
+participants’ ability to discriminate between velocity bands, but only
+when the band order was reversed during testing.
 
 ## Computational Model
 
@@ -2265,7 +2284,7 @@ function, found that participants consistently demonstrated knowledge
 of, or a bias towards, the origin point (see Kwantes & Neal (2006) for
 additional evidence of such a bias in function learning tasks).
 
-See <a href="#tbl-alm-exam" class="quarto-xref">Table 16</a> for a full
+See <a href="#tbl-alm-exam" class="quarto-xref">Table 10</a> for a full
 specification of the equations that define ALM and EXAM, and
 **?@fig-alm-diagram** for a visual representation of the ALM model.
 
@@ -2476,45 +2495,41 @@ data” models - results from the other fitting methods can be found in
 the appendix. The model fitting results for Experiments 2 and 3 closely
 mirrored those observed in Experiment 1. The Bayesian regression models
 predicting model error as a function of Model (ALM vs. EXAM), Condition
-(Constant vs. Varied), and their interaction (see
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>) revealed a
-consistent main effect of Model across all three experiments. The
-negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39,
-95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI
--75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both
-experiments. Furthermore, the interaction between Model and Condition
-was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI 25.26,
-88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI 11.2,
-72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM
-was more pronounced for the Constant group compared to the Varied group,
-as was the case in Experiment 1. Recall that Experiment 3 included
-participants in both the original and reverse order conditions - and
-that this manipulation interacted with the effect of training condition.
-We thus also controleld for band order in our Bayesian Regression
-assessing the relative performance of EXAM and ALM in Experiment 3.
-There was a significant three way interaction between Model, Training
-Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd =
-99.83%), indicating that the relative advantage of EXAM over ALM was
-only more pronounced in the original order condition, and not the
-reverse order condition (see **?@fig-e2_e3_ae**).
+(Constant vs. Varied), and their interaction (see **?@tbl-htw-ee-e23**)
+revealed a consistent main effect of Model across all three experiments.
+The negative coefficients for the ModelEXAM term (Exp 2: $\beta$ =
+-86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95%
+CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in
+both experiments. Furthermore, the interaction between Model and
+Condition was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI
+25.26, 88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI
+11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over
+ALM was more pronounced for the Constant group compared to the Varied
+group, as was the case in Experiment 1. Recall that Experiment 3
+included participants in both the original and reverse order
+conditions - and that this manipulation interacted with the effect of
+training condition. We thus also controleld for band order in our
+Bayesian Regression assessing the relative performance of EXAM and ALM
+in Experiment 3. There was a significant three way interaction between
+Model, Training Condition, and Band Order ($\beta$ = -60.6, 95% CrI
+-101.8, -18.66, pd = 99.83%), indicating that the relative advantage of
+EXAM over ALM was only more pronounced in the original order condition,
+and not the reverse order condition (see **?@fig-e2_e3_ae**).
 
 *Computational Model Summary*. Across the model fits to all three
 experiments, we found greater support for EXAM over ALM (negative
-coefficients on the ModelEXAM term in
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>), and
+coefficients on the ModelEXAM term in **?@tbl-htw-ee-e23**), and
 moreover that the constant participants were disproportionately well
 described by EXAM in comparison to ALM (positive coefficients on
-ModelEXAM:conditVaried terms in
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>). This
-pattern is also clearly depicted in **?@fig-htw-best-model**, which
-plots the difference in model errors between ALM and EXAM for each
-individual participant. Both varied and constant conditions have a
-greater proportion of subjects better fit by EXAM (positive error
-differences), with the magnitude of EXAM’s advantage visibly greater for
-the constant group. It also bears mention that numerous participants
-were better fit by ALM, or did not show a clear preference for either
-model. A subset of these participants are shown in
-**?@fig-htw-indv-pred**.
+ModelEXAM:conditVaried terms in **?@tbl-htw-ee-e23**). This pattern is
+also clearly depicted in **?@fig-htw-best-model**, which plots the
+difference in model errors between ALM and EXAM for each individual
+participant. Both varied and constant conditions have a greater
+proportion of subjects better fit by EXAM (positive error differences),
+with the magnitude of EXAM’s advantage visibly greater for the constant
+group. It also bears mention that numerous participants were better fit
+by ALM, or did not show a clear preference for either model. A subset of
+these participants are shown in **?@fig-htw-indv-pred**.
 
 ## Project 2 Discussion
 
@@ -2724,7 +2739,7 @@ detrimental to performance in simple extrapolation tasks.
 
 The HTT and HTW tasks differ across numerous dimensions that may be
 relevant to the opposing patterns observed in the two projects (see
-<a href="#tbl-task-diff" class="quarto-xref">Table 20</a> provides for a
+<a href="#tbl-task-diff" class="quarto-xref">Table 11</a> provides for a
 detailed comparison of the two tasks).
 
 In HTT, the salient perceptual elements of the task (i.e. the launching
@@ -3008,15 +3023,6 @@ Movement Science*, *64*, 307–319.
 
 </div>
 
-<div id="ref-ciccioneCanHumansPerform2021a" class="csl-entry">
-
-Ciccione, L., & Dehaene, S. (2021). Can humans perform mental regression
-on a graph? Accuracy and bias in the perception of scatterplots.
-*Cognitive Psychology*, *128*, 101406.
-<https://doi.org/10.1016/j.cogpsych.2021.101406>
-
-</div>
-
 <div id="ref-cochraneTEfitsNonlinearRegression2020" class="csl-entry">
 
 Cochrane, A. (2020). TEfits: Nonlinear regression for time-evolving
@@ -3073,7 +3079,7 @@ Experimental Psychology: Human Perception and Performance*, *36*(3),
 <div id="ref-czyzVariabilityPracticeInformation2021" class="csl-entry">
 
 Czyż, S. H. (2021). Variability of Practice, Information Processing, and
-Decision MakingHow Much Do We Know? *Frontiers in Psychology*, *12*.
+Decision Making—How Much Do We Know? *Frontiers in Psychology*, *12*.
 <https://doi.org/10.3389/fpsyg.2021.639131>
 
 </div>
@@ -3330,7 +3336,7 @@ Linear Experts: Knowledge Partitioning and Function Learning.
 
 <div id="ref-kaneApplicationsBiasVariance2020" class="csl-entry">
 
-Kane, P. B., & Broomell, S. B. (2020). Applications of the biasvariance
+Kane, P. B., & Broomell, S. B. (2020). Applications of the bias–variance
 decomposition to human forecasting. *Journal of Mathematical
 Psychology*, *98*, 102417. <https://doi.org/10.1016/j.jmp.2020.102417>
 
@@ -3633,15 +3639,6 @@ Nosofsky, R. M., Sanders, C. A., & McDaniel, M. A. (2018). Tests of an
 exemplar-memory model of classification learning in a high-dimensional
 natural-science category domain. *Journal of Experimental Psychology:
 General*, *147*(3), 328–353. <https://doi.org/10.1037/xge0000369>
-
-</div>
-
-<div id="ref-nosofskyModelguidedSearchOptimal2018" class="csl-entry">
-
-Nosofsky, R. M., Sanders, C. A., Zhu, X., & McDaniel, M. A. (2018).
-Model-guided search for optimal natural-science-category training
-exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1),
-48–76. <https://doi.org/10.3758/s13423-018-1508-8>
 
 </div>
 
