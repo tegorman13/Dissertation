@@ -41,7 +41,6 @@
     -   [Fitting model parameters separately by group](https://tegorman13.github.io/Dissertation/Sections/full.html#fitting-model-parameters-separately-by-group)
 -   [General Discussion](https://tegorman13.github.io/Dissertation/Sections/full.html#general-discussion)
     -   [Limitations](https://tegorman13.github.io/Dissertation/Sections/full.html#limitations)
-    -   [Conclusion](https://tegorman13.github.io/Dissertation/Sections/full.html#conclusion)
 -   [Project 2](https://tegorman13.github.io/Dissertation/Sections/full.html#project-2)
 -   [Introduction](https://tegorman13.github.io/Dissertation/Sections/full.html#introduction-1)
     -   [Function Learning and Extrapolation](https://tegorman13.github.io/Dissertation/Sections/full.html#function-learning-and-extrapolation)
@@ -64,17 +63,21 @@
     -   [ALM & Exam Description](https://tegorman13.github.io/Dissertation/Sections/full.html#alm-exam-description)
     -   [Model Fitting](https://tegorman13.github.io/Dissertation/Sections/full.html#model-fitting)
         -   [Modelling Results](https://tegorman13.github.io/Dissertation/Sections/full.html#modelling-results)
+    -   [Project 2 Discussion](https://tegorman13.github.io/Dissertation/Sections/full.html#project-2-discussion)
 -   [General Discussion](https://tegorman13.github.io/Dissertation/Sections/full.html#general-discussion-1)
-    -   [Comparison to Project 1](https://tegorman13.github.io/Dissertation/Sections/full.html#comparison-to-project-1)
-        -   [Differences between the tasks](https://tegorman13.github.io/Dissertation/Sections/full.html#differences-between-the-tasks)
+    -   [Empirical and Modeling Summary](https://tegorman13.github.io/Dissertation/Sections/full.html#empirical-and-modeling-summary)
+    -   [Differences between the two Projects](https://tegorman13.github.io/Dissertation/Sections/full.html#differences-between-the-two-projects)
+    -   [Conclusion](https://tegorman13.github.io/Dissertation/Sections/full.html#conclusion)
 -   [References](https://tegorman13.github.io/Dissertation/Sections/full.html#references)
 -   [Appendix](https://tegorman13.github.io/Dissertation/Sections/full.html#appendix)
+    -   [Appendix - Project 1](https://tegorman13.github.io/Dissertation/Sections/full.html#appendix---project-1)
     -   [exponential learning models fit to individual subjects](https://tegorman13.github.io/Dissertation/Sections/full.html#exponential-learning-models-fit-to-individual-subjects)
     -   [Group comparison of learning rate fits](https://tegorman13.github.io/Dissertation/Sections/full.html#group-comparison-of-learning-rate-fits)
     -   [First vs. second half of testing stage](https://tegorman13.github.io/Dissertation/Sections/full.html#first-vs.-second-half-of-testing-stage)
     -   [Group Comparison for asymptote-starting performance](https://tegorman13.github.io/Dissertation/Sections/full.html#group-comparison-for-asymptote-starting-performance)
     -   [Relative distance and under/overshooting](https://tegorman13.github.io/Dissertation/Sections/full.html#relative-distance-and-underovershooting)
     -   [Training plots - Experiment 1](https://tegorman13.github.io/Dissertation/Sections/full.html#training-plots---experiment-1)
+    -   [Appendix - Project 2 - Experiment 1](https://tegorman13.github.io/Dissertation/Sections/full.html#appendix---project-2---experiment-1)
 
 ## Variability and Generalization
 
@@ -86,7 +89,7 @@ Studies investigating the “benefits of variability” hypothesis usually assig
 
 1.  Variables Subject to Variation. In multidimensional tasks, researchers have the option to vary numerous variables. The experimenters must decide the specific dimension(s) across which variation will occur. For instance, in a projectile throwing accuracy task – researchers might vary the distance from the target, the size of the target, the weight of the projectile. They might also vary a contextual variable not directly relevant to the task, but which will still be encoded by the subject on a trial by trial basis, e.g. the background color.
     
-2.  Magnitude of Variation, relative to the control condition. The simplest comparison would be to compare a constant group who trains with 1 example/condition, against a varied group that trains from 2 examples/conditions. However, it is not uncommon in the literature for the varied condition to train from 3 or 4 conditions. For example, Catalano & Kleiner ([1984](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-catalanoDistantTransferCoincident1984a)) train varied subjects from 4 different velocities in their coincident timing task, and ([Goode et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodeSuperiorityVariableRepeated2008)) have varied subjects’ practice with 3 different variants (i.e. different letter scrambles of the same word) of an anagram for a given word, while their constant participants view the same variant 3 different times. Alternatively, rather than a constant vs. varied comparison, subjects in all conditions might experience a variety of training items, but with one group experiencing a greater number of unique items ([Nosofsky, Sanders, Zhu, et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyModelguidedSearchOptimal2018)).
+2.  Magnitude of Variation, relative to the control condition. The simplest comparison would be to compare a constant group who trains with 1 example/condition, against a varied group that trains from 2 examples/conditions. However, it is not uncommon in the literature for the varied condition to train from 3 or 4 conditions. For example, Catalano & Kleiner ([1984](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-catalanoDistantTransferCoincident1984a)) train varied subjects from 4 different velocities in their coincident timing task, and ([Goode et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodeSuperiorityVariableRepeated2008)) have varied subjects’ practice with 3 different variants (i.e. different letter scrambles of the same word) of an anagram for a given word, while their constant participants view the same variant 3 different times. Alternatively, rather than a constant vs. varied comparison, subjects in all conditions might experience a variety of training items, but with one group experiencing a greater number of unique items ([Nosofsky et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyModelguidedSearchOptimal2019)).
     
 3.  Locations within Task-Space. For tasks in which the stimuli or conditions fall within a continuous metric space, the experimenter must decide whether the varied instances are relatively close together (e.g. throwing a ball from a distance of 4 feet and 5 feet), or far apart (throwing from 4 feet and 20 feet). Spreading the varied training items further apart may be beneficial in terms of providing a more representative sample of the task space to the learner, however large distances may also result in significant differences in difficulty between the training examples, which can be a common confound in variability studies.
     
@@ -115,7 +118,7 @@ Of particular relevant to the current essay is the early work of Catalano & Klei
 
 ## Category learning
 
-In the category learning literature, the constant vs. varied comparison is much less suitable. Instead, researchers tend to compare a condition with many repetitions of a few items against condition with fewer repetitions of a wider array of exemplars. Much of the earlier work in this sub-area trained subjects on artificial categories, such as dot patterns ([Homa & Vosburgh, 1976](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-homaCategoryBreadthAbstraction1976); [Posner & Keele, 1968](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-posnerGenesisAbstractIdeas1968)), where more varied or distorted training examples were often shown to produce superior generalization when categorizing novel exemplars. More recently, researchers have also begun to utilize more realistic stimuli in their experiments. Wahlheim et al. ([2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wahlheimMetacognitiveJudgmentsRepetition2012)) conducted one such study. In a within-participants design, participants were trained on bird categories with either high repetitions of a few exemplars, or few repetitions of many exemplars. Across four different experiments, which were conducted to address an unrelated question on metacognitive judgements, the researchers consistently found that participants generalized better to novel species following training with more unique exemplars (i.e. higher variability), while high repetition training produced significantly better performance categorizing the specific species they had trained on. A variability advantage was also found in the relatively complex domain of rock categorization ([Nosofsky, Sanders, & McDaniel, 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyTestsExemplarmemoryModel2018)). For 10 different rock categories, participants were trained with either many repetitions of 3 unique examples of each category, or few repetitions of 9 unique examples, with an equal number of total training trials in each group (the design also included 2 other conditions less amenable to considering the impact of variation). The high-variability group, trained with 9 unique examples, showed significantly better generalization performance than the other conditions. Moreover, the pattern of results in this study could be nicely accounted for by an extended version of the Generalized Context Model.
+In the category learning literature, the constant vs. varied comparison is much less suitable. Instead, researchers tend to compare a condition with many repetitions of a few items against condition with fewer repetitions of a wider array of exemplars. Much of the earlier work in this sub-area trained subjects on artificial categories, such as dot patterns ([Homa & Vosburgh, 1976](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-homaCategoryBreadthAbstraction1976); [Posner & Keele, 1968](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-posnerGenesisAbstractIdeas1968)), where more varied or distorted training examples were often shown to produce superior generalization when categorizing novel exemplars. More recently, researchers have also begun to utilize more realistic stimuli in their experiments. Wahlheim et al. ([2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wahlheimMetacognitiveJudgmentsRepetition2012)) conducted one such study. In a within-participants design, participants were trained on bird categories with either high repetitions of a few exemplars, or few repetitions of many exemplars. Across four different experiments, which were conducted to address an unrelated question on metacognitive judgements, the researchers consistently found that participants generalized better to novel species following training with more unique exemplars (i.e. higher variability), while high repetition training produced significantly better performance categorizing the specific species they had trained on. A variability advantage was also found in the relatively complex domain of rock categorization ([Nosofsky et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyTestsExemplarmemoryModel2018)). For 10 different rock categories, participants were trained with either many repetitions of 3 unique examples of each category, or few repetitions of 9 unique examples, with an equal number of total training trials in each group (the design also included 2 other conditions less amenable to considering the impact of variation). The high-variability group, trained with 9 unique examples, showed significantly better generalization performance than the other conditions. Moreover, the pattern of results in this study could be nicely accounted for by an extended version of the Generalized Context Model.
 
 The studies described thus far have studied the benefits of variability by exposing participants to a greater or lesser number of distinct examples during training. A distinct sub-literature within the category learning domain has focused much less on benefits derived from varied training, instead emphasizing how increased variability during the learning of a novel category influences how far the category boundary will then be generalized. The general approach is to train participants on examples from two categories, with the examples from one of the categories being more dispersed than the other. Participants are then tested with novel items located within ambiguous regions of the task space which allow the experimenters to assess whether the difference in variability influences how far participants generalize the category boundaries.
 
@@ -223,9 +226,7 @@ Similarity, defined in this literature as a function of psychological distance b
 
 While similarity-based models account for transfer by the degree of similarity between previous and new experiences, a largely separate body of research has focused on improving transfer by manipulating characteristics of the initial training stage. Such characteristics have included training difficulty, spacing, temporal order, feedback schedules, and the primary focus of the current work – variability of training examples.
 
-Research on the effects of varied training typically compares participants trained under constant, or minimal variability conditions to those trained from a variety of examples or conditions ([Czyż, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-czyzVariabilityPracticeInformation2021); [Soderstrom & Bjork, 2015](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-soderstromLearningPerformanceIntegrative2015)). Varied training has been shown to influence learning in myriad domains including categorization of simple stimuli ([Hahn et al., 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hahnEffectsCategoryDiversity2005); [Maddox & Filoteo, 2011](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-maddoxStimulusRangeDiscontinuity2011); [Posner & Keele, 1968](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-posnerGenesisAbstractIdeas1968)), complex categorization ([Nosofsky, Sanders, Zhu, et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyModelguidedSearchOptimal2018)), language learning ([Jones & Brandt, 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-jonesDensityDistinctivenessEarly2020); [Perry et al., 2010](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-perryLearnLocallyThink2010); [Twomey et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-twomeyAllRightNoises2018); [Wonnacott et al., 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wonnacottInputEffectsAcquisition2012)), anagram completion ([Goode et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodeSuperiorityVariableRepeated2008)), trajectory extrapolation ([Fulvio et al., 2014](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-fulvioTaskSpecificResponseStrategy2014)), task switching ([Sabah et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-sabahWhenLessMore2019)), associative learning ([J. C. Lee et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-leeEvidentialDiversityIncreases2019)), visual search ([George & Egner, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-georgeStimulusVariabilityTask2021); [Gonzalez & Madhavan, 2011](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-gonzalezDiversityTrainingEnhances2011); [Kelley & Yantis, 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kelleyLearningAttendEffects2009)), voice identity learning ([Lavan et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lavanEffectsHighVariability2019)), simple motor learning ([Braun et al., 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-braunMotorTaskVariation2009); [Kerr & Booth, 1978](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kerrSpecificVariedPractice1978); [Roller et al., 2001](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-rollerVariablePracticeLenses2001); [Willey & Liu, 2018a](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-willeyLimitedGeneralizationVaried2018)), sports training ([Green et al., 1995](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-greenPracticeVariabilityTransfer1995a); [North et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-northEffectConsistentVaried2019)), and training on a complex video game ([Seow et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-seowTransferEffectsVaried2019)).
-
-Training variation has received a particularly large amount of attention within the domain of visuomotor skill learning. Much of this research has been influenced by the work of Schmidt ([1975](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-schmidtSchemaTheoryDiscrete1975)), who proposed a schema-based account of motor learning as an attempt to address the longstanding problem of how novel movements are produced. According to Schema Theory, learners possess general motor programs for classes of movements (e.g. throwing a ball with an underhand movement), as well as schema rules that determine how a motor program is parameterized or scaled for a particular movement. Schema theory predicts that varied training results in the formation of a more general schema-rule, which can allow for transfer to novel movements within a given movement class. Experiments that test this hypothesis are often designed to compare the transfer performance of a constant-trained group against that of a varied-trained group. Both groups train on the same task, but the varied group practices from multiple levels of a task-relevant dimension that remains invariant for the constant group. For example, investigators might train two groups of participants to throw a projectile at a target, with a constant group that throws from a single location, and a varied group that throws from multiple locations. Both groups are then tested from novel locations. Empirically observed benefits of the varied-trained group are then attributed to the variation they received during training, a finding observed in numerous studies ([Catalano & Kleiner, 1984](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-catalanoDistantTransferCoincident1984a); [Chua et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-chuaPracticeVariabilityPromotes2019); [Goodwin et al., 1998](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodwinEffectDifferentQuantities1998); [Kerr & Booth, 1978](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kerrSpecificVariedPractice1978); [Wulf, 1991](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wulfEffectTypePractice1991)), and the benefits of this variation are typically thought to be mediated by the development of a more general schema for the throwing motion.
+Research on the effects of varied training typically compares participants trained under constant, or minimal variability conditions to those trained from a variety of examples or conditions ([Czyż, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-czyzVariabilityPracticeInformation2021); [Soderstrom & Bjork, 2015](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-soderstromLearningPerformanceIntegrative2015)). Varied training has been shown to influence learning in myriad domains including categorization of simple stimuli ([Hahn et al., 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hahnEffectsCategoryDiversity2005); [Maddox & Filoteo, 2011](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-maddoxStimulusRangeDiscontinuity2011); [Posner & Keele, 1968](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-posnerGenesisAbstractIdeas1968)), complex categorization ([Nosofsky et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskyModelguidedSearchOptimal2019)), language learning ([Jones & Brandt, 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-jonesDensityDistinctivenessEarly2020); [Perry et al., 2010](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-perryLearnLocallyThink2010); [Twomey et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-twomeyAllRightNoises2018); [Wonnacott et al., 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wonnacottInputEffectsAcquisition2012)), anagram completion ([Goode et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodeSuperiorityVariableRepeated2008)), trajectory extrapolation ([Fulvio et al., 2014](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-fulvioTaskSpecificResponseStrategy2014)), task switching ([Sabah et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-sabahWhenLessMore2019)), associative learning ([J. C. Lee et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-leeEvidentialDiversityIncreases2019)), visual search ([George & Egner, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-georgeStimulusVariabilityTask2021); [Gonzalez & Madhavan, 2011](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-gonzalezDiversityTrainingEnhances2011); [T. A. Kelley & Yantis, 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kelleyLearningAttendEffects2009)), voice identity learning ([Lavan et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lavanEffectsHighVariability2019)), simple motor learning ([Braun et al., 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-braunMotorTaskVariation2009); [Kerr & Booth, 1978](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kerrSpecificVariedPractice1978); [Roller et al., 2001](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-rollerVariablePracticeLenses2001); [Willey & Liu, 2018a](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-willeyLimitedGeneralizationVaried2018)), sports training ([Green et al., 1995](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-greenPracticeVariabilityTransfer1995a); [North et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-northEffectConsistentVaried2019)), and training on a complex video game ([Seow et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-seowTransferEffectsVaried2019)). Training variation has received a particularly large amount of attention within the domain of visuomotor skill learning. Much of this research has been influenced by the work of Schmidt ([1975](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-schmidtSchemaTheoryDiscrete1975)), who proposed a schema-based account of motor learning as an attempt to address the longstanding problem of how novel movements are produced. According to Schema Theory, learners possess general motor programs for classes of movements (e.g. throwing a ball with an underhand movement), as well as schema rules that determine how a motor program is parameterized or scaled for a particular movement. Schema theory predicts that varied training results in the formation of a more general schema-rule, which can allow for transfer to novel movements within a given movement class. Experiments that test this hypothesis are often designed to compare the transfer performance of a constant-trained group against that of a varied-trained group. Both groups train on the same task, but the varied group practices from multiple levels of a task-relevant dimension that remains invariant for the constant group. For example, investigators might train two groups of participants to throw a projectile at a target, with a constant group that throws from a single location, and a varied group that throws from multiple locations. Both groups are then tested from novel locations. Empirically observed benefits of the varied-trained group are then attributed to the variation they received during training, a finding observed in numerous studies ([Catalano & Kleiner, 1984](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-catalanoDistantTransferCoincident1984a); [Chua et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-chuaPracticeVariabilityPromotes2019); [Goodwin et al., 1998](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodwinEffectDifferentQuantities1998); [Kerr & Booth, 1978](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kerrSpecificVariedPractice1978); [Wulf, 1991](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wulfEffectTypePractice1991)), and the benefits of this variation are typically thought to be mediated by the development of a more general schema for the throwing motion.
 
 Of course, the relationship between training variability and transfer is unlikely to be a simple function wherein increased variation is always beneficial. Numerous studies have found null, or in some cases negative effects of training variation ([DeLosh et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997); [Sinkeviciute et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-sinkeviciuteRoleInputVariability2019); [Wrisberg et al., 1987](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wrisbergVariabilityPracticeHypothesis1987)), and many more have suggested that the benefits of variability may depend on additional factors such as prior task experience, the order of training trials, or the type of transfer being measured ([Berniker et al., 2014](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-bernikerEffectsTrainingBreadth2014); [Braithwaite & Goldstone, 2015](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-braithwaiteEffectsVariationPrior2015); [Hahn et al., 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hahnEffectsCategoryDiversity2005); [Lavan et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lavanEffectsHighVariability2019); [North et al., 2019](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-northEffectConsistentVaried2019); [Sadakata & McQueen, 2014](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-sadakataIndividualAptitudeMandarin2014); [Zaman et al., 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-zamanPerceptualVariabilityImplications2021)).
 
@@ -311,7 +312,7 @@ Figure 2: The stimuli of the task consisted of a blue ball, which the participa
 
 ## Data Processing and Statistical Packages
 
-To prepare the data, we first removed trials that were not easily interpretable as performance indicators in our task. Removed trials included: 1) those in which participants dragged the ball outside of the orange starting box without releasing it, 2) trials in which participants clicked on the ball, and then immediately released it, causing the ball to drop straight down, 3) outlier trials in which the ball was thrown more than 2.5 standard deviations further than the average throw (calculated separately for each throwing position), and 4) trials in which the ball struck the barrier. The primary measure of performance used in all analyses was the absolute distance away from the center of the target. The absolute distance was calculated on every trial, and then averaged within each subject to yield a single performance score, for each position. A consistent pattern across training and testing phases in both experiments was for participants to perform worse from throwing positions further away from the target – a pattern which we refer to as the difficulty of the positions. However, there were no interactions between throwing position and training conditions, allowing us to collapse across positions in cases where contrasts for specific positions were not of interest. All data processing and statistical analyses were performed in R version 4.03 (R Core Team, 2020). ANOVAs for group comparisons were performed using the rstatix package (Kassambara, 2021)\*\*\*\*.
+To prepare the data, we first removed trials that were not easily interpretable as performance indicators in our task. Removed trials included: 1) those in which participants dragged the ball outside of the orange starting box without releasing it, 2) trials in which participants clicked on the ball, and then immediately released it, causing the ball to drop straight down, 3) outlier trials in which the ball was thrown more than 2.5 standard deviations further than the average throw (calculated separately for each throwing position), and 4) trials in which the ball struck the barrier. The primary measure of performance used in all analyses was the absolute distance away from the center of the target. The absolute distance was calculated on every trial, and then averaged within each subject to yield a single performance score, for each position. A consistent pattern across training and testing phases in both experiments was for participants to perform worse from throwing positions further away from the target – a pattern which we refer to as the difficulty of the positions. However, there were no interactions between throwing position and training conditions, allowing us to collapse across positions in cases where contrasts for specific positions were not of interest. All data processing and statistical analyses were performed in R version 4.03 (R Core Team, 2020). ANOVAs for group comparisons were performed using the rstatix package (Kassambara, 2021).
 
 ## Training Phase
 
@@ -438,7 +439,7 @@ After confirming that condition and throwing position did not have any significa
 
 ### Training Phase
 
-The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. **?@fig-e2train** depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs. the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, \\(\\eta^{2}\_G\\) <.01, a significant effect of training stage F(2,412)=77.91, p<.001, \\(\\eta^{2}\_G\\) =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, \\(\\eta^{2}\_G\\) <.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, \\(\\eta^{2}\_G\\) <.01, a significant effect of training stage F(2,172)=56.29, p<.001, \\(\\eta^{2}\_G\\) =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, \\(\\eta^{2}\_G\\) <.01.
+The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. [Figure 5](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2train) depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs. the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, \\(\\eta^{2}\_G\\) <.01, a significant effect of training stage F(2,412)=77.91, p<.001, \\(\\eta^{2}\_G\\) =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, \\(\\eta^{2}\_G\\) <.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, \\(\\eta^{2}\_G\\) <.01, a significant effect of training stage F(2,172)=56.29, p<.001, \\(\\eta^{2}\_G\\) =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, \\(\\eta^{2}\_G\\) <.01.
 
 Code
 
@@ -536,21 +537,16 @@ e2train2<-exp2TrainPosition3 %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
 
 #plot_grid(e2train1,e2train2,ncol=1)
 
-e2train1
-e2train2
+e2train1/e2train2
 ```
 
 ![](md_extract/assets/fig-e2train-1.png)
 
 Figure 5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
 
-![](md_extract/assets/fig-e2train-2.png)
-
-Figure 6: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
-
 ### Testing Phase
 
-In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs. varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, \\(\\eta^{2}\_G\\) =.02. Descriptive statistics for each condition are shown in table 2. In [Figure 7](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2testa) visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. [Figure 7](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2testa) shows performance between the varied condition and the individual constant groups.
+In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs. varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, \\(\\eta^{2}\_G\\) =.02. Descriptive statistics for each condition are shown in table 2. In [Figure 6](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2testa) visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. [Figure 6](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2testa) shows performance between the varied condition and the individual constant groups.
 
 Code
 
@@ -581,7 +577,7 @@ e2test1 / e2test2
 
 ![](md_extract/assets/fig-e2testa-1.png)
 
-Figure 7: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
+Figure 6: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
 
 Code
 
@@ -641,7 +637,7 @@ Table 2: Testing performance from novel positions. Includes data only from posi
 | 800 | 285.91(102.81) | NA |
 | 900 | 346.96(111.35) | 289.62(110.07) |
 
-Finally, corresponding to the comparison of position 760 from experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). [Figure 8](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2test1) displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, \\(\\eta^{2}\_G\\) = .02. Table 4 provides descriptive statistics.
+Finally, corresponding to the comparison of position 760 from experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). [Figure 7](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2test1) displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, \\(\\eta^{2}\_G\\) = .02. Table 4 provides descriptive statistics.
 
 Code
 
@@ -658,7 +654,7 @@ e2Test2
 
 ![](md_extract/assets/fig-e2test1-1.png)
 
-Figure 8: A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.
+Figure 7: A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.
 
 Code
 
@@ -692,7 +688,7 @@ In the testing phase, our varied group significantly outperformed the constant c
 
 ## Computational Model
 
-Controlling for the similarity between training and testing The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions – thus resulting in six separate similarity scores for each participant. [Figure 9](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-taskSpace) visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in [Figure 9](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-taskSpace), the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.
+*Controlling for the similarity between training and testing.* The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions – thus resulting in six separate similarity scores for each participant. [Figure 8](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-taskSpace) visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in [Figure 8](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-taskSpace), the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.
 
 Code
 
@@ -734,7 +730,7 @@ ss/fs
 
 ![](md_extract/assets/fig-taskSpace-1.png)
 
-Figure 9: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
+Figure 8: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
 
 For each individual trial, the Euclidean distance (Equation 1) was computed between the velocity components (x and y) of that trial and the velocity components of each individual solution throw for each of the 6 positions from which participants would be tested in the final phase of the study. The P parameter in Equation 1 is set equal to 2, reflecting a Gaussian similarity gradient. Then, as per an instance-based model of similarity ([Logan, 2002](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-loganInstanceTheoryAttention2002a); [Nosofsky, 1992](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskySimilarityScalingCognitive1992)), these distances were multiplied by a sensitivity parameter, c, and then exponentiated to yield a similarity value. The parameter c controls the rate with which similarity-based generalization drops off as the Euclidean distance between two throws in x- and y-velocity space increases. If c has a large value, then even a small difference between two throws’ velocities greatly decreases the extent of generalization from one to the other. A small value for c produces broad generalization from one throw to another despite relatively large differences in their velocities. The similarity values for each training individual throw made by a given participant were then summed to yield a final similarity score, with a separate score computed for each of the 6 testing positions. The final similarity score is construable as index of how accurate the throws a participant made during the training phase would be for each of the testing positions.
 
@@ -762,7 +758,7 @@ In summary, our modeling suggests that an instance-based model which assumes equ
 
 Across two experiments, we found evidence in support of the benefits of variability hypothesis in a simple, computerized projectile throwing task. Generalization was observed in both constant and varied participants, in that both groups tended to perform better at novel positions in the testing phase than did participants who started with those positions in the training phase. However, varied trained participants consistently performed better than constant trained participants, in terms of both the testing phase in general, and in a comparison that only included untrained positions. We also found some evidence for the less commonly observed pattern wherein varied-trained participants outperform constant-trained participants even from conditions identical to the constant group training ([Goode et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-goodeSuperiorityVariableRepeated2008); [Green et al., 1995](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-greenPracticeVariabilityTransfer1995a); [Kerr & Booth, 1978](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kerrSpecificVariedPractice1978)). In experiment 1 varied participants performed significantly better on this identity comparison. In Experiment 2, the comparison was not significant initially, but became significant after controlling for the similarity measure that incorporates only a single value for the steepness of similarity-based generalization (c). Furthermore, we showed that the general pattern of results from Experiment 2 could be parsimoniously accommodated by an instance-based similarity model, but only with the assumption that constant and varied participants generalize their training experience to different degrees. Our results thus suggest that the benefits of variation cannot be explained by the varied-trained participants simply covering a broader range of the task space. Rather, the modeling suggests that varied participants also learn to adaptively tune their generalization function such that throwing locations generalize more broadly to one another than they do in the constant condition. A learning system could end up adopting a higher c value in the constant than variable training conditions by monitoring the trial-by-trial variability of the training items. The c parameter would be adapted downwards when adjacent training items are dissimilar to each other and adapted upwards when adjacent training items are the same. In this fashion, contextually appropriate c values could be empirically learned. This learning procedure would capture the insight that if a situation has a high amount variability, then the learner should be predisposed toward thinking that subsequent test items will also show considerable variability, in which case generalization gradients should be broad, as is achieved by low values for c.
 
-Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in **?@fig-Toy\_Model2** we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model – namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.
+Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in [Figure 9](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-Toy-Model-dis) we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model – namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.
 
 Code
 
@@ -814,14 +810,17 @@ ip4 <- simdat %>%  ggplot(aes(x,y=genGaussDist2,group=condit,col=condit))+plotSp
   ggtitle("Added distance due to context, 2c")+theme(plot.margin = margin(0, 0, 0, 1))
 # gridExtra::grid.arrange(ip1,ip2,ip3,ip4,ncol=2)
 
-gtitle="Figure 9."
-title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
-plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
+#gtitle="Figure 9."
+#title = ggdraw()+draw_label(gtitle,fontface = 'bold',x=0,hjust=0,size=11)+theme(plot.margin = margin(0, 0, 0, 1))
+#p1 <- plot_grid(title,NULL,ip1,ip2,ip3,ip4,ncol=2,rel_heights=c(.1,.8,.8))
+p1 <- (ip1+ip2) / (ip3+ip4)
+
+p1
 ```
 
-![](md_extract/assets/fig-Toy-Model2-1.png)
+![](md_extract/assets/fig-Toy-Model-dis-1.png)
 
-Figure 10: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = \\(e^{(c\\cdot|x-800|)} + e^{(c\\cdot|x-400|)}\\), whereas the constant group generalization is generated from \\(2\\cdot e^{(c\\cdot|x-600|)}\\). For the top right panel, the c constants in the original equations are different for the 2 conditions, with \\(c=-.002\\) for the varied condition, and \\(c=-.008\\) for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = \\(e^{(c\_{varied}\\cdot|x-800|)}+e^{(c\_{varied}\\cdot|x-400|)}\\) .
+Figure 9: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = \\(e^{(c\\cdot|x-800|)} + e^{(c\\cdot|x-400|)}\\), whereas the constant group generalization is generated from \\(2\\cdot e^{(c\\cdot|x-600|)}\\). For the top right panel, the c constants in the original equations are different for the 2 conditions, with \\(c=-.002\\) for the varied condition, and \\(c=-.008\\) for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = \\(e^{(c\_{varied}\\cdot|x-800|)}+e^{(c\_{varied}\\cdot|x-400|)}\\) .
 
 As mentioned above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning ([Aha & Goldstone, 1992](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-ahaConceptLearningFlexible1992); [Briscoe & Feldman, 2011](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-briscoeConceptualComplexityBias2011); [Hahn et al., 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hahnEffectsCategoryDiversity2005); [Lamberts, 1994](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lambertsFlexibleTuningSimilarity1994); [Op de Beeck et al., 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-opdebeeckRepresentationPerceivedShape2008)), and sensorimotor adaptation ([Marongelli & Thoroughman, 2013](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-marongelliAdvantageFlexibleNeuronal2013); [Taylor & Ivry, 2013](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-taylorContextdependentGeneralization2013); [Thoroughman & Taylor, 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-thoroughmanRapidReshapingHuman2005)). Lamberts ([1994](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lambertsFlexibleTuningSimilarity1994)) showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been trained on categories that differ in their relative variability ([Hahn et al., 2005](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hahnEffectsCategoryDiversity2005); [Sakamoto et al., 2006](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-sakamotoTrackingVariabilityLearning2006)). However, to the best of our knowledge, IGAS is the first instance-based similarity model that has been put forward to account for the effect of varied training in a visuomotor skill task. Although IGAS was inspired by work in the domain of category learning, its success in a distinct domain may not be surprising in light of the numerous prior observations that at least certain aspects of learning and generalization may operate under common principles across different tasks and domains ([Censor et al., 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-censorCommonMechanismsHuman2012); [Hills et al., 2010](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-hillsCentralExecutiveSearch2010); [Jamieson et al., 2022](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-jamiesonInstanceTheoryDomaingeneral2022); [Law & Gold, 2010](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-lawSharedMechanismsPerceptual2010); [Roark et al., 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-roarkComparingPerceptualCategory2021); [Rosenbaum et al., 2001](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-rosenbaumAcquisitionIntellectualPerceptualMotor2001); [Vigo et al., 2018](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-vigoLearningDifficultyVisual2018); [Wall et al., 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wallIdentifyingRelationshipsCognitive2021); [Wu et al., 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-wuSimilaritiesDifferencesSpatial2020); [Yang et al., 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-yangGeneralLearningAbility2020)).
 
@@ -833,9 +832,7 @@ Our findings also have some conceptual overlap with an earlier study on the effe
 
 A limitation of this study concerns the ordering of the testing/transfer trials at the conclusion of both experiments. Participants were tested from each separate position (4 in Experiment 1, 6 in Experiment 2) in a random, intermixed order. Because the varied group was trained from two positions that were also randomly ordered, they may have benefited from experience with this type of sequencing, whereas the constant groups had no experience with switching between positions trial to trial. This concern is somewhat ameliorated by the fact that the testing phase performance of the constant groups from their trained position was not significantly worse than their level of performance at the end of the training phase, suggesting that they were not harmed by random ordering of positions during testing. It should also be noted that the computerized task utilized in the present work is relatively simple compared to many of the real-world tasks utilized in prior research. It is thus conceivable that the effect of variability in more complex tasks is distinct from the process put forward in the present work. An important challenge for future work will be to assess the extent to which IGAS can account for generalization in relatively complex tasks with far more degrees of freedom.
 
-It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations ([Nosofsky, 1992](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskySimilarityScalingCognitive1992); [Shepard, 1987](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-shepardUniversalLawGeneralization1987)). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g. the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli.
-
-## Conclusion
+It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations ([Nosofsky, 1992](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-nosofskySimilarityScalingCognitive1992); [Shepard, 1987](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-shepardUniversalLawGeneralization1987)). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g. the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli. ## Conclusion
 
 Our experiments demonstrate a reliable benefit of varied training in a simple projectile launching task. Such results were accounted for by an instance-based model that assumes that varied training results in the computation of a broader similarity-based generalization gradient. Instance-based models augmented with this assumption may be a valuable approach towards better understanding skill generalization and transfer.
 
@@ -855,11 +852,11 @@ A longstanding issue across both science and instruction has been to understand 
 
 ## Function Learning and Extrapolation
 
-The study of human function learning investigates how people learn relationships between continuous input and output values. Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs ([DeLosh et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997); [McDaniel et al., 2013](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-mcdanielEffectsSpacedMassed2013)), or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don’t contain data ([Ciccione & Dehaene, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-ciccioneCanHumansPerform2021a); [Courrieu, 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-courrieuQuickApproximationBivariate2012); [Said & Fischer, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-saidExtrapolationAccuracyUnderestimates2021); [Schulz et al., 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-schulzCommunicatingCompositionalPatterns2020)).
+The study of human function learning investigates how people learn relationships between continuous input and output values. Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs ([DeLosh et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997); [McDaniel et al., 2013](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-mcdanielEffectsSpacedMassed2013)), or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don’t contain data ([Ciccione & Dehaene, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-ciccioneCanHumansPerform2021); [Courrieu, 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-courrieuQuickApproximationBivariate2012); [Said & Fischer, 2021](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-saidExtrapolationAccuracyUnderestimates2021); [Schulz et al., 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-schulzCommunicatingCompositionalPatterns2020)).
 
 Carroll ([1963](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-carrollFunctionalLearningLearning1963)) conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function. Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by Brehmer ([1974](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-brehmerHypothesesRelationsScaled1974)),testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. Koh & Meyer ([1991](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kohFunctionLearningInduction1991)) employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh & Meyer developed the log-polynomial adaptive-regression model to account for their results.
 
-The first significant challenge to the rule-based accounts of function learning was put forth by DeLosh et al. ([1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997)) . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in [Figure 11](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-delosh-extrap).
+The first significant challenge to the rule-based accounts of function learning was put forth by DeLosh et al. ([1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997)) . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in [Figure 10](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-delosh-extrap).
 
 The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model ([Brehmer, 1974](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-brehmerHypothesesRelationsScaled1974); [Carroll, 1963](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-carrollFunctionalLearningLearning1963)) tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data. The log-polynomial adaptive regression model ([Koh & Meyer, 1991](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kohFunctionLearningInduction1991)) was able to mimic some of the systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred.
 
@@ -881,21 +878,21 @@ To account for the empirical results, we will apply a series of computational mo
 
 *Participants* A total of 156 participants were recruited from the Indiana University Introductory Psychology Course. Participants were randomly assigned to one of two training conditions: varied training or constant training.
 
-*Task.* The “Hit The Wall” (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the “wall” at target speed indicated at the top of the screen (see [Figure 12](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-task)). The target velocities were given as a range, or band, of acceptable velocity values (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
+*Task.* The “Hit The Wall” (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the “wall” at target speed indicated at the top of the screen (see [Figure 11](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-task)). The target velocities were given as a range, or band, of acceptable velocity values (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
 
 /
 
 ![](md_extract/assets/htw_task_fig.png)
 
-Figure 12: The Hit the wall task. Participants launch the blue ball to hit the red wall at the target velocity band indicated at the top of the screen. The ball must be released from within the orange square - but the location of release, and the location at which the ball strikes the wall are both irrelevant to the task feedback.
+Figure 11: The Hit the wall task. Participants launch the blue ball to hit the red wall at the target velocity band indicated at the top of the screen. The ball must be released from within the orange square - but the location of release, and the location at which the ball strikes the wall are both irrelevant to the task feedback.
 
-*Procedure.* All participants completed the task online. Participants were provided with a description of the experiment and indicated informed consent. [Figure 13](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-design-e1) illustrates the general procedure. Participants completed a total of 90 trials during the training stage. In the varied training condition, participants encountered three velocity bands (800-1000, 1000-1200, and 1200-1400). Participants in the constant training condition trained on only one velocity band (800-1000) - the closest band to what would be the novel extrapolation bands in the testing stage.
+*Procedure.* All participants completed the task online. Participants were provided with a description of the experiment and indicated informed consent. [Figure 12](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-design-e1) illustrates the general procedure. Participants completed a total of 90 trials during the training stage. In the varied training condition, participants encountered three velocity bands (800-1000, 1000-1200, and 1200-1400). Participants in the constant training condition trained on only one velocity band (800-1000) - the closest band to what would be the novel extrapolation bands in the testing stage.
 
 Following the training stage, participants proceeded immediately to the testing stage. Participants were tested from all six velocity bands, in two separate stages. In the novel extrapolation testing stage, participants completed “no-feedback” testing from three novel extrapolation bands (100-300, 350-550, and 600-800), with each band consisting of 15 trials. Participants were also tested from the three velocity bands that were trained by the varied condition (800-1000, 1000-1200, and 1200-1400). In the constant training condition, two of these bands were novel, while in the varied training condition, all three bands were encountered during training. The order in which participants completed the novel-extrapolation and testing-from-3-varied bands was counterbalanced across participants. A final training stage presented participants with “feedback” testing for each of the three extrapolation bands (100-300, 350-550, and 600-800).
 
 cluster Test Phase (Counterbalanced Order) data1 Varied Training 800-1000 1000-1200 1200-1400 Test1 Test   Novel Bands 100-300 350-550 600-800 data1->Test1 data2 Constant Training 800-1000 data2->Test1 Test3    Final Test  Novel With Feedback   100-300 350-550 600-800 Test2  Test  Varied Training Bands   800-1000 1000-1200 1200-1400 Test1->Test2 Test2->Test3
 
-Figure 13: Experiment 1 Design. Constant and Varied participants complete different training conditions.
+Figure 12: Experiment 1 Design. Constant and Varied participants complete different training conditions.
 
 Code
 
@@ -948,9 +945,9 @@ p1 <- trainE1 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
 p1
 ```
 
-![](md_extract/assets/fig-e1-train-dev-1-1.png)
+![](md_extract/assets/fig-e1-train-dev-1.png)
 
-Figure 14: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy.
+Figure 13: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy.
 
 Code
 
@@ -984,7 +981,7 @@ Table 4: **Experiment 1 - End of training performance**. The Intercept represen
 | Intercept | 106.34 | 95.46 | 117.25 | 1 |
 | conditVaried | 79.64 | 57.92 | 101.63 | 1 |
 
-*Training*. [Figure 14](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-train-dev) displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, (\\(\\beta\\) = 79.64, 95% CrI \[57.92, 101.63\]; pd = 100%).
+*Training*. [Figure 13](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-train-dev) displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, (\\(\\beta\\) = 79.64, 95% CrI \[57.92, 101.63\]; pd = 100%).
 
 Code
 
@@ -1024,7 +1021,7 @@ Table 5: **Experiment 1 testing accuracy**. Main effects of condition and band 
 | bandTypeExtrapolation | 71.51 | 33.24 | 109.60 | 1.0 |
 | conditVaried:bandTypeExtrapolation | 66.46 | 32.76 | 99.36 | 1.0 |
 
-*Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in [Table 5](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e1-bmm-dist). The main effect of training condition was not significant (\\(\\beta\\) = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands (\\(\\beta\\) = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant (\\(\\beta\\) = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in [Figure 15](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-test-dev), the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
+*Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in [Table 5](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e1-bmm-dist). The main effect of training condition was not significant (\\(\\beta\\) = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands (\\(\\beta\\) = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant (\\(\\beta\\) = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in [Figure 14](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-test-dev), the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
 
 Code
 
@@ -1052,9 +1049,9 @@ p2 <- (pe1td + pe1ce) + plot_annotation(tag_levels= 'A')
 p2
 ```
 
-![](md_extract/assets/fig-e1-test-dev-1-3.png)
+![](md_extract/assets/fig-e1-test-dev-1-1.png)
 
-Figure 15: A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% credible intervals.
+Figure 14: A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% credible intervals.
 
 Code
 
@@ -1082,7 +1079,7 @@ Table 6: Experiment 1. Bayesian Mixed Model Predicting velocity as a function o
 | Band | 0.71 | 0.62 | 0.80 | 1.00 |
 | condit\*Band | \-0.14 | \-0.26 | \-0.01 | 0.98 |
 
-Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See [Table 7](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e1-bmm-vx) for the full model results. The estimated coefficient for training condition (\\(\\beta\\) = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor (\\(\\beta\\) = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition (\\(\\beta\\) = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in [Figure 16](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-test-vx).
+Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See [Table 7](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e1-bmm-vx) for the full model results. The estimated coefficient for training condition (\\(\\beta\\) = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor (\\(\\beta\\) = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition (\\(\\beta\\) = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in [Figure 15](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e1-test-vx).
 
 Code
 
@@ -1090,9 +1087,9 @@ Code
 testE1 %>% group_by(id,vb,condit) |> plot_distByCondit()
 ```
 
-![](md_extract/assets/fig-e1-test-vx-1-13.png)
+![](md_extract/assets/fig-e1-test-vx-1-1.png)
 
-Figure 16: Empirical distribution of velocities producing in testing stage. Translucent bands with dash lines indicate the correct range for each velocity band.
+Figure 15: Empirical distribution of velocities producing in testing stage. Translucent bands with dash lines indicate the correct range for each velocity band.
 
 Code
 
@@ -1143,7 +1140,7 @@ p3
 
 Table 7
 
-![](md_extract/assets/tbl-e1-bmm-vx-1-2.png)
+![](md_extract/assets/tbl-e1-bmm-vx-1.png)
 
 Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.
 
@@ -1173,11 +1170,11 @@ trainE2_max <- trainE2 |> filter(Trial_Bin == nbins, bandInt==600)
 
 ### Methods & Procedure
 
-The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see [Figure 17](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-design-e2)). The Varied group trained on bands 100-300, 350-550, 600-800, and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).
+The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see [Figure 16](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-design-e2)). The Varied group trained on bands 100-300, 350-550, 600-800, and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).
 
 cluster Test Phase (Counterbalanced Order) data1 Varied Training 100-300 350-550 600-800 Test1 Test   Novel Bands   800-1000 1000-1200 1200-1400 data1->Test1 data2 Constant Training 600-800 data2->Test1 Test3    Final Test  Novel With Feedback   800-1000 1000-1200 1200-1400 Test2  Test  Varied Training Bands   100-300 350-550 600-800 Test1->Test2 Test2->Test3
 
-Figure 17: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.
+Figure 16: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.
 
 ### Results
 
@@ -1195,9 +1192,9 @@ p1 <- trainE2 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
 p1
 ```
 
-![](md_extract/assets/fig-e2-train-dev-1-1.png)
+![](md_extract/assets/fig-e2-train-dev-1.png)
 
-Figure 18: Experiment 2 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy.
+Figure 17: Experiment 2 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy.
 
 Code
 
@@ -1227,7 +1224,7 @@ Table 8: **Experiment 2 - End of training performance**. The Intercept represen
 | Intercept | 91.01 | 80.67 | 101.26 | 1 |
 | conditVaried | 36.15 | 16.35 | 55.67 | 1 |
 
-*Training*. [Figure 18](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-train-dev) presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( \\(\\beta\\) = 36.15, 95% CrI \[16.35, 55.67\]; pd = 99.95%).
+*Training*. [Figure 17](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-train-dev) presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( \\(\\beta\\) = 36.15, 95% CrI \[16.35, 55.67\]; pd = 99.95%).
 
 Code
 
@@ -1259,7 +1256,7 @@ Table 9: **Experiment 2 testing accuracy**. Main effects of condition and band 
 | bandTypeExtrapolation | 38.09 | \-6.94 | 83.63 | 0.95 |
 | conditVaried:bandTypeExtrapolation | 82.00 | 41.89 | 121.31 | 1.00 |
 
-*Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in [Table 9](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e2-bmm-dist), reveal no significant main effect of training condition (\\(\\beta\\) = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant (\\(\\beta\\) = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see [Figure 19](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-test-dev)).
+*Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in [Table 9](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e2-bmm-dist), reveal no significant main effect of training condition (\\(\\beta\\) = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant (\\(\\beta\\) = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see [Figure 18](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-test-dev)).
 
 Code
 
@@ -1288,9 +1285,9 @@ p2 <- (pe2td + pe2ce) + plot_annotation(tag_levels= 'A')
 p2
 ```
 
-![](md_extract/assets/fig-e2-test-dev-1-3.png)
+![](md_extract/assets/fig-e2-test-dev-1-1.png)
 
-Figure 19: A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
+Figure 18: A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 
 Code
 
@@ -1319,7 +1316,7 @@ Table 10: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of con
 | Band | 0.71 | 0.58 | 0.84 | 1.00 |
 | condit\*Band | \-0.06 | \-0.24 | 0.13 | 0.73 |
 
-*Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in [Table 11](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e2-bmm-vx). The overall slope on target velocity band predictor was significantly positive, (\\(\\beta\\) = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, (\\(\\beta\\) = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see [Figure 20](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-test-vx)).
+*Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in [Table 11](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e2-bmm-vx). The overall slope on target velocity band predictor was significantly positive, (\\(\\beta\\) = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, (\\(\\beta\\) = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see [Figure 19](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2-test-vx)).
 
 Code
 
@@ -1327,9 +1324,9 @@ Code
 testE2 %>% group_by(id,vb,condit) |> plot_distByCondit()
 ```
 
-![](md_extract/assets/fig-e2-test-vx-1-7.png)
+![](md_extract/assets/fig-e2-test-vx-1-2.png)
 
-Figure 20: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
+Figure 19: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
 
 Code
 
@@ -1385,7 +1382,7 @@ p3
 
 Table 11
 
-![](md_extract/assets/tbl-e2-bmm-vx-1-2.png)
+![](md_extract/assets/tbl-e2-bmm-vx-1.png)
 
 Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.
 
@@ -1451,7 +1448,7 @@ Table 12: **Experiment 3 - End of training performance**. The Intercept represe
 | bandOrderReverse | 1.11 | \-16.02 | 18.16 | 0.55 |
 | conditVaried:bandOrderReverse | \-77.02 | \-114.16 | \-39.61 | 1.00 |
 
-*Training*. [Figure 21](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e3-train-dev) displays the average deviations from the target band across training blocks, and [Table 12](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e3-train-dist) shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( \\(\\beta\\) = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant \\(\\beta\\) = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( \\(\\beta\\) = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
+*Training*. [Figure 20](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e3-train-dev) displays the average deviations from the target band across training blocks, and [Table 12](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e3-train-dist) shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( \\(\\beta\\) = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant \\(\\beta\\) = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( \\(\\beta\\) = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
 
 Code
 
@@ -1467,9 +1464,9 @@ p1 <- trainE3 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
 p1
 ```
 
-![](md_extract/assets/fig-e3-train-dev-1-1.png)
+![](md_extract/assets/fig-e3-train-dev-1.png)
 
-Figure 21: E3. Deviations from target band during testing without feedback stage.
+Figure 20: E3. Deviations from target band during testing without feedback stage.
 
 Code
 
@@ -1501,7 +1498,7 @@ cd3ted6 <-get_coef_details(bmtd3, "bandTypeExtrapolation:bandOrderReverse")
 cd3ted7 <-get_coef_details(bmtd3, "conditVaried:bandTypeExtrapolation:bandOrderReverse")
 ```
 
-Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant training; trained bands & original order) - and a positive interaction coefficient indicates disproportionate deviation for the varied condition on the extrapolation bands
+Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition, (constant training; trained bands & original order), and the remaining coefficients reflect the deviation from that baseline. Positive coefficients thus represent worse performance relative to the baseline, - and a positive interaction coefficient indicates disproportionate deviation for the varied condition or reverse order condition.
 
     
 | Term | Estimate | 95% CrI Lower | 95% CrI Upper | pd |
@@ -1546,9 +1543,9 @@ p2 <- pe3td + pe3ce + plot_annotation(tag_levels= 'A')
 p2
 ```
 
-![](md_extract/assets/fig-e3-test-dev-1-3.png)
+![](md_extract/assets/fig-e3-test-dev-1-2.png)
 
-Figure 22: Experiment 3 Testing Accuracy. A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% confidence intervals.
+Figure 21: Experiment 3 Testing Accuracy. A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% confidence intervals.
 
 Code
 
@@ -1580,7 +1577,7 @@ intCoef2 <- get_coef_details(e3_vxBMM, "bandOrderReverse:bandInt")
 coef3 <- get_coef_details(e3_vxBMM,"conditVaried:bandOrderReverse:bandInt")
 ```
 
-Table 14: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band
+Table 14: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the linear slope for the baseline condition. .hover .sm}
 
     
 | Term | Estimate | 95% CrI Lower | 95% CrI Upper | pd |
@@ -1594,7 +1591,7 @@ Table 14: Experiment 3. Bayesian Mixed Model Predicting Vx as a function of con
 | bandOrderReverse:bandInt | \-0.10 | \-0.27 | 0.08 | 0.86 |
 | conditVaried:bandOrderReverse:bandInt | 0.42 | 0.17 | 0.70 | 1.00 |
 
-*Testing Discrimination.* The full results of the discrimination model are presented in [Table 13](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e3-bmm-dist). For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant \\(\\beta\\) = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, \\(\\beta\\) = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, \\(\\beta\\) = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, \\(\\beta\\) = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in [Figure 23](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e3-test-vx), where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
+*Testing Discrimination.* The full results of the discrimination model are presented in [Table 13](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-e3-bmm-dist). For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant \\(\\beta\\) = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, \\(\\beta\\) = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, \\(\\beta\\) = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, \\(\\beta\\) = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in [Figure 22](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e3-test-vx), where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
 
 Code
 
@@ -1607,9 +1604,9 @@ testE3 |> group_by(id,vb,condit,bandOrder) |> plot_distByCondit() +
    ggh4x::facet_nested_wrap(bandOrder~condit,scale="free_x")
 ```
 
-![](md_extract/assets/fig-e3-test-vx-1-9.png)
+![](md_extract/assets/fig-e3-test-vx-1-1.png)
 
-Figure 23: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
+Figure 22: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band.
 
 Code
 
@@ -1677,11 +1674,13 @@ p3 <- (pe3vce + pid_den3 + pid_slopes3) + plot_annotation(tag_levels= 'A')
 p3
 ```
 
-![](md_extract/assets/fig-e3-bmm-vx-1-2.png)
+![](md_extract/assets/fig-e3-bmm-vx-1.png)
 
-Figure 24: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.
+Figure 23: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands.
 
 ### Experiment 3 Summary
+
+In Experiment 3, we investigated the effects of training condition (constant vs. varied) and band type (training vs. extrapolation) on participants’ accuracy and discrimination during the testing phase. Unlike the previous experiments, participants received ordinal feedback during the training phase. Additionally, Experiment 3 included both the original order condition from Experiment 1 and the reverse order condition from Experiment 2. The results revealed no significant main effects of training condition on testing accuracy, nor was there a significant difference between groups in band discrimination. However, we observed a significant three-way interaction for the discrimination analysis, indicating that the varied condition showed a steeper slope coefficient on the reverse order bands compared to the constant condition. This result suggests that varied training enhanced participants’ ability to discriminate between velocity bands, but only when the band order was reversed during testing.
 
 ## Computational Model
 
@@ -1714,7 +1713,7 @@ Code
 
 ![](md_extract/assets/fig-alm-diagram-1.png)
 
-Figure 25: The Associative Learning Model (ALM). The diagram illustrates the basic structure of the ALM model as used in the present work. Input nodes are activated as a function of their similarity to the lower-boundary of the target band. The generalization parameter, \\(c\\), determines the degree to which nearby input nodes are activated. The output nodes are activated as a function of the weighted sum of the input nodes - weights are updated via the delta rule.
+Figure 24: The Associative Learning Model (ALM). The diagram illustrates the basic structure of the ALM model as used in the present work. Input nodes are activated as a function of their similarity to the lower-boundary of the target band. The generalization parameter, \\(c\\), determines the degree to which nearby input nodes are activated. The output nodes are activated as a function of the weighted sum of the input nodes - weights are updated via the delta rule.
 
 ## Modeling Approach
 
@@ -1724,7 +1723,7 @@ The modeling goal is to implement a full process model capable of both 1) produc
 
 ALM is a localist neural network model ([Page, 2000](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-pageConnectionistModellingPsychology2000a)), with each input node corresponding to a particular stimulus, and each output node corresponding to a particular response value. The units in the input layer activate as a function of their Gaussian similarity to the input stimulus. So, for example, an input stimulus of value 55 would induce maximal activation of the input unit tuned to 55. Depending on the value of the generalization parameter, the nearby units (e.g. 54 and 56; 53 and 57) may also activate to some degree. ALM is structured with input and output nodes that correspond to regions of the stimulus space, and response space, respectively. The units in the input layer activate as a function of their similarity to a presented stimulus. As was the case with the exemplar-based models, similarity in ALM is exponentially decaying function of distance. The input layer is fully connected to the output layer, and the activation for any particular output node is simply the weighted sum of the connection weights between that node and the input activations. The network then produces a response by taking the weighted average of the output units (recall that each output unit has a value corresponding to a particular response). During training, the network receives feedback which activates each output unit as a function of its distance from the ideal level of activation necessary to produce the correct response. The connection weights between input and output units are then updated via the standard delta learning rule, where the magnitude of weight changes are controlled by a learning rate parameter. The EXAM model is an extension of ALM, with the same learning rule and representational scheme for input and output units. EXAM differs from ALM only in its response rule, as it includes a linear extrapolation mechanism for generating novel responses. Although this extrapolation rule departs from a strictly similarity-based generalization mechanism, EXAM is distinct from pure rule-based models in that it remains constrained by the weights learned during training. EXAM retrieves the two nearest training inputs, and the ALM responses associated with those inputs, and computes the slope between these two points. The slope is then used to extrapolate the response to the novel test stimulus. Because EXAM requires at least two input-output pairs to generate a response, additional assumptions were required in order for it to generate resposnes for the constant group. We assumed that participants come to the task with prior knowledge of the origin point (0,0), which can serve as a reference point necessary for the model to generate responses for the constant group. This assumption is motivated by previous function learning research (Brown & Lacroix ([2017](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-brownUnderestimationLinearFunction2017))), which through a series of manipulations of the y intercept of the underlying function, found that participants consistently demonstrated knowledge of, or a bias towards, the origin point (see Kwantes & Neal ([2006](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kwantesWhyPeopleUnderestimate2006)) for additional evidence of such a bias in function learning tasks).
 
-See [Table 15](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-alm-exam) for a full specification of the equations that define ALM and EXAM, and [Figure 25](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-alm-diagram) for a visual representation of the ALM model.
+See [Table 15](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-alm-exam) for a full specification of the equations that define ALM and EXAM, and [Figure 24](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-alm-diagram) for a visual representation of the ALM model.
 
 Table 15: ALM & EXAM Equations
 
@@ -1843,9 +1842,9 @@ lr_post <- post_dat_avg %>%
 c_post + lr_post
 ```
 
-![](md_extract/assets/fig-htw-post-dist-1-4.png)
+![](md_extract/assets/fig-htw-post-dist-1.png)
 
-Figure 26: Posterior Distributions of \\(c\\) and \\(lr\\) parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y axes of the plots for the c parameter are scaled logarithmically.
+Figure 25: Posterior Distributions of \\(c\\) and \\(lr\\) parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y axes of the plots for the c parameter are scaled logarithmically.
 
 Code
 
@@ -1879,15 +1878,15 @@ test_resid <-  post_dat |>
   plot_annotation(tag_levels = list(c('A','B')),tag_suffix = ') ') 
 ``` 
 
-![](md_extract/assets/fig-htw-resid-pred-1-4.png)
+![](md_extract/assets/fig-htw-resid-pred-1.png)
 
-Figure 27: Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
+Figure 26: Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
 
-The posterior distributions of the \\(c\\) and \\(lr\\) parameters are shown [Figure 26](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-post-dist), and model predictions are shown alongside the empirical data in [Figure 28](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-cm-vx-pat). There were substantial individual differences in the posteriors of both parameters, with the within-group individual differences generally swamped any between-group or between-model differences. The magnitude of these individual differences remains even if we consider only the single best parameter set for each subject.
+The posterior distributions of the \\(c\\) and \\(lr\\) parameters are shown [Figure 25](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-post-dist), and model predictions are shown alongside the empirical data in [Figure 27](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-cm-vx-pat). There were substantial individual differences in the posteriors of both parameters, with the within-group individual differences generally swamped any between-group or between-model differences. The magnitude of these individual differences remains even if we consider only the single best parameter set for each subject.
 
-We used the posterior distribution of \\(c\\) and \\(lr\\) parameters to generate a posterior predictive distribution of the observed data for each participant, which then allows us to compare the empirical data to the full range of predictions from each model. Aggregated residuals are displayed in [Figure 27](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-resid-pred). The pattern of training stage residual errors are unsurprising across the combinations of models and fitting method . Differences in training performance between ALM and EXAM are generally minor (the two models have identical learning mechanisms). The differences in the magnitude of residuals across the three fitting methods are also straightforward, with massive errors for the ‘fit to Test Only’ model, and the smallest errors for the ‘fit to train only’ models. It is also noteworthy that the residual errors are generally larger for the first block of training, which is likely due to the initial values of the ALM weights being unconstrained by whatever initial biases participants tend to bring to the task. Future work may explore the ability of the models to capture more fine grained aspects of the learning trajectories. However for the present purposes, our primary interest is in the ability of ALM and EXAM to account for the testing patterns while being constrained, or not constrained, by the training data. All subsequent analyses and discussion will thus focus on the testing stage.
+We used the posterior distribution of \\(c\\) and \\(lr\\) parameters to generate a posterior predictive distribution of the observed data for each participant, which then allows us to compare the empirical data to the full range of predictions from each model. Aggregated residuals are displayed in [Figure 26](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-resid-pred). The pattern of training stage residual errors are unsurprising across the combinations of models and fitting method . Differences in training performance between ALM and EXAM are generally minor (the two models have identical learning mechanisms). The differences in the magnitude of residuals across the three fitting methods are also straightforward, with massive errors for the ‘fit to Test Only’ model, and the smallest errors for the ‘fit to train only’ models. It is also noteworthy that the residual errors are generally larger for the first block of training, which is likely due to the initial values of the ALM weights being unconstrained by whatever initial biases participants tend to bring to the task. Future work may explore the ability of the models to capture more fine grained aspects of the learning trajectories. However for the present purposes, our primary interest is in the ability of ALM and EXAM to account for the testing patterns while being constrained, or not constrained, by the training data. All subsequent analyses and discussion will thus focus on the testing stage.
 
-The residuals of the model predictions for the testing stage ([Figure 27](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-resid-pred)) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also [Figure 29](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-ee-e1)), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in [Figure 28](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-cm-vx-pat), which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
+The residuals of the model predictions for the testing stage ([Figure 26](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-resid-pred)) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also [Figure 28](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-ee-e1)), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in [Figure 27](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-cm-vx-pat), which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
 
 Code
 
@@ -1910,9 +1909,9 @@ post_dat_l |>
          labs(title="Model Predictions - Experiment 1 Data", y="Vx")
 ```
 
-![](md_extract/assets/fig-cm-vx-pat-1-2.png)
+![](md_extract/assets/fig-cm-vx-pat-1.png)
 
-Figure 28: Empirical data and Model predictions for mean velocity across target bands. Fitting methods (Test Only, Test & Train, Train Only) - are separated across rows, and Training Condition (Constant vs. Varied) are separated by columns. Each facet contains the predictions of ALM and EXAM, alongside the observed data.
+Figure 27: Empirical data and Model predictions for mean velocity across target bands. Fitting methods (Test Only, Test & Train, Train Only) - are separated across rows, and Training Condition (Constant vs. Varied) are separated by columns. Each facet contains the predictions of ALM and EXAM, alongside the observed data.
 
 Code
 
@@ -2027,9 +2026,9 @@ p_em_1 <- e1_ee_brm_ae |> emmeans(pairwise~ Model*condit, re_formula=NA)  |>
 p_ce_1 / p_em_1
 ```
 
-![](md_extract/assets/fig-ee-e1-1-2.png)
+![](md_extract/assets/fig-ee-e1-1.png)
 
-Figure 29
+Figure 28
 
 To quantitatively assess whether the differences in performance between models, we fit a bayesian regressions predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs. EXAM) and training condition (Constant vs. Varied).
 
@@ -2126,9 +2125,9 @@ rbind(e2_model$post_dat_l |> filter( Fit_Method=="Test_Train") |>
          labs(title="Model Predictions Experiment 2 & 3", y="vx")
 ```
 
-![](md_extract/assets/fig-cm-vx-pat-e2-e3-1-1.png)
+![](md_extract/assets/fig-cm-vx-pat-e2-e3-1.png)
 
-Figure 30: Empirical data and Model predictions from Experiment 2 and 3 for the testing stage. Observed data is shown on the right. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
+Figure 29: Empirical data and Model predictions from Experiment 2 and 3 for the testing stage. Observed data is shown on the right. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
 
 Code
 
@@ -2260,7 +2259,7 @@ Table 18: Results of Bayesian Regression models predicting model error as a fun
 | Exp 3 | conditVaried:bandOrderReverse | 30.82 | −19.57 | 83.56 | 0.88 |
 | Exp 3 | ModelEXAM:conditVaried:bandOrderReverse | −60.60 | −101.80 | −18.66 | 1.00 |
 
-*Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the “fit to training and testing data” models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: \\(\\beta\\) = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: \\(\\beta\\) = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 (\\(\\beta\\) = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 (\\(\\beta\\) = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controleld for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order (\\(\\beta\\) = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see [Figure 31](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2_e3_ae)).
+*Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the “fit to training and testing data” models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: \\(\\beta\\) = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: \\(\\beta\\) = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 (\\(\\beta\\) = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 (\\(\\beta\\) = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controleld for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order (\\(\\beta\\) = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see [Figure 30](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-e2_e3_ae)).
 
 Code
 
@@ -2309,11 +2308,11 @@ Model:condit` +
  (p_e2 / p_e3) + plot_annotation(tag_levels = c('A'), tag_suffix=".")
 ```
 
-![](md_extract/assets/fig-e2_e3_ae-1-2.png)
+![](md_extract/assets/fig-e2_e3_ae-1.png)
 
-Figure 31: Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order).
+Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order).
 
-*Computational Model Summary*. Across the model fits to all three experiments, we found greater support for EXAM over ALM (negative coefficients on the ModelEXAM term in [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)), and moreover that the constant participants were disproportionately well described by EXAM in comparison to ALM (positive coefficients on ModelEXAM:conditVaried terms in [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)). This pattern is also clearly depicted in [Figure 32](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-best-model), which plots the difference in model errors between ALM and EXAM for each individual participant. Both varied and constant conditions have a greater proportion of subjects better fit by EXAM (positive error differences), with the magnitude of EXAM’s advantage visibly greater for the constant group. It also bears mention that numerous participants were better fit by ALM, or did not show a clear preference for either model. A subset of these participants are shown in [Figure 33](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-indv-pred).
+*Computational Model Summary*. Across the model fits to all three experiments, we found greater support for EXAM over ALM (negative coefficients on the ModelEXAM term in [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)), and moreover that the constant participants were disproportionately well described by EXAM in comparison to ALM (positive coefficients on ModelEXAM:conditVaried terms in [Table 18](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-htw-ee-e23)). This pattern is also clearly depicted in [Figure 31](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-best-model), which plots the difference in model errors between ALM and EXAM for each individual participant. Both varied and constant conditions have a greater proportion of subjects better fit by EXAM (positive error differences), with the magnitude of EXAM’s advantage visibly greater for the constant group. It also bears mention that numerous participants were better fit by ALM, or did not show a clear preference for either model. A subset of these participants are shown in [Figure 32](https://tegorman13.github.io/Dissertation/Sections/full.html#fig-htw-indv-pred).
 
 Code
 
@@ -2366,9 +2365,9 @@ full_comparison |>
   y="Participant")
 ```
 
-![](md_extract/assets/fig-htw-best-model-1-5.png)
+![](md_extract/assets/fig-htw-best-model-1.png)
 
-Figure 32: Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM.
+Figure 31: Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM.
 
 Code
 
@@ -2410,17 +2409,17 @@ testIndv <- indv_post_l |>
 testIndv 
 ``` 
 
-![](md_extract/assets/fig-htw-indv-pred-1-6.png)
+![](md_extract/assets/fig-htw-indv-pred-1.png)
 
-Figure 33: Model predictions alongside observed data for a subset of individual participants. A) 3 constant and 3 varied participants fit to both the test and training data. B) 3 constant and 3 varied subjects fit to only the trainign data. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
+Figure 32: Model predictions alongside observed data for a subset of individual participants. A) 3 constant and 3 varied participants fit to both the test and training data. B) 3 constant and 3 varied subjects fit to only the trainign data. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands.
 
-## General Discussion
+## Project 2 Discussion
 
 *Experimental Result Summary*
 
-Across three experiments, we investigated the impact of training variability on learning and extrapolation in a visuomotor function learning task. In Experiment 1, participants in the varied training condition, who experienced a wider range of velocity bands during training, showed lower accuracy at the end of training compared to those in the constant training condition.
+Across three experiments, we investigated the impact of training variability on learning and extrapolation in a visuomotor function learning task.
 
-Crucially, during the testing phase, the varied group exhibited significantly larger deviations from the target velocity bands, particularly for the extrapolation bands that were not encountered during training. The varied group also showed less discrimination between velocity bands, as evidenced by shallower slopes when predicting response velocity from target velocity band.
+In Experiment 1, participants in the varied training condition, who experienced a wider range of velocity bands during training, showed lower accuracy at the end of training compared to those in the constant training condition. Crucially, during the testing phase, the varied group exhibited significantly larger deviations from the target velocity bands, particularly for the extrapolation bands that were not encountered during training. The varied group also showed less discrimination between velocity bands, as evidenced by shallower slopes when predicting response velocity from target velocity band.
 
 Experiment 2 extended these findings by reversing the order of the training and testing bands. Similar to Experiment 1, the varied group demonstrated poorer performance during both training and testing phases. However, unlike Experiment 1, the varied group did not show a significant difference in discrimination between bands compared to the constant group.
 
@@ -2436,20 +2435,43 @@ Our findings also diverge from the two previous studies to cleanly manipulate th
 
 While the present study provides valuable insights into the influence of training variability on visuomotor function learning and extrapolation, there are several limitations that should be flagged. First, although the constant training group never had experience from a velocity band closer to the extrapolation bands than the varied group, they always had a three times more trials with the nearest velocity band. Such a difference may be an unavoidable consequence of varied vs. constant design which match the total number of training trials between the two groups. However in order to more carefully tease apart the influence of variability from the influence of frequency/repetition effects, future research could explore alternative designs that maintain the variability manipulation while equating the amount of training on the nearest examples across conditions, such as by increasing the total number of trials for the varied group. Another limitation is that the testing stage did not include any interpolation items, i.e. the participants tested only from the training bands they experienced during training, or from extrapolation bands. The absence of interpolation testing makes it more difficult to distinguish between the effects of training variability on extrapolation specifically, as opposed to generalization more broadly. Of course, the nature of the constant training condition makes interpolation teseting impossible to implement, however future studies might compare a training regimes that each include at least 2 distinct items, but still differ in total amount of variability experienced, which would then allow groups to be compared in terms of both interpolation and extrapolation testing. Finally, the task employed in the present study consisted of only a linear, positive function. Previous work in human function learning has repeatedly shown that such functions are among the easiest to learn, but that humans are nonetheless capable of learning negative, non-linear, or discontinuous functions ([Busemeyer et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-busemeyerLearningFunctionalRelations1997); [DeLosh et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997); [Kalish, 2013](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kalishLearningExtrapolatingPeriodic2013); [Mcdaniel et al., 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-mcdanielPredictingTransferPerformance2009)). It thus remains an open question as to whether the influence of training variability might interact with various components of the to-be-learned function.
 
-## Comparison to Project 1
+## General Discussion
 
-### Differences between the tasks
+To facilitate ease of comparison between the two projects and their respective tasks, we’ll now refer to project 1 as Hit The Target (HTT) and project 2 as Hit The Wall (HTW).
 
-There are a number of differences between Project 1’s Hit The Target (HTT), and Project 2’s Hit The Wall (HTW) tasks.
+### Empirical and Modeling Summary
 
--   Task Space Complexity: In HTW, the task space is also almost perfectly smooth, at least for the continuous feedback subjects, if they throw 100 units too hard, they’ll be told that they were 100 units too hard. Whereas in HTT,  it was possible to produce xy velocity combinations that were technically closer to the empirical solution space than other throws, but which resulted in worse feedback due to striking the barrier.
-    
--   Perceptual Distinctiveness: HTT offers perceptually distinct varied conditions that directly relate to the task’s demands, which may increase the sallience between training positions encounted by the varied group. In contrast, HTW’s varied conditions differ only in the numerical values displayed, lacking the same level of perceptual differentiation. Conversely in HTW, the only difference between conditions for the varied group are the numbers displayed at the top of the screen which indicate the current target band(e.g. 800-1000, or 1000-1200)
-    
--   In HTW, our primary testing stage of interest has no feedback, whereas in HTT testing always included feedback (the intermittent testing in HTT expt 1 being the only exception). Of course, we do collect testing with feedback data at the end of HTW, but we haven’t focused on that data at all in our modelling work thus far. It’s also interesting to recall that the gap between varied and constant in HTW does seem to close substantially in the testing-with-feedback stage. The difference between no-feedback and feedback testing might be relevant if the benefits of variation have anything to do with improving subsequent learning (as opposed to subsequent immediate performance), OR if the benefits of constant training rely on having the most useful anchor, having the most useful anchor might be a lot less helpful if you’re getting feedback from novel positions and can thus immediately begin to form position-specific anchors for the novelties, rather than relying on a training anchor. 
-    
--   HTW and HTT both have a similar amount of training trials (~200), and thus the constant groups acquire a similar amount of experience with their single position/velocity in both experiments. However, the varied conditions in both HTT experiments train on 2 positions, whereas the varied group in HTW trains on 3 velocity bands. This means that in HTT the varied group gets half as much experience on any one position as the constant group, and in HTW they only get 1/3 as much experience in any one position. There are likely myriad ways in which this might impact the success of the varied group regardless of how you think the benefits of variation might be occurring, e.g. maybe they also need to develop a coherent anchor, maybe they need more experience in order to extract a function, or more experience in order to properly learn to tune their c parameter. 
-    
+Across both projects, we investigated the influence of training variability on learning and generalization in computerized visuomotor skill learning, and function learning tasks. In project 1 (HTT), experiments 1 and 2 demonstrated that varied training led to superior testing performance compared to constant training. In Experiment 1, the varied group even outperformed the constant group even when testing from the constant groups trained position. In contrast, Project 2 (HTW) found the opposite pattern - the varied training groups exhibited poorer performance than the constant groups, both in terms of training accuracy, accuracy in extrapolation testing, and, in a subset of the experiments, the varied group showed a diminished ability to discriminate between bands. This detrimental effect of variability was observed across three experiments, with the exception of the reverse order condition in Experiment 3, where the varied group was able to match the constant group’s performance.
+
+Both projects also included computational modeling componenents. In Project 1, the IGAS model was introduced as a means of addressing the lack of control for similarity between training and testing conditions common to previous work in the “benefits of variability” literature. The IGAS model provides a theoretically motivated method of quantifying the similarity between training experience and testing conditions. The resulting similarity metric (i.e. our 1c-similarity) is shown to be a significant predictor of testing performance on its own, and when added as a covariate to the statistical model used to compare the constant and varied training groups. We then showed the group-level effect of training variability on testing performance can be accounted for with the additional assumption that training variability influences the generalization gradient. The contribution of the IGAS model was thus twofold:  1) providing a theoretically justifiable method of quantifying/controlling for similarity between training and testing, and 2) demonstrating the viability of a flexible-similarity based generalization account for the empirically observed benefit of variability in our task. Although similar approaches have been employed in other domains, both contributions are novel additions to the large body of research assessing the effect of constant vs. varied training manipulations in visuomotor skill tasks.
+
+Although theoretically motivated, the IGAS model of Project 1 is best categorized as a descriptive measurement-model. Sufficient to account for group differences, but lacking the machinery necessary to provide a full process-level account of how the empirical quantities of interest are generated. In contrast, Project 2 (HTW) implemented a more robust computational modeling approach, implementing and comparing full process models (ALM & EXAM), capable of generating predictions for both the learning and testing stages of the experiment. ALM and EXAM have been used as models of function learning, cue judgement, and forecasting behavior in numerous studies over the past 25 years ([Brown & Lacroix, 2017](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-brownUnderestimationLinearFunction2017); [DeLosh et al., 1997](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-deloshExtrapolationSineQua1997); [Kane & Broomell, 2020](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kaneApplicationsBiasVariance2020); [H. Kelley & Busemeyer, 2008](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kelleyComparisonModelsLearning2008); [Kwantes et al., 2012](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-kwantesItemOrderMatters2012); [Mcdaniel et al., 2009](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-mcdanielPredictingTransferPerformance2009); [Von Helversen & Rieskamp, 2010](https://tegorman13.github.io/Dissertation/Sections/full.html#ref-vonhelversenLearningMultiplecueJudgment2010)). The present work presents the first application of these models to to the study of training variability in a visuomotor function learning task. We fit both models to individual participant data, using a form of simulation-based bayesian parameter estimation that allowed us to generate and compare the full posterior predictive distributions of each model. EXAM provided the best overall account of the testing data, and the advantage of EXAM over ALM was significantly greater for the constant group. Notably, EXAM captured the constant groups’ ability to extrapolate linearly to novel velocity bands, despite receiving training from only a single input-output pair. This finding suggests that EXAM’s linear extrapolation mechanism, combined with the assumption of prior knowledge about the origin point (0, 0), was sufficient to account for the constant groups’ accurate extrapolation performance. Such findings may offer a preliminary suggestion that experience with a more variable set of training examples may be detrimental to performance in simple extrapolation tasks.
+
+### Differences between the two Projects
+
+The HTT and HTW tasks differ across numerous dimensions that may be relevant to the opposing patterns observed in the two projects (see [Table 19](https://tegorman13.github.io/Dissertation/Sections/full.html#tbl-task-diff) provides for a detailed comparison of the two tasks).
+
+In HTT, the salient perceptual elements of the task (i.e. the launching box, target and barrier) are subject to variation (i.e. different distances between the launching box and target), and the spatial layout of these perceptually variable elements are intrinsically linked to the task objective of striking the target. Conversely, the perceptual task elements in HTW are invariant across trials, and the task objective is specified by the target velocity value specified as a numeral at the top of the screen. If the benefits of training variation do arise from the formation and flexible retrieval of distinct memory traces, then the lack of perceptual salience between training instances in the HTW task may have limited any potential benefits of variability. Future work could investigate this possibility further employing a modified version of the HTW task wherein the correct velocity value is indicated by some perceptual feature of the task (e.g. the color of the wall, or size of the ball), rather than displaying the target velocity numerically.
+
+The HTT and HTW tasks also differed in terms of general task complexity. The HTT task was designed to mimic projectile launching tasks commonly employed in visuomotor learning studies, and the parabolic trajectories necessary to strike the target in HTT were sensitive to both the x and y dimensions of the projectiles velocity (and to a lesser extent, the position within the launching box at which the ball was released). Conversely the HTW task was influenced to a greater extent by the tasks commonly utilized in the function learning literature, wherein the correct output respones are determined by a single input dimension. In HTW,the relationship between feedback and optimal behavioral adjustment is also almost perfectly smooth, if participants produce a throw that is 100 units too hard, they’ll be told that they were 100 units away from the target band. Whereas in HTT, the presence of the barrier in introduces irregularities in the task space. Even throws close to the solution space might result in failure, creating a less predictable learning environment.
+
+Table 19: Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).
+
+  
+| Dimension | HTT (Project 1) | HTW (Project 2) |
+| --- | --- | --- |
+| Task Description | Projectile launching to hit a target | Projectile launching to hit wall at a specific velocity |
+| Task Complexity | More complex parabolic trajectory, both x and y velocities relevant to outcome | Simpler 1D mapping of force to outcome. Only x velocity is relevant. |
+| Task Space | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier. | Simpler: smooth, linear mapping between velocity and feedback. |
+| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
+| Testing Feedback | Testing always included feedback | Primary testing stage had no feedback. |
+| Potential for Learning during Testing | Limited potential for learning during testing due to feedback. | Some potential for learning during no-feedback testing by observing ball trajectory. |
+| Position/Velocity Experience | Varied group gets half as much experience on any one position as the constant group. | Varied group gets 1/3 as much experience on any one velocity band as the constant group. |
+| Testing Structure | Random interleaving of trained/transfer testing distances. | Blocked structure, separately testing trained vs extrapolation testing bands. |
+
+### Conclusion
+
+In summary, this dissertation provides a comprehensive examination of the effects of training variability on learning and generalization in visuomotor and function learning tasks. The contrasting results obtained from the Hit The Target (HTT) and Hit The Wall (HTW) tasks underscore the complexity inherent to the longstanding pedagogical and scientific goal of identifying training manipulations that consistently benefit learning and generalization. Moreover, through the development and application of computational models, we provide novel theoretical accounts for both the beneficial and detrimental effects of training variability observed in our experiments. These findings highlight the importance of considering task characteristics when designing experiments intended to assess the influence of training interventions, and demonstrate the value of combining empirical and computational modeling approaches to uncover the cognitive mechanisms that support learning and generalization. Future research should continue to investigate the complex interplay between task demands, training manipulations, and individual differences, with the ultimate goal of optimizing educational and training outcomes across a wide range of domains.
 
 ## References
 
@@ -2513,7 +2535,7 @@ Cranmer, K., Brehmer, J., & Louppe, G. (2020). The frontier of simulation-based 
 
 Crump, M. J. C., & Logan, G. D. (2010). Episodic contributions to sequential control: Learning from a typist’s touch. *Journal of Experimental Psychology: Human Perception and Performance*, *36*(3), 662–672. [https://doi.org/10.1037/a0018390](https://doi.org/10.1037/a0018390)
 
-Czyż, S. H. (2021). Variability of Practice, Information Processing, and Decision MakingHow Much Do We Know? *Frontiers in Psychology*, *12*. [https://doi.org/10.3389/fpsyg.2021.639131](https://doi.org/10.3389/fpsyg.2021.639131)
+Czyż, S. H. (2021). Variability of Practice, Information Processing, and Decision Making—How Much Do We Know? *Frontiers in Psychology*, *12*. [https://doi.org/10.3389/fpsyg.2021.639131](https://doi.org/10.3389/fpsyg.2021.639131)
 
 Del Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of Contextual Interference on Females With Varied Experience in Open Sport Skills. *Research Quarterly for Exercise and Sport*, *53*(2), 108–115. [https://doi.org/10.1080/02701367.1982.10605236](https://doi.org/10.1080/02701367.1982.10605236)
 
@@ -2569,7 +2591,11 @@ Jones, S. D., & Brandt, S. (2020). Density and Distinctiveness in Early Word Lea
 
 Kalish, M. L., Lewandowsky, S., & Kruschke, J. K. (2004). Population of Linear Experts: Knowledge Partitioning and Function Learning. *Psychological Review*, *111*(4), 1072–1099. [https://doi.org/10.1037/0033-295X.111.4.1072](https://doi.org/10.1037/0033-295X.111.4.1072)
 
+Kane, P. B., & Broomell, S. B. (2020). Applications of the bias–variance decomposition to human forecasting. *Journal of Mathematical Psychology*, *98*, 102417. [https://doi.org/10.1016/j.jmp.2020.102417](https://doi.org/10.1016/j.jmp.2020.102417)
+
 Kangasrääsiö, A., Jokinen, J. P. P., Oulasvirta, A., Howes, A., & Kaski, S. (2019). Parameter Inference for Computational Cognitive Models with Approximate Bayesian Computation. *Cognitive Science*, *43*(6), e12738. [https://doi.org/10.1111/cogs.12738](https://doi.org/10.1111/cogs.12738)
+
+Kelley, H., & Busemeyer, J. (2008). A comparison of models for learning how to dynamically integrate multiple cues in order to forecast continuous criteria. *Journal of Mathematical Psychology*, *52*(4), 218–240. [https://doi.org/10.1016/j.jmp.2008.01.009](https://doi.org/10.1016/j.jmp.2008.01.009)
 
 Kelley, T. A., & Yantis, S. (2009). Learning to attend: Effects of practice on information selection. *Journal of Vision*, *9*(7), 16. [https://doi.org/10.1167/9.7.16](https://doi.org/10.1167/9.7.16)
 
@@ -2580,6 +2606,8 @@ Koh, K., & Meyer, D. E. (1991). Function learning: Induction of continuous stimu
 Kruschke, J. K. (1992). ALCOVE: An exemplar-based connectionist model of Category Learning. *Psychological Review*, *99*(1). [https://doi.org/10.1037/0033-295X.99.1.22](https://doi.org/10.1037/0033-295X.99.1.22)
 
 Kwantes, P. J., & Neal, A. (2006). Why people underestimate y when extrapolating in linear functions. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *32*(5), 1019–1030. [https://doi.org/10.1037/0278-7393.32.5.1019](https://doi.org/10.1037/0278-7393.32.5.1019)
+
+Kwantes, P. J., Neal, A., & Kalish, M. (2012). Item order matters in a function learning task. *Canadian Journal of Experimental Psychology/Revue Canadienne de Psychologie Expérimentale*, *66*(2), 90–97. [https://doi.org/10.1037/a0026639](https://doi.org/10.1037/a0026639)
 
 Lamberts, K. (1994). Flexible Tuning of Similarity in Exemplar-Based Categorization. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *20*(5), 1003–1021. [https://doi.org/10.1037/0278-7393.20.5.1003](https://doi.org/10.1037/0278-7393.20.5.1003)
 
@@ -2631,7 +2659,7 @@ Nosofsky, R. M., & Johansen, M. K. (2000). Exemplar-based accounts of "multiple-
 
 Nosofsky, R. M., Sanders, C. A., & McDaniel, M. A. (2018). Tests of an exemplar-memory model of classification learning in a high-dimensional natural-science category domain. *Journal of Experimental Psychology: General*, *147*(3), 328–353. [https://doi.org/10.1037/xge0000369](https://doi.org/10.1037/xge0000369)
 
-Nosofsky, R. M., Sanders, C. A., Zhu, X., & McDaniel, M. A. (2018). Model-guided search for optimal natural-science-category training exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1), 48–76. [https://doi.org/10.3758/s13423-018-1508-8](https://doi.org/10.3758/s13423-018-1508-8)
+Nosofsky, R. M., Sanders, C. A., Zhu, X., & McDaniel, M. A. (2019). Model-guided search for optimal natural-science-category training exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1), 48–76. [https://doi.org/10.3758/s13423-018-1508-8](https://doi.org/10.3758/s13423-018-1508-8)
 
 Op de Beeck, H. P., Wagemans, J., & Vogels, R. (2008). The representation of perceived shape similarity and its role for category learning in monkeys: A modeling study. *Vision Research*, *48*(4), 598–610. [https://doi.org/10.1016/j.visres.2007.11.019](https://doi.org/10.1016/j.visres.2007.11.019)
 
@@ -2709,6 +2737,8 @@ Van Rossum, J. H. A. (1990). Schmidt’s schema theory: The empirical base of th
 
 Vigo, R., Doan, K.-M. C., Doan, C. A., & Pinegar, S. (2018). On the learning difficulty of visual and auditory modal concepts: Evidence for a single processing system. *Cognitive Processing*, *19*(1), 1–16. [https://doi.org/10.1007/s10339-017-0840-7](https://doi.org/10.1007/s10339-017-0840-7)
 
+Von Helversen, B., & Rieskamp, J. (2010). *Learning in multiple-cue judgment tasks*. [https://doi.org/10.5167/UZH-135898](https://doi.org/10.5167/UZH-135898)
+
 Wahlheim, C. N., Finn, B., & Jacoby, L. L. (2012). Metacognitive judgments of repetition and variability effects in natural concept learning: Evidence for variability neglect. *Memory & Cognition*, *40*(5), 703–716. [https://doi.org/10.3758/s13421-011-0180-2](https://doi.org/10.3758/s13421-011-0180-2)
 
 Wall, L., Gunawan, D., Brown, S. D., Tran, M.-N., Kohn, R., & Hawkins, G. E. (2021). Identifying relationships between cognitive processes across tasks, contexts, and time. *Behavior Research Methods*, *53*(1), 78–95. [https://doi.org/10.3758/s13428-020-01405-4](https://doi.org/10.3758/s13428-020-01405-4)
@@ -2740,6 +2770,8 @@ Yang, J., Yan, F.-F., Chen, L., Xi, J., Fan, S., Zhang, P., Lu, Z.-L., & Huang, 
 Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B., & Boddez, Y. (2021). Perceptual variability: Implications for learning and generalization. *Psychonomic Bulletin & Review*, *28*(1), 1–19. [https://doi.org/10.3758/s13423-020-01780-1](https://doi.org/10.3758/s13423-020-01780-1)
 
 ## Appendix
+
+### Appendix - Project 1
 
 Reviewer #2: This study addresses a question that is important both theoretically and practically. However, the authors need to rule out the following, less interesting alternative. Namely, the results could be due to task practice effect, as follows.
 
@@ -3143,3 +3175,247 @@ e2TestFits %>% ggplot(aes(x=conditType,y=pAsym,fill=conditType))+
 ``` 
 
 ![](md_extract/assets/unnamed-chunk-71-1.png)
+
+### Appendix - Project 2 - Experiment 1
+
+Code
+
+```
+# print(getwd())
+# here::set_here(path='..')
+# print(getwd())
+#source(here::here("Functions", "packages.R"))
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
+  ggh4x,htmltools,future,furrr,ez)
+walk(c("dplyr","here"), conflict_prefer_all, quiet = TRUE)
+
+walk(c("Display_Functions", "org_functions", "Table_Functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
+```
+
+Code
+
+```
+test <- readRDS(here::here("data/e1_08-21-23.rds")) |> filter(expMode2 == "Test")  |>
+  select(id,condit,bandInt,vb,vx,dist,sdist,bandType,tOrder)
+```
+
+#### Posterior Predictive Distributions
+
+Code
+
+```
+dist_pred <- 
+  posterior_predict(e1_distBMM, ndraws = 500) |> 
+  array_branch(margin=1) |> 
+   map_dfr( 
+    function(yrep_iter) {
+      test  |>
+        mutate(dist_pred = yrep_iter)
+    },
+    .id = 'iter'
+  ) |>
+  mutate(iter = as.numeric(iter))
+
+
+
+dist_pred  |>
+  filter(iter < 100) %>%
+  ggplot(aes(dist_pred, group = iter)) +
+  geom_line(alpha = .03, stat = 'density', color = 'blue') +
+  geom_density(data = test,
+               aes(dist,col=vb),
+               inherit.aes = FALSE,
+               size = 0.7) + # 1
+  facet_grid(condit ~ vb) +
+  xlab('Deviation')
+```
+
+![](md_extract/assets/fig-post-pred-dist-1-2.png)
+
+Figure 33: Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data.
+
+Code
+
+```
+vx_pred <- 
+  posterior_predict(e1_vxBMM, ndraws = 500) |> 
+  array_branch(margin=1) |> 
+   map_dfr( 
+    function(yrep_iter) {
+      test  |>
+        mutate(vx_pred = yrep_iter)
+    },
+    .id = 'iter'
+  ) |>
+  mutate(iter = as.numeric(iter))
+
+
+
+vx_pred  |>
+  filter(iter < 100) %>%
+  ggplot(aes(vx_pred, group = iter)) +
+  geom_line(alpha = .03, stat = 'density', color = 'blue') +
+  geom_density(data = test,
+               aes(vx,col=vb),
+               inherit.aes = FALSE,
+               size = 0.7) + # 1
+  facet_grid(condit ~ vb) +
+  xlab('Vx')
+```
+
+![](md_extract/assets/fig-post-pred-vx-1-2.png)
+
+Figure 34: Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data.
+
+#### Empirical vs. Predicted
+
+Code
+
+```
+{
+vx_pred  |>
+  filter(iter < 100)  |> group_by(id,condit,vb,iter) |>
+  summarise(vx_pred=mean(vx_pred)) %>%
+  ggplot(aes(x=vb,y=vx_pred,fill=condit)) + 
+  geom_flat_violin( position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,
+                   trim = FALSE, alpha = .5, colour = NA) +
+  # geom_point(aes(x = as.numeric(vb) - 0.15, y = vx_pred, colour = vb),
+  #            position = position_jitter(width = 0.05, height = 0),
+  #            size = 1, shape = 20) +
+  geom_boxplot(aes(x = vb, y = vx_pred, fill = condit),
+               outlier.shape = NA,
+               alpha = 0.5,
+               width = 0.1,
+               colour = "black") +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Predicted Vx")  
+} / {
+vx_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  summarise(vx=mean(vx)) %>%
+  ggplot(aes(x=vb,y=vx,fill=condit)) + 
+  geom_flat_violin( position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,
+                   trim = FALSE,
+                   alpha = .5,
+                   colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15,col=condit),
+             # position = position_jitter(width = 0.05),
+             position = position_jitter(width = 0.05, height = 0),
+             size = 1,
+             shape = 20) +
+  geom_boxplot(
+               outlier.shape = NA,
+               alpha = 0.5,
+               width = 0.1,
+               colour = "black") +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Vx") 
+}
+```
+
+![](md_extract/assets/fig-empVsPred-1-2.png)
+
+Figure 35: Bayesian Mixed Model predictions vs. Empirical Predictions - X velocity
+
+#### Different Aggregations
+
+Code
+
+```
+epId <- dist_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  summarise(dist=median(dist)) |>
+  ggplot(aes(x=vb,y=dist,fill=condit)) + 
+  geom_flat_violin(aes(fill=condit), position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,trim = FALSE, alpha = .5, colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15, col=condit),
+             position = position_jitter(width = 0.05, height = 0),
+             size = 1, shape = 20, alpha=.7) +
+  geom_boxplot(aes(x=vb,y=dist,fill=condit),
+               outlier.shape = NA,
+               alpha = 0.5, width = 0.1) +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Deviation - Subject level averaging") 
+
+
+
+epId 
+``` 
+
+![](md_extract/assets/fig-empirical-distGrp1-1-2.png)
+
+Figure 36: E1. Distribution of Vx at Participant level
+
+Code
+
+```
+epTrial <- dist_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  ggplot(aes(x=vb,y=dist,fill=condit)) + 
+  geom_flat_violin(aes(fill=condit), position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,trim = FALSE, alpha = .5, colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15, col=condit),
+             position = position_jitter(width = 0.05, height = 0),
+             size = .5, shape = 20, alpha=.7) +
+  geom_boxplot(aes(x=vb,y=dist,fill=condit),
+               outlier.shape = NA,
+               alpha = 0.5, width = 0.1) +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Deviation - Raw Trial") +
+   theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank())
+
+epTrial
+```
+
+![](md_extract/assets/fig-empirical-distGrp2-1-2.png)
+
+Figure 37: E1. Distribution of Vx at Trial level
+
+Code
+
+```
+new_data_grid=map_dfr(1, ~data.frame(unique(test[,c("id","condit","bandInt")])))
+
+cSamp <- e1_distBMM  |> 
+  emmeans("condit",by="bandInt",at=list(bandInt=c(100,350,600,800,1000,1200)),
+          epred = TRUE, re_formula = NA) |> 
+  pairs() |> gather_emmeans_draws()  |>
+  group_by(contrast, .draw,bandInt) |> summarise(value=mean(.value), n=n())
+
+
+ ameBand <- cSamp |> ggplot(aes(x=value,y="")) + 
+  stat_halfeye() + 
+  geom_vline(xintercept=0,alpha=.4)+
+  facet_wrap(~bandInt,ncol=1) + labs(x="Marginal Effect (Constant - Varied)", y= NULL)+
+  ggtitle("Average Marginal Effect")
+
+bothConditGM <- e1_distBMM %>%
+  epred_draws(newdata = new_data_grid,ndraws = 2000, re_formula = NA) |>
+  ggplot(aes(x=.epred,y="Mean",fill=condit)) + 
+  stat_halfeye() +facet_wrap(~bandInt, ncol = 1) +
+  labs(x="Predicted Deviation", y=NULL)+
+  ggtitle("Grand Means") +theme(legend.position = "bottom")
+
+(bothConditGM | ameBand) + plot_layout(widths=c(2,1.0))
+```
+
+![](md_extract/assets/fig-e1-ame-1-2.png)
+
+Figure 38: E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)
