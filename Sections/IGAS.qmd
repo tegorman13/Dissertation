@@ -8,6 +8,13 @@ code-tools: true
 toc: true
 toc-location: body
 toc-title: Contents
+format:
+  html: default
+  hugo-md:
+    echo: false
+    include: false
+    html-math-method: mathjax
+    output-file: igas_hugo.md
 execute: 
   warning: false
   eval: true
