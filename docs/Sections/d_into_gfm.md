@@ -31,83 +31,51 @@ Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019),
 simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et
 al., 2001; Willey & Liu, 2018a), sports training (Green et al., 1995;
 North et al., 2019), and training on a complex video game (Seow et al.,
-2019).
+2019). See Czyż (2021) or Raviv et al. (2022) for more detailed reviews.
 
-Research on the effects of varied training typically compares a group of
-participants trained with minimal variability of examples against a
-group with greater variability (Czyż, 2021; Raviv et al., 2022).
+Research on the effects of varied training typically manipulates
+variability in one of two ways. In the first approach, a high
+variability group is exposed to a greater number of unique instances
+during training, while a low variability group receives fewer unique
+instances with more repetitions. Alternatively, both groups may receive
+the same number of unique instances, but the high variability group’s
+instances are more widely distributed or spread out in the relevant
+psychological space, while the low variability group’s instances are
+clustered more tightly together. Researchers then compare the training
+groups in terms of their performance during the training phase, as well
+as their generalization performance during a testing phase. Researchers
+will usually compare the performance of the two groups during both the
+training phase and a subsequent testing phase. The primary theoretical
+interest is often to assess the influence of training variability on
+generalization to novel testing items or conditions. However, the test
+may also include some or all of the items that were used during the
+training stage, allowing for an assessment of whether the variability
+manipulation influenced the learning of the trained items themselves, or
+to make it easy to measure how much performance degrades as a function
+of how far away testing items are from the training items.
 
-## Variability Literature Review
-
-An early and influential work on the influence of variability on
-category learning is that of Posner & Keele (1968). In an ambitious
-attempt to address the question of how category information is
-represented, the authors trained participants to categorize artificial
-dot patterns, manipulating whether learners were exposed to examples
-clustered close to the category prototypes (e.g. a low variability
-condition), or spread further away from the prototype (the
-varied-training group). It should be noted that both groups in this
-study were trained with the same number of unique instances and the
-manipulated difference was how spread out the instances were. The
-authors claim based on prior experiments using the same stimuli, that
-the training stimuli for the varied group were at least as far away from
-the testing stimuli as the training stimuli of the less-varied group.
-The authors interpreted their findings as evidence for the extraction of
-an abstraction or schema that is extracted and stored, and then over
-time becomes more likely to be the reference point from which
-generalization occurs, given that specific instances are thought to
-decay at a faster rate than prototypes or schema. The Posner and Keele
-study has been extremely influential and continues to be cited in
-contemporary research as clear evidence that schema abstraction
-underlies the benefits of varied training. It’s also referenced as a key
-influence in the development of “Schema Theory of Motor Learning”
-(Schmidt, 1975), which in turn influenced decades of investigations on
-the potential benefits of varied training in motor skill learning.
-However, the classic Posner & Keele study despite being far more
-carefully designed than many subsequent studies, and despite being a
-relative rarity in explicitly discussing and attempting to control for
-potential confounds of similarity between groups, may nevertheless be
-emblematic of a common issue in many investigations of the effects of
-varied training on learning. The problem with Posner & Keele’s
-conclusion was demonstrated clearly almost 3 decades later (Palmeri &
-Nosofsky, 2001), when researchers conducting a near replication of the
-original study also collected similarity judgements following training
-and performed multidimensional scaling analysis. Rather than being in
-the middle of the training stimuli as was the case in the physical
-stimuli space, the psychological representation of the prototype was
-shown reside at an extreme point, and generalization patterns by
-participants that would have seemed to warrant the learning of a
-prototype were then easily accounted for with only the assumption that
-the participants encoded instances. One of the primary concerns of the
-present paper is that many of the studies which purport to explain the
-benefits of variation via prototypes, schemas, or other abstractions,
-are often overlooking the potential of instance based similarity
-accounts.
-
-## Motor skill learning
-
-Training variation has also been shown to promote transfer in motor
-learning. Much of this research has been influenced by the work of
-(Schmidt, 1975), who proposed a schema-based account of motor learning
-as an attempt to address the longstanding problem of how novel movements
-are produced. Schema theory presumes a priori that learners possess
-general motor programs for classes of movements, such as an underhand
-throw. When called up for use, such programs must be parameterized, as
-well as schema rules that determine how a motor program is parameterized
-or scaled for a particular movement. Schema theory predicts that varied
-training results in the formation of a more general schema-rule, which
-can allow for transfer to novel movements within a given movement class,
-such as an underhand throw (though it is agnostic to the development of
-the movement classes themselves). Experiments that test this hypothesis
-are often designed to compare the transfer performance of a
+The influence of training variation has received a large amount of
+attention in the domain of sensorimotor skill learning. Much of this
+research has been influenced by the work of (Schmidt (1975)), who
+proposed a schema-based account of motor learning as an attempt to
+address the longstanding problem of how novel movements are produced.
+Schema theory presumes that learners possess general motor programs for
+a class of movements (e.g. an underhand throw). When called up for use
+motor programs are parameterized by schema rules which determine how the
+motor program is parameterized or scaled to the particular demands of
+the current task. Schema theory predicts that variable training
+facilitates the formation of more robust schemas, which will result in
+improved generalization or transfer. Experiments that test this
+hypothesis are often designed to compare the transfer performance of a
 constant-trained group against that of a varied-trained group. Both
 groups train on the same task, but the varied group practices with
 multiple instances along some task-relevant dimension that remains
-invariant for the constant group. For example, investigators might train
-two groups of participants to throw a projectile at a target, with a
-constant group that throws from a single location, and a varied group
-that throws from multiple locations. Both groups are then tested from
-novel locations.
+invariant for the constant group. For example, studies using a
+projectile throwing task might assign participants to either constant
+training that practicing throwing from a single location, and a varied
+group that throws from multiple locations. Following training, both
+groups are then tested from novel throwing locations (Pacheco & Newell,
+2018; Pigott & Shapiro, 1984; Willey & Liu, 2018a; Wulf, 1991).
 
 One of the earliest, and still often cited investigations of Schmidt’s
 benefits of variability hypothesis was the work of Kerr & Booth (1978).
@@ -142,19 +110,7 @@ utilized 4 different constant groups, and 3 varied groups, with one of
 the constant groups training under conditions identical to the testing
 conditions, and which were not trained on by any of the varied groups,
 e.g. the design of Kerr and Booth. However, in this case the varied
-group did not outperform the constant group. A more recent study
-attempting a slightly more direct replication of the original Kerr &
-Booth study (Willey & Liu, 2018b), having subjects throw beanbags at a
-target, with the varied group training from positions (5 and 9 feet) on
-either side of the constant group (7 feet). However, this study diverged
-from the original in that the participants were adults; they faced away
-from the target and threw the beanbag backwards over their bodies; they
-alternated using their right and left hands every 6 trials; and
-underwent a relatively extreme amount of training (20 sessions with 60
-practice trials each, spread out over 5-7 weeks). Like Wrisberg et al.
-(1987), this study did not find a varied advantage from the constant
-training position, though the varied group did perform better at
-distances novel to both groups.
+group did not outperform the constant group.
 
 Some support for the Kerr and Booth findings was found with a relatively
 less common experimental task of training participants in hitting a
@@ -250,6 +206,102 @@ distance was far less steep for the varied group, the authors suggested
 that varied training induced a decremented generalization gradient, such
 that the varied participants were less affected by the change between
 training and testing conditions.
+
+A more recent study attempting a slightly more direct replication of the
+original Kerr & Booth study (Willey & Liu, 2018b), having subjects throw
+beanbags at a target, with the varied group training from positions (5
+and 9 feet) on either side of the constant group (7 feet). However, this
+study diverged from the original in that the participants were adults;
+they faced away from the target and threw the beanbag backwards over
+their bodies; they alternated using their right and left hands every 6
+trials; and underwent a relatively extreme amount of training (20
+sessions with 60 practice trials each, spread out over 5-7 weeks). Like
+Wrisberg et al. (1987), this study did not find a varied advantage from
+the constant training position, though the varied group did perform
+better at distances novel to both groups.
+
+Of course, the relationship between training variability and transfer is
+unlikely to be a simple function wherein increased variation is always
+beneficial. Numerous studies have found null, or in some cases negative
+effects of training variation (DeLosh et al., 1997; Sinkeviciute et al.,
+2019; Wrisberg et al., 1987), and many more have suggested that the
+benefits of variability may depend on additional factors such as prior
+task experience, the order of training trials, or the type of transfer
+being measured (Berniker et al., 2014; Braithwaite & Goldstone, 2015;
+Hahn et al., 2005; Lavan et al., 2019; North et al., 2019; Sadakata &
+McQueen, 2014; Zaman et al., 2021).
+
+## Variability Literature Review
+
+An early and influential work on the influence of variability on
+category learning is that of Posner & Keele (1968). In an ambitious
+attempt to address the question of how category information is
+represented, the authors trained participants to categorize artificial
+dot patterns, manipulating whether learners were exposed to examples
+clustered close to the category prototypes (e.g. a low variability
+condition), or spread further away from the prototype (the
+varied-training group). It should be noted that both groups in this
+study were trained with the same number of unique instances and the
+manipulated difference was how spread out the instances were. The
+authors claim based on prior experiments using the same stimuli, that
+the training stimuli for the varied group were at least as far away from
+the testing stimuli as the training stimuli of the less-varied group.
+The authors interpreted their findings as evidence for the extraction of
+an abstraction or schema that is extracted and stored, and then over
+time becomes more likely to be the reference point from which
+generalization occurs, given that specific instances are thought to
+decay at a faster rate than prototypes or schema. The Posner and Keele
+study has been extremely influential and continues to be cited in
+contemporary research as clear evidence that schema abstraction
+underlies the benefits of varied training. It’s also referenced as a key
+influence in the development of “Schema Theory of Motor Learning”
+(Schmidt, 1975), which in turn influenced decades of investigations on
+the potential benefits of varied training in motor skill learning.
+However, the classic Posner & Keele study despite being far more
+carefully designed than many subsequent studies, and despite being a
+relative rarity in explicitly discussing and attempting to control for
+potential confounds of similarity between groups, may nevertheless be
+emblematic of a common issue in many investigations of the effects of
+varied training on learning. The problem with Posner & Keele’s
+conclusion was demonstrated clearly almost 3 decades later (Palmeri &
+Nosofsky, 2001), when researchers conducting a near replication of the
+original study also collected similarity judgements following training
+and performed multidimensional scaling analysis. Rather than being in
+the middle of the training stimuli as was the case in the physical
+stimuli space, the psychological representation of the prototype was
+shown reside at an extreme point, and generalization patterns by
+participants that would have seemed to warrant the learning of a
+prototype were then easily accounted for with only the assumption that
+the participants encoded instances. One of the primary concerns of the
+present paper is that many of the studies which purport to explain the
+benefits of variation via prototypes, schemas, or other abstractions,
+are often overlooking the potential of instance based similarity
+accounts.
+
+## Motor skill learning
+
+Training variation has also been shown to promote transfer in motor
+learning. Much of this research has been influenced by the work of
+(Schmidt, 1975), who proposed a schema-based account of motor learning
+as an attempt to address the longstanding problem of how novel movements
+are produced. Schema theory presumes a priori that learners possess
+general motor programs for classes of movements, such as an underhand
+throw. When called up for use, such programs must be parameterized, as
+well as schema rules that determine how a motor program is parameterized
+or scaled for a particular movement. Schema theory predicts that varied
+training results in the formation of a more general schema-rule, which
+can allow for transfer to novel movements within a given movement class,
+such as an underhand throw (though it is agnostic to the development of
+the movement classes themselves). Experiments that test this hypothesis
+are often designed to compare the transfer performance of a
+constant-trained group against that of a varied-trained group. Both
+groups train on the same task, but the varied group practices with
+multiple instances along some task-relevant dimension that remains
+invariant for the constant group. For example, investigators might train
+two groups of participants to throw a projectile at a target, with a
+constant group that throws from a single location, and a varied group
+that throws from multiple locations. Both groups are then tested from
+novel locations.
 
 ## Category learning
 
@@ -662,6 +714,14 @@ Skill*, 215–244.
 
 </div>
 
+<div id="ref-bernikerEffectsTrainingBreadth2014" class="csl-entry">
+
+Berniker, M., Mirzaei, H., & Kording, K. P. (2014). The effects of
+training breadth on motor generalization. *Journal of Neurophysiology*,
+*112*(11), 2791–2798. <https://doi.org/10.1152/jn.00615.2013>
+
+</div>
+
 <div id="ref-bjorkNewTheoryDisuse1992" class="csl-entry">
 
 Bjork, R. A., & Bjork, E. L. (1992). A New Theory of Disuse and an Old
@@ -746,6 +806,15 @@ Del Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of
 Contextual Interference on Females With Varied Experience in Open Sport
 Skills. *Research Quarterly for Exercise and Sport*, *53*(2), 108–115.
 <https://doi.org/10.1080/02701367.1982.10605236>
+
+</div>
+
+<div id="ref-deloshExtrapolationSineQua1997" class="csl-entry">
+
+DeLosh, E. L., McDaniel, M. A., & Busemeyer, J. R. (1997).
+Extrapolation: The Sine Qua Non for Abstraction in Function Learning.
+*Journal of Experimental Psychology: Learning, Memory, and Cognition*,
+*23*(4), 19. <https://doi.org/10.1037/0278-7393.23.4.968>
 
 </div>
 
@@ -972,6 +1041,15 @@ exemplars: A work in progress. *Psychonomic Bulletin & Review*, *26*(1),
 
 </div>
 
+<div id="ref-pachecoLearningSpecificIndividual2018" class="csl-entry">
+
+Pacheco, M. M., & Newell, K. M. (2018). Learning a specific, individual
+and generalizable coordination function: Evaluating the variability of
+practice hypothesis in motor learning. *Experimental Brain Research*,
+*236*(12), 3307–3318. <https://doi.org/10.1007/s00221-018-5383-3>
+
+</div>
+
 <div id="ref-palmeriCentralTendenciesExtreme2001" class="csl-entry">
 
 Palmeri, T. J., & Nosofsky, R. M. (2001). Central Tendencies, Extreme
@@ -1042,6 +1120,15 @@ short-term task switching training. *Psychological Research*, *83*(7),
 
 </div>
 
+<div id="ref-sadakataIndividualAptitudeMandarin2014" class="csl-entry">
+
+Sadakata, M., & McQueen, J. M. (2014). Individual aptitude in Mandarin
+lexical tone perception predicts effectiveness of high-variability
+training. *Frontiers in Psychology*, *5*, 1318.
+<https://doi.org/10.3389/fpsyg.2014.01318>
+
+</div>
+
 <div id="ref-sakamotoPuttingPsychologyBack2008" class="csl-entry">
 
 Sakamoto, Y., Jones, M., & Love, B. C. (2008). Putting the psychology
@@ -1099,6 +1186,15 @@ Experimental Psychology: Human Learning and Memory*, *5*(2), 179.
 Shea, J. B., & Zimny, S. T. (1983). Context Effects in Memory and
 Learning Movement Information. In *Advances in Psychology* (Vol. 12, pp.
 345–366). Elsevier. <https://doi.org/10.1016/S0166-4115(08)61998-6>
+
+</div>
+
+<div id="ref-sinkeviciuteRoleInputVariability2019" class="csl-entry">
+
+Sinkeviciute, R., Brown, H., Brekelmans, G., & Wonnacott, E. (2019). The
+role of input variability and learner age in second language vocabulary
+learning. *Studies in Second Language Acquisition*, *41*(04), 795–820.
+<https://doi.org/10.1017/S0272263119000263>
 
 </div>
 
@@ -1203,6 +1299,16 @@ children. *Applied Cognitive Psychology*, *5*(2), 123–134.
 
 Wulf, G., & Schmidt, R. A. (1997). *Variability of Practice and Implicit
 Motor Learning*.
+
+</div>
+
+<div id="ref-zamanPerceptualVariabilityImplications2021"
+class="csl-entry">
+
+Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T.,
+Vervliet, B., & Boddez, Y. (2021). Perceptual variability: Implications
+for learning and generalization. *Psychonomic Bulletin & Review*,
+*28*(1), 1–19. <https://doi.org/10.3758/s13423-020-01780-1>
 
 </div>
 
