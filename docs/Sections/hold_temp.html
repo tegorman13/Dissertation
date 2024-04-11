@@ -191,6 +191,11 @@ div.csl-indent {
 
 
 
+<p>Schema theory and typical study design</p>
+<p>Kerr &amp; Booth pattern Wrisberg - kerr &amp; booth contrasts plus other comparisons Green 1995 - partial support of Kerr &amp; Booth - varied group gets less experience from testing scenario Goode analogy study - reps Kerr &amp; Booth</p>
+<p>More common designs - lots of citations</p>
+<p>catalano 1984 - description Wiley 2018 - failed replication of Kerr &amp; Booth</p>
+<p>One such study that used a movement timing task, wherein subjects had to move their hand from a starting location, to a target location, attempting to arrive at the target location at specific time following the onset of a cue <span class="citation" data-cites="wrisbergVariabilityPracticeHypothesis1987">(<a href="#ref-wrisbergVariabilityPracticeHypothesis1987" role="doc-biblioref">Wrisberg et al., 1987</a>)</span>. This study utilized 4 different constant groups, and 3 varied groups, with one of the constant groups training under conditions identical to the testing conditions, and which were not trained on by any of the varied groups, e.g.&nbsp;the design of Kerr and Booth. However, in this case the varied group did not outperform the constant group.</p>
 <section id="the-study-of-variability" class="level2">
 <h2 class="anchored" data-anchor-id="the-study-of-variability">The study of variability</h2>
 <p>Studies investigating the “benefits of variability” hypothesis usually assign participants to either a constant or varied group for the training stage of the experiment. Then, subjects in both groups complete an identical testing stage which often consists items/conditions seen during training, and novel items/conditions.</p>
@@ -201,6 +206,7 @@ div.csl-indent {
 <li><p>Locations within Task-Space. For tasks in which the stimuli or conditions fall within a continuous metric space, the experimenter must decide whether the varied instances are relatively close together (e.g.&nbsp;throwing a ball from a distance of 4 feet and 5 feet), or far apart (throwing from 4 feet and 20 feet). Spreading the varied training items further apart may be beneficial in terms of providing a more representative sample of the task space to the learner, however large distances may also result in significant differences in difficulty between the training examples, which can be a common confound in variability studies.</p></li>
 <li><p>Proximity of Testing to Training Conditions. Intuitively, the fairest form of comparison is to include testing conditions that are of an equivalent distance from both the varied and constant groups. However researchers might also attempt to demonstrate the benefits of variation as being sufficiently powerful to outperform constant training, even in cases where the constant group trained from a closer proximity to the testing conditions, or whose training conditions are identical to the testing conditions <span class="citation" data-cites="goodeSuperiorityVariableRepeated2008 kerrSpecificVariedPractice1978">(<a href="#ref-goodeSuperiorityVariableRepeated2008" role="doc-biblioref">Goode et al., 2008</a>; <a href="#ref-kerrSpecificVariedPractice1978" role="doc-biblioref">Kerr &amp; Booth, 1978</a>)</span>.</p></li>
 </ol>
+<p>Training Condtions - how many, how different, how far apart</p>
 </section>
 <section id="schmidt" class="level2">
 <h2 class="anchored" data-anchor-id="schmidt">Schmidt</h2>
@@ -223,6 +229,9 @@ Goode, M. K., Geraci, L., &amp; Roediger, H. L. (2008). Superiority of variable 
 </div>
 <div id="ref-kerrSpecificVariedPractice1978" class="csl-entry" role="listitem">
 Kerr, R., &amp; Booth, B. (1978). Specific and varied practice of motor skill. <em>Perceptual and Motor Skills</em>, <em>46</em>(2), 395–401. <a href="https://doi.org/10.1177/003151257804600201">https://doi.org/10.1177/003151257804600201</a>
+</div>
+<div id="ref-wrisbergVariabilityPracticeHypothesis1987" class="csl-entry" role="listitem">
+Wrisberg, C. A., Winter, T. P., &amp; Kuhlman, J. S. (1987). The <span>Variability</span> of <span>Practice Hypothesis</span>: <span>Further Tests</span> and <span>Methodological Discussion</span>. <em>Research Quarterly for Exercise and Sport</em>, <em>58</em>(4), 369–374. <a href="https://doi.org/10.1080/02701367.1987.10608114">https://doi.org/10.1080/02701367.1987.10608114</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -611,6 +620,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           }
         });
       }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
 });
 </script>
 </div> <!-- /content -->

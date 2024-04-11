@@ -58,7 +58,7 @@ format:
     css: Assets/Style/calloutTG.css
     code-link: false
     html-math-method: mathjax
-    citations-hover: false
+    citations-hover: true
     link-external-newwindow: true
     #link-external-filter: '^(?:http:|https:)\/\/www\.tegorman13.github.io/Dissertation\/custom'
 

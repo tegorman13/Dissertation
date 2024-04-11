@@ -89,83 +89,36 @@ where the beanbag had landed in between each training trial. 12 weeks
 later, all of the children were given a final test from a distance of 3
 feet which was novel for the varied participants and repeated for the
 constant participants. Participants were also blindfolded for testing
-and did not receive trial by trial feedback in this stage. However, at
-the halfway point of the testing stage they were allowed to see the
-landing location of the 4 beanbags they had thrown, and then completed
-the final 4 testing throws. In both age groups, participants performed
-significantly better in the varied condition than the constant
-condition, though the effect was larger for the younger, 8-year-old
-children. Although this design does not directly assess the hypothesis
-of varied training producing superior generalization to constant
-training (since the constant group is not tested from a novel position),
-it nevertheless offers a compelling example of the merits of varied
-practice.
-
-On occasion the Kerr and Booth design may be nested within a larger
-experimental design. One such study that used a movement timing task,
-wherein subjects had to move their hand from a starting location, to a
-target location, attempting to arrive at the target location at specific
-time following the onset of a cue (Wrisberg et al., 1987). This study
-utilized 4 different constant groups, and 3 varied groups, with one of
-the constant groups training under conditions identical to the testing
-conditions, and which were not trained on by any of the varied groups,
-e.g. the design of Kerr and Booth. However, in this case the varied
-group did not outperform the constant group.
-
-Some support for the Kerr and Booth findings was found with a relatively
-less common experimental task of training participants in hitting a
-projectile at a target with the use of a racket (Green et al., 1995).
-Varied participants trained with tennis, squash, badminton, and
-short-tennis rackets were compared against constant subjects trained
-with only a tennis racket. One of the testing conditions had subjects
-repeat the use of the tennis racket, which had been used on all 128
-training trials for the constant group, and only 32 training trials for
-the varied group. Nevertheless, the varied group outperformed the
-constant group when using the tennis racket at testing, and also
-performed better in conditions with several novel racket lengths. Of
-course, this finding is less surprising than that of Kerr & Booth, given
-that varied subjects did have some prior exposure to the constant groups
-condition. This highlights an issue rarely discussed in the literature,
-of how much practice from an additional position might be necessary to
-induce benefits. Experimenters almost uniformly have varied participants
-train with an equivalent number of trials from each of their conditions
-
-One of the few studies that has replicated the surprising result of
-varied outperforming constant, from the constant training condition, did
-so in the relatively distant domain of verbal manipulation (Goode et
-al., 2008). All participants trained to solve anagrams of 40 different
-words ranging in length from 5 to 11 letters, with an anagram of each
-word repeated 3 times throughout training, for a total of 120 training
-trials. Although subjects in all conditions were exposed to the same 40
-unique words (i.e. the solution to an anagram), participants in the
-varied group saw 3 different arrangements for each solution-word, such
-as DOLOF, FOLOD, and OOFLD for the solution word FLOOD, whereas constant
-subjects would train on three repetitions of LDOOF (spread evenly across
-training). Two different constant groups were used. Both constant groups
-trained with three repetitions of the same word scramble, but for
-constant group A, the testing phase consisted of the identical letter
-arrangement to that seen during training (e.g. LDOOF), whereas for
-constant group B, the testing phase consisted of a arrangement they had
-not seen during training, thus presenting them with a testing situation
-similar situation to the varied group. At the testing stage, the varied
-group outperformed both constant groups, a particularly impressive
-result, given that constant group A had 3 prior exposures to the word
-arrangement (i.e. the particular permutation of letters) which the
-varied group had not explicitly seen. However varied subjects in this
-study did not exhibit the typical decrement in the training phase
-typical of other varied manipulations in the literature, and actually
-achieved higher levels of anagram solving accuracy by the end of
-training than either of the constant groups – solving 2 more anagrams on
-average than the constant group. This might suggest that for tasks of
-this nature where the learner can simply get stuck with a particular
-word scramble, repeated exposure to the identical scramble might be less
-helpful towards finding the solution than being given a different
-arrangement of the same letters. This contention is supported by the
-fact that constant group A, who was tested on the identical arrangement
-as they experienced during training, performed no better at testing than
-did constant group B, who had trained on a different arrangement of the
-same word solution – further suggesting that there may not have been a
-strong identity advantage in this task.
+and did not receive trial by trial feedback in this stage. In both age
+groups, participants performed significantly better in the varied
+condition than the constant condition, though the effect was larger for
+the younger, 8-year-old children. This result offers a particularly
+compelling example of the merits of varied practice, given that the
+varied group was able to outperform the constant group even from the
+home turf location where one may have expected the constatn group to
+have the strongest advantage. A similar pattern of results was observed
+in another study wherein varied participants trained with tennis,
+squash, badminton, and short-tennis rackets were compared against
+constant subjects trained with only a tennis racket (Green et al.,
+1995). One of the testing conditions had subjects repeat the use of the
+tennis racket, which had been used on all 128 training trials for the
+constant group, and only 32 training trials for the varied group.
+Nevertheless, the varied group outperformed the constant group when
+using the tennis racket at testing, and also performed better in
+conditions with several novel racket lengths. However, as is the case
+with many of the patterns commonly observed in the “benefits of
+variability” literature, the pattern wherein the varied group
+outperfroms the constant group even from the constants group’s home turf
+has not been consistently replicated. One recent study attempted a near
+replication of the Kerr & Booth study (Willey & Liu, 2018b), having
+subjects throw beanbags at a target, with the varied group training from
+positions (5 and 9 feet) on either side of the constant group (7 feet).
+This study did not find a varied advantage from the constant training
+position, though the varied group did perform better at distances novel
+to both groups. However, this study diverged from the original in that
+the participants were adults; and the amount of training was much
+greater (20 sessions with 60 practice trials each, spread out over 5-7
+weeks).
 
 Pitting varied against constant practice against each other on the home
 turf of the constant group provides a compelling argument for the
@@ -184,139 +137,80 @@ et al., 2001; Wrisberg & McLean, 1984; Wrisberg & Mead, 1983). A less
 common contrast places the constant group training in a region of the
 task space outside of the range of examples experienced by the varied
 group, but distinct from the transfer condition (Wrisberg et al., 1987;
-Wulf & Schmidt, 1997).
+Wulf & Schmidt, 1997). Of particular relevance to the current work is
+the early study of Catalano & Kleiner (1984), as theirs was one of the
+earliest studies to investigate the influence of varied vs. constant
+training on multiple testing locations of graded distance from the
+training condition. Participants were trained on coincident timing task,
+in which subjects observe a series of lightbulbs turning on sequentially
+at a consistent rate and attempt to time a button response with the
+onset of the final bulb. The constant groups trained with a single
+velocity of either 5,7,9, or 11 mph, while the varied group trained from
+all 4 of these velocities. Participants were then assigned to one of
+four possible generalization conditions, all of which fell outside of
+the range of the varied training conditions – 1, 3, 13 or 15 mph. As is
+often the case, the varied group performed worse during the training
+phase. In the testing phase, the general pattern was for all
+participants to perform worse as the testing conditions became further
+away from the training conditions, but since the drop off in performance
+as a function of distance was far less steep for the varied group, the
+authors suggested that varied training induced a decremented
+generalization gradient, such that the varied participants were less
+affected by the change between training and testing conditions.
 
-Of particular relevant to the current essay is the early work of
-Catalano & Kleiner (1984), as theirs was one of the earliest studies to
-investigate the influence of varied vs. constant training on multiple
-testing locations of graded distance from the training condition.
-Participants were trained on coincident timing task, in which subjects
-observe a series of lightbulbs turning on sequentially at a consistent
-rate and attempt to time a button response with the onset of the final
-bulb. The constant groups trained with a single velocity of either
-5,7,9, or 11 mph, while the varied group trained from all 4 of these
-velocities. Participants were then assigned to one of four possible
-generalization conditions, all of which fell outside of the range of the
-varied training conditions – 1, 3, 13 or 15 mph. As is often the case,
-the varied group performed worse during the training phase. In the
-testing phase, the general pattern was for all participants to perform
-worse as the testing conditions became further away from the training
-conditions, but since the drop off in performance as a function of
-distance was far less steep for the varied group, the authors suggested
-that varied training induced a decremented generalization gradient, such
-that the varied participants were less affected by the change between
-training and testing conditions.
+Benefits of varied training have also been observed in many studies
+outside of the sensorimotor domain. Goode et al. (2008) trained
+participants to solve anagrams of 40 different words ranging in length
+from 5 to 11 letters, with an anagram of each word repeated 3 times
+throughout training, for a total of 120 training trials. Although
+subjects in all conditions were exposed to the same 40 unique words
+(i.e. the solution to an anagram), participants in the varied group saw
+3 different arrangements for each solution-word, such as DOLOF, FOLOD,
+and OOFLD for the solution word FLOOD, whereas constant subjects would
+train on three repetitions of LDOOF (spread evenly across training). Two
+different constant groups were used. Both constant groups trained with
+three repetitions of the same word scramble, but for constant group A,
+the testing phase consisted of the identical letter arrangement to that
+seen during training (e.g. LDOOF), whereas for constant group B, the
+testing phase consisted of a arrangement they had not seen during
+training, thus presenting them with a testing situation similar
+situation to the varied group. At the testing stage, the varied group
+outperformed both constant groups, a particularly impressive result,
+given that constant group A had 3 prior exposures to the word
+arrangement (i.e. the particular permutation of letters) which the
+varied group had not explicitly seen. However varied subjects in this
+study did not exhibit the typical decrement in the training phase
+typical of other varied manipulations in the literature, and actually
+achieved higher levels of anagram solving accuracy by the end of
+training than either of the constant groups – solving 2 more anagrams on
+average than the constant group. This might suggest that for tasks of
+this nature where the learner can simply get stuck with a particular
+word scramble, repeated exposure to the identical scramble might be less
+helpful towards finding the solution than being given a different
+arrangement of the same letters. This contention is supported by the
+fact that constant group A, who was tested on the identical arrangement
+as they experienced during training, performed no better at testing than
+did constant group B, who had trained on a different arrangement of the
+same word solution – further suggesting that there may not have been a
+strong identity advantage in this task.
 
-A more recent study attempting a slightly more direct replication of the
-original Kerr & Booth study (Willey & Liu, 2018b), having subjects throw
-beanbags at a target, with the varied group training from positions (5
-and 9 feet) on either side of the constant group (7 feet). However, this
-study diverged from the original in that the participants were adults;
-they faced away from the target and threw the beanbag backwards over
-their bodies; they alternated using their right and left hands every 6
-trials; and underwent a relatively extreme amount of training (20
-sessions with 60 practice trials each, spread out over 5-7 weeks). Like
-Wrisberg et al. (1987), this study did not find a varied advantage from
-the constant training position, though the varied group did perform
-better at distances novel to both groups.
+In the domain of category learning, the constant vs. varied comparison
+is much less suitable. Instead, researchers will typically employ
+designs where A) all training groups encounter numerous stimuli, but one
+group experiences a greater number of unique exemplars (Nosofsky et al.,
+2019; Wahlheim et al., 2012)
 
-Of course, the relationship between training variability and transfer is
-unlikely to be a simple function wherein increased variation is always
-beneficial. Numerous studies have found null, or in some cases negative
-effects of training variation (DeLosh et al., 1997; Sinkeviciute et al.,
-2019; Wrisberg et al., 1987), and many more have suggested that the
-benefits of variability may depend on additional factors such as prior
-task experience, the order of training trials, or the type of transfer
-being measured (Berniker et al., 2014; Braithwaite & Goldstone, 2015;
-Hahn et al., 2005; Lavan et al., 2019; North et al., 2019; Sadakata &
-McQueen, 2014; Zaman et al., 2021).
+compare a condition with many repetitions of a few items against
+condition with fewer repetitions of a wider array of exemplars.
 
-## Variability Literature Review
-
-An early and influential work on the influence of variability on
-category learning is that of Posner & Keele (1968). In an ambitious
-attempt to address the question of how category information is
-represented, the authors trained participants to categorize artificial
-dot patterns, manipulating whether learners were exposed to examples
-clustered close to the category prototypes (e.g. a low variability
-condition), or spread further away from the prototype (the
-varied-training group). It should be noted that both groups in this
-study were trained with the same number of unique instances and the
-manipulated difference was how spread out the instances were. The
-authors claim based on prior experiments using the same stimuli, that
-the training stimuli for the varied group were at least as far away from
-the testing stimuli as the training stimuli of the less-varied group.
-The authors interpreted their findings as evidence for the extraction of
-an abstraction or schema that is extracted and stored, and then over
-time becomes more likely to be the reference point from which
-generalization occurs, given that specific instances are thought to
-decay at a faster rate than prototypes or schema. The Posner and Keele
-study has been extremely influential and continues to be cited in
-contemporary research as clear evidence that schema abstraction
-underlies the benefits of varied training. It’s also referenced as a key
-influence in the development of “Schema Theory of Motor Learning”
-(Schmidt, 1975), which in turn influenced decades of investigations on
-the potential benefits of varied training in motor skill learning.
-However, the classic Posner & Keele study despite being far more
-carefully designed than many subsequent studies, and despite being a
-relative rarity in explicitly discussing and attempting to control for
-potential confounds of similarity between groups, may nevertheless be
-emblematic of a common issue in many investigations of the effects of
-varied training on learning. The problem with Posner & Keele’s
-conclusion was demonstrated clearly almost 3 decades later (Palmeri &
-Nosofsky, 2001), when researchers conducting a near replication of the
-original study also collected similarity judgements following training
-and performed multidimensional scaling analysis. Rather than being in
-the middle of the training stimuli as was the case in the physical
-stimuli space, the psychological representation of the prototype was
-shown reside at an extreme point, and generalization patterns by
-participants that would have seemed to warrant the learning of a
-prototype were then easily accounted for with only the assumption that
-the participants encoded instances. One of the primary concerns of the
-present paper is that many of the studies which purport to explain the
-benefits of variation via prototypes, schemas, or other abstractions,
-are often overlooking the potential of instance based similarity
-accounts.
-
-## Motor skill learning
-
-Training variation has also been shown to promote transfer in motor
-learning. Much of this research has been influenced by the work of
-(Schmidt, 1975), who proposed a schema-based account of motor learning
-as an attempt to address the longstanding problem of how novel movements
-are produced. Schema theory presumes a priori that learners possess
-general motor programs for classes of movements, such as an underhand
-throw. When called up for use, such programs must be parameterized, as
-well as schema rules that determine how a motor program is parameterized
-or scaled for a particular movement. Schema theory predicts that varied
-training results in the formation of a more general schema-rule, which
-can allow for transfer to novel movements within a given movement class,
-such as an underhand throw (though it is agnostic to the development of
-the movement classes themselves). Experiments that test this hypothesis
-are often designed to compare the transfer performance of a
-constant-trained group against that of a varied-trained group. Both
-groups train on the same task, but the varied group practices with
-multiple instances along some task-relevant dimension that remains
-invariant for the constant group. For example, investigators might train
-two groups of participants to throw a projectile at a target, with a
-constant group that throws from a single location, and a varied group
-that throws from multiple locations. Both groups are then tested from
-novel locations.
-
-## Category learning
-
-In the category learning literature, the constant vs. varied comparison
-is much less suitable. Instead, researchers tend to compare a condition
-with many repetitions of a few items against condition with fewer
-repetitions of a wider array of exemplars. Much of the earlier work in
-this sub-area trained subjects on artificial categories, such as dot
-patterns (Homa & Vosburgh, 1976; Posner & Keele, 1968), where more
-varied or distorted training examples were often shown to produce
-superior generalization when categorizing novel exemplars. More
-recently, researchers have also begun to utilize more realistic stimuli
-in their experiments. Wahlheim et al. (2012) conducted one such study.
-In a within-participants design, participants were trained on bird
-categories with either high repetitions of a few exemplars, or few
+Much of the earlier work in this sub-area trained subjects on artificial
+categories, such as dot patterns (Homa & Vosburgh, 1976; Posner & Keele,
+1968), where more varied or distorted training examples were often shown
+to produce superior generalization when categorizing novel exemplars.
+More recently, researchers have also begun to utilize more realistic
+stimuli in their experiments. Wahlheim et al. (2012) conducted one such
+study. In a within-participants design, participants were trained on
+bird categories with either high repetitions of a few exemplars, or few
 repetitions of many exemplars. Across four different experiments, which
 were conducted to address an unrelated question on metacognitive
 judgements, the researchers consistently found that participants
@@ -475,6 +369,66 @@ non-solids. The tight training group, on the other hand, tended to
 overgeneralize the shape bias, leading the researchers to suggest that
 the varied training induced a more context-sensitive understanding of
 when to apply their knowledge.
+
+Of course, the relationship between training variability and transfer is
+unlikely to be a simple function wherein increased variation is always
+beneficial. Numerous studies have found null, or in some cases negative
+effects of training variation (DeLosh et al., 1997; Sinkeviciute et al.,
+2019; Wrisberg et al., 1987), and many more have suggested that the
+benefits of variability may depend on additional factors such as prior
+task experience, the order of training trials, or the type of transfer
+being measured (Berniker et al., 2014; Braithwaite & Goldstone, 2015;
+Hahn et al., 2005; Lavan et al., 2019; North et al., 2019; Sadakata &
+McQueen, 2014; Zaman et al., 2021).
+
+## Variability Literature Review
+
+An early and influential work on the influence of variability on
+category learning is that of Posner & Keele (1968). In an ambitious
+attempt to address the question of how category information is
+represented, the authors trained participants to categorize artificial
+dot patterns, manipulating whether learners were exposed to examples
+clustered close to the category prototypes (e.g. a low variability
+condition), or spread further away from the prototype (the
+varied-training group). It should be noted that both groups in this
+study were trained with the same number of unique instances and the
+manipulated difference was how spread out the instances were. The
+authors claim based on prior experiments using the same stimuli, that
+the training stimuli for the varied group were at least as far away from
+the testing stimuli as the training stimuli of the less-varied group.
+The authors interpreted their findings as evidence for the extraction of
+an abstraction or schema that is extracted and stored, and then over
+time becomes more likely to be the reference point from which
+generalization occurs, given that specific instances are thought to
+decay at a faster rate than prototypes or schema. The Posner and Keele
+study has been extremely influential and continues to be cited in
+contemporary research as clear evidence that schema abstraction
+underlies the benefits of varied training. It’s also referenced as a key
+influence in the development of “Schema Theory of Motor Learning”
+(Schmidt, 1975), which in turn influenced decades of investigations on
+the potential benefits of varied training in motor skill learning.
+However, the classic Posner & Keele study despite being far more
+carefully designed than many subsequent studies, and despite being a
+relative rarity in explicitly discussing and attempting to control for
+potential confounds of similarity between groups, may nevertheless be
+emblematic of a common issue in many investigations of the effects of
+varied training on learning. The problem with Posner & Keele’s
+conclusion was demonstrated clearly almost 3 decades later (Palmeri &
+Nosofsky, 2001), when researchers conducting a near replication of the
+original study also collected similarity judgements following training
+and performed multidimensional scaling analysis. Rather than being in
+the middle of the training stimuli as was the case in the physical
+stimuli space, the psychological representation of the prototype was
+shown reside at an extreme point, and generalization patterns by
+participants that would have seemed to warrant the learning of a
+prototype were then easily accounted for with only the assumption that
+the participants encoded instances. One of the primary concerns of the
+present paper is that many of the studies which purport to explain the
+benefits of variation via prototypes, schemas, or other abstractions,
+are often overlooking the potential of instance based similarity
+accounts.
+
+## Category learning
 
 ## Complications to the influence of variability
 

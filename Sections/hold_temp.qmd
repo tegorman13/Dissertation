@@ -1,5 +1,23 @@
 
 
+Schema theory and typical study design
+
+Kerr & Booth pattern
+Wrisberg - kerr & booth contrasts plus other comparisons
+Green 1995 - partial support of Kerr & Booth - varied group gets less experience from testing scenario
+Goode analogy study - reps Kerr & Booth
+
+More common designs - lots of citations
+
+catalano 1984 - description
+Wiley 2018 - failed replication of Kerr & Booth
+
+
+
+
+
+One such study that used a movement timing task, wherein subjects had to move their hand from a starting location, to a target location, attempting to arrive at the target location at specific time following the onset of a cue [@wrisbergVariabilityPracticeHypothesis1987]. This study utilized 4 different constant groups, and 3 varied groups, with one of the constant groups training under conditions identical to the testing conditions, and which were not trained on by any of the varied groups, e.g. the design of Kerr and Booth. However, in this case the varied group did not outperform the constant group.
+
 
 
 ## The study of variability
@@ -17,7 +35,7 @@ If the varied group performs better in the testing stage, this is taken for evid
 4)  Proximity of Testing to Training Conditions. Intuitively, the fairest form of comparison is to include testing conditions that are of an equivalent distance from both the varied and constant groups. However researchers might also attempt to demonstrate the benefits of variation as being sufficiently powerful to outperform constant training, even in cases where the constant group trained from a closer proximity to the testing conditions, or whose training conditions are identical to the testing conditions [@goodeSuperiorityVariableRepeated2008; @kerrSpecificVariedPractice1978].
 
 
-
+Training Condtions - how many, how different, how far apart
 
 
 ## Schmidt
