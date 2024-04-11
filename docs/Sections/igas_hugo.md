@@ -3,7 +3,6 @@ title: IGAS Project
 subtitle: >-
   An instance-based model account of the benefits of varied practice in
   visuomotor skill
-date: last-modified
 code-fold: true
 code-tools: true
 toc: true
