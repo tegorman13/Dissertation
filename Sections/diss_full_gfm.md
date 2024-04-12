@@ -11,7 +11,6 @@ Thomas Gorman
     - [The current work](#the-current-work)
 - [Project 1](#project-1)
 - [Abstract](#abstract)
-- [Introduction](#introduction-1)
   - [Similarity and instance-based approaches to transfer of
     learning](#similarity-and-instance-based-approaches-to-transfer-of-learning)
   - [The effect of training variability on
@@ -44,7 +43,7 @@ Thomas Gorman
 - [General Discussion](#general-discussion)
   - [Limitations](#limitations)
 - [Project 2](#project-2)
-- [Introduction](#introduction-2)
+- [Introduction](#introduction-1)
   - [Function Learning and
     Extrapolation](#function-learning-and-extrapolation)
     - [Variability and Function
@@ -97,17 +96,26 @@ examples.
 
 Varied training has been shown to influence learning in wide array of
 different tasks and domains, including categorization (Hahn et al.,
-2005; Maddox & Filoteo, 2011; Nosofsky et al., 2019; Posner & Keele,
-1968), language learning (Jones & Brandt, 2020; Perry et al., 2010;
+2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al.,
+2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning
+(Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010;
 Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode
-et al., 2008), trajectory extrapolation (Fulvio et al., 2014), task
-switching (Sabah et al., 2019), associative learning (Lee et al., 2019),
-visual search (George & Egner, 2021; Gonzalez & Madhavan, 2011; T. A.
-Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019),
-simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et
-al., 2001; Willey & Liu, 2018a), sports training (Green et al., 1995;
-North et al., 2019), and training on a complex video game (Seow et al.,
-2019). See Czyż (2021) or Raviv et al. (2022) for more detailed reviews.
+et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et
+al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory
+extrapolation (Fulvio et al., 2014), cognitive control tasks
+(Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning
+(Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada &
+Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George &
+Egner, 2021; Gonzalez & Madhavan, 2011; T. A. Kelley & Yantis, 2009),
+voice identity learning (Lavan et al., 2019), face recognition (Burton
+et al., 2016; Honig et al., 2022; Menon et al., 2015), the perception of
+social group heterogeneity (Gershman & Cikara, 2023; Konovalova & Le
+Mens, 2020; Linville & Fischer, 1993; Park & Hastie, 1987) , simple
+motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al.,
+2001; Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green
+et al., 1995; North et al., 2019), and complex skill learning (Hacques
+et al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) or
+Raviv et al. (2022) for more detailed reviews.
 
 Research on the effects of varied training typically manipulates
 variability in one of two ways. In the first approach, a high
@@ -132,26 +140,26 @@ of how far away testing items are from the training items.
 
 The influence of training variation has received a large amount of
 attention in the domain of sensorimotor skill learning. Much of this
-research has been influenced by the work of (Schmidt (1975)), who
-proposed a schema-based account of motor learning as an attempt to
-address the longstanding problem of how novel movements are produced.
-Schema theory presumes that learners possess general motor programs for
-a class of movements (e.g. an underhand throw). When called up for use
-motor programs are parameterized by schema rules which determine how the
-motor program is parameterized or scaled to the particular demands of
-the current task. Schema theory predicts that variable training
-facilitates the formation of more robust schemas, which will result in
-improved generalization or transfer. Experiments that test this
-hypothesis are often designed to compare the transfer performance of a
-constant-trained group against that of a varied-trained group. Both
-groups train on the same task, but the varied group practices with
-multiple instances along some task-relevant dimension that remains
-invariant for the constant group. For example, studies using a
-projectile throwing task might assign participants to either constant
-training that practicing throwing from a single location, and a varied
-group that throws from multiple locations. Following training, both
-groups are then tested from novel throwing locations (Pacheco & Newell,
-2018; Pigott & Shapiro, 1984; Willey & Liu, 2018a; Wulf, 1991).
+research has been influenced by the work of Schmidt (1975), who proposed
+a schema-based account of motor learning as an attempt to address the
+longstanding problem of how novel movements are produced. Schema theory
+presumes that learners possess general motor programs for a class of
+movements (e.g. an underhand throw). When called up for use motor
+programs are parameterized by schema rules which determine how the motor
+program is parameterized or scaled to the particular demands of the
+current task. Schema theory predicts that variable training facilitates
+the formation of more robust schemas, which will result in improved
+generalization or transfer. Experiments that test this hypothesis are
+often designed to compare the transfer performance of a constant-trained
+group against that of a varied-trained group. Both groups train on the
+same task, but the varied group practices with multiple instances along
+some task-relevant dimension that remains invariant for the constant
+group. For example, studies using a projectile throwing task might
+assign participants to either constant training that practicing throwing
+from a single location, and a varied group that throws from multiple
+locations. Following training, both groups are then tested from novel
+throwing locations (Pacheco & Newell, 2018; Pigott & Shapiro, 1984;
+Willey & Liu, 2018a; Wulf, 1991).
 
 One of the earliest, and still often cited investigations of Schmidt’s
 benefits of variability hypothesis was the work of Kerr & Booth (1978).
@@ -356,23 +364,21 @@ evidence that participants were much more likely to categorize the novel
 middle stimulus into a category with greater variation.
 
 Further observations consonant with the results of A. L. Cohen et al.
-(2001) have since been observed in numerous investigations (Hahn et al.,
-2005; Hsu & Griffiths, 2010; Perlman et al., 2012; Sakamoto et al.,
-2008; but see Stewart & Chater, 2002). The results of Sakamoto et al.
-(2008) are noteworthy. They first reproduced the basic finding of
-participants being more likely to categorize an unknown middle stimulus
-into a training category with higher variability. In a second
-experiment, they held the variability between the two training
-categories constant and instead manipulated the training sequence, such
-that the examples of one category appeared in an ordered fashion, with
-very small changes from one example to the other (the stimuli were lines
-that varied only in length), whereas examples in the alternate category
-were shown in a random order and thus included larger jumps in the
-stimulus space from trial to trial. They found that the middle stimulus
-was more likely to be categorized into the category that had been
-learned with a random sequence, which was attributed to an increased
-perception of variability which resulted from the larger trial to trial
-discrepancies.
+(2001) have since been observed in numerous investigations L.-X. Yang &
+Wu (2014). The results of Sakamoto et al. (2008) are noteworthy. They
+first reproduced the basic finding of participants being more likely to
+categorize an unknown middle stimulus into a training category with
+higher variability. In a second experiment, they held the variability
+between the two training categories constant and instead manipulated the
+training sequence, such that the examples of one category appeared in an
+ordered fashion, with very small changes from one example to the other
+(the stimuli were lines that varied only in length), whereas examples in
+the alternate category were shown in a random order and thus included
+larger jumps in the stimulus space from trial to trial. They found that
+the middle stimulus was more likely to be categorized into the category
+that had been learned with a random sequence, which was attributed to an
+increased perception of variability which resulted from the larger trial
+to trial discrepancies.
 
 The work of Hahn et al. (2005), is also of particular interest to the
 present work. Their experimental design was similar to previous studies,
@@ -536,26 +542,6 @@ gradient, then a similarity-based model is sufficient to explain the
 observed benefits of variation. Our results therefore suggest that some
 variability benefits can be accommodated within instance-based models
 without positing the learning of some schemata or structure.
-
-# Introduction
-
-The past century of research on human learning has produced ample
-evidence that although learners can improve at almost any task, such
-improvements are often specific to the trained task, with unreliable or
-even nonexistent transfer to novel tasks or conditions (Barnett & Ceci,
-2002; Detterman, 1993). Such transfer challenges are of noteworthy
-practical relevance, given that educators, trainers, and rehabilitators
-typically intend for their students to be able to apply what they have
-learned to new situations. It is therefore important to better
-understand the factors that influence transfer, and to develop cognitive
-models that can predict when transfer is likely to occur. The factor of
-interest to the present investigation is variation during training. Our
-experiments add to the longstanding empirical investigation of the
-controversial relationship between training variation, and subsequent
-transfer. We also offer a novel explanation for such results in the form
-of an instance-based model that accounts for the benefits of variation
-in simple terms of psychological similarity. We first review the
-relevant concepts and literature.
 
 ## Similarity and instance-based approaches to transfer of learning
 
@@ -1427,7 +1413,7 @@ certain aspects of learning and generalization may operate under common
 principles across different tasks and domains (Censor et al., 2012;
 Hills et al., 2010; Jamieson et al., 2022; Law & Gold, 2010; Roark et
 al., 2021; Rosenbaum et al., 2001; Vigo et al., 2018; Wall et al., 2021;
-Wu et al., 2020; Yang et al., 2020).
+Wu et al., 2020; J. Yang et al., 2020).
 
 Our modelling approach does differ from category learning
 implementations of instance-based models in several ways. One such
@@ -4348,6 +4334,15 @@ replication. *Journal of Memory and Language*, *126*, 104352.
 
 </div>
 
+<div id="ref-breslinConstantVariablePractice2012" class="csl-entry">
+
+Breslin, G., Hodges, N. J., Steenson, A., & Williams, A. M. (2012).
+Constant or variable practice: Recreating the especial skill effect.
+*Acta Psychologica*, *140*(2), 154–157.
+<https://doi.org/10.1016/j.actpsy.2012.04.002>
+
+</div>
+
 <div id="ref-briscoeConceptualComplexityBias2011" class="csl-entry">
 
 Briscoe, E., & Feldman, J. (2011). Conceptual complexity and the
@@ -4378,6 +4373,16 @@ training. *Applied Cognitive Psychology*, *25*(5), 682–691.
 Bürkner, P.-C. (2017). Brms: An R Package for Bayesian Multilevel Models
 Using Stan. *Journal of Statistical Software*, *80*, 1–28.
 <https://doi.org/10.18637/jss.v080.i01>
+
+</div>
+
+<div id="ref-burtonIdentityVariationRepresentations2016"
+class="csl-entry">
+
+Burton, A. M., Kramer, R. S. S., Ritchie, K. L., & Jenkins, R. (2016).
+Identity From Variation: Representations of Faces Derived From Multiple
+Instances. *Cognitive Science*, *40*(1), 202–223.
+<https://doi.org/10.1111/cogs.12231>
 
 </div>
 
@@ -4566,6 +4571,16 @@ Press.
 
 </div>
 
+<div id="ref-fanStimulusDiversityIncreases2022" class="csl-entry">
+
+Fan, M., Zhang, D., Zhao, S., Xie, Q., Chen, W., Jie, J., Wang, Y., &
+Zheng, X. (2022). Stimulus diversity increases category-based fear
+generalization and the effect of intolerance of uncertainty. *Behaviour
+Research and Therapy*, *159*, 104201.
+<https://doi.org/10.1016/j.brat.2022.104201>
+
+</div>
+
 <div id="ref-farrellComputationalModelingCognition2018"
 class="csl-entry">
 
@@ -4606,6 +4621,14 @@ field approximation. *Proceedings of the National Academy of Sciences*,
 George, N., & Egner, T. (2021). Stimulus variability and task relevance
 modulate binding-learning. *Attention, Perception, & Psychophysics*.
 <https://doi.org/10.3758/s13414-021-02338-6>
+
+</div>
+
+<div id="ref-gershmanStructureLearningPrinciples2023" class="csl-entry">
+
+Gershman, S. J., & Cikara, M. (2023). Structure learning principles of
+stereotype change. *Psychonomic Bulletin & Review*, *30*(4), 1273–1293.
+<https://doi.org/10.3758/s13423-023-02252-y>
 
 </div>
 
@@ -4673,6 +4696,15 @@ equations. *European Journal of Psychology of Education*, *29*(1),
 
 </div>
 
+<div id="ref-hacquesVisualControlClimbing2022" class="csl-entry">
+
+Hacques, G., Dicks, M., Komar, J., & Seifert, L. (2022). Visual control
+during climbing: Variability in practice fosters a proactive gaze
+pattern. *PLOS ONE*, *17*(6), e0269794.
+<https://doi.org/10.1371/journal.pone.0269794>
+
+</div>
+
 <div id="ref-hahnEffectsCategoryDiversity2005" class="csl-entry">
 
 Hahn, U., Bailey, T. M., & Elvin, L. B. C. (2005). Effects of category
@@ -4715,6 +4747,15 @@ Stimulus-Response Episodes. *Visual Cognition*, *5*(1-2), 183–216.
 
 </div>
 
+<div id="ref-honigPerceptualSimilarityModulates2022" class="csl-entry">
+
+Honig, T., Shoham, A., & Yovel, G. (2022). Perceptual similarity
+modulates effects of learning from variability on face recognition.
+*Vision Research*, *201*, 108128.
+<https://doi.org/10.1016/j.visres.2022.108128>
+
+</div>
+
 <div id="ref-hoschPriorExperienceVariability2023" class="csl-entry">
 
 Hosch, A.-K., Wirtz, P., & von Helversen, B. (2023). Prior Experience of
@@ -4737,6 +4778,16 @@ Conference of the Cognitive Science Society*, 7.
 Hu, M., & Nosofsky, R. M. (2024). High-variability training does not
 enhance generalization in the prototype-distortion paradigm. *Memory &
 Cognition*, 1–16. <https://doi.org/10.3758/s13421-023-01516-1>
+
+</div>
+
+<div id="ref-huetEducationAttentionExplanation2011" class="csl-entry">
+
+Huet, M., Jacobs, D. M., Camachon, C., Missenard, O., Gray, R., &
+Montagne, G. (2011). The education of attention as explanation of
+variability of practice effects: Learning the final approach phase in a
+flight simulator. *Journal of Experimental Psychology: Human Perception
+and Performance*, *37*(6), 1841–1854. <https://doi.org/10.1037/a0024386>
 
 </div>
 
@@ -4826,6 +4877,15 @@ Psychology: Learning, Memory, and Cognition*, *17*(5), 811.
 
 </div>
 
+<div id="ref-konovalovaInformationSamplingExplanation2020"
+class="csl-entry">
+
+Konovalova, E., & Le Mens, G. (2020). An information sampling
+explanation for the in-group heterogeneity effect. *Psychological
+Review*, *127*(1), 47–73. <https://doi.org/10.1037/rev0000160>
+
+</div>
+
 <div id="ref-kruschkeALCOVEExemplarbasedConnectionist1992"
 class="csl-entry">
 
@@ -4887,6 +4947,23 @@ Experimental Psychology*, *72*(11), 2647–2657.
 
 </div>
 
+<div id="ref-linvilleExemplarAbstractionModels1993" class="csl-entry">
+
+Linville, P. W., & Fischer, G. W. (1993). Exemplar and Abstraction
+Models of Perceived Group Variability and Stereotypicality. *Social
+Cognition*, *11*(1), 92–125. <https://doi.org/10.1521/soco.1993.11.1.92>
+
+</div>
+
+<div id="ref-liveseyRevisitingPeakShift2019" class="csl-entry">
+
+Livesey, E. J., & McLaren, I. P. (2019). Revisiting peak shift on an
+artificial dimension: Effects of stimulus variability on generalisation.
+*Quarterly Journal of Experimental Psychology*, *72*(2), 132–150.
+<https://doi.org/10.1177/1747021817739832>
+
+</div>
+
 <div id="ref-loganInstanceTheoryAutomatization1988" class="csl-entry">
 
 Logan, G. D. (1988). Toward an instance theory of automatization.
@@ -4900,6 +4977,16 @@ Logan, G. D. (1988). Toward an instance theory of automatization.
 Logan, G. D. (2002). An instance theory of attention and memory.
 *Psychological Review*, *109*(2), 376–400.
 <https://doi.org/10.1037/0033-295X.109.2.376>
+
+</div>
+
+<div id="ref-lovibondStimulusDiscriminabilityInduction2020"
+class="csl-entry">
+
+Lovibond, P. F., Lee, J. C., & Hayes, B. K. (2020). Stimulus
+discriminability and induction as independent components of
+generalization. *Journal of Experimental Psychology: Learning, Memory,
+and Cognition*, *46*(6), 1106–1120. <https://doi.org/10.1037/xlm0000779>
 
 </div>
 
@@ -4919,6 +5006,15 @@ Makowski, D., Ben-Shachar, M. S., & Lüdecke, D. (2019).
 Uncertainty, Existence and Significance within the Bayesian Framework.
 *Journal of Open Source Software*, *4*(40), 1541.
 <https://doi.org/10.21105/joss.01541>
+
+</div>
+
+<div id="ref-manentiVariabilityTrainingUnlocks2023" class="csl-entry">
+
+Manenti, G. L., Dizaji, A. S., & Schwiedrzik, C. M. (2023). Variability
+in training unlocks generalization in visual perceptual learning through
+invariant representations. *Current Biology*, *33*(5), 817–826.e3.
+<https://doi.org/10.1016/j.cub.2023.01.011>
 
 </div>
 
@@ -4973,6 +5069,33 @@ Nokes-Malach, T. (2018). What memory representation is acquired during
 nonword speech production learning? The influence of stimulus features
 and training modality on nonword encoding. *Cogent Psychology*, *5*(1),
 1493714. <https://doi.org/10.1080/23311908.2018.1493714>
+
+</div>
+
+<div id="ref-menonVariationPhotosSame2015" class="csl-entry">
+
+Menon, N., White, D., & Kemp, R. I. (2015). Variation in Photos of the
+Same Face Drives Improvements in Identity Verification. *Perception*,
+*44*(11), 1332–1341. <https://doi.org/10.1177/0301006615599902>
+
+</div>
+
+<div id="ref-morgensternOneshotCategorizationNovel2019"
+class="csl-entry">
+
+Morgenstern, Y., Schmidt, F., & Fleming, R. W. (2019). One-shot
+categorization of novel object classes in humans. *Vision Research*,
+*165*, 98–108. <https://doi.org/10.1016/j.visres.2019.09.005>
+
+</div>
+
+<div id="ref-moshon-cohenStimulusVariabilityImproves2024"
+class="csl-entry">
+
+Moshon-Cohen, T. E., Weinbach, N., & Bitan, T. (2024). Stimulus
+variability improves generalization following response inhibition
+training. *Psychological Research*, 1–17.
+<https://doi.org/10.1007/s00426-023-01913-w>
 
 </div>
 
@@ -5085,6 +5208,15 @@ Memory*, *23*(2), 324–354.
 
 </div>
 
+<div id="ref-parkPerceptionVariabilityCategory1987" class="csl-entry">
+
+Park, B., & Hastie, R. (1987). Perception of variability in category
+development: <span class="nocase">Instance-versus</span>
+abstraction-based stereotypes. *Journal of Personality and Social
+Psychology*, *53*(4), 621.
+
+</div>
+
 <div id="ref-perlmanFurtherAttemptsClarify2012" class="csl-entry">
 
 Perlman, A., Hahn, U., Edwards, D. J., & Pothos, E. M. (2012). Further
@@ -5111,6 +5243,15 @@ the Variability Session. *Research Quarterly for Exercise and Sport*,
 
 </div>
 
+<div id="ref-plebanekEffectsFrequencyVariability2021" class="csl-entry">
+
+Plebanek, D. J., & James, K. H. (2021). The Effects of Frequency,
+Variability, and <span class="nocase">Co-occurrence</span> on Category
+Formation in Neural Systems. *Journal of Cognitive Neuroscience*, 1–16.
+<https://doi.org/10.1162/jocn_a_01738>
+
+</div>
+
 <div id="ref-poldrackRelationshipSkillLearning1999" class="csl-entry">
 
 Poldrack, R. A., Selco, S. L., Field, J. E., & Cohen, N. J. (1999). The
@@ -5129,11 +5270,29 @@ Posner, M. I., & Keele, S. W. (1968). On the genesis of abstract ideas.
 
 </div>
 
+<div id="ref-pradaExperiencedCategoryVariability2020" class="csl-entry">
+
+Prada, M., & Garcia-Marques, T. (2020). Experienced category variability
+modulates the impact of context on evaluative judgments. *Experimental
+Psychology*, *67*(1), 5–13. <https://doi.org/10.1027/1618-3169/a000469>
+
+</div>
+
 <div id="ref-ravivHowVariabilityShapes2022" class="csl-entry">
 
 Raviv, L., Lupyan, G., & Green, S. C. (2022). How variability shapes
 learning and generalization. *Trends in Cognitive Sciences*,
 S1364661322000651. <https://doi.org/10.1016/j.tics.2022.03.007>
+
+</div>
+
+<div id="ref-reichmannVariabilityAbstractionEvaluative2023"
+class="csl-entry">
+
+Reichmann, K., Hütter, M., Kaup, B., & Ramscar, M. (2023). Variability
+and abstraction in evaluative conditioning: Consequences for the
+generalization of likes and dislikes. *Journal of Experimental Social
+Psychology*, *108*, 104478. <https://doi.org/10.1016/j.jesp.2023.104478>
 
 </div>
 
@@ -5143,6 +5302,15 @@ Roark, C. L., Paulon, G., Sarkar, A., & Chandrasekaran, B. (2021).
 Comparing perceptual category learning across modalities in the same
 individuals. *Psychonomic Bulletin & Review*, *28*(3), 898–909.
 <https://doi.org/10.3758/s13423-021-01878-0>
+
+</div>
+
+<div id="ref-robsonSpecificVariedPractice2022a" class="csl-entry">
+
+Robson, S. G., Tangen, J. M., & Searston, R. A. (2022). Specific versus
+varied practice in perceptual expertise training. *Journal of
+Experimental Psychology: Human Perception and Performance*, *48*(12),
+1336–1346. <https://doi.org/10.1037/xhp0001057>
 
 </div>
 
@@ -5487,6 +5655,14 @@ Yang, J., Yan, F.-F., Chen, L., Xi, J., Fan, S., Zhang, P., Lu, Z.-L., &
 Huang, C.-B. (2020). General learning ability in perceptual learning.
 *Proceedings of the National Academy of Sciences*, *117*(32),
 19092–19100. <https://doi.org/10.1073/pnas.2002903117>
+
+</div>
+
+<div id="ref-yangCategoryVariabilityEffect2014" class="csl-entry">
+
+Yang, L.-X., & Wu, Y.-H. (2014). Category variability effect in category
+learning with auditory stimuli. *Frontiers in Psychology*, *5*.
+<https://doi.org/10.3389/fpsyg.2014.01122>
 
 </div>
 
