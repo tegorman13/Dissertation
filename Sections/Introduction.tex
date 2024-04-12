@@ -1,0 +1,818 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  12pt,
+  letterpaper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+  \setmainfont[Numbers=Proportional,Numbers=OldStyle]{Linux Libertine O}
+  \setmathfont[]{Libertinus Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{xcolor}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+% -----------------------
+% CUSTOM PREAMBLE STUFF
+% -----------------------
+
+% -----------------
+% Typography tweaks
+% -----------------
+% Indent size
+\setlength{\parindent}{0.5in}
+\setlength{\leftmargin}{0.5in}
+
+% Fix widows and orphans
+\usepackage[all,defaultlines=2]{nowidow}
+
+% List things
+\usepackage{enumitem}
+% Same document-level indentation for ordered and ordered lists
+\setlist[1]{labelindent=\parindent}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+% Wrap definition list terms
+% https://tex.stackexchange.com/a/9763/11851
+\setlist[description]{style=unboxed}
+
+
+% For better TOCs
+\usepackage{tocloft}
+
+% Remove left margin in lists inside longtables
+% https://tex.stackexchange.com/a/378190/11851
+\AtBeginEnvironment{longtable}{\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-\baselineskip}, after=\vspace*{-\baselineskip}}}
+
+% For fancy ORCID links
+\usepackage{orcidlink}
+
+% Indent all first paragraphs because APA wants that
+\usepackage{indentfirst}
+
+
+% -----------------
+% Title block stuff
+% -----------------
+
+% Abstract
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\abstracttextfont}{\normalsize}
+\setlength{\absleftindent}{\parindent}
+\setlength{\absrightindent}{\parindent}
+
+
+% Keywords
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}}#1}
+  
+% Title
+\usepackage{titling}
+\setlength{\droptitle}{2\baselineskip}
+\pretitle{\begin{center}\normalfont\normalsize\bfseries}
+\posttitle{\par\end{center}\vspace{2\baselineskip}}
+
+
+% ------------------
+% Section headings
+% ------------------
+\usepackage{titlesec}
+\titleformat*{\section}{\center\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries\itshape}
+\titleformat{\paragraph}[runin]{\bfseries}{\theparagraph.}{3pt}{\space}[.]
+\titleformat{\subparagraph}[runin]{\bfseries\itshape}{\thesubparagraph.}{3pt}{\space}[.]
+
+% \titlespacing{<command>}{<left>}{<before-sep>}{<after-sep>}
+% Starred version removes indentation in following paragraph
+\titlespacing*{\section}{0em}{2em}{0em}
+\titlespacing*{\subsection}{0em}{1em}{0em}
+\titlespacing*{\subsubsection}{0em}{0em}{0em}
+\titlespacing*{\paragraph}{\parindent}{1ex}{1em}
+\titlespacing*{\subparagraph}{\parindent}{1ex}{1em}
+
+
+% -----------
+% Footnotes
+% -----------
+% NB: footmisc has to come after biblatex because of conflicts
+\usepackage[bottom]{footmisc}
+\renewcommand*{\footnotelayout}{\footnotesize}
+
+\addtolength{\skip\footins}{12pt}  % vertical space between rule and main text
+\setlength{\footnotesep}{16pt}  % vertical space between footnotes
+
+
+% ----------
+% Captions
+% ----------
+\usepackage[font=normalsize]{caption}
+
+
+% ---------------------------
+% END CUSTOM PREAMBLE STUFF
+% ---------------------------
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Introduction},
+  colorlinks=true,
+  linkcolor={DarkSlateBlue},
+  filecolor={Maroon},
+  citecolor={DarkSlateBlue},
+  urlcolor={DarkSlateBlue},
+  pdfcreator={LaTeX via pandoc}}
+
+% -----------------------
+% END-OF-PREAMBLE STUFF
+% -----------------------
+
+% For patching commands like \subtitle
+\usepackage{etoolbox}
+
+% -----------------
+% Running headers
+% -----------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{0.25in}
+\renewcommand{\headrulewidth}{0pt}  % Remove lines
+\renewcommand{\footrulewidth}{0pt}
+
+% SHORT TITLE           Page #
+\fancypagestyle{normal}{
+  \fancyhf{}
+  \lhead{\uppercase{ Introduction }}
+  \rhead{\thepage}
+}
+
+% Running head: SHORT TITLE        Page #
+\fancypagestyle{title}{
+  \fancyhf{}
+  \lhead{Running head: \uppercase{ Introduction }}
+  \rhead{}
+}
+
+% Use regular heading style
+\pagestyle{normal}
+
+
+
+% ----------
+% BibLaTeX
+% ----------
+\usepackage[style=apa,backend=biber]{biblatex}
+
+\setlength\bibitemsep{0pt}  % No space between bib entries
+\setlength\bibhang{\parindent}  % Match document indentation
+
+% Fix biblatex's odd preference for using In: by default.
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{}\intitlepunct}}}
+
+\addbibresource{../Assets/Bib/Dissertation.bib}
+
+% Start bibliography on new page
+\pretocmd{\printbibliography}{\clearpage}{}{}
+
+% ---------------------- 
+% Title block elements
+% ---------------------- 
+\usepackage{authblk}
+\renewcommand*{\Authsep}{, }
+\renewcommand*{\Authand}{ and }
+\renewcommand*{\Authands}{, and }
+\renewcommand*{\Affilfont}{\normalsize}
+\renewcommand*{\Authfont}{\normalsize}
+
+\title{Introduction}
+
+
+
+
+\date{}
+
+
+% Typeset URLs in the same font as their parent environment
+%
+% This has to come at the end of the preamble, after any biblatex stuff because 
+% some biblatex styles (like APA) define their own \urlstyle{}
+\usepackage{url}
+\urlstyle{same}
+
+% ---------------------------
+% END END-OF-PREAMBLE STUFF
+% ---------------------------
+\begin{document}
+% ---------------
+% TITLE SECTION
+% ---------------
+
+\begin{titlepage}
+\center
+
+% Don't include a newpage before \maketitle
+{\let\newpage\relax\maketitle}
+
+% Needs to come after \maketitle
+\thispagestyle{title}
+
+\vspace{0.25in}
+
+
+\vspace{0.5in}
+
+\begin{center}
+
+\textbf{Author note}
+
+
+\end{center}
+
+
+
+
+\vfill  % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\doublespacing
+
+
+\begin{center}
+\singlespacing
+\textbf{Introduction}
+\end{center}
+
+
+% -------------------
+% END TITLE SECTION
+% -------------------
+
+
+\setstretch{2}
+\section{Introduction}\label{introduction}
+
+The past century of research on human learning has produced ample
+evidence that although learners can improve at almost any task, such
+improvements are often specific to the trained task, with unreliable or
+even nonexistent transfer or generalization to novel tasks or conditions
+\autocite{barnettWhenWhereWe2002,dettermanCaseProsecutionTransfer1993}.
+Such generalization challenges are of noteworthy practical relevance,
+given that educators, trainers, and rehabilitators typically intend for
+their students to be able to apply what they have learned to new
+situations. It is therefore important to better understand the factors
+that influence generalization, and to develop cognitive models that can
+predict when generalization is likely to occur. Such characteristics
+have included training difficulty, spacing, temporal order, feedback
+schedules, and the primary focus of the current work - the variability
+of training examples.
+
+\subsection{The study of variability}\label{the-study-of-variability}
+
+Varied training has been shown to influence learning in wide array of
+different tasks and domains, including categorization
+\autocite{hahnEffectsCategoryDiversity2005,maddoxStimulusRangeDiscontinuity2011,posnerGenesisAbstractIdeas1968,nosofskyModelguidedSearchOptimal2019,morgensternOneshotCategorizationNovel2019,plebanekEffectsFrequencyVariability2021},
+language learning
+\autocite{jonesDensityDistinctivenessEarly2020,perryLearnLocallyThink2010,twomeyAllRightNoises2018,wonnacottInputEffectsAcquisition2012,brekelmansDoesHighVariability2022},
+anagram completion \autocite{goodeSuperiorityVariableRepeated2008},
+perceptual learning
+\autocite{manentiVariabilityTrainingUnlocks2023,lovibondStimulusDiscriminabilityInduction2020,robsonSpecificVariedPractice2022a,zamanPerceptualVariabilityImplications2021},
+trajectory extrapolation
+\autocite{fulvioTaskSpecificResponseStrategy2014}, cognitive control
+tasks
+\autocite{sabahWhenLessMore2019,moshon-cohenStimulusVariabilityImproves2024},
+associative learning
+\autocite{leeEvidentialDiversityIncreases2019,reichmannVariabilityAbstractionEvaluative2023,fanStimulusDiversityIncreases2022,pradaExperiencedCategoryVariability2020,liveseyRevisitingPeakShift2019},
+visual search
+\autocite{georgeStimulusVariabilityTask2021,gonzalezDiversityTrainingEnhances2011,kelleyLearningAttendEffects2009},
+voice identity learning \autocite{lavanEffectsHighVariability2019}, face
+recognition
+\autocite{honigPerceptualSimilarityModulates2022,burtonIdentityVariationRepresentations2016,menonVariationPhotosSame2015},
+the perception of social group heterogeneity
+\autocite{linvilleExemplarAbstractionModels1993,konovalovaInformationSamplingExplanation2020,parkPerceptionVariabilityCategory1987,gershmanStructureLearningPrinciples2023}
+, simple motor learning
+\autocite{braunMotorTaskVariation2009,kerrSpecificVariedPractice1978,rollerVariablePracticeLenses2001,willeyLimitedGeneralizationVaried2018},
+sports training
+\autocite{greenPracticeVariabilityTransfer1995a,northEffectConsistentVaried2019,breslinConstantVariablePractice2012},
+and complex skill learning
+\autocite{seowTransferEffectsVaried2019,huetEducationAttentionExplanation2011,hacquesVisualControlClimbing2022}.
+See \textcite{czyzVariabilityPracticeInformation2021} or
+\textcite{ravivHowVariabilityShapes2022} for more detailed reviews.
+
+Research on the effects of varied training typically manipulates
+variability in one of two ways. In the first approach, a high
+variability group is exposed to a greater number of unique instances
+during training, while a low variability group receives fewer unique
+instances with more repetitions. Alternatively, both groups may receive
+the same number of unique instances, but the high variability group's
+instances are more widely distributed or spread out in the relevant
+psychological space, while the low variability group's instances are
+clustered more tightly together. Researchers then compare the training
+groups in terms of their performance during the training phase, as well
+as their generalization performance during a testing phase. Researchers
+will usually compare the performance of the two groups during both the
+training phase and a subsequent testing phase. The primary theoretical
+interest is often to assess the influence of training variability on
+generalization to novel testing items or conditions. However, the test
+may also include some or all of the items that were used during the
+training stage, allowing for an assessment of whether the variability
+manipulation influenced the learning of the trained items themselves, or
+to make it easy to measure how much performance degrades as a function
+of how far away testing items are from the training items.
+
+The influence of training variation has received a large amount of
+attention in the domain of sensorimotor skill learning. Much of this
+research has been influenced by the work of
+\textcite{schmidtSchemaTheoryDiscrete1975}, who proposed a schema-based
+account of motor learning as an attempt to address the longstanding
+problem of how novel movements are produced. Schema theory presumes that
+learners possess general motor programs for a class of movements
+(e.g.~an underhand throw). When called up for use motor programs are
+parameterized by schema rules which determine how the motor program is
+parameterized or scaled to the particular demands of the current task.
+Schema theory predicts that variable training facilitates the formation
+of more robust schemas, which will result in improved generalization or
+transfer. Experiments that test this hypothesis are often designed to
+compare the transfer performance of a constant-trained group against
+that of a varied-trained group. Both groups train on the same task, but
+the varied group practices with multiple instances along some
+task-relevant dimension that remains invariant for the constant group.
+For example, studies using a projectile throwing task might assign
+participants to either constant training that practicing throwing from a
+single location, and a varied group that throws from multiple locations.
+Following training, both groups are then tested from novel throwing
+locations
+\autocite{pigottMotorSchemaStructure1984,willeyLimitedGeneralizationVaried2018,pachecoLearningSpecificIndividual2018,wulfEffectTypePractice1991}.
+
+One of the earliest, and still often cited investigations of Schmidt's
+benefits of variability hypothesis was the work of
+\textcite{kerrSpecificVariedPractice1978}. Two groups of children, aged
+8 and 12, were assigned to either constant or varied training of a bean
+bag throwing task. The constant group practiced throwing a bean-bag at a
+small target placed 3 feet in front of them, and the varied group
+practiced throwing from a distance of both 2 feet and 4 feet.
+Participants were blindfolded and unable to see the target while making
+each throw but would receive feedback by looking at where the beanbag
+had landed in between each training trial. 12 weeks later, all of the
+children were given a final test from a distance of 3 feet which was
+novel for the varied participants and repeated for the constant
+participants. Participants were also blindfolded for testing and did not
+receive trial by trial feedback in this stage. In both age groups,
+participants performed significantly better in the varied condition than
+the constant condition, though the effect was larger for the younger,
+8-year-old children. This result offers a particularly compelling
+example of the merits of varied practice, given that the varied group
+was able to outperform the constant group even from the home turf
+location where one may have expected the constatn group to have the
+strongest advantage. A similar pattern of results was observed in
+another study wherein varied participants trained with tennis, squash,
+badminton, and short-tennis rackets were compared against constant
+subjects trained with only a tennis racket
+\autocite{greenPracticeVariabilityTransfer1995a}. One of the testing
+conditions had subjects repeat the use of the tennis racket, which had
+been used on all 128 training trials for the constant group, and only 32
+training trials for the varied group. Nevertheless, the varied group
+outperformed the constant group when using the tennis racket at testing,
+and also performed better in conditions with several novel racket
+lengths. However, as is the case with many of the patterns commonly
+observed in the ``benefits of variability'' literature, the pattern
+wherein the varied group outperfroms the constant group even from the
+constants group's home turf has not been consistently replicated. One
+recent study attempted a near replication of the Kerr \& Booth study
+\autocite{willeyLongtermMotorLearning2018}, having subjects throw
+beanbags at a target, with the varied group training from positions (5
+and 9 feet) on either side of the constant group (7 feet). This study
+did not find a varied advantage from the constant training position,
+though the varied group did perform better at distances novel to both
+groups. However, this study diverged from the original in that the
+participants were adults; and the amount of training was much greater
+(20 sessions with 60 practice trials each, spread out over 5-7 weeks).
+
+Pitting varied against constant practice against each other on the home
+turf of the constant group provides a compelling argument for the
+benefits of varied training, as well as an interesting challenge for
+theoretical accounts that posit generalization to occur as some function
+of distance. However, despite its appeal this particular contrast is
+relatively uncommon in the literature. It is unclear whether this may be
+cause for concern over publication bias, or just researchers feeling the
+design is too risky. A far more common design is to have separate
+constant groups that each train exclusively from each of the conditions
+that the varied group encounters
+\autocite{catalanoDistantTransferCoincident1984a,chuaPracticeVariabilityPromotes2019,newellVariabilityPracticeTransfer1976,moxleySchemaVariabilityPractice1979,mccrackenTestSchemaTheory1977},
+or for a single constant group to train from just one of the conditions
+experienced by the varied participants
+\autocite{pigottMotorSchemaStructure1984,rollerVariablePracticeLenses2001,wrisbergTrainingProductionNovel1984,wrisbergDevelopingCoincidentTiming1983}.
+A less common contrast places the constant group training in a region of
+the task space outside of the range of examples experienced by the
+varied group, but distinct from the transfer condition
+\autocite{wrisbergVariabilityPracticeHypothesis1987,wulfVariabilityPracticeImplicit1997}.
+Of particular relevance to the current work is the early study of
+\textcite{catalanoDistantTransferCoincident1984a}, as theirs was one of
+the earliest studies to investigate the influence of varied vs.~constant
+training on multiple testing locations of graded distance from the
+training condition. Participants were trained on coincident timing task,
+in which subjects observe a series of lightbulbs turning on sequentially
+at a consistent rate and attempt to time a button response with the
+onset of the final bulb. The constant groups trained with a single
+velocity of either 5,7,9, or 11 mph, while the varied group trained from
+all 4 of these velocities. Participants were then assigned to one of
+four possible generalization conditions, all of which fell outside of
+the range of the varied training conditions -- 1, 3, 13 or 15 mph. As is
+often the case, the varied group performed worse during the training
+phase. In the testing phase, the general pattern was for all
+participants to perform worse as the testing conditions became further
+away from the training conditions, but since the drop off in performance
+as a function of distance was far less steep for the varied group, the
+authors suggested that varied training induced a decremented
+generalization gradient, such that the varied participants were less
+affected by the change between training and testing conditions.
+
+Benefits of varied training have also been observed in many studies
+outside of the sensorimotor domain.
+\textcite{goodeSuperiorityVariableRepeated2008} trained participants to
+solve anagrams of 40 different words ranging in length from 5 to 11
+letters, with an anagram of each word repeated 3 times throughout
+training, for a total of 120 training trials. Although subjects in all
+conditions were exposed to the same 40 unique words (i.e.~the solution
+to an anagram), participants in the varied group saw 3 different
+arrangements for each solution-word, such as DOLOF, FOLOD, and OOFLD for
+the solution word FLOOD, whereas constant subjects would train on three
+repetitions of LDOOF (spread evenly across training). Two different
+constant groups were used. Both constant groups trained with three
+repetitions of the same word scramble, but for constant group A, the
+testing phase consisted of the identical letter arrangement to that seen
+during training (e.g.~LDOOF), whereas for constant group B, the testing
+phase consisted of a arrangement they had not seen during training, thus
+presenting them with a testing situation similar situation to the varied
+group. At the testing stage, the varied group outperformed both constant
+groups, a particularly impressive result, given that constant group A
+had 3 prior exposures to the word arrangement (i.e.~the particular
+permutation of letters) which the varied group had not explicitly seen.
+However varied subjects in this study did not exhibit the typical
+decrement in the training phase typical of other varied manipulations in
+the literature, and actually achieved higher levels of anagram solving
+accuracy by the end of training than either of the constant groups --
+solving 2 more anagrams on average than the constant group. This might
+suggest that for tasks of this nature where the learner can simply get
+stuck with a particular word scramble, repeated exposure to the
+identical scramble might be less helpful towards finding the solution
+than being given a different arrangement of the same letters. This
+contention is supported by the fact that constant group A, who was
+tested on the identical arrangement as they experienced during training,
+performed no better at testing than did constant group B, who had
+trained on a different arrangement of the same word solution -- further
+suggesting that there may not have been a strong identity advantage in
+this task.
+
+In the domain of category learning, the constant vs.~varied comparison
+is much less suitable. Instead, researchers will typically employ
+designs where all training groups encounter numerous stimuli, but one
+group experiences a greater number of unique exemplars
+\autocite{wahlheimMetacognitiveJudgmentsRepetition2012,nosofskyModelguidedSearchOptimal2019,doyleMetacognitiveMonitoringCategory2016,hoschPriorExperienceVariability2023,brunsteinPreparingNoveltyDiverse2011},
+or designs where the number of unique training exemplars is held
+constant, but one group trains with items that are more dispersed, or
+spread out across the category space
+\autocite{posnerGenesisAbstractIdeas1968,homaCategoryBreadthAbstraction1976,huHighvariabilityTrainingDoes2024,bowmanTrainingSetCoherence2020,maddoxStimulusRangeDiscontinuity2011}.
+
+Much of the earlier work in this sub-area trained subjects on artificial
+categories, such as dot patterns
+\autocite{homaCategoryBreadthAbstraction1976,posnerGenesisAbstractIdeas1968}.
+A seminal study by \textcite{posnerGenesisAbstractIdeas1968} trained
+participants to categorize artificial dot patterns, manipulating whether
+learners were trained with low variability examples clustered close to
+the category prototypes (i.e.~low distortion training patterns), or
+higher-variability patterns spread further away from the prototype
+(i.e.~high-distortion patterns). Participants that received training on
+more highly-distorted items showed superior generalization to novel high
+distortion patterns in the subsequent testing phase. It should be noted
+that unlike the sensorimotor studies discussed earlier, the
+\textcite{posnerGenesisAbstractIdeas1968} study did not present
+low-varied and high-varied participants with an equal number of training
+rathers, but instead had participants remain in the training stage of
+the experiment until they reached a criterion level of performance. This
+train-until-criterion procedure led to the high-variability condition
+participants tending to complete a larger number of training trials
+before switching to the testing stage. More recent work
+\autocite{huHighvariabilityTrainingDoes2024}, also used dot pattern
+categories, but matched the number of training trials across conditions.
+Under this procedure, higher-variability participants tended to reach
+lower levels of performance by the end of the training stage. The
+results in the testing phase were the opposite of
+\textcite{posnerGenesisAbstractIdeas1968}, with the low-variability
+training group showing superior generalization to novel high-distortion
+patterns (as well as generalization to novel patterns of low or medium
+distortion levels). However, whether this discrepancy is solely a result
+of the different training procedures is unclear, as the studies also
+differed in the nature of the prototype patterns used.
+\textcite{posnerGenesisAbstractIdeas1968} utilized simpler, recognizable
+prototypes (e.g., a triangle, the letter M, the letter F), while
+\textcite{huHighvariabilityTrainingDoes2024} employed random prototype
+patterns.
+
+Recent studies have also begun utilizing more complex or realistic
+sitmuli when assessing the influence of variability on category
+learning. \textcite{wahlheimMetacognitiveJudgmentsRepetition2012}
+conducted one such study. In a within-participants design, participants
+were trained on bird categories with either high repetitions of a few
+exemplars, or few repetitions of many exemplars. Across four different
+experiments, which were conducted to address an unrelated question on
+metacognitive judgements, the researchers consistently found that
+participants generalized better to novel species following training with
+more unique exemplars (i.e.~higher variability), while high repetition
+training produced significantly better performance categorizing the
+specific species they had trained on. A variability advantage was also
+found in the relatively complex domain of rock categorization
+\autocite{nosofskyModelguidedSearchOptimal2019}. For 10 different rock
+categories, participants were trained with either many repetitions of 3
+unique examples of each category, or few repetitions of 9 unique
+examples, with an equal number of total training trials in each group
+(the design also included 2 other conditions less amenable to
+considering the impact of variation). The high-variability group,
+trained with 9 unique examples, showed significantly better
+generalization performance than the other conditions.
+
+A distinct sub-literature within the category learning domain has
+examined how the variability or dispersion of the categories themselves
+influences generalization to ambiguous regions of the category space
+(e.g.~the region between the two categories). The general approach is to
+train participants with examples from a high variability category and a
+low variability category. Participants are then tested with novel items
+located within ambiguous regions of the category space which allow the
+experimenters to assess whether the difference in category variability
+influenced how far participants generalize the category boundaries.
+\textcite{cohenCategoryVariabilityExemplar2001} trained subjects on two
+categories, one with much more variability than the other. In experiment
+1, a low variability category composed of 1 instance was compared
+against a high-variability category of 2 instances in one condition, and
+7 instances in another. In experiment 2 both categories were composed of
+3 instances, but for the low-variability group the instances were
+clustered close to each other, whereas the high-variability groups
+instances were spread much further apart. Participants were tested on an
+ambiguous novel instance that was located in between the two trained
+categories. Both experiments provided evidence that participants were
+much more likely to categorize the novel middle stimulus into a category
+with greater variation.
+
+Further observations of widened generalization following varied training
+have since been observed in numerous investigations
+\autocites{hahnEffectsCategoryDiversity2005,perlmanFurtherAttemptsClarify2012,sakamotoPuttingPsychologyBack2008,hsuEffectsGenerativeDiscriminative2010,hoschPriorExperienceVariability2023}[but
+see][]{stewartEffectCategoryVariability2002}[ and
+\textcite{seitzModelingCategoryVariability2023}]{yangCategoryVariabilityEffect2014}.
+The results of \textcite{sakamotoPuttingPsychologyBack2008} are
+noteworthy. They first reproduced the basic finding of participants
+being more likely to categorize an unknown middle stimulus into a
+training category with higher variability. In a second experiment, they
+held the variability between the two training categories constant and
+instead manipulated the training sequence, such that the examples of one
+category appeared in an ordered fashion, with very small changes from
+one example to the other (the stimuli were lines that varied only in
+length), whereas examples in the alternate category were shown in a
+random order and thus included larger jumps in the stimulus space from
+trial to trial. They found that the middle stimulus was more likely to
+be categorized into the category that had been learned with a random
+sequence, which was attributed to an increased perception of variability
+which resulted from the larger trial to trial discrepancies.
+
+The work of \textcite{hahnEffectsCategoryDiversity2005}, is also of
+particular interest to the present work. Their experimental design was
+similar to previous studies, but they included a larger set of testing
+items which were used to assess generalization both between the two
+training categories as well as novel items located in the outer edges of
+the training categories. During generalization testing, participants
+were given the option to respond with ``neither'', in addition to
+responses to the two training categories. The ``neither'' response was
+included to test how far away in the stimulus space participants would
+continue to categorize novel items as belonging to a trained category.
+Consistent with prior findings, high-variability training resulted in an
+increased probability of categorizing items in between the training
+categories as belong to the high variability category. Additionally,
+participants trained with higher variability also extended the category
+boundary further out into the periphery than participants trained with a
+lower variability category were willing to do. The author compared a
+variety of similarity-based models based around the Generalized Context
+Model
+\autocite{nosofskyAttentionSimilarityIdentificationcategorization1986}
+to account for their results, manipulating whether a response-bias or
+similarity-scaling parameter was fit separately between variability
+conditions. No improvement in model fit was found by allowing the
+response-bias parameter to differ between groups, however the model
+performance did improvement significantly when the similarity scaling
+parameter was fit separately. The best fitting similarity-scaling
+parameters were such that the high-variability group was less sensitive
+to the distances between stimuli, resulting in greater similarity values
+between their training items and testing items. This model accounted for
+both the extended generalization gradients of the varied particpants,
+and also for their poorer performance in a recognition condition.
+
+Variability has also been examined in the learning of higher-order
+linguistic categories \autocite{perryLearnLocallyThink2010}. In nine
+training sessions spread out over nine weeks infants were trained on
+object labels in a naturalistic play setting. All infants were
+introduced to three novel objects of the same category, with
+participants in the ``tight'' condition being exposed to three similar
+exemplars of the category, and participants in the varied condition
+being exposed to three dissimilar objects of the same category.
+Importantly, the similarity of the objects was carefully controlled for
+by having a separate group of adult subjects provide pairwise similarity
+judgements of the category objects prior to the study onset.
+Multidimensional scaling was then performed to obtain the coordinates of
+the objects psychological space, and out of the 10 objects for each
+category, the 3 most similar objects were selected for the tight group
+and the three least similar objects for the varied group, with the
+leftover four objects being retained for testing. By the end of the nine
+weeks, all of the infants had learned the labels of the training
+objects. In the testing phase, the varied group demonstrated superior
+ability to correctly generalize the object labels to untrained exemplars
+of the same category. More interesting was the superior performance of
+the varied group on a higher order generalization task -- such that they
+were able to appropriately generalize the bias they had learned during
+training for attending to the shape of objects to novel solid objects,
+but not to non-solids. The tight training group, on the other hand,
+tended to overgeneralize the shape bias, leading the researchers to
+suggest that the varied training induced a more context-sensitive
+understanding of when to apply their knowledge.
+
+Of course, the relationship between training variability and transfer is
+unlikely to be a simple function wherein increased variation is always
+beneficial. Numerous studies have found null, or in some cases negative
+effects of training variation
+\autocite{deloshExtrapolationSineQua1997,sinkeviciuteRoleInputVariability2019,wrisbergVariabilityPracticeHypothesis1987,vanrossumSchmidtSchemaTheory1990},
+and many more have suggested that the benefits of variability may depend
+on additional factors such as prior task experience, the order of
+training trials, or the type of transfer being measured
+\autocite{bernikerEffectsTrainingBreadth2014,braithwaiteEffectsVariationPrior2015,hahnEffectsCategoryDiversity2005,lavanEffectsHighVariability2019,northEffectConsistentVaried2019,sadakataIndividualAptitudeMandarin2014,zamanPerceptualVariabilityImplications2021}.
+
+In an example of a more complex influence of training variation,
+\autocite{braithwaiteEffectsVariationPrior2015} trained participants on
+example problems involving the concept of sampling with replacement
+(SWR). Training consisted of examples that were either highly similar in
+their semantic context (e.g.~all involving people selecting objects) or
+in which the surface features were varied between examples (e.g.~people
+choosing objects AND objects selected in a sequence). The experimenters
+also surveyed how much prior knowledge each participant had with SWR.
+They found that whether variation was beneficial depended on the prior
+knowledge of the participants -- such that participants with some prior
+knowledge benefited from varied training, whereas participants with
+minimal prior knowledge performed better after training with similar
+examples. The authors hypothesized that in order to benefit from varied
+examples, participants must be able to detect the structure common to
+the diverse examples, and that participants with prior knowledge are
+more likely to be sensitive to such structure, and thus to benefit from
+varied training. To test this hypothesis more directly, the authors
+conducted a 2nd experiment, wherein they controlled prior knowledge by
+exposing some subjects to a short graphical or verbal pre-training
+lesson, designed to increase sensitivity to the training examples.
+Consistent with their hypothesis, participants exposed to the structural
+sensitivity pre-training benefited more from varied training than the
+controls participants who benefited more from training with similar
+examples. Interactions between prior experience and the influence of
+varied training have also been observed in sensorimotor learning
+\autocite{guadagnoliRelationshipContextualInterference1999,delreyEffectsContextualInterference1982}.
+\textcite{delreyEffectsContextualInterference1982} recruited
+participants who self-reported either extensive, or very little
+experience with athletic activities, and then trained participants on a
+coincident timing task under with either a single constant training
+velocity, with one of several varied training procedures.
+Unsurprisingly, athlete participants had superior performance during
+training, regardless of condition, and training performance was superior
+for all subjects in the constant group. Of greater interest is the
+pattern of testing results from novel transfer conditions. Among the
+athlete-participants, transfer performance was best for those who
+received variable training. Non-athletes showed the opposite pattern,
+with superior performance for those who had constant training.
+
+\subsubsection{The current work}\label{the-current-work}
+
+The overarching purpose of this dissertation is to investigate the
+effects of training variability on learning and generalization within
+visuomotor skill learning and function learning. Our investigations is
+structured into two main projects, each employing distinct experimental
+paradigms and computational modeling frameworks to elucidate how and
+when variability in training enhances or impedes subsequent
+generalization.
+
+In Project 1, we investigated the influence of varied practice in a
+simple visuomotor projectile launching task. Experiments 1 and 2
+compared the performance of constant and varied training groups to
+assess potential benefits of variability on transfer to novel testing
+conditions. To account for the observed empirical effects, we introduced
+the Instance-based Generalization with Adaptive Similarity (IGAS) model.
+IGAS provides a novel computational approach for quantifying the
+similarity between training experiences and transfer conditions, while
+also allowing for variability to influence the generalization gradient
+itself.
+
+Project 2 shifted focus to the domain of function learning by employing
+a visuomotor extrapolation task. Across three experiments, we examined
+how constant and varied training regimes affected learning,
+discrimination between stimuli, and the ability to extrapolate to novel
+regions of the function's input space. To model human performance in
+this task, we fit the influential Associative Learning Model (ALM) and
+the Extrapolation-Association Model (EXAM) to individual participant
+data using advanced Bayesian parameter estimation techniques.
+
+
+\printbibliography[title=References]
+
+
+\end{document}

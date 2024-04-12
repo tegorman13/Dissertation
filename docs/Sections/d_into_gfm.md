@@ -26,9 +26,11 @@ different tasks and domains, including categorization (Hahn et al.,
 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning
 (Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010;
 Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode
-et al., 2008), trajectory extrapolation (Fulvio et al., 2014), cognitive
-control tasks (Moshon-Cohen et al., 2024; Sabah et al., 2019),
-associative learning (Fan et al., 2022; Lee et al., 2019; Prada &
+et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et
+al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory
+extrapolation (Fulvio et al., 2014), cognitive control tasks
+(Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning
+(Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada &
 Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George &
 Egner, 2021; Gonzalez & Madhavan, 2011; Kelley & Yantis, 2009), voice
 identity learning (Lavan et al., 2019), face recognition (Burton et al.,
@@ -287,8 +289,8 @@ located in between the two trained categories. Both experiments provided
 evidence that participants were much more likely to categorize the novel
 middle stimulus into a category with greater variation.
 
-Further observations consonant with the results of Cohen et al. (2001)
-have since been observed in numerous investigations Yang & Wu (2014).
+Further observations of widened generalization following varied training
+have since been observed in numerous investigations Seitz et al. (2023).
 The results of Sakamoto et al. (2008) are noteworthy. They first
 reproduced the basic finding of participants being more likely to
 categorize an unknown middle stimulus into a training category with
@@ -793,12 +795,40 @@ Cognition*, *11*(1), 92–125. <https://doi.org/10.1521/soco.1993.11.1.92>
 
 </div>
 
+<div id="ref-liveseyRevisitingPeakShift2019" class="csl-entry">
+
+Livesey, E. J., & McLaren, I. P. (2019). Revisiting peak shift on an
+artificial dimension: Effects of stimulus variability on generalisation.
+*Quarterly Journal of Experimental Psychology*, *72*(2), 132–150.
+<https://doi.org/10.1177/1747021817739832>
+
+</div>
+
+<div id="ref-lovibondStimulusDiscriminabilityInduction2020"
+class="csl-entry">
+
+Lovibond, P. F., Lee, J. C., & Hayes, B. K. (2020). Stimulus
+discriminability and induction as independent components of
+generalization. *Journal of Experimental Psychology: Learning, Memory,
+and Cognition*, *46*(6), 1106–1120. <https://doi.org/10.1037/xlm0000779>
+
+</div>
+
 <div id="ref-maddoxStimulusRangeDiscontinuity2011" class="csl-entry">
 
 Maddox, W. T., & Filoteo, J. V. (2011). Stimulus range and discontinuity
 effects on information-integration category learning and generalization.
 *Attention, Perception, & Psychophysics*, *73*(4), 1279–1295.
 <https://doi.org/10.3758/s13414-011-0101-2>
+
+</div>
+
+<div id="ref-manentiVariabilityTrainingUnlocks2023" class="csl-entry">
+
+Manenti, G. L., Dizaji, A. S., & Schwiedrzik, C. M. (2023). Variability
+in training unlocks generalization in visual perceptual learning through
+invariant representations. *Current Biology*, *33*(5), 817–826.e3.
+<https://doi.org/10.1016/j.cub.2023.01.011>
 
 </div>
 
@@ -970,6 +1000,15 @@ Psychology*, *108*, 104478. <https://doi.org/10.1016/j.jesp.2023.104478>
 
 </div>
 
+<div id="ref-robsonSpecificVariedPractice2022a" class="csl-entry">
+
+Robson, S. G., Tangen, J. M., & Searston, R. A. (2022). Specific versus
+varied practice in perceptual expertise training. *Journal of
+Experimental Psychology: Human Perception and Performance*, *48*(12),
+1336–1346. <https://doi.org/10.1037/xhp0001057>
+
+</div>
+
 <div id="ref-rollerVariablePracticeLenses2001" class="csl-entry">
 
 Roller, C. A., Cohen, H. S., Kimball, K. T., & Bloomberg, J. J. (2001).
@@ -1011,6 +1050,14 @@ back into psychological models: Mechanistic versus rational approaches.
 Schmidt, R. A. (1975). A schema theory of discrete motor skill learning.
 *Psychological Review*, *82*(4), 225–260.
 <https://doi.org/10.1037/h0076770>
+
+</div>
+
+<div id="ref-seitzModelingCategoryVariability2023" class="csl-entry">
+
+Seitz, F. I., Jarecki, J. B., & Rieskamp, J. (2023). *Modeling the
+Category Variability Effect in an Exemplar-Similarity Framework*
+\[Preprint\]. PsyArXiv.
 
 </div>
 
