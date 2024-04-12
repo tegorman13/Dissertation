@@ -290,21 +290,23 @@ evidence that participants were much more likely to categorize the novel
 middle stimulus into a category with greater variation.
 
 Further observations of widened generalization following varied training
-have since been observed in numerous investigations Seitz et al. (2023).
-The results of Sakamoto et al. (2008) are noteworthy. They first
-reproduced the basic finding of participants being more likely to
-categorize an unknown middle stimulus into a training category with
-higher variability. In a second experiment, they held the variability
-between the two training categories constant and instead manipulated the
-training sequence, such that the examples of one category appeared in an
-ordered fashion, with very small changes from one example to the other
-(the stimuli were lines that varied only in length), whereas examples in
-the alternate category were shown in a random order and thus included
-larger jumps in the stimulus space from trial to trial. They found that
-the middle stimulus was more likely to be categorized into the category
-that had been learned with a random sequence, which was attributed to an
-increased perception of variability which resulted from the larger trial
-to trial discrepancies.
+have since been observed in numerous investigations (Hahn et al., 2005;
+Hosch et al., 2023; Hsu & Griffiths, 2010; Perlman et al., 2012;
+Sakamoto et al., 2008; but see Stewart & Chater, 2002; Yang & Wu, 2014;
+and Seitz et al., 2023). The results of Sakamoto et al. (2008) are
+noteworthy. They first reproduced the basic finding of participants
+being more likely to categorize an unknown middle stimulus into a
+training category with higher variability. In a second experiment, they
+held the variability between the two training categories constant and
+instead manipulated the training sequence, such that the examples of one
+category appeared in an ordered fashion, with very small changes from
+one example to the other (the stimuli were lines that varied only in
+length), whereas examples in the alternate category were shown in a
+random order and thus included larger jumps in the stimulus space from
+trial to trial. They found that the middle stimulus was more likely to
+be categorized into the category that had been learned with a random
+sequence, which was attributed to an increased perception of variability
+which resulted from the larger trial to trial discrepancies.
 
 The work of Hahn et al. (2005), is also of particular interest to the
 present work. Their experimental design was similar to previous studies,

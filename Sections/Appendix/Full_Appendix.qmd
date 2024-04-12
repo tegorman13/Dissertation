@@ -1,0 +1,41 @@
+---
+title: Appendix
+#date: last-modified
+page-layout: full
+code-fold: true
+code-tools: true
+cache: true
+toc: true
+toc-location: body
+toc-title: Contents
+execute: 
+  warning: false
+  eval: true
+format:
+  html: default
+#   hugo-md:
+#     echo: false
+#     #include: false
+#     html-math-method: mathjax
+#     output-file: appendix.md
+#   hikmah-manuscript-pdf:
+#     echo: false
+#     output-file: "tg_appendix.pdf"
+#     mainfont: "Linux Libertine O"
+#     mainfontoptions:
+#       - "Numbers=Proportional"
+#       - "Numbers=OldStyle"
+#     mathfont: "Libertinus Math"
+prefer-html: true
+---
+
+### Appendix - Project 1 
+
+{{< include IGAS-Supplemental.qmd >}}
+
+{{< pagebreak >}}
+
+### Appendix - Project 2 - Experiment 1 
+
+{{< include E1_Appendix.qmd >}}
+:::

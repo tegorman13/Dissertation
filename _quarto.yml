@@ -43,6 +43,7 @@ website:
       - text: "---"
       - paper.qmd
       - Sections/full.qmd
+      - Sections/Appendix/Full_Appendix.qmd
       - text: "---"
       - text: Intro
         href: Sections/Introduction.qmd

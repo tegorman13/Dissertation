@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -154,6 +188,12 @@ div.csl-indent {
  <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Sections/Appendix/Full_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -231,12 +271,303 @@ div.csl-indent {
 <p>Through this combination of controlled experiments and computational modeling, the present work provides an extensive investigation into if, how, and when variability facilitates transfer</p>
 <p>Together, these projects contribute to a deeper understanding of the role of training variability in cognitive development, offering insights that could inform educational and training practices across a variety of domains. The findings and methodological approaches detailed in this dissertation not only advance theoretical knowledge but also provide practical implications for designing more effective learning environments.</p>
 <p>By taking a multi-pronged approach that combines empirical investigations across multiple experimental paradigms with computational modeling, this dissertation provides a comprehensive examination of the complex and sometimes opposing effects of training variability on learning and generalization. The contrasting results obtained from the HTT and HTW tasks underscore the importance of considering task characteristics when designing experiments to assess the influence of training manipulations. Furthermore, the computational modeling components of this work offer novel theoretical accounts for both the beneficial and detrimental effects of training variability observed in our experiments. Collectively, this dissertation highlights the value of integrating empirical and modeling approaches to uncover the cognitive mechanisms that support learning and generalization across a variety of domains.</p>
-
-
-
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Full Dissertation</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 04/04/24</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">- name: Thomas Gorman</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  affiliation: Indiana University</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">toc-location:</span><span class="co"> body</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">toc-title:</span><span class="co"> Contents</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="an">cache:</span><span class="co"> true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  eval: true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  hugo-md:</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: false</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">    #include: false</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">    html-math-method: mathjax</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: diss_full_hugo.md</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">  gfm:</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: false</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">    output: false</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: diss_full_gfm.md</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">  hikmah-manuscript-pdf:</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: false</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: "tg_full_disser.pdf"</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfont: "Linux Libertine O"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfontoptions:</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">      - "Numbers=Proportional"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">      - "Numbers=OldStyle"</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">    mathfont: "Libertinus Math"</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># editor: </span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">#   markdown: </span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co">#     wrap: 72</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="an">prefer-html:</span><span class="co"> true</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;"&gt;</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center; margin-top: 300px; font-size: 32px;"&gt;</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  Thomas E. Gorman</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Second Page and so on... --&gt;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &lt;div style="text-align: justify; margin-top: 700px;"&gt;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="co">  Submitted to the faculty of the University Graduate School in partial fulfillment of the</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co">  requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co">  Sciences and the Cognitive Science Program, Indiana University</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co">  Indiana University</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>&lt;div style="margin-top: 400px;"&gt;</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Your page numbering if needed --&gt;</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>&lt;div style="page-break-before: always;"&gt;&lt;/div&gt;</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Committee Members Page --&gt;</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &lt;div style="text-align: center; margin-top: 300px;"&gt;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co">  Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="co">  requirements for the degree of Doctor of Philosophy.</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;/div&gt;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;div style="text-align: center; margin-top: 300px;"&gt;</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="co">  _____________________________  Robert L. Goldstone, PhD&lt;br&gt;&lt;br&gt;</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co">  _____________________________  Robert Nosofsky, PhD&lt;br&gt;&lt;br&gt;</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co">  _____________________________  Peter Todd, PhD&lt;br&gt;&lt;br&gt;</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="co">  _____________________________  Mike Jones, PhD</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;/div&gt;</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;div style="page-break-before: always;"&gt;&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &lt;div style="page-break-before: always;"&gt;&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Acknowledgements --&gt;</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &lt;div style="text-align: center; font-weight: bold; font-size: 24px;"&gt;</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="co">  Acknowledgements</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;/div&gt;</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;div style="text-align: center; margin-top: 700px; font-size: 24px;"&gt;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="co">   </span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>&lt;div style="page-break-before: always;"&gt;&lt;/div&gt;</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="pdf"}</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>\begin{centering}</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>\LARGE</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>{The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>\vspace*{1.5cm}</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>\LARGE</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>{Thomas E. Gorman}</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>\vspace{16.5cm}</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>\end{centering}</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Submitted to the faculty of the University Graduate School in partial fulfillment of the</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="co">requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">Sciences and the Cognitive Science Program, Indiana University</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="co">Indiana University --&gt;</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>\vspace{6cm}</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>\pagenumbering{gobble}</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- \newpage</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="co">requirements for the degree of Doctor of Philosophy.</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">\vspace{4cm}</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">\</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">\_____________________________  Robert L. Goldstone, PhD</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="co">\vspace{2.5cm}</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="co">\</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="co">\</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="co">\_____________________________  Robert Nosofsky, PhD</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="co">\vspace{2.5cm}</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="co">\</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">\_____________________________  Peter Todd, PhD</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="co">\vspace{2.5cm}</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">\</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="co">\_____________________________  Mike Jones, PhD</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="co">\newpage --&gt;</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>\begin{centering}</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>\vspace*{6.5cm}</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>@2024 <span class="sc">\\</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>\vspace{1cm} </span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>Thomas E. Gorman</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>\vspace{.2cm}</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>\vspace{5cm}</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>\end{centering}</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>\newpage</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>\begin{center}</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>\textbf{Acknowledgements}</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>\end{center}</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>\newpage</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="docx"}</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="fu">## Thomas E. Gorman</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Submitted to the faculty of the University Graduate School in partial fulfillment of the</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">Sciences and the Cognitive Science Program, Indiana University.</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="co">Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="co">requirements for the degree of Doctor of Philosophy.</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">- Robert L. Goldstone, PhD</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="co">- Robert Nosofsky, PhD</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="co">- Peter Todd, PhD</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="co">- Mike Jones, PhD --&gt;</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## @2023</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Thomas E. Gorman</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## Acknowledgements</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>::: column-page-inset-right</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu"># Abstract</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>The past century of research on human learning has produced ample evidence that although learners can improve at almost any task, such improvements are often specific to the trained task, with unreliable or even nonexistent transfer or generalization to novel tasks or conditions <span class="co">[</span><span class="ot">@barnettWhenWhereWe2002; @dettermanCaseProsecutionTransfer1993</span><span class="co">]</span>. Such generalization challenges are of noteworthy practical relevance, given that educators, trainers, and rehabilitators typically intend for their students to be able to apply what they have learned to new situations. It is therefore important to better understand the factors that influence generalization, and to develop cognitive models that can predict when generalization is likely to occur. Such characteristics have included training difficulty, spacing, temporal order, feedback schedules, and the primary focus of the current work - the variability of training examples.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. </span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="fu"># Table of contents</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>&lt;div id="html-toc"&gt;&lt;/div&gt;</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script&gt;</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!-- document.addEventListener("DOMContentLoaded", function(){ --&gt;</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--   var toc = document.getElementById("TOC"); --&gt;</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--   var placeholder = document.getElementById("toc-placeholder"); --&gt;</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--   if (toc &amp;&amp; placeholder) { --&gt;</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     placeholder.appendChild(toc); --&gt;</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--   } --&gt;</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!-- }); --&gt;</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!-- document.addEventListener("DOMContentLoaded", function(){ --&gt;</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     var tocDiv = document.getElementById("html-toc"); --&gt;</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth --&gt;</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     var tocList = document.createElement("ul"); --&gt;</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     headings.forEach(function(heading) { --&gt;</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         var listItem = document.createElement("li"); --&gt;</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         var link = document.createElement("a"); --&gt;</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         link.textContent = heading.textContent; --&gt;</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         link.href = "#" + heading.id; --&gt;</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         listItem.appendChild(link); --&gt;</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         if (heading.tagName == "H2") { --&gt;</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--             listItem.style.marginLeft = "20px"; --&gt;</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         } else if (heading.tagName == "H3") { --&gt;</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--             listItem.style.marginLeft = "40px"; --&gt;</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         } --&gt;</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--         tocList.appendChild(listItem); --&gt;</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     }); --&gt;</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!--     tocDiv.appendChild(tocList); --&gt;</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!-- }); --&gt;</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="in">document.addEventListener("DOMContentLoaded", function(){</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="in">    var tocDiv = document.getElementById("html-toc");</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="in">    var headings = document.querySelectorAll('h1, h2, h3'); // adjust if you need more depth</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="in">    var tocList = document.createElement("ul");</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="in">    headings.forEach(function(heading, index) {</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="in">        // Create or get the ID for the heading</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="in">        if (!heading.id) {</span></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="in">            heading.id = heading.textContent.replace(/[^a-z0-9]+/gi, '-').toLowerCase() + "-" + index;</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="in">        var listItem = document.createElement("li");</span></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="in">        var link = document.createElement("a");</span></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="in">        link.textContent = heading.textContent;</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="in">        link.href = "#" + heading.id;</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="in">        listItem.appendChild(link);</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="in">        if (heading.tagName == "H2") {</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="in">            listItem.style.marginLeft = "20px";</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="in">        } else if (heading.tagName == "H3") {</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="in">            listItem.style.marginLeft = "40px";</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="in">        tocList.appendChild(listItem);</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="in">    });</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="in">    tocDiv.appendChild(tocList);</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="in">});</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>:::</p>
+<div style="page-break-after: always;"></div>
+<p>&nbsp;<br>
+</p>
 </section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-battigFacilitationInterference1966" class="csl-entry" role="listitem">
 Battig, W. F. (1966). Facilitation and interference. <em>Acquisition of Skill</em>, 215–244.
 </div>
@@ -282,7 +613,987 @@ Wrisberg, C. A., Winter, T. P., &amp; Kuhlman, J. S. (1987). The <span>Variabili
 <div id="ref-wulfPrinciplesDerivedStudy2002" class="csl-entry" role="listitem">
 Wulf, G., &amp; Shea, C. H. (2002). Principles derived from the study of simple skills do not generalize to complex skill learning. <em>Psychonomic Bulletin &amp; Review</em>, <em>9</em>(2), 185–211.
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<p><a href="../Sections/Appendix/Full_Appendix.html">Apppendix</a> available at tegorman13.github.io/Dissertation/Sections/Appendix.html</p>
+<p>:::</p>
+<!-- ::: {.content-visible unless-format="markdown"}
+### Appendix - Project 1 
+
+
+
+---
+# title: "R Notebook"
+# output: html_notebook
+execute: 
+  warning: false
+  eval: true
+---
+
+
+
+
+
+
+
+
+Reviewer #2: This study addresses a question that is important both theoretically and practically. However, the authors need to rule out the following, less interesting alternative. Namely, the results could be due to task practice effect, as follows.
+
+Since there was no pre-training test, and no practice trials (as far as I can tell), and since the task was an online motor task that participants could not rely on their prior motor experience, trying to launch the ball to the target could only be done via trial and error. For the varied training group, they got to practice at two distances. Therefore, they had a better "calibration" in terms of the relationship between launching speed and target distance. This was likely beneficial both in Exp.1 when both transfer distances were interpolations from the two trained distances, and in Exp.2 when two transfer distances were interpolations and two were extrapolations but the latter two were immediately next to the training distances.
+
+In comparison, since the constant group trained at only a single distance, any transfer distance (or at least the first transfer distance tested) was extrapolation even if this transfer distance was shorter than the trained, because the participants did not know beforehand how to shoot the ball to the shortest distance due to the existence of the barrier. If the transfer distance was longer, for sure that was extrapolation.
+
+
+Regardless, the above analysis suggests that the constant group would always be a step behind the varied group. The number of trials at each transfer distance may not be sufficient for them to catch up the varied group either (whether there was learning during testing should be checked). If such disadvantage for the constant group is indeed due to the lack of tryout opportunities, then the authors should verify whether the same results still hold if all groups were provided opportunities to practice, or if pre-training tests across all distances were offered.
+
+
+### exponential learning models fit to individual subjects
+
+::: {.cell}
+
+```{.r .cell-code}
+e2TestFits <- readRDS(here::here('data/IGAS-e2TestFits-April4.rds'))
+e2TestFits <- e2TestFits %>% mutate(Asymptote.Minus.Start=pAsym-pStart)
+exp2.fit2 <- e2TestFits %>% ungroup() %>% group_by(sbjCode,conditType) %>%
+  summarise(MeanAsym=mean(pAsym),MeanStart=mean(pStart),
+            MeanRate=mean(pRate),
+            asymMinusStart=mean(Asymptote.Minus.Start),.groups="keep") %>% 
+  ungroup() %>% as.data.frame()
+```
+:::
+
+
+### Group comparison of learning rate fits
+
+::: {.cell}
+
+```{.r .cell-code}
+# mr1=e2TestFits %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
+# mr2=exp2.fit2 %>% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) 
+
+# h4<-e2TestFits %>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
+# h4
+
+
+# mr1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)
+# mr2=exp2.fit2 %>% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) 
+
+h4<-e2TestFits %>%filter(Pval<.4)%>% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Warning: The `legend.title.align` argument of `theme()` is deprecated as of ggplot2
+3.5.0.
+ℹ Please use theme(legend.title = element_text(hjust)) instead.
+```
+
+
+:::
+
+```{.r .cell-code}
+h4
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-4-1.png){width=672}
+:::
+:::
+
+
+
+### First vs. second half of testing stage
+
+::: {.cell}
+
+```{.r .cell-code}
+testSplit <- transfer %>%
+  group_by(sbjCode, conditType, positionX, testHalfSbj) %>%
+  summarise(
+    MeanTargetDistance = mean(AbsDistFromCenter),
+    MeanScaledDev =mean(scaledDev,trim=.05),
+    .groups = "keep"
+  ) %>% 
+  as.data.frame()
+
+testSplit2 <- transfer %>%
+  group_by(sbjCode, conditType, testHalfSbj) %>%
+  summarise(
+    MeanTargetDistance = mean(AbsDistFromCenter, trim = .01),
+    MeanScaledDev =
+      mean(scaledDev, trim = .05),
+    .groups = "keep"
+  ) %>% as.data.frame()
+
+
+tsw <- testSplit %>% ungroup() %>% 
+  pivot_wider(names_from = testHalfSbj,values_from=c(MeanTargetDistance,MeanScaledDev)) %>%
+  mutate(endMinusStart = `MeanTargetDistance_2nd-Half` - `MeanTargetDistance_1st-Half`,
+    endMinusStartScaled = `MeanScaledDev_2nd-Half` - `MeanScaledDev_1st-Half`) %>% 
+    as.data.frame()
+
+tsw2 <- tsw %>% 
+  group_by(sbjCode,conditType) %>% summarise(endMinusStart=mean(endMinusStart),endMinusStartScaled=mean(endMinusStartScaled)) %>% as.data.frame()
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'sbjCode'. You can override using the
+`.groups` argument.
+```
+
+
+:::
+
+```{.r .cell-code}
+# testSplit %>% ggplot(aes(x=testHalfSbj,y=MeanTargetDistance))+
+#   geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge)+
+#   facet_wrap(~positionX,ncol=2)+
+#   stat_summary(aes(x=testHalfSbj,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge)
+
+
+h1=testSplit %>% filter(testHalfSbj=="1st-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
+ geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
+ scale_y_continuous(name="Mean Absolute Deviation From Target",limits=c(0,400))+ 
+ ggtitle("Testing - 1st half")+
+  ylab("Mean Absolute Deviation From Target")+xlab("Testing Location")+theme(legend.position="top")
+
+h2=testSplit %>% filter(testHalfSbj=="2nd-Half") %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
+ geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
+  stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8) + 
+ scale_y_continuous(name="",limits=c(0,400))+ 
+ ggtitle("Testing - 2nd half")+
+  xlab("Testing Location")+
+  theme(plot.title = element_text(hjust = 0.5))+
+  theme(legend.position="top") +
+  guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)
+
+#egg::ggarrange(h1,h2,ncol=2)
+
+
+h3 <- tsw %>% ggplot(aes(x=positionX,y=endMinusStart))+
+  geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge,fun="mean")+
+  stat_summary(aes(x=positionX,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
+  ylab("2nd Half Deviation - 1st Half Deviation")+ 
+  ggtitle("Improvement Per Location")+
+  xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+
+  guides(fill=guide_legend(title="Testing Location")) +theme(legend.position="none")
+
+#ggarrange(h1,h2,h3,h4,ncol=2)
+
+#(h1 + h2) / (h3)
+
+(h1+h2)/h3
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Warning: Removed 166 rows containing non-finite outside the scale range
+(`stat_summary()`).
+Removed 166 rows containing non-finite outside the scale range
+(`stat_summary()`).
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Warning: Removed 113 rows containing non-finite outside the scale range
+(`stat_summary()`).
+Removed 113 rows containing non-finite outside the scale range
+(`stat_summary()`).
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-5-1.png){width=960}
+:::
+:::
+
+
+
+
+
+
+
+### Group Comparison for asymptote-starting performance
+
+::: {.cell}
+
+```{.r .cell-code}
+# ma1=e2TestFits %>% filter()%>% anova_test(dv=Asymptote.Minus.Start,between=conditType,wid=sbjCode,within=positionX,type=3);show(ma1)
+# ma2=exp2.fit2 %>% anova_test(dv=asymMinusStart,between=conditType,wid=sbjCode,type=3);show(ma2) 
+
+e2TestFits %>% ggplot(aes(x=conditType,y=Asymptote.Minus.Start,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("e2 testing (asymptote - start performance)") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-6-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+
+
+
+### Relative distance and under/overshooting
+
+Reviewer 3
+Absolute versus relative distance: From a methodological standpoint, I understand the need to differentiate these two types of distance. However, from a theoretical perspective there may be some issue in differentiating these two concepts. Schema theory relies on relative (or invariant) information to inform the motor program. However, both distances would be important to an instance or exemplar representation. You may want to consider commenting on this issue. 
+
+
+Reviewer 2
+For the same reason, the plots showing improvement during training could be due to participants learning the task, rather than fine motor skills. Although task learning and motor learning are impossible to separate cleanly, the common practice in the field is indeed to offer practice trials to reduce the task learning aspects. The authors should address this.
+
+In addition to absolute errors (which is related to variance), the authors should also provide other measures of performance, e.g., the mean of the signed errors, so that readers have a better idea whether there was any meaningful over- or undershooting.
+
+
+#### experiment 1 training - relative distances
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'sbjCode', 'trainHalf', 'conditType',
+'devianceDirection'. You can override using the `.groups` argument.
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-7-1.png){width=672}
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-7-2.png){width=672}
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-7-3.png){width=672}
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-7-4.png){width=672}
+:::
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+=========================================================================
+conditType devianceDirection      610            760            910      
+-------------------------------------------------------------------------
+constant       Overshoot                    311.84(307.92)               
+constant      Undershoot                    188.05(163.62)               
+varied         Overshoot     211.69(234.97)                360.14(322.01)
+varied        Undershoot     107.35(81.21)                 244.85(196.47)
+-------------------------------------------------------------------------
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+======================================================
+conditType      610           760            910      
+------------------------------------------------------
+constant                 121.03(269.17)               
+varied     39.91(178.12)                150.53(290.04)
+------------------------------------------------------
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+====================================================================
+conditType     610           760            835            910      
+--------------------------------------------------------------------
+constant   7.13(124.02) 107.02(218.49) 142.42(252.34) 122.92(282.58)
+varied     3.19(96.67)   92.1(173.9)   103.84(214.4)  108.12(234.59)
+--------------------------------------------------------------------
+```
+
+
+:::
+:::
+
+
+#### experiment 2 training - relative distances
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'Group2', 'sbjCode', 'stage', 'conditType'.
+You can override using the `.groups` argument.
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-8-1.png){width=672}
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-8-2.png){width=672}
+:::
+:::
+
+
+#### Experiment 1 Testing - relative distances
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'conditType2', 'sbjCode', 'positionX',
+'ThrowPosition'. You can override using the `.groups` argument.
+No summary function supplied, defaulting to `mean_se()`
+No summary function supplied, defaulting to `mean_se()`
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-9-1.png){width=960}
+:::
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+====================================================================================================================================
+conditType2         msdu_610       msdu_760       msdu_835       msdu_910      msds_610      msds_760      msds_835      msds_910   
+------------------------------------------------------------------------------------------------------------------------------------
+Constant Training 136.27(84.29) 191.65(112.65) 219.46(139.91) 276.75(153.09) 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
+Varied Training   105.12(51.39)  149.37(93.4)  180.54(129.52) 198.64(137.84) 13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
+------------------------------------------------------------------------------------------------------------------------------------
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+=========================================================================
+Condition              610           760           835           910     
+-------------------------------------------------------------------------
+Constant Training 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
+Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
+-------------------------------------------------------------------------
+```
+
+
+:::
+:::
+
+
+
+
+#### Experiment 2 Testing - relative distances
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'conditType2', 'sbjCode', 'positionX',
+'devianceDirection'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'Group2', 'sbjCode', 'positionX',
+'devianceDirection'. You can override using the `.groups` argument.
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-10-1.png){width=768}
+:::
+:::
+
+
+
+
+
+
+
+
+#### Experimenet 1 - intermittent testing
+
+::: {.cell}
+
+```{.r .cell-code}
+intTest.half <- readRDS(here::here("data/e1_intTest.rds"))
+
+intTest.half %>% ggplot(aes(x=positionX,y=MeanTargetDistance))+
+  geom_bar(aes(group=trainHalf,fill=trainHalf),stat="summary",fun=mean,position=dodge)+
+  facet_wrap(~conditType,ncol=2)+
+  stat_summary(aes(x=positionX,group=trainHalf),fun.data=mean_se,geom="errorbar",position=dodge,width=.8)+
+  ylab("Mean Distance From Center Of Target")+
+  xlab("Intermittent Testing Throw Location")+theme(plot.title = element_text(hjust = 0.5))+
+  guides(fill=guide_legend(title="Training Stage"))+theme(legend.title.align=.25)
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-11-1.png){width=672}
+:::
+
+```{.r .cell-code}
+cnames=c("Condition","610_First Half","760_First Half","910_First Half","610_Second Half","760_Second Half","910_Second Half")
+test= intTest.half %>% rename(Condition="conditType") %>% group_by(Condition,trainHalf,positionX) %>% 
+  summarise(Mean=round(mean(MeanTargetDistance),2),sd=round(sd(MeanTargetDistance),2)) 
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+`summarise()` has grouped output by 'Condition', 'trainHalf'. You can override
+using the `.groups` argument.
+```
+
+
+:::
+
+```{.r .cell-code}
+test=test %>% group_by(Condition) %>% mutate(msd=paste(Mean,"(",sd,")",sep="")) %>%
+ select(Condition,positionX,trainHalf,msd)%>% pivot_wider(names_from = c(positionX,trainHalf),values_from=c(msd))
+test=test %>% as.data.frame()
+colnames(test) <- cnames
+stargazer(test,type="text",summary=FALSE,rownames=FALSE)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+
+======================================================================================================
+Condition 610_First Half 760_First Half 910_First Half 610_Second Half 760_Second Half 910_Second Half
+------------------------------------------------------------------------------------------------------
+constant  206.64(82.08)  286.51(121.07) 406.93(145.2)   187.2(55.24)    238.21(95.16)  313.27(114.86) 
+varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(108.04)   276.86(110.5) 
+------------------------------------------------------------------------------------------------------
+```
+
+
+:::
+:::
+
+
+
+
+### Training plots - Experiment 1
+
+::: {.cell}
+
+```{.r .cell-code}
+# possible that scaling required loading special package from devtools
+exp1Train <- e1 %>% filter(stage!="Transfer",mode==1) %>% group_by(Group,sbjCode) %>%mutate(scaleDev=scale_this(AbsDistFromCenter)) %>%ungroup() %>% group_by(Group,sbjCode,stage,conditType)
+exp1Train = exp1Train %>% summarise(MeanTargetDistance=mean(AbsDistFromCenter),scaledDist=mean(scaleDev,trim=.05))
+exp1Train$stage <- factor(exp1Train$stage, levels = c("Beginning", "Middle", "End")) #in case the levels get out of order
+exp1TrainTrials <- e1 %>% filter(stage!="Transfer",mode==1,trialType!=44) %>% group_by(Group,sbjCode,positionX) %>% mutate(scaleDev=scale_this(AbsDistFromCenter),ind=1,trainIndex=cumsum(ind)) %>%ungroup() %>% group_by(Group,sbjCode,stage,conditType)
+
+
+
+# manuscript plot - original
+ggplot(data = exp1Train, aes(x=stage, y=MeanTargetDistance)) + geom_boxplot(aes(fill=conditType),position=position_dodge(1))+stat_summary(fun="mean",aes(group=conditType),position=position_dodge(1))+
+ylab("Mean Distance From Center Of Target") +xlab("Training Stage")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.5)+theme_classic()
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-12-1.png){width=672}
+:::
+
+```{.r .cell-code}
+lineplot.CI(data=exp1Train,x.factor=stage,group=conditType,response=scaledDist,xlab="Training Stage",x.leg=2,legend=TRUE,ylab="Distance from Target (scaled)",main="Training Performance - Experiment 1",col=c("red","black"))
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-12-2.png){width=672}
+:::
+
+```{.r .cell-code}
+lineplot.CI(data=exp1Train,x.factor=stage,group=conditType,response=MeanTargetDistance,xlab="Training Stage",x.leg=2,legend=TRUE,ylab="Distance From Target",main="Training Performance - Experiment 1",col=c("red","blue"))
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-12-3.png){width=672}
+:::
+:::
+
+
+
+
+
+
+#### Not in manuscript #####
+
+
+#### fit to testing performance averaged across positions
+
+::: {.cell}
+
+```{.r .cell-code}
+e2Fits.AggPos <- readRDS(here::here('data/IGAS-e2Fits.AggPos-April_12.rds'))
+
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pStart,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("experiment 2 - starting performance per position") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-13-1.png){width=672}
+:::
+
+```{.r .cell-code}
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pAsym,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("e2 testing performance asymptote per position ") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-13-2.png){width=672}
+:::
+
+```{.r .cell-code}
+e2Fits.AggPos %>% ggplot(aes(x=Group,y=pRate,fill=Group))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  ggtitle("e2 testing performance asymptote per position ") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-13-3.png){width=672}
+:::
+
+```{.r .cell-code}
+#mr1=e2Fits.AggPos %>% anova_test(dv=pRate,between=conditType,wid=sbjCode,type=3);show(mr1)
+```
+:::
+
+
+
+
+#### statistical tests for starting performance
+
+::: {.cell}
+
+```{.r .cell-code}
+ms1=e2TestFits %>% filter(converged==TRUE) %>% anova_test(dv=pStart,between=conditType,wid=sbjCode,within=positionX,type=3);
+ms2=exp2.fit2 %>% anova_test(dv=MeanStart,between=conditType,wid=sbjCode,type=3);
+#ms1
+ms2 
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+ANOVA Table (type III tests)
+
+      Effect DFn DFd    F     p p<.05   ges
+1 conditType   1 206 3.04 0.083       0.015
+```
+
+
+:::
+
+```{.r .cell-code}
+e2TestFits %>% ggplot(aes(x=conditType,y=pStart,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("experiment 2 - starting performance per position") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-14-1.png){width=672}
+:::
+:::
+
+
+
+
+#### statistical tests for asymptote
+
+::: {.cell}
+
+```{.r .cell-code}
+ma1=e2TestFits %>% filter(converged==TRUE)%>% anova_test(dv=pAsym,between=conditType,wid=sbjCode,within=positionX,type=3);
+ma2=exp2.fit2 %>% anova_test(dv=MeanAsym,between=conditType,wid=sbjCode,type=3);
+ma2
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+ANOVA Table (type III tests)
+
+      Effect DFn DFd    F     p p<.05   ges
+1 conditType   1 206 3.38 0.067       0.016
+```
+
+
+:::
+
+```{.r .cell-code}
+e2TestFits %>% ggplot(aes(x=conditType,y=pAsym,fill=conditType))+
+  geom_bar(stat="summary",position=dodge,fun="mean")+ 
+  stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+
+  facet_grid(~positionX)+ggtitle("e2 testing performance asymptote per position ") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+```
+
+::: {.cell-output-display}
+![](hold_temp_files/figure-html/unnamed-chunk-15-1.png){width=672}
+:::
+:::
+
+
+
+
+
+
+
+
+### Appendix - Project 2 - Experiment 1 
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+# print(getwd())
+# here::set_here(path='..')
+# print(getwd())
+#source(here::here("Functions", "packages.R"))
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
+  ggh4x,htmltools,future,furrr,ez)
+walk(c("dplyr","here"), conflict_prefer_all, quiet = TRUE)
+
+walk(c("Display_Functions", "org_functions", "Table_Functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+test <- readRDS(here::here("data/e1_08-21-23.rds")) |> filter(expMode2 == "Test")  |>
+  select(id,condit,bandInt,vb,vx,dist,sdist,bandType,tOrder)
+```
+:::
+
+
+
+
+
+
+
+#### Posterior Predictive Distributions
+
+
+::: {.cell}
+
+```{.r .cell-code}
+dist_pred <- 
+  posterior_predict(e1_distBMM, ndraws = 500) |> 
+  array_branch(margin=1) |> 
+   map_dfr( 
+    function(yrep_iter) {
+      test  |>
+        mutate(dist_pred = yrep_iter)
+    },
+    .id = 'iter'
+  ) |>
+  mutate(iter = as.numeric(iter))
+
+
+
+dist_pred  |>
+  filter(iter < 100) %>%
+  ggplot(aes(dist_pred, group = iter)) +
+  geom_line(alpha = .03, stat = 'density', color = 'blue') +
+  geom_density(data = test,
+               aes(dist,col=vb),
+               inherit.aes = FALSE,
+               size = 0.7) + # 1
+  facet_grid(condit ~ vb) +
+  xlab('Deviation')
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+```
+
+
+:::
+
+::: {.cell-output-display}
+![Posterior Predictive distributions for Absolute Deviance. Posterior Draws in Blue, colored lines are empirical data.](hold_temp_files/figure-html/fig-post-pred-dist-1.png){#fig-post-pred-dist width=1056}
+:::
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+vx_pred <- 
+  posterior_predict(e1_vxBMM, ndraws = 500) |> 
+  array_branch(margin=1) |> 
+   map_dfr( 
+    function(yrep_iter) {
+      test  |>
+        mutate(vx_pred = yrep_iter)
+    },
+    .id = 'iter'
+  ) |>
+  mutate(iter = as.numeric(iter))
+
+
+
+vx_pred  |>
+  filter(iter < 100) %>%
+  ggplot(aes(vx_pred, group = iter)) +
+  geom_line(alpha = .03, stat = 'density', color = 'blue') +
+  geom_density(data = test,
+               aes(vx,col=vb),
+               inherit.aes = FALSE,
+               size = 0.7) + # 1
+  facet_grid(condit ~ vb) +
+  xlab('Vx')
+```
+
+::: {.cell-output-display}
+![Posterior Predictive distributions for Vx. Posterior Draws in Blue, colored lines are empirical data.](hold_temp_files/figure-html/fig-post-pred-vx-1.png){#fig-post-pred-vx width=1056}
+:::
+:::
+
+
+
+#### Empirical vs. Predicted
+
+
+::: {.cell}
+
+```{.r .cell-code}
+{
+vx_pred  |>
+  filter(iter < 100)  |> group_by(id,condit,vb,iter) |>
+  summarise(vx_pred=mean(vx_pred)) %>%
+  ggplot(aes(x=vb,y=vx_pred,fill=condit)) + 
+  geom_flat_violin( position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,
+                   trim = FALSE, alpha = .5, colour = NA) +
+  # geom_point(aes(x = as.numeric(vb) - 0.15, y = vx_pred, colour = vb),
+  #            position = position_jitter(width = 0.05, height = 0),
+  #            size = 1, shape = 20) +
+  geom_boxplot(aes(x = vb, y = vx_pred, fill = condit),
+               outlier.shape = NA,
+               alpha = 0.5,
+               width = 0.1,
+               colour = "black") +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Predicted Vx")  
+} / {
+vx_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  summarise(vx=mean(vx)) %>%
+  ggplot(aes(x=vb,y=vx,fill=condit)) + 
+  geom_flat_violin( position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,
+                   trim = FALSE,
+                   alpha = .5,
+                   colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15,col=condit),
+             # position = position_jitter(width = 0.05),
+             position = position_jitter(width = 0.05, height = 0),
+             size = 1,
+             shape = 20) +
+  geom_boxplot(
+               outlier.shape = NA,
+               alpha = 0.5,
+               width = 0.1,
+               colour = "black") +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Vx") 
+}
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+Warning: Using the `size` aesthetic with geom_polygon was deprecated in ggplot2 3.4.0.
+ℹ Please use the `linewidth` aesthetic instead.
+```
+
+
+:::
+
+::: {.cell-output-display}
+![Bayesian Mixed Model predictions vs. Empirical Predictions - X velocity](hold_temp_files/figure-html/fig-empVsPred-1.png){#fig-empVsPred width=1056}
+:::
+:::
+
+::: {.cell}
+
+:::
+
+
+
+
+#### Different Aggregations
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+epId <- dist_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  summarise(dist=median(dist)) |>
+  ggplot(aes(x=vb,y=dist,fill=condit)) + 
+  geom_flat_violin(aes(fill=condit), position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,trim = FALSE, alpha = .5, colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15, col=condit),
+             position = position_jitter(width = 0.05, height = 0),
+             size = 1, shape = 20, alpha=.7) +
+  geom_boxplot(aes(x=vb,y=dist,fill=condit),
+               outlier.shape = NA,
+               alpha = 0.5, width = 0.1) +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Deviation - Subject level averaging") 
+
+
+
+epId 
+```
+
+::: {.cell-output-display}
+![E1. Distribution of Vx  at Participant level](hold_temp_files/figure-html/fig-empirical-distGrp1-1.png){#fig-empirical-distGrp1 width=1152}
+:::
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+epTrial <- dist_pred  |>
+  filter(iter < 2)  |> group_by(id,condit,vb) |>
+  ggplot(aes(x=vb,y=dist,fill=condit)) + 
+  geom_flat_violin(aes(fill=condit), position = position_nudge(x = 0.1, y = 0),
+                   adjust = 1.5,trim = FALSE, alpha = .5, colour = NA) +
+  geom_point(aes(x = as.numeric(vb) - 0.15, col=condit),
+             position = position_jitter(width = 0.05, height = 0),
+             size = .5, shape = 20, alpha=.7) +
+  geom_boxplot(aes(x=vb,y=dist,fill=condit),
+               outlier.shape = NA,
+               alpha = 0.5, width = 0.1) +
+  geom_hline(yintercept = 0,
+             linetype = 'dashed',
+             color = 'red',
+             size = 0.4) + 
+  coord_flip() + ggtitle("Empirical Deviation - Raw Trial") +
+   theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank())
+
+epTrial
+```
+
+::: {.cell-output-display}
+![E1. Distribution of Vx at Trial level](hold_temp_files/figure-html/fig-empirical-distGrp2-1.png){#fig-empirical-distGrp2 width=1152}
+:::
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+new_data_grid=map_dfr(1, ~data.frame(unique(test[,c("id","condit","bandInt")])))
+
+cSamp <- e1_distBMM  |> 
+  emmeans("condit",by="bandInt",at=list(bandInt=c(100,350,600,800,1000,1200)),
+          epred = TRUE, re_formula = NA) |> 
+  pairs() |> gather_emmeans_draws()  |>
+  group_by(contrast, .draw,bandInt) |> summarise(value=mean(.value), n=n())
+
+
+ ameBand <- cSamp |> ggplot(aes(x=value,y="")) + 
+  stat_halfeye() + 
+  geom_vline(xintercept=0,alpha=.4)+
+  facet_wrap(~bandInt,ncol=1) + labs(x="Marginal Effect (Constant - Varied)", y= NULL)+
+  ggtitle("Average Marginal Effect")
+
+bothConditGM <- e1_distBMM %>%
+  epred_draws(newdata = new_data_grid,ndraws = 2000, re_formula = NA) |>
+  ggplot(aes(x=.epred,y="Mean",fill=condit)) + 
+  stat_halfeye() +facet_wrap(~bandInt, ncol = 1) +
+  labs(x="Predicted Deviation", y=NULL)+
+  ggtitle("Grand Means") +theme(legend.position = "bottom")
+
+(bothConditGM | ameBand) + plot_layout(widths=c(2,1.0))
+```
+
+::: {.cell-output-display}
+![E1. Predicted Means Per Condition and Band, and Average Marginal Effect (Constant - Varied)](hold_temp_files/figure-html/fig-e1-ame-1.png){#fig-e1-ame width=960}
+:::
+:::
+
+
+
+
+:::
+ -->
+<p>```</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,7 +1,7 @@
 ---
 title: Full Dissertation
 subtitle: "The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach"
-date: 04/04/24
+#date: 04/04/24
 author:
 - name: Thomas Gorman
   affiliation: Indiana University
@@ -19,7 +19,7 @@ format:
   html: default
   hugo-md:
     echo: false
-    #include: false
+    include: true
     html-math-method: mathjax
     output-file: diss_full_hugo.md
   gfm:
@@ -34,15 +34,19 @@ format:
       - "Numbers=Proportional"
       - "Numbers=OldStyle"
     mathfont: "Libertinus Math"
-editor: 
-  markdown: 
-    wrap: 72
 prefer-html: true
 ---
 
-# Introduction
+
+
+
+# Abstract
 
 The past century of research on human learning has produced ample evidence that although learners can improve at almost any task, such improvements are often specific to the trained task, with unreliable or even nonexistent transfer or generalization to novel tasks or conditions [@barnettWhenWhereWe2002; @dettermanCaseProsecutionTransfer1993]. Such generalization challenges are of noteworthy practical relevance, given that educators, trainers, and rehabilitators typically intend for their students to be able to apply what they have learned to new situations. It is therefore important to better understand the factors that influence generalization, and to develop cognitive models that can predict when generalization is likely to occur. Such characteristics have included training difficulty, spacing, temporal order, feedback schedules, and the primary focus of the current work - the variability of training examples.
+
+This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+
+
 
 ## The study of variability
 
@@ -92,8 +96,6 @@ Project 2 shifted focus to the domain of function learning by employing a visuom
 {{< pagebreak >}}
 
 # Project 1
-
-____________________________________________________
 
 ```{r}
 #| cache: false
@@ -153,7 +155,7 @@ Exposing learners to variability during training has been demonstrated to improv
 
 ## Similarity and instance-based approaches to transfer of learning
 
-Early models of learning often assumed that discrete experiences with some task or category were not stored individually in memory, but instead promoted the formation of a summary representation, often referred to as a prototype or schema, and that exposure to novel examples would then prompt the retrieval of whichever preexisting prototype was most similar. In addition to being a landmark study on the influence of training variability, @posnerGenesisAbstractIdeas1968 (described above) also put forward an influential argument concerning the nature of the mental representations acquired during learning - namely that learners tend to abstract a prototype, or aggregate representation of the dot pattern categories, rather than encoding each individual stimuli. Recall that participants are trained on only on distortions of the category prototypes (e.g.  low, medium or high distortions), never encountering the exact prototypes during the training stage. Then, in the testing phase, participants are tested with the prototype patterns, their old training items, and novel low, medium and high distortions. The authors found that participants had the highest testing accuracy for the previously unseen prototype patterns, followed by the old training items, and then the novel low, medium and high distortions. The authors interpreted this pattern as evidence that participants had acquired prototype representation of the category, as opposed to storing each individual training instance, and that generalization was based on the similarity of the testing items to the learned prototype representations. @posnerGenesisAbstractIdeas1968 has been extremely influential,  and continues to be cited in contemporary research as clear evidence that prototype abstraction underlies the benefits of varied training. It's also referenced as a key influence in the development of "Schema Theory of Motor Learning" @schmidtSchemaTheoryDiscrete1975, which in turn influenced decades of research on the potential benefits of varied training in motor skill learning. However a number of the core assumptions utilized by @posnerGenesisAbstractIdeas1968 were later called into question both empirically and with competing theoretical accounts [@hintzmanMINERVASimulationModel1984; @hintzmanSchemaAbstractionMultipletrace1986; @palmeriCentralTendenciesExtreme2001; @zakiHighdistortionEnhancementEffect2007; @mcclellandDistributedMemoryRepresentation1985; @nosofskyInvestigationsExemplarBasedConnectionist1992]. @palmeriCentralTendenciesExtreme2001 demonstrated the both the dangers of assuming that psychological representations mimic the metric stimulus space, as well the viability of models with simpler representational assumptions. These authors conducted a near replication of the @posnerGenesisAbstractIdeas1968 study, but also had participants provide similarity judgements of the dot pattern stimuli after completing the training phase. A multidimensional scaling analysis of the similarity judgements revelead that the psychological representations of the prototype stimuli were not located in the middle of the training stimuli, but were instead extreme points in the psychological space. The authors also demonstrated the generalization patterns of @posnerGenesisAbstractIdeas1968 could be accounted for by an exemplar-based model, without any need to assume the abstraction of a prototype.
+Early models of learning often assumed that discrete experiences with some task or category were not stored individually in memory, but instead promoted the formation of a summary representation, often referred to as a prototype or schema, and that exposure to novel examples would then prompt the retrieval of whichever preexisting prototype was most similar. In addition to being a landmark study on the influence of training variability, @posnerGenesisAbstractIdeas1968 (described above) also put forward an influential argument concerning the nature of the mental representations acquired during learning - namely that learners tend to abstract a prototype, or aggregate representation of the dot pattern categories, rather than encoding each individual stimuli. Recall that participants are trained on only on distortions of the category prototypes (e.g.  low, medium or high distortions), never encountering the exact prototypes during the training stage. Then, in the testing phase, participants are tested with the prototype patterns, their old training items, and novel low, medium and high distortions. The authors found that participants had the highest testing accuracy for the previously unseen prototype patterns, followed by the old training items, and then the novel low, medium and high distortions. The authors interpreted this pattern as evidence that participants had acquired prototype representation of the category, as opposed to storing each individual training instance, and that generalization was based on the similarity of the testing items to the learned prototype representations. @posnerGenesisAbstractIdeas1968 has been extremely influential,  and continues to be cited in contemporary research as clear evidence that prototype abstraction underlies the benefits of varied training. It's also referenced as a key influence in the development of "Schema Theory of Motor Learning" @schmidtSchemaTheoryDiscrete1975, which in turn influenced decades of research on the potential benefits of varied training in motor skill learning. However a number of the core assumptions utilized by @posnerGenesisAbstractIdeas1968 were later called into question both empirically and with competing theoretical accounts [@hintzmanMINERVASimulationModel1984; @hintzmanSchemaAbstractionMultipletrace1986; @palmeriCentralTendenciesExtreme2001; @zakiHighdistortionEnhancementEffect2007; @mcclellandDistributedMemoryRepresentation1985; @nosofskyInvestigationsExemplarBasedConnectionist1992; @knappTheoryCategorizationBased1984]. @palmeriCentralTendenciesExtreme2001 demonstrated both the dangers of assuming that psychological representations mimic the metric stimulus space, as well the viability of models with simpler representational assumptions. These authors conducted a near replication of the @posnerGenesisAbstractIdeas1968 study, but also had participants provide similarity judgements of the dot pattern stimuli after completing the training phase. A multidimensional scaling analysis of the similarity judgements revelead that the psychological representations of the prototype stimuli were not located in the middle of the training stimuli, but were instead extreme points in the psychological space. The authors also demonstrated the generalization patterns of @posnerGenesisAbstractIdeas1968 could be accounted for by an exemplar-based model, without any need to assume the abstraction of a prototype.
 
 Instance-based, or exemplar-based models generally assume that learners encode each experience with a task as a separate instance/exemplar/trace, and that each encoded trace is in turn compared against novel stimuli [@estesClassificationCognition1994; @hintzmanMINERVASimulationModel1984; @medinContextTheoryClassification1978; @nosofskyAttentionSimilarityIdentificationcategorization1986; @jamiesonInstanceTheoryDomaingeneral2022]. As the number of stored instances increases, so does the likelihood that some previously stored instance will be retrieved to aid in the performance of a novel task. Stored instances are retrieved in the context of novel stimuli or tasks if they are sufficiently similar, thus suggesting that the process of computing similarity is of central importance to generalization. 
 
@@ -762,7 +764,6 @@ Our experiments demonstrate a reliable benefit of varied training in a simple pr
 
 # Project 2
 
-_______________________________________________________________________________
 
 # Introduction
 
@@ -770,7 +771,7 @@ A longstanding issue across both science and instruction has been to understand 
 
 ## Function Learning and Extrapolation
 
-The study of human function learning investigates how people learn relationships between continuous input and output values.  Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs [@deloshExtrapolationSineQua1997; @mcdanielEffectsSpacedMassed2013], or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don't contain data [@ciccioneCanHumansPerform2021; @courrieuQuickApproximationBivariate2012; @saidExtrapolationAccuracyUnderestimates2021;@schulzCommunicatingCompositionalPatterns2020].
+The study of human function learning investigates how people learn relationships between continuous input and output values.  Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs [@deloshExtrapolationSineQua1997; @mcdanielEffectsSpacedMassed2013], or situations where observers are presented with an incomplete scatterplot or line graph and make predictions about regions of the plot that don't contain data [@ciccioneCanHumansPerform2021; @courrieuQuickApproximationBivariate2012; @saidExtrapolationAccuracyUnderestimates2021;@schulzCommunicatingCompositionalPatterns2020].
 
 @carrollFunctionalLearningLearning1963 conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function.  Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by @brehmerHypothesesRelationsScaled1974,testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but  given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. @kohFunctionLearningInduction1991 employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh & Meyer developed the log-polynomial adaptive-regression model to account for their results. 
 
@@ -992,7 +993,7 @@ cdtr1 <- get_coef_details(bmm_e1_train, "conditVaried")
 | Intercept    |   106.34 |         95.46 |        117.25 |   1 |
 | conditVaried |    79.64 |         57.92 |        101.63 |   1 |
 
-: **Experiment 1 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group.  {.sm}
+: **Experiment 1 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimate indicates a greater deviation (lower accuracy) for the varied group.  {.sm}
 
 :::
 
@@ -2564,31 +2565,17 @@ In summary, this dissertation provides a comprehensive examination of the effect
 \ \
 
 
-::: {.content-visible unless-format="pdf"}
-# References
 
-::: {#refs}
-:::
-
-:::
 
 # Appendix
 
-::: {.content-visible unless-format="markdown"}
-### Appendix - Project 1 
-
-{{< include Appendix/IGAS-Supplemental.qmd >}}
-
-{{< pagebreak >}}
-
-### Appendix - Project 2 - Experiment 1 
-
-{{< include Appendix/E1_Appendix.qmd >}}
-:::
+[Apppendix](Appendix/Full_Appendix.qmd) available at tegorman13.github.io/Dissertation/Sections/Appendix.html
 
 
-::: {.content-visible when-format="pdf"}
+
 
 # References
 
-:::
+
+
+

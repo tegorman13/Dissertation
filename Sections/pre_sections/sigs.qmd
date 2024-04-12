@@ -1,0 +1,32 @@
+
+
+
+<style>
+  body {
+    text-align: center;
+  }
+</style>
+
+
+Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+requirements for the degree of Doctor of Philosophy.
+\
+\
+\
+\
+\
+\
+\
+Doctoral Committee \ \ 
+___________________________ Robert L. Goldstone, Ph.D., Co-Chair \ \
+___________________________ Robert Nosofsky, Ph.D., Co-Chair \ \
+___________________________ Peter Todd, Ph.D.
+___________________________ Mike Jones, Ph.D.
+
+
+
+\ \ \ \ 
+\ \ \ \ 
+\ \ \ \ 
+
+10/20/2023

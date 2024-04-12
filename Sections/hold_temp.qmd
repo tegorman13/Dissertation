@@ -94,3 +94,140 @@ Together, these projects contribute to a deeper understanding of the role of tra
 
 
 By taking a multi-pronged approach that combines empirical investigations across multiple experimental paradigms with computational modeling, this dissertation provides a comprehensive examination of the complex and sometimes opposing effects of training variability on learning and generalization. The contrasting results obtained from the HTT and HTW tasks underscore the importance of considering task characteristics when designing experiments to assess the influence of training manipulations. Furthermore, the computational modeling components of this work offer novel theoretical accounts for both the beneficial and detrimental effects of training variability observed in our experiments. Collectively, this dissertation highlights the value of integrating empirical and modeling approaches to uncover the cognitive mechanisms that support learning and generalization across a variety of domains.
+
+
+
+
+```{md}
+---
+title: Full Dissertation
+subtitle: "The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach"
+date: 04/04/24
+author:
+- name: Thomas Gorman
+  affiliation: Indiana University
+page-layout: full
+code-fold: true
+code-tools: true
+toc: true
+toc-location: body
+toc-title: Contents
+cache: true
+execute: 
+  warning: false
+  eval: true
+format:
+  html: default
+  hugo-md:
+    echo: false
+    #include: false
+    html-math-method: mathjax
+    output-file: diss_full_hugo.md
+  gfm:
+    echo: false
+    output: false
+    output-file: diss_full_gfm.md
+  hikmah-manuscript-pdf:
+    echo: false
+    output-file: "tg_full_disser.pdf"
+    mainfont: "Linux Libertine O"
+    mainfontoptions:
+      - "Numbers=Proportional"
+      - "Numbers=OldStyle"
+    mathfont: "Libertinus Math"
+# editor: 
+#   markdown: 
+#     wrap: 72
+prefer-html: true
+---
+
+
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/pre_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/pre_pdf.qmd >}}
+
+:::
+
+::: {.content-visible when-format="docx"}
+{{< include pre_sections/pre_docx.qmd >}}
+:::
+
+{{< pagebreak >}}
+
+
+::: column-page-inset-right
+
+# Abstract
+
+The past century of research on human learning has produced ample evidence that although learners can improve at almost any task, such improvements are often specific to the trained task, with unreliable or even nonexistent transfer or generalization to novel tasks or conditions [@barnettWhenWhereWe2002; @dettermanCaseProsecutionTransfer1993]. Such generalization challenges are of noteworthy practical relevance, given that educators, trainers, and rehabilitators typically intend for their students to be able to apply what they have learned to new situations. It is therefore important to better understand the factors that influence generalization, and to develop cognitive models that can predict when generalization is likely to occur. Such characteristics have included training difficulty, spacing, temporal order, feedback schedules, and the primary focus of the current work - the variability of training examples.
+
+This dissertation seeks to explore the cognitive underpinnings that govern the generalization of learning, focusing specifically on the role of variability during training in shaping subsequent transfer performance. A comprehensive review of the existing literature is presented, emphasizing the methodological complications associated with disentangling the confounding effects of similarity. Through a series of experiments involving several novel visuomotor tasks, this work investigates whether and how variability in training conditions affects performance in novel tasks. To theoretically account for the empirical outcomes, I employ both instance-based and connectionist computational models, both of which incorporate similarity-based mechanisms. These models serve to account for the extent to which variability influences the learners' generalization gradient, and also explain how training variation can produce both beneficial and deleterious outcomes. 
+
+{{< pagebreak >}}
+
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/toc_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/toc_pdf.qmd >}}
+
+:::
+
+
+
+{{< pagebreak >}}
+
+
+\ \
+
+
+::: {.content-visible unless-format="pdf"}
+# References
+
+::: {#refs}
+:::
+
+:::
+
+# Appendix
+
+[Apppendix](Appendix/Full_Appendix.qmd) available at tegorman13.github.io/Dissertation/Sections/Appendix.html
+
+
+
+::: {.content-visible when-format="pdf"}
+
+# References
+
+:::
+
+
+:::
+
+
+
+<!-- ::: {.content-visible unless-format="markdown"}
+### Appendix - Project 1 
+
+{{< include Appendix/IGAS-Supplemental.qmd >}}
+
+{{< pagebreak >}}
+
+### Appendix - Project 2 - Experiment 1 
+
+{{< include Appendix/E1_Appendix.qmd >}}
+:::
+ -->
+```
