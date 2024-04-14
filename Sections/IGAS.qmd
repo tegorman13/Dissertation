@@ -1,7 +1,7 @@
 ---
 title: IGAS Project
 subtitle: An instance-based model account of the benefits of varied practice in visuomotor skill
-date: last-modified
+#date: last-modified
 #page-layout: full
 code-fold: true
 code-tools: true
@@ -120,7 +120,7 @@ plot_grid(ip1,ip2,ncol=2,rel_heights=c(1))
 
 In addition to largely overlooking the potential for non-linear generalization to confound interpretations of training manipulations, the visuomotor skill learning literature also rarely considers alternatives to schema representations [@chamberlinMemoryRepresentationMotor1992]. Although schema-theory remains influential within certain literatures, instance or exemplar-based models have accounted for human behavior across myriad domains [@jamiesonInstanceTheoryDomaingeneral2022; @loganInstanceTheoryAttention2002a]. As mentioned above, instance based accounts have been shown to perform well on a variety of different tasks with motoric components [@crumpEpisodicContributionsSequential2010;@gandolfoMotorLearningField1996a;  @meighWhatMemoryRepresentation2018; @rosenbaumPlanningReachesEvaluating1995; @vandamMappingShapeVisuomotor2015]. However, such accounts have received little attention within the subdomain of visuomotor skill learning focused on the benefits of varied training.
 
-The present work examines whether the commonly observed benefits of varied training can be accounted for by between-group differences in similarity between training and testing throws. We first attempt to replicate previous work finding an advantage of varied training over constant training in a projectile launching task. We then examine the extent to which this advantage can be explained by an instance-based similarity model.
+The present work examines whether the commonly observed benefits of varied training can be accounted for by a theoretrically motivated measure of the similarity between training throws and the testing solution space. We first attempt to replicate previous work finding an advantage of varied training over constant training in a projectile launching task. We then examine the extent to which this advantage can be explained by an instance-based similarity model.
 
 # Experiment 1
 
