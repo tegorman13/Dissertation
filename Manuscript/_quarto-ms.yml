@@ -11,6 +11,10 @@ format:
       - "Numbers=Proportional"
       - "Numbers=OldStyle"
     mathfont: "Libertinus Math"
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 1.5
 
     include-in-header:
       # The \everydisplay thing makes all math blocks use \small font
@@ -28,11 +32,11 @@ format:
 
 
   # Manuscript-y Word output
-  hikmah-manuscript-odt:
-    output-file: "manuscript-ms.odt"
-    prefer-html: true
+  # hikmah-manuscript-odt:
+  #   output-file: "manuscript-ms.odt"
+  #   prefer-html: true
 
-    knitr:
-      opts_chunk:
-        dev: "ragg_png"
-        dpi: 300
+  #   knitr:
+  #     opts_chunk:
+  #       dev: "ragg_png"
+  #       dpi: 300

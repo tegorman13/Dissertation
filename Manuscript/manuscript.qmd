@@ -10,6 +10,7 @@ execute:
   echo: false
 ---
 
+
 ::: {.content-visible when-format="html"}
 
 {{< include pre_sections/pre_html.qmd >}}
@@ -18,7 +19,7 @@ execute:
 
 ::: {.content-visible when-format="pdf"}
 
-{{< include pre_sections/pre_pdf.qmd >}}
+{{< include pre_sections/pre_pdf2.qmd >}}
 
 :::
 
@@ -688,7 +689,7 @@ Also of interest is whether the IGAS model can predict the pattern of results wh
 #| label: fig-Toy-Model-dis
 #| fig.cap: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
 #| fig.width: 11
-#| fig.height: 11.5
+#| fig.height: 11.0
 
 
 # 

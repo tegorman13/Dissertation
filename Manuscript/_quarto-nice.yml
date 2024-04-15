@@ -36,7 +36,7 @@ format:
     output-file: "Full_Dissertation-nice.pdf"
     papersize: letter
     fontsize: 11pt
-    linestretch: 2
+    linestretch: 1.5
 
     # Custom fonts
     mainfont: "Linux Libertine O"

@@ -21,6 +21,7 @@ Indiana University -->
 
 \pagenumbering{gobble}
 
+\newpage
 
 <!-- \newpage
 
@@ -43,12 +44,12 @@ requirements for the degree of Doctor of Philosophy.
 
 \newpage -->
 
-\begin{centering}
+<!-- \begin{centering}
 
 \vspace*{6.5cm}
 
-@2024 \\
-\vspace{1cm} 
+@2024 \\ -->
+<!-- \vspace{1cm} 
 
 Thomas E. Gorman
 \vspace{.2cm}
@@ -61,5 +62,5 @@ Thomas E. Gorman
 \begin{center}
 \textbf{Acknowledgements}
 \end{center}
-\newpage
+\newpage -->
 
