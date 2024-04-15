@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Sections/full.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -127,17 +126,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Dissertation Manuscript</span></a>
   </div>
 </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Sections/full.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Sections/Appendix/Full_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Sections/Introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variability and Generalization</span></a>
+ <span class="menu-text">Intro</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -195,6 +201,10 @@ ul.task-list li input[type="checkbox"] {
   <iconify-icon inline="" icon="fa6-solid:arrow-up-right-from-square"></iconify-icon>  HTML <small>(new window)</small>
   </a>
 
+    <a class="btn btn-success btn-sm mb-1" href="./Sections/full.html" target="_blank">
+  <iconify-icon inline="" icon="fa6-solid:arrow-up-right-from-square"></iconify-icon>  HTML <small>(code included)</small>
+  </a>
+
   <a class="btn btn-warning btn-sm mb-1" href="./Manuscript/output/TG_Full_Dissertation.pdf" target="manuscript">
   <iconify-icon inline="" icon="fa6-solid:file-pdf"></iconify-icon>  PDF
   </a> 
@@ -203,9 +213,9 @@ ul.task-list li input[type="checkbox"] {
   <iconify-icon inline="" icon="fa6-solid:file-arrow-down"></iconify-icon>  PDF <small>(download)</small>
   </a>
 
-    <a class="btn btn-info btn-sm mb-1" target="_blank" href="./Manuscript/output/TG_Full_Dissertation.docx">
-  <iconify-icon inline="" icon="fa6-solid:file-word"></iconify-icon>  DOCX <small>(download)</small>
-  </a>
+    <!-- <a class="btn btn-info btn-sm mb-1" target="_blank" href="/Manuscript/output/TG_Full_Dissertation.docx">
+  <iconify-icon inline="" icon="fa6-solid:file-word"></iconify-icon> &ensp;DOCX <small>(download)</small>
+  </a> -->
   
   <!-- <a class="btn btn-info btn-sm mb-1" target="_blank" href="/Manuscript/manuscript.md">
   <iconify-icon inline="" icon="fa6-solid:file-word"></iconify-icon> &ensp;md <small>(download)</small>
@@ -609,17 +619,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           }
         });
       }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./Sections/full.html" class="pagination-link" aria-label="Full Dissertation">
-        <span class="nav-page-text">Full Dissertation</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

@@ -1,4 +1,4 @@
-\tableofcontents
+<!-- \tableofcontents -->
 \newpage
 \listoffigures
 \newpage

@@ -24,9 +24,9 @@ ggh4x
 htmltools
 future
 furrr
+ez
 wesanderson
 glue
-ez
 plyr
 sciplot
 magrittr
@@ -55,11 +55,3 @@ ggraph
 reactable
 ggstance
 ggdist
-pacman
-bayesplot
-marginaleffects
-equatiomatic
-broom.mixed
-ggforce
-gghalves
-pander

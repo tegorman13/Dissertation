@@ -33,7 +33,10 @@ format:
   hikmah-pdf:
     cite-method: citeproc
     keep-md: true
-    output-file: "Full_Dissertation-nice3.pdf"
+    output-file: "Full_Dissertation-nice.pdf"
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 2
 
     # Custom fonts
     mainfont: "Linux Libertine O"
@@ -42,6 +45,12 @@ format:
       - "Numbers=OldStyle"
     sansfont: "IBM Plex Sans"
     mathfont: "Libertinus Math"
+    geometry:
+      - top=1in     
+      - bottom=1in  
+      - left=1in    
+      - right=1in  
+      - heightrounded
     # linestretch: 1.05
 
     include-in-header:

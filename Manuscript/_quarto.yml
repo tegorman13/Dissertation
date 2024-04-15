@@ -1,5 +1,7 @@
 project:
   title: "Manuscript"
+  render: 
+  - "manuscript.qmd"
 
 execute: 
   warning: false
@@ -13,7 +15,7 @@ csl: ../Assets/Bib/apa7.csl
 
 profile:
   group: 
-    - [plain, nice, thesis, ms, md]
+    - [plain, nice,thesis, ms, md]
 
 # execute:
 #   freeze: auto

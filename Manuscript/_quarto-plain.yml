@@ -12,15 +12,16 @@ execute:
   echo: false
 
 format:
-  docx:
-    #prefer-html: true
-    output-file: "TG_Full_Dissertation.docx"
-    toc: true
+  # docx:
+  #   #prefer-html: true
+  #   output-file: "TG_Full_Dissertation.docx"
+  #   toc: true
   html:
     toc: true
     language: 
       title-block-published: "Latest version"
-    shift-heading-level-by: 1
+    shift-heading-level-by: 0
+    toc-depth: 4
     link-citations: true
     theme: 
        #- ../Assets/Style/lux-modified.scss 
@@ -39,6 +40,10 @@ format:
     cite-method: citeproc
     output-file: "TG_Full_Dissertation.pdf"
     mathfont: "Libertinus Math"
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 1.5
           # Document styling
     geometry:
       - top=1in     
@@ -73,6 +78,10 @@ format:
     fig-format: jpeg
     echo: true
     cite-method: citeproc
+  gfm:
+    echo: false
+    output: false
+    output-file: Dissertation_gfm.md
 
 
     # knitr:

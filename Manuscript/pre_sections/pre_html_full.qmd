@@ -1,0 +1,52 @@
+<div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
+ The Role of Variability in Learning Generalization: A Computational Modeling Approach
+</div>
+
+<div style="text-align: center; margin-top: 300px; font-size: 32px;">
+  Thomas E. Gorman
+</div>
+
+
+Second Page and so on...
+<div style="text-align: justify; margin-top: 700px;">
+  Submitted to the faculty of the University Graduate School in partial fulfillment of the
+  requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
+  Sciences and the Cognitive Science Program, Indiana University
+  Indiana University
+</div>
+
+<div style="margin-top: 400px;">
+  <!-- Your page numbering if needed -->
+</div>
+
+<div style="page-break-before: always;"></div>
+
+<!-- Committee Members Page -->
+<div style="text-align: center; margin-top: 300px;">
+  Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
+  requirements for the degree of Doctor of Philosophy.
+</div>
+
+<div style="text-align: center; margin-top: 300px;">
+  _____________________________  Robert L. Goldstone, PhD<br><br>
+  _____________________________  Robert Nosofsky, PhD<br><br>
+  _____________________________  Peter Todd, PhD<br><br>
+  _____________________________  Mike Jones, PhD
+</div>
+
+<div style="page-break-before: always;"></div>
+
+
+
+<div style="page-break-before: always;"></div>
+
+<!-- Acknowledgements -->
+<div style="text-align: center; font-weight: bold; font-size: 24px;">
+  Acknowledgements
+</div>
+<div style="text-align: center; margin-top: 700px; font-size: 24px;">
+   
+</div>
+
+
+<div style="page-break-before: always;"></div>

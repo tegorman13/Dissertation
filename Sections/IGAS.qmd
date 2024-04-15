@@ -8,6 +8,7 @@ code-tools: true
 toc: true
 toc-location: body
 toc-title: Contents
+toc-depth: 4
 format:
   html: default
   hugo-md:
