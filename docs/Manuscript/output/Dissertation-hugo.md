@@ -471,16 +471,16 @@ The major adjustment of Experiment 3 is for participants to receive ordinal feed
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.jpeg)
 
-| Term                                                | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+| Term                                         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
 |:------------------------------------|-------:|-----------:|-----------:|-----:|
-| Intercept                                           |   288.65 |        199.45 |        374.07 | 1.00 |
-| conditVaried                                        |   -40.19 |       -104.68 |         23.13 | 0.89 |
-| bandTypeExtrapolation                               |   -23.35 |        -57.28 |         10.35 | 0.92 |
-| bandOrderReverse                                    |   -73.72 |       -136.69 |        -11.07 | 0.99 |
-| **conditVaried:bandTypeExtrapolation**              |    52.66 |         14.16 |         90.23 | 1.00 |
-| conditVaried:bandOrderReverse                       |   -37.48 |       -123.28 |         49.37 | 0.80 |
-| bandTypeExtrapolation:bandOrderReverse              |    80.69 |         30.01 |        130.93 | 1.00 |
-| conditVaried:bandTypeExtrapolation:bandOrderReverse |    30.42 |        -21.00 |         81.65 | 0.87 |
+| Intercept                                    |   288.65 |        199.45 |        374.07 | 1.00 |
+| conditVaried                                 |   -40.19 |       -104.68 |         23.13 | 0.89 |
+| bandTypeExtrapolation                        |   -23.35 |        -57.28 |         10.35 | 0.92 |
+| bandOrderReverse                             |   -73.72 |       -136.69 |        -11.07 | 0.99 |
+| **conditVaried:bandTypeExtrapolation**       |    52.66 |         14.16 |         90.23 | 1.00 |
+| conditVaried:bandOrderReverse                |   -37.48 |       -123.28 |         49.37 | 0.80 |
+| bandTypeExtrapolation:bandOrderReverse       |    80.69 |         30.01 |        130.93 | 1.00 |
+| conditVaried:bandTypeExtrapolation:bandOrder |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 *Testing Accuracy.* <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a> presents the results of the Bayesian mixed efects model predicting absolute deviation from the target band during the testing stage. There was no significant main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68, 23.13\]; pd = 89.31%, or band type,$\beta$ = -23.35, 95% CrI \[-57.28, 10.35\]; pd = 91.52%. However the effect of band order was significant, with the reverse order condition showing lower deviations, $\beta$ = -73.72, 95% CrI \[-136.69, -11.07\]; pd = 98.89%. The interaction between training condition and band type was also significant $\beta$ = 52.66, 95% CrI \[14.16, 90.23\]; pd = 99.59%, with the varied condition showing disproprionately large deviations on the extrapolation bands compared to the constant group. There was also a significant interaction between band type and band order, $\beta$ = 80.69, 95% CrI \[30.01, 130.93\]; pd = 99.89%, such that the reverse order condition showed larger deviations on the extrapolation bands. No other interactions were significant.
 

@@ -1937,16 +1937,16 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.jpeg)
 
-| Term                                                | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
-|:----------------------------------------------------|---------:|--------------:|--------------:|-----:|
-| Intercept                                           |   288.65 |        199.45 |        374.07 | 1.00 |
-| conditVaried                                        |   -40.19 |       -104.68 |         23.13 | 0.89 |
-| bandTypeExtrapolation                               |   -23.35 |        -57.28 |         10.35 | 0.92 |
-| bandOrderReverse                                    |   -73.72 |       -136.69 |        -11.07 | 0.99 |
-| **conditVaried:bandTypeExtrapolation**              |    52.66 |         14.16 |         90.23 | 1.00 |
-| conditVaried:bandOrderReverse                       |   -37.48 |       -123.28 |         49.37 | 0.80 |
-| bandTypeExtrapolation:bandOrderReverse              |    80.69 |         30.01 |        130.93 | 1.00 |
-| conditVaried:bandTypeExtrapolation:bandOrderReverse |    30.42 |        -21.00 |         81.65 | 0.87 |
+| Term                                         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+|:---------------------------------------------|---------:|--------------:|--------------:|-----:|
+| Intercept                                    |   288.65 |        199.45 |        374.07 | 1.00 |
+| conditVaried                                 |   -40.19 |       -104.68 |         23.13 | 0.89 |
+| bandTypeExtrapolation                        |   -23.35 |        -57.28 |         10.35 | 0.92 |
+| bandOrderReverse                             |   -73.72 |       -136.69 |        -11.07 | 0.99 |
+| **conditVaried:bandTypeExtrapolation**       |    52.66 |         14.16 |         90.23 | 1.00 |
+| conditVaried:bandOrderReverse                |   -37.48 |       -123.28 |         49.37 | 0.80 |
+| bandTypeExtrapolation:bandOrderReverse       |    80.69 |         30.01 |        130.93 | 1.00 |
+| conditVaried:bandTypeExtrapolation:bandOrder |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 *Testing Accuracy.*
 <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a> presents the
