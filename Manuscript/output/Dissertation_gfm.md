@@ -1745,7 +1745,7 @@ Finally, to assess the ability of both conditions to discriminate
 between velocity bands, we fit a model predicting velocity as a function
 of training condition and velocity band, with random intercepts and
 random slopes for each participant. See
-<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 8</a> for the full
+<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 7</a> for the full
 model results. The estimated coefficient for training condition ($\beta$
 = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the
 varied group tends to produce harder throws than the constant group,
@@ -1759,22 +1759,13 @@ The significant negative estimate for the interaction between slope and
 condition ($\beta$ = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%),
 suggests that the discrimination was modulated by training condition,
 with the varied participants showing less sensitivity between bands than
-the constant condition. This difference is depicted visually in
-<a href="#fig-e1-test-vx" class="quarto-xref">Figure 14</a>.
+the constant condition (see
+<a href="#fig-e1-test-vx" class="quarto-xref">Figure 14</a> and
+<a href="#fig-e1-bmm-vx" class="quarto-xref">Figure 15</a>).
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.jpeg)
 
-<div class="cell-output-display">
-
-![Experiment 1 Discrimination. A) Conditional effect of training
-condition and Band. Ribbons indicate 95% HDI. The steepness of the lines
-serves as an indicator of how well participants discriminated between
-velocity bands. B) The distribution of slope coefficients for each
-condition. Larger slopes indicates better discrimination. C) Individual
-participant slopes. Error bars represent 95%
-HDI.](manuscript.markdown_strict_files/figure-markdown_strict/tbl-e1-bmm-vx-1.jpeg)
-
-</div>
+![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.jpeg)
 
 ### Experiment 1 Summary
 
@@ -1815,7 +1806,7 @@ completed the experiment (Varied: 55, Constant: 55).
   
 
 *Training*.
-<a href="#fig-e2-train-dev" class="quarto-xref">Figure 15</a> presents
+<a href="#fig-e2-train-dev" class="quarto-xref">Figure 16</a> presents
 the deviations across training blocks for both constant and varied
 training groups. We again compared training performance on the band
 common to both groups (600-800). The full model results are shown in
@@ -1836,14 +1827,14 @@ constant group in the final training block, ( $\beta$ = 36.15, 95% CrI
 from the target band as influenced by training condition (Varied
 vs. Constant) and band type (training vs. extrapolation bands). The
 results, summarized in
-<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 10</a>, reveal no
+<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 9</a>, reveal no
 significant main effect of training condition ($\beta$ = -20.58, 95% CrI
 \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between
 training condition and band type was significant ($\beta$ = 82, 95% CrI
 \[41.89, 121.31\]; pd = 100%), with the varied group showing
 disproportionately larger deviations compared to the constant group on
 the extrapolation bands (see
-<a href="#fig-e2-test-dev" class="quarto-xref">Figure 16</a>).
+<a href="#fig-e2-test-dev" class="quarto-xref">Figure 17</a>).
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.jpeg)
 
@@ -1859,28 +1850,19 @@ conditions to discriminate between velocity bands, we fit a model
 predicting velocity as a function of training condition and velocity
 band, with random intercepts and random slopes for each participant. The
 full model results are shown in
-<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 12</a>. The overall
+<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 10</a>. The overall
 slope on target velocity band predictor was significantly positive,
 ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that
 participants exhibited discrimination between bands. The interaction
 between slope and condition was not significant, ($\beta$ = -0.06, 95%
 CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did
 not differ in their ability to discriminate between bands (see
-<a href="#fig-e2-test-vx" class="quarto-xref">Figure 17</a>).
+<a href="#fig-e2-test-vx" class="quarto-xref">Figure 18</a> and
+<a href="#fig-e2-bmm-vx" class="quarto-xref">Figure 19</a>).
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.jpeg)
 
-<div class="cell-output-display">
-
-![Experiment 2 Discrimination. A) Conditional effect of training
-condition and Band. Ribbons indicate 95% HDI. The steepness of the lines
-serves as an indicator of how well participants discriminated between
-velocity bands. B) The distribution of slope coefficients for each
-condition. Larger slopes indicates better discrimination. C) Individual
-participant slopes. Error bars represent 95%
-HDI.](manuscript.markdown_strict_files/figure-markdown_strict/tbl-e2-bmm-vx-1.jpeg)
-
-</div>
+![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.jpeg)
 
 ### Experiment 2 Summary
 
@@ -1921,9 +1903,9 @@ n=46 in the Varied-Reverse condition.
 | conditVaried:bandOrderReverse |   -77.02 |       -114.16 |        -39.61 | 1.00 |
 
 *Training*.
-<a href="#fig-e3-train-dev" class="quarto-xref">Figure 18</a> displays
+<a href="#fig-e3-train-dev" class="quarto-xref">Figure 20</a> displays
 the average deviations from the target band across training blocks, and
-<a href="#tbl-e3-train-dist" class="quarto-xref">Table 13</a> shows the
+<a href="#tbl-e3-train-dist" class="quarto-xref">Table 11</a> shows the
 results of the Bayesian regression model predicting the deviation from
 the common band at the end of training (600-800 for reversed order, and
 800-1000 for original order conditions). The main effect of training
@@ -1949,7 +1931,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 | conditVaried:bandTypeExtrapolation:bandOrder |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 *Testing Accuracy.*
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a> presents the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 12</a> presents the
 results of the Bayesian mixed efects model predicting absolute deviation
 from the target band during the testing stage. There was no significant
 main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68,
@@ -1985,7 +1967,7 @@ significant.
 
 *Testing Discrimination.* The full results of the discrimination model
 are presented in
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 14</a>. For the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 12</a>. For the
 purposes of assessing group differences in discrimination, only the
 coefficients including the band variable are of interest. The baseline
 effect of band represents the slope cofficient for the constant
@@ -1997,11 +1979,13 @@ interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23,
 band order, and target band was significant, $\beta$ = 0.42, 95% CrI
 \[0.17, 0.7\]; pd = 99.96% - indicating a greater slope for the varied
 condition trained with reverse order bands. This interaction is shown in
-<a href="#fig-e3-test-vx" class="quarto-xref">Figure 20</a>, where the
+<a href="#fig-e3-test-vx" class="quarto-xref">Figure 22</a>, where the
 steepness of the best fitting line for the varied-reversed condition is
 noticably steeper than the other conditions.
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.jpeg)
+
+
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.jpeg)
 
@@ -2083,9 +2067,9 @@ function, found that participants consistently demonstrated knowledge
 of, or a bias towards, the origin point (see Kwantes & Neal (2006) for
 additional evidence of such a bias in function learning tasks).
 
-See <a href="#tbl-alm-exam" class="quarto-xref">Table 16</a> for a full
+See <a href="#tbl-alm-exam" class="quarto-xref">Table 14</a> for a full
 specification of the equations that define ALM and EXAM, and
-<a href="#fig-alm-diagram" class="quarto-xref">Figure 22</a> for a
+<a href="#fig-alm-diagram" class="quarto-xref">Figure 24</a> for a
 visual representation of the ALM model.
 
 <div class="column-page-inset-right">
@@ -2684,9 +2668,9 @@ cores.
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.jpeg)
 
 The posterior distributions of the $c$ and $lr$ parameters are shown
-<a href="#fig-htw-post-dist" class="quarto-xref">Figure 23</a>, and
+<a href="#fig-htw-post-dist" class="quarto-xref">Figure 25</a>, and
 model predictions are shown alongside the empirical data in
-<a href="#fig-cm-vx-pat" class="quarto-xref">Figure 25</a>. There were
+<a href="#fig-cm-vx-pat" class="quarto-xref">Figure 27</a>. There were
 substantial individual differences in the posteriors of both parameters,
 with the within-group individual differences generally swamped any
 between-group or between-model differences. The magnitude of these
@@ -2698,7 +2682,7 @@ generate a posterior predictive distribution of the observed data for
 each participant, which then allows us to compare the empirical data to
 the full range of predictions from each model. Aggregated residuals are
 displayed in
-<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 24</a>. The
+<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 26</a>. The
 pattern of training stage residual errors are unsurprising across the
 combinations of models and fitting method . Differences in training
 performance between ALM and EXAM are generally minor (the two models
@@ -2717,18 +2701,18 @@ not constrained, by the training data. All subsequent analyses and
 discussion will thus focus on the testing stage.
 
 The residuals of the model predictions for the testing stage
-(<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 24</a>) also
+(<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 26</a>) also
 show an unsurprising pattern across fitting methods - with models fit
 only to the test data showing the best performance, followed by models
 fit to both training and test data, and with models fit only to the
 training data showing the worst performance (note that y axes are scaled
 different between plots). Although EXAM tends to perform better for both
 Constant and Varied participants (see also
-<a href="#fig-ee-e1" class="quarto-xref">Figure 26</a>), the relative
+<a href="#fig-ee-e1" class="quarto-xref">Figure 28</a>), the relative
 advantage of EXAM is generally larger for the Constant group - a pattern
 consistent across all three fitting methods. The primary predictive
 difference between ALM and EXAM is made clear in
-<a href="#fig-cm-vx-pat" class="quarto-xref">Figure 25</a>, which
+<a href="#fig-cm-vx-pat" class="quarto-xref">Figure 27</a>, which
 directly compares the observed data against the posterior predictive
 distributions for both models. Regardless of how the models are fit,
 only EXAM can capture the pattern where participants are able to
@@ -3787,7 +3771,7 @@ the appendix. The model fitting results for Experiments 2 and 3 closely
 mirrored those observed in Experiment 1. The Bayesian regression models
 predicting model error as a function of Model (ALM vs. EXAM), Condition
 (Constant vs. Varied), and their interaction (see
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>) revealed a
+<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 17</a>) revealed a
 consistent main effect of Model across all three experiments. The
 negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39,
 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI
@@ -3807,7 +3791,7 @@ Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd =
 99.83%), indicating that the relative advantage of EXAM over ALM was
 only more pronounced in the original order condition, and not the
 reverse order condition (see
-<a href="#fig-e2_e3_ae" class="quarto-xref">Figure 28</a>).
+<a href="#fig-e2_e3_ae" class="quarto-xref">Figure 30</a>).
 
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.jpeg)
 
@@ -3817,9 +3801,9 @@ over the Associative Learning Model (ALM). This preference for EXAM was
 particularly pronounced for participants in the constant training
 conditions (note the positive coefficients on ModelEXAM:conditVaried
 interaction terms
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 19</a>). This
+<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 17</a>). This
 pattern is clearly illustrated in
-<a href="#fig-htw-best-model" class="quarto-xref">Figure 29</a>, which
+<a href="#fig-htw-best-model" class="quarto-xref">Figure 31</a>, which
 plots the difference in model errors between ALM and EXAM for each
 individual participant. Both varied and constant conditions have a
 greater proportion of subjects better fit by EXAM (positive error
@@ -3844,12 +3828,12 @@ fall in between the constant training band and the 0 point in experiment
 
 The fits to the individual participants also reveal a number of
 interesting cases where the models struggle to capture the data
-(<a href="#fig-htw-indv-pred" class="quarto-xref">Figure 30</a>). For
+(<a href="#fig-htw-indv-pred" class="quarto-xref">Figure 32</a>). For
 example participant 68 exhibits a strong a strong non-monotonicity in
 the highest velocity band, a pattern which ALM can mimic, but which EXAM
 cannot capture, given it’s to enforce a simple linear relationship
 between target velocity and response. Participant 70 (lower right corner
-of <a href="#fig-htw-indv-pred" class="quarto-xref">Figure 30</a>) had a
+of <a href="#fig-htw-indv-pred" class="quarto-xref">Figure 32</a>) had a
 roughly parabolic response pattern in their observed data, a pattern
 which neither model can properly reproduce, but which causes EXAM to
 perform particularly poorly.
@@ -4066,7 +4050,7 @@ detrimental to performance in simple extrapolation tasks.
 
 The HTT and HTW tasks differ across numerous dimensions that may be
 relevant to the opposing patterns observed in the two projects (see
-<a href="#tbl-task-diff" class="quarto-xref">Table 20</a> provides for a
+<a href="#tbl-task-diff" class="quarto-xref">Table 18</a> provides for a
 detailed comparison of the two tasks).
 
 In HTT, the salient perceptual elements of the task (i.e. the launching
