@@ -23,10 +23,14 @@ format:
     shift-heading-level-by: 0
     toc-depth: 4
     link-citations: true
+    page-layout: full
+    format-links: [pdf, gfm]
     theme: 
        #- ../Assets/Style/lux-modified.scss 
-       - zephyr
+       - cosmo
        - custom.scss
+       - ../Assets/Style/style.scss
+    css: ../Assets/Style/calloutTG.css
     citeproc: false
     filters: 
       - "_extensions/wordcount/citeproc.lua"
