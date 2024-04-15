@@ -25,7 +25,7 @@ A longstanding issue across both science and instruction has been to understand 
 
 ## Function Learning and Extrapolation
 
-The study of human function learning investigates how people learn relationships between continuous input and output values.  Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs [@deloshExtrapolationSineQua1997; @mcdanielEffectsSpacedMassed2013], or situations where observers are presented with an incomplete scatterplot or line graph and make predictions about regions of the plot that don't contain data [@ciccioneCanHumansPerform2021a; @courrieuQuickApproximationBivariate2012; @saidExtrapolationAccuracyUnderestimates2021;@schulzCommunicatingCompositionalPatterns2020].
+The study of human function learning investigates how people learn relationships between continuous input and output values.  Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs [@deloshExtrapolationSineQua1997; @mcdanielEffectsSpacedMassed2013], or situations where observers are presented with an incomplete scatterplot or line graph and make predictions about regions of the plot that don't contain data [@ciccioneCanHumansPerform2021; @courrieuQuickApproximationBivariate2012; @saidExtrapolationAccuracyUnderestimates2021;@schulzCommunicatingCompositionalPatterns2020].
 
 @carrollFunctionalLearningLearning1963 conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function.  Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by @brehmerHypothesesRelationsScaled1974,testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but  given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. @kohFunctionLearningInduction1991 employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh & Meyer developed the log-polynomial adaptive-regression model to account for their results. 
 
@@ -109,7 +109,6 @@ To account for the empirical results, we will apply a series of computational mo
 
 *Task.* The "Hit The Wall" (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the "wall" at target speed indicated at the top of the screen (see @fig-htw-task). The target velocities were given as a range, or band, of acceptable velocity values  (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
 
-/
 ```{r out.width = "60%", echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 #| label: fig-htw-task
 #| fig-cap: The Hit the wall task. Participants launch the blue ball to hit the red wall at the target velocity band indicated at the top of the screen. The ball must be released from within the orange square - but the location of release, and the location at which the ball strikes the wall are both irrelevant to the task feedback. 
@@ -185,8 +184,8 @@ Each model was set to run with 4 chains, 5000 iterations per chain, with the fir
 | Group Comparison         | Code                                                        | Data                 |
 | ------------------------ | ----------------------------------------------------------- | -------------------- |
 | End of Training Accuracy | `` brm(dist ~ condit) ``                                    | Final Training Block |
-| Test Accuracy            | `` brm(dist ~ condit * bandType + (1|id) + (1|bandInt) `` | All Testing trials   |
-| Band Discrimination      | `` brm(vx ~ condit * band +(1 + bandInt|id) ``             | All Testing Trials   |
+| Test Accuracy            | `` brm(dist ~ condit * bandType + (1|id) + (1|band) `` | All Testing trials   |
+| Band Discrimination      | `` brm(vx ~ condit * band +(1 + band|id) ``             | All Testing Trials   |
 \
 
 In each experiment we compare varied and constant conditions in terms of 1) accuracy in the final training block; 2) testing accuracy as a function of  band type (trained vs. extrapolation bands); 3) extent of discrimination between all six testing bands. We quantified accuracy as the absolute deviation between the response velocity and the nearest boundary of the target  band. Thus, when the target band was velocity 600-800, throws of 400, 650, and 900 would result in deviation values of 200, 0, and 100, respectively. The degree of discrimination between bands was index by fitting a linear model predicting the response velocity as a function of the target velocity. Participants who reliably discriminated between velocity bands tended to haves slope values \~1, while participants who made throws irrespective of the current target band would have slopes \~0.
@@ -203,7 +202,7 @@ p1 <- trainE1 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
     facet_wrap(~vb)+
     scale_x_continuous(breaks = seq(1, nbins + 1)) +
     theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
+    labs(y = "Absolute Deviation", x="Training Block") 
 #ggsave(here("Assets/figs/e1_train_deviation.png"), p1, width = 8, height = 4,bg="white")
 p1
 ```
@@ -243,7 +242,7 @@ cdtr1 <- get_coef_details(bmm_e1_train, "conditVaried")
 | Intercept    |   106.34 |         95.46 |        117.25 |   1 |
 | conditVaried |    79.64 |         57.92 |        101.63 |   1 |
 
-: **Experiment 1 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group.  {.sm}
+: **Experiment 1 - End of training performance**. Comparing final training block accuracy in band common to both groups. The Intercept represents the average of the baseline condition (constant training), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate). {.sm}
 
 :::
 
@@ -292,7 +291,7 @@ cdted3 <-get_coef_details(bmtd, "conditVaried:bandTypeExtrapolation")
 | conditVaried:bandTypeExtrapolation |    66.46 |         32.76 |         99.36 | 1.0 |
 
 
-: **Experiment 1 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficients  indicate larger deviations from the baselines (Condition=constant & bandType=Trained) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands {.striped .hover .sm}
+: **Experiment 1 testing accuracy**. Main effects of condition and band type (training vs. extrapolation bands), and the interaction between the two factors. The Intercept represents the baseline condition (constant training & trained bands). Larger coefficients indicate larger deviations from the baselines - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate). {.hover .sm}
 :::
 
 
@@ -302,13 +301,16 @@ cdted3 <-get_coef_details(bmtd, "conditVaried:bandTypeExtrapolation")
 
 ```{r}
 #| label: fig-e1-test-dev
-#| fig-cap:  A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% credible intervals.
+#| fig-cap: Experiment 1 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals.
+#| fig-width: 11
+#| fig-height: 7
+
 
 pe1td <- testE1 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
     stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
     stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
   theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x="Band", y="Deviation From Target")
+  labs(x="Band", y="Absolute Deviation From Target Band")
 
 condEffects <- function(m,xvar){
   m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
@@ -320,7 +322,7 @@ condEffects <- function(m,xvar){
 
 pe1ce <- bmtd |> emmeans( ~condit + bandType) |>
   gather_emmeans_draws() |>
- condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type")
+ condEffects(bandType) + labs(y="Absolute Deviation From Target Band", x="Band Type")
 
 p2 <- (pe1td + pe1ce) + plot_annotation(tag_levels= 'A')
 #ggsave(here::here("Assets/figs", "e1_test-dev.png"), p2, width=8, height=4, bg="white")
@@ -357,19 +359,19 @@ intCoef1 <- get_coef_details(e1_vxBMM, "conditVaried:bandInt")
 | Band         |     0.71 |          0.62 |          0.80 | 1.00 |
 | condit\*Band |    -0.14 |         -0.26 |         -0.01 | 0.98 |
 
-Experiment 1. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs. Varied) and Velocity Band. Larger coefficients on Band represent greater sensitivity/discrimination.  {.striped .hover .sm}
+**Experiment 1 Testing Discrimination**. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs. Varied) and Velocity Band. Larger coefficients for the Band term reflect a larger slope, or greater sensitivity/discrimination. The interaction between condit and Band indicates the difference between constant and varied slopes. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate). {.hover .sm}
 :::
 
 
-Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See @tbl-e1-bmm-vx for the full model results. The estimated coefficient for training condition ($\beta$ = `r cd1$estimate`, 95% CrI \[`r cd1$conf.low`, `r cd1$conf.high`\], pd = `r cd1$pd`) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = `r sc1$estimate` 95% CrI \[`r sc1$conf.low`, `r sc1$conf.high`\], pd = `r sc1$pd`). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition ($\beta$ = `r intCoef1$estimate`, 95% CrI \[`r intCoef1$conf.low`, `r intCoef1$conf.high`\], pd = `r intCoef1$pd`), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in @fig-e1-test-vx.
+Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See @tbl-e1-bmm-vx for the full model results. The estimated coefficient for training condition ($\beta$ = `r cd1$estimate`, 95% CrI \[`r cd1$conf.low`, `r cd1$conf.high`\], pd = `r cd1$pd`) suggests that the varied group tends to produce harder throws than the constant group, though is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = `r sc1$estimate` 95% CrI \[`r sc1$conf.low`, `r sc1$conf.high`\], pd = `r sc1$pd`). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition ($\beta$ = `r intCoef1$estimate`, 95% CrI \[`r intCoef1$conf.low`, `r intCoef1$conf.high`\], pd = `r intCoef1$pd`), suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition. This difference is depicted visually in @fig-e1-test-vx.
 
 
 
 ```{r}
 #| label: fig-e1-test-vx
-#| fig-cap: Empirical distribution of velocities producing in testing stage. Translucent bands with dash lines indicate the correct range for each velocity band. 
+#| fig-cap: Experiment 1. Empirical distribution of velocities producing in testing stage. Translucent bands with dashed lines indicate the correct range for each velocity band. 
 #| fig-width: 11
-#| fig-height: 9
+#| fig-height: 8
  
 testE1 %>% group_by(id,vb,condit) |> plot_distByCondit()
 
@@ -381,8 +383,8 @@ testE1 %>% group_by(id,vb,condit) |> plot_distByCondit()
 
 ```{r}
 #| label: tbl-e1-bmm-vx
-#| fig-cap: Experiment 1. Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. 
-#| fig-height: 9
+#| fig-cap: Experiment 1 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI.
+#| fig-height: 7
 #| fig-width: 11
 
 
@@ -462,9 +464,6 @@ trainE2_max <- trainE2 |> filter(Trial_Bin == nbins, bandInt==600)
 The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see @fig-design-e2). The Varied group trained on bands 100-300, 350-550, 600-800,  and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).
   
 
-
-
-
 ```{dot}
 //| label: fig-design-e2
 //| fig-cap: "Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1. "
@@ -494,8 +493,6 @@ digraph {
   
 
 
-
-   
 ### Results
 
 ```{r}
@@ -508,7 +505,7 @@ p1 <- trainE2 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
     facet_wrap(~vb)+
     scale_x_continuous(breaks = seq(1, nbins + 1)) +
     theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
+    labs(y = "Absolute Deviation", x="Training Block") 
 #ggsave(here("Assets/figs/e2_train_deviation.png"), p1, width = 8, height = 4,bg="white")
 p1
 ```
@@ -542,7 +539,7 @@ cdtr2 <- get_coef_details(bmm_e2_train, "conditVaried")
 | Intercept    |    91.01 |         80.67 |        101.26 |   1 |
 | conditVaried |    36.15 |         16.35 |         55.67 |   1 |
 
-: **Experiment 2 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.  {.sm}
+: **Experiment 2 - End of training performance**. The Intercept represents the average of the baseline condition (constant training), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate). {.sm}
 
 :::
 
@@ -578,7 +575,7 @@ cd2ted3 <-get_coef_details(bmtd2, "conditVaried:bandTypeExtrapolation")
 | conditVaried:bandTypeExtrapolation |    82.00 |         41.89 |        121.31 | 1.00 |
 
 
-: **Experiment 2 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. Larger coefficient estimates indicate larger deviations from the baselines (constant & trained bands) - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands {.striped .hover .sm}
+: **Experiment 2 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition (constant training & trained bands). Larger coefficients indicate larger deviations from the baselines - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate). {.hover .sm}
 :::
 \ \
 
@@ -587,8 +584,9 @@ cd2ted3 <-get_coef_details(bmtd2, "conditVaried:bandTypeExtrapolation")
 
 ```{r}
 #| label: fig-e2-test-dev
-#| fig-cap:  A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
-#| eval: TRUE
+#| fig-cap: Experiment 2 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals.
+#| fig-width: 11
+#| fig-height: 7
 
 
 condEffects <- function(m,xvar){
@@ -645,7 +643,7 @@ intCoef2 <- get_coef_details(e2_vxBMM, "conditVaried:bandInt")
 | Band         |     0.71 |          0.58 |          0.84 | 1.00 |
 | condit\*Band |    -0.06 |         -0.24 |          0.13 | 0.73 |
 
-Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band {.striped .hover .sm}
+**Experiment 2 Testing Discrimination**.  Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs. Varied) and Velocity Band. Larger coefficients for the Band term reflect a larger slope, or greater sensitivity/discrimination. The interaction between condit and Band indicates the difference between constant and varied slopes. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate) {.hover .sm}
 :::
     
 *Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in @tbl-e2-bmm-vx. The overall slope on target velocity band predictor was significantly positive, ($\beta$ = `r sc2$estimate`, 95% CrI \[`r sc2$conf.low`, `r sc2$conf.high`\]; pd= `r sc2$pd`), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, ($\beta$ = `r intCoef2$estimate`, 95% CrI \[`r intCoef2$conf.low`, `r intCoef2$conf.high`\]; pd= `r intCoef2$pd`), suggesting that the two conditions did not differ in their ability to discriminate between bands (see @fig-e2-test-vx). 
@@ -654,9 +652,9 @@ Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Con
 
 ```{r}
 #| label: fig-e2-test-vx
-#| fig-cap: E2 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band. 
+#| fig-cap: Experiment 2. Empirical distribution of velocities produced in the testing stage. Translucent bands with dash lines indicate the correct range for each velocity band.  
 #| fig-width: 11
-#| fig-height: 9
+#| fig-height: 8
 testE2 %>% group_by(id,vb,condit) |> plot_distByCondit()
 
 ```
@@ -664,8 +662,8 @@ testE2 %>% group_by(id,vb,condit) |> plot_distByCondit()
 
 ```{r}
 #| label: tbl-e2-bmm-vx
-#| fig-cap: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. 
-#| fig-height: 9
+#| fig-cap: Experiment 2 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI.
+#| fig-height: 7
 #| fig-width: 11
 
 
@@ -784,7 +782,7 @@ cd3tr3 <-get_coef_details(bmm_e3_train, "conditVaried:bandOrderReverse")
 | bandOrderReverse              |     1.11 |        -16.02 |         18.16 | 0.55 |
 | conditVaried:bandOrderReverse |   -77.02 |       -114.16 |        -39.61 | 1.00 |
 
-: **Experiment 3 - End of training performance**. The Intercept represents the average of the baseline (constant condition), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group.  {.sm}
+: **Experiment 3 - End of training performance**. The Intercept represents the average of the baseline condition (constant training & original band order), the conditVaried coefficient reflects the difference between the constant and varied groups, and the bandOrderReverse coefficient reflects the difference between original and reverse order. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group. The negative value for the interaction between condit and bandOrder indicates that varied condition with reverse order had significantly lower deviations than the varied condition with the original band order  {.sm}
 
 :::
 
@@ -794,7 +792,7 @@ cd3tr3 <-get_coef_details(bmm_e3_train, "conditVaried:bandOrderReverse")
 
 ```{r}
 #| label: fig-e3-train-dev
-#| fig-cap: E3. Deviations from target band during testing without feedback stage. 
+#| fig-cap: Experiment 3 training. Deviations from target band during training. Shown separately for groups trained with the orginal order (used in E1) and reverse order (used in E2). 
 #| eval: true
 p1 <- trainE3 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
     stat_summary(geom = "line", fun = mean) +
@@ -802,7 +800,7 @@ p1 <- trainE3 |> ggplot(aes(x = Trial_Bin, y = dist, color = condit)) +
     ggh4x::facet_nested_wrap(~bandOrder*vb,ncol=3)+
     scale_x_continuous(breaks = seq(1, nbins + 1)) +
     theme(legend.title=element_blank()) + 
-    labs(y = "Deviation", x="Training Block") 
+    labs(y = "Absolute Deviation", x="Training Block") 
 #ggsave(here("Assets/figs/e3_train_deviation.png"), p1, width = 9, height = 8,bg="white")
 p1
 ```
@@ -849,13 +847,13 @@ cd3ted7 <-get_coef_details(bmtd3, "conditVaried:bandTypeExtrapolation:bandOrderR
 | conditVaried                                        |   -40.19 |       -104.68 |         23.13 | 0.89 |
 | bandTypeExtrapolation                               |   -23.35 |        -57.28 |         10.35 | 0.92 |
 | bandOrderReverse                                    |   -73.72 |       -136.69 |        -11.07 | 0.99 |
-| conditVaried:bandTypeExtrapolation                  |    52.66 |         14.16 |         90.23 | 1.00 |
+| **conditVaried:bandTypeExtrapolation**                  |    52.66 |         14.16 |         90.23 | 1.00 |
 | conditVaried:bandOrderReverse                       |   -37.48 |       -123.28 |         49.37 | 0.80 |
 | bandTypeExtrapolation:bandOrderReverse              |    80.69 |         30.01 |        130.93 | 1.00 |
 | conditVaried:bandTypeExtrapolation:bandOrderReverse |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 
-: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition, (constant training;  trained bands & original order), and the remaining coefficients reflect the deviation from that baseline. Positive coefficients thus represent worse performance relative to the baseline,  - and a positive interaction coefficient indicates disproportionate deviation for the varied condition or reverse order condition.{.striped .hover .sm}
+: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition, (constant training,   trained bands, & original order), and the remaining coefficients reflect the deviation from that baseline. Positive coefficients thus represent worse performance relative to the baseline,  - and a positive interaction coefficient indicates disproportionate deviation for the varied condition or reverse order condition. {.hover .sm}
 :::
 
 
@@ -874,8 +872,9 @@ E3. A) Deviations from target band during testing without feedback stage. B) Est
 
 ```{r}
 #| label: fig-e3-test-dev
-#| fig-cap: Experiment 3 Testing Accuracy. A) Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (training vs. extrapolation) on testing accuracy. Error bars represent 95% confidence intervals.
-#| eval: true
+#| fig-cap: Experiment 3 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Shown separately for groups trained with the orginal order (used in E1) and reverse order (used in E2). Error bars represent 95% credible intervals.
+#| fig-width: 11
+#| fig-height: 8
 
 
 condEffects <- function(m,xvar){
@@ -891,12 +890,12 @@ pe3td <- testE3 |>  ggplot(aes(x = vb, y = dist,fill=condit)) +
     stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
     facet_wrap(~bandOrder,ncol=1) +
   theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x="Band", y="Deviation From Target")
+  labs(x="Band", y="Absolute Deviation From Target Band")
 
 
 pe3ce <- bmtd3 |> emmeans( ~condit *bandOrder*bandType) |>
   gather_emmeans_draws() |>
- condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type") + 
+ condEffects(bandType) + labs(y="Absolute Deviation From Target Band", x="Band Type") + 
  facet_wrap(~bandOrder,ncol=1)
 
 p2 <- pe3td + pe3ce + plot_annotation(tag_levels= 'A')
@@ -946,22 +945,22 @@ coef3 <- get_coef_details(e3_vxBMM,"conditVaried:bandOrderReverse:bandInt")
 | Intercept                             |   601.83 |        504.75 |        699.42 | 1.00 |
 | conditVaried                          |    12.18 |       -134.94 |        162.78 | 0.56 |
 | bandOrderReverse                      |    13.03 |       -123.89 |        144.67 | 0.58 |
-| Band                                  |     0.49 |          0.36 |          0.62 | 1.00 |
-| conditVaried:bandOrderReverse         |  -338.15 |       -541.44 |       -132.58 | 1.00 |
+| **Band**                                 |     0.49 |          0.36 |          0.62 | 1.00 |
+| **conditVaried:bandOrderReverse**         |  -338.15 |       -541.44 |       -132.58 | 1.00 |
 | conditVaried:Band                     |    -0.04 |         -0.23 |          0.15 | 0.67 |
-| bandOrderReverse:bandInt              |    -0.10 |         -0.27 |          0.08 | 0.86 |
-| conditVaried:bandOrderReverse:bandInt |     0.42 |          0.17 |          0.70 | 1.00 |
+| bandOrderReverse:Band              |    -0.10 |         -0.27 |          0.08 | 0.86 |
+| **conditVaried:bandOrderReverse:Band** |     0.42 |          0.17 |          0.70 | 1.00 |
 
-Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the linear slope for the baseline condition.  {.striped .hover .sm}
+**Experiment 3 testing discrimination**. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the  slope for the baseline condition. The interaction terms which include condit and Band (e.g. conditVaried:Band & conditVaried:bandOrderReverse:band) respectively indicate the how the slopes of the varied-original condition differed from the baseline condition, and how varied-reverse condition differed from the varied-original condition {.hover .sm}
 :::
 
 
-*Testing Discrimination.* The full results of the discrimination model are presented in @tbl-e3-bmm-dist. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = `r sc1$estimate`, 95% CrI \[`r sc1$conf.low`, `r sc1$conf.high`\]; pd = `r sc1$pd`. Neither of the two way interactions reached significance, $\beta$ = `r intCoef1$estimate`, 95% CrI \[`r intCoef1$conf.low`, `r intCoef1$conf.high`\]; pd = `r intCoef1$pd`, $\beta$ = `r intCoef2$estimate`, 95% CrI \[`r intCoef2$conf.low`, `r intCoef2$conf.high`\]; pd = `r intCoef2$pd`. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = `r coef3$estimate`, 95% CrI \[`r coef3$conf.low`, `r coef3$conf.high`\]; pd = `r coef3$pd` - indicating that the varied condition showed a greater slope coefficient on the reverse order bands, compared to the constant condition - this is clearly shown in @fig-e3-test-vx, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions. 
+*Testing Discrimination.* The full results of the discrimination model are presented in @tbl-e3-bmm-dist. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = `r sc1$estimate`, 95% CrI \[`r sc1$conf.low`, `r sc1$conf.high`\]; pd = `r sc1$pd`. Neither of the two way interactions reached significance, $\beta$ = `r intCoef1$estimate`, 95% CrI \[`r intCoef1$conf.low`, `r intCoef1$conf.high`\]; pd = `r intCoef1$pd`, $\beta$ = `r intCoef2$estimate`, 95% CrI \[`r intCoef2$conf.low`, `r intCoef2$conf.high`\]; pd = `r intCoef2$pd`. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = `r coef3$estimate`, 95% CrI \[`r coef3$conf.low`, `r coef3$conf.high`\]; pd = `r coef3$pd` - indicating a greater slope for the varied condition trained with reverse order bands. This interaction is shown in @fig-e3-test-vx, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions. 
 
 
 ```{r}
 #| label: fig-e3-test-vx
-#| fig-cap: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band. 
+#| fig-cap: Experiment 3. Empirical distribution of velocities produced in the testing stage. Translucent bands with dash lines indicate the correct range for each velocity band. Shown separately for groups trained with the orginal order (used in E1) and reverse order (used in E2).
 #| fig-width: 11
 #| fig-height: 10
 ##| column: screen-inset-right
@@ -975,7 +974,7 @@ testE3 |> group_by(id,vb,condit,bandOrder) |> plot_distByCondit() +
 
 ```{r}
 #| label: fig-e3-bmm-vx
-#| fig-cap: Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. 
+#| fig-cap: Experiment 3 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI.
 #| fig-height: 10
 #| fig-width: 11
 ##| eval: FALSE
@@ -1186,7 +1185,7 @@ e1_tab %>%
     column_labels.font.size = 10,
     heading.title.font.size = 14,
     heading.subtitle.font.size = 12,
-    table.font.size = 10, 
+    table.font.size = 11, 
     quarto.disable_processing = TRUE
   ) 
 ```
@@ -1704,7 +1703,7 @@ testIndv
 
 # General Discussion
 
-*Experimental Result Summary*
+*Experimental Results Summary*
 
 Across three experiments, we investigated the impact of training variability on learning and extrapolation in a visuomotor function learning task. In Experiment 1, participants in the varied training condition, who experienced a wider range of velocity bands during training, showed lower accuracy at the end of training compared to those in the constant training condition. 
 
