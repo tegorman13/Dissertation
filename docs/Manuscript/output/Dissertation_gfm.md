@@ -269,17 +269,17 @@ low variability category. Participants are then tested with novel items
 located within ambiguous regions of the category space which allow the
 experimenters to assess whether the difference in category variability
 influenced how far participants generalize the category boundaries. A.
-L. Cohen et al. (2001) trained subjects on two categories, one with much
-more variability than the other. In experiment 1, a low variability
-category composed of 1 instance was compared against a high-variability
-category of 2 instances in one condition, and 7 instances in another. In
-experiment 2 both categories were composed of 3 instances, but for the
-low-variability group the instances were clustered close to each other,
-whereas the high-variability groups instances were spread much further
-apart. Participants were tested on an ambiguous novel instance that was
-located in between the two trained categories. Both experiments provided
+L. Cohen et al. (2001) conducted two experiments with this basic
+paradigm. In experiment 1, a low variability category composed of 1
+instance was compared against a high-variability category of 2 instances
+in one condition, and 7 instances in another. In experiment 2 both
+categories were composed of 3 instances, but for the low-variability
+group the instances were clustered close to each other, whereas the
+high-variability groups instances were spread much further apart.
+Participants were tested on an ambiguous novel instance that was located
+in between the two trained categories. Both experiments provided
 evidence that participants were much more likely to categorize the novel
-middle stimulus into a category with greater variation.
+middle stimulus into the category with greater variation.
 
 Further observations of widened generalization following varied training
 have since been observed in numerous investigations (Hahn et al., 2005;
@@ -518,29 +518,29 @@ prototype representation of the category, as opposed to storing each
 individual training instance, and that generalization was based on the
 similarity of the testing items to the learned prototype
 representations. Posner & Keele (1968) has been extremely influential,
-and continues to be cited in contemporary research as clear evidence
-that prototype abstraction underlies the benefits of varied training.
-It’s also referenced as a key influence in the development of “Schema
-Theory of Motor Learning” Schmidt (1975), which in turn influenced
-decades of research on the potential benefits of varied training in
-motor skill learning. However a number of the core assumptions utilized
-by Posner & Keele (1968) were later called into question both
-empirically and with competing theoretical accounts (Hintzman, 1984,
-1986; Knapp & Anderson, 1984; McClelland & Rumelhart, 1985; Nosofsky &
-Kruschke, 1992; Palmeri & Nosofsky, 2001; Zaki & Nosofsky, 2007).
-Palmeri & Nosofsky (2001) demonstrated both the dangers of assuming that
-psychological representations mimic the metric stimulus space, as well
-the viability of models with simpler representational assumptions. These
-authors conducted a near replication of the Posner & Keele (1968) study,
-but also had participants provide similarity judgements of the dot
-pattern stimuli after completing the training phase. A multidimensional
-scaling analysis of the similarity judgements revelead that the
-psychological representations of the prototype stimuli were not located
-in the middle of the training stimuli, but were instead extreme points
-in the psychological space. The authors also demonstrated the
-generalization patterns of Posner & Keele (1968) could be accounted for
-by an exemplar-based model, without any need to assume the abstraction
-of a prototype.
+and continues to be cited as evidence that prototype abstraction
+underlies the benefits of varied training. It’s also referenced as a key
+influence in the development of the “Schema Theory of Motor Learning”
+Schmidt (1975), which in turn influenced decades of research on the
+potential benefits of varied training in motor skill learning. However a
+number of the core assumptions utilized by Posner & Keele (1968) were
+later called into question both empirically and with competing
+theoretical accounts (Hintzman, 1984, 1986; Knapp & Anderson, 1984;
+McClelland & Rumelhart, 1985; Nosofsky & Kruschke, 1992; Palmeri &
+Nosofsky, 2001; Zaki & Nosofsky, 2007). Palmeri & Nosofsky (2001)
+demonstrated both the dangers of assuming that psychological
+representations mimic the metric stimulus space, as well the viability
+of models with simpler representational assumptions. These authors
+conducted a near replication of the Posner & Keele (1968) study, but
+also had participants provide similarity judgements of the dot pattern
+stimuli after completing the training phase. A multidimensional scaling
+analysis of the similarity judgements revelead that the psychological
+representations of the prototype stimuli were not located in the middle
+of the training stimuli, but were instead extreme points in the
+psychological space. The authors also demonstrated the generalization
+patterns of Posner & Keele (1968) could be accounted for by an
+exemplar-based model, without any need to assume the abstraction of a
+prototype.
 
 Instance-based, or exemplar-based models generally assume that learners
 encode each experience with a task as a separate
