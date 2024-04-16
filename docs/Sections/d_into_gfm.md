@@ -416,6 +416,35 @@ best for those who received variable training. Non-athletes showed the
 opposite pattern, with superior performance for those who had constant
 training.
 
+### Existing Theoretircal Frameworks
+
+A number of theoretical frameworks have been proposed to conceptually
+explain the effects of varied training on learning and generalization.
+Schema theory (described in more detail above), posts that varied
+practice leads to the formation of more flexible motor schemas, which
+then facilitate generalization (Schmidt, 1975). The desirable
+difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015)
+proposes that variable practice may impair initial performance but then
+enhance longer-term retention and transfer. Similarily, the challenge
+point framework (Guadagnoli & Lee, 2004) contends that training
+variation induces optimal learning occurs insofar as it causes the
+difficulty of practice tasks to be appropriately matched to the
+learner’s capabilities, but may also be detrimental if the amount of
+variation causes the task to be too difficult.
+
+While these frameworks offer valuable conceptual accounts, there has
+been a limited application of computational modeling efforts aimed at
+quantitatively assessing and comparing the learning and generalization
+mechanisms which may be underlying the influence of variability in
+visuomotor skill learning. In contrast, the effects of variability have
+received more formal computational treatment in other domains, such as
+category learning Hu & Nosofsky (2024), language learning (Jones &
+Brandt, 2020), and function learning (DeLosh et al., 1997). A primary
+goal of the current dissertation is to to address this gap by adapting
+and applying modeling approaches from these other domains to investigate
+the effects of training variability in visuomotor skill learning and
+function learning tasks.
+
 ### The current work
 
 The overarching purpose of this dissertation is to investigate the
@@ -462,6 +491,15 @@ learn?: A taxonomy for far transfer. *Psychological Bulletin*, *128*(4),
 Berniker, M., Mirzaei, H., & Kording, K. P. (2014). The effects of
 training breadth on motor generalization. *Journal of Neurophysiology*,
 *112*(11), 2791–2798. <https://doi.org/10.1152/jn.00615.2013>
+
+</div>
+
+<div id="ref-bjorkMakingThingsHard2011" class="csl-entry">
+
+Bjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but
+in a good way: Creating desirable difficulties to enhance learning.
+*Psychology and the Real World: Essays Illustrating Fundamental
+Contributions to Society*, *2*, 59–68.
 
 </div>
 
@@ -666,6 +704,15 @@ Guadagnoli, M. A., Holcomb, W. R., & Weber, T. J. (1999). The
 relationship between contextual interference effects and performer
 expertise on the learning of a putting task. *Journal of Human Movement
 Studies*, *37*(1), 19–36.
+
+</div>
+
+<div id="ref-guadagnoliChallengePointFramework2004" class="csl-entry">
+
+Guadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for
+Conceptualizing the Effects of Various Practice Conditions in Motor
+Learning. *Journal of Motor Behavior*, *36*(2), 212–224.
+<https://doi.org/10.3200/JMBR.36.2.212-224>
 
 </div>
 
@@ -1078,6 +1125,15 @@ Sinkeviciute, R., Brown, H., Brekelmans, G., & Wonnacott, E. (2019). The
 role of input variability and learner age in second language vocabulary
 learning. *Studies in Second Language Acquisition*, *41*(04), 795–820.
 <https://doi.org/10.1017/S0272263119000263>
+
+</div>
+
+<div id="ref-soderstromLearningPerformanceIntegrative2015"
+class="csl-entry">
+
+Soderstrom, N. C., & Bjork, R. A. (2015). Learning versus performance:
+An integrative review. *Perspectives on Psychological Science*, *10*(2),
+176–199. <https://doi.org/10.1177/1745691615569000>
 
 </div>
 

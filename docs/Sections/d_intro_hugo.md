@@ -58,6 +58,12 @@ Of course, the relationship between training variability and transfer is unlikel
 
 In an example of a more complex influence of training variation, (Braithwaite & Goldstone, 2015) trained participants on example problems involving the concept of sampling with replacement (SWR). Training consisted of examples that were either highly similar in their semantic context (e.g. all involving people selecting objects) or in which the surface features were varied between examples (e.g. people choosing objects AND objects selected in a sequence). The experimenters also surveyed how much prior knowledge each participant had with SWR. They found that whether variation was beneficial depended on the prior knowledge of the participants -- such that participants with some prior knowledge benefited from varied training, whereas participants with minimal prior knowledge performed better after training with similar examples. The authors hypothesized that in order to benefit from varied examples, participants must be able to detect the structure common to the diverse examples, and that participants with prior knowledge are more likely to be sensitive to such structure, and thus to benefit from varied training. To test this hypothesis more directly, the authors conducted a 2nd experiment, wherein they controlled prior knowledge by exposing some subjects to a short graphical or verbal pre-training lesson, designed to increase sensitivity to the training examples. Consistent with their hypothesis, participants exposed to the structural sensitivity pre-training benefited more from varied training than the controls participants who benefited more from training with similar examples. Interactions between prior experience and the influence of varied training have also been observed in sensorimotor learning (Del Rey et al., 1982; Guadagnoli et al., 1999). Del Rey et al. (1982) recruited participants who self-reported either extensive, or very little experience with athletic activities, and then trained participants on a coincident timing task under with either a single constant training velocity, with one of several varied training procedures. Unsurprisingly, athlete participants had superior performance during training, regardless of condition, and training performance was superior for all subjects in the constant group. Of greater interest is the pattern of testing results from novel transfer conditions. Among the athlete-participants, transfer performance was best for those who received variable training. Non-athletes showed the opposite pattern, with superior performance for those who had constant training.
 
+### Existing Theoretircal Frameworks
+
+A number of theoretical frameworks have been proposed to conceptually explain the effects of varied training on learning and generalization. Schema theory (described in more detail above), posts that varied practice leads to the formation of more flexible motor schemas, which then facilitate generalization (Schmidt, 1975). The desirable difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015) proposes that variable practice may impair initial performance but then enhance longer-term retention and transfer. Similarily, the challenge point framework (Guadagnoli & Lee, 2004) contends that training variation induces optimal learning occurs insofar as it causes the difficulty of practice tasks to be appropriately matched to the learner's capabilities, but may also be detrimental if the amount of variation causes the task to be too difficult.
+
+While these frameworks offer valuable conceptual accounts, there has been a limited application of computational modeling efforts aimed at quantitatively assessing and comparing the learning and generalization mechanisms which may be underlying the influence of variability in visuomotor skill learning. In contrast, the effects of variability have received more formal computational treatment in other domains, such as category learning Hu & Nosofsky (2024), language learning (Jones & Brandt, 2020), and function learning (DeLosh et al., 1997). A primary goal of the current dissertation is to to address this gap by adapting and applying modeling approaches from these other domains to investigate the effects of training variability in visuomotor skill learning and function learning tasks.
+
 ### The current work
 
 The overarching purpose of this dissertation is to investigate the effects of training variability on learning and generalization within visuomotor skill learning and function learning. Our investigations is structured into two main projects, each employing distinct experimental paradigms and computational modeling frameworks to elucidate how and when variability in training enhances or impedes subsequent generalization.
@@ -69,6 +75,8 @@ Project 2 shifted focus to the domain of function learning by employing a visuom
 Barnett, S. M., & Ceci, S. J. (2002). When and where do we apply what we learn?: A taxonomy for far transfer. *Psychological Bulletin*, *128*(4), 612--637. <https://doi.org/10.1037//0033-2909.128.4.612>
 
 Berniker, M., Mirzaei, H., & Kording, K. P. (2014). The effects of training breadth on motor generalization. *Journal of Neurophysiology*, *112*(11), 2791--2798. <https://doi.org/10.1152/jn.00615.2013>
+
+Bjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society*, *2*, 59--68.
 
 Bowman, C. R., & Zeithamova, D. (2020). Training set coherence and set size effects on concept generalization and recognition. *Journal of Experimental Psychology. Learning, Memory, and Cognition*, *46*(8), 1442--1464. <https://doi.org/10.1037/xlm0000824>
 
@@ -115,6 +123,8 @@ Goode, M. K., Geraci, L., & Roediger, H. L. (2008). Superiority of variable to r
 Green, D. P., Whitehead, J., & Sugden, D. A. (1995). Practice Variability and Transfer of a Racket Skill. *Perceptual and Motor Skills*, *81*(3_suppl), 1275--1281. <https://doi.org/10.2466/pms.1995.81.3f.1275>
 
 Guadagnoli, M. A., Holcomb, W. R., & Weber, T. J. (1999). The relationship between contextual interference effects and performer expertise on the learning of a putting task. *Journal of Human Movement Studies*, *37*(1), 19--36.
+
+Guadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. *Journal of Motor Behavior*, *36*(2), 212--224. <https://doi.org/10.3200/JMBR.36.2.212-224>
 
 Hacques, G., Dicks, M., Komar, J., & Seifert, L. (2022). Visual control during climbing: Variability in practice fosters a proactive gaze pattern. *PLOS ONE*, *17*(6), e0269794. <https://doi.org/10.1371/journal.pone.0269794>
 
@@ -209,6 +219,8 @@ Seitz, F. I., Jarecki, J. B., & Rieskamp, J. (2023). *Modeling the Category Vari
 Seow, R. Y. T., Betts, S., & Anderson, J. R. (2019). Transfer effects of varied practice and adaptation to changes in complex skill acquisition. *Proceedings of the 17th International Conference on Cognitive Modelling*, 222--227.
 
 Sinkeviciute, R., Brown, H., Brekelmans, G., & Wonnacott, E. (2019). The role of input variability and learner age in second language vocabulary learning. *Studies in Second Language Acquisition*, *41*(04), 795--820. <https://doi.org/10.1017/S0272263119000263>
+
+Soderstrom, N. C., & Bjork, R. A. (2015). Learning versus performance: An integrative review. *Perspectives on Psychological Science*, *10*(2), 176--199. <https://doi.org/10.1177/1745691615569000>
 
 Stewart, N., & Chater, N. (2002). The effect of category variability in perceptual categorization. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *28*(5), 893--907. <https://doi.org/10.1037//0278-7393.28.5.893>
 

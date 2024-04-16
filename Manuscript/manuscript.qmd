@@ -19,7 +19,7 @@ execute:
 
 ::: {.content-visible when-format="pdf"}
 
-{{< include pre_sections/pre_pdf2.qmd >}}
+{{< include pre_sections/pre_pdf.qmd >}}
 
 :::
 

@@ -59,7 +59,7 @@ Brown, M. A., & Lacroix, G. (2017). Underestimation in linear function learning:
 
 DeLosh, E. L., McDaniel, M. A., & Busemeyer, J. R. (1997). Extrapolation: The Sine Qua Non for Abstraction in Function Learning. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *23*(4), 19. <https://doi.org/10.1037/0278-7393.23.4.968>
 
-Kane, P. B., & Broomell, S. B. (2020). Applications of the biasvariance decomposition to human forecasting. *Journal of Mathematical Psychology*, *98*, 102417. <https://doi.org/10.1016/j.jmp.2020.102417>
+Kane, P. B., & Broomell, S. B. (2020). Applications of the bias--variance decomposition to human forecasting. *Journal of Mathematical Psychology*, *98*, 102417. <https://doi.org/10.1016/j.jmp.2020.102417>
 
 Kelley, H., & Busemeyer, J. (2008). A comparison of models for learning how to dynamically integrate multiple cues in order to forecast continuous criteria. *Journal of Mathematical Psychology*, *52*(4), 218--240. <https://doi.org/10.1016/j.jmp.2008.01.009>
 

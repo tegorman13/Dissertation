@@ -1,6 +1,6 @@
 # General Discussion
 
-2024-04-06
+2024-04-16
 
 To facilitate ease of comparison between the two projects and their
 respective tasks, we’ll now refer to project 1 as Hit The Target (HTT)
@@ -175,7 +175,7 @@ Extrapolation: The Sine Qua Non for Abstraction in Function Learning.
 
 <div id="ref-kaneApplicationsBiasVariance2020" class="csl-entry">
 
-Kane, P. B., & Broomell, S. B. (2020). Applications of the biasvariance
+Kane, P. B., & Broomell, S. B. (2020). Applications of the bias–variance
 decomposition to human forecasting. *Journal of Mathematical
 Psychology*, *98*, 102417. <https://doi.org/10.1016/j.jmp.2020.102417>
 

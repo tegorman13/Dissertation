@@ -48,11 +48,11 @@ website:
         href: Sections/full.qmd
       - Sections/Appendix/Full_Appendix.qmd
       - text: "---"
-      - text: Intro
-        href: Sections/Introduction.qmd
+      # - text: Intro
+      #   href: Sections/Introduction.qmd
       - Sections/IGAS.qmd
       - Sections/HTW.qmd
-      - Sections/Discussion.qmd
+      #- Sections/Discussion.qmd
 
 format:
   html:
