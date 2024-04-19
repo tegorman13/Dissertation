@@ -2207,8 +2207,6 @@ cores.
 
 ### Modelling Results
 
-#### Group level Patterns
-
 <div class="cell-output-display">
 
 <div id="vdzlhutqfn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -3957,7 +3955,7 @@ from extrapolation bands. The absence of interpolation testing makes it
 more difficult to distinguish between the effects of training
 variability on extrapolation specifically, as opposed to generalization
 more broadly. Of course, the nature of the constant training condition
-makes interpolation teseting impossible to implement, however future
+makes interpolation testing impossible to implement, however future
 studies might compare a training regimes that each include at least 2
 distinct items, but still differ in total amount of variability
 experienced, which would then allow groups to be compared in terms of
