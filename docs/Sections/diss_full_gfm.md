@@ -126,8 +126,8 @@ generalization to novel testing items or conditions. However, the test
 may also include some or all of the items that were used during the
 training stage, allowing for an assessment of whether the variability
 manipulation influenced the learning of the trained items themselves, or
-to make it easy to measure how much performance degrades as a function
-of how far away testing items are from the training items.
+to easily measure how much performance degrades as a function of how far
+away testing items are from the training items.
 
 The influence of training variation has received a large amount of
 attention in the domain of sensorimotor skill learning. Much of this
@@ -146,8 +146,8 @@ group against that of a varied-trained group. Both groups train on the
 same task, but the varied group practices with multiple instances along
 some task-relevant dimension that remains invariant for the constant
 group. For example, studies using a projectile throwing task might
-assign participants to either constant training that practicing throwing
-from a single location, and a varied group that throws from multiple
+assign participants to either constant training that practice throwing
+from a single location, or to a varied group that throws from multiple
 locations. Following training, both groups are then tested from novel
 throwing locations (Pacheco & Newell, 2018; Pigott & Shapiro, 1984;
 Willey & Liu, 2018a; Wulf, 1991).
@@ -489,13 +489,13 @@ Schema theory (described in more detail above), posts that varied
 practice leads to the formation of more flexible motor schemas, which
 then facilitate generalization (Schmidt, 1975). The desirable
 difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015)
-proposes that variable practice may impair initial performance but then
-enhance longer-term retention and transfer. Similarily, the challenge
-point framework (Guadagnoli & Lee, 2004) contends that training
-variation induces optimal learning occurs insofar as it causes the
-difficulty of practice tasks to be appropriately matched to the
-learner’s capabilities, but may also be detrimental if the amount of
-variation causes the task to be too difficult.
+proposes that variable practice conditions may impair initial
+performance but then enhance longer-term retention and transfer.
+Similarily, the challenge point framework (Guadagnoli & Lee, 2004)
+contends that training variation induces optimal learning occurs insofar
+as it causes the difficulty of practice tasks to be appropriately
+matched to the learner’s capabilities, but may also be detrimental if
+the amount of variation causes the task to be too difficult.
 
 While these frameworks offer valuable conceptual accounts, there has
 been a limited application of computational modeling efforts aimed at
@@ -514,7 +514,7 @@ function learning tasks.
 
 The overarching purpose of this dissertation is to investigate the
 effects of training variability on learning and generalization within
-visuomotor skill learning and function learning. Our investigations is
+visuomotor skill learning and function learning. Our investigation is
 structured into two main projects, each employing distinct experimental
 paradigms and computational modeling frameworks to elucidate how and
 when variability in training enhances or impedes subsequent
@@ -549,7 +549,7 @@ data using advanced Bayesian parameter estimation techniques.
 Exposing learners to variability during training has been demonstrated
 to improve performance in subsequent transfer testing. Such variability
 benefits are often accounted for by assuming that learners are
-developing some general task schema or structure. However much of this
+developing some general task schema or structure. However, much of this
 research has neglected to account for differences in similarity between
 varied and constant training conditions. In a between-groups
 manipulation, we trained participants on a simple projectile launching
