@@ -10,7 +10,6 @@ code-fold: true
 code-tools: true
 toc: true
 toc-location: body
-toc-title: Contents
 toc-depth: 4
 cache: true
 format-links:
@@ -115,17 +114,17 @@ prefer-html: true
 
 ## Varied Training and Generalization
 
-Varied training has been shown to influence learning in wide array of different tasks and domains, including categorization (Hahn et al., 2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al., 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning (Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010; Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory extrapolation (Fulvio et al., 2014), cognitive control tasks (Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning (Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada & Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George & Egner, 2021; Gonzalez & Madhavan, 2011; T. A. Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019), face recognition (Burton et al., 2016; Honig et al., 2022; Menon et al., 2015), the perception of social group heterogeneity (Gershman & Cikara, 2023; Konovalova & Le Mens, 2020; Linville & Fischer, 1993; Park & Hastie, 1987) , simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al., 2001; Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green et al., 1995; North et al., 2019), and complex skill learning (Hacques et al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) or Raviv et al. (2022) for more detailed reviews.
+Varied training has been shown to influence learning in a wide array of different tasks and domains, including categorization (Hahn et al., 2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al., 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning (Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010; Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory extrapolation (Fulvio et al., 2014), cognitive control tasks (Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning (Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada & Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George & Egner, 2021; Gonzalez & Madhavan, 2011; T. A. Kelley & Yantis, 2009), voice identity learning (Lavan et al., 2019), face recognition (Burton et al., 2016; Honig et al., 2022; Menon et al., 2015), the perception of social group heterogeneity (Gershman & Cikara, 2023; Konovalova & Le Mens, 2020; Linville & Fischer, 1993; Park & Hastie, 1987) , simple motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al., 2001; Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green et al., 1995; North et al., 2019), and complex skill learning (Hacques et al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) or Raviv et al. (2022) for more detailed reviews.
 
-Research on the effects of varied training typically manipulates variability in one of two ways. In the first approach, a high variability group is exposed to a greater number of unique instances during training, while a low variability group receives fewer unique instances with more repetitions. Alternatively, both groups may receive the same number of unique instances, but the high variability group's instances are more widely distributed or spread out in the relevant psychological space, while the low variability group's instances are clustered more tightly together. Researchers then compare the training groups in terms of their performance during the training phase, as well as their generalization performance during a testing phase. Researchers will usually compare the performance of the two groups during both the training phase and a subsequent testing phase. The primary theoretical interest is often to assess the influence of training variability on generalization to novel testing items or conditions. However, the test may also include some or all of the items that were used during the training stage, allowing for an assessment of whether the variability manipulation influenced the learning of the trained items themselves, or to easily measure how much performance degrades as a function of how far away testing items are from the training items.
+Research on the effects of varied training typically manipulates variability in one of two ways. In the first approach, a high variability group is exposed to a greater number of unique instances during training, while a low variability group receives fewer unique instances with more repetitions. Alternatively, both groups may receive the same number of unique instances, but the high variability group's instances are more widely distributed or spread out in the relevant psychological space, while the low variability group's instances are clustered more tightly together. Researchers then compare the training groups in terms of their performance during the training phase, as well as their generalization performance during a testing phase. Researchers usually compare the performance of the two groups during both the training phase and a subsequent testing phase. The primary theoretical interest is often to assess the influence of training variability on generalization to novel testing items or conditions. However, the test may also include some or all of the items that were used during the training stage, allowing for an assessment of whether the variability manipulation influenced the learning of the trained items themselves, or to easily measure how much performance degrades as a function of how far away testing items are from the training items.
 
-The influence of training variation has received a large amount of attention in the domain of sensorimotor skill learning. Much of this research has been influenced by the work of Schmidt (1975), who proposed a schema-based account of motor learning as an attempt to address the longstanding problem of how novel movements are produced. Schema theory presumes that learners possess general motor programs for a class of movements (e.g. an underhand throw). When called up for use motor programs are parameterized by schema rules which determine how the motor program is parameterized or scaled to the particular demands of the current task. Schema theory predicts that variable training facilitates the formation of more robust schemas, which will result in improved generalization or transfer. Experiments that test this hypothesis are often designed to compare the transfer performance of a constant-trained group against that of a varied-trained group. Both groups train on the same task, but the varied group practices with multiple instances along some task-relevant dimension that remains invariant for the constant group. For example, studies using a projectile throwing task might assign participants to either constant training that practice throwing from a single location, or to a varied group that throws from multiple locations. Following training, both groups are then tested from novel throwing locations (Pacheco & Newell, 2018; Pigott & Shapiro, 1984; Willey & Liu, 2018a; Wulf, 1991).
+The influence of training variability has received a large amount of attention in the domain of sensorimotor skill learning. Much of this research has been influenced by the work of Schmidt (1975), who proposed a schema-based account of motor learning as an attempt to address the longstanding problem of how novel movements are produced. Schema theory presumes that learners possess general motor programs for a class of movements (e.g., an underhand throw). When called up for use motor programs are parameterized by schema rules which determine how the motor program is parameterized or scaled to the particular demands of the current task. Schema theory predicts that variable training facilitates the formation of more robust schemas, which will result in improved generalization or transfer. Experiments that test this hypothesis are often designed to compare the transfer performance of a constant-trained group against that of a varied-trained group. Both groups train on the same task, but the varied group practices with multiple instances along some task-relevant dimension that remains invariant for the constant group. For example, studies using a projectile throwing task might assign participants to either constant training that practice throwing from a single location, or to a varied group that throws from multiple locations. Following training, both groups are then tested from novel throwing locations (Pacheco & Newell, 2018; Pigott & Shapiro, 1984; Willey & Liu, 2018a; Wulf, 1991).
 
-One of the earliest, and still often cited investigations of Schmidt's benefits of variability hypothesis was the work of Kerr & Booth (1978). Two groups of children, aged 8 and 12, were assigned to either constant or varied training of a bean bag throwing task. The constant group practiced throwing a bean-bag at a small target placed 3 feet in front of them, and the varied group practiced throwing from a distance of both 2 feet and 4 feet. Participants were blindfolded and unable to see the target while making each throw but would receive feedback by looking at where the beanbag had landed in between each training trial. 12 weeks later, all of the children were given a final test from a distance of 3 feet which was novel for the varied participants and repeated for the constant participants. Participants were also blindfolded for testing and did not receive trial by trial feedback in this stage. In both age groups, participants performed significantly better in the varied condition than the constant condition, though the effect was larger for the younger, 8-year-old children. This result offers a particularly compelling example of the merits of varied practice, given that the varied group was able to outperform the constant group even from the home turf location where one may have expected the constatn group to have the strongest advantage. A similar pattern of results was observed in another study wherein varied participants trained with tennis, squash, badminton, and short-tennis rackets were compared against constant subjects trained with only a tennis racket (Green et al., 1995). One of the testing conditions had subjects repeat the use of the tennis racket, which had been used on all 128 training trials for the constant group, and only 32 training trials for the varied group. Nevertheless, the varied group outperformed the constant group when using the tennis racket at testing, and also performed better in conditions with several novel racket lengths. However, as is the case with many of the patterns commonly observed in the "benefits of variability" literature, the pattern wherein the varied group outperfroms the constant group even from the constants group's home turf has not been consistently replicated. One recent study attempted a near replication of the Kerr & Booth study (Willey & Liu, 2018b), having subjects throw beanbags at a target, with the varied group training from positions (5 and 9 feet) on either side of the constant group (7 feet). This study did not find a varied advantage from the constant training position, though the varied group did perform better at distances novel to both groups. However, this study diverged from the original in that the participants were adults; and the amount of training was much greater (20 sessions with 60 practice trials each, spread out over 5-7 weeks).
+One of the earliest and still often cited investigations of Schmidt's benefits of variability hypothesis was the work of Kerr & Booth (1978). Two groups of children, aged 8 and 12, were assigned to either constant or varied training of a bean bag throwing task. The constant group practiced throwing a bean-bag at a small target placed 3 feet in front of them, and the varied group practiced throwing from a distance of both 2 feet and 4 feet. Participants were blindfolded and unable to see the target while making each throw but would receive feedback by looking at where the beanbag had landed in between each training trial. 12 weeks later, all of the children were given a final test from a distance of 3 feet which was novel for the varied participants and repeated for the constant participants. Participants were also blindfolded for testing and did not receive trial by trial feedback in this stage. In both age groups, participants performed significantly better in the varied condition than the constant condition, though the effect was larger for the younger, 8-year-old children. This result provides particularly strong evidence for the benefits of varied practice, as the varied group outperformed the constant group even when tested at the "home-turf" distance that the constant group had exclusively practiced. A similar pattern of results was observed in another study wherein varied participants trained with tennis, squash, badminton, and short-tennis rackets were compared against constant subjects trained with only a tennis racket (Green et al., 1995). One of the testing conditions had subjects repeat the use of the tennis racket, which had been used on all 128 training trials for the constant group, and only 32 training trials for the varied group. Nevertheless, the varied group outperformed the constant group when using the tennis racket at testing, and also performed better in conditions with several novel racket lengths. However, as is the case with many of the patterns commonly observed in the "benefits of variability" literature, the pattern wherein the varied group outperfroms the constant group even from the constants group's home turf has not been consistently replicated. One recent study attempted a near replication of the Kerr & Booth study (Willey & Liu, 2018b), having subjects throw beanbags at a target, with the varied group training from positions (5 and 9 feet) on either side of the constant group (7 feet). This study did not find a varied advantage from the constant training position, though the varied group did perform better at distances novel to both groups. However, this study diverged from the original in that the participants were adults; and the amount of training was much greater (20 sessions with 60 practice trials each, spread out over 5-7 weeks).
 
 Pitting varied against constant practice against each other on the home turf of the constant group provides a compelling argument for the benefits of varied training, as well as an interesting challenge for theoretical accounts that posit generalization to occur as some function of distance. However, despite its appeal this particular contrast is relatively uncommon in the literature. It is unclear whether this may be cause for concern over publication bias, or just researchers feeling the design is too risky. A far more common design is to have separate constant groups that each train exclusively from each of the conditions that the varied group encounters (Catalano & Kleiner, 1984; Chua et al., 2019; McCracken & Stelmach, 1977; Moxley, 1979; Newell & Shapiro, 1976), or for a single constant group to train from just one of the conditions experienced by the varied participants (Pigott & Shapiro, 1984; Roller et al., 2001; Wrisberg & McLean, 1984; Wrisberg & Mead, 1983). A less common contrast places the constant group training in a region of the task space outside of the range of examples experienced by the varied group, but distinct from the transfer condition (Wrisberg et al., 1987; Wulf & Schmidt, 1997). Of particular relevance to the current work is the early study of Catalano & Kleiner (1984), as theirs was one of the earliest studies to investigate the influence of varied vs. constant training on multiple testing locations of graded distance from the training condition. Participants were trained on coincident timing task, in which subjects observe a series of lightbulbs turning on sequentially at a consistent rate and attempt to time a button response with the onset of the final bulb. The constant groups trained with a single velocity of either 5,7,9, or 11 mph, while the varied group trained from all 4 of these velocities. Participants were then assigned to one of four possible generalization conditions, all of which fell outside of the range of the varied training conditions -- 1, 3, 13 or 15 mph. As is often the case, the varied group performed worse during the training phase. In the testing phase, the general pattern was for all participants to perform worse as the testing conditions became further away from the training conditions, but since the drop off in performance as a function of distance was far less steep for the varied group, the authors suggested that varied training induced a decremented generalization gradient, such that the varied participants were less affected by the change between training and testing conditions.
 
-Benefits of varied training have also been observed in many studies outside of the sensorimotor domain. Goode et al. (2008) trained participants to solve anagrams of 40 different words ranging in length from 5 to 11 letters, with an anagram of each word repeated 3 times throughout training, for a total of 120 training trials. Although subjects in all conditions were exposed to the same 40 unique words (i.e. the solution to an anagram), participants in the varied group saw 3 different arrangements for each solution-word, such as DOLOF, FOLOD, and OOFLD for the solution word FLOOD, whereas constant subjects would train on three repetitions of LDOOF (spread evenly across training). Two different constant groups were used. Both constant groups trained with three repetitions of the same word scramble, but for constant group A, the testing phase consisted of the identical letter arrangement to that seen during training (e.g. LDOOF), whereas for constant group B, the testing phase consisted of a arrangement they had not seen during training, thus presenting them with a testing situation similar situation to the varied group. At the testing stage, the varied group outperformed both constant groups, a particularly impressive result, given that constant group A had three prior exposures to the word arrangement (i.e. the particular permutation of letters) which the varied group had not explicitly seen. However varied subjects in this study did not exhibit the typical decrement in the training phase typical of other varied manipulations in the literature, and actually achieved higher levels of anagram solving accuracy by the end of training than either of the constant groups -- solving two more anagrams on average than the constant group. This might suggest that for tasks of this nature where the learner can simply get stuck with a particular word scramble, repeated exposure to the identical scramble might be less helpful towards finding the solution than being given a different arrangement of the same letters. This contention is supported by the fact that constant group A, who was tested on the identical arrangement as they experienced during training, performed no better at testing than did constant group B, who had trained on a different arrangement of the same word solution -- further suggesting that there may not have been a strong identity advantage in this task.
+Benefits of varied training have also been observed in many studies outside of the sensorimotor domain. Goode et al. (2008) trained participants to solve anagrams of 40 different words ranging in length from 5 to 11 letters, with an anagram of each word repeated 3 times throughout training, for a total of 120 training trials. Although subjects in all conditions were exposed to the same 40 unique words (i.e. the solution to an anagram), participants in the varied group saw 3 different arrangements for each solution-word, such as DOLOF, FOLOD, and OOFLD for the solution word FLOOD, whereas constant subjects would train on three repetitions of LDOOF (spread evenly across training). Two different constant groups were used. Both constant groups trained with three repetitions of the same word scramble, but for constant group A, the testing phase consisted of the identical letter arrangement to that seen during training (e.g., LDOOF), whereas for constant group B, the testing phase consisted of a arrangement they had not seen during training, thus presenting them with a testing situation similar situation to the varied group. At the testing stage, the varied group outperformed both constant groups, a particularly impressive result, given that constant group A had three prior exposures to the word arrangement (i.e. the particular permutation of letters) which the varied group had not explicitly seen. However varied subjects in this study did not exhibit the typical decrement in the training phase typical of other varied manipulations in the literature, and actually achieved higher levels of anagram solving accuracy by the end of training than either of the constant groups -- solving two more anagrams on average than the constant group. This might suggest that for tasks of this nature where the learner can simply get stuck with a particular word scramble, repeated exposure to the identical scramble might be less helpful towards finding the solution than being given a different arrangement of the same letters. This contention is supported by the fact that constant group A, who was tested on the identical arrangement as they experienced during training, performed no better at testing than did constant group B, who had trained on a different arrangement of the same word solution -- further suggesting that there may not have been a strong identity advantage in this task.
 
 In the domain of category learning, the constant vs. varied comparison is much less suitable. Instead, researchers will
 typically employ designs where all training groups encounter numerous stimuli, but one group experiences a greater number of unique exemplars (Brunstein & Gonzalez, 2011; Doyle & Hourihan, 2016; Hosch et al., 2023; Nosofsky et al., 2019; Wahlheim et al., 2012), or designs where the number of unique training exemplars is held constant, but one group trains with items that are more dispersed, or spread out across the category space (Bowman & Zeithamova, 2020; Homa & Vosburgh, 1976; Hu & Nosofsky, 2024; Maddox & Filoteo, 2011; Posner & Keele, 1968).
@@ -134,7 +133,7 @@ Much of the earlier work in this sub-area trained subjects on artificial categor
 
 Recent studies have also begun utilizing more complex or realistic sitmuli when assessing the influence of variability on category learning. Wahlheim et al. (2012) conducted one such study. In a within-participants design, participants were trained on bird categories with either high repetitions of a few exemplars, or few repetitions of many exemplars. Across four different experiments, which were conducted to address an unrelated question on metacognitive judgements, the researchers consistently found that participants generalized better to novel species following training with more unique exemplars (i.e. higher variability), while high repetition training produced significantly better performance categorizing the specific species they had trained on. A variability advantage was also found in the relatively complex domain of rock categorization (Nosofsky et al., 2019). For 10 different rock categories, participants were trained with either many repetitions of 3 unique examples of each category, or few repetitions of 9 unique examples, with an equal number of total training trials in each group (the design also included 2 other conditions less amenable to considering the impact of variation). The high-variability group, trained with 9 unique examples, showed significantly better generalization performance than the other conditions.
 
-A distinct sub-literature within the category learning domain has examined how the variability or dispersion of the categories themselves influences generalization to ambiguous regions of the category space (e.g. the region between the two categories). The general approach is to train participants with examples from a high variability category and a low variability category. Participants are then tested with novel items located within ambiguous regions of the category space which allow the experimenters to assess whether the difference in category variability influenced how far participants generalize the category boundaries. A. L. Cohen et al. (2001) conducted two experiments with this basic paradigm. In experiment 1, a low variability category composed of 1 instance was compared against a high-variability category of 2 instances in one condition, and 7 instances in another. In experiment 2 both categories were composed of 3 instances, but for the low-variability group the instances were clustered close to each other, whereas the high-variability groups instances were spread much further apart. Participants were tested on an ambiguous novel instance that was located in between the two trained categories. Both experiments provided evidence that participants were much more likely to categorize the novel middle stimulus into the category with greater variation.
+A distinct sub-literature within the category learning domain has examined how the variability or dispersion of the categories themselves influences generalization to ambiguous regions of the category space (e.g., the region between the two categories). The general approach is to train participants with examples from a high variability category and a low variability category. Participants are then tested with novel items located within ambiguous regions of the category space which allow the experimenters to assess whether the difference in category variability influenced how far participants generalize the category boundaries. A. L. Cohen et al. (2001) conducted two experiments with this basic paradigm. In experiment 1, a low variability category composed of 1 instance was compared against a high-variability category of 2 instances in one condition, and 7 instances in another. In experiment 2 both categories were composed of 3 instances, but for the low-variability group the instances were clustered close to each other, whereas the high-variability groups instances were spread much further apart. Participants were tested on an ambiguous novel instance that was located in between the two trained categories. Both experiments provided evidence that participants were much more likely to categorize the novel middle stimulus into the category with greater variation.
 
 Further observations of widened generalization following varied training have since been observed in numerous investigations (Hahn et al., 2005; Hosch et al., 2023; Hsu & Griffiths, 2010; Perlman et al., 2012; Sakamoto et al., 2008; but see Stewart & Chater, 2002; L.-X. Yang & Wu, 2014; and Seitz et al., 2023). The results of Sakamoto et al. (2008) are noteworthy. They first reproduced the basic finding of participants being more likely to categorize an unknown middle stimulus into a training category with higher variability. In a second experiment, they held the variability between the two training categories constant and instead manipulated the training sequence, such that the examples of one category appeared in an ordered fashion, with very small changes from one example to the other (the stimuli were lines that varied only in length), whereas examples in the alternate category were shown in a random order and thus included larger jumps in the stimulus space from trial to trial. They found that the middle stimulus was more likely to be categorized into the category that had been learned with a random sequence, which was attributed to an increased perception of variability which resulted from the larger trial to trial discrepancies.
 
@@ -144,11 +143,11 @@ Variability has also been examined in the learning of higher-order linguistic ca
 
 Of course, the relationship between training variability and transfer is unlikely to be a simple function wherein increased variation is always beneficial. Numerous studies have found null, or in some cases negative effects of training variation (DeLosh et al., 1997; Sinkeviciute et al., 2019; Van Rossum, 1990; Wrisberg et al., 1987), and many more have suggested that the benefits of variability may depend on additional factors such as prior task experience, the order of training trials, or the type of transfer being measured (Berniker et al., 2014; Braithwaite & Goldstone, 2015; Hahn et al., 2005; Lavan et al., 2019; North et al., 2019; Sadakata & McQueen, 2014; Zaman et al., 2021).
 
-In an example of a more complex influence of training variation, (Braithwaite & Goldstone, 2015) trained participants on example problems involving the concept of sampling with replacement (SWR). Training consisted of examples that were either highly similar in their semantic context (e.g. all involving people selecting objects) or in which the surface features were varied between examples (e.g. people choosing objects AND objects selected in a sequence). The experimenters also surveyed how much prior knowledge each participant had with SWR. They found that whether variation was beneficial depended on the prior knowledge of the participants -- such that participants with some prior knowledge benefited from varied training, whereas participants with minimal prior knowledge performed better after training with similar examples. The authors hypothesized that in order to benefit from varied examples, participants must be able to detect the structure common to the diverse examples, and that participants with prior knowledge are more likely to be sensitive to such structure, and thus to benefit from varied training. To test this hypothesis more directly, the authors conducted a 2nd experiment, wherein they controlled prior knowledge by exposing some subjects to a short graphical or verbal pre-training lesson, designed to increase sensitivity to the training examples. Consistent with their hypothesis, participants exposed to the structural sensitivity pre-training benefited more from varied training than the controls participants who benefited more from training with similar examples. Interactions between prior experience and the influence of varied training have also been observed in sensorimotor learning (Del Rey et al., 1982; Guadagnoli et al., 1999). Del Rey et al. (1982) recruited participants who self-reported either extensive, or very little experience with athletic activities, and then trained participants on a coincident timing task under with either a single constant training velocity, with one of several varied training procedures. Unsurprisingly, athlete participants had superior performance during training, regardless of condition, and training performance was superior for all subjects in the constant group. Of greater interest is the pattern of testing results from novel transfer conditions. Among the athlete-participants, transfer performance was best for those who received variable training. Non-athletes showed the opposite pattern, with superior performance for those who had constant training.
+In an example of a more complex influence of training variation, (Braithwaite & Goldstone, 2015) trained participants on example problems involving the concept of sampling with replacement (SWR). Training consisted of examples that were either highly similar in their semantic context (e.g., all involving people selecting objects) or in which the surface features were varied between examples (e.g., people choosing objects AND objects selected in a sequence). The experimenters also surveyed how much prior knowledge each participant had with SWR. They found that whether variation was beneficial depended on the prior knowledge of the participants -- such that participants with some prior knowledge benefited from varied training, whereas participants with minimal prior knowledge performed better after training with similar examples. The authors hypothesized that in order to benefit from varied examples, participants must be able to detect the structure common to the diverse examples, and that participants with prior knowledge are more likely to be sensitive to such structure, and thus to benefit from varied training. To test this hypothesis more directly, the authors conducted a 2nd experiment, wherein they controlled prior knowledge by exposing some subjects to a short graphical or verbal pre-training lesson, designed to increase sensitivity to the training examples. Consistent with their hypothesis, participants exposed to the structural sensitivity pre-training benefited more from varied training than the controls participants who benefited more from training with similar examples. Interactions between prior experience and the influence of varied training have also been observed in sensorimotor learning (Del Rey et al., 1982; Guadagnoli et al., 1999). Del Rey et al. (1982) recruited participants who self-reported either extensive, or very little experience with athletic activities, and then trained participants on a coincident timing task under with either a single constant training velocity, with one of several varied training procedures. Unsurprisingly, athlete participants had superior performance during training, regardless of condition, and training performance was superior for all subjects in the constant group. Of greater interest is the pattern of testing results from novel transfer conditions. Among the athlete-participants, transfer performance was best for those who received variable training. Non-athletes showed the opposite pattern, with superior performance for those who had constant training.
 
 ## Existing Theoretircal Frameworks
 
-A number of theoretical frameworks have been proposed to conceptually explain the effects of varied training on learning and generalization. Schema theory (described in more detail above), posts that varied practice leads to the formation of more flexible motor schemas, which then facilitate generalization (Schmidt, 1975). The desirable difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015) proposes that variable practice conditions may impair initial performance but then enhance longer-term retention and transfer. Similarily, the challenge point framework (Guadagnoli & Lee, 2004) contends that training variation induces optimal learning occurs insofar as it causes the difficulty of practice tasks to be appropriately matched to the learner's capabilities, but may also be detrimental if the amount of variation causes the task to be too difficult.
+A number of theoretical frameworks have been proposed to conceptually explain the effects of varied training on learning and generalization. Schema theory (described in more detail above), posts that varied practice leads to the formation of more flexible motor schemas, which then facilitate generalization (Schmidt, 1975). The desirable difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015) proposes that variable practice conditions may impair initial performance but then enhance longer-term retention and transfer. Similarly, the challenge point framework (Guadagnoli & Lee, 2004) contends that training variation induces optimal learning occurs insofar as it causes the difficulty of practice tasks to be appropriately matched to the learner's capabilities, but may also be detrimental if the amount of variation causes the task to be too difficult.
 
 While these frameworks offer valuable conceptual accounts, there has been a limited application of computational modeling efforts aimed at quantitatively assessing and comparing the learning and generalization mechanisms which may be underlying the influence of variability in visuomotor skill learning. In contrast, the effects of variability have received more formal computational treatment in other domains, such as category learning Hu & Nosofsky (2024), language learning (Jones & Brandt, 2020), and function learning (DeLosh et al., 1997). A primary goal of the current dissertation is to to address this gap by adapting and applying modeling approaches from these other domains to investigate the effects of training variability in visuomotor skill learning and function learning tasks.
 
@@ -172,7 +171,7 @@ Exposing learners to variability during training has been demonstrated to improv
 
 ### Similarity and instance-based approaches to transfer of learning
 
-Early models of learning often assumed that discrete experiences with some task or category were not stored individually in memory, but instead promoted the formation of a summary representation, often referred to as a prototype or schema, and that exposure to novel examples would then prompt the retrieval of whichever preexisting prototype was most similar. In addition to being a landmark study on the influence of training variability, Posner & Keele (1968) (described above) also put forward an influential argument concerning the nature of the mental representations acquired during learning - namely that learners tend to abstract a prototype, or aggregate representation of the dot pattern categories, rather than encoding each individual stimuli. Recall that participants are trained on only on distortions of the category prototypes (e.g. low, medium or high distortions), never encountering the exact prototypes during the training stage. Then, in the testing phase, participants are tested with the prototype patterns, their old training items, and novel low, medium and high distortions. The authors found that participants had the highest testing accuracy for the previously unseen prototype patterns, followed by the old training items, and then the novel low, medium and high distortions. The authors interpreted this pattern as evidence that participants had acquired prototype representation of the category, as opposed to storing each individual training instance, and that generalization was based on the similarity of the testing items to the learned prototype representations. Posner & Keele (1968) has been extremely influential, and continues to be cited as evidence that prototype abstraction underlies the benefits of varied training. It's also referenced as a key influence in the development of the "Schema Theory of Motor Learning" Schmidt (1975), which in turn influenced decades of research on the potential benefits of varied training in motor skill learning. However a number of the core assumptions utilized by Posner & Keele (1968) were later called into question both empirically and with competing theoretical accounts (Hintzman, 1984, 1986; Knapp & Anderson, 1984; McClelland & Rumelhart, 1985; Nosofsky & Kruschke, 1992; Palmeri & Nosofsky, 2001; Zaki & Nosofsky, 2007). Palmeri & Nosofsky (2001) demonstrated both the dangers of assuming that psychological representations mimic the metric stimulus space, as well the viability of models with simpler representational assumptions. These authors conducted a near replication of the Posner & Keele (1968) study, but also had participants provide similarity judgements of the dot pattern stimuli after completing the training phase. A multidimensional scaling analysis of the similarity judgements revelead that the psychological representations of the prototype stimuli were not located in the middle of the training stimuli, but were instead extreme points in the psychological space. The authors also demonstrated the generalization patterns of Posner & Keele (1968) could be accounted for by an exemplar-based model, without any need to assume the abstraction of a prototype.
+Early models of learning often assumed that discrete experiences with some task or category were not stored individually in memory, but instead promoted the formation of a summary representation, often referred to as a prototype or schema, and that exposure to novel examples would then prompt the retrieval of whichever preexisting prototype was most similar. In addition to being a landmark study on the influence of training variability, Posner & Keele (1968) (described above) also put forward an influential argument concerning the nature of the mental representations acquired during learning - namely that learners tend to abstract a prototype, or aggregate representation of the dot pattern categories, rather than encoding each individual stimuli. Recall that participants are trained on only on distortions of the category prototypes (e.g., low, medium or high distortions), never encountering the exact prototypes during the training stage. Then, in the testing phase, participants are tested with the prototype patterns, their old training items, and novel low, medium and high distortions. The authors found that participants had the highest testing accuracy for the previously unseen prototype patterns, followed by the old training items, and then the novel low, medium and high distortions. The authors interpreted this pattern as evidence that participants had acquired prototype representation of the category, as opposed to storing each individual training instance, and that generalization was based on the similarity of the testing items to the learned prototype representations. Posner & Keele (1968) has been extremely influential, and continues to be cited as evidence that prototype abstraction underlies the benefits of varied training. It's also referenced as a key influence in the development of the "Schema Theory of Motor Learning" Schmidt (1975), which in turn influenced decades of research on the potential benefits of varied training in motor skill learning. However a number of the core assumptions utilized by Posner & Keele (1968) were later called into question both empirically and with competing theoretical accounts (Hintzman, 1984, 1986; Knapp & Anderson, 1984; McClelland & Rumelhart, 1985; Nosofsky & Kruschke, 1992; Palmeri & Nosofsky, 2001; Zaki & Nosofsky, 2007). Palmeri & Nosofsky (2001) demonstrated both the dangers of assuming that psychological representations mimic the metric stimulus space, as well the viability of models with simpler representational assumptions. These authors conducted a near replication of the Posner & Keele (1968) study, but also had participants provide similarity judgements of the dot pattern stimuli after completing the training phase. A multidimensional scaling analysis of the similarity judgements revelead that the psychological representations of the prototype stimuli were not located in the middle of the training stimuli, but were instead extreme points in the psychological space. The authors also demonstrated the generalization patterns of Posner & Keele (1968) could be accounted for by an exemplar-based model, without any need to assume the abstraction of a prototype.
 
 Instance-based, or exemplar-based models generally assume that learners encode each experience with a task as a separate instance/exemplar/trace, and that each encoded trace is in turn compared against novel stimuli (Estes, 1994; Hintzman, 1984; Jamieson et al., 2022; Medin & Schaffer, 1978; Nosofsky, 1986). As the number of stored instances increases, so does the likelihood that some previously stored instance will be retrieved to aid in the performance of a novel task. Stored instances are retrieved in the context of novel stimuli or tasks if they are sufficiently similar, thus suggesting that the process of computing similarity is of central importance to generalization.
 
@@ -180,7 +179,7 @@ Similarity, defined in this literature as a function of psychological distance b
 
 ### Issues with Previous Research
 
-Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis (Newell, 2003; Van Rossum, 1990). Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g. projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g. more unique combinations of x and y velocities).
+Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis (Newell, 2003; Van Rossum, 1990). Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g., projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g., more unique combinations of x and y velocities).
 Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance (Ennis et al., 1988; Ghahramani et al., 1996; Logan, 1988; Nosofsky, 1992; Shepard, 1987; Thoroughman & Taylor, 2005), it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure 1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.
 
 <img
@@ -202,7 +201,7 @@ To obtain an independent estimate of effect size, we identified previous investi
 
 #### Participants
 
-Participants were recruited from an undergraduate population that is 63% female and consists almost entirely of individuals aged 18 to 22 years. A total of 110 Indiana University psychology students participated in Experiment 1. We subsequently excluded 34 participants for poor performance on one of the dependent measures of the task (2.5-3 standard deviations worse than the median subject at the task) or for displaying a pattern of responses that was clearly indicative of a lack of engagement with the task (e.g. simply dropping the ball on each trial rather than throwing it at the target), or for reporting that they completed the experiment on a phone or tablet device, despite the instructions not to use one of these devices. A total of 74 participants were retained for the final analyses, 35 in the varied group and 39 in the constant group.
+Participants were recruited from an undergraduate population that is 63% female and consists almost entirely of individuals aged 18 to 22 years. A total of 110 Indiana University psychology students participated in Experiment 1. We subsequently excluded 34 participants for poor performance on one of the dependent measures of the task (2.5-3 standard deviations worse than the median subject at the task) or for displaying a pattern of responses that was clearly indicative of a lack of engagement with the task (e.g., simply dropping the ball on each trial rather than throwing it at the target), or for reporting that they completed the experiment on a phone or tablet device, despite the instructions not to use one of these devices. A total of 74 participants were retained for the final analyses, 35 in the varied group and 39 in the constant group.
 
 #### Task
 
@@ -326,7 +325,7 @@ Next, we compared the testing performance of constant and varied groups from onl
 | 800      | 285.91(102.81) | NA             |
 | 900      | 346.96(111.35) | 289.62(110.07) |
 
-Table 2: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g. excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
+Table 2: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g., excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
 </div>
 
 Finally, corresponding to the comparison of position 760 from Experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure 7</a> displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
@@ -334,7 +333,7 @@ Finally, corresponding to the comparison of position 760 from Experiment 1, we c
 <img
 src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
 id="fig-e2test1"
-alt="Figure 7: A comparison of throwing location that are identical to those trained by the constant participants (e.g. constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." />
+alt="Figure 7: A comparison of throwing location that are identical to those trained by the constant participants (e.g., constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." />
 
   
   
@@ -403,7 +402,7 @@ alt="Figure 9: A simple model depicting the necessity of both of two separately
 
 As mentioned above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning (Aha & Goldstone, 1992; Briscoe & Feldman, 2011; Hahn et al., 2005; Lamberts, 1994; Op de Beeck et al., 2008), and sensorimotor adaptation (Marongelli & Thoroughman, 2013; Taylor & Ivry, 2013; Thoroughman & Taylor, 2005). Lamberts (1994) showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been trained on categories that differ in their relative variability (Hahn et al., 2005; Sakamoto et al., 2006). However, to the best of our knowledge, IGAS is the first instance-based similarity model that has been put forward to account for the effect of varied training in a visuomotor skill task. Although IGAS was inspired by work in the domain of category learning, its success in a distinct domain may not be surprising in light of the numerous prior observations that at least certain aspects of learning and generalization may operate under common principles across different tasks and domains (Censor et al., 2012; Hills et al., 2010; Jamieson et al., 2022; Law & Gold, 2010; Roark et al., 2021; Rosenbaum et al., 2001; Vigo et al., 2018; Wall et al., 2021; Wu et al., 2020; J. Yang et al., 2020).
 
-Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as points in a multidimensional space of all of the attributes that define a category item (e.g. size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g. movement force, velocity, angle, posture) in addition to the decision and response time measures that typically exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor instance is a fundamental question beyond the scope of the current work -- though as described in the introduction there is some evidence in support of this idea (Chamberlin & Magill, 1992a; Crump & Logan, 2010; Hommel, 1998; Meigh et al., 2018; Poldrack et al., 1999). A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues (R. G. Cohen & Rosenbaum, 2004; Rosenbaum et al., 1995). Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.
+Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as points in a multidimensional space of all of the attributes that define a category item (e.g., size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g., movement force, velocity, angle, posture) in addition to the decision and response time measures that typically exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor instance is a fundamental question beyond the scope of the current work -- though as described in the introduction there is some evidence in support of this idea (Chamberlin & Magill, 1992a; Crump & Logan, 2010; Hommel, 1998; Meigh et al., 2018; Poldrack et al., 1999). A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues (R. G. Cohen & Rosenbaum, 2004; Rosenbaum et al., 1995). Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.
 
 Our findings also have some conceptual overlap with an earlier study on the effects of varied training in a coincident timing task (Catalano & Kleiner, 1984). In this task, participants observe a series of lamps lighting up consecutively, and attempt to time a button press with the onset of the final lamp. The design consisted of four separate constant groups, each training from a single lighting velocity, and a single varied group training with all four of the lighting velocities used by the individual constant groups. Participants were then split into four separate testing conditions, each of which were tested from a single novel lighting velocity of varying distance from the training conditions. The result of primary interest was that all participants performed worse as the distance between training and testing velocity increased -- a typical generalization decrement. However, varied participants showed less of a decrement than did constant participants. The authors take this result as evidence that varied training results in a less-steep generalization gradient than does constant training. Although the experimental conclusions of Catalano and Kleiner are similar to our own, our work is novel in that we account for our results with a cognitive model, and without assuming the formation of a schema. Additionally, the way in which Catalano and Kleiner collapse their separate constant groups together may result in similarity confounds between varied and constant conditions that leaves their study open to methodological criticisms, especially in light of related work which demonstrated that the extent to which varied training may be beneficial can depend on whether the constant group they are compared against trained from similar conditions to those later tested (Wrisberg et al., 1987). Our study alleviates such concerns by explicitly controlling for similarity.
 
@@ -411,7 +410,7 @@ Our findings also have some conceptual overlap with an earlier study on the effe
 
 A limitation of this study concerns the ordering of the testing/transfer trials at the conclusion of both experiments. Participants were tested from each separate position (4 in Experiment 1, 6 in Experiment 2) in a random, intermixed order. Because the varied group was trained from two positions that were also randomly ordered, they may have benefited from experience with this type of sequencing, whereas the constant groups had no experience with switching between positions trial to trial. This concern is somewhat ameliorated by the fact that the testing phase performance of the constant groups from their trained position was not significantly worse than their level of performance at the end of the training phase, suggesting that they were not harmed by random ordering of positions during testing. It should also be noted that the computerized task utilized in the present work is relatively simple compared to many of the real-world tasks utilized in prior research. It is thus conceivable that the effect of variability in more complex tasks is distinct from the process put forward in the present work. An important challenge for future work will be to assess the extent to which IGAS can account for generalization in relatively complex tasks with far more degrees of freedom.
 
-It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations (Nosofsky, 1992; Shepard, 1987). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g. the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli.
+It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations (Nosofsky, 1992; Shepard, 1987). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g., the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli.
 
 ### Conclusion
 
@@ -460,7 +459,7 @@ To account for the empirical results, we will apply a series of computational mo
 
 *Participants* A total of 156 participants were recruited from the Indiana University Introductory Psychology Course. Participants were randomly assigned to one of two training conditions: varied training or constant training.
 
-*Task.* The "Hit The Wall" (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the "wall" at target speed indicated at the top of the screen (see <a href="#fig-htw-task" class="quarto-xref">Figure 11</a>). The target velocities were given as a range, or band, of acceptable velocity values (e.g. band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
+*Task.* The "Hit The Wall" (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the [phaser.io](https://phaser.io/) game library. The HTW task involved launching a projectile such that it would strike the "wall" at target speed indicated at the top of the screen (see <a href="#fig-htw-task" class="quarto-xref">Figure 11</a>). The target velocities were given as a range, or band, of acceptable velocity values (e.g., band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.
 
 <img src="../Assets/figs/htw_task_fig.png" id="fig-htw-task"
 alt="Figure 11: The Hit the wall task. Participants launch the blue ball to hit the red wall at the target velocity band indicated at the top of the screen. The ball must be released from within the orange square - but the location of release, and the location at which the ball strikes the wall are both irrelevant to the task feedback." />
@@ -703,7 +702,7 @@ alt="Figure 21: Experiment 3 Testing Accuracy. A) Empricial Deviations from tar
 | bandOrderReverse:band                  |    -0.10 |         -0.27 |          0.08 | 0.86 |
 | **conditVaried:bandOrderReverse:band** |     0.42 |          0.17 |          0.70 | 1.00 |
 
-Table 13: **Experiment 3 testing discrimination**. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the slope for the baseline condition. The interaction terms which include condit and Band (e.g. conditVaried:Band & conditVaried:bandOrderReverse:band) respectively indicate the how the slopes of the varied-original condition differed from the baseline condition, and how varied-reverse condition differed from the varied-original condition
+Table 13: **Experiment 3 testing discrimination**. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the slope for the baseline condition. The interaction terms which include condit and Band (e.g., conditVaried:Band & conditVaried:bandOrderReverse:band) respectively indicate the how the slopes of the varied-original condition differed from the baseline condition, and how varied-reverse condition differed from the varied-original condition
 </div>
 
 *Testing Discrimination.* The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 12</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, $\beta$ = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating a greater slope for the varied condition trained with reverse order bands. This interaction is shown in <a href="#fig-e3-test-vx" class="quarto-xref">Figure 22</a>, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
@@ -735,7 +734,7 @@ The modeling goal is to implement a full process model capable of both 1) produc
 
 ### ALM & Exam
 
-ALM is a localist neural network model (Page, 2000), with each input node corresponding to a particular stimulus, and each output node corresponding to a particular response value. The units in the input layer activate as a function of their Gaussian similarity to the input stimulus. So, for example, an input stimulus of value 55 would induce maximal activation of the input unit tuned to 55. Depending on the value of the generalization parameter, the nearby units (e.g. 54 and 56; 53 and 57) may also activate to some degree. ALM is structured with input and output nodes that correspond to regions of the stimulus space, and response space, respectively. The units in the input layer activate as a function of their similarity to a presented stimulus. As was the case with the exemplar-based models, similarity in ALM is exponentially decaying function of distance. The input layer is fully connected to the output layer, and the activation for any particular output node is simply the weighted sum of the connection weights between that node and the input activations. The network then produces a response by taking the weighted average of the output units (recall that each output unit has a value corresponding to a particular response). During training, the network receives feedback which activates each output unit as a function of its distance from the ideal level of activation necessary to produce the correct response. The connection weights between input and output units are then updated via the standard delta learning rule, where the magnitude of weight changes are controlled by a learning rate parameter. The EXAM model is an extension of ALM, with the same learning rule and representational scheme for input and output units. EXAM differs from ALM only in its response rule, as it includes a linear extrapolation mechanism for generating novel responses. Although this extrapolation rule departs from a strictly similarity-based generalization mechanism, EXAM is distinct from pure rule-based models in that it remains constrained by the weights learned during training. EXAM retrieves the two nearest training inputs, and the ALM responses associated with those inputs, and computes the slope between these two points. The slope is then used to extrapolate the response to the novel test stimulus. Because EXAM requires at least two input-output pairs to generate a response, additional assumptions were required in order for it to generate resposnes for the constant group. We assumed that participants come to the task with prior knowledge of the origin point (0,0), which can serve as a reference point necessary for the model to generate responses for the constant group. This assumption is motivated by previous function learning research (Brown & Lacroix (2017)), which through a series of manipulations of the y intercept of the underlying function, found that participants consistently demonstrated knowledge of, or a bias towards, the origin point (see Kwantes & Neal (2006) for additional evidence of such a bias in function learning tasks).
+ALM is a localist neural network model (Page, 2000), with each input node corresponding to a particular stimulus, and each output node corresponding to a particular response value. The units in the input layer activate as a function of their Gaussian similarity to the input stimulus. So, for example, an input stimulus of value 55 would induce maximal activation of the input unit tuned to 55. Depending on the value of the generalization parameter, the nearby units (e.g., 54 and 56; 53 and 57) may also activate to some degree. ALM is structured with input and output nodes that correspond to regions of the stimulus space, and response space, respectively. The units in the input layer activate as a function of their similarity to a presented stimulus. As was the case with the exemplar-based models, similarity in ALM is exponentially decaying function of distance. The input layer is fully connected to the output layer, and the activation for any particular output node is simply the weighted sum of the connection weights between that node and the input activations. The network then produces a response by taking the weighted average of the output units (recall that each output unit has a value corresponding to a particular response). During training, the network receives feedback which activates each output unit as a function of its distance from the ideal level of activation necessary to produce the correct response. The connection weights between input and output units are then updated via the standard delta learning rule, where the magnitude of weight changes are controlled by a learning rate parameter. The EXAM model is an extension of ALM, with the same learning rule and representational scheme for input and output units. EXAM differs from ALM only in its response rule, as it includes a linear extrapolation mechanism for generating novel responses. Although this extrapolation rule departs from a strictly similarity-based generalization mechanism, EXAM is distinct from pure rule-based models in that it remains constrained by the weights learned during training. EXAM retrieves the two nearest training inputs, and the ALM responses associated with those inputs, and computes the slope between these two points. The slope is then used to extrapolate the response to the novel test stimulus. Because EXAM requires at least two input-output pairs to generate a response, additional assumptions were required in order for it to generate resposnes for the constant group. We assumed that participants come to the task with prior knowledge of the origin point (0,0), which can serve as a reference point necessary for the model to generate responses for the constant group. This assumption is motivated by previous function learning research (Brown & Lacroix (2017)), which through a series of manipulations of the y intercept of the underlying function, found that participants consistently demonstrated knowledge of, or a bias towards, the origin point (see Kwantes & Neal (2006) for additional evidence of such a bias in function learning tasks).
 
 See <a href="#tbl-alm-exam" class="quarto-xref">Table 14</a> for a full specification of the equations that define ALM and EXAM, and <a href="#fig-alm-diagram" class="quarto-xref">Figure 24</a> for a visual representation of the ALM model.
 
@@ -767,7 +766,7 @@ To fit ALM and EXAM to our participant data, we employ a similar method to Mcdan
 >
 > ** Approximate Bayesian Computation**
 >
-> To estimate the parameters of ALM and EXAM, we used approximate bayesian computation (ABC), enabling us to obtain an estimate of the posterior distribution of the generalization and learning rate parameters for each individual. ABC belongs to the class of simulation-based inference methods (Cranmer et al., 2020), which have begun being used for parameter estimation in cognitive modeling relatively recently (Kangasrääsiö et al., 2019; Turner et al., 2016; Turner & Van Zandt, 2012). Although they can be applied to any model from which data can be simulated, ABC methods are most useful for complex models that lack an explicit likelihood function (e.g. many neural network models).
+> To estimate the parameters of ALM and EXAM, we used approximate bayesian computation (ABC), enabling us to obtain an estimate of the posterior distribution of the generalization and learning rate parameters for each individual. ABC belongs to the class of simulation-based inference methods (Cranmer et al., 2020), which have begun being used for parameter estimation in cognitive modeling relatively recently (Kangasrääsiö et al., 2019; Turner et al., 2016; Turner & Van Zandt, 2012). Although they can be applied to any model from which data can be simulated, ABC methods are most useful for complex models that lack an explicit likelihood function (e.g., many neural network models).
 >
 > The general ABC procedure is to 1) define a prior distribution over model parameters. 2) sample candidate parameter values, $\theta^*$, from the prior. 3) Use $\theta^*$ to generate a simulated dataset, $Data_{sim}$. 4) Compute a measure of discrepancy between the simulated and observed datasets, $discrep$($Data_{sim}$, $Data_{obs}$). 5) Accept $\theta^*$ if the discrepancy is less than the tolerance threshold, $\epsilon$, otherwise reject $\theta^*$. 6) Repeat until desired number of posterior samples are obtained.
 >
@@ -792,23 +791,23 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
 
 <div id="tbl-htw-modelError-e1">
 
-<div id="cytmttxssx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cytmttxssx table {
+<div id="lynvjgkxfn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lynvjgkxfn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cytmttxssx thead, #cytmttxssx tbody, #cytmttxssx tfoot, #cytmttxssx tr, #cytmttxssx td, #cytmttxssx th {
+#lynvjgkxfn thead, #lynvjgkxfn tbody, #lynvjgkxfn tfoot, #lynvjgkxfn tr, #lynvjgkxfn td, #lynvjgkxfn th {
   border-style: none;
 }
 
-#cytmttxssx p {
+#lynvjgkxfn p {
   margin: 0;
   padding: 0;
 }
 
-#cytmttxssx .gt_table {
+#lynvjgkxfn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -834,12 +833,12 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-left-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_caption {
+#lynvjgkxfn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cytmttxssx .gt_title {
+#lynvjgkxfn .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -851,7 +850,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-bottom-width: 0;
 }
 
-#cytmttxssx .gt_subtitle {
+#lynvjgkxfn .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -863,7 +862,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-top-width: 0;
 }
 
-#cytmttxssx .gt_heading {
+#lynvjgkxfn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -875,13 +874,13 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-right-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_bottom_border {
+#lynvjgkxfn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_col_headings {
+#lynvjgkxfn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -896,7 +895,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-right-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_col_heading {
+#lynvjgkxfn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -916,7 +915,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   overflow-x: hidden;
 }
 
-#cytmttxssx .gt_column_spanner_outer {
+#lynvjgkxfn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -928,15 +927,15 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 4px;
 }
 
-#cytmttxssx .gt_column_spanner_outer:first-child {
+#lynvjgkxfn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cytmttxssx .gt_column_spanner_outer:last-child {
+#lynvjgkxfn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cytmttxssx .gt_column_spanner {
+#lynvjgkxfn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -948,11 +947,11 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   width: 100%;
 }
 
-#cytmttxssx .gt_spanner_row {
+#lynvjgkxfn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cytmttxssx .gt_group_heading {
+#lynvjgkxfn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -978,7 +977,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   text-align: left;
 }
 
-#cytmttxssx .gt_empty_group_heading {
+#lynvjgkxfn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -993,15 +992,15 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   vertical-align: middle;
 }
 
-#cytmttxssx .gt_from_md > :first-child {
+#lynvjgkxfn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cytmttxssx .gt_from_md > :last-child {
+#lynvjgkxfn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cytmttxssx .gt_row {
+#lynvjgkxfn .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -1020,7 +1019,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   overflow-x: hidden;
 }
 
-#cytmttxssx .gt_stub {
+#lynvjgkxfn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1033,7 +1032,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 5px;
 }
 
-#cytmttxssx .gt_stub_row_group {
+#lynvjgkxfn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1047,15 +1046,15 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   vertical-align: top;
 }
 
-#cytmttxssx .gt_row_group_first td {
+#lynvjgkxfn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cytmttxssx .gt_row_group_first th {
+#lynvjgkxfn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cytmttxssx .gt_summary_row {
+#lynvjgkxfn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1065,16 +1064,16 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 5px;
 }
 
-#cytmttxssx .gt_first_summary_row {
+#lynvjgkxfn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_first_summary_row.thick {
+#lynvjgkxfn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cytmttxssx .gt_last_summary_row {
+#lynvjgkxfn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1084,7 +1083,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-bottom-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_grand_summary_row {
+#lynvjgkxfn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1094,7 +1093,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 5px;
 }
 
-#cytmttxssx .gt_first_grand_summary_row {
+#lynvjgkxfn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1104,7 +1103,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-top-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_last_grand_summary_row_top {
+#lynvjgkxfn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1114,11 +1113,11 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-bottom-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_striped {
+#lynvjgkxfn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cytmttxssx .gt_table_body {
+#lynvjgkxfn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1127,7 +1126,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-bottom-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_footnotes {
+#lynvjgkxfn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1141,7 +1140,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-right-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_footnote {
+#lynvjgkxfn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1150,7 +1149,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 5px;
 }
 
-#cytmttxssx .gt_sourcenotes {
+#lynvjgkxfn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1164,7 +1163,7 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   border-right-color: #D3D3D3;
 }
 
-#cytmttxssx .gt_sourcenote {
+#lynvjgkxfn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1172,63 +1171,63 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
   padding-right: 5px;
 }
 
-#cytmttxssx .gt_left {
+#lynvjgkxfn .gt_left {
   text-align: left;
 }
 
-#cytmttxssx .gt_center {
+#lynvjgkxfn .gt_center {
   text-align: center;
 }
 
-#cytmttxssx .gt_right {
+#lynvjgkxfn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cytmttxssx .gt_font_normal {
+#lynvjgkxfn .gt_font_normal {
   font-weight: normal;
 }
 
-#cytmttxssx .gt_font_bold {
+#lynvjgkxfn .gt_font_bold {
   font-weight: bold;
 }
 
-#cytmttxssx .gt_font_italic {
+#lynvjgkxfn .gt_font_italic {
   font-style: italic;
 }
 
-#cytmttxssx .gt_super {
+#lynvjgkxfn .gt_super {
   font-size: 65%;
 }
 
-#cytmttxssx .gt_footnote_marks {
+#lynvjgkxfn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cytmttxssx .gt_asterisk {
+#lynvjgkxfn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cytmttxssx .gt_indent_1 {
+#lynvjgkxfn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cytmttxssx .gt_indent_2 {
+#lynvjgkxfn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cytmttxssx .gt_indent_3 {
+#lynvjgkxfn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cytmttxssx .gt_indent_4 {
+#lynvjgkxfn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cytmttxssx .gt_indent_5 {
+#lynvjgkxfn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1320,7 +1319,7 @@ alt="Figure 27: Empirical data and Model predictions for mean velocity across t
 <img
 src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
 id="fig-ee-e1"
-alt="Figure 28: A) Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied). Lower values on the y axis indicate better model fit. B) Specific contrasts of model performance comparing 1) EXAM fits between constant and varied training; 2) ALM vs. EXAM for the varied group; 3) ALM fits between constant and varied. Negative error differences indicate that the term on the left side (e.g. EXAM Constant) tended to have smaller model residuals." />
+alt="Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied). Lower values on the y axis indicate better model fit. D) Specific contrasts of model performance comparing 1) EXAM fits between constant and varied training; 2) ALM vs. EXAM for the varied group; 3) ALM fits between constant and varied. Negative error differences indicate that the term on the left side (e.g., EXAM Constant) tended to have smaller model residuals." />
 
 To quantitatively assess whether the differences in performance between models, we fit a bayesian regressions predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs. EXAM) and training condition (Constant vs. Varied).
 
@@ -1328,23 +1327,23 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
 
 <div id="tbl-htw-modelError-e23">
 
-<div id="hocamzvpek" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hocamzvpek table {
+<div id="azdcfbawzk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#azdcfbawzk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hocamzvpek thead, #hocamzvpek tbody, #hocamzvpek tfoot, #hocamzvpek tr, #hocamzvpek td, #hocamzvpek th {
+#azdcfbawzk thead, #azdcfbawzk tbody, #azdcfbawzk tfoot, #azdcfbawzk tr, #azdcfbawzk td, #azdcfbawzk th {
   border-style: none;
 }
 
-#hocamzvpek p {
+#azdcfbawzk p {
   margin: 0;
   padding: 0;
 }
 
-#hocamzvpek .gt_table {
+#azdcfbawzk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1370,12 +1369,12 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-left-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_caption {
+#azdcfbawzk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hocamzvpek .gt_title {
+#azdcfbawzk .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -1387,7 +1386,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-bottom-width: 0;
 }
 
-#hocamzvpek .gt_subtitle {
+#azdcfbawzk .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -1399,7 +1398,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-top-width: 0;
 }
 
-#hocamzvpek .gt_heading {
+#azdcfbawzk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1411,13 +1410,13 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-right-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_bottom_border {
+#azdcfbawzk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_col_headings {
+#azdcfbawzk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1432,7 +1431,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-right-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_col_heading {
+#azdcfbawzk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1452,7 +1451,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   overflow-x: hidden;
 }
 
-#hocamzvpek .gt_column_spanner_outer {
+#azdcfbawzk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1464,15 +1463,15 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 4px;
 }
 
-#hocamzvpek .gt_column_spanner_outer:first-child {
+#azdcfbawzk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hocamzvpek .gt_column_spanner_outer:last-child {
+#azdcfbawzk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hocamzvpek .gt_column_spanner {
+#azdcfbawzk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1484,11 +1483,11 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   width: 100%;
 }
 
-#hocamzvpek .gt_spanner_row {
+#azdcfbawzk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hocamzvpek .gt_group_heading {
+#azdcfbawzk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1514,7 +1513,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   text-align: left;
 }
 
-#hocamzvpek .gt_empty_group_heading {
+#azdcfbawzk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1529,15 +1528,15 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   vertical-align: middle;
 }
 
-#hocamzvpek .gt_from_md > :first-child {
+#azdcfbawzk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hocamzvpek .gt_from_md > :last-child {
+#azdcfbawzk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hocamzvpek .gt_row {
+#azdcfbawzk .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -1556,7 +1555,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   overflow-x: hidden;
 }
 
-#hocamzvpek .gt_stub {
+#azdcfbawzk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1569,7 +1568,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 5px;
 }
 
-#hocamzvpek .gt_stub_row_group {
+#azdcfbawzk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1583,15 +1582,15 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   vertical-align: top;
 }
 
-#hocamzvpek .gt_row_group_first td {
+#azdcfbawzk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hocamzvpek .gt_row_group_first th {
+#azdcfbawzk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hocamzvpek .gt_summary_row {
+#azdcfbawzk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1601,16 +1600,16 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 5px;
 }
 
-#hocamzvpek .gt_first_summary_row {
+#azdcfbawzk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_first_summary_row.thick {
+#azdcfbawzk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hocamzvpek .gt_last_summary_row {
+#azdcfbawzk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1620,7 +1619,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-bottom-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_grand_summary_row {
+#azdcfbawzk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1630,7 +1629,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 5px;
 }
 
-#hocamzvpek .gt_first_grand_summary_row {
+#azdcfbawzk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1640,7 +1639,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-top-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_last_grand_summary_row_top {
+#azdcfbawzk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1650,11 +1649,11 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-bottom-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_striped {
+#azdcfbawzk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hocamzvpek .gt_table_body {
+#azdcfbawzk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1663,7 +1662,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-bottom-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_footnotes {
+#azdcfbawzk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1677,7 +1676,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-right-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_footnote {
+#azdcfbawzk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1686,7 +1685,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 5px;
 }
 
-#hocamzvpek .gt_sourcenotes {
+#azdcfbawzk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1700,7 +1699,7 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   border-right-color: #D3D3D3;
 }
 
-#hocamzvpek .gt_sourcenote {
+#azdcfbawzk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1708,63 +1707,63 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
   padding-right: 5px;
 }
 
-#hocamzvpek .gt_left {
+#azdcfbawzk .gt_left {
   text-align: left;
 }
 
-#hocamzvpek .gt_center {
+#azdcfbawzk .gt_center {
   text-align: center;
 }
 
-#hocamzvpek .gt_right {
+#azdcfbawzk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hocamzvpek .gt_font_normal {
+#azdcfbawzk .gt_font_normal {
   font-weight: normal;
 }
 
-#hocamzvpek .gt_font_bold {
+#azdcfbawzk .gt_font_bold {
   font-weight: bold;
 }
 
-#hocamzvpek .gt_font_italic {
+#azdcfbawzk .gt_font_italic {
   font-style: italic;
 }
 
-#hocamzvpek .gt_super {
+#azdcfbawzk .gt_super {
   font-size: 65%;
 }
 
-#hocamzvpek .gt_footnote_marks {
+#azdcfbawzk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hocamzvpek .gt_asterisk {
+#azdcfbawzk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hocamzvpek .gt_indent_1 {
+#azdcfbawzk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hocamzvpek .gt_indent_2 {
+#azdcfbawzk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hocamzvpek .gt_indent_3 {
+#azdcfbawzk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hocamzvpek .gt_indent_4 {
+#azdcfbawzk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hocamzvpek .gt_indent_5 {
+#azdcfbawzk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1889,23 +1888,23 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
 
 <div id="tbl-htw-ee-e23">
 
-<div id="aocrzlqpsi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aocrzlqpsi table {
+<div id="gxfcjmgomr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gxfcjmgomr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aocrzlqpsi thead, #aocrzlqpsi tbody, #aocrzlqpsi tfoot, #aocrzlqpsi tr, #aocrzlqpsi td, #aocrzlqpsi th {
+#gxfcjmgomr thead, #gxfcjmgomr tbody, #gxfcjmgomr tfoot, #gxfcjmgomr tr, #gxfcjmgomr td, #gxfcjmgomr th {
   border-style: none;
 }
 
-#aocrzlqpsi p {
+#gxfcjmgomr p {
   margin: 0;
   padding: 0;
 }
 
-#aocrzlqpsi .gt_table {
+#gxfcjmgomr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1931,12 +1930,12 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-left-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_caption {
+#gxfcjmgomr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aocrzlqpsi .gt_title {
+#gxfcjmgomr .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -1948,7 +1947,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-bottom-width: 0;
 }
 
-#aocrzlqpsi .gt_subtitle {
+#gxfcjmgomr .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -1960,7 +1959,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-top-width: 0;
 }
 
-#aocrzlqpsi .gt_heading {
+#gxfcjmgomr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1972,13 +1971,13 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-right-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_bottom_border {
+#gxfcjmgomr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_col_headings {
+#gxfcjmgomr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1993,7 +1992,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-right-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_col_heading {
+#gxfcjmgomr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2013,7 +2012,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   overflow-x: hidden;
 }
 
-#aocrzlqpsi .gt_column_spanner_outer {
+#gxfcjmgomr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2025,15 +2024,15 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 4px;
 }
 
-#aocrzlqpsi .gt_column_spanner_outer:first-child {
+#gxfcjmgomr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aocrzlqpsi .gt_column_spanner_outer:last-child {
+#gxfcjmgomr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aocrzlqpsi .gt_column_spanner {
+#gxfcjmgomr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2045,11 +2044,11 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   width: 100%;
 }
 
-#aocrzlqpsi .gt_spanner_row {
+#gxfcjmgomr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aocrzlqpsi .gt_group_heading {
+#gxfcjmgomr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2075,7 +2074,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   text-align: left;
 }
 
-#aocrzlqpsi .gt_empty_group_heading {
+#gxfcjmgomr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2090,15 +2089,15 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   vertical-align: middle;
 }
 
-#aocrzlqpsi .gt_from_md > :first-child {
+#gxfcjmgomr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aocrzlqpsi .gt_from_md > :last-child {
+#gxfcjmgomr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aocrzlqpsi .gt_row {
+#gxfcjmgomr .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -2117,7 +2116,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   overflow-x: hidden;
 }
 
-#aocrzlqpsi .gt_stub {
+#gxfcjmgomr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2130,7 +2129,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 5px;
 }
 
-#aocrzlqpsi .gt_stub_row_group {
+#gxfcjmgomr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2144,15 +2143,15 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   vertical-align: top;
 }
 
-#aocrzlqpsi .gt_row_group_first td {
+#gxfcjmgomr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aocrzlqpsi .gt_row_group_first th {
+#gxfcjmgomr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aocrzlqpsi .gt_summary_row {
+#gxfcjmgomr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2162,16 +2161,16 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 5px;
 }
 
-#aocrzlqpsi .gt_first_summary_row {
+#gxfcjmgomr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_first_summary_row.thick {
+#gxfcjmgomr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aocrzlqpsi .gt_last_summary_row {
+#gxfcjmgomr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2181,7 +2180,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-bottom-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_grand_summary_row {
+#gxfcjmgomr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2191,7 +2190,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 5px;
 }
 
-#aocrzlqpsi .gt_first_grand_summary_row {
+#gxfcjmgomr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2201,7 +2200,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-top-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_last_grand_summary_row_top {
+#gxfcjmgomr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2211,11 +2210,11 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-bottom-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_striped {
+#gxfcjmgomr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aocrzlqpsi .gt_table_body {
+#gxfcjmgomr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2224,7 +2223,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-bottom-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_footnotes {
+#gxfcjmgomr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2238,7 +2237,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-right-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_footnote {
+#gxfcjmgomr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2247,7 +2246,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 5px;
 }
 
-#aocrzlqpsi .gt_sourcenotes {
+#gxfcjmgomr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2261,7 +2260,7 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   border-right-color: #D3D3D3;
 }
 
-#aocrzlqpsi .gt_sourcenote {
+#gxfcjmgomr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2269,63 +2268,63 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
   padding-right: 5px;
 }
 
-#aocrzlqpsi .gt_left {
+#gxfcjmgomr .gt_left {
   text-align: left;
 }
 
-#aocrzlqpsi .gt_center {
+#gxfcjmgomr .gt_center {
   text-align: center;
 }
 
-#aocrzlqpsi .gt_right {
+#gxfcjmgomr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aocrzlqpsi .gt_font_normal {
+#gxfcjmgomr .gt_font_normal {
   font-weight: normal;
 }
 
-#aocrzlqpsi .gt_font_bold {
+#gxfcjmgomr .gt_font_bold {
   font-weight: bold;
 }
 
-#aocrzlqpsi .gt_font_italic {
+#gxfcjmgomr .gt_font_italic {
   font-style: italic;
 }
 
-#aocrzlqpsi .gt_super {
+#gxfcjmgomr .gt_super {
   font-size: 65%;
 }
 
-#aocrzlqpsi .gt_footnote_marks {
+#gxfcjmgomr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aocrzlqpsi .gt_asterisk {
+#gxfcjmgomr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aocrzlqpsi .gt_indent_1 {
+#gxfcjmgomr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aocrzlqpsi .gt_indent_2 {
+#gxfcjmgomr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aocrzlqpsi .gt_indent_3 {
+#gxfcjmgomr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aocrzlqpsi .gt_indent_4 {
+#gxfcjmgomr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aocrzlqpsi .gt_indent_5 {
+#gxfcjmgomr .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2523,7 +2522,7 @@ Although theoretically motivated, the IGAS model of Project 1 is best categorize
 
 The HTT and HTW tasks differ across numerous dimensions that may be relevant to the opposing patterns observed in the two projects (see <a href="#tbl-task-diff" class="quarto-xref">Table 18</a> provides for a detailed comparison of the two tasks).
 
-In HTT, the salient perceptual elements of the task (i.e. the launching box, target and barrier) are subject to variation (i.e. different distances between the launching box and target), and the spatial layout of these perceptually variable elements are intrinsically linked to the task objective of striking the target. Conversely, the perceptual task elements in HTW are invariant across trials, and the task objective is specified by the target velocity value specified as a numeral at the top of the screen. If the benefits of training variation do arise from the formation and flexible retrieval of distinct memory traces, then the lack of perceptual salience between training instances in the HTW task may have limited any potential benefits of variability. Future work could investigate this possibility further employing a modified version of the HTW task wherein the correct velocity value is indicated by some perceptual feature of the task (e.g. the color of the wall, or size of the ball), rather than displaying the target velocity numerically.
+In HTT, the salient perceptual elements of the task (i.e. the launching box, target and barrier) are subject to variation (i.e. different distances between the launching box and target), and the spatial layout of these perceptually variable elements are intrinsically linked to the task objective of striking the target. Conversely, the perceptual task elements in HTW are invariant across trials, and the task objective is specified by the target velocity value specified as a numeral at the top of the screen. If the benefits of training variation do arise from the formation and flexible retrieval of distinct memory traces, then the lack of perceptual salience between training instances in the HTW task may have limited any potential benefits of variability. Future work could investigate this possibility further employing a modified version of the HTW task wherein the correct velocity value is indicated by some perceptual feature of the task (e.g., the color of the wall, or size of the ball), rather than displaying the target velocity numerically.
 
 The HTT and HTW tasks also differed in terms of general task complexity. The HTT task was designed to mimic projectile launching tasks commonly employed in visuomotor learning studies, and the parabolic trajectories necessary to strike the target in HTT were sensitive to both the x and y dimensions of the projectiles velocity (and to a lesser extent, the position within the launching box at which the ball was released). Conversely the HTW task was influenced to a greater extent by the tasks commonly utilized in the function learning literature, wherein the correct output respones are determined by a single input dimension. In HTW,the relationship between feedback and optimal behavioral adjustment is also almost perfectly smooth, if participants produce a throw that is 100 units too hard, they'll be told that they were 100 units away from the target band. Whereas in HTT, the presence of the barrier in introduces irregularities in the task space. Even throws close to the solution space might result in failure, creating a less predictable learning environment.
 

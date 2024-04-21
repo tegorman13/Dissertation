@@ -12,7 +12,7 @@
 
 ## Varied Training and Generalization
 
-Varied training has been shown to influence learning in wide array of
+Varied training has been shown to influence learning in a wide array of
 different tasks and domains, including categorization (Hahn et al.,
 2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al.,
 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning
@@ -46,7 +46,7 @@ psychological space, while the low variability group’s instances are
 clustered more tightly together. Researchers then compare the training
 groups in terms of their performance during the training phase, as well
 as their generalization performance during a testing phase. Researchers
-will usually compare the performance of the two groups during both the
+usually compare the performance of the two groups during both the
 training phase and a subsequent testing phase. The primary theoretical
 interest is often to assess the influence of training variability on
 generalization to novel testing items or conditions. However, the test
@@ -56,13 +56,13 @@ manipulation influenced the learning of the trained items themselves, or
 to easily measure how much performance degrades as a function of how far
 away testing items are from the training items.
 
-The influence of training variation has received a large amount of
+The influence of training variability has received a large amount of
 attention in the domain of sensorimotor skill learning. Much of this
 research has been influenced by the work of Schmidt (1975), who proposed
 a schema-based account of motor learning as an attempt to address the
 longstanding problem of how novel movements are produced. Schema theory
 presumes that learners possess general motor programs for a class of
-movements (e.g. an underhand throw). When called up for use motor
+movements (e.g., an underhand throw). When called up for use motor
 programs are parameterized by schema rules which determine how the motor
 program is parameterized or scaled to the particular demands of the
 current task. Schema theory predicts that variable training facilitates
@@ -79,7 +79,7 @@ locations. Following training, both groups are then tested from novel
 throwing locations (Pacheco & Newell, 2018; Pigott & Shapiro, 1984;
 Willey & Liu, 2018a; Wulf, 1991).
 
-One of the earliest, and still often cited investigations of Schmidt’s
+One of the earliest and still often cited investigations of Schmidt’s
 benefits of variability hypothesis was the work of Kerr & Booth (1978).
 Two groups of children, aged 8 and 12, were assigned to either constant
 or varied training of a bean bag throwing task. The constant group
@@ -94,33 +94,32 @@ constant participants. Participants were also blindfolded for testing
 and did not receive trial by trial feedback in this stage. In both age
 groups, participants performed significantly better in the varied
 condition than the constant condition, though the effect was larger for
-the younger, 8-year-old children. This result offers a particularly
-compelling example of the merits of varied practice, given that the
-varied group was able to outperform the constant group even from the
-home turf location where one may have expected the constatn group to
-have the strongest advantage. A similar pattern of results was observed
-in another study wherein varied participants trained with tennis,
-squash, badminton, and short-tennis rackets were compared against
-constant subjects trained with only a tennis racket (Green et al.,
-1995). One of the testing conditions had subjects repeat the use of the
-tennis racket, which had been used on all 128 training trials for the
-constant group, and only 32 training trials for the varied group.
-Nevertheless, the varied group outperformed the constant group when
-using the tennis racket at testing, and also performed better in
-conditions with several novel racket lengths. However, as is the case
-with many of the patterns commonly observed in the “benefits of
-variability” literature, the pattern wherein the varied group
-outperfroms the constant group even from the constants group’s home turf
-has not been consistently replicated. One recent study attempted a near
-replication of the Kerr & Booth study (Willey & Liu, 2018b), having
-subjects throw beanbags at a target, with the varied group training from
-positions (5 and 9 feet) on either side of the constant group (7 feet).
-This study did not find a varied advantage from the constant training
-position, though the varied group did perform better at distances novel
-to both groups. However, this study diverged from the original in that
-the participants were adults; and the amount of training was much
-greater (20 sessions with 60 practice trials each, spread out over 5-7
-weeks).
+the younger, 8-year-old children. This result provides particularly
+strong evidence for the benefits of varied practice, as the varied group
+outperformed the constant group even when tested at the “home-turf”
+distance that the constant group had exclusively practiced. A similar
+pattern of results was observed in another study wherein varied
+participants trained with tennis, squash, badminton, and short-tennis
+rackets were compared against constant subjects trained with only a
+tennis racket (Green et al., 1995). One of the testing conditions had
+subjects repeat the use of the tennis racket, which had been used on all
+128 training trials for the constant group, and only 32 training trials
+for the varied group. Nevertheless, the varied group outperformed the
+constant group when using the tennis racket at testing, and also
+performed better in conditions with several novel racket lengths.
+However, as is the case with many of the patterns commonly observed in
+the “benefits of variability” literature, the pattern wherein the varied
+group outperfroms the constant group even from the constants group’s
+home turf has not been consistently replicated. One recent study
+attempted a near replication of the Kerr & Booth study (Willey & Liu,
+2018b), having subjects throw beanbags at a target, with the varied
+group training from positions (5 and 9 feet) on either side of the
+constant group (7 feet). This study did not find a varied advantage from
+the constant training position, though the varied group did perform
+better at distances novel to both groups. However, this study diverged
+from the original in that the participants were adults; and the amount
+of training was much greater (20 sessions with 60 practice trials each,
+spread out over 5-7 weeks).
 
 Pitting varied against constant practice against each other on the home
 turf of the constant group provides a compelling argument for the
@@ -173,7 +172,7 @@ train on three repetitions of LDOOF (spread evenly across training). Two
 different constant groups were used. Both constant groups trained with
 three repetitions of the same word scramble, but for constant group A,
 the testing phase consisted of the identical letter arrangement to that
-seen during training (e.g. LDOOF), whereas for constant group B, the
+seen during training (e.g., LDOOF), whereas for constant group B, the
 testing phase consisted of a arrangement they had not seen during
 training, thus presenting them with a testing situation similar
 situation to the varied group. At the testing stage, the varied group
@@ -263,21 +262,21 @@ generalization performance than the other conditions.
 A distinct sub-literature within the category learning domain has
 examined how the variability or dispersion of the categories themselves
 influences generalization to ambiguous regions of the category space
-(e.g. the region between the two categories). The general approach is to
-train participants with examples from a high variability category and a
-low variability category. Participants are then tested with novel items
-located within ambiguous regions of the category space which allow the
-experimenters to assess whether the difference in category variability
-influenced how far participants generalize the category boundaries. A.
-L. Cohen et al. (2001) conducted two experiments with this basic
-paradigm. In experiment 1, a low variability category composed of 1
-instance was compared against a high-variability category of 2 instances
-in one condition, and 7 instances in another. In experiment 2 both
-categories were composed of 3 instances, but for the low-variability
-group the instances were clustered close to each other, whereas the
-high-variability groups instances were spread much further apart.
-Participants were tested on an ambiguous novel instance that was located
-in between the two trained categories. Both experiments provided
+(e.g., the region between the two categories). The general approach is
+to train participants with examples from a high variability category and
+a low variability category. Participants are then tested with novel
+items located within ambiguous regions of the category space which allow
+the experimenters to assess whether the difference in category
+variability influenced how far participants generalize the category
+boundaries. A. L. Cohen et al. (2001) conducted two experiments with
+this basic paradigm. In experiment 1, a low variability category
+composed of 1 instance was compared against a high-variability category
+of 2 instances in one condition, and 7 instances in another. In
+experiment 2 both categories were composed of 3 instances, but for the
+low-variability group the instances were clustered close to each other,
+whereas the high-variability groups instances were spread much further
+apart. Participants were tested on an ambiguous novel instance that was
+located in between the two trained categories. Both experiments provided
 evidence that participants were much more likely to categorize the novel
 middle stimulus into the category with greater variation.
 
@@ -373,8 +372,8 @@ In an example of a more complex influence of training variation,
 (Braithwaite & Goldstone, 2015) trained participants on example problems
 involving the concept of sampling with replacement (SWR). Training
 consisted of examples that were either highly similar in their semantic
-context (e.g. all involving people selecting objects) or in which the
-surface features were varied between examples (e.g. people choosing
+context (e.g., all involving people selecting objects) or in which the
+surface features were varied between examples (e.g., people choosing
 objects AND objects selected in a sequence). The experimenters also
 surveyed how much prior knowledge each participant had with SWR. They
 found that whether variation was beneficial depended on the prior
@@ -418,7 +417,7 @@ then facilitate generalization (Schmidt, 1975). The desirable
 difficulties framework (Bjork & Bjork, 2011; Soderstrom & Bjork, 2015)
 proposes that variable practice conditions may impair initial
 performance but then enhance longer-term retention and transfer.
-Similarily, the challenge point framework (Guadagnoli & Lee, 2004)
+Similarly, the challenge point framework (Guadagnoli & Lee, 2004)
 contends that training variation induces optimal learning occurs insofar
 as it causes the difficulty of practice tasks to be appropriately
 matched to the learner’s capabilities, but may also be detrimental if
@@ -506,7 +505,7 @@ the mental representations acquired during learning - namely that
 learners tend to abstract a prototype, or aggregate representation of
 the dot pattern categories, rather than encoding each individual
 stimuli. Recall that participants are trained on only on distortions of
-the category prototypes (e.g. low, medium or high distortions), never
+the category prototypes (e.g., low, medium or high distortions), never
 encountering the exact prototypes during the training stage. Then, in
 the testing phase, participants are tested with the prototype patterns,
 their old training items, and novel low, medium and high distortions.
@@ -590,10 +589,10 @@ Critics have also pointed out that investigations of the effects of
 training variability, of the sort described above, often fail to control
 for the effect of similarity between training and testing conditions.
 For training tasks in which participants have numerous degrees of
-freedom (e.g. projectile throwing tasks where participants control the x
-and y velocity of the projectile), varied groups are likely to
+freedom (e.g., projectile throwing tasks where participants control the
+x and y velocity of the projectile), varied groups are likely to
 experience a wider range of the task space over the course of their
-training (e.g. more unique combinations of x and y velocities).
+training (e.g., more unique combinations of x and y velocities).
 Experimenters may attempt to account for this possibility by ensuring
 that the training location(s) of the varied and constant groups are an
 equal distance away from the eventual transfer locations, such that
@@ -663,7 +662,7 @@ Experiment 1. We subsequently excluded 34 participants for poor
 performance on one of the dependent measures of the task (2.5-3 standard
 deviations worse than the median subject at the task) or for displaying
 a pattern of responses that was clearly indicative of a lack of
-engagement with the task (e.g. simply dropping the ball on each trial
+engagement with the task (e.g., simply dropping the ball on each trial
 rather than throwing it at the target), or for reporting that they
 completed the experiment on a phone or tablet device, despite the
 instructions not to use one of these devices. A total of 74 participants
@@ -1324,12 +1323,12 @@ implementations of instance-based models in several ways. One such
 difference is the nature of the training instances that are assumed to
 be stored. In category learning studies, instances are represented as
 points in a multidimensional space of all of the attributes that define
-a category item (e.g. size/color/shape). Rather than defining instances
+a category item (e.g., size/color/shape). Rather than defining instances
 in terms of what stimuli learners experience, our approach assumes that
 stored, motor instances reflect how they act, in terms of the velocity
 applied to the ball on each throw. An advantage of many motor learning
 tasks is the relative ease with which task execution variables can be
-directly measured (e.g. movement force, velocity, angle, posture) in
+directly measured (e.g., movement force, velocity, angle, posture) in
 addition to the decision and response time measures that typically
 exhaust the data generated from more classical cognitive tasks. Of
 course, whether learners actually are storing each individual motor
@@ -1412,7 +1411,7 @@ x and y velocity components in terms of the psychological similarity,
 and thus our modelling does rely on the assumption that the
 psychological distances between the different throwing positions are
 proportional to absolute distances in the metric space of the task
-(e.g. the relative distance between positions 400 and 500 is equivalent
+(e.g., the relative distance between positions 400 and 500 is equivalent
 to that between 800 and 900). However, an advantage of our approach is
 that we are measuring similarity in terms of how participants behave
 (applying a velocity to the ball), rather than the metric features of
@@ -1603,7 +1602,7 @@ launching a projectile such that it would strike the “wall” at target
 speed indicated at the top of the screen (see
 <a href="#fig-htw-task" class="quarto-xref">Figure 11</a>). The target
 velocities were given as a range, or band, of acceptable velocity values
-(e.g. band 800-1000). During the training stage, participants received
+(e.g., band 800-1000). During the training stage, participants received
 feedback indicating whether they had hit the wall within the target
 velocity band, or how many units their throw was above or below from the
 target band. Participants were instructed that only the x velocity
@@ -2028,7 +2027,7 @@ corresponding to a particular response value. The units in the input
 layer activate as a function of their Gaussian similarity to the input
 stimulus. So, for example, an input stimulus of value 55 would induce
 maximal activation of the input unit tuned to 55. Depending on the value
-of the generalization parameter, the nearby units (e.g. 54 and 56; 53
+of the generalization parameter, the nearby units (e.g., 54 and 56; 53
 and 57) may also activate to some degree. ALM is structured with input
 and output nodes that correspond to regions of the stimulus space, and
 response space, respectively. The units in the input layer activate as a
@@ -2111,8 +2110,6 @@ below.
 
 > [!NONE]
 >
-> ### 
->
 > ** Approximate Bayesian Computation**
 >
 > To estimate the parameters of ALM and EXAM, we used approximate
@@ -2124,7 +2121,7 @@ below.
 > relatively recently (Kangasrääsiö et al., 2019; Turner et al., 2016;
 > Turner & Van Zandt, 2012). Although they can be applied to any model
 > from which data can be simulated, ABC methods are most useful for
-> complex models that lack an explicit likelihood function (e.g. many
+> complex models that lack an explicit likelihood function (e.g., many
 > neural network models).
 >
 > The general ABC procedure is to 1) define a prior distribution over
@@ -2209,20 +2206,20 @@ cores.
 
 <div class="cell-output-display">
 
-<div id="vdzlhutqfn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vdzlhutqfn table {
+<div id="lssxdhmtxz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lssxdhmtxz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#vdzlhutqfn thead, #vdzlhutqfn tbody, #vdzlhutqfn tfoot, #vdzlhutqfn tr, #vdzlhutqfn td, #vdzlhutqfn th {
+&#10;#lssxdhmtxz thead, #lssxdhmtxz tbody, #lssxdhmtxz tfoot, #lssxdhmtxz tr, #lssxdhmtxz td, #lssxdhmtxz th {
   border-style: none;
 }
-&#10;#vdzlhutqfn p {
+&#10;#lssxdhmtxz p {
   margin: 0;
   padding: 0;
 }
-&#10;#vdzlhutqfn .gt_table {
+&#10;#lssxdhmtxz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2247,11 +2244,11 @@ cores.
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_caption {
+&#10;#lssxdhmtxz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#vdzlhutqfn .gt_title {
+&#10;#lssxdhmtxz .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -2262,7 +2259,7 @@ cores.
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#vdzlhutqfn .gt_subtitle {
+&#10;#lssxdhmtxz .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -2273,7 +2270,7 @@ cores.
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#vdzlhutqfn .gt_heading {
+&#10;#lssxdhmtxz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2284,12 +2281,12 @@ cores.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_bottom_border {
+&#10;#lssxdhmtxz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_col_headings {
+&#10;#lssxdhmtxz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2303,7 +2300,7 @@ cores.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_col_heading {
+&#10;#lssxdhmtxz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2322,7 +2319,7 @@ cores.
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#vdzlhutqfn .gt_column_spanner_outer {
+&#10;#lssxdhmtxz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2333,13 +2330,13 @@ cores.
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#vdzlhutqfn .gt_column_spanner_outer:first-child {
+&#10;#lssxdhmtxz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#vdzlhutqfn .gt_column_spanner_outer:last-child {
+&#10;#lssxdhmtxz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#vdzlhutqfn .gt_column_spanner {
+&#10;#lssxdhmtxz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2350,10 +2347,10 @@ cores.
   display: inline-block;
   width: 100%;
 }
-&#10;#vdzlhutqfn .gt_spanner_row {
+&#10;#lssxdhmtxz .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#vdzlhutqfn .gt_group_heading {
+&#10;#lssxdhmtxz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2378,7 +2375,7 @@ cores.
   vertical-align: middle;
   text-align: left;
 }
-&#10;#vdzlhutqfn .gt_empty_group_heading {
+&#10;#lssxdhmtxz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2392,13 +2389,13 @@ cores.
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#vdzlhutqfn .gt_from_md > :first-child {
+&#10;#lssxdhmtxz .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#vdzlhutqfn .gt_from_md > :last-child {
+&#10;#lssxdhmtxz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#vdzlhutqfn .gt_row {
+&#10;#lssxdhmtxz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2416,7 +2413,7 @@ cores.
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#vdzlhutqfn .gt_stub {
+&#10;#lssxdhmtxz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2428,7 +2425,7 @@ cores.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#vdzlhutqfn .gt_stub_row_group {
+&#10;#lssxdhmtxz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2441,13 +2438,13 @@ cores.
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#vdzlhutqfn .gt_row_group_first td {
+&#10;#lssxdhmtxz .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#vdzlhutqfn .gt_row_group_first th {
+&#10;#lssxdhmtxz .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#vdzlhutqfn .gt_summary_row {
+&#10;#lssxdhmtxz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2456,14 +2453,14 @@ cores.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#vdzlhutqfn .gt_first_summary_row {
+&#10;#lssxdhmtxz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_first_summary_row.thick {
+&#10;#lssxdhmtxz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#vdzlhutqfn .gt_last_summary_row {
+&#10;#lssxdhmtxz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2472,7 +2469,7 @@ cores.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_grand_summary_row {
+&#10;#lssxdhmtxz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2481,7 +2478,7 @@ cores.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#vdzlhutqfn .gt_first_grand_summary_row {
+&#10;#lssxdhmtxz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2490,7 +2487,7 @@ cores.
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_last_grand_summary_row_top {
+&#10;#lssxdhmtxz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2499,10 +2496,10 @@ cores.
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_striped {
+&#10;#lssxdhmtxz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#vdzlhutqfn .gt_table_body {
+&#10;#lssxdhmtxz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2510,7 +2507,7 @@ cores.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_footnotes {
+&#10;#lssxdhmtxz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2523,7 +2520,7 @@ cores.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_footnote {
+&#10;#lssxdhmtxz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2531,7 +2528,7 @@ cores.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#vdzlhutqfn .gt_sourcenotes {
+&#10;#lssxdhmtxz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2544,57 +2541,57 @@ cores.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#vdzlhutqfn .gt_sourcenote {
+&#10;#lssxdhmtxz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#vdzlhutqfn .gt_left {
+&#10;#lssxdhmtxz .gt_left {
   text-align: left;
 }
-&#10;#vdzlhutqfn .gt_center {
+&#10;#lssxdhmtxz .gt_center {
   text-align: center;
 }
-&#10;#vdzlhutqfn .gt_right {
+&#10;#lssxdhmtxz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#vdzlhutqfn .gt_font_normal {
+&#10;#lssxdhmtxz .gt_font_normal {
   font-weight: normal;
 }
-&#10;#vdzlhutqfn .gt_font_bold {
+&#10;#lssxdhmtxz .gt_font_bold {
   font-weight: bold;
 }
-&#10;#vdzlhutqfn .gt_font_italic {
+&#10;#lssxdhmtxz .gt_font_italic {
   font-style: italic;
 }
-&#10;#vdzlhutqfn .gt_super {
+&#10;#lssxdhmtxz .gt_super {
   font-size: 65%;
 }
-&#10;#vdzlhutqfn .gt_footnote_marks {
+&#10;#lssxdhmtxz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#vdzlhutqfn .gt_asterisk {
+&#10;#lssxdhmtxz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#vdzlhutqfn .gt_indent_1 {
+&#10;#lssxdhmtxz .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#vdzlhutqfn .gt_indent_2 {
+&#10;#lssxdhmtxz .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#vdzlhutqfn .gt_indent_3 {
+&#10;#lssxdhmtxz .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#vdzlhutqfn .gt_indent_4 {
+&#10;#lssxdhmtxz .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#vdzlhutqfn .gt_indent_5 {
+&#10;#lssxdhmtxz .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2740,20 +2737,20 @@ pd = 0.98).
 
 <div class="cell-output-display">
 
-<div id="yaenxoegan" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yaenxoegan table {
+<div id="dgrxbdihcx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dgrxbdihcx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#yaenxoegan thead, #yaenxoegan tbody, #yaenxoegan tfoot, #yaenxoegan tr, #yaenxoegan td, #yaenxoegan th {
+&#10;#dgrxbdihcx thead, #dgrxbdihcx tbody, #dgrxbdihcx tfoot, #dgrxbdihcx tr, #dgrxbdihcx td, #dgrxbdihcx th {
   border-style: none;
 }
-&#10;#yaenxoegan p {
+&#10;#dgrxbdihcx p {
   margin: 0;
   padding: 0;
 }
-&#10;#yaenxoegan .gt_table {
+&#10;#dgrxbdihcx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2778,11 +2775,11 @@ pd = 0.98).
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_caption {
+&#10;#dgrxbdihcx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#yaenxoegan .gt_title {
+&#10;#dgrxbdihcx .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -2793,7 +2790,7 @@ pd = 0.98).
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#yaenxoegan .gt_subtitle {
+&#10;#dgrxbdihcx .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -2804,7 +2801,7 @@ pd = 0.98).
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#yaenxoegan .gt_heading {
+&#10;#dgrxbdihcx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2815,12 +2812,12 @@ pd = 0.98).
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_bottom_border {
+&#10;#dgrxbdihcx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_col_headings {
+&#10;#dgrxbdihcx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2834,7 +2831,7 @@ pd = 0.98).
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_col_heading {
+&#10;#dgrxbdihcx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2853,7 +2850,7 @@ pd = 0.98).
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#yaenxoegan .gt_column_spanner_outer {
+&#10;#dgrxbdihcx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 10px;
@@ -2864,13 +2861,13 @@ pd = 0.98).
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#yaenxoegan .gt_column_spanner_outer:first-child {
+&#10;#dgrxbdihcx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#yaenxoegan .gt_column_spanner_outer:last-child {
+&#10;#dgrxbdihcx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#yaenxoegan .gt_column_spanner {
+&#10;#dgrxbdihcx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2881,10 +2878,10 @@ pd = 0.98).
   display: inline-block;
   width: 100%;
 }
-&#10;#yaenxoegan .gt_spanner_row {
+&#10;#dgrxbdihcx .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#yaenxoegan .gt_group_heading {
+&#10;#dgrxbdihcx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2909,7 +2906,7 @@ pd = 0.98).
   vertical-align: middle;
   text-align: left;
 }
-&#10;#yaenxoegan .gt_empty_group_heading {
+&#10;#dgrxbdihcx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2923,13 +2920,13 @@ pd = 0.98).
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#yaenxoegan .gt_from_md > :first-child {
+&#10;#dgrxbdihcx .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#yaenxoegan .gt_from_md > :last-child {
+&#10;#dgrxbdihcx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#yaenxoegan .gt_row {
+&#10;#dgrxbdihcx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2947,7 +2944,7 @@ pd = 0.98).
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#yaenxoegan .gt_stub {
+&#10;#dgrxbdihcx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2959,7 +2956,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yaenxoegan .gt_stub_row_group {
+&#10;#dgrxbdihcx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2972,13 +2969,13 @@ pd = 0.98).
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#yaenxoegan .gt_row_group_first td {
+&#10;#dgrxbdihcx .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#yaenxoegan .gt_row_group_first th {
+&#10;#dgrxbdihcx .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#yaenxoegan .gt_summary_row {
+&#10;#dgrxbdihcx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2987,14 +2984,14 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yaenxoegan .gt_first_summary_row {
+&#10;#dgrxbdihcx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_first_summary_row.thick {
+&#10;#dgrxbdihcx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#yaenxoegan .gt_last_summary_row {
+&#10;#dgrxbdihcx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3003,7 +3000,7 @@ pd = 0.98).
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_grand_summary_row {
+&#10;#dgrxbdihcx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3012,7 +3009,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yaenxoegan .gt_first_grand_summary_row {
+&#10;#dgrxbdihcx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3021,7 +3018,7 @@ pd = 0.98).
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_last_grand_summary_row_top {
+&#10;#dgrxbdihcx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3030,10 +3027,10 @@ pd = 0.98).
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_striped {
+&#10;#dgrxbdihcx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#yaenxoegan .gt_table_body {
+&#10;#dgrxbdihcx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3041,7 +3038,7 @@ pd = 0.98).
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_footnotes {
+&#10;#dgrxbdihcx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3054,7 +3051,7 @@ pd = 0.98).
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_footnote {
+&#10;#dgrxbdihcx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3062,7 +3059,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yaenxoegan .gt_sourcenotes {
+&#10;#dgrxbdihcx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3075,57 +3072,57 @@ pd = 0.98).
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#yaenxoegan .gt_sourcenote {
+&#10;#dgrxbdihcx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yaenxoegan .gt_left {
+&#10;#dgrxbdihcx .gt_left {
   text-align: left;
 }
-&#10;#yaenxoegan .gt_center {
+&#10;#dgrxbdihcx .gt_center {
   text-align: center;
 }
-&#10;#yaenxoegan .gt_right {
+&#10;#dgrxbdihcx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#yaenxoegan .gt_font_normal {
+&#10;#dgrxbdihcx .gt_font_normal {
   font-weight: normal;
 }
-&#10;#yaenxoegan .gt_font_bold {
+&#10;#dgrxbdihcx .gt_font_bold {
   font-weight: bold;
 }
-&#10;#yaenxoegan .gt_font_italic {
+&#10;#dgrxbdihcx .gt_font_italic {
   font-style: italic;
 }
-&#10;#yaenxoegan .gt_super {
+&#10;#dgrxbdihcx .gt_super {
   font-size: 65%;
 }
-&#10;#yaenxoegan .gt_footnote_marks {
+&#10;#dgrxbdihcx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#yaenxoegan .gt_asterisk {
+&#10;#dgrxbdihcx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#yaenxoegan .gt_indent_1 {
+&#10;#dgrxbdihcx .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#yaenxoegan .gt_indent_2 {
+&#10;#dgrxbdihcx .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#yaenxoegan .gt_indent_3 {
+&#10;#dgrxbdihcx .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#yaenxoegan .gt_indent_4 {
+&#10;#dgrxbdihcx .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#yaenxoegan .gt_indent_5 {
+&#10;#dgrxbdihcx .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3243,20 +3240,20 @@ pd = 0.98).
 
 <div class="cell-output-display">
 
-<div id="ecputnykle" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ecputnykle table {
+<div id="wasbahrenj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wasbahrenj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#ecputnykle thead, #ecputnykle tbody, #ecputnykle tfoot, #ecputnykle tr, #ecputnykle td, #ecputnykle th {
+&#10;#wasbahrenj thead, #wasbahrenj tbody, #wasbahrenj tfoot, #wasbahrenj tr, #wasbahrenj td, #wasbahrenj th {
   border-style: none;
 }
-&#10;#ecputnykle p {
+&#10;#wasbahrenj p {
   margin: 0;
   padding: 0;
 }
-&#10;#ecputnykle .gt_table {
+&#10;#wasbahrenj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3281,11 +3278,11 @@ pd = 0.98).
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_caption {
+&#10;#wasbahrenj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#ecputnykle .gt_title {
+&#10;#wasbahrenj .gt_title {
   color: #333333;
   font-size: 14px;
   font-weight: initial;
@@ -3296,7 +3293,7 @@ pd = 0.98).
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#ecputnykle .gt_subtitle {
+&#10;#wasbahrenj .gt_subtitle {
   color: #333333;
   font-size: 12px;
   font-weight: initial;
@@ -3307,7 +3304,7 @@ pd = 0.98).
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#ecputnykle .gt_heading {
+&#10;#wasbahrenj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3318,12 +3315,12 @@ pd = 0.98).
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_bottom_border {
+&#10;#wasbahrenj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_col_headings {
+&#10;#wasbahrenj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3337,7 +3334,7 @@ pd = 0.98).
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_col_heading {
+&#10;#wasbahrenj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3356,7 +3353,7 @@ pd = 0.98).
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#ecputnykle .gt_column_spanner_outer {
+&#10;#wasbahrenj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3367,13 +3364,13 @@ pd = 0.98).
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#ecputnykle .gt_column_spanner_outer:first-child {
+&#10;#wasbahrenj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#ecputnykle .gt_column_spanner_outer:last-child {
+&#10;#wasbahrenj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#ecputnykle .gt_column_spanner {
+&#10;#wasbahrenj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3384,10 +3381,10 @@ pd = 0.98).
   display: inline-block;
   width: 100%;
 }
-&#10;#ecputnykle .gt_spanner_row {
+&#10;#wasbahrenj .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#ecputnykle .gt_group_heading {
+&#10;#wasbahrenj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3412,7 +3409,7 @@ pd = 0.98).
   vertical-align: middle;
   text-align: left;
 }
-&#10;#ecputnykle .gt_empty_group_heading {
+&#10;#wasbahrenj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3426,13 +3423,13 @@ pd = 0.98).
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#ecputnykle .gt_from_md > :first-child {
+&#10;#wasbahrenj .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#ecputnykle .gt_from_md > :last-child {
+&#10;#wasbahrenj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#ecputnykle .gt_row {
+&#10;#wasbahrenj .gt_row {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -3450,7 +3447,7 @@ pd = 0.98).
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#ecputnykle .gt_stub {
+&#10;#wasbahrenj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3462,7 +3459,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ecputnykle .gt_stub_row_group {
+&#10;#wasbahrenj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3475,13 +3472,13 @@ pd = 0.98).
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#ecputnykle .gt_row_group_first td {
+&#10;#wasbahrenj .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#ecputnykle .gt_row_group_first th {
+&#10;#wasbahrenj .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#ecputnykle .gt_summary_row {
+&#10;#wasbahrenj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3490,14 +3487,14 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ecputnykle .gt_first_summary_row {
+&#10;#wasbahrenj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_first_summary_row.thick {
+&#10;#wasbahrenj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#ecputnykle .gt_last_summary_row {
+&#10;#wasbahrenj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3506,7 +3503,7 @@ pd = 0.98).
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_grand_summary_row {
+&#10;#wasbahrenj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3515,7 +3512,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ecputnykle .gt_first_grand_summary_row {
+&#10;#wasbahrenj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3524,7 +3521,7 @@ pd = 0.98).
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_last_grand_summary_row_top {
+&#10;#wasbahrenj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3533,10 +3530,10 @@ pd = 0.98).
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_striped {
+&#10;#wasbahrenj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#ecputnykle .gt_table_body {
+&#10;#wasbahrenj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3544,7 +3541,7 @@ pd = 0.98).
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_footnotes {
+&#10;#wasbahrenj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3557,7 +3554,7 @@ pd = 0.98).
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_footnote {
+&#10;#wasbahrenj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3565,7 +3562,7 @@ pd = 0.98).
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ecputnykle .gt_sourcenotes {
+&#10;#wasbahrenj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3578,57 +3575,57 @@ pd = 0.98).
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ecputnykle .gt_sourcenote {
+&#10;#wasbahrenj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ecputnykle .gt_left {
+&#10;#wasbahrenj .gt_left {
   text-align: left;
 }
-&#10;#ecputnykle .gt_center {
+&#10;#wasbahrenj .gt_center {
   text-align: center;
 }
-&#10;#ecputnykle .gt_right {
+&#10;#wasbahrenj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#ecputnykle .gt_font_normal {
+&#10;#wasbahrenj .gt_font_normal {
   font-weight: normal;
 }
-&#10;#ecputnykle .gt_font_bold {
+&#10;#wasbahrenj .gt_font_bold {
   font-weight: bold;
 }
-&#10;#ecputnykle .gt_font_italic {
+&#10;#wasbahrenj .gt_font_italic {
   font-style: italic;
 }
-&#10;#ecputnykle .gt_super {
+&#10;#wasbahrenj .gt_super {
   font-size: 65%;
 }
-&#10;#ecputnykle .gt_footnote_marks {
+&#10;#wasbahrenj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#ecputnykle .gt_asterisk {
+&#10;#wasbahrenj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#ecputnykle .gt_indent_1 {
+&#10;#wasbahrenj .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#ecputnykle .gt_indent_2 {
+&#10;#wasbahrenj .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#ecputnykle .gt_indent_3 {
+&#10;#wasbahrenj .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#ecputnykle .gt_indent_4 {
+&#10;#wasbahrenj .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#ecputnykle .gt_indent_5 {
+&#10;#wasbahrenj .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -4064,7 +4061,7 @@ lack of perceptual salience between training instances in the HTW task
 may have limited any potential benefits of variability. Future work
 could investigate this possibility further employing a modified version
 of the HTW task wherein the correct velocity value is indicated by some
-perceptual feature of the task (e.g. the color of the wall, or size of
+perceptual feature of the task (e.g., the color of the wall, or size of
 the ball), rather than displaying the target velocity numerically.
 
 The HTT and HTW tasks also differed in terms of general task complexity.
