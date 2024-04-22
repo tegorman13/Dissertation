@@ -320,13 +320,13 @@ similarity-based models based around the Generalized Context Model
 response-bias or similarity-scaling parameter was fit separately between
 variability conditions. No improvement in model fit was found by
 allowing the response-bias parameter to differ between groups, however
-the model performance did improvement significantly when the similarity
+the model performance did improve significantly when the similarity
 scaling parameter was fit separately. The best fitting
 similarity-scaling parameters were such that the high-variability group
 was less sensitive to the distances between stimuli, resulting in
 greater similarity values between their training items and testing
 items. This model accounted for both the extended generalization
-gradients of the varied particpants, and also for their poorer
+gradients of the varied participants, and also for their poorer
 performance in a recognition condition.
 
 Variability has also been examined in the learning of higher-order
@@ -407,7 +407,7 @@ best for those who received variable training. Non-athletes showed the
 opposite pattern, with superior performance for those who had constant
 training.
 
-## Existing Theoretircal Frameworks
+## Existing Theoretical Frameworks
 
 A number of theoretical frameworks have been proposed to conceptually
 explain the effects of varied training on learning and generalization.
@@ -1557,9 +1557,9 @@ tested with novel shapes, with both groups producing extrapolation
 responses of comparable magnitudes to the most similar training item,
 rather than in accordance with the true linear function. The authors
 accounted for both learning and extrapolation performance with a
-Bayesian learning model. Similar to ALM, the bayesian model assumes that
+Bayesian learning model. Similar to ALM, the Bayesian model assumes that
 generalization occurs as a Gaussian function of the distance between
-stimuli. However unlike ALM, the bayesian learning model utilizes more
+stimuli. However unlike ALM, the Bayesian learning model utilizes more
 elaborate probabilistic stimulus representations, with a separate Kalman
 Filter for each shape stimulus.
 
@@ -2025,46 +2025,72 @@ ALM is a localist neural network model (Page, 2000), with each input
 node corresponding to a particular stimulus, and each output node
 corresponding to a particular response value. The units in the input
 layer activate as a function of their Gaussian similarity to the input
-stimulus. So, for example, an input stimulus of value 55 would induce
-maximal activation of the input unit tuned to 55. Depending on the value
-of the generalization parameter, the nearby units (e.g., 54 and 56; 53
-and 57) may also activate to some degree. ALM is structured with input
-and output nodes that correspond to regions of the stimulus space, and
-response space, respectively. The units in the input layer activate as a
-function of their similarity to a presented stimulus. As was the case
-with the exemplar-based models, similarity in ALM is exponentially
-decaying function of distance. The input layer is fully connected to the
-output layer, and the activation for any particular output node is
-simply the weighted sum of the connection weights between that node and
-the input activations. The network then produces a response by taking
-the weighted average of the output units (recall that each output unit
-has a value corresponding to a particular response). During training,
-the network receives feedback which activates each output unit as a
-function of its distance from the ideal level of activation necessary to
-produce the correct response. The connection weights between input and
-output units are then updated via the standard delta learning rule,
-where the magnitude of weight changes are controlled by a learning rate
-parameter. The EXAM model is an extension of ALM, with the same learning
-rule and representational scheme for input and output units. EXAM
-differs from ALM only in its response rule, as it includes a linear
-extrapolation mechanism for generating novel responses. Although this
-extrapolation rule departs from a strictly similarity-based
-generalization mechanism, EXAM is distinct from pure rule-based models
-in that it remains constrained by the weights learned during training.
-EXAM retrieves the two nearest training inputs, and the ALM responses
-associated with those inputs, and computes the slope between these two
-points. The slope is then used to extrapolate the response to the novel
-test stimulus. Because EXAM requires at least two input-output pairs to
-generate a response, additional assumptions were required in order for
-it to generate resposnes for the constant group. We assumed that
-participants come to the task with prior knowledge of the origin point
-(0,0), which can serve as a reference point necessary for the model to
-generate responses for the constant group. This assumption is motivated
-by previous function learning research (Brown & Lacroix (2017)), which
-through a series of manipulations of the y intercept of the underlying
-function, found that participants consistently demonstrated knowledge
-of, or a bias towards, the origin point (see Kwantes & Neal (2006) for
-additional evidence of such a bias in function learning tasks).
+stimulus ( a_i(X) = exp(-c(X - X_i)^2) ). So, for example, an input
+stimulus of value 55 would induce maximal activation of the input unit
+tuned to 55. Depending on the value of the generalization parameter, the
+nearby units (e.g., 54 and 56; 53 and 57) may also activate to some
+degree. The units in the input layer activate as a function of their
+similarity to a presented stimulus. The input layer is fully connected
+to the output layer, and the activation for any particular output node
+is simply the weighted sum of the connection weights between that node
+and the input activations. The network then produces a response by
+taking the weighted average of the output units (recall that each output
+unit has a value corresponding to a particular response). During
+training, the network receives feedback which activates each output unit
+as a function of its distance from the ideal level of activation
+necessary to produce the correct response. The connection weights
+between input and output units are then updated via the standard delta
+learning rule, where the magnitude of weight changes are controlled by a
+learning rate parameter.
+
+The EXAM model is an extension of ALM, with the same learning rule and
+representational scheme for input and output units. EXAM differs from
+ALM only in its response rule, as it includes a linear extrapolation
+mechanism for generating novel responses. When a novel test stimulus,
+$X$, is presented, EXAM first identifies the two nearest training
+stimuli, $X_1$ and $X_2$, that bracket $X$. This is done based on the
+Gaussian activation of input nodes, similar to ALM, but focuses on
+identifying the closest known points for extrapolation.
+
+**Slope Calculation**: EXAM calculates a local slope, $S$, using the
+responses associated with $X_1$ and $X_2$. This is computed as:
+
+$$
+   S = \frac{m(X_{1}) - m(X_{2})}{X_{1} - X_{2}}
+   $$
+
+where $m(X_1)$ and $m(X_2)$ are the output values from ALM corresponding
+to the $X_1$ and $X_2$ inputs.
+
+**Response Generation**: The response for the novel stimulus $X$ is then
+extrapolated using the slope $S$:
+
+$$
+   E[Y|X] = m(X_1) + S \cdot |X - X_1|
+   $$
+
+Here, $m(X_1)$ is the ALM response value from the training data for the
+stimulus closest to $X$, and $(X - X_1)$ represents the distance between
+the novel stimulus and the nearest training stimulus.
+
+Although this extrapolation rule departs from a strictly
+similarity-based generalization mechanism, EXAM is distinct from pure
+rule-based models in that it remains constrained by the weights learned
+during training. EXAM retrieves the two nearest training inputs, and the
+ALM responses associated with those inputs, and computes the slope
+between these two points. The slope is then used to extrapolate the
+response to the novel test stimulus. Because EXAM requires at least two
+input-output pairs to generate a response, additional assumptions were
+required in order for it to generate resposnes for the constant group.
+We assumed that participants come to the task with prior knowledge of
+the origin point (0,0), which can serve as a reference point necessary
+for the model to generate responses for the constant group. This
+assumption is motivated by previous function learning research (Brown &
+Lacroix, 2017), which through a series of manipulations of the y
+intercept of the underlying function, found that participants
+consistently demonstrated knowledge of, or a bias towards, the origin
+point (see Kwantes & Neal (2006) for additional evidence of such a bias
+in function learning tasks).
 
 See <a href="#tbl-alm-exam" class="quarto-xref">Table 14</a> for a full
 specification of the equations that define ALM and EXAM, and
@@ -2073,20 +2099,20 @@ visual representation of the ALM model.
 
 <div class="column-page-inset-right">
 
-|                    | **ALM Response Generation**                                        |                                                                                               |
-|--------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Input Activation   | $a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}$    | Input nodes activate as a function of Gaussian similarity to stimulus                         |
-| Output Activation  | $O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)$                        | Output unit $O_j$ activation is the weighted sum of input activations and association weights |
-| Output Probability | $P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}$                    | The response, $Y_j$ probabilites computed via Luce’s choice rule                              |
-| Mean Output        | $m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}$ | Weighted average of probabilities determines response to X                                    |
-|                    | **ALM Learning**                                                   |                                                                                               |
-| Feedback           | $f_j(Z) = e^{-c(Z-Y_j)^2}$                                         | feedback signal Z computed as similarity between ideal response and observed response         |
-| magnitude of error | $\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)$                          | Delta rule to update weights.                                                                 |
-| Update Weights     | $w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}$                              | Updates scaled by learning rate parameter $\eta$.                                             |
-|                    | **EXAM Extrapolation**                                             |                                                                                               |
-| Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$                    | Novel test stimulus $X$ activates input nodes $X_i$                                           |
-| Slope Computation  | $S =$ $\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$                      | Slope value, $S$ computed from nearest training instances                                     |
-| Response           | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$                            | ALM response $m(X_i)$ adjusted by slope.                                                      |
+|                    | **ALM Response Generation**                                        |                                                                                                                   |
+|--------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Input Activation   | $a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}$    | Input nodes activate as a function of Gaussian similarity to stimulus                                             |
+| Output Activation  | $O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)$                        | Output unit $O_j$ activation is the weighted sum of input activations and association weights                     |
+| Output Probability | $P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}$                    | The response, $Y_j$ probabilites computed via Luce’s choice rule                                                  |
+| Mean Output        | $m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}$ | Weighted average of probabilities determines response to X                                                        |
+|                    | **ALM Learning**                                                   |                                                                                                                   |
+| Feedback           | $f_j(Z) = e^{-c(Z-Y_j)^2}$                                         | feedback signal Z computed as similarity between ideal response and observed response                             |
+| magnitude of error | $\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)$                          | Delta rule to update weights.                                                                                     |
+| Update Weights     | $w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}$                              | Updates scaled by learning rate parameter $\eta$.                                                                 |
+|                    | **EXAM Extrapolation**                                             |                                                                                                                   |
+| Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$                    | Novel test stimulus $X$ activates input nodes $X_i$                                                               |
+| Slope Computation  | $S =$ $\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$                      | Slope value, $S$ computed from nearest training instances                                                         |
+| Response           | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$                            | Final EXAM response is the ALM response for the nearest training stimulus, $m(X_i)$, adjusted by local slope $S$. |
 
 </div>
 
@@ -2113,7 +2139,7 @@ below.
 > ** Approximate Bayesian Computation**
 >
 > To estimate the parameters of ALM and EXAM, we used approximate
-> bayesian computation (ABC), enabling us to obtain an estimate of the
+> Bayesian computation (ABC), enabling us to obtain an estimate of the
 > posterior distribution of the generalization and learning rate
 > parameters for each individual. ABC belongs to the class of
 > simulation-based inference methods (Cranmer et al., 2020), which have
@@ -2718,7 +2744,7 @@ discriminate all 6 target bands.
 ![](manuscript.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.jpeg)
 
 To quantitatively assess whether the differences in performance between
-models, we fit a bayesian regressions predicting the errors of the
+models, we fit a Bayesian regression predicting the errors of the
 posterior predictions of each models as a function of the Model (ALM
 vs. EXAM) and training condition (Constant vs. Varied).
 
@@ -4027,7 +4053,7 @@ behavior in numerous studies over the past 25 years (Brown & Lacroix,
 Rieskamp, 2010). The present work presents the first application of
 these models to to the study of training variability in a visuomotor
 function learning task. We fit both models to individual participant
-data, using a form of simulation-based bayesian parameter estimation
+data, using a form of simulation-based Bayesian parameter estimation
 that allowed us to generate and compare the full posterior predictive
 distributions of each model. EXAM provided the best overall account of
 the testing data, and the advantage of EXAM over ALM was significantly
@@ -4089,7 +4115,7 @@ predictable learning environment.
 | Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
 | Testing Feedback                         | Testing always included feedback                                                                                                              | Primary testing stage had no feedback.                                                                         |
 | Potential for Learning during Testing    | Limited potential for learning during testing due to feedback.                                                                                | Some potential for learning during no-feedback testing by observing ball trajectory.                           |
-| Position/Velocity Experience             | Varied group gets half as much experience on any one position as the constant group.                                                          | Varied group gets 1/3 as much experience on any one velocity band as the constant group.                       |
+| Training Experience                      | Varied group gets half as much experience on any one position as the constant group.                                                          | Varied group gets 1/3 as much experience on any one velocity band as the constant group.                       |
 | Testing Structure                        | Random interleaving of trained/transfer testing distances.                                                                                    | Blocked structure, separately testing trained vs extrapolation testing bands.                                  |
 
 ### Conclusion
