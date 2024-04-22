@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.27">
+<meta name="generator" content="quarto-1.5.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -154,6 +154,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../Assets/Style/calloutTG.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -216,10 +217,17 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Sections/Introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variability and Generalization</span></a>
+  <a href="../Sections/full.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Sections/Appendix/Full_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Sections/IGAS.html" class="sidebar-item-text sidebar-link">
@@ -230,12 +238,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../Sections/HTW.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTW Project</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Sections/Discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">General Discussion</span></a>
   </div>
 </li>
     </ul>
@@ -330,7 +332,7 @@ window.Quarto = {
 <p>In project 1, I applied model-based techniques to quantify and control for the similarity between training and testing experience, which in turn enabled us to account for the difference between varied and constant training via an extended version of a similarity based generalization model. In project 2, we will go a step further, implementing a full process model capable of both 1) producing novel responses and 2) modeling behavior in both the learning and testing stages of the experiment. Project 2 also places a greater emphasis on extrapolation performance following training. Although varied training has often been purported to be particularly beneficial for generalization or transfer, few experiments have compared varied and constant training in contexts with unambiguous extrapolation testing.</p>
 <section id="function-learning-and-extrapolation" class="level2">
 <h2 class="anchored" data-anchor-id="function-learning-and-extrapolation">Function Learning and Extrapolation</h2>
-<p>The study of human function learning investigates how people learn relationships between continuous input and output values. Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs <span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielEffectsSpacedMassed2013">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-mcdanielEffectsSpacedMassed2013" role="doc-biblioref">McDaniel et al., 2013</a>)</span>, or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don’t contain data <span class="citation" data-cites="ciccioneCanHumansPerform2021a courrieuQuickApproximationBivariate2012 saidExtrapolationAccuracyUnderestimates2021 schulzCommunicatingCompositionalPatterns2020">(<a href="#ref-ciccioneCanHumansPerform2021a" role="doc-biblioref">Ciccione &amp; Dehaene, 2021</a>; <a href="#ref-courrieuQuickApproximationBivariate2012" role="doc-biblioref">Courrieu, 2012</a>; <a href="#ref-saidExtrapolationAccuracyUnderestimates2021" role="doc-biblioref">Said &amp; Fischer, 2021</a>; <a href="#ref-schulzCommunicatingCompositionalPatterns2020" role="doc-biblioref">Schulz et al., 2020</a>)</span>.</p>
+<p>The study of human function learning investigates how people learn relationships between continuous input and output values. Function learning is studied both in tasks where individuals are exposed to a sequence of input/output pairs <span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielEffectsSpacedMassed2013">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-mcdanielEffectsSpacedMassed2013" role="doc-biblioref">McDaniel et al., 2013</a>)</span>, or situations where observers are presented with a an incomplete scatterplot or line graph and make predictions about regions of the plot that don’t contain data <span class="citation" data-cites="ciccioneCanHumansPerform2021a courrieuQuickApproximationBivariate2012 saidExtrapolationAccuracyUnderestimates2021 schulzCommunicatingCompositionalPatterns2020">(<a href="#ref-courrieuQuickApproximationBivariate2012" role="doc-biblioref">Courrieu, 2012</a>; <a href="#ref-saidExtrapolationAccuracyUnderestimates2021" role="doc-biblioref">Said &amp; Fischer, 2021</a>; <a href="#ref-schulzCommunicatingCompositionalPatterns2020" role="doc-biblioref">Schulz et al., 2020</a>; <a href="#ref-ciccioneCanHumansPerform2021a" role="doc-biblioref"><strong>ciccioneCanHumansPerform2021a?</strong></a>)</span>.</p>
 <p><span class="citation" data-cites="carrollFunctionalLearningLearning1963">Carroll (<a href="#ref-carrollFunctionalLearningLearning1963" role="doc-biblioref">1963</a>)</span> conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function. Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by <span class="citation" data-cites="brehmerHypothesesRelationsScaled1974">Brehmer (<a href="#ref-brehmerHypothesesRelationsScaled1974" role="doc-biblioref">1974</a>)</span>,testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. <span class="citation" data-cites="kohFunctionLearningInduction1991">Koh &amp; Meyer (<a href="#ref-kohFunctionLearningInduction1991" role="doc-biblioref">1991</a>)</span> employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh &amp; Meyer developed the log-polynomial adaptive-regression model to account for their results.</p>
 <p>The first significant challenge to the rule-based accounts of function learning was put forth by <span class="citation" data-cites="deloshExtrapolationSineQua1997">DeLosh et al. (<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">1997</a>)</span> . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in <a href="#fig-delosh-extrap" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <p>The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model <span class="citation" data-cites="carrollFunctionalLearningLearning1963 brehmerHypothesesRelationsScaled1974">(<a href="#ref-brehmerHypothesesRelationsScaled1974" role="doc-biblioref">Brehmer, 1974</a>; <a href="#ref-carrollFunctionalLearningLearning1963" role="doc-biblioref">Carroll, 1963</a>)</span> tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data. The log-polynomial adaptive regression model <span class="citation" data-cites="kohFunctionLearningInduction1991">(<a href="#ref-kohFunctionLearningInduction1991" role="doc-biblioref">Koh &amp; Meyer, 1991</a>)</span> was able to mimic some of the systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred.</p>
@@ -3407,9 +3409,6 @@ Bürkner, P.-C. (2017). Brms: <span>An R Package</span> for <span>Bayesian Multi
 <div id="ref-carrollFunctionalLearningLearning1963" class="csl-entry" role="listitem">
 Carroll, J. D. (1963). Functional <span>Learning</span>: <span>The Learning</span> of <span>Continuous Functional Mappings Relating Stimulus</span> and <span>Response Continua</span>. <em>ETS Research Bulletin Series</em>, <em>1963</em>(2), i–144. <a href="https://doi.org/10.1002/j.2333-8504.1963.tb00958.x">https://doi.org/10.1002/j.2333-8504.1963.tb00958.x</a>
 </div>
-<div id="ref-ciccioneCanHumansPerform2021a" class="csl-entry" role="listitem">
-Ciccione, L., &amp; Dehaene, S. (2021). Can humans perform mental regression on a graph? <span>Accuracy</span> and bias in the perception of scatterplots. <em>Cognitive Psychology</em>, <em>128</em>, 101406. <a href="https://doi.org/10.1016/j.cogpsych.2021.101406">https://doi.org/10.1016/j.cogpsych.2021.101406</a>
-</div>
 <div id="ref-courrieuQuickApproximationBivariate2012" class="csl-entry" role="listitem">
 Courrieu, P. (2012). Quick approximation of bivariate functions. <em>British Journal of Mathematical and Statistical Psychology</em>, <em>65</em>(1), 89–121. <a href="https://doi.org/10.1111/j.2044-8317.2011.02016.x">https://doi.org/10.1111/j.2044-8317.2011.02016.x</a>
 </div>
@@ -3887,7 +3886,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.tegorman13.github.io/Dissertation\/custom");
+      var filterRegex = new RegExp("https:\/\/tegorman13\.github\.io\/Dissertation\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -4181,6 +4180,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           }
         });
       }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb43" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>

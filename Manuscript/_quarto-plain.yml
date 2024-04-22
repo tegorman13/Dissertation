@@ -12,10 +12,10 @@ execute:
   echo: false
 
 format:
-  # docx:
-  #   #prefer-html: true
-  #   output-file: "TG_Full_Dissertation.docx"
-  #   toc: true
+  docx:
+    prefer-html: true
+    output-file: "TG_Full_Dissertation.docx"
+    toc: true
   html:
     toc: true
     language: 
@@ -24,7 +24,7 @@ format:
     toc-depth: 4
     link-citations: true
     page-layout: full
-    format-links: [pdf, gfm]
+    format-links: [pdf, gfm, docx]
     theme: 
        #- ../Assets/Style/lux-modified.scss 
        - cosmo

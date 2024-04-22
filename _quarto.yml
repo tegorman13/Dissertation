@@ -10,6 +10,7 @@ project:
     - "!_Dissertation_Proposal"
     - "!Manuscript/"
     - "!Scratch/"
+    - "!Sections/docx_test.qmd"
 
   resources: 
     - "Manuscript/output/"

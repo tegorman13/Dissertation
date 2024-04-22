@@ -8,10 +8,9 @@ code-fold: true
 code-tools: true
 toc: true
 toc-location: body
-#toc-title: Contents
 toc-depth: 4
 cache: true
-format-links: [hikmah-manuscript-pdf, gfm]
+format-links: [hikmah-manuscript-pdf, gfm, docx]
 execute: 
   warning: false
   eval: true
@@ -24,7 +23,7 @@ format:
     output-file: diss_full_hugo.md
   gfm:
     echo: false
-    output: false
+    #output: false
     output-file: diss_full_gfm.md
   hikmah-manuscript-pdf:
     echo: false
@@ -34,6 +33,11 @@ format:
       - "Numbers=Proportional"
       - "Numbers=OldStyle"
     mathfont: "Libertinus Math"
+  docx:
+    echo: false
+    prefer-html: true
+    output-file: "TG_Full_Dissert.docx"
+    toc: true
 prefer-html: true
 ---
 
@@ -239,7 +243,7 @@ The experimental task was programmed in JavaScript, using packages from the Phas
 
 ```{r out.width = "60%", echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 #| label: fig-IGAS_Methods
-#| fig.cap: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square.
+#| fig-cap: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square.
 
 # mf <- cowplot::ggdraw()+cowplot::draw_image(here::here("Assets/methodsFig1.png"),hjust=0)+theme(plot.margin = margin(0, 0, 0, 0))
 # plot_grid(mf,ncol=1)
@@ -260,7 +264,7 @@ We performed an ANOVA comparison with stage as a within-group factor and conditi
 
 ```{r}
 #| label: fig-IGAS_Training1
-#| fig.cap: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean.
+#| fig-cap: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean.
 
 exp1TrainPosition <- e1 %>% filter(stage!="Transfer",mode==1) %>%ungroup() %>% 
   group_by(sbjCode,Group,conditType,trainHalf,positionX) %>% 
@@ -293,13 +297,14 @@ plot_grid(e1train2,ncol=1)
 
 ```
 
+
 #### Testing Phase
 
 In Experiment 1, a single constant-trained group was compared against a single varied-trained group. At the transfer phase, all participants were tested from 3 positions: 1) the positions(s) from their own training, 2) the training position(s) of the other group, and 3) a position novel to both groups. Overall, group performance was compared with a mixed type III ANOVA, with condition (varied vs. constant) as a between-subject factor and throwing location as a within-subject variable. The effect of throwing position was strong, F(3,213) = 56.12, p\<.001, η2G = .23. The effect of training condition was significant F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 ```{r}
 #| label: fig-IGAS_Testing1
-#| fig.cap: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean.
+#| fig-cap: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean.
 
 
 exp1.Test <- e1 %>% filter(stage=="Transfer") %>% select(-trainHalf)%>% group_by(positionX) %>% 
@@ -311,7 +316,12 @@ summarise(MeanTargetDeviance = mean(AbsDistFromCenter),MeanScaleDev = mean(scale
 
 #manuscript plot
 e1test1=exp1.Test %>% ggplot(aes(x=positionX,y=MeanTargetDeviance,group=conditType,fill=conditType))+
-  geom_bar(stat="summary",fun=mean,position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+theme(plot.title = element_text(hjust = 0.5))+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+scale_x_discrete(name="Testing Location",labels=e1Labels)
+  geom_bar(stat="summary",fun=mean,position=dodge)+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ylab("Mean Distance From Center Of Target") +xlab("Testing Location")+
+  guides(fill=guide_legend(title="Training Condition"))+
+  theme(legend.title.align=.25, 
+  axis.text.x = element_text(size = 8.5,angle=0),
+  legend.position="top")+
+  scale_x_discrete(name="Testing Location",labels=e1Labels)
 
 e1test1
 
@@ -322,7 +332,7 @@ e1test1
 
 ```{r}
 #| label: tbl-IGAS_Table1
-#| tab.cap: Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.
+#| tbl-cap: Testing performance for varied and constant groups in experiment 1. Mean absolute deviation from the center of the target, with standard deviations in parenthesis.
 
 exp1.Test <- e1 %>% filter(stage=="Transfer") %>% select(-trainHalf)%>% group_by(positionX) %>% 
   mutate(globalAvg=mean(AbsDistFromCenter),globalSd=sd(AbsDistFromCenter)) %>% 
@@ -338,7 +348,7 @@ test= exp1.Test %>% dplyr::rename(Condition="conditType") %>% group_by(Condition
  test = test %>% mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
  test=test[,1:3]
 
-kable(test,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") # %>%  # kable_classic() #%>% kableExtra::footnote(general=captionText,general_title = "")
+kable(test,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  #%>% kableExtra::kable_styling(position="left") # %>%  # kable_classic() #%>% kableExtra::footnote(general=captionText,general_title = "")
 
 
 ```
@@ -453,7 +463,7 @@ exp2.Test7.agg2 <- exp2.Test7  %>%group_by(sbjCode,conditType) %>%
 
 ```{r}
 #| label: fig-e2train
-#| fig.cap: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
+#| fig-cap: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean.
 #| fig-width: 11
 #| fig-height: 8
 
@@ -486,7 +496,7 @@ In Experiment 2, a single varied condition (trained from two positions, 500 and 
 
 ```{r}
 #| label: fig-e2testa
-#| fig.cap: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean. 
+#| fig-cap: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean. 
 #| fig-width: 11
 #| fig-height: 9
 
@@ -532,7 +542,7 @@ tab2= exp2.Test %>% rename(Condition="conditType") %>% group_by(Condition,positi
  tab2=tab2[,1:3]
 
 
-kable(tab2,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
+kable(tab2,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  #%>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
 
 ```
 
@@ -557,14 +567,14 @@ tab3=sum.novelAll %>% rename(Condition="conditType") %>% group_by(Condition,posi
 
 
 
-kable(tab3,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
+kable(tab3,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l")) # %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
 ```
 
 Finally, corresponding to the comparison of position 760 from Experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). @fig-e2test1 displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 ```{r}
 #| label: fig-e2test1
-#| fig.cap: A comparison of throwing location that are identical to those trained by the constant participants (e.g., constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.
+#| fig-cap: A comparison of throwing location that are identical to those trained by the constant participants (e.g., constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean.
 
 sum.variedVsNovelIden <- variedVsNovelIden  %>%
   group_by(sbjCode,conditType,positionX) %>% 
@@ -594,7 +604,7 @@ tab4=tab4 %>% group_by(Condition) %>%
 tab4 = tab4 %>% mutate(msd=paste(Mean,"(",sd,")",sep=""),gsd=paste(GroupAvg,"(",groupSd,")",sep="")) %>% select(positionX,Condition,msd,gsd)%>%pivot_wider(names_from = Condition,values_from=c(msd,gsd))
  tab4=tab4[,1:3]
 
-kable(tab4,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l"))  %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
+kable(tab4,escape=FALSE,booktabs=TRUE,col.names=c("Position","Constant","Varied"),align=c("l")) # %>% kableExtra::kable_styling(position="left") #%>% kable_classic() #%>% footnote(general=captionText,general_title = "")
 
 
 ```
@@ -614,7 +624,7 @@ In the testing phase, our varied group significantly outperformed the constant c
 
 ```{r}
 #| label: fig-taskSpace
-#| fig.cap: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in Experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
+#| fig-cap: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in Experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
 #| fig-width: 11
 #| fig-height: 9
 #| 
@@ -687,7 +697,7 @@ Also of interest is whether the IGAS model can predict the pattern of results wh
 
 ```{r}
 #| label: fig-Toy-Model-dis
-#| fig.cap: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
+#| fig-cap: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for  both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = $e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the top right panel, the c constants in the original equations are different for the 2 conditions, with $c=-.002$ for the varied condition, and $c=-.008$ for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
 #| fig.width: 11
 #| fig.height: 11.5
 
@@ -1926,8 +1936,15 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
 post_tabs <- abc_tables(post_dat,post_dat_l)
 train_tab <- abc_train_tables(pd_train,pd_train_l)
 
+
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+primary=out_type == "html" || out_type == "pdf" || out_type =="latex" || out_type == "docx"
+
+
+
 e1_tab <- rbind(post_tabs$agg_pred_full |> mutate("Task Stage"="Test"), train_tab$agg_pred_full |> mutate("Task Stage"="Train")) |> mutate(Fit_Method=rename_fm(Fit_Method)) 
 
+if (primary) {
 e1_tab %>%
   group_by(`Task Stage`, Fit_Method, Model, condit) %>%
   summarize(ME = mean(mean_error), .groups = "drop") %>%
@@ -1963,6 +1980,19 @@ e1_tab %>%
     column_labels.padding = 2,
     data_row.padding = 2
   )
+} else {
+
+  e1_tab %>%
+  group_by(`Task Stage`, Fit_Method, Model, condit) %>%
+  summarize(ME = mean(mean_error), .groups = "drop") %>%
+  pivot_wider(
+    names_from = c(Model, condit),
+    values_from = ME,
+    names_sep = "_"  # Add this line to specify the separator for column names
+  ) %>%
+  rename("Fit Method" = Fit_Method) %>% kable(escape=F,booktabs=T)
+
+  }
 ```
 
 
@@ -2179,6 +2209,11 @@ Model errors were significantly lower for EXAM  ($\beta$ = `r bm1$estimate`, 95%
 #| tbl-cap: "Models errors predicting empirical data -  aggregated over all participants, posterior parameter values,  and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on."
 
 
+
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+primary=out_type == "html" || out_type == "pdf" || out_type =="latex" || out_type == "docx"
+
+
 post_tabs2 <- abc_tables(e2_model$post_dat,e2_model$post_dat_l)
 train_tab2 <- abc_train_tables(e2_model$pd_train,e2_model$pd_train_l)
 
@@ -2199,6 +2234,8 @@ e3_tab <- rbind(post_tabs3$agg_pred_full |>
   mutate(Fit_Method=rename_fm(Fit_Method)) 
 
 e23_tab <- rbind(e2_tab |> mutate(Exp="E2"), e3_tab |> mutate(Exp="E3")) 
+
+if (primary) {
 gt_table <- e23_tab %>%
   pivot_wider(
     names_from = c(Exp, Model, condit),
@@ -2227,6 +2264,16 @@ gt_table <- e23_tab %>%
     data_row.padding = 2
   )
 gt_table
+} else {
+  e23_tab %>%
+  pivot_wider(
+    names_from = c(Exp, Model, condit),
+    values_from = mean_error,
+    names_glue = "{Exp}_{Model}_{condit}"
+  ) %>%
+  arrange(Fit_Method, `Task Stage`) %>%
+  kable(escape=F,booktabs=T)
+}
 ```
 
 \ \ \ 
@@ -2261,9 +2308,11 @@ rbind(e2_model$post_dat_l |> filter( Fit_Method=="Test_Train") |>
 
 \scriptsize
 
+
 ```{r}
 #| label: tbl-htw-ee-e23
 #| tbl-cap: "Results of Bayesian Regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and the interaction between Model and Condition. The values represent the estimate coefficient for each term, with 95% credible intervals in brackets.  The intercept reflects the baseline of ALM and Constant. The other estimates indicate deviations from the baseline for the EXAM mode and varied condition. Lower values indicate better model fit."
+#| cache: false 
 
 e2_ee_brm_ae <- brm(data=pdl2,
   aerror ~  Model * condit + (1+bandInt|id), 
@@ -2303,6 +2352,11 @@ bct <- rbind(bct_e1 |> mutate(exp="Exp 1"),bct_e2 |>
                mutate(exp= "Exp 2"),bct_e3 |> mutate(exp="Exp 3")) |> 
   relocate(exp, .before=Term)
 
+
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+primary=out_type == "html" || out_type == "pdf" || out_type =="latex" || out_type == "docx"
+
+if (primary) {
 bct_table <- bct %>%
   mutate(
     across(c(Estimate, `95% CrI Lower`, `95% CrI Upper`), ~ round(., 2)),
@@ -2367,7 +2421,14 @@ bct_table <- bct %>%
     #row_group.background.color = "gray95"
   )
 bct_table
+} else {
+  bct %>%
+  mutate(
+    across(c(Estimate, `95% CrI Lower`, `95% CrI Upper`), ~ round(., 2)),
+    pd = round(pd, 2)
+  ) %>% kable(booktabs = TRUE)
 
+}
 ```
 
 \normalsize

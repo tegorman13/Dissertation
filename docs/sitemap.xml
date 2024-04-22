@@ -1,64 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/plan.html</loc>
-    <lastmod>2023-10-10T11:50:59.094Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/full.html</loc>
+    <lastmod>2024-04-22T18:18:02.997Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/index.html</loc>
-    <lastmod>2024-02-28T16:11:50.290Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/Introduction.html</loc>
-    <lastmod>2024-04-21T20:00:40.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW.html</loc>
-    <lastmod>2024-04-15T12:10:25.521Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/Appendix/IGAS-Supplemental.html</loc>
-    <lastmod>2024-04-02T12:51:15.482Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Outline.html</loc>
-    <lastmod>2023-10-10T14:26:26.101Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/Appendix/E1_Appendix.html</loc>
-    <lastmod>2024-04-08T01:58:09.764Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/Discussion.html</loc>
-    <lastmod>2024-04-06T05:48:19.173Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/IGAS.html</loc>
-    <lastmod>2024-04-15T10:24:50.386Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW_old.html</loc>
+    <lastmod>2024-02-28T15:56:44.225Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/htw_exam.html</loc>
     <lastmod>2024-02-28T15:50:30.719Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/paper.html</loc>
-    <lastmod>2024-04-15T14:18:46.374Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/full.html</loc>
-    <lastmod>2024-04-22T06:06:20.139Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/Appendix/IGAS-Supplemental.html</loc>
+    <lastmod>2024-04-02T12:51:15.482Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/full2.html</loc>
     <lastmod>2024-04-04T10:38:21.176Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/project_transition.html</loc>
-    <lastmod>2024-04-05T21:51:07.049Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/hold_temp.html</loc>
-    <lastmod>2024-04-14T21:30:09.740Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/Appendix/Full_Appendix.html</loc>
@@ -73,15 +33,19 @@
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/toc_pdf.html</loc>
-    <lastmod>2024-04-15T12:51:55.106Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/index.html</loc>
+    <lastmod>2024-02-28T16:11:50.290Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/pre_pdf.html</loc>
-    <lastmod>2024-04-15T15:33:47.311Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/Introduction.html</loc>
+    <lastmod>2024-04-21T20:00:40.880Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/pre_docx.html</loc>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/project_transition.html</loc>
+    <lastmod>2024-04-05T23:14:06.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/sigs.html</loc>
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
   </url>
   <url>
@@ -89,15 +53,59 @@
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/sigs.html</loc>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/pre_docx.html</loc>
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/pre_pdf.html</loc>
+    <lastmod>2024-04-15T15:33:47.311Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/toc_pdf.html</loc>
+    <lastmod>2024-04-15T12:51:55.106Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Outline.html</loc>
+    <lastmod>2023-10-10T14:26:26.101Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/cover.html</loc>
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
   </url>
   <url>
+    <loc>https://tegorman13.github.io/Dissertation/plan.html</loc>
+    <lastmod>2023-10-10T11:50:59.094Z</lastmod>
+  </url>
+  <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/3_signatures.html</loc>
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/paper.html</loc>
+    <lastmod>2024-04-22T17:55:51.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/Discussion.html</loc>
+    <lastmod>2024-04-06T05:48:19.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/Appendix/E1_Appendix.html</loc>
+    <lastmod>2024-04-08T01:58:09.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/docx_test.html</loc>
+    <lastmod>2024-04-22T07:07:58.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/IGAS.html</loc>
+    <lastmod>2024-04-15T10:24:50.386Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW.html</loc>
+    <lastmod>2024-04-15T12:10:25.521Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/test_types.html</loc>
+    <lastmod>2024-04-22T17:10:38.152Z</lastmod>
   </url>
 </urlset>

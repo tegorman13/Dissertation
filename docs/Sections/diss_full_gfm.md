@@ -2,10 +2,6 @@
 Modeling Approach
 Thomas Gorman
 
-<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
-
 - [Introduction](#introduction)
   - [Varied Training and
     Generalization](#varied-training-and-generalization)
@@ -683,9 +679,7 @@ the consequences of a generalization gradient that drops off as a
 Gaussian function of distance from training, as compared to a linear
 drop-off.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-toy-model1-1.png)
 
 In addition to largely overlooking the potential for non-linear
 generalization to confound interpretations of training manipulations,
@@ -838,9 +832,7 @@ significant effect of condition F(1,71)=1.42, p=.24, $\eta^{2}_G$ = .02,
 and no significant interaction between condition and training stage,
 F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Training1-1.png)
 
 #### Testing Phase
 
@@ -856,14 +848,12 @@ p\<.001, η2G = .23. The effect of training condition was significant
 F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction
 between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Testing1-1.png)
 
   
   
 
-<div>
+<div class="cell-output-display">
 
 | Position | Constant       | Varied         |
 |:---------|:---------------|:---------------|
@@ -992,9 +982,7 @@ significant effect of training stage F(2,172)=56.29, p\<.001,
 $\eta^{2}_G$ =.11, and no significant interaction between group and
 training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2train-1.png)
 
 #### Testing Phase
 
@@ -1018,17 +1006,13 @@ across the testing positions.
 performance between the varied condition and the individual constant
 groups.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2testa-1.png)
 
   
   
   
 
 <div class="cell-output-display">
-
-<div>
 
 | Position | Constant       | Varied         |
 |:---------|:---------------|:---------------|
@@ -1038,8 +1022,6 @@ width="1056" />
 | 675      | 233.32(93.35)  | 206.32(94.64)  |
 | 800      | 283.24(102.85) | 242.65(89.73)  |
 | 900      | 343.51(114.33) | 289.62(110.07) |
-
-</div>
 
 </div>
 
@@ -1054,8 +1036,6 @@ condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 
 <div class="cell-output-display">
 
-<div>
-
 | Position | Constant       | Varied         |
 |:---------|:---------------|:---------------|
 | 400      | 98.84(45.31)   | 83.92(33.76)   |
@@ -1064,8 +1044,6 @@ condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 | 675      | 232.9(95.53)   | 206.32(94.64)  |
 | 800      | 285.91(102.81) | NA             |
 | 900      | 346.96(111.35) | 289.62(110.07) |
-
-</div>
 
 </div>
 
@@ -1082,16 +1060,12 @@ analyses on the aggregated data. In this case, the effect of condition
 did not reach statistical significance F(1,149)=3.14, p=.079,
 $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2test1-1.png)
 
   
   
 
 <div class="cell-output-display">
-
-<div>
 
 | Position | Constant      | Varied         |
 |:---------|:--------------|:---------------|
@@ -1099,8 +1073,6 @@ width="768" />
 | 625      | 204.75(84.66) | 183.51(75.92)  |
 | 675      | 235.75(81.15) | 206.32(94.64)  |
 | 900      | 323.5(130.9)  | 289.62(110.07) |
-
-</div>
 
 </div>
 
@@ -1164,9 +1136,7 @@ target from different launching positions. As illustrated in
 throws represent just a small fraction of the entire space of velocity
 combinations used by participants throughout the experiment.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-taskSpace-1.png)
 
 For each individual trial, the Euclidean distance (Equation 1) was
 computed between the velocity components (x and y) of that trial and the
@@ -1375,9 +1345,7 @@ identical to that which was trained, there are always some psychological
 contextual differences between training and testing throws, resulting in
 a non-zero dissimilarity.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-Toy-Model-dis-1.png)
 
 As mentioned above, the idea that learners flexibly adjust their
 generalization gradient based on prior experience does have precedent in
@@ -1650,9 +1618,7 @@ stimuli. However unlike ALM, the Bayesian learning model utilizes more
 elaborate probabilistic stimulus representations, with a separate Kalman
 Filter for each shape stimulus.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-delosh-extrap-1.png)
 
 ### Overview Of Present Study
 
@@ -1775,9 +1741,7 @@ band would have slopes ~0.
 
 ### Results
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e1-train-dev-1.png)
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
 |:-------------|---------:|--------------:|--------------:|----:|
@@ -1809,7 +1773,7 @@ fit a Bayesian mixed effects model predicting deviation from the target
 band as a function of training condition (varied vs. constant) and band
 type (trained vs. extrapolation), with random intercepts for
 participants and bands. The model results are shown in
-<a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 6</a>. The main
+<a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 7</a>. The main
 effect of training condition was not significant ($\beta$ = 39, 95% CrI
 \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a
 significantly greater deviation than the training bands ($\beta$ =
@@ -1820,9 +1784,7 @@ interaction between training condition and band type was significant
 group had disproportionately larger deviations compared to the constant
 group in the extrapolation bands.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-dev-1.png)
 
   
 
@@ -1837,7 +1799,7 @@ Finally, to assess the ability of both conditions to discriminate
 between velocity bands, we fit a model predicting velocity as a function
 of training condition and velocity band, with random intercepts and
 random slopes for each participant. See
-<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 7</a> for the full
+<a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 8</a> for the full
 model results. The estimated coefficient for training condition ($\beta$
 = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the
 varied group tends to produce harder throws than the constant group,
@@ -1855,13 +1817,9 @@ the constant condition (see
 <a href="#fig-e1-test-vx" class="quarto-xref">Figure 14</a> and
 <a href="#fig-e1-bmm-vx" class="quarto-xref">Figure 15</a>).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-vx-1.png)
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-bmm-vx-1.png)
 
 ### Experiment 1 Summary
 
@@ -1892,9 +1850,7 @@ completed the experiment (Varied: 55, Constant: 55).
 
 ### Results
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2-train-dev-1.png)
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |  pd |
 |:-------------|---------:|--------------:|--------------:|----:|
@@ -1925,7 +1881,7 @@ constant group in the final training block, ( $\beta$ = 36.15, 95% CrI
 from the target band as influenced by training condition (Varied
 vs. Constant) and band type (training vs. extrapolation bands). The
 results, summarized in
-<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 9</a>, reveal no
+<a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 10</a>, reveal no
 significant main effect of training condition ($\beta$ = -20.58, 95% CrI
 \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between
 training condition and band type was significant ($\beta$ = 82, 95% CrI
@@ -1934,9 +1890,7 @@ disproportionately larger deviations compared to the constant group on
 the extrapolation bands (see
 <a href="#fig-e2-test-dev" class="quarto-xref">Figure 17</a>).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-dev-1.png)
 
 | Term         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
 |:-------------|---------:|--------------:|--------------:|-----:|
@@ -1950,7 +1904,7 @@ conditions to discriminate between velocity bands, we fit a model
 predicting velocity as a function of training condition and velocity
 band, with random intercepts and random slopes for each participant. The
 full model results are shown in
-<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 10</a>. The overall
+<a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 11</a>. The overall
 slope on target velocity band predictor was significantly positive,
 ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that
 participants exhibited discrimination between bands. The interaction
@@ -1960,13 +1914,9 @@ not differ in their ability to discriminate between bands (see
 <a href="#fig-e2-test-vx" class="quarto-xref">Figure 18</a> and
 <a href="#fig-e2-bmm-vx" class="quarto-xref">Figure 19</a>).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-vx-1.png)
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-bmm-vx-1.png)
 
 ### Experiment 2 Summary
 
@@ -2009,7 +1959,7 @@ n=46 in the Varied-Reverse condition.
 *Training*.
 <a href="#fig-e3-train-dev" class="quarto-xref">Figure 20</a> displays
 the average deviations from the target band across training blocks, and
-<a href="#tbl-e3-train-dist" class="quarto-xref">Table 11</a> shows the
+<a href="#tbl-e3-train-dist" class="quarto-xref">Table 12</a> shows the
 results of the Bayesian regression model predicting the deviation from
 the common band at the end of training (600-800 for reversed order, and
 800-1000 for original order conditions). The main effect of training
@@ -2021,9 +1971,7 @@ condition and band order is significant, with the varied condition
 showing greater accuracy in the reverse order condition ( $\beta$ =
 -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e3-train-dev-1.png)
 
 | Term                                         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
 |:---------------------------------------------|---------:|--------------:|--------------:|-----:|
@@ -2037,7 +1985,7 @@ width="768" />
 | conditVaried:bandTypeExtrapolation:bandOrder |    30.42 |        -21.00 |         81.65 | 0.87 |
 
 *Testing Accuracy.*
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 12</a> presents the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a> presents the
 results of the Bayesian mixed efects model predicting absolute deviation
 from the target band during the testing stage. There was no significant
 main effect of training condition,$\beta$ = -40.19, 95% CrI \[-104.68,
@@ -2058,9 +2006,7 @@ significant.
 &#10;![](../Assets/figs/e3_cond_effects_dist.png)
 &#10;E3. A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 ::: -->
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-dev-1.png)
 
 | Term                                   | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
 |:---------------------------------------|---------:|--------------:|--------------:|-----:|
@@ -2075,7 +2021,7 @@ width="1056" />
 
 *Testing Discrimination.* The full results of the discrimination model
 are presented in
-<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 12</a>. For the
+<a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a>. For the
 purposes of assessing group differences in discrimination, only the
 coefficients including the band variable are of interest. The baseline
 effect of band represents the slope cofficient for the constant
@@ -2091,15 +2037,11 @@ condition trained with reverse order bands. This interaction is shown in
 steepness of the best fitting line for the varied-reversed condition is
 noticably steeper than the other conditions.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-vx-1.png)
 
 
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-bmm-vx-1.png)
 
 ### Experiment 3 Summary
 
@@ -2121,9 +2063,7 @@ when the band order was reversed during testing.
 
 ## Computational Model
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-alm-diagram-1.png)
 
 The modeling goal is to implement a full process model capable of
 both 1) producing novel responses and 2) modeling behavior in both the
@@ -2161,12 +2101,11 @@ learning rate parameter.
 The EXAM model is an extension of ALM, with the same learning rule and
 representational scheme for input and output units. EXAM differs from
 ALM only in its response rule, as it includes a linear extrapolation
-mechanism for generating novel responses.
-
-When a novel test stimulus, $X$, is presented, EXAM first identifies the
-two nearest training stimuli, $X_1$ and $X_2$, that bracket $X$. This is
-done based on the Gaussian activation of input nodes, similar to ALM,
-but focuses on identifying the closest known points for extrapolation.
+mechanism for generating novel responses. When a novel test stimulus,
+$X$, is presented, EXAM first identifies the two nearest training
+stimuli, $X_1$ and $X_2$, that bracket $X$. This is done based on the
+Gaussian activation of input nodes, similar to ALM, but focuses on
+identifying the closest known points for extrapolation.
 
 **Slope Calculation**: EXAM calculates a local slope, $S$, using the
 responses associated with $X_1$ and $X_2$. This is computed as:
@@ -2182,7 +2121,7 @@ to the $X_1$ and $X_2$ inputs.
 extrapolated using the slope $S$:
 
 $$
-   E[Y|X] = m(X_1) + S \cdot (X - X_1)
+   E[Y|X] = m(X_1) + S \cdot |X - X_1|
    $$
 
 Here, $m(X_1)$ is the ALM response value from the training data for the
@@ -2208,7 +2147,7 @@ consistently demonstrated knowledge of, or a bias towards, the origin
 point (see Kwantes & Neal (2006) for additional evidence of such a bias
 in function learning tasks).
 
-See <a href="#tbl-alm-exam" class="quarto-xref">Table 14</a> for a full
+See <a href="#tbl-alm-exam" class="quarto-xref">Table 15</a> for a full
 specification of the equations that define ALM and EXAM, and
 <a href="#fig-alm-diagram" class="quarto-xref">Figure 24</a> for a
 visual representation of the ALM model.
@@ -2348,465 +2287,20 @@ cores.
 
 <div class="cell-output-display">
 
-<div id="lynvjgkxfn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lynvjgkxfn table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-&#10;#lynvjgkxfn thead, #lynvjgkxfn tbody, #lynvjgkxfn tfoot, #lynvjgkxfn tr, #lynvjgkxfn td, #lynvjgkxfn th {
-  border-style: none;
-}
-&#10;#lynvjgkxfn p {
-  margin: 0;
-  padding: 0;
-}
-&#10;#lynvjgkxfn .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-&#10;#lynvjgkxfn .gt_title {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-&#10;#lynvjgkxfn .gt_subtitle {
-  color: #333333;
-  font-size: 12px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-&#10;#lynvjgkxfn .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-&#10;#lynvjgkxfn .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-&#10;#lynvjgkxfn .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-&#10;#lynvjgkxfn .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-&#10;#lynvjgkxfn .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-&#10;#lynvjgkxfn .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-&#10;#lynvjgkxfn .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-&#10;#lynvjgkxfn .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-&#10;#lynvjgkxfn .gt_from_md > :first-child {
-  margin-top: 0;
-}
-&#10;#lynvjgkxfn .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-&#10;#lynvjgkxfn .gt_row {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-&#10;#lynvjgkxfn .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#lynvjgkxfn .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-&#10;#lynvjgkxfn .gt_row_group_first td {
-  border-top-width: 2px;
-}
-&#10;#lynvjgkxfn .gt_row_group_first th {
-  border-top-width: 2px;
-}
-&#10;#lynvjgkxfn .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#lynvjgkxfn .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-&#10;#lynvjgkxfn .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#lynvjgkxfn .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-&#10;#lynvjgkxfn .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#lynvjgkxfn .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#lynvjgkxfn .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#lynvjgkxfn .gt_left {
-  text-align: left;
-}
-&#10;#lynvjgkxfn .gt_center {
-  text-align: center;
-}
-&#10;#lynvjgkxfn .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-&#10;#lynvjgkxfn .gt_font_normal {
-  font-weight: normal;
-}
-&#10;#lynvjgkxfn .gt_font_bold {
-  font-weight: bold;
-}
-&#10;#lynvjgkxfn .gt_font_italic {
-  font-style: italic;
-}
-&#10;#lynvjgkxfn .gt_super {
-  font-size: 65%;
-}
-&#10;#lynvjgkxfn .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-&#10;#lynvjgkxfn .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-&#10;#lynvjgkxfn .gt_indent_1 {
-  text-indent: 5px;
-}
-&#10;#lynvjgkxfn .gt_indent_2 {
-  text-indent: 10px;
-}
-&#10;#lynvjgkxfn .gt_indent_3 {
-  text-indent: 15px;
-}
-&#10;#lynvjgkxfn .gt_indent_4 {
-  text-indent: 20px;
-}
-&#10;#lynvjgkxfn .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Task Stage">Task Stage</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Fit Method">Fit Method</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: black;" scope="col" id="Varied">Varied</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">199.93</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">103.36</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">104.01</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">85.68</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test &amp; Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">216.97</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">170.28</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">127.94</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">144.86</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Test</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">467.73</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">291.38</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">273.30</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">297.91</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">297.82</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">2,016.01</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">53.90</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">184.00</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Test &amp; Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">57.40</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">132.32</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">42.92</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">127.90</td></tr>
-    <tr><td headers="Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF;">Train</td>
-<td headers="Fit Method" class="gt_row gt_center" style="background-color: #FFFFFF;">Fit to Training Data</td>
-<td headers="ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">51.77</td>
-<td headers="ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">103.48</td>
-<td headers="EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF;">51.43</td>
-<td headers="EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF;">107.03</td></tr>
-  </tbody>
-  &#10;  
-</table>
-</div>
+| Task Stage | Fit Method                  | ALM_Constant | ALM_Varied | EXAM_Constant | EXAM_Varied |
+|:-----------|:----------------------------|-------------:|-----------:|--------------:|------------:|
+| Test       | Fit to Test Data            |          200 |        103 |           104 |          86 |
+| Test       | Fit to Test & Training Data |          217 |        170 |           128 |         145 |
+| Test       | Fit to Training Data        |          468 |        291 |           273 |         298 |
+| Train      | Fit to Test Data            |          298 |       2016 |            54 |         184 |
+| Train      | Fit to Test & Training Data |           57 |        132 |            43 |         128 |
+| Train      | Fit to Training Data        |           52 |        103 |            51 |         107 |
 
 </div>
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-post-dist-1.png)
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-resid-pred-1.png)
 
 The posterior distributions of the $c$ and $lr$ parameters are shown
 <a href="#fig-htw-post-dist" class="quarto-xref">Figure 25</a>, and
@@ -2859,13 +2353,9 @@ distributions for both models. Regardless of how the models are fit,
 only EXAM can capture the pattern where participants are able to
 discriminate all 6 target bands.
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-1.png)
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-ee-e1-1.png)
 
 To quantitatively assess whether the differences in performance between
 models, we fit a Bayesian regression predicting the errors of the
@@ -2887,1028 +2377,43 @@ pd = 0.98).
 
 <div class="cell-output-display">
 
-<div id="azdcfbawzk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#azdcfbawzk table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-&#10;#azdcfbawzk thead, #azdcfbawzk tbody, #azdcfbawzk tfoot, #azdcfbawzk tr, #azdcfbawzk td, #azdcfbawzk th {
-  border-style: none;
-}
-&#10;#azdcfbawzk p {
-  margin: 0;
-  padding: 0;
-}
-&#10;#azdcfbawzk .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-&#10;#azdcfbawzk .gt_title {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-&#10;#azdcfbawzk .gt_subtitle {
-  color: #333333;
-  font-size: 12px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-&#10;#azdcfbawzk .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-&#10;#azdcfbawzk .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-&#10;#azdcfbawzk .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-&#10;#azdcfbawzk .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-&#10;#azdcfbawzk .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-&#10;#azdcfbawzk .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-&#10;#azdcfbawzk .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-&#10;#azdcfbawzk .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-&#10;#azdcfbawzk .gt_from_md > :first-child {
-  margin-top: 0;
-}
-&#10;#azdcfbawzk .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-&#10;#azdcfbawzk .gt_row {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-&#10;#azdcfbawzk .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#azdcfbawzk .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-&#10;#azdcfbawzk .gt_row_group_first td {
-  border-top-width: 2px;
-}
-&#10;#azdcfbawzk .gt_row_group_first th {
-  border-top-width: 2px;
-}
-&#10;#azdcfbawzk .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#azdcfbawzk .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-&#10;#azdcfbawzk .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#azdcfbawzk .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-&#10;#azdcfbawzk .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#azdcfbawzk .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#azdcfbawzk .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#azdcfbawzk .gt_left {
-  text-align: left;
-}
-&#10;#azdcfbawzk .gt_center {
-  text-align: center;
-}
-&#10;#azdcfbawzk .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-&#10;#azdcfbawzk .gt_font_normal {
-  font-weight: normal;
-}
-&#10;#azdcfbawzk .gt_font_bold {
-  font-weight: bold;
-}
-&#10;#azdcfbawzk .gt_font_italic {
-  font-style: italic;
-}
-&#10;#azdcfbawzk .gt_super {
-  font-size: 65%;
-}
-&#10;#azdcfbawzk .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-&#10;#azdcfbawzk .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-&#10;#azdcfbawzk .gt_indent_1 {
-  text-indent: 5px;
-}
-&#10;#azdcfbawzk .gt_indent_2 {
-  text-indent: 10px;
-}
-&#10;#azdcfbawzk .gt_indent_3 {
-  text-indent: 15px;
-}
-&#10;#azdcfbawzk .gt_indent_4 {
-  text-indent: 20px;
-}
-&#10;#azdcfbawzk .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="1" scope="col" id></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="E2">
-        <span class="gt_column_spanner">E2</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="E3">
-        <span class="gt_column_spanner">E3</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Task Stage">Task Stage</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="ALM">
-        <span class="gt_column_spanner">ALM</span>
-      </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="EXAM">
-        <span class="gt_column_spanner">EXAM</span>
-      </th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Constant">Constant</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Varied">Varied</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Test Data">Fit to Test Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Test Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Test Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">239.7</td>
-<td headers="Fit to Test Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">129.8</td>
-<td headers="Fit to Test Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">99.7</td>
-<td headers="Fit to Test Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">88.2</td>
-<td headers="Fit to Test Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">170.1</td>
-<td headers="Fit to Test Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">106.1</td>
-<td headers="Fit to Test Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">92.3</td>
-<td headers="Fit to Test Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">72.8</td></tr>
-    <tr><td headers="Fit to Test Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Test Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">53.1</td>
-<td headers="Fit to Test Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">527.1</td>
-<td headers="Fit to Test Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">108.1</td>
-<td headers="Fit to Test Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">169.3</td>
-<td headers="Fit to Test Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">70.9</td>
-<td headers="Fit to Test Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">543.5</td>
-<td headers="Fit to Test Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">157.8</td>
-<td headers="Fit to Test Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">212.7</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Test &amp;amp; Training Data">Fit to Test &amp; Training Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Test & Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">266.0</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">208.2</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">125.1</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">126.4</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">197.7</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">189.5</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">130.0</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">128.5</td></tr>
-    <tr><td headers="Fit to Test & Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">40.0</td>
-<td headers="Fit to Test & Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">35.4</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">30.4</td>
-<td headers="Fit to Test & Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">23.6</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">49.1</td>
-<td headers="Fit to Test & Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">85.6</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">49.2</td>
-<td headers="Fit to Test & Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">78.4</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="9" class="gt_group_heading" scope="colgroup" id="Fit to Training Data">Fit to Training Data</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Fit to Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Test</td>
-<td headers="Fit to Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">357.4</td>
-<td headers="Fit to Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">295.9</td>
-<td headers="Fit to Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">305.1</td>
-<td headers="Fit to Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">234.5</td>
-<td headers="Fit to Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">415.0</td>
-<td headers="Fit to Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">298.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">295.5</td>
-<td headers="Fit to Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">243.7</td></tr>
-    <tr><td headers="Fit to Training Data  Task Stage" class="gt_row gt_left" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">Train</td>
-<td headers="Fit to Training Data  E2_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">42.5</td>
-<td headers="Fit to Training Data  E2_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">23.0</td>
-<td headers="Fit to Training Data  E2_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">43.2</td>
-<td headers="Fit to Training Data  E2_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">22.6</td>
-<td headers="Fit to Training Data  E3_ALM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">51.4</td>
-<td headers="Fit to Training Data  E3_ALM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">63.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Constant" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">51.8</td>
-<td headers="Fit to Training Data  E3_EXAM_Varied" class="gt_row gt_right" style="background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">65.3</td></tr>
-  </tbody>
-  &#10;  
-</table>
-</div>
+| Fit_Method                  | Task Stage | E2_ALM_Constant | E2_ALM_Varied | E2_EXAM_Constant | E2_EXAM_Varied | E3_ALM_Constant | E3_ALM_Varied | E3_EXAM_Constant | E3_EXAM_Varied |
+|:----------------------------|:-----------|----------------:|--------------:|-----------------:|---------------:|----------------:|--------------:|-----------------:|---------------:|
+| Fit to Test Data            | Test       |             240 |           130 |              100 |             88 |             170 |           106 |               92 |             73 |
+| Fit to Test Data            | Train      |              53 |           527 |              108 |            169 |              71 |           544 |              158 |            213 |
+| Fit to Test & Training Data | Test       |             266 |           208 |              125 |            126 |             198 |           190 |              130 |            128 |
+| Fit to Test & Training Data | Train      |              40 |            35 |               30 |             24 |              49 |            86 |               49 |             78 |
+| Fit to Training Data        | Test       |             357 |           296 |              305 |            235 |             415 |           299 |              295 |            244 |
+| Fit to Training Data        | Train      |              43 |            23 |               43 |             23 |              51 |            64 |               52 |             65 |
 
 </div>
 
    
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
 
 
 
 <div class="cell-output-display">
 
-<div id="gxfcjmgomr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gxfcjmgomr table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-&#10;#gxfcjmgomr thead, #gxfcjmgomr tbody, #gxfcjmgomr tfoot, #gxfcjmgomr tr, #gxfcjmgomr td, #gxfcjmgomr th {
-  border-style: none;
-}
-&#10;#gxfcjmgomr p {
-  margin: 0;
-  padding: 0;
-}
-&#10;#gxfcjmgomr .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-&#10;#gxfcjmgomr .gt_title {
-  color: #333333;
-  font-size: 14px;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-&#10;#gxfcjmgomr .gt_subtitle {
-  color: #333333;
-  font-size: 12px;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-&#10;#gxfcjmgomr .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-&#10;#gxfcjmgomr .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-&#10;#gxfcjmgomr .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-&#10;#gxfcjmgomr .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-&#10;#gxfcjmgomr .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-&#10;#gxfcjmgomr .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-&#10;#gxfcjmgomr .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-&#10;#gxfcjmgomr .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-&#10;#gxfcjmgomr .gt_from_md > :first-child {
-  margin-top: 0;
-}
-&#10;#gxfcjmgomr .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-&#10;#gxfcjmgomr .gt_row {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-&#10;#gxfcjmgomr .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#gxfcjmgomr .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-&#10;#gxfcjmgomr .gt_row_group_first td {
-  border-top-width: 2px;
-}
-&#10;#gxfcjmgomr .gt_row_group_first th {
-  border-top-width: 2px;
-}
-&#10;#gxfcjmgomr .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#gxfcjmgomr .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-&#10;#gxfcjmgomr .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#gxfcjmgomr .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-&#10;#gxfcjmgomr .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#gxfcjmgomr .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-&#10;#gxfcjmgomr .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-&#10;#gxfcjmgomr .gt_left {
-  text-align: left;
-}
-&#10;#gxfcjmgomr .gt_center {
-  text-align: center;
-}
-&#10;#gxfcjmgomr .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-&#10;#gxfcjmgomr .gt_font_normal {
-  font-weight: normal;
-}
-&#10;#gxfcjmgomr .gt_font_bold {
-  font-weight: bold;
-}
-&#10;#gxfcjmgomr .gt_font_italic {
-  font-style: italic;
-}
-&#10;#gxfcjmgomr .gt_super {
-  font-size: 65%;
-}
-&#10;#gxfcjmgomr .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-&#10;#gxfcjmgomr .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-&#10;#gxfcjmgomr .gt_indent_1 {
-  text-indent: 5px;
-}
-&#10;#gxfcjmgomr .gt_indent_2 {
-  text-indent: 10px;
-}
-&#10;#gxfcjmgomr .gt_indent_3 {
-  text-indent: 15px;
-}
-&#10;#gxfcjmgomr .gt_indent_4 {
-  text-indent: 20px;
-}
-&#10;#gxfcjmgomr .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Experiment">Experiment</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Term">Term</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="Estimate">Estimate</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Credible Interval">
-        <span class="gt_column_spanner">Credible Interval</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="pd">pd</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="95% CrI Lower">95% CrI Lower</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="95% CrI Upper">95% CrI Upper</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 1">Experiment 1</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">176.3</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">156.9</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">194.6</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">−88.4</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">−104.5</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">−71.8</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right">−37.5</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">−60.4</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">−14.2</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 1  exp" class="gt_row gt_left">Exp 1</td>
-<td headers="Experiment 1  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 1  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">60.4</td>
-<td headers="Experiment 1  95% CrI Lower" class="gt_row gt_right">36.2</td>
-<td headers="Experiment 1  95% CrI Upper" class="gt_row gt_right">83.8</td>
-<td headers="Experiment 1  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">1.00</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 2">Experiment 2</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">245.9</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">226.2</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">264.5</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">−137.7</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">−160.2</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">−115.5</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right">−86.4</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">−113.5</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">−59.3</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 2  exp" class="gt_row gt_left">Exp 2</td>
-<td headers="Experiment 2  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 2  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">56.9</td>
-<td headers="Experiment 2  95% CrI Lower" class="gt_row gt_right">25.3</td>
-<td headers="Experiment 2  95% CrI Upper" class="gt_row gt_right">88.0</td>
-<td headers="Experiment 2  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">1.00</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="6" class="gt_group_heading" scope="colgroup" id="Experiment 3">Experiment 3</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">Intercept</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">164.8</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">140.1</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">189.4</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−65.7</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−86.0</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−46.0</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">conditVaried</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−40.6</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−75.9</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−3.0</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.98</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">25.5</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−9.3</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">58.7</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.93</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:conditVaried</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">41.9</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">11.2</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">72.5</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right" style="font-weight: bold; background-color: #FFFFFF; border-top-width: 1px; border-top-style: solid; border-top-color: black;">0.99</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−7.3</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−34.5</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">21.1</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.70</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">conditVaried:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">30.8</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−19.6</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">83.6</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">0.88</td></tr>
-    <tr><td headers="Experiment 3  exp" class="gt_row gt_left">Exp 3</td>
-<td headers="Experiment 3  Term" class="gt_row gt_left">ModelEXAM:conditVaried:bandOrderReverse</td>
-<td headers="Experiment 3  Estimate" class="gt_row gt_right">−60.6</td>
-<td headers="Experiment 3  95% CrI Lower" class="gt_row gt_right">−101.8</td>
-<td headers="Experiment 3  95% CrI Upper" class="gt_row gt_right">−18.7</td>
-<td headers="Experiment 3  pd" class="gt_row gt_right">1.00</td></tr>
-  </tbody>
-  &#10;  
-</table>
-</div>
+| exp   | Term                                    | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+|:------|:----------------------------------------|---------:|--------------:|--------------:|-----:|
+| Exp 1 | Intercept                               |    176.3 |         156.9 |           195 | 1.00 |
+| Exp 1 | ModelEXAM                               |    -88.4 |        -104.5 |           -72 | 1.00 |
+| Exp 1 | conditVaried                            |    -37.5 |         -60.4 |           -14 | 1.00 |
+| Exp 1 | ModelEXAM:conditVaried                  |     60.4 |          36.2 |            84 | 1.00 |
+| Exp 2 | Intercept                               |    245.9 |         226.2 |           265 | 1.00 |
+| Exp 2 | ModelEXAM                               |   -137.7 |        -160.2 |          -115 | 1.00 |
+| Exp 2 | conditVaried                            |    -86.4 |        -113.5 |           -59 | 1.00 |
+| Exp 2 | ModelEXAM:conditVaried                  |     56.9 |          25.3 |            88 | 1.00 |
+| Exp 3 | Intercept                               |    164.8 |         140.1 |           189 | 1.00 |
+| Exp 3 | ModelEXAM                               |    -65.7 |         -86.0 |           -46 | 1.00 |
+| Exp 3 | conditVaried                            |    -40.6 |         -75.9 |            -3 | 0.98 |
+| Exp 3 | bandOrderReverse                        |     25.5 |          -9.3 |            59 | 0.93 |
+| Exp 3 | ModelEXAM:conditVaried                  |     41.9 |          11.2 |            73 | 0.99 |
+| Exp 3 | ModelEXAM:bandOrderReverse              |     -7.3 |         -34.5 |            21 | 0.70 |
+| Exp 3 | conditVaried:bandOrderReverse           |     30.8 |         -19.6 |            84 | 0.88 |
+| Exp 3 | ModelEXAM:conditVaried:bandOrderReverse |    -60.6 |        -101.8 |           -19 | 1.00 |
 
 </div>
 
@@ -3920,7 +2425,7 @@ the appendix. The model fitting results for Experiments 2 and 3 closely
 mirrored those observed in Experiment 1. The Bayesian regression models
 predicting model error as a function of Model (ALM vs. EXAM), Condition
 (Constant vs. Varied), and their interaction (see
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 17</a>) revealed a
+<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>) revealed a
 consistent main effect of Model across all three experiments. The
 negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39,
 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI
@@ -3942,9 +2447,7 @@ only more pronounced in the original order condition, and not the
 reverse order condition (see
 <a href="#fig-e2_e3_ae" class="quarto-xref">Figure 30</a>).
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
-width="864" />
+![](full_files/figure-commonmark/fig-e2_e3_ae-1.png)
 
 *Computational Model Summary*. Across all three experiments, the model
 fits consistently favored the Extrapolation-Association Model (EXAM)
@@ -3952,7 +2455,7 @@ over the Associative Learning Model (ALM). This preference for EXAM was
 particularly pronounced for participants in the constant training
 conditions (note the positive coefficients on ModelEXAM:conditVaried
 interaction terms
-<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 17</a>). This
+<a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>). This
 pattern is clearly illustrated in
 <a href="#fig-htw-best-model" class="quarto-xref">Figure 31</a>, which
 plots the difference in model errors between ALM and EXAM for each
@@ -4005,13 +2508,9 @@ patterns they can produce (Dome & Wills, 2023).
 
 
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-best-model-1.png)
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-indv-pred-1.png)
 
 ## Project 2 Discussion
 
@@ -4205,7 +2704,7 @@ detrimental to performance in simple extrapolation tasks.
 
 The HTT and HTW tasks differ across numerous dimensions that may be
 relevant to the opposing patterns observed in the two projects (see
-<a href="#tbl-task-diff" class="quarto-xref">Table 18</a> provides for a
+<a href="#tbl-task-diff" class="quarto-xref">Table 19</a> provides for a
 detailed comparison of the two tasks).
 
 In HTT, the salient perceptual elements of the task (i.e. the launching
