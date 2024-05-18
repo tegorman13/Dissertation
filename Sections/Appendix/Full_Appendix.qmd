@@ -8,6 +8,8 @@ cache: true
 toc: true
 toc-location: body
 toc-title: Contents
+aliases:
+  - https://tegorman13.github.io/Dissertation/Sections/Appendix.html
 execute: 
   warning: false
   eval: true
@@ -29,13 +31,13 @@ format:
 prefer-html: true
 ---
 
-### Appendix - Project 1 
+## Appendix - Project 1 
 
 {{< include IGAS-Supplemental.qmd >}}
 
 {{< pagebreak >}}
 
-### Appendix - Project 2 - Experiment 1 
+## Appendix - Project 2 - Experiment 1 
 
 {{< include E1_Appendix.qmd >}}
 :::
