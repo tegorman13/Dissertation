@@ -9,7 +9,7 @@ toc: true
 toc-location: body
 toc-title: Contents
 aliases:
-  - https://tegorman13.github.io/Dissertation/Sections/Appendix.html
+  - Sections/Appendix.html
 execute: 
   warning: false
   eval: true
