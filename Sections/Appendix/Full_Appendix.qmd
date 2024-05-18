@@ -9,7 +9,7 @@ toc: true
 toc-location: body
 toc-title: Contents
 aliases:
-  - Sections/Appendix.html
+  - /Sections/Appendix.html
 execute: 
   warning: false
   eval: true
