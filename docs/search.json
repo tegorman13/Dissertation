@@ -735,5 +735,117 @@
     "title": "test_types",
     "section": "",
     "text": "Code\npacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,\n  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,\n  stringr, here,conflicted, patchwork, knitr,gt)\n\nout_type &lt;- knitr::opts_knit$get(\"rmarkdown.pandoc.to\")\nprint(out_type)\n\n\n[1] \"html\"\n\n\nCode\nprimary=out_type == \"html\" || out_type == \"pdf\" || out_type ==\"latex\"\n\nfmt_out &lt;- knitr::pandoc_to()\nprint(fmt_out)\n\n\n[1] \"html\"\n\n\nCode\nout_type %in% c(\"html\",\"pdf\")\n\n\n[1] TRUE\n\n\nCode\n# out_type = \"html\"\nout_type == \"html\" || out_type == \"pdf\" || out_type == \"docx\"\n\n\n[1] TRUE\n\n\n\n\nCode\n# create examples of fancy looking gt tables using cars data\ncars &lt;- cars %&gt;% as_tibble()\n\n# create examples of fancy looking gt tables using flowers data\n# create flowers data\nflowers &lt;- iris %&gt;% as_tibble()\n# flowers\n# # A tibble: 150 × 5\n#    Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n#           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  \n#  1          5.1         3.5          1.4         0.2 setosa \n#  2          4.9         3            1.4         0.2 setosa \n#  3          4.7         3.2          1.3         0.2 setosa \n#  4          4.6         3.1          1.5         0.2 setosa \n#  5          5           3.6          1.4         0.2 setosa \n#  6          5.4         3.9          1.7         0.4 setosa \n#  7          4.6         3.4          1.4         0.3 setosa \n\n# create examples of fancy looking gt tables using flowers data\n\nif (primary){\nflowers |&gt; gt() |&gt; tab_header(\n  title = \"Iris Flower Data\",\n  subtitle = \"A tibble: 150 × 5\"\n) |&gt; fmt_number(\n  columns = c(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width),\n  decimals = 1) |&gt; \n  tab_spanner(\n    label = \"Sepal Characteristics\",\n    columns = c(Sepal.Length, Sepal.Width)\n  ) \n} else {\n    flowers |&gt; kable() }\n\n\n\n\n\n\n\n\n\nIris Flower Data\n\n\nA tibble: 150 × 5\n\n\nSepal Characteristics\nPetal.Length\nPetal.Width\nSpecies\n\n\nSepal.Length\nSepal.Width\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n5.4\n3.7\n1.5\n0.2\nsetosa\n\n\n4.8\n3.4\n1.6\n0.2\nsetosa\n\n\n4.8\n3.0\n1.4\n0.1\nsetosa\n\n\n4.3\n3.0\n1.1\n0.1\nsetosa\n\n\n5.8\n4.0\n1.2\n0.2\nsetosa\n\n\n5.7\n4.4\n1.5\n0.4\nsetosa\n\n\n5.4\n3.9\n1.3\n0.4\nsetosa\n\n\n5.1\n3.5\n1.4\n0.3\nsetosa\n\n\n5.7\n3.8\n1.7\n0.3\nsetosa\n\n\n5.1\n3.8\n1.5\n0.3\nsetosa\n\n\n5.4\n3.4\n1.7\n0.2\nsetosa\n\n\n5.1\n3.7\n1.5\n0.4\nsetosa\n\n\n4.6\n3.6\n1.0\n0.2\nsetosa\n\n\n5.1\n3.3\n1.7\n0.5\nsetosa\n\n\n4.8\n3.4\n1.9\n0.2\nsetosa\n\n\n5.0\n3.0\n1.6\n0.2\nsetosa\n\n\n5.0\n3.4\n1.6\n0.4\nsetosa\n\n\n5.2\n3.5\n1.5\n0.2\nsetosa\n\n\n5.2\n3.4\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.6\n0.2\nsetosa\n\n\n4.8\n3.1\n1.6\n0.2\nsetosa\n\n\n5.4\n3.4\n1.5\n0.4\nsetosa\n\n\n5.2\n4.1\n1.5\n0.1\nsetosa\n\n\n5.5\n4.2\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.2\n1.2\n0.2\nsetosa\n\n\n5.5\n3.5\n1.3\n0.2\nsetosa\n\n\n4.9\n3.6\n1.4\n0.1\nsetosa\n\n\n4.4\n3.0\n1.3\n0.2\nsetosa\n\n\n5.1\n3.4\n1.5\n0.2\nsetosa\n\n\n5.0\n3.5\n1.3\n0.3\nsetosa\n\n\n4.5\n2.3\n1.3\n0.3\nsetosa\n\n\n4.4\n3.2\n1.3\n0.2\nsetosa\n\n\n5.0\n3.5\n1.6\n0.6\nsetosa\n\n\n5.1\n3.8\n1.9\n0.4\nsetosa\n\n\n4.8\n3.0\n1.4\n0.3\nsetosa\n\n\n5.1\n3.8\n1.6\n0.2\nsetosa\n\n\n4.6\n3.2\n1.4\n0.2\nsetosa\n\n\n5.3\n3.7\n1.5\n0.2\nsetosa\n\n\n5.0\n3.3\n1.4\n0.2\nsetosa\n\n\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n5.5\n2.3\n4.0\n1.3\nversicolor\n\n\n6.5\n2.8\n4.6\n1.5\nversicolor\n\n\n5.7\n2.8\n4.5\n1.3\nversicolor\n\n\n6.3\n3.3\n4.7\n1.6\nversicolor\n\n\n4.9\n2.4\n3.3\n1.0\nversicolor\n\n\n6.6\n2.9\n4.6\n1.3\nversicolor\n\n\n5.2\n2.7\n3.9\n1.4\nversicolor\n\n\n5.0\n2.0\n3.5\n1.0\nversicolor\n\n\n5.9\n3.0\n4.2\n1.5\nversicolor\n\n\n6.0\n2.2\n4.0\n1.0\nversicolor\n\n\n6.1\n2.9\n4.7\n1.4\nversicolor\n\n\n5.6\n2.9\n3.6\n1.3\nversicolor\n\n\n6.7\n3.1\n4.4\n1.4\nversicolor\n\n\n5.6\n3.0\n4.5\n1.5\nversicolor\n\n\n5.8\n2.7\n4.1\n1.0\nversicolor\n\n\n6.2\n2.2\n4.5\n1.5\nversicolor\n\n\n5.6\n2.5\n3.9\n1.1\nversicolor\n\n\n5.9\n3.2\n4.8\n1.8\nversicolor\n\n\n6.1\n2.8\n4.0\n1.3\nversicolor\n\n\n6.3\n2.5\n4.9\n1.5\nversicolor\n\n\n6.1\n2.8\n4.7\n1.2\nversicolor\n\n\n6.4\n2.9\n4.3\n1.3\nversicolor\n\n\n6.6\n3.0\n4.4\n1.4\nversicolor\n\n\n6.8\n2.8\n4.8\n1.4\nversicolor\n\n\n6.7\n3.0\n5.0\n1.7\nversicolor\n\n\n6.0\n2.9\n4.5\n1.5\nversicolor\n\n\n5.7\n2.6\n3.5\n1.0\nversicolor\n\n\n5.5\n2.4\n3.8\n1.1\nversicolor\n\n\n5.5\n2.4\n3.7\n1.0\nversicolor\n\n\n5.8\n2.7\n3.9\n1.2\nversicolor\n\n\n6.0\n2.7\n5.1\n1.6\nversicolor\n\n\n5.4\n3.0\n4.5\n1.5\nversicolor\n\n\n6.0\n3.4\n4.5\n1.6\nversicolor\n\n\n6.7\n3.1\n4.7\n1.5\nversicolor\n\n\n6.3\n2.3\n4.4\n1.3\nversicolor\n\n\n5.6\n3.0\n4.1\n1.3\nversicolor\n\n\n5.5\n2.5\n4.0\n1.3\nversicolor\n\n\n5.5\n2.6\n4.4\n1.2\nversicolor\n\n\n6.1\n3.0\n4.6\n1.4\nversicolor\n\n\n5.8\n2.6\n4.0\n1.2\nversicolor\n\n\n5.0\n2.3\n3.3\n1.0\nversicolor\n\n\n5.6\n2.7\n4.2\n1.3\nversicolor\n\n\n5.7\n3.0\n4.2\n1.2\nversicolor\n\n\n5.7\n2.9\n4.2\n1.3\nversicolor\n\n\n6.2\n2.9\n4.3\n1.3\nversicolor\n\n\n5.1\n2.5\n3.0\n1.1\nversicolor\n\n\n5.7\n2.8\n4.1\n1.3\nversicolor\n\n\n6.3\n3.3\n6.0\n2.5\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n7.1\n3.0\n5.9\n2.1\nvirginica\n\n\n6.3\n2.9\n5.6\n1.8\nvirginica\n\n\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n6.7\n2.5\n5.8\n1.8\nvirginica\n\n\n7.2\n3.6\n6.1\n2.5\nvirginica\n\n\n6.5\n3.2\n5.1\n2.0\nvirginica\n\n\n6.4\n2.7\n5.3\n1.9\nvirginica\n\n\n6.8\n3.0\n5.5\n2.1\nvirginica\n\n\n5.7\n2.5\n5.0\n2.0\nvirginica\n\n\n5.8\n2.8\n5.1\n2.4\nvirginica\n\n\n6.4\n3.2\n5.3\n2.3\nvirginica\n\n\n6.5\n3.0\n5.5\n1.8\nvirginica\n\n\n7.7\n3.8\n6.7\n2.2\nvirginica\n\n\n7.7\n2.6\n6.9\n2.3\nvirginica\n\n\n6.0\n2.2\n5.0\n1.5\nvirginica\n\n\n6.9\n3.2\n5.7\n2.3\nvirginica\n\n\n5.6\n2.8\n4.9\n2.0\nvirginica\n\n\n7.7\n2.8\n6.7\n2.0\nvirginica\n\n\n6.3\n2.7\n4.9\n1.8\nvirginica\n\n\n6.7\n3.3\n5.7\n2.1\nvirginica\n\n\n7.2\n3.2\n6.0\n1.8\nvirginica\n\n\n6.2\n2.8\n4.8\n1.8\nvirginica\n\n\n6.1\n3.0\n4.9\n1.8\nvirginica\n\n\n6.4\n2.8\n5.6\n2.1\nvirginica\n\n\n7.2\n3.0\n5.8\n1.6\nvirginica\n\n\n7.4\n2.8\n6.1\n1.9\nvirginica\n\n\n7.9\n3.8\n6.4\n2.0\nvirginica\n\n\n6.4\n2.8\n5.6\n2.2\nvirginica\n\n\n6.3\n2.8\n5.1\n1.5\nvirginica\n\n\n6.1\n2.6\n5.6\n1.4\nvirginica\n\n\n7.7\n3.0\n6.1\n2.3\nvirginica\n\n\n6.3\n3.4\n5.6\n2.4\nvirginica\n\n\n6.4\n3.1\n5.5\n1.8\nvirginica\n\n\n6.0\n3.0\n4.8\n1.8\nvirginica\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica\n\n\n\n\n\n\n\n\nSee Table 1 for a full specification of the equations that define ALM and EXAM, and ?@fig-alm-diagram for a visual representation of the ALM model.\n\n\n\n\nTable 1: ALM & EXAM Equations\n\n\n\n\n\n\n\n\n\n\n\nALM Response Generation\n\n\n\n\n\nInput Activation\n\\(a_i(X) = \\frac{e^{-c(X-X_i)^2}}{\\sum_{k=1}^M e^{-c(X-X_k)^2}}\\)\nInput nodes activate as a function of Gaussian similarity to stimulus\n\n\nOutput Activation\n\\(O_j(X) = \\sum_{k=1}^M w_{ji} \\cdot a_i(X)\\)\nOutput unit \\(O_j\\) activation is the weighted sum of input activations and association weights\n\n\nOutput Probability\n\\(P[Y_j|X] = \\frac{O_j(X)}{\\sum_{k=1}^M O_k(X)}\\)\nThe response, \\(Y_j\\) probabilites computed via Luce’s choice rule\n\n\nMean Output\n\\(m(X) = \\sum_{j=1}^L Y_j \\cdot \\frac{O_j(x)}{\\sum_{k=1}^M O_k(X)}\\)\nWeighted average of probabilities determines response to X\n\n\n\nALM Learning\n\n\n\nFeedback\n\\(f_j(Z) = e^{-c(Z-Y_j)^2}\\)\nfeedback signal Z computed as similarity between ideal response and observed response\n\n\nmagnitude of error\n\\(\\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)\\)\nDelta rule to update weights.\n\n\nUpdate Weights\n\\(w_{ji}^{new}=w_{ji}+\\eta\\Delta_{ji}\\)\nUpdates scaled by learning rate parameter \\(\\eta\\).\n\n\n\nEXAM Extrapolation\n\n\n\nInstance Retrieval\n\\(P[X_i|X] = \\frac{a_i(X)}{\\sum_{k=1}^M a_k(X)}\\)\nNovel test stimulus \\(X\\) activates input nodes \\(X_i\\)\n\n\nSlope Computation\n\\(S =\\) \\(\\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}\\)\nSlope value, \\(S\\) computed from nearest training instances\n\n\nResponse\n\\(E[Y|X_i] = m(X_i) + S \\cdot [X - X_i]\\)\nFinal EXAM response is the ALM response for the nearest training stimulus, \\(m(X_i)\\), adjusted by local slope \\(S\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n Approximate Bayesian Computation\nTo estimate the parameters of ALM and EXAM, we used approximate Bayesian computation (ABC), enabling us to obtain an estimate of the posterior distribution of the generalization and learning rate parameters for each individual. ABC belongs to the class of simulation-based inference methods (Cranmer et al., 2020), which have begun being used for parameter estimation in cognitive modeling relatively recently (Kangasrääsiö et al., 2019; Turner et al., 2016; Turner & Van Zandt, 2012). Although they can be applied to any model from which data can be simulated, ABC methods are most useful for complex models that lack an explicit likelihood function (e.g., many neural network models).\nThe general ABC procedure is to 1) define a prior distribution over model parameters. 2) sample candidate parameter values, \\(\\theta^*\\), from the prior. 3) Use \\(\\theta^*\\) to generate a simulated dataset, \\(Data_{sim}\\). 4) Compute a measure of discrepancy between the simulated and observed datasets, \\(discrep\\)(\\(Data_{sim}\\), \\(Data_{obs}\\)). 5) Accept \\(\\theta^*\\) if the discrepancy is less than the tolerance threshold, \\(\\epsilon\\), otherwise reject \\(\\theta^*\\). 6) Repeat until desired number of posterior samples are obtained.\nAlthough simple in the abstract, implementations of ABC require researchers to make a number of non-trivial decisions as to i) the discrepancy function between observed and simulated data, ii) whether to compute the discrepancy between trial level data, or a summary statistic of the datasets, iii) the value of the minimum tolerance \\(\\epsilon\\) between simulated and observed data. For the present work, we follow the guidelines from previously published ABC tutorials (Farrell & Lewandowsky, 2018; Turner & Van Zandt, 2012). For the test stage, we summarized datasets with mean velocity of each band in the observed dataset as \\(V_{obs}^{(k)}\\) and in the simulated dataset as \\(V_{sim}^{(k)}\\), where \\(k\\) represents each of the six velocity bands. For computing the discrepancy between datasets in the training stage, we aggregated training trials into three equally sized blocks (separately for each velocity band in the case of the varied group). After obtaining the summary statistics of the simulated and observed datasets, the discrepancy was computed as the mean of the absolute difference between simulated and observed datasets (Equation 1 and Equation 2). For the models fit to both training and testing data, discrepancies were computed for both stages, and then averaged together.\n\n\\[\ndiscrep_{Test}(Data_{sim}, Data_{obs}) = \\frac{1}{6} \\sum_{k=1}^{6} |V_{obs}^{(k)} - V_{sim}^{(k)}|\n\\tag{1}\\]\n\\[\n\\begin{aligned} \\\\\ndiscrep_{Train,constant}(Data_{sim}, Data_{obs}) = \\frac{1}{N_{blocks}} \\sum_{j=1}^{N_{blocks}} |V_{obs,constant}^{(j)} - V_{sim,constant}^{(j)}| \\\\ \\\\\ndiscrep_{Train,varied}(Data_{sim}, Data_{obs}) = \\frac{1}{N_{blocks} \\times 3} \\sum_{j=1}^{N_{blocks}} \\sum_{k=1}^{3} |V_{obs,varied}^{(j,k)} - V_{sim,varied}^{(j,k)}|\n\\end{aligned}\n\\tag{2}\\]\n\nThe final component of our ABC implementation is the determination of an appropriate value of \\(\\epsilon\\). The setting of \\(\\epsilon\\) exerts strong influence on the approximated posterior distribution. Smaller values of \\(\\epsilon\\) increase the rejection rate, and improve the fidelity of the approximated posterior, while larger values result in an ABC sampler that simply reproduces the prior distribution. Because the individual participants in our dataset differed substantially in terms of the noisiness of their data, we employed an adaptive tolerance setting strategy to tailor \\(\\epsilon\\) to each individual. The initial value of \\(\\epsilon\\) was set to the overall standard deviation of each individuals velocity values. Thus, sampled parameter values that generated simulated data within a standard deviation of the observed data were accepted, while worse performing parameters were rejected. After every 300 samples the tolerance was allowed to increase only if the current acceptance rate of the algorithm was less than 1%. In such cases, the tolerance was shifted towards the average discrepancy of the 5 best samples obtained thus far. To ensure the acceptance rate did not become overly permissive, \\(\\epsilon\\) was also allowed to decrease every time a sample was accepted into the posterior.\n\n\n\n\nAppendix\nApppendix available at tegorman13.github.io/Dissertation/Sections/Appendix.html\n\n\n\n\n\n\n\n\n\n\nReferences\n\nCranmer, K., Brehmer, J., & Louppe, G. (2020). The frontier of simulation-based inference. Proceedings of the National Academy of Sciences, 117(48), 30055–30062. https://doi.org/10.1073/pnas.1912789117\n\n\nFarrell, S., & Lewandowsky, S. (2018). Computational Modeling of Cognition and Behavior: (1st ed.). Cambridge University Press. https://doi.org/10.1017/CBO9781316272503\n\n\nKangasrääsiö, A., Jokinen, J. P. P., Oulasvirta, A., Howes, A., & Kaski, S. (2019). Parameter Inference for Computational Cognitive Models with Approximate Bayesian Computation. Cognitive Science, 43(6), e12738. https://doi.org/10.1111/cogs.12738\n\n\nTurner, B. M., Sederberg, P. B., & McClelland, J. L. (2016). Bayesian analysis of simulation-based models. Journal of Mathematical Psychology, 72, 191–199. https://doi.org/10.1016/j.jmp.2014.10.001\n\n\nTurner, B. M., & Van Zandt, T. (2012). A tutorial on approximate Bayesian computation. Journal of Mathematical Psychology, 56(2), 69–85. https://doi.org/10.1016/j.jmp.2012.02.005"
+  },
+  {
+    "objectID": "Presentation/pres1.html#introduction",
+    "href": "Presentation/pres1.html#introduction",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Introduction",
+    "text": "Introduction\n\nInvestigate effects of training variability on learning and generalization\nFocus areas: visuomotor skill learning and function learning tasks"
+  },
+  {
+    "objectID": "Presentation/pres1.html#background-and-motivation",
+    "href": "Presentation/pres1.html#background-and-motivation",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Background and Motivation",
+    "text": "Background and Motivation\n\nImportance of training variability\nResearch gaps in visuomotor skill learning\nPrevious research in category learning, language learning, and function learning"
+  },
+  {
+    "objectID": "Presentation/pres1.html#theoretical-frameworks",
+    "href": "Presentation/pres1.html#theoretical-frameworks",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Theoretical Frameworks",
+    "text": "Theoretical Frameworks\n\nSchema Theory (Schmidt, 1975)\nDesirable Difficulties Framework (Bjork & Bjork, 2011)\nChallenge Point Framework (Guadagnoli & Lee, 2004)"
+  },
+  {
+    "objectID": "Presentation/pres1.html#overview-of-current-work",
+    "href": "Presentation/pres1.html#overview-of-current-work",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Overview of Current Work",
+    "text": "Overview of Current Work\n\nProject 1: Visuomotor projectile launching task\nProject 2: Visuomotor extrapolation task"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-1---hit-the-target-htt",
+    "href": "Presentation/pres1.html#project-1---hit-the-target-htt",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 1 - Hit The Target (HTT)",
+    "text": "Project 1 - Hit The Target (HTT)\n\nInfluence of varied practice in a projectile launching task\nExperiments 1 & 2:\n\nConstant vs. varied training groups\nPerformance metrics and transfer testing"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-1---methodology",
+    "href": "Presentation/pres1.html#project-1---methodology",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 1 - Methodology",
+    "text": "Project 1 - Methodology\n\nTask description and experimental design\nParticipants and procedures\nIGAS model introduction"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-1---results-and-discussion",
+    "href": "Presentation/pres1.html#project-1---results-and-discussion",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 1 - Results and Discussion",
+    "text": "Project 1 - Results and Discussion\n\nVaried training group’s superior performance\nComputational modeling results with IGAS\nTheoretical implications"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-2---hit-the-wall-htw",
+    "href": "Presentation/pres1.html#project-2---hit-the-wall-htw",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 2 - Hit The Wall (HTW)",
+    "text": "Project 2 - Hit The Wall (HTW)\n\nInfluence of varied practice in a function learning task\nExperiments 1, 2, and 3:\n\nTraining regimes and testing conditions\nLearning, discrimination, and extrapolation performance metrics"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-2---methodology",
+    "href": "Presentation/pres1.html#project-2---methodology",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 2 - Methodology",
+    "text": "Project 2 - Methodology\n\nTask description and experimental design\nParticipants and procedures\nApplication of ALM and EXAM models"
+  },
+  {
+    "objectID": "Presentation/pres1.html#project-2---results-and-discussion",
+    "href": "Presentation/pres1.html#project-2---results-and-discussion",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Project 2 - Results and Discussion",
+    "text": "Project 2 - Results and Discussion\n\nTraining variability’s mixed results\nModeling analysis with ALM and EXAM\nTheoretical implications"
+  },
+  {
+    "objectID": "Presentation/pres1.html#general-discussion",
+    "href": "Presentation/pres1.html#general-discussion",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "General Discussion",
+    "text": "General Discussion\n\nCompare HTT and HTW\nEmpirical findings summary\nComputational modeling contributions"
+  },
+  {
+    "objectID": "Presentation/pres1.html#theoretical-contributions",
+    "href": "Presentation/pres1.html#theoretical-contributions",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Theoretical Contributions",
+    "text": "Theoretical Contributions\n\nInsights into training variability effects on learning and generalization\nComputational models applications"
+  },
+  {
+    "objectID": "Presentation/pres1.html#practical-implications",
+    "href": "Presentation/pres1.html#practical-implications",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Practical Implications",
+    "text": "Practical Implications\n\nTraining programs design implications\nFuture research considerations"
+  },
+  {
+    "objectID": "Presentation/pres1.html#limitations-and-future-directions",
+    "href": "Presentation/pres1.html#limitations-and-future-directions",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Limitations and Future Directions",
+    "text": "Limitations and Future Directions\n\nStudy limitations\nFuture research suggestions"
+  },
+  {
+    "objectID": "Presentation/pres1.html#conclusion",
+    "href": "Presentation/pres1.html#conclusion",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nRecap of key findings\nFinal thoughts on training variability’s role in learning"
+  },
+  {
+    "objectID": "Presentation/pres1.html#questions-and-discussion",
+    "href": "Presentation/pres1.html#questions-and-discussion",
+    "title": "The Role of Variability in Learning Generalization",
+    "section": "Questions and Discussion",
+    "text": "Questions and Discussion\n\nOpen floor for questions from the committee and audience"
   }
 ]

@@ -1,0 +1,85 @@
+---
+title: "The Role of Variability in Learning Generalization"
+format: 
+  revealjs:
+    theme: moon #white
+    slideNumber: true
+    center: true
+    chalkboard: true
+author: Thomas Gorman
+institute: Indiana University
+---
+
+## Introduction
+- Investigate effects of training variability on learning and generalization
+- Focus areas: visuomotor skill learning and function learning tasks
+
+## Background and Motivation
+- Importance of training variability
+- Research gaps in visuomotor skill learning
+- Previous research in category learning, language learning, and function learning
+
+## Theoretical Frameworks
+- Schema Theory (Schmidt, 1975)
+- Desirable Difficulties Framework (Bjork & Bjork, 2011)
+- Challenge Point Framework (Guadagnoli & Lee, 2004)
+
+## Overview of Current Work
+- Project 1: Visuomotor projectile launching task
+- Project 2: Visuomotor extrapolation task
+
+## Project 1 - Hit The Target (HTT)
+- Influence of varied practice in a projectile launching task
+- Experiments 1 & 2:
+  - Constant vs. varied training groups
+  - Performance metrics and transfer testing
+
+## Project 1 - Methodology
+- Task description and experimental design
+- Participants and procedures
+- IGAS model introduction
+
+## Project 1 - Results and Discussion
+- Varied training group's superior performance
+- Computational modeling results with IGAS
+- Theoretical implications
+
+## Project 2 - Hit The Wall (HTW)
+- Influence of varied practice in a function learning task
+- Experiments 1, 2, and 3:
+  - Training regimes and testing conditions
+  - Learning, discrimination, and extrapolation performance metrics
+
+## Project 2 - Methodology
+- Task description and experimental design
+- Participants and procedures
+- Application of ALM and EXAM models
+
+## Project 2 - Results and Discussion
+- Training variability's mixed results
+- Modeling analysis with ALM and EXAM
+- Theoretical implications
+
+## General Discussion
+- Compare HTT and HTW
+- Empirical findings summary
+- Computational modeling contributions
+
+## Theoretical Contributions
+- Insights into training variability effects on learning and generalization
+- Computational models applications
+
+## Practical Implications
+- Training programs design implications
+- Future research considerations
+
+## Limitations and Future Directions
+- Study limitations
+- Future research suggestions
+
+## Conclusion
+- Recap of key findings
+- Final thoughts on training variability's role in learning
+
+## Questions and Discussion
+- Open floor for questions from the committee and audience

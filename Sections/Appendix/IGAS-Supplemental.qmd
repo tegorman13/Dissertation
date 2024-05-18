@@ -4,6 +4,7 @@
 execute: 
   warning: false
   eval: true
+  echo: false
 ---
 
 ```{r, include=FALSE, echo=FALSE}
