@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -111,15 +77,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
       Dissertation
       </li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -151,22 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dissertation</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../paper.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dissertation Manuscript</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Sections/full.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,6 +128,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Presentation/slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Sections/full.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Full Dissertation w/Code</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Sections/IGAS.html" class="sidebar-item-text sidebar-link">
@@ -206,31 +171,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Regardless, the above analysis suggests that the constant group would always be a step behind the varied group. The number of trials at each transfer distance may not be sufficient for them to catch up the varied group either (whether there was learning during testing should be checked). If such disadvantage for the constant group is indeed due to the lack of tryout opportunities, then the authors should verify whether the same results still hold if all groups were provided opportunities to practice, or if pre-training tests across all distances were offered.</p>
 <section id="exponential-learning-models-fit-to-individual-subjects" class="level3">
 <h3 class="anchored" data-anchor-id="exponential-learning-models-fit-to-individual-subjects">exponential learning models fit to individual subjects</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'data/IGAS-e2TestFits-April4.rds'</span>))</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="ot">&lt;-</span> e2TestFits <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Asymptote.Minus.Start=</span>pAsym<span class="sc">-</span>pStart)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>exp2.fit2 <span class="ot">&lt;-</span> e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(sbjCode,conditType) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MeanAsym=</span><span class="fu">mean</span>(pAsym),<span class="at">MeanStart=</span><span class="fu">mean</span>(pStart),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">MeanRate=</span><span class="fu">mean</span>(pRate),</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">asymMinusStart=</span><span class="fu">mean</span>(Asymptote.Minus.Start),<span class="at">.groups=</span><span class="st">"keep"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="group-comparison-of-learning-rate-fits" class="level3">
 <h3 class="anchored" data-anchor-id="group-comparison-of-learning-rate-fits">Group comparison of learning rate fits</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mr1=e2TestFits %&gt;% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mr2=exp2.fit2 %&gt;% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># h4&lt;-e2TestFits %&gt;% ggplot(aes(x=positionX,y=pRate,fill=conditType))+geom_bar(stat="summary",position=dodge,fun="mean")+ stat_summary(fun.data=mean_se,geom="errorbar",position=dodge,width=.5)+ggtitle("Learning rates ")+guides(fill=guide_legend(title="Training Condition"))+theme(legend.title.align=.25)+ylab("Inverse Learning Rate")+xlab("Testing Location")</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># h4</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mr1=e2TestFits %&gt;% filter(converged==TRUE)%&gt;% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># mr2=exp2.fit2 %&gt;% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>h4<span class="ot">&lt;-</span>e2TestFits <span class="sc">%&gt;%</span><span class="fu">filter</span>(Pval<span class="sc">&lt;</span>.<span class="dv">4</span>)<span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>pRate,<span class="at">fill=</span>conditType))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">"Learning rates "</span>)<span class="sc">+</span><span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Condition"</span>))<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.title.align=</span>.<span class="dv">25</span>)<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">"Inverse Learning Rate"</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>h4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -243,72 +187,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="first-vs.-second-half-of-testing-stage" class="level3">
 <h3 class="anchored" data-anchor-id="first-vs.-second-half-of-testing-stage">First vs.&nbsp;second half of testing stage</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>testSplit <span class="ot">&lt;-</span> transfer <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode, conditType, positionX, testHalfSbj) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">MeanTargetDistance =</span> <span class="fu">mean</span>(AbsDistFromCenter),</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">MeanScaledDev =</span><span class="fu">mean</span>(scaledDev,<span class="at">trim=</span>.<span class="dv">05</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"keep"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>testSplit2 <span class="ot">&lt;-</span> transfer <span class="sc">%&gt;%</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode, conditType, testHalfSbj) <span class="sc">%&gt;%</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">MeanTargetDistance =</span> <span class="fu">mean</span>(AbsDistFromCenter, <span class="at">trim =</span> .<span class="dv">01</span>),</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">MeanScaledDev =</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mean</span>(scaledDev, <span class="at">trim =</span> .<span class="dv">05</span>),</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"keep"</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>tsw <span class="ot">&lt;-</span> testSplit <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> testHalfSbj,<span class="at">values_from=</span><span class="fu">c</span>(MeanTargetDistance,MeanScaledDev)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">endMinusStart =</span> <span class="st">`</span><span class="at">MeanTargetDistance_2nd-Half</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">MeanTargetDistance_1st-Half</span><span class="st">`</span>,</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">endMinusStartScaled =</span> <span class="st">`</span><span class="at">MeanScaledDev_2nd-Half</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">MeanScaledDev_1st-Half</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>()</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>tsw2 <span class="ot">&lt;-</span> tsw <span class="sc">%&gt;%</span> </span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,conditType) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">endMinusStart=</span><span class="fu">mean</span>(endMinusStart),<span class="at">endMinusStartScaled=</span><span class="fu">mean</span>(endMinusStartScaled)) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># testSplit %&gt;% ggplot(aes(x=testHalfSbj,y=MeanTargetDistance))+</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_bar(aes(group=conditType,fill=conditType),stat="summary",position=dodge)+</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#   facet_wrap(~positionX,ncol=2)+</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">#   stat_summary(aes(x=testHalfSbj,group=conditType),fun.data=mean_se,geom="errorbar",position=dodge)</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>h1<span class="ot">=</span>testSplit <span class="sc">%&gt;%</span> <span class="fu">filter</span>(testHalfSbj<span class="sc">==</span><span class="st">"1st-Half"</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">group=</span>conditType,<span class="at">fill=</span>conditType),<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span><span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">group=</span>conditType),<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">8</span>)<span class="sc">+</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a> <span class="fu">scale_y_continuous</span>(<span class="at">name=</span><span class="st">"Mean Absolute Deviation From Target"</span>,<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">400</span>))<span class="sc">+</span> </span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggtitle</span>(<span class="st">"Testing - 1st half"</span>)<span class="sc">+</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean Absolute Deviation From Target"</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>)</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>h2<span class="ot">=</span>testSplit <span class="sc">%&gt;%</span> <span class="fu">filter</span>(testHalfSbj<span class="sc">==</span><span class="st">"2nd-Half"</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">group=</span>conditType,<span class="at">fill=</span>conditType),<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">group=</span>conditType),<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">8</span>) <span class="sc">+</span> </span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a> <span class="fu">scale_y_continuous</span>(<span class="at">name=</span><span class="st">""</span>,<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">400</span>))<span class="sc">+</span> </span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggtitle</span>(<span class="st">"Testing - 2nd half"</span>)<span class="sc">+</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)<span class="sc">+</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))<span class="sc">+</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>) <span class="sc">+</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Condition"</span>))<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.title.align=</span>.<span class="dv">25</span>)</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="co">#egg::ggarrange(h1,h2,ncol=2)</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>h3 <span class="ot">&lt;-</span> tsw <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>endMinusStart))<span class="sc">+</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">group=</span>conditType,<span class="at">fill=</span>conditType),<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">group=</span>conditType),<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">8</span>)<span class="sc">+</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"2nd Half Deviation - 1st Half Deviation"</span>)<span class="sc">+</span> </span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Improvement Per Location"</span>)<span class="sc">+</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))<span class="sc">+</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Testing Location"</span>)) <span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="co">#ggarrange(h1,h2,h3,h4,ncol=2)</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="co">#(h1 + h2) / (h3)</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>(h1<span class="sc">+</span>h2)<span class="sc">/</span>h3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -321,14 +199,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="group-comparison-for-asymptote-starting-performance" class="level3">
 <h3 class="anchored" data-anchor-id="group-comparison-for-asymptote-starting-performance">Group Comparison for asymptote-starting performance</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ma1=e2TestFits %&gt;% filter()%&gt;% anova_test(dv=Asymptote.Minus.Start,between=conditType,wid=sbjCode,within=positionX,type=3);show(ma1)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ma2=exp2.fit2 %&gt;% anova_test(dv=asymMinusStart,between=conditType,wid=sbjCode,type=3);show(ma2) </span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>conditType,<span class="at">y=</span>Asymptote.Minus.Start,<span class="at">fill=</span>conditType))<span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>positionX)<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">"e2 testing (asymptote - start performance)"</span>) <span class="sc">+</span> </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -469,15 +339,6 @@ Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
 <section id="experimenet-1---intermittent-testing" class="level4">
 <h4 class="anchored" data-anchor-id="experimenet-1---intermittent-testing">Experimenet 1 - intermittent testing</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>intTest.half <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/e1_intTest.rds"</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>intTest.half <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">group=</span>trainHalf,<span class="at">fill=</span>trainHalf),<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">fun=</span>mean,<span class="at">position=</span>dodge)<span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conditType,<span class="at">ncol=</span><span class="dv">2</span>)<span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">group=</span>trainHalf),<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">8</span>)<span class="sc">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean Distance From Center Of Target"</span>)<span class="sc">+</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Intermittent Testing Throw Location"</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))<span class="sc">+</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Stage"</span>))<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.title.align=</span>.<span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -485,14 +346,6 @@ Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cnames<span class="ot">=</span><span class="fu">c</span>(<span class="st">"Condition"</span>,<span class="st">"610_First Half"</span>,<span class="st">"760_First Half"</span>,<span class="st">"910_First Half"</span>,<span class="st">"610_Second Half"</span>,<span class="st">"760_Second Half"</span>,<span class="st">"910_Second Half"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>test<span class="ot">=</span> intTest.half <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,trainHalf,positionX) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDistance),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDistance),<span class="dv">2</span>)) </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>test<span class="ot">=</span>test <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">msd=</span><span class="fu">paste</span>(Mean,<span class="st">"("</span>,sd,<span class="st">")"</span>,<span class="at">sep=</span><span class="st">""</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a> <span class="fu">select</span>(Condition,positionX,trainHalf,msd)<span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="fu">c</span>(positionX,trainHalf),<span class="at">values_from=</span><span class="fu">c</span>(msd))</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>test<span class="ot">=</span>test <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(test) <span class="ot">&lt;-</span> cnames</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(test,<span class="at">type=</span><span class="st">"text"</span>,<span class="at">summary=</span><span class="cn">FALSE</span>,<span class="at">rownames=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 ======================================================================================================
@@ -508,17 +361,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <section id="training-plots---experiment-1" class="level3">
 <h3 class="anchored" data-anchor-id="training-plots---experiment-1">Training plots - Experiment 1</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># possible that scaling required loading special package from devtools</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>exp1Train <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>,mode<span class="sc">==</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode) <span class="sc">%&gt;%</span><span class="fu">mutate</span>(<span class="at">scaleDev=</span><span class="fu">scale_this</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode,stage,conditType)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>exp1Train <span class="ot">=</span> exp1Train <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">MeanTargetDistance=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">scaledDist=</span><span class="fu">mean</span>(scaleDev,<span class="at">trim=</span>.<span class="dv">05</span>))</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>exp1Train<span class="sc">$</span>stage <span class="ot">&lt;-</span> <span class="fu">factor</span>(exp1Train<span class="sc">$</span>stage, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Beginning"</span>, <span class="st">"Middle"</span>, <span class="st">"End"</span>)) <span class="co">#in case the levels get out of order</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>exp1TrainTrials <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>,mode<span class="sc">==</span><span class="dv">1</span>,trialType<span class="sc">!=</span><span class="dv">44</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode,positionX) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">scaleDev=</span><span class="fu">scale_this</span>(AbsDistFromCenter),<span class="at">ind=</span><span class="dv">1</span>,<span class="at">trainIndex=</span><span class="fu">cumsum</span>(ind)) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode,stage,conditType)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># manuscript plot - original</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> exp1Train, <span class="fu">aes</span>(<span class="at">x=</span>stage, <span class="at">y=</span>MeanTargetDistance)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>conditType),<span class="at">position=</span><span class="fu">position_dodge</span>(<span class="dv">1</span>))<span class="sc">+</span><span class="fu">stat_summary</span>(<span class="at">fun=</span><span class="st">"mean"</span>,<span class="fu">aes</span>(<span class="at">group=</span>conditType),<span class="at">position=</span><span class="fu">position_dodge</span>(<span class="dv">1</span>))<span class="sc">+</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ylab</span>(<span class="st">"Mean Distance From Center Of Target"</span>) <span class="sc">+</span><span class="fu">xlab</span>(<span class="st">"Training Stage"</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))<span class="sc">+</span><span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Condition"</span>))<span class="sc">+</span><span class="fu">theme</span>(<span class="at">legend.title.align=</span>.<span class="dv">5</span>)<span class="sc">+</span><span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -526,7 +368,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lineplot.CI</span>(<span class="at">data=</span>exp1Train,<span class="at">x.factor=</span>stage,<span class="at">group=</span>conditType,<span class="at">response=</span>scaledDist,<span class="at">xlab=</span><span class="st">"Training Stage"</span>,<span class="at">x.leg=</span><span class="dv">2</span>,<span class="at">legend=</span><span class="cn">TRUE</span>,<span class="at">ylab=</span><span class="st">"Distance from Target (scaled)"</span>,<span class="at">main=</span><span class="st">"Training Performance - Experiment 1"</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"black"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -534,7 +375,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lineplot.CI</span>(<span class="at">data=</span>exp1Train,<span class="at">x.factor=</span>stage,<span class="at">group=</span>conditType,<span class="at">response=</span>MeanTargetDistance,<span class="at">xlab=</span><span class="st">"Training Stage"</span>,<span class="at">x.leg=</span><span class="dv">2</span>,<span class="at">legend=</span><span class="cn">TRUE</span>,<span class="at">ylab=</span><span class="st">"Distance From Target"</span>,<span class="at">main=</span><span class="st">"Training Performance - Experiment 1"</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -549,13 +389,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <section id="fit-to-testing-performance-averaged-across-positions" class="level4">
 <h4 class="anchored" data-anchor-id="fit-to-testing-performance-averaged-across-positions">fit to testing performance averaged across positions</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'data/IGAS-e2Fits.AggPos-April_12.rds'</span>))</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pStart,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"experiment 2 - starting performance per position"</span>) <span class="sc">+</span> </span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -563,11 +396,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pAsym,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"e2 testing performance asymptote per position "</span>) <span class="sc">+</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -575,11 +403,6 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pRate,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"e2 testing performance asymptote per position "</span>) <span class="sc">+</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -587,27 +410,17 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#mr1=e2Fits.AggPos %&gt;% anova_test(dv=pRate,between=conditType,wid=sbjCode,type=3);show(mr1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="statistical-tests-for-starting-performance" class="level4">
 <h4 class="anchored" data-anchor-id="statistical-tests-for-starting-performance">statistical tests for starting performance</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ms1<span class="ot">=</span>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">filter</span>(converged<span class="sc">==</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>pStart,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">within=</span>positionX,<span class="at">type=</span><span class="dv">3</span>);</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>ms2<span class="ot">=</span>exp2.fit2 <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>MeanStart,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">type=</span><span class="dv">3</span>);</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ms1</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>ms2 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ANOVA Table (type III tests)
 
       Effect DFn DFd    F     p p&lt;.05   ges
 1 conditType   1 206 3.04 0.083       0.015</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>conditType,<span class="at">y=</span>pStart,<span class="at">fill=</span>conditType))<span class="sc">+</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>positionX)<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">"experiment 2 - starting performance per position"</span>) <span class="sc">+</span> </span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -620,20 +433,12 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <section id="statistical-tests-for-asymptote" class="level4">
 <h4 class="anchored" data-anchor-id="statistical-tests-for-asymptote">statistical tests for asymptote</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ma1<span class="ot">=</span>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">filter</span>(converged<span class="sc">==</span><span class="cn">TRUE</span>)<span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>pAsym,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">within=</span>positionX,<span class="at">type=</span><span class="dv">3</span>);</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ma2<span class="ot">=</span>exp2.fit2 <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>MeanAsym,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">type=</span><span class="dv">3</span>);</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>ma2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ANOVA Table (type III tests)
 
       Effect DFn DFd    F     p p&lt;.05   ges
 1 conditType   1 206 3.38 0.067       0.016</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>conditType,<span class="at">y=</span>pAsym,<span class="at">fill=</span>conditType))<span class="sc">+</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>positionX)<span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">"e2 testing performance asymptote per position "</span>) <span class="sc">+</span> </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

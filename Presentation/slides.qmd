@@ -1,0 +1,140 @@
+---
+title: "The Role of Variability in Learning Generalization: A Computational Modeling Approach"
+subtitle: "Dissertation Defense"
+format: 
+  html: default
+  clean-revealjs:
+    #theme: moon #white
+    output-ext: slide.html
+    slideNumber: true
+    center: true
+    chalkboard: true
+  pptx:
+    incremental: true
+author:
+  - name: Thomas Gorman
+    orcid: 0000-0000-0000-0000
+    affiliations: Indiana University
+---
+
+## Introduction
+- Investigate effects of training variability on learning and generalization
+- Focus areas: visuomotor skill learning and function learning tasks
+
+## Background and Motivation
+- Importance of training variability
+- Research gaps in visuomotor skill learning
+- Previous research in category learning, language learning, and function learning
+
+## Theoretical Frameworks
+- Schema Theory (Schmidt, 1975)
+- Desirable Difficulties Framework (Bjork & Bjork, 2011)
+- Challenge Point Framework (Guadagnoli & Lee, 2004)
+
+![](assets/fig-toy-model1-1-1.png)
+
+
+## Overview of Current Work
+- Project 1: Visuomotor projectile launching task
+- Project 2: Visuomotor extrapolation task
+
+## Project 1 - Hit The Target (HTT)
+- Influence of varied practice in a projectile launching task
+- Experiments 1 & 2:
+  - Constant vs. varied training groups
+  - Performance metrics and transfer testing
+
+## Project 1 - Methodology
+- Task description and experimental design
+- Participants and procedures
+- IGAS model introduction
+
+![](assets/methodsFig1.png)
+
+## Project 1 - Results and Discussion
+- Varied training group's superior performance
+- Computational modeling results with IGAS
+- Theoretical implications
+
+## Project 2 - Hit The Wall (HTW)
+- Influence of varied practice in a function learning task
+- Experiments 1, 2, and 3:
+  - Training regimes and testing conditions
+  - Learning, discrimination, and extrapolation performance metrics
+
+## Project 2 - Methodology
+- Task description and experimental design
+- Participants and procedures
+- Application of ALM and EXAM models
+
+::: {.content-visible unless-format="markdown"}
+```{dot}
+//| label: fig-design-e1
+//| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
+//| fig-width: 7.0
+//| fig-height: 2.5
+//| fig-responsive: false
+//| echo: false  
+///| eval: !expr out_type 
+/////| column: screen-inset-right
+digraph {
+  graph [layout = dot, rankdir = LR]
+
+  // define the global styles of the nodes
+  node [shape = rectangle, style = filled]
+
+  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#FF0000"]
+  data2 [label = " Constant Training \n800-1000", fillcolor = "#00A08A"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+
+  // edge definitions with the node IDs
+  data1 -> Test1
+  data2 -> Test1
+
+  subgraph cluster {
+    label = "Test Phase \n(Counterbalanced Order)"
+    Test1 [label = "Test  \nNovel Bands \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+    Test2 [label = "  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
+    Test1 -> Test2
+  }
+
+  Test2 -> Test3
+}
+```
+:::
+
+## Project 2 - Results and Discussion
+- Training variability's mixed results
+- Modeling analysis with ALM and EXAM
+- Theoretical implications
+
+## Project 2 - ALM
+
+![](assets/fig-alm-diagram-1-1.png)
+
+## General Discussion
+- Compare HTT and HTW
+- Empirical findings summary
+- Computational modeling contributions
+
+## Theoretical Contributions
+- Insights into training variability effects on learning and generalization
+- Computational models applications
+
+## Practical Implications
+- Training programs design implications
+- Future research considerations
+
+## Limitations and Future Directions
+- Study limitations
+- Future research suggestions
+
+## Conclusion
+- Recap of key findings
+- Final thoughts on training variability's role in learning
+
+## Questions and Discussion
+- Open floor for questions from the committee and audience
+
+
+

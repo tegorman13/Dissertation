@@ -41,14 +41,17 @@ website:
     - icon: github
       href: https://github.com/tegorman13/Dissertation
     contents:
-      - index.qmd
-      - text: "---"
+      #- index.qmd
+      #- text: "---"
       - paper.qmd
-      - text: "---"
-      - text: "Full Dissertation"
-        href: Sections/full.qmd
       - Sections/Appendix/Full_Appendix.qmd
       - text: "---"
+      - text: "Slides"
+        href: Presentation/slides.qmd
+      - text: "---"
+      - text: "Full Dissertation w/Code"
+        href: Sections/full.qmd
+      #- text: "---"
       # - text: Intro
       #   href: Sections/Introduction.qmd
       - Sections/IGAS.qmd
