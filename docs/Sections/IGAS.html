@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -85,6 +85,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../Sections/HTW.html" rel="next">
+<link href="../Sections/full.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -163,13 +164,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Sections/IGAS.html">IGAS Project</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -201,22 +202,8 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dissertation</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../paper.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dissertation Manuscript</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Sections/full.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -226,6 +213,19 @@ window.Quarto = {
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentation/slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Sections/full.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Full Dissertation w/Code</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Sections/IGAS.html" class="sidebar-item-text sidebar-link active">
@@ -419,7 +419,7 @@ window.Quarto = {
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(ip1,ip2,<span class="at">ncol=</span><span class="dv">2</span>,<span class="at">rel_heights=</span><span class="fu">c</span>(<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-toy-model1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-toy-model1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-toy-model1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-toy-model1-1.png" class="img-fluid figure-img" width="672">
@@ -457,7 +457,7 @@ Figure&nbsp;1: Left panel- Generalization predicted from a simple model that ass
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(mf,<span class="at">ncol=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-IGAS_Methods" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-IGAS_Methods" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-IGAS_Methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-IGAS_Methods-1.png" class="img-fluid figure-img" width="672">
@@ -515,7 +515,7 @@ Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the parti
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(e1train2,<span class="at">ncol=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-IGAS_Training1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-IGAS_Training1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-IGAS_Training1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-IGAS_Training1-1.png" class="img-fluid figure-img" width="672">
@@ -548,7 +548,7 @@ Figure&nbsp;3: Training performance for varied and constant participants binned 
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>e1test1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-IGAS_Testing1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-IGAS_Testing1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-IGAS_Testing1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-IGAS_Testing1-1.png" class="img-fluid figure-img" width="672">
@@ -751,7 +751,7 @@ Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>e2train1<span class="sc">/</span>e2train2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2train" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2train" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-e2train-1.png" class="img-fluid figure-img" width="1056">
@@ -794,7 +794,7 @@ Figure&nbsp;5: Training performance for the six constant conditions, and the var
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>e2test1 <span class="sc">/</span> e2test2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2testa" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2testa" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2testa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-e2testa-1.png" class="img-fluid figure-img" width="1056">
@@ -824,7 +824,7 @@ Figure&nbsp;6: Testing phase performance from each of the six testing positions.
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tab2,<span class="at">escape=</span><span class="cn">FALSE</span>,<span class="at">booktabs=</span><span class="cn">TRUE</span>,<span class="at">col.names=</span><span class="fu">c</span>(<span class="st">"Position"</span>,<span class="st">"Constant"</span>,<span class="st">"Varied"</span>),<span class="at">align=</span><span class="fu">c</span>(<span class="st">"l"</span>))  <span class="sc">%&gt;%</span> kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position=</span><span class="st">"left"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_classic</span>() <span class="co">#%&gt;% footnote(general=captionText,general_title = "")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-e2table1" class="cell quarto-float anchored">
+<div id="tbl-e2table1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean.
@@ -902,7 +902,7 @@ Table&nbsp;1: Transfer performance from each of the 6 throwing locations from wh
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tab3,<span class="at">escape=</span><span class="cn">FALSE</span>,<span class="at">booktabs=</span><span class="cn">TRUE</span>,<span class="at">col.names=</span><span class="fu">c</span>(<span class="st">"Position"</span>,<span class="st">"Constant"</span>,<span class="st">"Varied"</span>),<span class="at">align=</span><span class="fu">c</span>(<span class="st">"l"</span>))  <span class="sc">%&gt;%</span> kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position=</span><span class="st">"left"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_classic</span>() <span class="co">#%&gt;% footnote(general=captionText,general_title = "")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-e2table2" class="cell quarto-float anchored">
+<div id="tbl-e2table2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2table2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Testing performance from novel positions. Includes data only from positions that were not encountered during the training stage (e.g.&nbsp;excludes positions 500 and 800 for the varied group, and one of the six locations for each of the constant groups). Table presents Mean absolute deviations from the center of the target, and standard deviations in parenthesis.
@@ -973,7 +973,7 @@ Table&nbsp;2: Testing performance from novel positions. Includes data only from 
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>e2Test2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2test1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2test1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2test1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-e2test1-1.png" class="img-fluid figure-img" width="672">
@@ -1003,7 +1003,7 @@ Figure&nbsp;7: A comparison of throwing location that are identical to those tra
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tab4,<span class="at">escape=</span><span class="cn">FALSE</span>,<span class="at">booktabs=</span><span class="cn">TRUE</span>,<span class="at">col.names=</span><span class="fu">c</span>(<span class="st">"Position"</span>,<span class="st">"Constant"</span>,<span class="st">"Varied"</span>),<span class="at">align=</span><span class="fu">c</span>(<span class="st">"l"</span>))  <span class="sc">%&gt;%</span> kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position=</span><span class="st">"left"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_classic</span>() <span class="co">#%&gt;% footnote(general=captionText,general_title = "")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-e2tab3" class="cell quarto-float anchored">
+<div id="tbl-e2tab3" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2tab3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3: Testing performance from the locations trained by constant participants and novel to varied participants. Locations 500 and 800 are not included as these were trained by the varied participants. Table presents Mean absolute deviation from the center of the target, and standard deviations in parenthesis.
@@ -1095,7 +1095,7 @@ Table&nbsp;3: Testing performance from the locations trained by constant partici
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>ss<span class="sc">/</span>fs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-taskSpace" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-taskSpace" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-taskSpace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-taskSpace-1.png" class="img-fluid figure-img" width="1056">
@@ -1183,7 +1183,7 @@ Figure&nbsp;8: A) A visual representation of the combinations of throw parameter
 <span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-Toy-Model-dis" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-Toy-Model-dis" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Toy-Model-dis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="IGAS_files/figure-html/fig-Toy-Model-dis-1.png" class="img-fluid figure-img" width="1056">
@@ -2399,6 +2399,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../Sections/full.html" class="pagination-link" aria-label="Full Dissertation w/Code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Full Dissertation w/Code</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../Sections/HTW.html" class="pagination-link" aria-label="HTW Project">

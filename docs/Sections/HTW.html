@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.30">
+<meta name="generator" content="quarto-1.5.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -164,13 +164,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Sections/HTW.html">HTW Project</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -202,22 +202,8 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dissertation</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../paper.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dissertation Manuscript</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Sections/full.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Full Dissertation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -227,6 +213,19 @@ window.Quarto = {
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentation/slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Sections/full.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Full Dissertation w/Code</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Sections/IGAS.html" class="sidebar-item-text sidebar-link">
@@ -335,7 +334,7 @@ window.Quarto = {
 <p>In the domain of visuomotor learning, <span class="citation" data-cites="vandamMappingShapeVisuomotor2015">van Dam &amp; Ernst (<a href="#ref-vandamMappingShapeVisuomotor2015" role="doc-biblioref">2015</a>)</span> employed a task which required participants to learn a linear function between the spikiness of shape stimuli and the correct horizontal position to make a rapid pointing response. The shapes ranged from very spiky to completely circular at the extreme ends of the space. Participants trained with intermediate shapes from a lower variation (2 shapes) or higher variation (5 shapes) condition, with the 2 items of the lower varied condition matching the items used on the extreme ends of the higher variation training space. Learning was significantly slower in the higher variation group. However, the two conditions did not differ when tested with novel shapes, with both groups producing extrapolation responses of comparable magnitudes to the most similar training item, rather than in accordance with the true linear function. The authors accounted for both learning and extrapolation performance with a Bayesian learning model. Similar to ALM, the bayesian model assumes that generalization occurs as a Gaussian function of the distance between stimuli. However unlike ALM, the bayesian learning model utilizes more elaborate probabilistic stimulus representations, with a separate Kalman Filter for each shape stimulus.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-delosh-extrap" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-delosh-extrap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-delosh-extrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-delosh-extrap-1.png" class="img-fluid figure-img" width="960">
@@ -360,7 +359,7 @@ Figure&nbsp;1: Generalization reproduced patterns from DeLosh et al.&nbsp;(1997)
 <p><em>Task.</em> The “Hit The Wall” (HTW) visuomotor extrapolation task task was programmed in Javascript, making heavy use of the <a href="https://phaser.io/">phaser.io</a> game library. The HTW task involved launching a projectile such that it would strike the “wall” at target speed indicated at the top of the screen (see <a href="#fig-htw-task" class="quarto-xref">Figure&nbsp;2</a>). The target velocities were given as a range, or band, of acceptable velocity values (e.g.&nbsp;band 800-1000). During the training stage, participants received feedback indicating whether they had hit the wall within the target velocity band, or how many units their throw was above or below from the target band. Participants were instructed that only the x velocity component of the ball was relevant to the task. The y velocity, or the location at which the ball struck the wall, had no influence on the task feedback.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-htw-task" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-htw-task" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-htw-task-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../Assets/figs/htw_task_fig.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
@@ -376,7 +375,7 @@ Figure&nbsp;2: The Hit the wall task. Participants launch the blue ball to hit t
 <p>Following the training stage, participants proceeded immediately to the testing stage. Participants were tested from all six velocity bands, in two separate stages. In the novel extrapolation testing stage, participants completed “no-feedback” testing from three novel extrapolation bands (100-300, 350-550, and 600-800), with each band consisting of 15 trials. Participants were also tested from the three velocity bands that were trained by the varied condition (800-1000, 1000-1200, and 1200-1400). In the constant training condition, two of these bands were novel, while in the varied training condition, all three bands were encountered during training. The order in which participants completed the novel-extrapolation and testing-from-3-varied bands was counterbalanced across participants. A final training stage presented participants with “feedback” testing for each of the three extrapolation bands (100-300, 350-550, and 600-800).</p>
 <div class="cell" data-fig-width="7" data-fig-height="2.5" data-fig-responsive="false" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-design-e1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-design-e1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-design-e1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
@@ -494,7 +493,7 @@ Figure&nbsp;3: Experiment 1 Design. Constant and Varied participants complete di
 <h3 class="anchored" data-anchor-id="analyses-strategy">Analyses Strategy</h3>
 <p>All data processing and statistical analyses were performed in R version 4.32 <span class="citation" data-cites="rcoreteamLanguageEnvironmentStatistical2020">Team (<a href="#ref-rcoreteamLanguageEnvironmentStatistical2020" role="doc-biblioref">2020</a>)</span>. To assess differences between groups, we used Bayesian Mixed Effects Regression. Model fitting was performed with the brms package in R <span class="citation" data-cites="burknerBrmsPackageBayesian2017">Bürkner (<a href="#ref-burknerBrmsPackageBayesian2017" role="doc-biblioref">2017</a>)</span>, and descriptive stats and tables were extracted with the BayestestR package <span class="citation" data-cites="makowskiBayestestRDescribingEffects2019">Makowski et al. (<a href="#ref-makowskiBayestestRDescribingEffects2019" role="doc-biblioref">2019</a>)</span>. Mixed effects regression enables us to take advantage of partial pooling, simultaneously estimating parameters at the individual and group level. Our use of Bayesian, rather than frequentist methods allows us to directly quantify the uncertainty in our parameter estimates, as well as avoiding convergence issues common to the frequentist analogues of our mixed models.</p>
 <p>Each model was set to run with 4 chains, 5000 iterations per chain, with the first 2500 discarded as warmup chains. Rhat values were within an acceptable range, with values &lt;=1.02 (see appendix for diagnostic plots). We used uninformative priors for the fixed effects of the model (condition and velocity band), and weakly informative Student T distributions for the random effects. For each model, we report 1) the mean values of the posterior distribution for the parameters of interest, 2) the lower and upper credible intervals (CrI), and the probability of direction value (pd).</p>
-<div id="tbl-brms-models" class="quarto-float anchored">
+<div id="tbl-brms-models" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-brms-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: <strong>Statistical Model Specifications</strong>. The specifications for the bayesian regression models used in the analyses of each of the 3 experiments. Comparisons of accuracy use abosulte deviation as the dependent variable, while comparisons of discrimination use the raw velocities produced by participants as the dependent variable.
@@ -554,7 +553,7 @@ Table&nbsp;1: <strong>Statistical Model Specifications</strong>. The specificati
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e1-train-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e1-train-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-train-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e1-train-dev-1.png" class="img-fluid figure-img" width="672">
@@ -591,7 +590,7 @@ Figure&nbsp;4: Experiment 1 Training Stage. Deviations from target band across t
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>cdtr1 <span class="ot">&lt;-</span> <span class="fu">get_coef_details</span>(bmm_e1_train, <span class="st">"conditVaried"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e1-train-dist" class="sm quarto-float anchored">
+<div id="tbl-e1-train-dist" class="sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e1-train-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: <strong>Experiment 1 - End of training performance</strong>. Comparing final training block accuracy in band common to both groups. The Intercept represents the average of the baseline condition (constant training), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive estimates indicates a greater deviation (lower accuracy) for the varied group. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate).
@@ -658,7 +657,7 @@ Table&nbsp;2: <strong>Experiment 1 - End of training performance</strong>. Compa
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>cdted3 <span class="ot">&lt;-</span><span class="fu">get_coef_details</span>(bmtd, <span class="st">"conditVaried:bandTypeExtrapolation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e1-bmm-dist" class="hover sm quarto-float anchored">
+<div id="tbl-e1-bmm-dist" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e1-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3: <strong>Experiment 1 testing accuracy</strong>. Main effects of condition and band type (training vs.&nbsp;extrapolation bands), and the interaction between the two factors. The Intercept represents the baseline condition (constant training &amp; trained bands). Larger coefficients indicate larger deviations from the baselines - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate).
@@ -742,7 +741,7 @@ Table&nbsp;3: <strong>Experiment 1 testing accuracy</strong>. Main effects of co
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e1-test-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e1-test-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e1-test-dev-1.png" class="img-fluid figure-img" width="1056">
@@ -773,7 +772,7 @@ Figure&nbsp;5: Experiment 1 Testing Accuracy. A) Empricial Deviations from targe
 </div>
 <p><br>
 </p>
-<div id="tbl-e1-bmm-vx" class="hover sm quarto-float anchored">
+<div id="tbl-e1-bmm-vx" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e1-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4: <strong>Experiment 1 Testing Discrimination</strong>. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band. Larger coefficients for the Band term reflect a larger slope, or greater sensitivity/discrimination. The interaction between condit and Band indicates the difference between constant and varied slopes. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate).
@@ -830,7 +829,7 @@ Table&nbsp;4: <strong>Experiment 1 Testing Discrimination</strong>. Bayesian Mix
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>testE1 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e1-test-vx" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e1-test-vx" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e1-test-vx-1.png" class="img-fluid figure-img" width="1056">
@@ -888,7 +887,7 @@ Figure&nbsp;6: Experiment 1. Empirical distribution of velocities producing in t
 <span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(here::here("Assets/figs", "e1_test-vx.png"), p3,width=9,height=11, bg="white",dpi=600)</span></span>
 <span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-e1-bmm-vx" class="cell quarto-float anchored">
+<div id="tbl-e1-bmm-vx" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-e1-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;5
@@ -936,7 +935,7 @@ Table&nbsp;5
 <p>The task and procedure of Experiment 2 was identical to Experiment 1, with the exception that the training and testing bands were reversed (see <a href="#fig-design-e2" class="quarto-xref">Figure&nbsp;7</a>). The Varied group trained on bands 100-300, 350-550, 600-800, and the constant group trained on band 600-800. Both groups were tested from all six bands. A total of 110 participants completed the experiment (Varied: 55, Constant: 55).</p>
 <div class="cell" data-fig-width="8" data-fig-height="2.5" data-fig-responsive="false" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-design-e2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-design-e2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-design-e2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
@@ -1047,7 +1046,7 @@ Figure&nbsp;7: Experiment 2 Design. Constant and Varied participants complete di
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2-train-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2-train-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-train-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e2-train-dev-1.png" class="img-fluid figure-img" width="672">
@@ -1080,7 +1079,7 @@ Figure&nbsp;8: Experiment 2 Training Stage. Deviations from target band across t
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   kable(escape=F,booktabs=T) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e2-train-dist" class="sm quarto-float anchored">
+<div id="tbl-e2-train-dist" class="sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2-train-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;6: <strong>Experiment 2 - End of training performance</strong>. The Intercept represents the average of the baseline condition (constant training), and the conditVaried coefficient reflects the difference between the constant and varied groups. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate).
@@ -1139,7 +1138,7 @@ Table&nbsp;6: <strong>Experiment 2 - End of training performance</strong>. The I
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>cd2ted3 <span class="ot">&lt;-</span><span class="fu">get_coef_details</span>(bmtd2, <span class="st">"conditVaried:bandTypeExtrapolation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e2-bmm-dist" class="hover sm quarto-float anchored">
+<div id="tbl-e2-bmm-dist" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;7: <strong>Experiment 2 testing accuracy</strong>. Main effects of condition and band type (training vs.&nbsp;extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition (constant training &amp; trained bands). Larger coefficients indicate larger deviations from the baselines - and a positive interaction coefficient indicates disproporionate deviation for the varied condition on the extrapolation bands. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate).
@@ -1226,7 +1225,7 @@ Table&nbsp;7: <strong>Experiment 2 testing accuracy</strong>. Main effects of co
 <span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2-test-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2-test-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e2-test-dev-1.png" class="img-fluid figure-img" width="1056">
@@ -1256,7 +1255,7 @@ Figure&nbsp;9: Experiment 2 Testing Accuracy. A) Empricial Deviations from targe
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>intCoef2 <span class="ot">&lt;-</span> <span class="fu">get_coef_details</span>(e2_vxBMM, <span class="st">"conditVaried:bandInt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e2-bmm-vx" class="hover sm quarto-float anchored">
+<div id="tbl-e2-bmm-vx" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e2-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;8: <strong>Experiment 2 Testing Discrimination</strong>. Bayesian Mixed Model Predicting velocity as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band. Larger coefficients for the Band term reflect a larger slope, or greater sensitivity/discrimination. The interaction between condit and Band indicates the difference between constant and varied slopes. CrI values indicate 95% credible intervals. pd is the probability of direction (the % of the posterior on the same side of 0 as the coefficient estimate)
@@ -1313,7 +1312,7 @@ Table&nbsp;8: <strong>Experiment 2 Testing Discrimination</strong>. Bayesian Mix
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>testE2 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2-test-vx" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2-test-vx" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e2-test-vx-1.png" class="img-fluid figure-img" width="1056">
@@ -1376,7 +1375,7 @@ Figure&nbsp;10: Experiment 2. Empirical distribution of velocities produced in t
 <span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(here::here("Assets/figs", "e2_test-vx.png"), p3,width=9,height=11, bg="white",dpi=600)</span></span>
 <span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-e2-bmm-vx" class="cell quarto-float anchored">
+<div id="tbl-e2-bmm-vx" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-e2-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;9
@@ -1448,7 +1447,7 @@ Table&nbsp;9
 <span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>cd3tr3 <span class="ot">&lt;-</span><span class="fu">get_coef_details</span>(bmm_e3_train, <span class="st">"conditVaried:bandOrderReverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e3-train-dist" class="sm quarto-float anchored">
+<div id="tbl-e3-train-dist" class="sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e3-train-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;10: <strong>Experiment 3 - End of training performance</strong>. The Intercept represents the average of the baseline condition (constant training &amp; original band order), the conditVaried coefficient reflects the difference between the constant and varied groups, and the bandOrderReverse coefficient reflects the difference between original and reverse order. A larger positive coefficient indicates a greater deviation (lower accuracy) for the varied group. The negative value for the interaction between condit and bandOrder indicates that varied condition with reverse order had significantly lower deviations than the varied condition with the original band order
@@ -1520,7 +1519,7 @@ Table&nbsp;10: <strong>Experiment 3 - End of training performance</strong>. The 
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e3-train-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e3-train-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-train-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e3-train-dev-1.png" class="img-fluid figure-img" width="672">
@@ -1562,7 +1561,7 @@ Figure&nbsp;11: Experiment 3 training. Deviations from target band during traini
 <span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>cd3ted7 <span class="ot">&lt;-</span><span class="fu">get_coef_details</span>(bmtd3, <span class="st">"conditVaried:bandTypeExtrapolation:bandOrderReverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e3-bmm-dist" class="hover sm quarto-float anchored">
+<div id="tbl-e3-bmm-dist" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e3-bmm-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;11: <strong>Experiment 3 testing accuracy</strong>. Main effects of condition and band type (training vs.&nbsp;extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition, (constant training, trained bands, &amp; original order), and the remaining coefficients reflect the deviation from that baseline. Positive coefficients thus represent worse performance relative to the baseline, - and a positive interaction coefficient indicates disproportionate deviation for the varied condition or reverse order condition.
@@ -1683,7 +1682,7 @@ E3. A) Deviations from target band during testing without feedback stage. B) Est
 <span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e3-test-dev" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e3-test-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-test-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e3-test-dev-1.png" class="img-fluid figure-img" width="1056">
@@ -1725,7 +1724,7 @@ Figure&nbsp;12: Experiment 3 Testing Accuracy. A) Empricial Deviations from targ
 <span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>coef3 <span class="ot">&lt;-</span> <span class="fu">get_coef_details</span>(e3_vxBMM,<span class="st">"conditVaried:bandOrderReverse:bandInt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="tbl-e3-bmm-vx" class="hover sm quarto-float anchored">
+<div id="tbl-e3-bmm-vx" class="hover sm quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-e3-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;12: <strong>Experiment 3 testing discrimination</strong>. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs.&nbsp;Varied) and Velocity Band. The Intercept represents the baseline condition (constant training &amp; original order), and the Band coefficient represents the slope for the baseline condition. The interaction terms which include condit and Band (e.g.&nbsp;conditVaried:Band &amp; conditVaried:bandOrderReverse:band) respectively indicate the how the slopes of the varied-original condition differed from the baseline condition, and how varied-reverse condition differed from the varied-original condition
@@ -1822,7 +1821,7 @@ Table&nbsp;12: <strong>Experiment 3 testing discrimination</strong>. Bayesian Mi
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>   ggh4x<span class="sc">::</span><span class="fu">facet_nested_wrap</span>(bandOrder<span class="sc">~</span>condit,<span class="at">scale=</span><span class="st">"free_x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e3-test-vx" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e3-test-vx" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-test-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e3-test-vx-1.png" class="img-fluid figure-img" width="1056">
@@ -1900,7 +1899,7 @@ Figure&nbsp;13: Experiment 3. Empirical distribution of velocities produced in t
 <span id="cb24-61"><a href="#cb24-61" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e3-bmm-vx" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e3-bmm-vx" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e3-bmm-vx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e3-bmm-vx-1.png" class="img-fluid figure-img" width="1056">
@@ -1949,7 +1948,7 @@ Figure&nbsp;14: Experiment 3 Discrimination. A) Conditional effect of training c
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alm_plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-alm-diagram" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-alm-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alm-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-alm-diagram-1.png" class="img-fluid figure-img" width="672">
@@ -1971,7 +1970,7 @@ Figure&nbsp;15: The Associative Learning Model (ALM). The diagram illustrates th
 <p>ALM is a localist neural network model <span class="citation" data-cites="pageConnectionistModellingPsychology2000a">(<a href="#ref-pageConnectionistModellingPsychology2000a" role="doc-biblioref">Page, 2000</a>)</span>, with each input node corresponding to a particular stimulus, and each output node corresponding to a particular response value. The units in the input layer activate as a function of their Gaussian similarity to the input stimulus. So, for example, an input stimulus of value 55 would induce maximal activation of the input unit tuned to 55. Depending on the value of the generalization parameter, the nearby units (e.g.&nbsp;54 and 56; 53 and 57) may also activate to some degree. ALM is structured with input and output nodes that correspond to regions of the stimulus space, and response space, respectively. The units in the input layer activate as a function of their similarity to a presented stimulus. As was the case with the exemplar-based models, similarity in ALM is exponentially decaying function of distance. The input layer is fully connected to the output layer, and the activation for any particular output node is simply the weighted sum of the connection weights between that node and the input activations. The network then produces a response by taking the weighted average of the output units (recall that each output unit has a value corresponding to a particular response). During training, the network receives feedback which activates each output unit as a function of its distance from the ideal level of activation necessary to produce the correct response. The connection weights between input and output units are then updated via the standard delta learning rule, where the magnitude of weight changes are controlled by a learning rate parameter. The EXAM model is an extension of ALM, with the same learning rule and representational scheme for input and output units. EXAM differs from ALM only in its response rule, as it includes a linear extrapolation mechanism for generating novel responses. Although this extrapolation rule departs from a strictly similarity-based generalization mechanism, EXAM is distinct from pure rule-based models in that it remains constrained by the weights learned during training. EXAM retrieves the two nearest training inputs, and the ALM responses associated with those inputs, and computes the slope between these two points. The slope is then used to extrapolate the response to the novel test stimulus. Because EXAM requires at least two input-output pairs to generate a response, additional assumptions were required in order for it to generate resposnes for the constant group. We assumed that participants come to the task with prior knowledge of the origin point (0,0), which can serve as a reference point necessary for the model to generate responses for the constant group. This assumption is motivated by previous function learning research (<span class="citation" data-cites="brownUnderestimationLinearFunction2017">Brown &amp; Lacroix (<a href="#ref-brownUnderestimationLinearFunction2017" role="doc-biblioref">2017</a>)</span>), which through a series of manipulations of the y intercept of the underlying function, found that participants consistently demonstrated knowledge of, or a bias towards, the origin point (see <span class="citation" data-cites="kwantesWhyPeopleUnderestimate2006">Kwantes &amp; Neal (<a href="#ref-kwantesWhyPeopleUnderestimate2006" role="doc-biblioref">2006</a>)</span> for additional evidence of such a bias in function learning tasks).</p>
 <p>See <a href="#tbl-alm-exam" class="quarto-xref">Table&nbsp;13</a> for a full specification of the equations that define ALM and EXAM, and <a href="#fig-alm-diagram" class="quarto-xref">Figure&nbsp;15</a> for a visual representation of the ALM model.</p>
 <div class="column-page-inset-right">
-<div id="tbl-alm-exam" class="quarto-float anchored">
+<div id="tbl-alm-exam" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-alm-exam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;13: ALM &amp; EXAM Equations
@@ -2134,7 +2133,7 @@ discrep_{Train,varied}(Data_{sim}, Data_{obs}) = \frac{1}{N_{blocks} \times 3} \
 <span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">quarto.disable_processing =</span> <span class="cn">TRUE</span></span>
 <span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-htw-modelError-e1" class="cell quarto-float anchored">
+<div id="tbl-htw-modelError-e1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-htw-modelError-e1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;14: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
@@ -2666,7 +2665,7 @@ Table&nbsp;14: Models errors predicting empirical data - aggregated over all par
 <span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>c_post <span class="sc">+</span> lr_post</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-htw-post-dist" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-htw-post-dist" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-htw-post-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-htw-post-dist-1.png" class="img-fluid figure-img" width="960">
@@ -2710,7 +2709,7 @@ Figure&nbsp;16: Posterior Distributions of <span class="math inline">\(c\)</span
 <span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>)),<span class="at">tag_suffix =</span> <span class="st">') '</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-htw-resid-pred" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-htw-resid-pred" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-htw-resid-pred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-htw-resid-pred-1.png" class="img-fluid figure-img" width="1056">
@@ -2746,7 +2745,7 @@ Figure&nbsp;17: Model residuals for each combination of training condition, fit 
 <span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>         <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Model Predictions - Experiment 1 Data"</span>, <span class="at">y=</span><span class="st">"Vx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-cm-vx-pat" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-cm-vx-pat" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cm-vx-pat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-cm-vx-pat-1.png" class="img-fluid figure-img" width="960">
@@ -2830,7 +2829,7 @@ Figure&nbsp;18: Empirical data and Model predictions for mean velocity across ta
 <span id="cb32-67"><a href="#cb32-67" aria-hidden="true" tabindex="-1"></a>p_ce_1 <span class="sc">/</span> p_em_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-ee-e1" class="quarto-figure quarto-figure-center quarto-float anchored" width="960">
+<div id="fig-ee-e1" class="quarto-float quarto-figure quarto-figure-center anchored" width="960">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ee-e1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-ee-e1-1.png" id="fig-ee-e1" class="img-fluid figure-img" width="960">
@@ -2894,7 +2893,7 @@ Figure&nbsp;18: Empirical data and Model predictions for mean velocity across ta
 <span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a>  ) </span>
 <span id="cb33-47"><a href="#cb33-47" aria-hidden="true" tabindex="-1"></a>gt_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-htw-modelError-e23" class="cell quarto-float anchored">
+<div id="tbl-htw-modelError-e23" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-htw-modelError-e23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;15: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
@@ -3475,7 +3474,7 @@ Table&nbsp;15: Models errors predicting empirical data - aggregated over all par
 <span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>         <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Model Predictions Experiment 2 &amp; 3"</span>, <span class="at">y=</span><span class="st">"vx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-cm-vx-pat-e2-e3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-cm-vx-pat-e2-e3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cm-vx-pat-e2-e3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-cm-vx-pat-e2-e3-1.png" class="img-fluid figure-img" width="960">
@@ -3591,7 +3590,7 @@ Figure&nbsp;20: Empirical data and Model predictions from Experiment 2 and 3 for
 <span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a>bct_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-htw-ee-e23" class="cell quarto-float anchored">
+<div id="tbl-htw-ee-e23" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-htw-ee-e23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;16: Results of Bayesian Regression models predicting model error as a function of Model (ALM vs.&nbsp;EXAM), Condition (Constant vs.&nbsp;Varied), and the interaction between Model and Condition. The values represent the estimate coefficient for each term, with 95% credible intervals in brackets. The intercept reflects the baseline of ALM and Constant. The other estimates indicate deviations from the baseline for the EXAM mode and varied condition. Lower values indicate better model fit.
@@ -4206,7 +4205,7 @@ Table&nbsp;16: Results of Bayesian Regression models predicting model error as a
 <span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a> (p_e2 <span class="sc">/</span> p_e3) <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="fu">c</span>(<span class="st">'A'</span>), <span class="at">tag_suffix=</span><span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-e2_e3_ae" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-e2_e3_ae" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e2_e3_ae-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-e2_e3_ae-1.png" class="img-fluid figure-img" width="864">
@@ -4273,7 +4272,7 @@ Figure&nbsp;21: Conditional effects of Model (ALM vs EXAM) and Condition (Consta
 <span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="st">"Participant"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-htw-best-model" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-htw-best-model" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-htw-best-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-htw-best-model-1.png" class="img-fluid figure-img" width="1056">
@@ -4325,7 +4324,7 @@ Figure&nbsp;22: Difference in model errors for each participant, with models fit
 <span id="cb38-35"><a href="#cb38-35" aria-hidden="true" tabindex="-1"></a>testIndv </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-htw-indv-pred" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-htw-indv-pred" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-htw-indv-pred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="HTW_files/figure-html/fig-htw-indv-pred-1.png" class="img-fluid figure-img" width="960">

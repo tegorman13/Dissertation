@@ -1,0 +1,18 @@
+---
+title: "The Role of Variability in Learning Generalization: A Computational Modeling Approach"
+subtitle: "Dissertation Defense"
+format: 
+  html: default
+author:
+  - name: Thomas Gorman
+    orcid: 0000-0000-0000-0000
+    affiliations: Indiana University
+---
+
+
+::: {.content-visible when-format="html"}
+
+<div class="ratio ratio-16x9"> <iframe src="/Presentation/slides_revealjs.html"></iframe> </div>
+
+test
+:::

@@ -5,7 +5,8 @@ format:
   html: default
   clean-revealjs:
     #theme: moon #white
-    output-ext: slide.html
+    #output-ext: revealjs.html
+    output-file: slides_revealjs
     slideNumber: true
     center: true
     chalkboard: true
@@ -16,6 +17,17 @@ author:
     orcid: 0000-0000-0000-0000
     affiliations: Indiana University
 ---
+
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+<div class="ratio ratio-16x9"> <iframe src="/Presentation/slides_revealjs.html"></iframe> </div>
+
+:::
+
+
+
+
 
 ## Introduction
 - Investigate effects of training variability on learning and generalization
