@@ -850,7 +850,7 @@
     "href": "Presentation/slides.html",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "",
-    "text": "fa-solid fa-arrow-up-right-from-square",
+    "text": "Click here to open the dissertation manuscript.",
     "crumbs": [
       "Slides"
     ]
@@ -860,7 +860,7 @@
     "href": "Presentation/slides.html#introduction",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Introduction",
-    "text": "Introduction\n\nInvestigate effects of training variability on learning and generalization\nFocus areas: visuomotor skill learning and function learning tasks\n\n\n\nBackground and Motivation\n\nImportance of training variability\nResearch gaps in visuomotor skill learning\nPrevious research in category learning, language learning, and function learning\n\n\n\n\nTheoretical Frameworks\n\nSchema Theory (Schmidt, 1975)\nDesirable Difficulties Framework (Bjork & Bjork, 2011)\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\n\n\n\nOverview of Current Work\n\nProject 1: Visuomotor projectile launching task\nProject 2: Visuomotor extrapolation task",
+    "text": "Introduction\n\nInvestigate effects of training variability on learning and generalization\nFocus areas: visuomotor skill learning and function learning tasks",
     "crumbs": [
       "Slides"
     ]
@@ -900,7 +900,7 @@
     "href": "Presentation/slides.html#project-1---hit-the-target-htt",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Hit The Target (HTT)",
-    "text": "Project 1 - Hit The Target (HTT)\n\nInfluence of varied practice in a projectile launching task\nExperiments 1 & 2:\n\nConstant vs. varied training groups\nPerformance metrics and transfer testing\n\n\n\n\nProject 1 - Methodology\n\nTask description and experimental design\nParticipants and procedures\nIGAS model introduction\n\n\n\n\n\nProject 1 - Results and Discussion\n\nVaried training group’s superior performance\nComputational modeling results with IGAS\nTheoretical implications\n\n\n\n\nComputational Model\nEquation 1: \\[ Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}}) \\]\nEquation 2: \\[ d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \\]",
+    "text": "Project 1 - Hit The Target (HTT)\n\nInfluence of varied practice in a projectile launching task\nExperiments 1 & 2:\n\nConstant vs. varied training groups\nPerformance metrics and transfer testing",
     "crumbs": [
       "Slides"
     ]
@@ -930,7 +930,7 @@
     "href": "Presentation/slides.html#project-2---hit-the-wall-htw",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Hit The Wall (HTW)",
-    "text": "Project 2 - Hit The Wall (HTW)\n\nInfluence of varied practice in a function learning task\nExperiments 1, 2, and 3:\n\nTraining regimes and testing conditions\nLearning, discrimination, and extrapolation performance metrics\n\n\n\n\nProject 2 - Methodology\n\nTask description and experimental design\nParticipants and procedures\nApplication of ALM and EXAM models\n\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1\n\nTest  \nNovel Bands \n100-300\n350-550\n600-800\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n800-1000\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 1: Experiment 1 Design. Constant and Varied participants complete different training conditions.\n\n\n\n\n\n\n\n\nProject 2 - Results and Discussion\n\nTraining variability’s mixed results\nModeling analysis with ALM and EXAM\nTheoretical implications\n\n\n\n\nProject 2 - ALM",
+    "text": "Project 2 - Hit The Wall (HTW)\n\nInfluence of varied practice in a function learning task\nExperiments 1, 2, and 3:\n\nTraining regimes and testing conditions\nLearning, discrimination, and extrapolation performance metrics",
     "crumbs": [
       "Slides"
     ]
@@ -960,7 +960,7 @@
     "href": "Presentation/slides.html#general-discussion",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "General Discussion",
-    "text": "General Discussion\n\nCompare HTT and HTW\nEmpirical findings summary\nComputational modeling contributions\n\n\n\nComparison\n\n\n\n\n\n\n\n\nDimension\nHTT (Project 1)\nHTW (Project 2)\n\n\n\n\nTask Description\nProjectile launching to hit a target\nProjectile launching to hit wall at a specific velocity\n\n\nTask Complexity\nMore complex parabolic trajectory, both x and y velocities relevant to outcome\nSimpler 1D mapping of force to outcome. Only x velocity is relevant.\n\n\nTask Space\nMore complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.\nSimpler: smooth, linear mapping between velocity and feedback.\n\n\nPerceptual salience of Varied Conditions\nVaried conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target.\nVaried conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen.\n\n\nTesting Feedback\nTesting always included feedback\nPrimary testing stage had no feedback.\n\n\nPotential for Learning during Testing\nLimited potential for learning during testing due to feedback.\nSome potential for learning during no-feedback testing by observing ball trajectory.\n\n\nTraining Experience\nVaried group gets half as much experience on any one position as the constant group.\nVaried group gets 1/3 as much experience on any one velocity band as the constant group.\n\n\nTesting Structure\nRandom interleaving of trained/transfer testing distances.\nBlocked structure, separately testing trained vs extrapolation testing bands.\n\n\n\n\n\n\nTheoretical Contributions\n\nInsights into training variability effects on learning and generalization\nComputational models applications\n\n\n\n\nPractical Implications\n\nTraining programs design implications\nFuture research considerations\n\n\n\n\nLimitations and Future Directions\n\nStudy limitations\nFuture research suggestions\n\n\n\n\nConclusion\n\nRecap of key findings\nFinal thoughts on training variability’s role in learning\n\n\n\n\nQuestions and Discussion\n\nOpen floor for questions from the committee and audience",
+    "text": "General Discussion\n\nCompare HTT and HTW\nEmpirical findings summary\nComputational modeling contributions",
     "crumbs": [
       "Slides"
     ]
@@ -1532,8 +1532,8 @@
     "objectID": "Presentation/slides.html#slides",
     "href": "Presentation/slides.html#slides",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
-    "section": "Slides",
-    "text": "Slides\nPresentation slides are available below. You can navigate these sides using the ← and → keys. Press m to display all commands (e.g., press o to switch to slide overview)\n\n Open slides in new window",
+    "section": "Slides ",
+    "text": "Slides \nPresentation slides are available below. You can navigate these sides using the ← and → keys. Press m to display all commands (e.g., press o to switch to slide overview)\n\n Open slides in new window",
     "crumbs": [
       "Slides"
     ]

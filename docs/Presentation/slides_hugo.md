@@ -1,14 +1,11 @@
 ---
-title: "The Role of Variability in Learning Generalization: A Computational Modeling Approach"
-subtitle: "Dissertation Defense"
-format: 
+title: >-
+  The Role of Variability in Learning Generalization: A Computational Modeling
+  Approach
+subtitle: Dissertation Defense
+format:
   html: default
-    #toc: true
-    #shift-heading-level-by: 1
-    #toc-expand: true
   clean-revealjs:
-    #theme: moon #white
-    #output-ext: revealjs.html
     output-file: slides_revealjs
     slideNumber: true
     center: true
@@ -26,48 +23,13 @@ format:
     output-file: slides_gfm.md
 author:
   - name: Thomas Gorman
-    url: https://tegorman13.github.io
+    url: 'https://tegorman13.github.io'
     orcid: 0000-0001-5366-5442
     affiliations:
       - name: Indiana University
-        department: Psychological & Brain Sciences, Cognitive Science
+        department: 'Psychological & Brain Sciences, Cognitive Science'
 ---
 
-
-
-::::: {.content-visible when-format="html" unless-format="revealjs"}
-\
-[Click here](../paper.qmd) to open the dissertation manuscript. 
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-
-## Slides {{< fa photo-film size=2xs >}} {.unnumbered .unlisted visibility="hidden"}
-
-Presentation slides are available below. You can navigate these sides using the <kbd>←</kbd> and <kbd>→</kbd> keys. Press <kbd>m</kbd> to display all commands (e.g., press <kbd>o</kbd> to switch to slide overview)
-
-<p class="buttons" style="text-align:center;">
-<a class="btn btn-danger" target="_blank" href="/Presentation/slides_revealjs.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open slides in new window </a>
-</p>
-
-:::: column-body-outset-right
-::: {.ratio .ratio-16x9}
-<iframe src="/Presentation/slides_revealjs.html">
-</iframe>
-:::
-::::
-\
-\
-\
-\
-:::::
 
 ## Introduction
 
@@ -105,7 +67,7 @@ Presentation slides are available below. You can navigate these sides using the 
 
 -   Influence of varied practice in a projectile launching task
 -   Experiments 1 & 2:
-    -   Constant vs. varied training groups
+    -   Constant vs. varied training groups
     -   Performance metrics and transfer testing
 
 ------------------------------------------------------------------------
@@ -151,32 +113,6 @@ Presentation slides are available below. You can navigate these sides using the 
 -   Participants and procedures
 -   Application of ALM and EXAM models
 
-::: {.content-visible unless-format="markdown"}
-```{dot}
-//| label: fig-design-e1
-//| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
-//| fig-width: 7.0
-//| fig-height: 2.5
-//| echo: false  
-digraph {
-  graph [layout = dot, rankdir = LR]
-  node [shape = rectangle, style = filled]
-  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#FF0000"]
-  data2 [label = " Constant Training \n800-1000", fillcolor = "#00A08A"]
-  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
-  data1 -> Test1
-  data2 -> Test1
-  subgraph cluster {
-    label = "Test Phase \n(Counterbalanced Order)"
-    Test1 [label = "Test  \nNovel Bands \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
-    Test2 [label = "  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
-    Test1 -> Test2
-  }
-  Test2 -> Test3
-}
-```
-:::
-
 ------------------------------------------------------------------------
 
 ## Project 2 - Results and Discussion
@@ -201,14 +137,14 @@ digraph {
 
 ------------------------------------------------------------------------
 
-## Comparison {.smaller .r-fit-text}
+## Comparison
 
 | Dimension | HTT (Project 1) | HTW (Project 2) |
-|----------------|--------------------------------|------------------------|
+|-----------------|--------------------------------|------------------------|
 | Task Description | Projectile launching to hit a target | Projectile launching to hit wall at a specific velocity |
 | Task Complexity | More complex parabolic trajectory, both x and y velocities relevant to outcome | Simpler 1D mapping of force to outcome. Only x velocity is relevant. |
 | Task Space | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier. | Simpler: smooth, linear mapping between velocity and feedback. |
-| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
+| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
 | Testing Feedback | Testing always included feedback | Primary testing stage had no feedback. |
 | Potential for Learning during Testing | Limited potential for learning during testing due to feedback. | Some potential for learning during no-feedback testing by observing ball trajectory. |
 | Training Experience | Varied group gets half as much experience on any one position as the constant group. | Varied group gets 1/3 as much experience on any one velocity band as the constant group. |
