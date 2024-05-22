@@ -14,9 +14,9 @@ license
 
 # image/output files unless otherwise specified
 
-*.docx
-*.doc
-*.jpg
+#*.docx
+#*.doc
+#*.jpg
 *.gif
 
 
@@ -28,6 +28,7 @@ _freeze/*
 .vscode/*
 rsconnect/*
 _extensions/*
+Manuscript/_extensions/*
 site_libs/*
 #Misc/md_copy* 
 #Prompts/*

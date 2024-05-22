@@ -33,11 +33,11 @@ prefer-html: true
 
 ## Appendix - Project 1 
 
-{{< include IGAS-Supplemental.qmd >}}
+{{< include /Sections/Appendix/IGAS-Supplemental.qmd >}}
 
 {{< pagebreak >}}
 
 ## Appendix - Project 2 - Experiment 1 
 
-{{< include E1_Appendix.qmd >}}
+{{< include /Sections/Appendix/E1_Appendix.qmd >}}
 :::

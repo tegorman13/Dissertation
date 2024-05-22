@@ -5,6 +5,9 @@ title: >-
 author:
   - name: Thomas Gorman
     affiliation: Indiana University
+    affiliation-url: 'https://psych.indiana.edu/'
+    url: 'https://tegorman13.github.io/'
+    orcid: 0000-0001-5366-5442
 page-layout: full
 code-fold: true
 code-tools: true
@@ -60,6 +63,7 @@ prefer-html: true
             -   [Sample Size Estimation](#sample-size-estimation)
             -   [Participants](#participants)
             -   [Task](#task)
+            -   [Procedure](#procedure)
         -   [Results](#results)
             -   [Data Processing and Statistical Packages](#data-processing-and-statistical-packages)
             -   [Training Phase](#training-phase)
@@ -183,7 +187,8 @@ Similarity, defined in this literature as a function of psychological distance b
 Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis (Newell, 2003; Van Rossum, 1990). Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g., projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g., more unique combinations of x and y velocities).
 Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance (Ennis et al., 1988; Ghahramani et al., 1996; Logan, 1988; Nosofsky, 1992; Shepard, 1987; Thoroughman & Taylor, 2005), it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure 1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.
 
-<img src="full_files/figure-commonmark/fig-toy-model1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
 id="fig-toy-model1"
 alt="Figure 1: Left panel- Generalization predicted from a simple model that assumes a linear generalization function. A varied group (red vertical lines indicate the 2 training locations) trained from positions 400 and 800, and a constant group (blue vertical line), trained from position 600. Right panel- if a Gaussian generalization function is assumed, then varied training (400, 800) is predicted to result in better generalization to positions close to 400 and 800 than does constant training at 600. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)" />
 
@@ -212,6 +217,10 @@ The experimental task was programmed in JavaScript, using packages from the Phas
 <img src="../Assets/methodsFig1.png" id="fig-IGAS_Methods"
 alt="Figure 2: The stimuli of the task consisted of a blue ball, which the participants would launch at the green target, while avoiding the red barrier. On each trial, the ball would appear in the center of the orange square, with the position of the orange square varying between experimental conditions. Participants were constrained to release the ball within the square." />
 
+#### Procedure
+
+Participants first electronically consented to participate, and then read instructions for the task which explained how to control the ball, and the goal of throwing the ball as close to the center of the target as possible. The training phase was split into 10 blocks of 20 trials, for a total of 200 training trials. Participants in the constant condition trained exclusively from a single location (760 scaled units from the target center). Participants in the varied condition trained from two locations (610 and 910 scaled units from the target center), encountering each location 100 times. The sequence of throwing locations was pseudo-random for the varied group, with the constraint that within every block of 20 training throws both training locations would occur 10 times. Participants in both conditions also received intermittent testing trials after every 20 training trials. Intermittent testing trials provided no feedback of any kind. The ball would disappear from view as soon as it left the orange square, and participants were prompted to start the next trial without receiving any information about the accuracy of the throw. Each intermittent testing stage consisted of two trials from each of the three training positions (i.e. all participants executed two trials each from Positions 610, 760, and 910 during each of the 10 intermittent testing stages). Following training, all participants completed a final testing phase from four positions: 1) their training location, 2) the training location(s) of the other group, 3) a location novel to both groups. The testing phase consisted of 15 trials from each of the four locations, presented in a randomized order. All trials in the final testing phase included feedback. After finishing the final testing portion of the study, participants were queried as to whether they completed the study using a mouse, a trackpad or some other device (this information was used in the exclusion process described above). Finally, participants were debriefed as to the hypotheses and manipulation of the study.
+
 ### Results
 
 #### Data Processing and Statistical Packages
@@ -224,7 +233,8 @@ To prepare the data, we first removed trials that were not easily interpretable 
 
 We performed an ANOVA comparison with stage as a within-group factor and condition as between-group factor. The analysis revealed a significant effect of training stage F(2,142)=62.4, p\<.001, $\eta^{2}_G$ = .17, such that performance improved over the course of training. There was no significant effect of condition F(1,71)=1.42, p=.24, $\eta^{2}_G$ = .02, and no significant interaction between condition and training stage, F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
-<img src="full_files/figure-commonmark/fig-IGAS_Training1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
 id="fig-IGAS_Training1"
 alt="Figure 3: Training performance for varied and constant participants binned into three stages. Shorter bars indicate better performance (ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
 
@@ -232,7 +242,8 @@ alt="Figure 3: Training performance for varied and constant participants binned
 
 In Experiment 1, a single constant-trained group was compared against a single varied-trained group. At the transfer phase, all participants were tested from 3 positions: 1) the positions(s) from their own training, 2) the training position(s) of the other group, and 3) a position novel to both groups. Overall, group performance was compared with a mixed type III ANOVA, with condition (varied vs. constant) as a between-subject factor and throwing location as a within-subject variable. The effect of throwing position was strong, F(3,213) = 56.12, p\<.001, η2G = .23. The effect of training condition was significant F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
-<img src="full_files/figure-commonmark/fig-IGAS_Testing1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
 id="fig-IGAS_Testing1"
 alt="Figure 4: Testing performance for each of the 4 testing positions, compared between training conditions. Positions 610 and 910 were trained on by the varied group, and novel for the constant group. Position 760 was trained on by the constant group, and novel for the varied group. Position 835 was novel for both groups. Shorter bars are indicative of better performance (the ball landing closer to the center of the target). Error bars indicate standard error of the mean." />
 
@@ -283,7 +294,8 @@ After confirming that condition and throwing position did not have any significa
 
 The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. <a href="#fig-e2train" class="quarto-xref">Figure 5</a> depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs. the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, $\eta^{2}_G$ \<.01, a significant effect of training stage F(2,412)=77.91, p\<.001, $\eta^{2}_G$ =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, $\eta^{2}_G$ \<.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, $\eta^{2}_G$ \<.01, a significant effect of training stage F(2,172)=56.29, p\<.001, $\eta^{2}_G$ =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
-<img src="full_files/figure-commonmark/fig-e2train-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
 id="fig-e2train"
 alt="Figure 5: Training performance for the six constant conditions, and the varied condition, binned into three stages. On the left side, the six constant groups are averaged together, as are the two training positions for the varied group. On the right side, the six constant groups are shown separately, with each set of bars representing the beginning, middle, and end of training for a single constant group that trained from the position indicated on the x-axis. Figure 5b also shows training performance separately for both of the throwing locations trained by the varied group. Error bars indicate standard error of the mean." />
 
@@ -291,7 +303,8 @@ alt="Figure 5: Training performance for the six constant conditions, and the va
 
 In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs. varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, $\eta^{2}_G$ =.02. Descriptive statistics for each condition are shown in table 2. In <a href="#fig-e2testa" class="quarto-xref">Figure 6</a> visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. <a href="#fig-e2testa" class="quarto-xref">Figure 6</a> shows performance between the varied condition and the individual constant groups.
 
-<img src="full_files/figure-commonmark/fig-e2testa-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
 id="fig-e2testa"
 alt="Figure 6: Testing phase performance from each of the six testing positions. The six constant conditions are averaged together into a single constant group, compared against the single varied-trained group.B) Transfer performance from each of the 6 throwing locations from which all participants were tested. Each bar represents performance from one of seven distinct training groups (six constant groups in red, one varied group in blue). The x axis labels indicate the location(s) from which each group trained. Lower values along the y axis reflect better performance at the task (closer distance to target center). Error bars indicate standard error of the mean." />
 
@@ -331,7 +344,8 @@ Table 3: Testing performance from novel positions. Includes data only from posi
 
 Finally, corresponding to the comparison of position 760 from Experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure 7</a> displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
-<img src="full_files/figure-commonmark/fig-e2test1-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
 id="fig-e2test1"
 alt="Figure 7: A comparison of throwing location that are identical to those trained by the constant participants (e.g., constant participants trained at position 900, tested from position 900), which are also novel to the varied-trained participants (thus excluding positions 500 and 800). Error bars indicate standard error of the mean." />
 
@@ -360,7 +374,8 @@ In the testing phase, our varied group significantly outperformed the constant c
 
 *Controlling for the similarity between training and testing.* The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions -- thus resulting in six separate similarity scores for each participant. <a href="#fig-taskSpace" class="quarto-xref">Figure 8</a> visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in <a href="#fig-taskSpace" class="quarto-xref">Figure 8</a>, the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.
 
-<img src="full_files/figure-commonmark/fig-taskSpace-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
 id="fig-taskSpace"
 alt="Figure 8: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in Experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment." />
 
@@ -394,7 +409,8 @@ variability hypothesis in a simple, computerized projectile throwing task. Gener
 
 Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in <a href="#fig-Toy-Model-dis" class="quarto-xref">Figure 9</a> we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model -- namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.
 
-<img src="full_files/figure-commonmark/fig-Toy-Model-dis-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
 id="fig-Toy-Model-dis"
 alt="Figure 9: A simple model depicting the necessity of both of two separately fit generalization parameters, c, and a positive distance between training and testing contexts, in order for an instance model to predict a pattern of varied training from stimuli 400 and 800 outperforming constant training from position 600 at a test position of 600. For the top left panel, in which the generalization model assumes a single c value (-.008) for both varied and constant conditions, and identical contexts across training and testing, the equation which generates the varied condition is - Amount of Generalization = e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}, whereas the constant group generalization is generated from 2\cdot e^{(c\cdot|x-600|)}. For the top right panel, the c constants in the original equations are different for the 2 conditions, with c=-.002 for the varied condition, and c=-.008 for the constant condition. The bottom two panels are generated from identical equations to those immediately above, except for the addition of extra distance (100 units) to reflect the assumption of some change in context between training and testing conditions. Thus, the generalization model for the varied condition in the bottom-right panel is of the form - Amount of Generalization = e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)} ." />
 
@@ -440,7 +456,8 @@ The influence of variability on function learning tasks has received relatively 
 
 In the domain of visuomotor learning, van Dam & Ernst (2015) employed a task which required participants to learn a linear function between the spikiness of shape stimuli and the correct horizontal position to make a rapid pointing response. The shapes ranged from very spiky to completely circular at the extreme ends of the space. Participants trained with intermediate shapes from a lower variation (2 shapes) or higher variation (5 shapes) condition, with the 2 items of the lower varied condition matching the items used on the extreme ends of the higher variation training space. Learning was significantly slower in the higher variation group. However, the two conditions did not differ when tested with novel shapes, with both groups producing extrapolation responses of comparable magnitudes to the most similar training item, rather than in accordance with the true linear function. The authors accounted for both learning and extrapolation performance with a Bayesian learning model. Similar to ALM, the Bayesian model assumes that generalization occurs as a Gaussian function of the distance between stimuli. However unlike ALM, the Bayesian learning model utilizes more elaborate probabilistic stimulus representations, with a separate Kalman Filter for each shape stimulus.
 
-<img src="full_files/figure-commonmark/fig-delosh-extrap-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
 id="fig-delosh-extrap"
 alt="Figure 10: Generalization reproduced patterns from DeLosh et al. (1997) Figure 3. Stimulii that fall within the dashed lines are interpolations of the training examples." />
 
@@ -474,11 +491,11 @@ Each model was set to run with 4 chains, 5000 iterations per chain, with the fir
 
 <div id="tbl-brms-models">
 
-| Group Comparison         | Code                                                            | Data                 |
+| Group Comparison | Code | Data |
 |-----------------|----------------------------------------|---------------|
-| End of Training Accuracy | `brm(Abs. Deviation ~ condit)`                                  | Final Training Block |
-| Test Accuracy            | `brm(Abs. Deviation ~ condit * bandType + (1|id) + (1|bandInt)` | All Testing trials   |
-| Band Discrimination      | `brm(vx ~ condit * band +(1 + bandInt|id)`                      | All Testing Trials   |
+| End of Training Accuracy | `brm(Abs. Deviation ~ condit)` | Final Training Block |
+| Test Accuracy | `brm(Abs. Deviation ~ condit * bandType + (1|id) + (1|bandInt)` | All Testing trials |
+| Band Discrimination | `brm(vx ~ condit * band +(1 + bandInt|id)` | All Testing Trials |
 
 Table 5: **Statistical Model Specifications**. The specifications for the Bayesian regression models used in the analyses of each of the 3 experiments. Comparisons of accuracy use abosulte deviation as the dependent variable, while comparisons of discrimination use the raw velocities produced by participants as the dependent variable.
 </div>
@@ -489,7 +506,8 @@ In each experiment we compare varied and constant conditions in terms of 1) accu
 
 ### Results
 
-<img src="full_files/figure-commonmark/fig-e1-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
 id="fig-e1-train-dev"
 alt="Figure 12: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
 <div id="tbl-e1-train-dist">
@@ -520,7 +538,8 @@ Table 7: **Experiment 1 testing accuracy**. Main effects of condition and band 
 
 *Testing.* To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in <a href="#tbl-e1-bmm-dist" class="quarto-xref">Table 7</a>. The main effect of training condition was not significant ($\beta$ = 39, 95% CrI \[-21.1, 100.81\]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands ($\beta$ = 71.51, 95% CrI \[33.24, 109.6\]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant ($\beta$ = 66.46, 95% CrI \[32.76, 99.36\]; pd = 99.99%), As shown in <a href="#fig-e1-test-dev" class="quarto-xref">Figure 13</a>, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
 
-<img src="full_files/figure-commonmark/fig-e1-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
 id="fig-e1-test-dev"
 alt="Figure 13: Experiment 1 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals." />
 
@@ -540,11 +559,13 @@ Table 8: **Experiment 1 Testing Discrimination**. Bayesian Mixed Model Predicti
 
 Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table 8</a> for the full model results. The estimated coefficient for training condition ($\beta$ = 164.05, 95% CrI \[45.5, 278.85\], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, though is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor ($\beta$ = 0.71 95% CrI \[0.62, 0.8\], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition ($\beta$ = -0.14, 95% CrI \[-0.26, -0.01\], pd = 98.39%), suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition (see <a href="#fig-e1-test-vx" class="quarto-xref">Figure 14</a> and <a href="#fig-e1-bmm-vx" class="quarto-xref">Figure 15</a>).
 
-<img src="full_files/figure-commonmark/fig-e1-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
 id="fig-e1-test-vx"
 alt="Figure 14: Experiment 1. Empirical distribution of velocities producing in testing stage. Translucent bands with dashed lines indicate the correct range for each velocity band." />
 
-<img src="full_files/figure-commonmark/fig-e1-bmm-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
 id="fig-e1-bmm-vx"
 alt="Figure 15: Experiment 1 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI." />
 
@@ -562,7 +583,8 @@ The task and procedure of Experiment 2 was identical to Experiment 1, with the e
 
 ### Results
 
-<img src="full_files/figure-commonmark/fig-e2-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
 id="fig-e2-train-dev"
 alt="Figure 16: Experiment 2 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy." />
 <div id="tbl-e2-train-dist">
@@ -595,7 +617,8 @@ Table 10: **Experiment 2 testing accuracy**. Main effects of condition and band
 
 *Testing Accuracy.* The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in <a href="#tbl-e2-bmm-dist" class="quarto-xref">Table 10</a>, reveal no significant main effect of training condition ($\beta$ = -20.58, 95% CrI \[-72.94, 33.08\]; pd = 77.81%). However, the interaction between training condition and band type was significant ($\beta$ = 82, 95% CrI \[41.89, 121.31\]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see <a href="#fig-e2-test-dev" class="quarto-xref">Figure 17</a>).
 
-<img src="full_files/figure-commonmark/fig-e2-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
 id="fig-e2-test-dev"
 alt="Figure 17: Experiment 2 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals." />
 <div id="tbl-e2-bmm-vx">
@@ -612,11 +635,13 @@ Table 11: **Experiment 2 Testing Discrimination**. Bayesian Mixed Model Predict
 
 *Testing Discrimination.* Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table 11</a>. The overall slope on target velocity band predictor was significantly positive, ($\beta$ = 0.71, 95% CrI \[0.58, 0.84\]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, ($\beta$ = -0.06, 95% CrI \[-0.24, 0.13\]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see <a href="#fig-e2-test-vx" class="quarto-xref">Figure 18</a> and <a href="#fig-e2-bmm-vx" class="quarto-xref">Figure 19</a>).
 
-<img src="full_files/figure-commonmark/fig-e2-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
 id="fig-e2-test-vx"
 alt="Figure 18: Experiment 2. Empirical distribution of velocities produced in the testing stage. Translucent bands with dash lines indicate the correct range for each velocity band." />
 
-<img src="full_files/figure-commonmark/fig-e2-bmm-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
 id="fig-e2-bmm-vx"
 alt="Figure 19: Experiment 2 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI." />
 
@@ -646,21 +671,22 @@ Table 12: **Experiment 3 - End of training performance**. The Intercept represe
 
 *Training*. <a href="#fig-e3-train-dev" class="quarto-xref">Figure 20</a> displays the average deviations from the target band across training blocks, and <a href="#tbl-e3-train-dist" class="quarto-xref">Table 12</a> shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( $\beta$ = 64.93, 95% CrI \[36.99, 90.8\]; pd = 100%). The main effect of band order is not significant $\beta$ = 1.11, 95% CrI \[-16.02, 18.16\]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( $\beta$ = -77.02, 95% CrI \[-114.16, -39.61\]; pd = 100%).
 
-<img src="full_files/figure-commonmark/fig-e3-train-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
 id="fig-e3-train-dev"
 alt="Figure 20: Experiment 3 training. Deviations from target band during training. Shown separately for groups trained with the orginal order (used in E1) and reverse order (used in E2)." />
 <div id="tbl-e3-bmm-dist">
 
-| Term                                         | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+| Term | Estimate | 95% CrI Lower | 95% CrI Upper | pd |
 |:------------------------------------|-------:|-----------:|-----------:|-----:|
-| Intercept                                    |   288.65 |        199.45 |        374.07 | 1.00 |
-| conditVaried                                 |   -40.19 |       -104.68 |         23.13 | 0.89 |
-| bandTypeExtrapolation                        |   -23.35 |        -57.28 |         10.35 | 0.92 |
-| bandOrderReverse                             |   -73.72 |       -136.69 |        -11.07 | 0.99 |
-| **conditVaried:bandTypeExtrapolation**       |    52.66 |         14.16 |         90.23 | 1.00 |
-| conditVaried:bandOrderReverse                |   -37.48 |       -123.28 |         49.37 | 0.80 |
-| bandTypeExtrapolation:bandOrderReverse       |    80.69 |         30.01 |        130.93 | 1.00 |
-| conditVaried:bandTypeExtrapolation:bandOrder |    30.42 |        -21.00 |         81.65 | 0.87 |
+| Intercept | 288.65 | 199.45 | 374.07 | 1.00 |
+| conditVaried | -40.19 | -104.68 | 23.13 | 0.89 |
+| bandTypeExtrapolation | -23.35 | -57.28 | 10.35 | 0.92 |
+| bandOrderReverse | -73.72 | -136.69 | -11.07 | 0.99 |
+| **conditVaried:bandTypeExtrapolation** | 52.66 | 14.16 | 90.23 | 1.00 |
+| conditVaried:bandOrderReverse | -37.48 | -123.28 | 49.37 | 0.80 |
+| bandTypeExtrapolation:bandOrderReverse | 80.69 | 30.01 | 130.93 | 1.00 |
+| conditVaried:bandTypeExtrapolation:bandOrder | 30.42 | -21.00 | 81.65 | 0.87 |
 
 Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band type (training vs. extrapolation), and the interaction between the two factors. The Intercept represents the baseline condition, (constant training, trained bands & original order), and the remaining coefficients reflect the deviation from that baseline. Positive coefficients thus represent worse performance relative to the baseline, - and a positive interaction coefficient indicates disproportionate deviation for the varied condition or reverse order condition.
 </div>
@@ -673,34 +699,37 @@ Table 13: **Experiment 3 testing accuracy**. Main effects of condition and band
 
 E3. A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 ::: -->
-<img src="full_files/figure-commonmark/fig-e3-test-dev-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
 id="fig-e3-test-dev"
 alt="Figure 21: Experiment 3 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Shown separately for groups trained with the orginal order (used in E1) and reverse order (used in E2). Error bars represent 95% credible intervals." />
 <div id="tbl-e3-bmm-vx">
 
-| Term                                   | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+| Term | Estimate | 95% CrI Lower | 95% CrI Upper | pd |
 |:--------------------------------|--------:|------------:|------------:|-----:|
-| Intercept                              |   601.83 |        504.75 |        699.42 | 1.00 |
-| conditVaried                           |    12.18 |       -134.94 |        162.78 | 0.56 |
-| bandOrderReverse                       |    13.03 |       -123.89 |        144.67 | 0.58 |
-| **Band**                               |     0.49 |          0.36 |          0.62 | 1.00 |
-| **conditVaried:bandOrderReverse**      |  -338.15 |       -541.44 |       -132.58 | 1.00 |
-| conditVaried:Band                      |    -0.04 |         -0.23 |          0.15 | 0.67 |
-| bandOrderReverse:band                  |    -0.10 |         -0.27 |          0.08 | 0.86 |
-| **conditVaried:bandOrderReverse:band** |     0.42 |          0.17 |          0.70 | 1.00 |
+| Intercept | 601.83 | 504.75 | 699.42 | 1.00 |
+| conditVaried | 12.18 | -134.94 | 162.78 | 0.56 |
+| bandOrderReverse | 13.03 | -123.89 | 144.67 | 0.58 |
+| **Band** | 0.49 | 0.36 | 0.62 | 1.00 |
+| **conditVaried:bandOrderReverse** | -338.15 | -541.44 | -132.58 | 1.00 |
+| conditVaried:Band | -0.04 | -0.23 | 0.15 | 0.67 |
+| bandOrderReverse:band | -0.10 | -0.27 | 0.08 | 0.86 |
+| **conditVaried:bandOrderReverse:band** | 0.42 | 0.17 | 0.70 | 1.00 |
 
 Table 14: **Experiment 3 testing discrimination**. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band. The Intercept represents the baseline condition (constant training & original order), and the Band coefficient represents the slope for the baseline condition. The interaction terms which include condit and Band (e.g., conditVaried:Band & conditVaried:bandOrderReverse:band) respectively indicate the how the slopes of the varied-original condition differed from the baseline condition, and how varied-reverse condition differed from the varied-original condition
 </div>
 
 *Testing Discrimination.* The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table 13</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant $\beta$ = 0.49, 95% CrI \[0.36, 0.62\]; pd = 100%. Neither of the two way interactions reached significance, $\beta$ = -0.04, 95% CrI \[-0.23, 0.15\]; pd = 66.63%, $\beta$ = -0.1, 95% CrI \[-0.27, 0.08\]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, $\beta$ = 0.42, 95% CrI \[0.17, 0.7\]; pd = 99.96% - indicating a greater slope for the varied condition trained with reverse order bands. This interaction is shown in <a href="#fig-e3-test-vx" class="quarto-xref">Figure 22</a>, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.
 
-<img src="full_files/figure-commonmark/fig-e3-test-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
 id="fig-e3-test-vx"
 alt="Figure 22: e3 testing x velocities. Translucent bands with dash lines indicate the correct range for each velocity band." />
 
 
 
-<img src="full_files/figure-commonmark/fig-e3-bmm-vx-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
 id="fig-e3-bmm-vx"
 alt="Figure 23: Experiment 3 Discrimination. A) Conditional effect of training condition and Band. Ribbons indicate 95% HDI. The steepness of the lines serves as an indicator of how well participants discriminated between velocity bands. B) The distribution of slope coefficients for each condition. Larger slopes indicates better discrimination. C) Individual participant slopes. Error bars represent 95% HDI." />
 
@@ -710,7 +739,8 @@ In Experiment 3, we investigated the effects of training condition (constant vs.
 
 ## Computational Model
 
-<img src="full_files/figure-commonmark/fig-alm-diagram-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
 id="fig-alm-diagram"
 alt="Figure 24: The Associative Learning Model (ALM). The diagram illustrates the basic structure of the ALM model as used in the present work. Input nodes are activated as a function of their similarity to the lower-boundary of the target band. The generalization parameter, c, determines the degree to which nearby input nodes are activated. The output nodes are activated as a function of the weighted sum of the input nodes - weights are updated via the delta rule." />
 
@@ -744,20 +774,20 @@ See <a href="#tbl-alm-exam" class="quarto-xref">Table 15</a> for a full specifi
 
 <div id="tbl-alm-exam">
 
-|                    | **ALM Response Generation**                                        |                                                                                                                   |
+|  | **ALM Response Generation** |  |
 |-------------------|-----------------------------|-------------------------|
-| Input Activation   | $a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}$    | Input nodes activate as a function of Gaussian similarity to stimulus                                             |
-| Output Activation  | $O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)$                        | Output unit $O_j$ activation is the weighted sum of input activations and association weights                     |
-| Output Probability | $P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}$                    | The response, $Y_j$ probabilites computed via Luce's choice rule                                                  |
-| Mean Output        | $m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}$ | Weighted average of probabilities determines response to X                                                        |
-|                    | **ALM Learning**                                                   |                                                                                                                   |
-| Feedback           | $f_j(Z) = e^{-c(Z-Y_j)^2}$                                         | feedback signal Z computed as similarity between ideal response and observed response                             |
-| magnitude of error | $\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)$                          | Delta rule to update weights.                                                                                     |
-| Update Weights     | $w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}$                              | Updates scaled by learning rate parameter $\eta$.                                                                 |
-|                    | **EXAM Extrapolation**                                             |                                                                                                                   |
-| Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$                    | Novel test stimulus $X$ activates input nodes $X_i$                                                               |
-| Slope Computation  | $S =$ $\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$                      | Slope value, $S$ computed from nearest training instances                                                         |
-| Response           | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$                            | Final EXAM response is the ALM response for the nearest training stimulus, $m(X_i)$, adjusted by local slope $S$. |
+| Input Activation | $a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}$ | Input nodes activate as a function of Gaussian similarity to stimulus |
+| Output Activation | $O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)$ | Output unit $O_j$ activation is the weighted sum of input activations and association weights |
+| Output Probability | $P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}$ | The response, $Y_j$ probabilites computed via Luce's choice rule |
+| Mean Output | $m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}$ | Weighted average of probabilities determines response to X |
+|  | **ALM Learning** |  |
+| Feedback | $f_j(Z) = e^{-c(Z-Y_j)^2}$ | feedback signal Z computed as similarity between ideal response and observed response |
+| magnitude of error | $\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)$ | Delta rule to update weights. |
+| Update Weights | $w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}$ | Updates scaled by learning rate parameter $\eta$. |
+|  | **EXAM Extrapolation** |  |
+| Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$ | Novel test stimulus $X$ activates input nodes $X_i$ |
+| Slope Computation | $S =$ $\frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$ | Slope value, $S$ computed from nearest training instances |
+| Response | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$ | Final EXAM response is the ALM response for the nearest training stimulus, $m(X_i)$, adjusted by local slope $S$. |
 
 Table 15: ALM & EXAM Equations
 </div>
@@ -795,22 +825,24 @@ For each of the 156 participants from Experiment 1, the ABC algorithm was run un
 
 <div id="tbl-htw-modelError-e1">
 
-| Task Stage | Fit Method                  | ALM_Constant | ALM_Varied | EXAM_Constant | EXAM_Varied |
+| Task Stage | Fit Method | ALM_Constant | ALM_Varied | EXAM_Constant | EXAM_Varied |
 |:---------|:---------------------|----------:|---------:|-----------:|---------:|
-| Test       | Fit to Test Data            |          200 |        103 |           104 |          86 |
-| Test       | Fit to Test & Training Data |          217 |        170 |           128 |         145 |
-| Test       | Fit to Training Data        |          468 |        291 |           273 |         298 |
-| Train      | Fit to Test Data            |          298 |       2016 |            54 |         184 |
-| Train      | Fit to Test & Training Data |           57 |        132 |            43 |         128 |
-| Train      | Fit to Training Data        |           52 |        103 |            51 |         107 |
+| Test | Fit to Test Data | 200 | 103 | 104 | 86 |
+| Test | Fit to Test & Training Data | 217 | 170 | 128 | 145 |
+| Test | Fit to Training Data | 468 | 291 | 273 | 298 |
+| Train | Fit to Test Data | 298 | 2016 | 54 | 184 |
+| Train | Fit to Test & Training Data | 57 | 132 | 43 | 128 |
+| Train | Fit to Training Data | 52 | 103 | 51 | 107 |
 
 Table 16: Models errors predicting empirical data from Experiment 1 - aggregated over the full posterior distribution for each participant. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
-<img src="full_files/figure-commonmark/fig-htw-post-dist-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
 id="fig-htw-post-dist"
 alt="Figure 25: Posterior Distributions of c and lr parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y-axes of the plots for the c parameter are scaled logarithmically." />
 
-<img src="full_files/figure-commonmark/fig-htw-resid-pred-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
 id="fig-htw-resid-pred"
 alt="Figure 26: Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y-axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 
@@ -820,11 +852,14 @@ We used the posterior distribution of $c$ and $lr$ parameters to generate a post
 
 The residuals of the model predictions for the testing stage (<a href="#fig-htw-resid-pred" class="quarto-xref">Figure 26</a>) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also <a href="#fig-ee-e1" class="quarto-xref">Figure 28</a>), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in <a href="#fig-cm-vx-pat" class="quarto-xref">Figure 27</a>, which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.
 
-<img src="full_files/figure-commonmark/fig-cm-vx-pat-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
 id="fig-cm-vx-pat"
 alt="Figure 27: Empirical data and Model predictions for mean velocity across target bands. Fitting methods (Test Only, Test &amp; Train, Train Only) - are separated across rows, and Training Condition (Constant vs. Varied) are separated by columns. Each facet contains the predictions of ALM and EXAM, alongside the observed data." />
 
-<img src="full_files/figure-commonmark/fig-ee-e1-1.png" id="fig-ee-e1"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
+id="fig-ee-e1"
 alt="Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied). Lower values on the y axis indicate better model fit. D) Specific contrasts of model performance comparing 1) EXAM fits between constant and varied training; 2) ALM vs. EXAM for the varied group; 3) ALM fits between constant and varied. Negative error differences indicate that the term on the left side (e.g., EXAM Constant) tended to have smaller model residuals." />
 
 To quantitatively assess whether the differences in performance between models, we fit a Bayesian regression predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs. EXAM) and training condition (Constant vs. Varied).
@@ -833,21 +868,22 @@ Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95% CrI \[-60.
 
 <div id="tbl-htw-modelError-e23">
 
-| Fit_Method                  | Task Stage | E2_ALM_Constant | E2_ALM_Varied | E2_EXAM_Constant | E2_EXAM_Varied | E3_ALM_Constant | E3_ALM_Varied | E3_EXAM_Constant | E3_EXAM_Varied |
+| Fit_Method | Task Stage | E2_ALM_Constant | E2_ALM_Varied | E2_EXAM_Constant | E2_EXAM_Varied | E3_ALM_Constant | E3_ALM_Varied | E3_EXAM_Constant | E3_EXAM_Varied |
 |:-----------|:-----|------:|------:|-------:|------:|------:|------:|-------:|------:|
-| Fit to Test Data            | Test       |             240 |           130 |              100 |             88 |             170 |           106 |               92 |             73 |
-| Fit to Test Data            | Train      |              53 |           527 |              108 |            169 |              71 |           544 |              158 |            213 |
-| Fit to Test & Training Data | Test       |             266 |           208 |              125 |            126 |             198 |           190 |              130 |            128 |
-| Fit to Test & Training Data | Train      |              40 |            35 |               30 |             24 |              49 |            86 |               49 |             78 |
-| Fit to Training Data        | Test       |             357 |           296 |              305 |            235 |             415 |           299 |              295 |            244 |
-| Fit to Training Data        | Train      |              43 |            23 |               43 |             23 |              51 |            64 |               52 |             65 |
+| Fit to Test Data | Test | 240 | 130 | 100 | 88 | 170 | 106 | 92 | 73 |
+| Fit to Test Data | Train | 53 | 527 | 108 | 169 | 71 | 544 | 158 | 213 |
+| Fit to Test & Training Data | Test | 266 | 208 | 125 | 126 | 198 | 190 | 130 | 128 |
+| Fit to Test & Training Data | Train | 40 | 35 | 30 | 24 | 49 | 86 | 49 | 78 |
+| Fit to Training Data | Test | 357 | 296 | 305 | 235 | 415 | 299 | 295 | 244 |
+| Fit to Training Data | Train | 43 | 23 | 43 | 23 | 51 | 64 | 52 | 65 |
 
 Table 17: Models errors predicting empirical data - aggregated over all participants, posterior parameter values, and velocity bands. Note that Fit Method refers to the subset of the data that the model was trained on, while Task Stage refers to the subset of the data that the model was evaluated on.
 </div>
 
    
 
-<img src="full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
 id="fig-cm-vx-pat-e2-e3"
 alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 for the testing stage. Observed data is shown on the right. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 
@@ -855,30 +891,31 @@ alt="Figure 29: Empirical data and Model predictions from Experiment 2 and 3 fo
 
 <div id="tbl-htw-ee-e23">
 
-| exp   | Term                                    | Estimate | 95% CrI Lower | 95% CrI Upper |   pd |
+| exp | Term | Estimate | 95% CrI Lower | 95% CrI Upper | pd |
 |:-----|:------------------------------|-------:|-----------:|-----------:|----:|
-| Exp 1 | Intercept                               |    176.3 |         156.9 |           195 | 1.00 |
-| Exp 1 | ModelEXAM                               |    -88.4 |        -104.5 |           -72 | 1.00 |
-| Exp 1 | conditVaried                            |    -37.5 |         -60.4 |           -14 | 1.00 |
-| Exp 1 | ModelEXAM:conditVaried                  |     60.4 |          36.2 |            84 | 1.00 |
-| Exp 2 | Intercept                               |    245.9 |         226.2 |           265 | 1.00 |
-| Exp 2 | ModelEXAM                               |   -137.7 |        -160.2 |          -115 | 1.00 |
-| Exp 2 | conditVaried                            |    -86.4 |        -113.5 |           -59 | 1.00 |
-| Exp 2 | ModelEXAM:conditVaried                  |     56.9 |          25.3 |            88 | 1.00 |
-| Exp 3 | Intercept                               |    164.8 |         140.1 |           189 | 1.00 |
-| Exp 3 | ModelEXAM                               |    -65.7 |         -86.0 |           -46 | 1.00 |
-| Exp 3 | conditVaried                            |    -40.6 |         -75.9 |            -3 | 0.98 |
-| Exp 3 | bandOrderReverse                        |     25.5 |          -9.3 |            59 | 0.93 |
-| Exp 3 | ModelEXAM:conditVaried                  |     41.9 |          11.2 |            73 | 0.99 |
-| Exp 3 | ModelEXAM:bandOrderReverse              |     -7.3 |         -34.5 |            21 | 0.70 |
-| Exp 3 | conditVaried:bandOrderReverse           |     30.8 |         -19.6 |            84 | 0.88 |
-| Exp 3 | ModelEXAM:conditVaried:bandOrderReverse |    -60.6 |        -101.8 |           -19 | 1.00 |
+| Exp 1 | Intercept | 176.3 | 156.9 | 195 | 1.00 |
+| Exp 1 | ModelEXAM | -88.4 | -104.5 | -72 | 1.00 |
+| Exp 1 | conditVaried | -37.5 | -60.4 | -14 | 1.00 |
+| Exp 1 | ModelEXAM:conditVaried | 60.4 | 36.2 | 84 | 1.00 |
+| Exp 2 | Intercept | 245.9 | 226.2 | 265 | 1.00 |
+| Exp 2 | ModelEXAM | -137.7 | -160.2 | -115 | 1.00 |
+| Exp 2 | conditVaried | -86.4 | -113.5 | -59 | 1.00 |
+| Exp 2 | ModelEXAM:conditVaried | 56.9 | 25.3 | 88 | 1.00 |
+| Exp 3 | Intercept | 164.8 | 140.1 | 189 | 1.00 |
+| Exp 3 | ModelEXAM | -65.7 | -86.0 | -46 | 1.00 |
+| Exp 3 | conditVaried | -40.6 | -75.9 | -3 | 0.98 |
+| Exp 3 | bandOrderReverse | 25.5 | -9.3 | 59 | 0.93 |
+| Exp 3 | ModelEXAM:conditVaried | 41.9 | 11.2 | 73 | 0.99 |
+| Exp 3 | ModelEXAM:bandOrderReverse | -7.3 | -34.5 | 21 | 0.70 |
+| Exp 3 | conditVaried:bandOrderReverse | 30.8 | -19.6 | 84 | 0.88 |
+| Exp 3 | ModelEXAM:conditVaried:bandOrderReverse | -60.6 | -101.8 | -19 | 1.00 |
 
 Table 18: Results of Bayesian Regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and the interaction between Model and Condition. The values represent the estimate coefficient for each term, with 95% credible intervals in brackets. The intercept reflects the baseline of ALM and Constant. The other estimates indicate deviations from the baseline for the EXAM mode and varied condition. Lower values indicate better model fit.
 </div>
 *Model Fits to Experiment 2 and 3.* Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the "fit to training and testing data" models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs. EXAM), Condition (Constant vs. Varied), and their interaction (see <a href="#tbl-htw-ee-e23" class="quarto-xref">Table 18</a>) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: $\beta$ = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: $\beta$ = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 ($\beta$ = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 ($\beta$ = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controlled for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order ($\beta$ = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see <a href="#fig-e2_e3_ae" class="quarto-xref">Figure 30</a>).
 
-<img src="full_files/figure-commonmark/fig-e2_e3_ae-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
 id="fig-e2_e3_ae"
 alt="Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition (Constant vs. Varied) on Model Error for Experiment 2 and 3 data. Experiment 3 also includes a control for the order of training vs. testing bands (original order vs. reverse order)." />
 
@@ -892,11 +929,13 @@ The fits to the individual participants also reveal a number of interesting case
 
 
 
-<img src="full_files/figure-commonmark/fig-htw-best-model-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
 id="fig-htw-best-model"
 alt="Figure 31: Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM." />
 
-<img src="full_files/figure-commonmark/fig-htw-indv-pred-1.png"
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
 id="fig-htw-indv-pred"
 alt="Figure 32: Model predictions alongside observed data for a subset of individual participants. A) 3 constant and 3 varied participants fit to both the test and training data. B) 3 constant and 3 varied subjects fit to only the trainign data. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands." />
 
@@ -943,16 +982,16 @@ The HTT and HTW tasks also differed in terms of general task complexity. The HTT
 
 <div id="tbl-task-diff">
 
-| Dimension                                | HTT (Project 1)                                                                                                                               | HTW (Project 2)                                                                                                |
+| Dimension | HTT (Project 1) | HTW (Project 2) |
 |------------|----------------------------------|---------------------------|
-| Task Description                         | Projectile launching to hit a target                                                                                                          | Projectile launching to hit wall at a specific velocity                                                        |
-| Task Complexity                          | More complex parabolic trajectory, both x and y velocities relevant to outcome                                                                | Simpler 1D mapping of force to outcome. Only x velocity is relevant.                                           |
-| Task Space                               | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.           | Simpler: smooth, linear mapping between velocity and feedback.                                                 |
+| Task Description | Projectile launching to hit a target | Projectile launching to hit wall at a specific velocity |
+| Task Complexity | More complex parabolic trajectory, both x and y velocities relevant to outcome | Simpler 1D mapping of force to outcome. Only x velocity is relevant. |
+| Task Space | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier. | Simpler: smooth, linear mapping between velocity and feedback. |
 | Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
-| Testing Feedback                         | Testing always included feedback                                                                                                              | Primary testing stage had no feedback.                                                                         |
-| Potential for Learning during Testing    | Limited potential for learning during testing due to feedback.                                                                                | Some potential for learning during no-feedback testing by observing ball trajectory.                           |
-| Training Experience                      | Varied group gets half as much experience on any one position as the constant group.                                                          | Varied group gets 1/3 as much experience on any one velocity band as the constant group.                       |
-| Testing Structure                        | Random interleaving of trained/transfer testing distances.                                                                                    | Blocked structure, separately testing trained vs extrapolation testing bands.                                  |
+| Testing Feedback | Testing always included feedback | Primary testing stage had no feedback. |
+| Potential for Learning during Testing | Limited potential for learning during testing due to feedback. | Some potential for learning during no-feedback testing by observing ball trajectory. |
+| Training Experience | Varied group gets half as much experience on any one position as the constant group. | Varied group gets 1/3 as much experience on any one velocity band as the constant group. |
+| Testing Structure | Random interleaving of trained/transfer testing distances. | Blocked structure, separately testing trained vs extrapolation testing bands. |
 
 Table 19: Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).
 </div>
@@ -965,7 +1004,7 @@ In summary, this dissertation provides a comprehensive examination of the effect
 
 # Appendix
 
-[Apppendix](Appendix/Full_Appendix.qmd) available at tegorman13.github.io/Dissertation/Sections/Appendix.html
+[Apppendix](https://tegorman13.github.io/Dissertation/Sections/Appendix/Full_Appendix.html) available at https://tegorman13.github.io/Dissertation/Sections/Appendix/Full_Appendix.html
 
 # References
 

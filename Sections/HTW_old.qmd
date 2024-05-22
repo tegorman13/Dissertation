@@ -812,11 +812,11 @@ Slope estimates for experiment 3 suggest that participants were capable of disti
 
 ### Computational Modelling 
 
-{{< include htw_exam.qmd >}}
+<!-- {{< include htw_exam.qmd >}} -->
 
 
 # References
 <div id="refs"></div>
 
 # Appendix
-{{< include Appendix/E1_Appendix.qmd >}}
+<!-- {{< include Appendix/E1_Appendix.qmd >}} -->

@@ -159,3 +159,56 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 ## Questions and Discussion
 
 - Open floor for questions from the committee and audience
+
+<!-- create slide with 2 columns and add text -->
+
+## Future Research Directions
+
+<div class="columns">
+
+<div class="column" width="50%">
+
+### Theoretical Extensions
+
+- Investigate the role of individual differences in training variability
+  effects.
+- Explore the impact of different types of feedback on learning and
+  generalization.
+- Examine the influence of task complexity on the benefits of varied
+  training.
+
+### Methodological Innovations
+
+- Develop new experimental paradigms to test training variability in
+  more complex tasks.
+- Utilize advanced computational models to simulate learning processes
+  under varied conditions.
+- Implement longitudinal studies to assess long-term effects of training
+  variability.
+
+</div>
+
+<div class="column" width="50%">
+
+### Practical Applications
+
+- Design adaptive training programs that adjust variability based on
+  learner performance.
+- Apply findings to educational settings to enhance learning outcomes.
+- Use insights to improve training protocols in professional skill
+  development.
+
+### Collaborative Opportunities
+
+- Partner with educational institutions to test training variability in
+  classroom settings.
+- Collaborate with industry professionals to apply research findings in
+  real-world training programs.
+- Engage with interdisciplinary teams to explore the broader
+  implications of training variability.
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------

@@ -10,9 +10,4 @@ author:
 ---
 
 
-::: {.content-visible when-format="html"}
 
-<div class="ratio ratio-16x9"> <iframe src="/Presentation/slides_revealjs.html"></iframe> </div>
-
-test
-:::
