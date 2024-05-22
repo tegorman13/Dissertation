@@ -44,6 +44,8 @@ Scratch/*
 .pandoc/
 md_extract/assets/
 
+Versions/*
+
 
 # misc knit files
 *.aux
@@ -75,5 +77,5 @@ mturk-and-gmail.txt
 # specific file keep
 !readme.md
 !/original....pdf
-!TG_Full_Dissertation.docx
+#!TG_Full_Dissertation.docx
 Now.md
