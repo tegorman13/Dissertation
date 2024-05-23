@@ -73,6 +73,7 @@ mturk-and-gmail.txt
 /.quarto/
 /.luarc.json
 .Rproj.user
+.cursorignore
 
 # specific file keep
 !readme.md

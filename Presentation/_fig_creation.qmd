@@ -1,0 +1,81 @@
+
+
+
+```{r}
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,here)
+walk(c("Display_Functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
+
+# Function to simulate exponential learning data
+sim_exp <- function(N, alpha, beta, r, t0 = 0, sdlog = .1) {
+  t0 + (alpha + (beta-alpha) * exp(-r * N)) + rlnorm(length(N), 0, sdlog)
+}
+
+# Parameters for simulation
+N <- 1:50  # Number of trials
+alpha <- 5  # Initial performance level
+beta <- 15  # improvement
+
+# Parameters for two groups
+r_fast <- 0.1  # Faster learning rate
+r_slow <- 0.05  # Slower learning rate
+
+# Simulate data for two groups
+set.seed(123)  # For reproducibility
+data_fast <- sim_exp(N, alpha-3, beta, r_fast)
+data_slow <- sim_exp(N, alpha, beta, r_slow)
+
+# Combine data into a single dataframe
+data <- data.frame(
+  Trial = rep(N, 2),
+  Performance = c(data_fast, data_slow),
+  Group = factor(rep(c("Low Variability", "High Variability"), each = length(N)), levels=c("Low Variability", "High Variability"))
+)
+
+# Plot the data using ggplot2
+tr_p <- ggplot(data, aes(x = Trial, y = Performance, color = Group)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    title = "Learning Curves for Low and High Variability Training",
+    x = "Training Trial",
+    y = "Error",
+    color = "Group"
+  ) + ylim(0,20) +  theme(
+    #panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# ggsave(here::here("Presentation/assets/train_pattern.png"), tr_p)
+```
+
+
+```{r}
+
+# Simulate testing data for two groups
+set.seed(123)  # For reproducibility
+test_data_fast <- rnorm(length(N), mean = 5, sd = 1)
+test_data_slow <- rnorm(length(N), mean = 2.5, sd = 1)
+
+# Combine testing data into a single dataframe
+test_data <- data.frame(
+  Trial = rep(N, 2),
+  Performance = c(test_data_fast, test_data_slow),
+  Group = factor(rep(c("Low Variability", "High Variability"), each = length(N)), levels=c("Low Variability", "High Variability"))
+)
+
+# Plot the testing data using ggplot2
+test_p <- ggplot(test_data, aes(x = Group, y = Performance, fill = Group)) +
+  stat_summary(fun = mean, geom = "bar", position = "dodge", width = 0.7) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", position = position_dodge(0.7), width = 0.25) +
+  labs(
+    title = "Testing Performance for Low and High Variability Training",
+    x = "Group",
+    y = "Error",
+    fill = "Group"
+  ) + ylim(0, 10) + theme(
+    panel.grid.minor = element_blank()
+  )
+
+# ggsave(here::here("Presentation/assets/test_pattern.png"), test_p)
+```
+

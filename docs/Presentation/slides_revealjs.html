@@ -246,6 +246,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -327,7 +328,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section class="quarto-title-block center">
   <h1 class="title">The Role of Variability in Learning Generalization: A Computational Modeling Approach</h1>
   <p class="subtitle">Dissertation Defense</p>
 
@@ -343,38 +344,61 @@
 </div>
 
 </section>
-<section id="introduction" class="slide level2 center">
-<h2>Introduction</h2>
+
+
+<section class="slide level2 center">
+<h2>Common Empirical Patterns</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3>Training</h3>
 <ul>
-<li>Investigate effects of training variability on learning and generalization</li>
-<li>Focus areas: visuomotor skill learning and function learning tasks</li>
+<li>Both training conditions complete the same number of training trials.</li>
+<li>Varied group has worse training performance.</li>
+</ul>
+<p><img data-src="assets/train_pattern.png"></p>
+</div><div class="column" style="width:40%;">
+<div class="fragment">
+<!-- -->
+<h3>Testing</h3>
+<ul>
+<li>Tested from novel conditions.</li>
+<li>Varied group has better test performance</li>
+</ul>
+<p><img data-src="assets/test_pattern.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>But also plenty of contradictory results and complications</h2>
+<ul>
+<li>Cases where varied training makes no difference</li>
+<li>Cases where more training variation results in worse outcomes</li>
+<li>Cases where the influence of variation interacts with some other factor
+<ul>
+<li>difficulty</li>
+<li>prior knowledge</li>
+<li>Frequency effects, or amount of training/learning before testing</li>
+</ul></li>
 </ul>
 </section>
-<section id="background-and-motivation" class="slide level2 center">
-<h2>Background and Motivation</h2>
-<ul>
-<li>Importance of training variability</li>
-<li>Research gaps in visuomotor skill learning</li>
-<li>Previous research in category learning, language learning, and function learning</li>
-</ul>
-</section>
-<section id="theoretical-frameworks" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Theoretical Frameworks</h2>
 <ul>
 <li>Schema Theory (Schmidt, 1975)</li>
 <li>Desirable Difficulties Framework (Bjork &amp; Bjork, 2011)</li>
 <li>Challenge Point Framework (Guadagnoli &amp; Lee, 2004)</li>
 </ul>
-
-<img data-src="assets/fig-toy-model1-1-1.png" class="r-stretch"></section>
-<section id="overview-of-current-work" class="slide level2 center">
+<!-- ![](assets/fig-toy-model1-1-1.png) -->
+</section>
+<section class="slide level2 center">
 <h2>Overview of Current Work</h2>
 <ul>
 <li>Project 1: Visuomotor projectile launching task</li>
 <li>Project 2: Visuomotor extrapolation task</li>
 </ul>
 </section>
-<section id="project-1---hit-the-target-htt" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Project 1 - Hit The Target (HTT)</h2>
 <ul>
 <li>Influence of varied practice in a projectile launching task</li>
@@ -385,30 +409,80 @@
 </ul></li>
 </ul>
 </section>
-<section id="project-1---methodology" class="slide level2 center">
-<h2>Project 1 - Methodology</h2>
+<section class="slide level2 center">
+<h2>Project 1 - Task &amp; Procedure</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="assets/methodsFig1.png"></p>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>Task description and experimental design</li>
-<li>Participants and procedures</li>
-<li>IGAS model introduction</li>
+<li><strong>Training Stage</strong> - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.</li>
+<li><strong>Transfer Stage</strong> - All subjects tested from both positions they were trained, and the positions trained by other group</li>
+<li><strong>Data recorded</strong> - For every throw, recorded the X velocity and Y velocity of ball at release</li>
 </ul>
-
-<img data-src="assets/methodsFig1.png" class="r-stretch"></section>
-<section id="project-1---results-and-discussion" class="slide level2 center">
-<h2>Project 1 - Results and Discussion</h2>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>Project 1 - Manipulations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>Experiment 1</h3>
+<ul>
+<li>Train a varied group from 2 positions, and a constant group from 1. Then test both groups, from the training positions and a novel position.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3>Experiment 2</h3>
+<ul>
+<li>6 constant conditions, each trained from a unique location, and a varied condition trained from 2 locations</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>Project 1 - Results</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<h3>Experiment 1</h3>
+<p><img data-src="assets/fig-IGAS_Testing1-1-2.png"></p>
+</div><div class="column" style="width:60%;">
+<h3>Experiment 2</h3>
+<p><img data-src="assets/fig-e2testa-1-2.png"></p>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>Project 1 - Discussion</h2>
 <ul>
 <li>Varied training group’s superior performance</li>
 <li>Computational modeling results with IGAS</li>
 <li>Theoretical implications</li>
 </ul>
 </section>
-<section id="computational-model" class="slide level2 center">
-<h2>Computational Model</h2>
-<p><strong>Equation 1:</strong> <span class="math display">\[ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) \]</span></p>
-<p><strong>Equation 2:</strong> <span class="math display">\[ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \]</span></p>
+<section class="slide level2 smaller center">
+<h2>Project 1 Computational Model</h2>
+<h3>Model of Similarity between training and solutions</h3>
+
+<img data-src="assets/fig-taskSpace-1-1.png" class="r-stretch"></section>
+<section class="slide level2 smaller center">
+<h2>Project 1 Computational Model</h2>
+<ul>
+<li>For each subject, compute similarity between training throws and each of the 6 testing locations</li>
+<li>Test whether similarity explains the difference in performance between Constant and Varied conditions
+<ul>
+<li>Assuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference</li>
+<li>Assume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied.</li>
+</ul></li>
+</ul>
+<div class="footer">
+<p><strong>Equation 1:</strong> <span class="math display">\[ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) \]</span> <strong>Equation 2:</strong> <span class="math display">\[ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \]</span></p>
+</div>
 </section>
-<section id="project-2---hit-the-wall-htw" class="slide level2 center">
-<h2>Project 2 - Hit The Wall (HTW)</h2>
+<section class="slide level2 smaller center">
+<h2>Project 1 General Discussion</h2>
+</section>
+<section class="slide level2 center">
+<h2>Project 2 - Variability and Extrapolation in a Function Learning Task</h2>
 <ul>
 <li>Influence of varied practice in a function learning task</li>
 <li>Experiments 1, 2, and 3:
@@ -418,13 +492,21 @@
 </ul></li>
 </ul>
 </section>
-<section id="project-2---methodology" class="slide level2 center">
+<section class="slide level2 center">
+<h2>Project 2 - Questions and Goals</h2>
+<p><strong>Empirical</strong> - Design a task-space large enough to assess multiple degrees of extrapolation - Compare varied and constant generalization from several distinct distances from their nearest training condition</p>
+<p><strong>Model-based</strong> - If variation does influence extrapolation, can a connectionist model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses</p>
+</section>
+<section class="slide level2 center">
 <h2>Project 2 - Methodology</h2>
 <ul>
-<li>Task description and experimental design</li>
-<li>Participants and procedures</li>
-<li>Application of ALM and EXAM models</li>
+<li>A total of 156 participants from IU’s online subject pool</li>
+<li>Varied group trains from 3 “velocity bands”, constant group from 1</li>
 </ul>
+
+<img data-src="assets/htw_task_fig.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Methodology</h2>
 <div class="cell" data-fig-width="7" data-fig-height="2.5" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-design-e1" class="quarto-float quarto-figure quarto-figure-center">
@@ -522,19 +604,155 @@ Figure&nbsp;1: Experiment 1 Design. Constant and Varied participants complete di
 </div>
 </div>
 </section>
-<section id="project-2---results-and-discussion" class="slide level2 center">
-<h2>Project 2 - Results and Discussion</h2>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 1 Results</h2>
+
+<img data-src="assets/fig-e1-train-dev-1-1.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 1 Results</h2>
+
+<img data-src="assets/fig-e1-test-dev-1-3.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 2 Design</h2>
+
+<img data-src="assets/e2_design.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 2 Results</h2>
+
+<img data-src="assets/fig-e2-train-dev-1-1.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 2 Results</h2>
+
+<img data-src="assets/fig-e2-test-dev-1-3.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 2 Results</h2>
+
+<img data-src="assets/fig-e2-bmm-vx-1-2.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 2 - Experiment 3 Design</h2>
 <ul>
-<li>Training variability’s mixed results</li>
-<li>Modeling analysis with ALM and EXAM</li>
-<li>Theoretical implications</li>
+<li>Ordinal feedback</li>
+<li>Include both the original order (E1) and reverse order (E2)</li>
 </ul>
 </section>
-<section id="project-2---alm" class="slide level2 center">
+<section class="slide level2 center">
+<h2>Project 3 - Experiment 3 Results</h2>
+
+<img data-src="assets/fig-e3-train-dev-1-1.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 3 - Experiment 3 Results</h2>
+
+<img data-src="assets/fig-e3-test-dev-1-3.png" class="r-stretch"></section>
+<section class="slide level2 center">
+<h2>Project 3 - Experiment 3 Results</h2>
+
+<img data-src="assets/fig-e3-bmm-vx-1-2.png" class="r-stretch"></section>
+<section class="slide level2 center">
 <h2>Project 2 - ALM</h2>
 
 <img data-src="assets/fig-alm-diagram-1-1.png" class="r-stretch"></section>
-<section id="general-discussion" class="slide level2 center">
+<section class="slide level2 center">
+<h2>ALM</h2>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 40%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>ALM Response Generation</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input Activation</td>
+<td><span class="math inline">\(a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}\)</span></td>
+<td>Input nodes activate as a function of Gaussian similarity to stimulus</td>
+</tr>
+<tr class="even">
+<td>Output Activation</td>
+<td><span class="math inline">\(O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)\)</span></td>
+<td>Output unit <span class="math inline">\(O_j\)</span> activation is the weighted sum of input activations and association weights</td>
+</tr>
+<tr class="odd">
+<td>Output Probability</td>
+<td><span class="math inline">\(P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}\)</span></td>
+<td>The response, <span class="math inline">\(Y_j\)</span> probabilites computed via Luce’s choice rule</td>
+</tr>
+<tr class="even">
+<td>Mean Output</td>
+<td><span class="math inline">\(m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}\)</span></td>
+<td>Weighted average of probabilities determines response to X</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>ALM Learning</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Feedback</td>
+<td><span class="math inline">\(f_j(Z) = e^{-c(Z-Y_j)^2}\)</span></td>
+<td>feedback signal Z computed as similarity between ideal response and observed response</td>
+</tr>
+<tr class="odd">
+<td>magnitude of error</td>
+<td><span class="math inline">\(\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)\)</span></td>
+<td>Delta rule to update weights.</td>
+</tr>
+<tr class="even">
+<td>Update Weights</td>
+<td><span class="math inline">\(w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}\)</span></td>
+<td>Updates scaled by learning rate parameter <span class="math inline">\(\eta\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 center">
+<h2>EXAM</h2>
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 46%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>EXAM Response Generation</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Instance Retrieval</td>
+<td><span class="math inline">\(P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}\)</span></td>
+<td>Novel test stimulus <span class="math inline">\(X\)</span> activates input nodes <span class="math inline">\(X_i\)</span></td>
+</tr>
+<tr class="even">
+<td>Slope Computation</td>
+<td><span class="math inline">\(S = \frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}\)</span></td>
+<td>Slope value, <span class="math inline">\(S\)</span> computed from nearest training instances</td>
+</tr>
+<tr class="odd">
+<td>Response</td>
+<td><span class="math inline">\(E[Y|X_i] = m(X_i) + S \cdot [X - X_i]\)</span></td>
+<td>Final EXAM response is the ALM response for the nearest training stimulus, <span class="math inline">\(m(X_i)\)</span>, adjusted by local slope <span class="math inline">\(S\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 center">
+<h2>Project 2 - Model Fitting Procedure</h2>
+<h3>Approximate Bayesian Computation</h3>
+</section>
+<section class="slide level2 center">
+<h2>Modelling Results</h2>
+
+<img data-src="assets/fig-ee-e1-1.png" class="r-stretch"></section>
+<section class="slide level2 center">
 <h2>General Discussion</h2>
 <ul>
 <li>Compare HTT and HTW</li>
@@ -542,13 +760,13 @@ Figure&nbsp;1: Experiment 1 Design. Constant and Varied participants complete di
 <li>Computational modeling contributions</li>
 </ul>
 </section>
-<section id="comparison" class="slide level2 smaller center">
+<section class="slide level2 smaller center">
 <h2>Comparison</h2>
 <table>
 <colgroup>
-<col style="width: 14%">
-<col style="width: 48%">
-<col style="width: 37%">
+<col style="width: 21%">
+<col style="width: 43%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -601,70 +819,82 @@ Figure&nbsp;1: Experiment 1 Design. Constant and Varied participants complete di
 </tbody>
 </table>
 </section>
-<section id="theoretical-contributions" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Theoretical Contributions</h2>
 <ul>
 <li>Insights into training variability effects on learning and generalization</li>
 <li>Computational models applications</li>
 </ul>
 </section>
-<section id="practical-implications" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Practical Implications</h2>
 <ul>
 <li>Training programs design implications</li>
 <li>Future research considerations</li>
 </ul>
 </section>
-<section id="limitations-and-future-directions" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Limitations and Future Directions</h2>
 <ul>
 <li>Study limitations</li>
 <li>Future research suggestions</li>
 </ul>
 </section>
-<section id="conclusion" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Conclusion</h2>
 <ul>
 <li>Recap of key findings</li>
 <li>Final thoughts on training variability’s role in learning</li>
 </ul>
 </section>
-<section id="questions-and-discussion" class="slide level2 center">
+<section class="slide level2 center">
 <h2>Questions and Discussion</h2>
 <ul>
 <li>Open floor for questions from the committee and audience</li>
 </ul>
 <!-- create slide with 2 columns and add text -->
 </section>
-<section id="future-research-directions" class="slide level2 smaller center">
+<section class="slide level2 smaller center">
 <h2>Future Research Directions</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="theoretical-extensions">Theoretical Extensions</h3>
+<div class="fragment">
+<!-- -->
+<h3>Theoretical Extensions</h3>
 <ul>
 <li>Investigate the role of individual differences in training variability effects.</li>
 <li>Explore the impact of different types of feedback on learning and generalization.</li>
 <li>Examine the influence of task complexity on the benefits of varied training.</li>
 </ul>
-<h3 id="methodological-innovations">Methodological Innovations</h3>
+</div>
+<div class="fragment">
+<!-- -->
+<h3>Methodological Innovations</h3>
 <ul>
 <li>Develop new experimental paradigms to test training variability in more complex tasks.</li>
 <li>Utilize advanced computational models to simulate learning processes under varied conditions.</li>
 <li>Implement longitudinal studies to assess long-term effects of training variability.</li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
-<h3 id="practical-applications">Practical Applications</h3>
+<div class="fragment">
+<!-- -->
+<h3>Practical Applications</h3>
 <ul>
 <li>Design adaptive training programs that adjust variability based on learner performance.</li>
 <li>Apply findings to educational settings to enhance learning outcomes.</li>
 <li>Use insights to improve training protocols in professional skill development.</li>
 </ul>
-<h3 id="collaborative-opportunities">Collaborative Opportunities</h3>
+</div>
+<div class="fragment">
+<!-- -->
+<h3>Collaborative Opportunities</h3>
 <ul>
 <li>Partner with educational institutions to test training variability in classroom settings.</li>
 <li>Collaborate with industry professionals to apply research findings in real-world training programs.</li>
 <li>Engage with interdisciplinary teams to explore the broader implications of training variability.</li>
 </ul>
+</div>
 </div>
 </div>
 </section>

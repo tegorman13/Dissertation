@@ -19,13 +19,59 @@ Thomas Gorman
 
 ------------------------------------------------------------------------
 
+## Common Empirical Patterns
+
+<div class="columns">
+
+<div class="column" width="60%">
+
+### Training
+
+- Both training conditions complete the same number of training trials.
+- Varied group has worse training performance.
+
+![](assets/train_pattern.png)
+
+</div>
+
+<div class="column" width="40%">
+
+<div class="fragment">
+
+### Testing
+
+- Tested from novel conditions.
+- Varied group has better test performance
+
+![](assets/test_pattern.png)
+
+</div>
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+## But also plenty of contradictory results and complications
+
+- Cases where varied training makes no difference
+- Cases where more training variation results in worse outcomes
+- Cases where the influence of variation interacts with some other
+  factor
+  - difficulty
+  - prior knowledge
+  - Frequency effects, or amount of training/learning before testing
+
+------------------------------------------------------------------------
+
 ## Theoretical Frameworks
 
 - Schema Theory (Schmidt, 1975)
 - Desirable Difficulties Framework (Bjork & Bjork, 2011)
 - Challenge Point Framework (Guadagnoli & Lee, 2004)
 
-![](assets/fig-toy-model1-1-1.png)
+<!-- ![](assets/fig-toy-model1-1-1.png) -->
 
 ------------------------------------------------------------------------
 
@@ -45,17 +91,83 @@ Thomas Gorman
 
 ------------------------------------------------------------------------
 
-## Project 1 - Methodology
+## Project 1 - Task & Procedure
 
-- Task description and experimental design
-- Participants and procedures
-- IGAS model introduction
+<div class="columns">
+
+<div class="column" width="50%">
 
 ![](assets/methodsFig1.png)
 
+</div>
+
+<div class="column" width="50%">
+
+- **Training Stage** - 200 training trials. Constant groups throws from
+  single position. Varied group 60 trials from 2 locations.
+- **Transfer Stage** - All subjects tested from both positions they were
+  trained, and the positions trained by other group
+- **Data recorded** - For every throw, recorded the X velocity and Y
+  velocity of ball at release
+
+</div>
+
+</div>
+
 ------------------------------------------------------------------------
 
-## Project 1 - Results and Discussion
+## Project 1 - Manipulations
+
+<div class="columns">
+
+<div class="column" width="50%">
+
+### Experiment 1
+
+- Train a varied group from 2 positions, and a constant group from 1.
+  Then test both groups, from the training positions and a novel
+  position.
+
+</div>
+
+<div class="column" width="50%">
+
+### Experiment 2
+
+- 6 constant conditions, each trained from a unique location, and a
+  varied condition trained from 2 locations
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+## Project 1 - Results
+
+<div class="columns">
+
+<div class="column" width="40%">
+
+### Experiment 1
+
+![](assets/fig-IGAS_Testing1-1-2.png)
+
+</div>
+
+<div class="column" width="60%">
+
+### Experiment 2
+
+![](assets/fig-e2testa-1-2.png)
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+## Project 1 - Discussion
 
 - Varied training group’s superior performance
 - Computational modeling results with IGAS
@@ -63,17 +175,40 @@ Thomas Gorman
 
 ------------------------------------------------------------------------
 
-## Computational Model
+## Project 1 Computational Model
 
-**Equation 1:**
-$$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) $$
+### Model of Similarity between training and solutions
 
-**Equation 2:**
-$$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$
+![](assets/fig-taskSpace-1-1.png)
 
 ------------------------------------------------------------------------
 
-## Project 2 - Hit The Wall (HTW)
+## Project 1 Computational Model
+
+- For each subject, compute similarity between training throws and each
+  of the 6 testing locations
+- Test whether similarity explains the difference in performance between
+  Constant and Varied conditions
+  - Assuming equivalent generalization (1 c for both groups) -
+    similarity improves model fit, but does not explain group difference
+  - Assume training condition influences generalization gradient (fit c
+    separately) - now similarity does explain the difference between
+    Constant and Varied.
+
+<div class="footer">
+
+**Equation 1:**
+$$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) $$
+**Equation 2:**
+$$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$
+
+</div>
+
+## Project 1 General Discussion
+
+------------------------------------------------------------------------
+
+## Project 2 - Variability and Extrapolation in a Function Learning Task
 
 - Influence of varied practice in a function learning task
 - Experiments 1, 2, and 3:
@@ -82,19 +217,69 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 
 ------------------------------------------------------------------------
 
+## Project 2 - Questions and Goals
+
+**Empirical** - Design a task-space large enough to assess multiple
+degrees of extrapolation - Compare varied and constant generalization
+from several distinct distances from their nearest training condition
+
+**Model-based** - If variation does influence extrapolation, can a
+connectionist model with similarity-based activation provide a good
+account? - Can our modelling framework simultaneously account for both
+training and testing data? - Accounting for the full distribution of
+responses
+
 ## Project 2 - Methodology
 
-- Task description and experimental design
-- Participants and procedures
-- Application of ALM and EXAM models
+- A total of 156 participants from IU’s online subject pool
+- Varied group trains from 3 “velocity bands”, constant group from 1
+
+![](assets/htw_task_fig.png)
+
+## Project 2 - Methodology
 
 ------------------------------------------------------------------------
 
-## Project 2 - Results and Discussion
+## Project 2 - Experiment 1 Results
 
-- Training variability’s mixed results
-- Modeling analysis with ALM and EXAM
-- Theoretical implications
+![](assets/fig-e1-train-dev-1-1.png)
+
+## Project 2 - Experiment 1 Results
+
+![](assets/fig-e1-test-dev-1-3.png)
+
+## Project 2 - Experiment 2 Design
+
+![](assets/e2_design.png)
+
+## Project 2 - Experiment 2 Results
+
+![](assets/fig-e2-train-dev-1-1.png)
+
+## Project 2 - Experiment 2 Results
+
+![](assets/fig-e2-test-dev-1-3.png)
+
+## Project 2 - Experiment 2 Results
+
+![](assets/fig-e2-bmm-vx-1-2.png)
+
+## Project 2 - Experiment 3 Design
+
+- Ordinal feedback
+- Include both the original order (E1) and reverse order (E2)
+
+## Project 3 - Experiment 3 Results
+
+![](assets/fig-e3-train-dev-1-1.png)
+
+## Project 3 - Experiment 3 Results
+
+![](assets/fig-e3-test-dev-1-3.png)
+
+## Project 3 - Experiment 3 Results
+
+![](assets/fig-e3-bmm-vx-1-2.png)
 
 ------------------------------------------------------------------------
 
@@ -103,6 +288,39 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 ![](assets/fig-alm-diagram-1-1.png)
 
 ------------------------------------------------------------------------
+
+## ALM
+
+|  | **ALM Response Generation** |  |
+|----|----|----|
+| Input Activation | $a_i(X) = \frac{e^{-c(X-X_i)^2}}{\sum_{k=1}^M e^{-c(X-X_k)^2}}$ | Input nodes activate as a function of Gaussian similarity to stimulus |
+| Output Activation | $O_j(X) = \sum_{k=1}^M w_{ji} \cdot a_i(X)$ | Output unit $O_j$ activation is the weighted sum of input activations and association weights |
+| Output Probability | $P[Y_j|X] = \frac{O_j(X)}{\sum_{k=1}^M O_k(X)}$ | The response, $Y_j$ probabilites computed via Luce’s choice rule |
+| Mean Output | $m(X) = \sum_{j=1}^L Y_j \cdot \frac{O_j(x)}{\sum_{k=1}^M O_k(X)}$ | Weighted average of probabilities determines response to X |
+|  | **ALM Learning** |  |
+| Feedback | $f_j(Z) = e^{-c(Z-Y_j)^2}$ | feedback signal Z computed as similarity between ideal response and observed response |
+| magnitude of error | $\Delta_{ji}=(f_{j}(Z)-o_{j}(X))a_{i}(X)$ | Delta rule to update weights. |
+| Update Weights | $w_{ji}^{new}=w_{ji}+\eta\Delta_{ji}$ | Updates scaled by learning rate parameter $\eta$. |
+
+------------------------------------------------------------------------
+
+## EXAM
+
+|  | **EXAM Response Generation** |  |
+|----|----|----|
+| Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$ | Novel test stimulus $X$ activates input nodes $X_i$ |
+| Slope Computation | $S = \frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$ | Slope value, $S$ computed from nearest training instances |
+| Response | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$ | Final EXAM response is the ALM response for the nearest training stimulus, $m(X_i)$, adjusted by local slope $S$. |
+
+------------------------------------------------------------------------
+
+## Project 2 - Model Fitting Procedure
+
+### Approximate Bayesian Computation
+
+## Modelling Results
+
+![](assets/fig-ee-e1-1.png)
 
 ## General Discussion
 
@@ -168,6 +386,8 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 
 <div class="column" width="50%">
 
+<div class="fragment">
+
 ### Theoretical Extensions
 
 - Investigate the role of individual differences in training variability
@@ -176,6 +396,10 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
   generalization.
 - Examine the influence of task complexity on the benefits of varied
   training.
+
+</div>
+
+<div class="fragment">
 
 ### Methodological Innovations
 
@@ -188,7 +412,11 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 
 </div>
 
+</div>
+
 <div class="column" width="50%">
+
+<div class="fragment">
 
 ### Practical Applications
 
@@ -198,6 +426,10 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 - Use insights to improve training protocols in professional skill
   development.
 
+</div>
+
+<div class="fragment">
+
 ### Collaborative Opportunities
 
 - Partner with educational institutions to test training variability in
@@ -206,6 +438,8 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
   real-world training programs.
 - Engage with interdisciplinary teams to explore the broader
   implications of training variability.
+
+</div>
 
 </div>
 
