@@ -1,0 +1,27 @@
+.reveal h1 {
+    font-size: 44px; /* Adjust the font size as needed */
+}
+
+.reveal[data-navigation-mode=linear] .title-slide h1 {
+    font-size: 44px;
+}
+
+.reveal .quarto-title-block .quarto-title-authors {
+    padding-top: 10em;
+}
+
+
+/* Specific style for h1 on the title slide */
+/* .reveal .title-slide h1 {
+    font-size: 40px; /* Larger font size for the title slide */
+/* } */
+
+/* .reveal .title-slide slide level1 center present {
+    font-size: 40px; 
+}  */
+
+
+
+/* .reveal .quarto-title-block .quarto-title-authors .quarto-title-author a {
+    padding-top: 15em;
+} */

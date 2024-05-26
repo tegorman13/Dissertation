@@ -1,18 +1,22 @@
 ---
 title: "The Role of Variability in Learning Generalization: A Computational Modeling Approach"
-subtitle: "Dissertation Defense"
 page-layout: full
 aliases:
   - /slides.html
+css: /Assets/Style/slides.css
 format: 
-  html: default
+  html: 
+    subtitle: "Dissertation Defense"
     #toc: true
     #shift-heading-level-by: 1
     #toc-expand: true
   clean-revealjs:
     #theme: moon #white
     #output-ext: revealjs.html
+    # template-partials:
+    #   - assets/title-slide.html
     output-file: slides_revealjs
+    date: 05/28/204
     slideNumber: true
     hash-type: number # Use slide numbers in the URL hash
     center: true
@@ -159,7 +163,7 @@ Presentation slides are available below. You can navigate these sides using the 
 :::: {.column width="60%"}
 
 ::: {.content-visible when-format="html"}
-![](assets/htt_vid.mov){height="540" loop="true" autoplay="true"}
+![](assets/htt_vid.mov){height="540" loop="true" autoplay="true" style="max-width: 100%"}
 :::
 
 ::: {.content-visible unless-format="html"}
@@ -284,8 +288,10 @@ Presentation slides are available below. You can navigate these sides using the 
 <!-- {{< video assets/htw_vid.mov width="720" height="540" >}} -->
 
 ::: {.content-visible when-format="html"}
-![](assets/htw_vid.mov){height="540" loop="true" autoplay="true"}
+![](assets/htw_vid.mov){height="400" loop="true" autoplay="true"}
 :::
+-   A total of 156 participants from IU's online subject pool
+-   Varied group trains from 3 "velocity bands", constant group from 1
 
 ::: {.content-visible unless-format="html"}
 ![](assets/htw_task_fig.png)
