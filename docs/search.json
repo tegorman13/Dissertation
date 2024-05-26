@@ -2129,5 +2129,25 @@
     "crumbs": [
       "Slides"
     ]
+  },
+  {
+    "objectID": "Presentation/slides.html#hit-the-target-task",
+    "href": "Presentation/slides.html#hit-the-target-task",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Hit The Target Task",
+    "text": "Hit The Target Task\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#hit-the-wall-task",
+    "href": "Presentation/slides.html#hit-the-wall-task",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Hit The Wall Task",
+    "text": "Hit The Wall Task\n\nVideo",
+    "crumbs": [
+      "Slides"
+    ]
   }
 ]
