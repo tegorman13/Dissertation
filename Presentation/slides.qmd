@@ -18,10 +18,10 @@ format:
       theme: whiteboard
   pptx:
     incremental: true
-  # hugo-md:
-  #   include: false
-  #   html-math-method: mathjax
-  #   output-file: slides_hugo.md
+  hugo-md:
+    include: false
+    html-math-method: mathjax
+    output-file: slides_hugo.md
   gfm:
     output: false
     output-file: slides_gfm.md
@@ -154,11 +154,20 @@ Presentation slides are available below. You can navigate these sides using the 
 
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
+<!-- ![](assets/methodsFig1.png) -->
+
+::: {.content-visible when-format="html"}
+![](assets/htt_vid.mov){height="540" loop="true" autoplay="true"}
+:::
+
+::: {.content-visible unless-format="html"}
 ![](assets/methodsFig1.png)
 :::
 
-::: {.column width="50%"}
+:::
+
+::: {.column width="40%"}
 - **Training Stage** - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations. 
 - **Transfer Stage** - All subjects tested from both positions they were trained, and the positions trained by other group
 - **Data recorded** - For every throw, recorded the X velocity and Y velocity of ball at release
@@ -167,6 +176,7 @@ Presentation slides are available below. You can navigate these sides using the 
 ::::
 
 ------------------------------------------------------------------------
+
 
 ## Project 1 - Manipulations
 
@@ -265,9 +275,21 @@ Presentation slides are available below. You can navigate these sides using the 
 - Can our modelling framework simultaneously account for both training and testing data?
 - Accounting for the full distribution of responses
 
+------------------------------------------------------------------------
 
+## Task
 
+<!-- {{< video assets/htw_vid.mov width="720" height="540" >}} -->
 
+::: {.content-visible when-format="html"}
+![](assets/htw_vid.mov){height="540" loop="true" autoplay="true"}
+:::
+
+::: {.content-visible unless-format="html"}
+![](assets/htw_task_fig.png)
+:::
+
+------------------------------------------------------------------------
 
 ## Project 2 - Methodology
 
@@ -456,7 +478,8 @@ digraph {
 
 -   Open floor for questions from the committee and audience
 
-<!-- create slide with 2 columns and add text -->
+
+
 
 ## Future Research Directions {.smaller .r-fit-text}
 

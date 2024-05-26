@@ -1552,8 +1552,8 @@
     "objectID": "Presentation/slides.html#section",
     "href": "Presentation/slides.html#section",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
-    "section": "",
-    "text": "Table 1: Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).\n\n\n\n\n\n\n\n\n\n\nDimension\nHTT (Project 1)\nHTW (Project 2)\n\n\n\n\nTask Description\nProjectile launching to hit a target\nProjectile launching to hit wall at a specific velocity\n\n\nTask Complexity\nMore complex parabolic trajectory, both x and y velocities relevant to outcome\nSimpler 1D mapping of force to outcome. Only x velocity is relevant.\n\n\nTask Space\nMore complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.\nSimpler: smooth, linear mapping between velocity and feedback.\n\n\nPerceptual salience of Varied Conditions\nVaried conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target.\nVaried conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen.\n\n\nTesting Feedback\nTesting always included feedback\nPrimary testing stage had no feedback.\n\n\nPotential for Learning during Testing\nLimited potential for learning during testing due to feedback.\nSome potential for learning during no-feedback testing by observing ball trajectory.\n\n\nTraining Experience\nVaried group gets half as much experience on any one position as the constant group.\nVaried group gets 1/3 as much experience on any one velocity band as the constant group.\n\n\nTesting Structure\nRandom interleaving of trained/transfer testing distances.\nBlocked structure, separately testing trained vs extrapolation testing bands.",
+    "section": "Video",
+    "text": "Video",
     "crumbs": [
       "Slides"
     ]
@@ -1815,7 +1815,7 @@
     "href": "Presentation/slides.html#project-1---task-procedure",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Task & Procedure",
-    "text": "Project 1 - Task & Procedure\n\n\n\n\n\nTraining Stage - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
+    "text": "Project 1 - Task & Procedure\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
     "crumbs": [
       "Slides"
     ]
@@ -2106,6 +2106,26 @@
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 3 - Experiment 3 Results",
     "text": "Project 3 - Experiment 3 Results",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#task",
+    "href": "Presentation/slides.html#task",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Task",
+    "text": "Task\n\nVideo",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#task2",
+    "href": "Presentation/slides.html#task2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Task2",
+    "text": "Task2\n\nVideo",
     "crumbs": [
       "Slides"
     ]

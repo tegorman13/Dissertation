@@ -7,7 +7,9 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.37">
 
   <meta name="author" content="Thomas Gorman">
@@ -425,9 +427,10 @@
 <section class="slide level2 center">
 <h2>Project 1 - Task &amp; Procedure</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="assets/methodsFig1.png"></p>
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
+<!-- ![](assets/methodsFig1.png) -->
+<p><video data-src="assets/htt_vid.mov" loop="true" autoplay="true" height="540" controls=""><a href="assets/htt_vid.mov">Video</a></video></p>
+</div><div class="column" style="width:40%;">
 <ul>
 <li><strong>Training Stage</strong> - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.</li>
 <li><strong>Transfer Stage</strong> - All subjects tested from both positions they were trained, and the positions trained by other group</li>
@@ -509,6 +512,11 @@
 <h2>Project 2 - Questions and Goals</h2>
 <p><strong>Empirical</strong> - Design a task-space large enough to assess multiple degrees of extrapolation - Compare varied and constant generalization from several distinct distances from their nearest training condition</p>
 <p><strong>Model-based</strong> - If variation does influence extrapolation, can a connectionist model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses</p>
+</section>
+<section class="slide level2 center">
+<h2>Task</h2>
+<!--  -->
+<p><video data-src="assets/htw_vid.mov" loop="true" autoplay="true" height="540" controls=""><a href="assets/htw_vid.mov">Video</a></video></p>
 </section>
 <section class="slide level2 center">
 <h2>Project 2 - Methodology</h2>
@@ -865,7 +873,6 @@ Figure&nbsp;1: Experiment 1 Design. Constant and Varied participants complete di
 <ul>
 <li>Open floor for questions from the committee and audience</li>
 </ul>
-<!-- create slide with 2 columns and add text -->
 </section>
 <section class="slide level2 smaller center">
 <h2>Future Research Directions</h2>
@@ -1319,6 +1326,7 @@ Figure&nbsp;1: Experiment 1 Design. Constant and Varied participants complete di
       }
     });
     </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
     
 
 </body></html>

@@ -95,13 +95,15 @@ Thomas Gorman
 
 <div class="columns">
 
-<div class="column" width="50%">
+<div class="column" width="60%">
+
+<!-- ![](assets/methodsFig1.png) -->
 
 ![](assets/methodsFig1.png)
 
 </div>
 
-<div class="column" width="50%">
+<div class="column" width="40%">
 
 - **Training Stage** - 200 training trials. Constant groups throws from
   single position. Varied group 60 trials from 2 locations.
@@ -228,6 +230,16 @@ connectionist model with similarity-based activation provide a good
 account? - Can our modelling framework simultaneously account for both
 training and testing data? - Accounting for the full distribution of
 responses
+
+------------------------------------------------------------------------
+
+## Task
+
+<!-- assets/htw_vid.mov -->
+
+![](assets/htw_task_fig.png)
+
+------------------------------------------------------------------------
 
 ## Project 2 - Methodology
 
@@ -377,8 +389,6 @@ responses
 ## Questions and Discussion
 
 - Open floor for questions from the committee and audience
-
-<!-- create slide with 2 columns and add text -->
 
 ## Future Research Directions
 
