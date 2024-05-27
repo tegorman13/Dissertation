@@ -293,9 +293,10 @@ some text
 ```{dot}
 //| label: fig-design-e1
 //| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
-//| fig-width: 9.5
-//| fig-height: 3.5
+//| fig-width: 9.0
+//| fig-height: 3.2
 //| echo: false  
+//| column: screen-inset-right 
 digraph {
   graph [layout = dot, rankdir = LR]
   node [shape = rectangle, style = filled]
@@ -343,6 +344,7 @@ digraph {
 //| fig-height: 4
 //| fig-responsive: false
 //| echo: false 
+//| column: screen-inset-right
 //| 
 /////| column: screen-inset-right
 digraph {

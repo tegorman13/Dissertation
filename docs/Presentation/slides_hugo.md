@@ -278,16 +278,6 @@ some text
 
 ## Project 2 - ALM
 
-<figure>
-<img src="assets/htw_e3_test3.png" alt="Plot 1" />
-<figcaption aria-hidden="true">Plot 1</figcaption>
-</figure>
-
-<figure>
-<img src="assets/htw_e3_test4.png" alt="Plot 3" />
-<figcaption aria-hidden="true">Plot 3</figcaption>
-</figure>
-
 ![](assets/fig-alm-diagram-1-1.png)
 
 ------------------------------------------------------------------------

@@ -378,22 +378,6 @@ responses
 
 ## Project 2 - ALM
 
-<div class="columns">
-
-<div class="column" width="50%">
-
-![Plot 1](assets/htw_e3_test3.png)
-
-</div>
-
-<div class="column" width="50%">
-
-![Plot 3](assets/htw_e3_test4.png)
-
-</div>
-
-</div>
-
 ![](assets/fig-alm-diagram-1-1.png)
 
 ------------------------------------------------------------------------
