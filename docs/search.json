@@ -1132,7 +1132,7 @@
     "href": "Presentation/slides.html#project-2---alm",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - ALM",
-    "text": "Project 2 - ALM",
+    "text": "Project 2 - ALM\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 3",
     "crumbs": [
       "Slides"
     ]
@@ -1865,7 +1865,7 @@
     "href": "Presentation/slides.html#project-1-computational-model",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model\n\nModel of Similarity between training and solutions",
+    "text": "Project 1 Computational Model",
     "crumbs": [
       "Slides"
     ]
@@ -1915,7 +1915,7 @@
     "href": "Presentation/slides.html#project-2---methodology-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Methodology",
-    "text": "Project 2 - Methodology\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1\n\nTest  \nNovel Bands \n100-300\n350-550\n600-800\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n800-1000\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 1: Experiment 1 Design. Constant and Varied participants complete different training conditions.",
+    "text": "Project 2 - Methodology\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1\n\nTest  \nNovel Bands \n100-300\n350-550\n600-800\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n800-1000\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 3: Experiment 1 Design. Constant and Varied participants complete different training conditions.",
     "crumbs": [
       "Slides"
     ]
@@ -1965,7 +1965,7 @@
     "href": "Presentation/slides.html#project-2---experiment-2-design",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 2 Design",
-    "text": "Project 2 - Experiment 2 Design",
+    "text": "Project 2 - Experiment 2 Design\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n100-300\n350-550\n600-800\n\n\n\nTest1\n\nTest  \nNovel Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n600-800\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n100-300\n350-550\n600-800\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 4: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.",
     "crumbs": [
       "Slides"
     ]
@@ -2005,7 +2005,7 @@
     "href": "Presentation/slides.html#project-2---model-fitting-procedure",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Model Fitting Procedure",
-    "text": "Project 2 - Model Fitting Procedure\n\nApproximate Bayesian Computation",
+    "text": "Project 2 - Model Fitting Procedure\n\nApproximate Bayesian Computation\n\n\n\n\n\nsimulation based approach\napproximate likelihood\nuncertainty in parameter values\nfull distribution of plausible model predictions for each participant",
     "crumbs": [
       "Slides"
     ]
@@ -2065,7 +2065,7 @@
     "href": "Presentation/slides.html#project-2---experiment-1-results-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 1 Results",
-    "text": "Project 2 - Experiment 1 Results",
+    "text": "Project 2 - Experiment 1 Results\n\n\n\n\n\n\nFigure 4: Experiment 1 Training Stage. Deviations from target band across training blocks. Lower values represent greater accuracy.",
     "crumbs": [
       "Slides"
     ]
@@ -2146,6 +2146,140 @@
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Hit The Wall Task",
     "text": "Hit The Wall Task\n\nVideo\n\nA total of 156 participants from IU’s online subject pool\nVaried group trains from 3 “velocity bands”, constant group from 1",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#model-of-similarity-between-training-and-solutions-1",
+    "href": "Presentation/slides.html#model-of-similarity-between-training-and-solutions-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Model of Similarity between training and solutions",
+    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\n\n\nFigure 2: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses\n\n\n\n\nsome text",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#model-of-similarity-between-training-and-solutions",
+    "href": "Presentation/slides.html#model-of-similarity-between-training-and-solutions",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Model of Similarity between training and solutions",
+    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\nFigure 1: Solution space",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-1-results-2",
+    "href": "Presentation/slides.html#project-2---experiment-1-results-2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 1 Results",
+    "text": "Project 2 - Experiment 1 Results",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#slide-title",
+    "href": "Presentation/slides.html#slide-title",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Slide Title",
+    "text": "Slide Title\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 2",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#slide-title-1",
+    "href": "Presentation/slides.html#slide-title-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Slide Title",
+    "text": "Slide Title",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#slide-1-title",
+    "href": "Presentation/slides.html#slide-1-title",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Slide 1 Title",
+    "text": "Slide 1 Title\n\n\n\nPlot 1",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#slide-2-title",
+    "href": "Presentation/slides.html#slide-2-title",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Slide 2 Title",
+    "text": "Slide 2 Title\n\n\n\nPlot 2",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/embed_slides.html",
+    "href": "Presentation/embed_slides.html",
+    "title": "Dissertation",
+    "section": "",
+    "text": "Click here to open the dissertation manuscript."
+  },
+  {
+    "objectID": "Presentation/embed_slides.html#slides",
+    "href": "Presentation/embed_slides.html#slides",
+    "title": "Dissertation",
+    "section": "Slides ",
+    "text": "Slides \nPresentation slides are available below. You can navigate these sides using the ← and → keys. Press m to display all commands (e.g., press o to switch to slide overview)\n\n Open slides in new window"
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-2-results-3",
+    "href": "Presentation/slides.html#project-2---experiment-2-results-3",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 2 Results",
+    "text": "Project 2 - Experiment 2 Results",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-3-results",
+    "href": "Presentation/slides.html#project-2---experiment-3-results",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 3 Results",
+    "text": "Project 2 - Experiment 3 Results",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#accuracy",
+    "href": "Presentation/slides.html#accuracy",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Accuracy",
+    "text": "Accuracy\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 3",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#discrimination",
+    "href": "Presentation/slides.html#discrimination",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Discrimination",
+    "text": "Discrimination\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 3",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-3",
+    "href": "Presentation/slides.html#project-2---experiment-3",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 3",
+    "text": "Project 2 - Experiment 3\n\nOrdinal Feedback\nBoth Reverse and Original Feedback Order",
     "crumbs": [
       "Slides"
     ]

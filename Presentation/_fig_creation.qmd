@@ -1,6 +1,362 @@
 
 
 
+
+# HTW Results
+
+```{r}
+
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  data.table, stringr, here,conflicted, gt, ggh4x, patchwork, knitr)
+#options(brms.backend="cmdstanr",mc.cores=4)
+walk(c("brms","dplyr","bayestestR","here"), conflict_prefer_all, quiet = TRUE)
+options(digits=2, scipen=999, dplyr.summarise.inform=FALSE)
+
+walk(c("brms","dplyr","bayestestR","here"), conflict_prefer_all, quiet = TRUE)
+walk(c("Display_Functions","deLosh_data","fun_alm","fun_indv_fit","fun_model", "prep_model_data","org_functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
+
+e1 <- readRDS(here("data/e1_08-21-23.rds")) 
+e1Sbjs <- e1 |> group_by(id,condit) |> summarise(n=n())
+testE1 <- e1 |> filter(expMode2 == "Test")
+nbins=5
+trainE1 <-  e1 |> filter(expMode2=="Train") |> group_by(id,condit, vb) |> 
+    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
+trainE1_max <- trainE1 |> filter(Trial_Bin == nbins, bandInt==800)
+trainE1_avg <- trainE1_max |> group_by(id,condit) |> summarise(avg = mean(dist))
+
+
+condEffects <- function(m,xvar){
+  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
+  stat_dist_pointinterval() + 
+  stat_halfeye(alpha=.1, height=.5) +
+  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+  
+}
+```
+
+
+## HTW E1 
+
+```{r}
+#| label: fig-e1-test-dev
+#| fig-cap: Experiment 1 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals.
+#| fig-width: 4
+#| fig-height: 4
+
+# pe1td <- testE1 |>  
+#   ggplot(aes(x = vb, y = dist,fill=condit)) +
+#     stat_summary(geom = "bar", position=position_dodge(), fun = mean) +
+#     stat_summary(geom = "errorbar", position=position_dodge(.9), fun.data = mean_se, width = .4, alpha = .7) + 
+#   theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+#   labs(x="Band", y="Deviation From Target Band")
+
+
+pe1td <- testE1 |> ggplot(aes(x = vb, y = dist,fill=condit,
+                               col=ifelse(bandType=="Trained","black","lightgray"),
+                               size=ifelse(bandType=="Trained",1.0,.5))) +
+  stat_bar + 
+  theme(legend.title.position="top",
+        legend.title = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(x="Band", y="Deviation", fill="Condition") +
+     # scale_color_manual(values = c("black" = "black"), guide = "legend") +
+  scale_color_manual(values=c("black","lightgray"), 
+                     name= "Band Type",
+                     labels = c("Trained","Extrapolation"),
+                     guide = guide_legend(override.aes = list(fill = NA))
+                     ) +
+  scale_size_continuous(range = c(0.8, 1.0), guide="none")
+
+
+bmtd <- readRDS(paste0(here::here("data/model_cache/"), "e1_dist_Cond_Type_RF_2.rds"))
+pe1ce <- bmtd |> emmeans( ~condit + bandType) |>
+  gather_emmeans_draws() |>
+ condEffects(bandType) + labs(y="Deviation", x="Band Type")
+
+#p2 <- (pe1td + pe1ce) + plot_annotation(tag_levels= 'A')
+#ggsave(here::here("Assets/figs", "e1_test-dev.png"), p2, width=8, height=4, bg="white")
+#p2
+
+
+e1_vxBMM <- readRDS(paste0(here::here("data/model_cache", "e1_testVxBand_RF_5k.rds")))
+pe1vce <- e1_vxBMM |> emmeans( ~condit + bandInt,re_formula=NA, 
+                     at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
+gather_emmeans_draws() |> 
+condEffects(bandInt) +
+stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
+  geom_abline(slope = 1, intercept = 200, linetype = "dashed", color = "gray", size = .5,alpha=.5) +
+scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
+                   labels = levels(testE1$vb), 
+                   limits = c(100, 1200)) + 
+scale_y_continuous(expand=expansion(add=100),breaks=round(seq(400,1400,by=200),2)) +
+theme(legend.position="none") + 
+  #theme(legend.title=element_blank(),legend.position="right") + 
+labs(y="Velcoity", x="Band")
+
+fe <- fixef(e1_vxBMM)[,1]
+fixed_effect_bandInt <- fixef(e1_vxBMM)[,1]["bandInt"]
+fixed_effect_interaction <- fixef(e1_vxBMM)[,1]["conditVaried:bandInt"]
+
+re <- data.frame(ranef(e1_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
+  rownames_to_column("id") |> 
+  left_join(e1Sbjs,by="id") |>
+  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction*(condit=="Varied"),slope = Estimate + adjust )
+
+
+pid_den1 <- ggplot(re, aes(x = slope, fill = condit)) + 
+  geom_density(alpha=.5) + 
+  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
+   theme(legend.title=element_blank()) + 
+  labs(x="Slope Coefficient",y="Density")
+
+pid_slopes1 <- re |>  mutate(id=reorder(id,slope)) |>
+  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
+    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
+  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+     theme(legend.title=element_blank(), 
+           axis.text.y = element_text(size=6) ) + 
+    labs(x="Estimated Slope", y="Participant")  + 
+    ggh4x::facet_wrap2(~condit,axes="all",scales="free_y")
+
+pe1td
+pe1ce
+
+pe1vce
+pid_den1
+pid_slopes1
+
+ggsave(here::here("Presentation/assets/htw_e1_test1.png"), pe1td, width = 4.0, height = 3, units = "in", dpi = 300)
+ggsave(here::here("Presentation/assets/htw_e1_test2.png"), pe1ce, width = 4.0, height = 3, units = "in", dpi = 300)
+ggsave(here::here("Presentation/assets/htw_e1_test3.png"), pe1vce, width = 4.0, height = 3, units = "in", dpi = 300)
+ggsave(here::here("Presentation/assets/htw_e1_test4.png"), pid_den1, width = 4.0, height = 3, units = "in", dpi = 300)
+ggsave(here::here("Presentation/assets/htw_e1_test5.png"), pid_slopes1, width = 4.0, height = 3, units = "in", dpi = 300)
+```
+
+
+## HTW Experiment 2
+
+```{r}
+#| label: fig-e2-test-dev
+#| fig-cap: Experiment 2 Testing Accuracy. A) Empricial Deviations from target band during testing without feedback stage. B) Conditional effect of condition (Constant vs. Varied) and testing band type (trained bands vs. novel extrapolation bands) on testing accuracy. Error bars represent 95% credible intervals.
+#| fig-width: 5
+#| fig-height: 5
+e2 <- readRDS(here("data/e2_08-04-23.rds")) 
+e2Sbjs <- e2 |> group_by(id,condit) |> summarise(n=n())
+testE2 <- e2 |> filter(expMode2 == "Test")
+nbins=5
+trainE2 <-  e2 |> filter(expMode2=="Train") |> group_by(id,condit, vb) |> 
+    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
+trainE2_max <- trainE2 |> filter(Trial_Bin == nbins, bandInt==600)
+
+bmtd2 <- readRDS(paste0(here::here("data/model_cache/"), "e2_dist_Cond_Type_RF_2.rds"))
+
+condEffects <- function(m,xvar){
+  m |> ggplot(aes(x = {{xvar}}, y = .value, color = condit, fill = condit)) + 
+  stat_dist_pointinterval() + 
+  stat_halfeye(alpha=.1, height=.5) +
+  theme(legend.title=element_blank(),axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) 
+  
+}
+
+pe2td <- testE2 |> ggplot(aes(x = vb, y = dist,fill=condit,
+                               col=ifelse(bandType=="Trained","black","lightgray"),
+                               size=ifelse(bandType=="Trained",1.0,.5))) +
+  stat_bar + 
+  theme(legend.title.position="top",
+        legend.title = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(x="Band", y="Deviation", fill="Condition") +
+  scale_color_manual(values=c("black","lightgray"), 
+                     name= "Band Type",
+                     labels = c("Trained","Extrapolation"),
+                     guide = guide_legend(override.aes = list(fill = NA))
+                     ) +
+  scale_size_continuous(range = c(0.8, 1.0), guide="none")
+
+
+pe2ce <- bmtd2 |> emmeans( ~condit + bandType) |>
+  gather_emmeans_draws() |>
+ condEffects(bandType) + labs(y="Absolute Deviation From Band", x="Band Type")  
+  
+e2_vxBMM <- readRDS(paste0(here::here("data/model_cache", "e2_testVxBand_RF_5k.rds")))
+
+pe2vce <- e2_vxBMM |> emmeans( ~condit + bandInt,re_formula=NA, 
+                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
+  gather_emmeans_draws() |> 
+  condEffects(bandInt) +
+  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
+  geom_abline(slope = 1, intercept = 200, linetype = "dashed", color = "gray", size = .5,alpha=.5) +
+  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
+                     labels = levels(testE2$vb), 
+                     limits = c(100, 1200)) + 
+scale_y_continuous(expand=expansion(add=100),breaks=round(seq(200,1400,by=200),2)) +
+  theme(legend.title=element_blank()) + 
+  labs(y="Velcoity", x="Band")
+
+fe <- fixef(e2_vxBMM)[,1]
+fixed_effect_bandInt <- fixef(e2_vxBMM)[,1]["bandInt"]
+fixed_effect_interaction <- fixef(e2_vxBMM)[,1]["conditVaried:bandInt"]
+
+re <- data.frame(ranef(e2_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
+  rownames_to_column("id") |> 
+  left_join(e2Sbjs,by="id") |>
+  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction*(condit=="Varied"),slope = Estimate + adjust )
+
+pid_den2 <- ggplot(re, aes(x = slope, fill = condit)) + 
+  geom_density(alpha=.5) + 
+  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
+   theme(legend.title=element_blank()) + 
+  labs(x="Slope Coefficient",y="Density")
+
+pid_slopes2 <- re |>  mutate(id=reorder(id,slope)) |>
+  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
+    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
+  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+      theme(legend.title=element_blank(), 
+        axis.text.y = element_text(size=6) ) + 
+    labs(x="Estimated Slope", y="Participant")  + 
+    ggh4x::facet_wrap2(~condit,axes="all",scales="free_y")
+
+pe2td
+pe2ce
+pe2vce
+pid_den2
+pid_slopes2
+
+
+
+ggsave(here::here("Presentation/assets/htw_e2_test1.png"), pe2td, width = 4.0, height = 3, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e2_test2.png"), pe2ce, width = 4.0, height = 3, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e2_test3.png"), pe2vce, width = 4.0, height = 3, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e2_test4.png"), pid_den2, width = 4.0, height = 3, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e2_test5.png"), pid_slopes2, width = 4.0, height = 3, units = "in", dpi = 600)
+
+```
+
+
+## HTW Exp 3
+
+
+```{r}
+#| fig-width: 4
+#| fig-height: 6
+e3 <- readRDS(here("data/e3_08-04-23.rds")) |> 
+    mutate(trainCon=case_when(
+    bandOrder=="Original" ~ "800",
+    bandOrder=="Reverse" ~ "600",
+    TRUE ~ NA_character_
+    ), trainCon=as.numeric(trainCon)) 
+e3Sbjs <- e3 |> group_by(id,condit,bandOrder) |> summarise(n=n())
+testE3 <- e3 |> filter(expMode2 == "Test")
+nbins=5
+trainE3 <-  e3 |> filter(expMode2=="Train") |> group_by(id,condit,bandOrder, vb) |> 
+    mutate(Trial_Bin = cut( gt.train, breaks = seq(1, max(gt.train),length.out=nbins+1),include.lowest = TRUE, labels=FALSE)) 
+trainE3_max <- trainE3 |> filter(Trial_Bin == nbins, bandInt==trainCon)
+
+
+bmtd3 <- readRDS(paste0(here::here("data/model_cache/"), "e3_dist_Cond_Type_RF_2.rds"))
+
+
+pe3td <- testE3 |> ggplot(aes(x = vb, y = dist,fill=condit,
+                               col=ifelse(bandType=="Trained","black","lightgray"),
+                               size=ifelse(bandType=="Trained",1.0,.5))) +
+  stat_bar + 
+  facet_wrap(~bandOrder,ncol=1) +
+  theme(legend.title.position="top",
+        legend.title = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(x="Band", y="Deviation", fill="Condition") +
+  scale_color_manual(values=c("black","lightgray"), 
+                     name= "Band Type",
+                     labels = c("Trained","Extrapolation"),
+                     guide = guide_legend(override.aes = list(fill = NA))
+                     ) +
+  scale_size_continuous(range = c(0.8, 1.0), guide="none")
+    
+
+
+
+pe3ce <- bmtd3 |> emmeans( ~condit *bandOrder*bandType) |>
+  gather_emmeans_draws() |>
+ condEffects(bandType) + labs(y="Deviation", x="Band Type") + 
+ facet_wrap(~bandOrder,ncol=1)
+
+
+e3_vxBMM <- readRDS(paste0(here::here("data/model_cache", "e3_testVxBand_RF_5k.rds")))
+
+
+pe3vce <- e3_vxBMM |> emmeans( ~condit* bandOrder* bandInt, 
+                       at = list(bandInt = c(100, 350, 600, 800, 1000, 1200))) |>
+  gather_emmeans_draws() |> 
+  condEffects(bandInt) +
+  facet_wrap(~bandOrder,ncol=1) +
+  stat_lineribbon(alpha = .25, size = 1, .width = c(.95)) +
+  geom_abline(slope = 1, intercept = 200, linetype = "dashed", color = "gray", size = .5,alpha=.5) +
+  scale_x_continuous(breaks = c(100, 350, 600, 800, 1000, 1200), 
+                     labels = levels(testE3$vb), 
+                     limits = c(100, 1200)) + 
+scale_y_continuous(expand=expansion(add=100),breaks=round(seq(300,1400,by=200),2)) +
+  theme(legend.title=element_blank()) + 
+  labs(y="Velcoity", x="Band")
+
+fe <- fixef(e3_vxBMM)[,1]
+fixed_effect_bandInt <- fixef(e3_vxBMM)[,1]["bandInt"]
+fixed_effect_interaction1 <- fixef(e3_vxBMM)[,1]["conditVaried:bandInt"]
+fixed_effect_interaction2 <- fixef(e3_vxBMM)[,1]["bandOrderReverse:bandInt"]
+fixed_effect_interaction3 <- fixef(e3_vxBMM)[,1]["conditVaried:bandOrderReverse:bandInt"]
+
+re <- data.frame(ranef(e3_vxBMM, pars = "bandInt")$id[, ,'bandInt']) |> 
+  rownames_to_column("id") |> 
+  left_join(e3Sbjs,by="id") |>
+  mutate(adjust= fixed_effect_bandInt + fixed_effect_interaction1*(condit=="Varied") + 
+           fixed_effect_interaction2*(bandOrder=="Reverse") + 
+           fixed_effect_interaction3*(condit=="Varied" & bandOrder=="Reverse"),
+  slope = Estimate + adjust )
+
+pid_den3 <- ggplot(re, aes(x = slope, fill = condit)) + 
+  geom_density(alpha=.5) + 
+  xlim(c(min(re$slope)-.3, max(re$slope)+.3))+
+  geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+   theme(legend.title=element_blank()) + 
+  labs(x="Slope Coefficient",y="Density") +
+  facet_wrap(~bandOrder,ncol=1)
+
+pid_slopes3 <- re |>  
+    mutate(id=reorder(id,slope)) |>
+  ggplot(aes(y=id, x=slope,fill=condit,color=condit)) + 
+    geom_pointrange(aes(xmin=Q2.5+adjust, xmax=Q97.5+adjust)) + 
+    geom_vline(xintercept = 1, linetype="dashed",alpha=.5) +
+    theme(legend.title=element_blank(), 
+      axis.text.y = element_text(size=6) ) + 
+    labs(x="Estimated Slope", y="Participant")  + 
+    ggh4x::facet_nested_wrap(bandOrder~condit,axes="all",scales="free_y")
+
+
+pe3td
+pe3ce
+pe3vce
+pid_den3
+pid_slopes3
+
+
+ggsave(here::here("Presentation/assets/htw_e3_test1.png"), pe3td, width = 4.0, height = 6, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e3_test2.png"), pe3ce, width = 4.0, height = 6, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e3_test3.png"), pe3vce, width = 4.0, height = 6, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e3_test4.png"), pid_den3, width = 4.0, height = 6, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/htw_e3_test5.png"), pid_slopes3, width = 4.0, height = 6, units = "in", dpi = 600)
+
+```
+
+
+
+
+
+
+# Sim Example
+
 ```{r}
 pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,here)
 walk(c("Display_Functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
@@ -79,3 +435,64 @@ test_p <- ggplot(test_data, aes(x = Group, y = Performance, fill = Group)) +
 # ggsave(here::here("Presentation/assets/test_pattern.png"), test_p)
 ```
 
+
+
+
+# IGAS Task Space
+
+```{r}
+#| label: fig-taskSpace
+#| fig.cap: A) A visual representation of the combinations of throw parameters (x and y velocities applied to the ball at launch), which resulted in target hits during the testing phase. This empirical solution space was compiled from all of the participants in experiment 2. B) shows the solution space within the context of all of the throws made throughout the testing phase of the experiment.
+#| fig-width: 11
+#| fig-height: 9
+
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,here, RColorBrewer, patchwork)
+walk(c("Display_Functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
+
+e2<- readRDS(here::here('data/igas_e2_cleanedData-final.rds')) %>% mutate(initialVelocityX=X_Velocity,initialVelocityY=Y_Velocity)
+
+taskspace <- e2 %>% filter(AbsDistFromCenter<900)
+taskspace$hitOrMiss <- ifelse(taskspace$trialType==11,"Hit Target","Missed Target")
+
+solSpace <- e2 %>% filter(trialType==11)
+#solSpace %>% ggplot(aes(x=X_Velocity,y=Y_Velocity)) + geom_point(aes(colour=ThrowPosition),alpha=0.58) + ggtitle("") 
+
+solSpace$Result = ifelse(solSpace$ThrowPosition==400,"400",solSpace$ThrowPosition)
+solSpace$Result = ifelse(solSpace$ThrowPosition==500,"500",solSpace$Result)
+solSpace$Result= ifelse(solSpace$ThrowPosition==625,"625",solSpace$Result)
+solSpace$Result = ifelse(solSpace$ThrowPosition==675,"675",solSpace$Result)
+solSpace$Result = ifelse(solSpace$ThrowPosition==800,"800",solSpace$Result)
+solSpace$Result = ifelse(solSpace$ThrowPosition==900,"900",solSpace$Result)
+
+
+missSpace <- e2 %>% filter(trialType !=11, abs(X_Velocity)<1000)
+missSpace$Result = "Missed Target"
+solSpace$Result <- solSpace$Result
+
+# the usual method of changing the legend title does not seem to work after the colours are manually scaled. 
+# multiplied velocoties by -1 to make the axes less confusing
+ss= solSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1)) + 
+  geom_point(aes(colour=Result),alpha=0.6) + 
+  scale_color_manual(values =brewer.pal(n=6,name="Set1")) +
+  labs(color="Throw position:", 
+  # title="Empirical Solution Space - Testing Positions",
+  # subtitle="The XY velocity coordinates of all the successful throws", 
+  x="X Release Velocity", 
+  y="Y Release Velocity", )  
+  theme(legend.position="top") 
+
+fullSpace <- rbind(missSpace,solSpace)
+
+fs<- fullSpace %>% ggplot(aes(x=X_Velocity*-1,y=Y_Velocity*-1,colour=Result)) + 
+  geom_point(aes(),alpha=0.6) + scale_color_manual(values =brewer.pal(n=7,name="Set1"))+
+  labs(color=element_blank(),
+  # title="Full Space of Solution Throws and Missed Throws",
+  # subtitle="Colored points represent coordinates of target hits, brown points are coordinates of misses",
+  x="X Release Velocity", 
+  y="Y Release Velocity") + 
+  theme(legend.title = element_blank(), legend.position="top") 
+
+ggsave(here::here("Presentation/assets/sol_space.png"),ss)
+ggsave(here::here("Presentation/assets/full_space.png"),fs)
+
+```

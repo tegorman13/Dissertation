@@ -2,11 +2,16 @@
 title: >-
   The Role of Variability in Learning Generalization: A Computational Modeling
   Approach
-subtitle: Dissertation Defense
+page-layout: full
+aliases:
+  - /slides.html
+css: /Assets/Style/slides.css
 format:
-  html: default
+  html:
+    subtitle: Dissertation Defense
   clean-revealjs:
     output-file: slides_revealjs
+    date: 05/28/204
     slideNumber: true
     hash-type: number
     center: true
@@ -14,7 +19,7 @@ format:
     chalkboard:
       theme: whiteboard
   pptx:
-    incremental: true
+    incremental: false
   hugo-md:
     include: false
     html-math-method: mathjax
@@ -29,12 +34,10 @@ author:
     affiliations:
       - name: Indiana University
         department: 'Psychological & Brain Sciences, Cognitive Science'
-params:
-  start_slide: 0
 ---
 
 
-## Introduction
+# Introduction
 
 -   Investigate effects of training variability on learning and generalization
 -   Focus areas: visuomotor skill learning and function learning tasks
@@ -95,7 +98,7 @@ params:
 
 ------------------------------------------------------------------------
 
-## Project 1 - Hit The Target (HTT)
+# Project 1
 
 -   Influence of varied practice in a projectile launching task
 -   Experiments 1 & 2:
@@ -104,9 +107,7 @@ params:
 
 ------------------------------------------------------------------------
 
-## Project 1 - Task & Procedure
-
-<!-- ![](assets/methodsFig1.png) -->
+## Hit The Target Task
 
 ![](assets/methodsFig1.png)
 
@@ -150,9 +151,17 @@ params:
 
 ## Project 1 Computational Model
 
-### Model of Similarity between training and solutions
+## Model of Similarity between training and solutions
 
-![](assets/fig-taskSpace-1-1.png)
+<img src="assets/sol_space.png" id="fig-solspace"
+alt="Figure 1: Solution space" />
+
+## Model of Similarity between training and solutions
+
+<img src="assets/full_space.png" id="fig-fullspace"
+alt="Figure 2: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses" />
+
+some text
 
 ------------------------------------------------------------------------
 
@@ -170,7 +179,7 @@ params:
 
 ------------------------------------------------------------------------
 
-## Project 2 - Variability and Extrapolation in a Function Learning Task
+# Project 2 - Variability and Extrapolation in a Function Learning Task
 
 -   Influence of varied practice in a function learning task
 -   Experiments 1, 2, and 3:
@@ -192,9 +201,12 @@ params:
 
 ------------------------------------------------------------------------
 
-## Task
+## Hit The Wall Task
 
 <!-- assets/htw_vid.mov -->
+
+-   A total of 156 participants from IU's online subject pool
+-   Varied group trains from 3 "velocity bands", constant group from 1
 
 ![](assets/htw_task_fig.png)
 
@@ -213,48 +225,68 @@ params:
 
 ## Project 2 - Experiment 1 Results
 
-![](assets/fig-e1-train-dev-1-1.png)
+![Plot 1](assets/htw_e1_test1.png)
+![Plot 3](assets/htw_e1_test3.png)
 
-## Project 2 - Experiment 1 Results
-
-![](assets/fig-e1-test-dev-1-3.png)
+![Plot 2](assets/htw_e1_test2.png)
+![Plot 4](assets/htw_e1_test4.png)
 
 ## Project 2 - Experiment 2 Design
 
-![](assets/e2_design.png)
-
 ## Project 2 - Experiment 2 Results
 
-![](assets/fig-e2-train-dev-1-1.png)
+![Plot 1](assets/htw_e2_test1.png)
+![Plot 3](assets/htw_e2_test3.png)
 
-## Project 2 - Experiment 2 Results
+![Plot 2](assets/htw_e2_test2.png)
+![Plot 4](assets/htw_e2_test4.png)
 
-![](assets/fig-e2-test-dev-1-3.png)
+## Project 2 - Experiment 3
 
-## Project 2 - Experiment 2 Results
+-   Ordinal Feedback
+-   Both Reverse and Original Feedback Order
 
-![](assets/fig-e2-bmm-vx-1-2.png)
+## Project 2 - Experiment 3 Results
 
-## Project 2 - Experiment 3 Design
+## Accuracy
 
--   Ordinal feedback
--   Include both the original order (E1) and reverse order (E2)
+<figure>
+<img src="assets/htw_e3_test1.png" alt="Plot 1" />
+<figcaption aria-hidden="true">Plot 1</figcaption>
+</figure>
 
-## Project 3 - Experiment 3 Results
+<figure>
+<img src="assets/htw_e3_test2.png" alt="Plot 3" />
+<figcaption aria-hidden="true">Plot 3</figcaption>
+</figure>
 
-![](assets/fig-e3-train-dev-1-1.png)
+## Discrimination
 
-## Project 3 - Experiment 3 Results
+<figure>
+<img src="assets/htw_e3_test3.png" alt="Plot 1" />
+<figcaption aria-hidden="true">Plot 1</figcaption>
+</figure>
 
-![](assets/fig-e3-test-dev-1-3.png)
-
-## Project 3 - Experiment 3 Results
-
-![](assets/fig-e3-bmm-vx-1-2.png)
+<figure>
+<img src="assets/htw_e3_test4.png" alt="Plot 3" />
+<figcaption aria-hidden="true">Plot 3</figcaption>
+</figure>
 
 ------------------------------------------------------------------------
 
+# Project 2 - Computational Modeling
+
 ## Project 2 - ALM
+
+<figure>
+<img src="assets/htw_e3_test3.png" alt="Plot 1" />
+<figcaption aria-hidden="true">Plot 1</figcaption>
+</figure>
+
+<figure>
+<img src="assets/htw_e3_test4.png" alt="Plot 3" />
+<figcaption aria-hidden="true">Plot 3</figcaption>
+</figure>
 
 ![](assets/fig-alm-diagram-1-1.png)
 
@@ -289,11 +321,18 @@ params:
 
 ### Approximate Bayesian Computation
 
+![](assets/abc_diagram1.png)
+
+-   simulation based approach
+-   approximate likelihood
+-   uncertainty in parameter values
+-   full distribution of plausible model predictions for each participant
+
 ## Modelling Results
 
 ![](assets/fig-ee-e1-1.png)
 
-## General Discussion
+# General Discussion
 
 -   Compare HTT and HTW
 -   Empirical findings summary

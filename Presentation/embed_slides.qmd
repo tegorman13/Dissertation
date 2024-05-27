@@ -1,0 +1,29 @@
+
+::::: {.content-visible when-format="html" unless-format="revealjs"}
+\
+[{{< fa file-lines >}} Click here](../paper.qmd) to open the dissertation manuscript.\
+
+<br><br><br><br><br><br>
+
+## Slides {{< fa person-chalkboard size=1.0xs >}} {.unnumbered .unlisted visibility="hidden"}
+
+Presentation slides are available below. You can navigate these sides using the <kbd>←</kbd> and <kbd>→</kbd> keys. Press <kbd>m</kbd> to display all commands (e.g., press <kbd>o</kbd> to switch to slide overview)
+
+```{=html}
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="/Presentation/slides_revealjs.html#{{< meta params.start_slide >}}"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open slides in new window </a>
+</p>
+```
+
+:::: column-body-outset-right
+::: {.ratio .ratio-4x3}
+```{=html}
+<iframe src="/Presentation/slides_revealjs.html#{{< meta params.start_slide >}}">
+</iframe>
+```
+:::
+::::
+
+<br><br><br><br><br><br>
+
+:::::

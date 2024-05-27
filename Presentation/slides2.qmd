@@ -1,12 +1,44 @@
 ---
 title: "The Role of Variability in Learning Generalization: A Computational Modeling Approach"
-subtitle: "Dissertation Defense"
+page-layout: full
+aliases:
+  - /slides.html
+css: /Assets/Style/slides.css
 format: 
-  html: default
+  html: 
+    subtitle: "Dissertation Defense"
+  clean-revealjs:
+    #theme: moon #white
+    #output-ext: revealjs.html
+    # template-partials:
+    #   - assets/title-slide.html
+    output-file: slides_revealjs
+    date: 05/28/204
+    slideNumber: true
+    hash-type: number # Use slide numbers in the URL hash
+    center: true
+    scrollable: true
+    chalkboard:
+      theme: whiteboard
+  # pptx:
+  #   incremental: false
+  # hugo-md:
+  #   include: false
+  #   html-math-method: mathjax
+  #   output-file: slides_hugo.md
+  # gfm:
+  #   output: false
+  #   output-file: slides_gfm.md
 author:
   - name: Thomas Gorman
-    orcid: 0000-0000-0000-0000
-    affiliations: Indiana University
+    url: https://tegorman13.github.io
+    orcid: 0000-0001-5366-5442
+    affiliations:
+      - name: Indiana University
+        department: Psychological & Brain Sciences, Cognitive Science
+# params:
+#   start_slide: 5
+#engine: knitr
 ---
 
 

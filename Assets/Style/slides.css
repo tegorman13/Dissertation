@@ -11,6 +11,19 @@
 }
 
 
+.reveal .slide figure>figcaption,.reveal .slide img.stretch+p.caption,.reveal .slide img.r-stretch+p.caption {
+    font-size: 0.7em;
+    font-weight: lighter;
+    color: #747a7f
+}
+
+
+/* .reveal p {
+    font-weight: lighter;
+    margin-top: 1.25em
+} */
+
+
 /* Specific style for h1 on the title slide */
 /* .reveal .title-slide h1 {
     font-size: 40px; /* Larger font size for the title slide */

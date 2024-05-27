@@ -2,7 +2,7 @@
 Modeling Approach
 Thomas Gorman
 
-## Introduction
+# Introduction
 
 - Investigate effects of training variability on learning and
   generalization
@@ -82,7 +82,7 @@ Thomas Gorman
 
 ------------------------------------------------------------------------
 
-## Project 1 - Hit The Target (HTT)
+# Project 1
 
 - Influence of varied practice in a projectile launching task
 - Experiments 1 & 2:
@@ -91,13 +91,13 @@ Thomas Gorman
 
 ------------------------------------------------------------------------
 
-## Project 1 - Task & Procedure
+## Hit The Target Task
+
+<div class="column-page-right">
 
 <div class="columns">
 
 <div class="column" width="60%">
-
-<!-- ![](assets/methodsFig1.png) -->
 
 ![](assets/methodsFig1.png)
 
@@ -111,6 +111,8 @@ Thomas Gorman
   trained, and the positions trained by other group
 - **Data recorded** - For every throw, recorded the X velocity and Y
   velocity of ball at release
+
+</div>
 
 </div>
 
@@ -179,9 +181,43 @@ Thomas Gorman
 
 ## Project 1 Computational Model
 
-### Model of Similarity between training and solutions
+## Model of Similarity between training and solutions
 
-![](assets/fig-taskSpace-1-1.png)
+<div id="fig-solspace">
+
+<img src="assets/sol_space.png" data-fig-align="left" width="500" />
+
+
+Figure 1: Solution space
+
+</div>
+
+## Model of Similarity between training and solutions
+
+<div class="columns">
+
+<div class="column" width="70%">
+
+<div id="fig-fullspace">
+
+<img src="assets/full_space.png" data-fig-align="left" width="700" />
+
+
+Figure 2: Full Space of Solution Throws and Missed Throws. Colored
+points represent coordinates of target hits, brown points are
+coordinates of misses
+
+</div>
+
+</div>
+
+<div class="column" width="30%">
+
+some text
+
+</div>
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -210,7 +246,7 @@ $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})
 
 ------------------------------------------------------------------------
 
-## Project 2 - Variability and Extrapolation in a Function Learning Task
+# Project 2 - Variability and Extrapolation in a Function Learning Task
 
 - Influence of varied practice in a function learning task
 - Experiments 1, 2, and 3:
@@ -233,9 +269,12 @@ responses
 
 ------------------------------------------------------------------------
 
-## Task
+## Hit The Wall Task
 
 <!-- assets/htw_vid.mov -->
+
+- A total of 156 participants from IU’s online subject pool
+- Varied group trains from 3 “velocity bands”, constant group from 1
 
 ![](assets/htw_task_fig.png)
 
@@ -254,48 +293,106 @@ responses
 
 ## Project 2 - Experiment 1 Results
 
-![](assets/fig-e1-train-dev-1-1.png)
+<div class="columns">
 
-## Project 2 - Experiment 1 Results
+<div class="column" width="50%">
 
-![](assets/fig-e1-test-dev-1-3.png)
+![Plot 1](assets/htw_e1_test1.png) ![Plot 3](assets/htw_e1_test3.png)
+
+</div>
+
+<div class="column" width="50%">
+
+![Plot 2](assets/htw_e1_test2.png) ![Plot 4](assets/htw_e1_test4.png)
+
+</div>
+
+</div>
 
 ## Project 2 - Experiment 2 Design
 
-![](assets/e2_design.png)
-
 ## Project 2 - Experiment 2 Results
 
-![](assets/fig-e2-train-dev-1-1.png)
+<div class="columns">
 
-## Project 2 - Experiment 2 Results
+<div class="column" width="50%">
 
-![](assets/fig-e2-test-dev-1-3.png)
+![Plot 1](assets/htw_e2_test1.png) ![Plot 3](assets/htw_e2_test3.png)
 
-## Project 2 - Experiment 2 Results
+</div>
 
-![](assets/fig-e2-bmm-vx-1-2.png)
+<div class="column" width="50%">
 
-## Project 2 - Experiment 3 Design
+![Plot 2](assets/htw_e2_test2.png) ![Plot 4](assets/htw_e2_test4.png)
 
-- Ordinal feedback
-- Include both the original order (E1) and reverse order (E2)
+</div>
 
-## Project 3 - Experiment 3 Results
+</div>
 
-![](assets/fig-e3-train-dev-1-1.png)
+## Project 2 - Experiment 3
 
-## Project 3 - Experiment 3 Results
+- Ordinal Feedback
+- Both Reverse and Original Feedback Order
 
-![](assets/fig-e3-test-dev-1-3.png)
+## Project 2 - Experiment 3 Results
 
-## Project 3 - Experiment 3 Results
+## Accuracy
 
-![](assets/fig-e3-bmm-vx-1-2.png)
+<div class="columns">
+
+<div class="column" width="50%">
+
+![Plot 1](assets/htw_e3_test1.png)
+
+</div>
+
+<div class="column" width="50%">
+
+![Plot 3](assets/htw_e3_test2.png)
+
+</div>
+
+</div>
+
+## Discrimination
+
+<div class="columns">
+
+<div class="column" width="50%">
+
+![Plot 1](assets/htw_e3_test3.png)
+
+</div>
+
+<div class="column" width="50%">
+
+![Plot 3](assets/htw_e3_test4.png)
+
+</div>
+
+</div>
 
 ------------------------------------------------------------------------
 
+# Project 2 - Computational Modeling
+
 ## Project 2 - ALM
+
+<div class="columns">
+
+<div class="column" width="50%">
+
+![Plot 1](assets/htw_e3_test3.png)
+
+</div>
+
+<div class="column" width="50%">
+
+![Plot 3](assets/htw_e3_test4.png)
+
+</div>
+
+</div>
 
 ![](assets/fig-alm-diagram-1-1.png)
 
@@ -330,11 +427,30 @@ responses
 
 ### Approximate Bayesian Computation
 
+<div class="columns">
+
+<div class="column" width="60%">
+
+![](assets/abc_diagram1.png)
+
+</div>
+
+<div class="column" width="40%">
+
+- simulation based approach
+- approximate likelihood
+- uncertainty in parameter values
+- full distribution of plausible model predictions for each participant
+
+</div>
+
+</div>
+
 ## Modelling Results
 
 ![](assets/fig-ee-e1-1.png)
 
-## General Discussion
+# General Discussion
 
 - Compare HTT and HTW
 - Empirical findings summary
