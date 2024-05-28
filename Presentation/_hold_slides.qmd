@@ -157,3 +157,33 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 :::
 :::
 :::
+
+
+
+## Issues with previous research {.smaller}
+
+- Assumptions about what is encoded
+- Assumptions about the formation of abstractions 
+- Aggregation issues and similarity confounds
+
+::: fragment
+:::: columns
+::: {.column}
+
+![](assets/agg_issues.png)
+:::
+::: {.column}
+<br>
+
+-  If generalization decays exponentially with distance, constant groups 1 and 2 may have far less generalization potential to the testing condition. 
+- performance of individual constant groups often not reported in analyses.
+
+:::
+
+::::
+:::
+::: footnote
+e.g. [@mccrackenTestSchemaTheory1977; @chuaPracticeVariabilityPromotes2019; @delreyEffectsContextualInterference1982]
+:::
+
+---

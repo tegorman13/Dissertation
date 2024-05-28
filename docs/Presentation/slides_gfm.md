@@ -406,7 +406,6 @@ larger design to give us more data to work with for modelling
 
 - Euclidean distance between each training throw, and each solution
   space
-  - separately for each participant, and each of the testing positions
 - Similarity computed as a Gaussian decay function of distance,
   i.e. larger distances result in lower similarity
 - Each participant gets their own similarity score for each of the 6
@@ -423,6 +422,15 @@ larger design to give us more data to work with for modelling
 </div>
 
 </div>
+
+<div class="notes">
+
+each participant has all of their training throws compared to each of
+the 6 testing positions
+
+</div>
+
+------------------------------------------------------------------------
 
 ## Non-linear similarity
 
@@ -817,7 +825,7 @@ also includes a control for the order of training vs. testing bands
 
 ## Modelling Results
 
-### Best fitting models per participant
+#### Best fitting models per participant
 
 ![](assets/best_models.png)
 
@@ -831,30 +839,64 @@ favor ALM
 
 ------------------------------------------------------------------------
 
-# General Discussion
+# Summary
 
-- Compare HTT and HTW
-- Empirical findings summary
-- Computational modeling contributions
-
-------------------------------------------------------------------------
-
-## Comparison
-
-| Dimension | HTT (Project 1) | HTW (Project 2) |
-|----|----|----|
-| Task Description | Projectile launching to hit a target | Projectile launching to hit wall at a specific velocity |
-| Task Complexity | More complex parabolic trajectory, both x and y velocities relevant to outcome | Simpler 1D mapping of force to outcome. Only x velocity is relevant. |
-| Task Space | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier. | Simpler: smooth, linear mapping between velocity and feedback. |
-| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
-| Testing Feedback | Testing always included feedback | Primary testing stage had no feedback. |
-| Potential for Learning during Testing | Limited potential for learning during testing due to feedback. | Some potential for learning during no-feedback testing by observing ball trajectory. |
-| Training Experience | Varied group gets half as much experience on any one position as the constant group. | Varied group gets 1/3 as much experience on any one velocity band as the constant group. |
-| Testing Structure | Random interleaving of trained/transfer testing distances. | Blocked structure, separately testing trained vs extrapolation testing bands. |
+- **Project Comparison**:
+  - **HTT (Project 1)**: Varied training led to superior testing
+    performance.
+  - **HTW (Project 2)**: Varied training led to poorer performance.
+- **Key Findings**:
+  - HTT: Varied group outperformed constant group in both training and
+    testing.
+  - HTW: Varied group exhibited poorer performance across training and
+    testing stages.
+- **Modeling Approaches**:
+  - HTT: IGAS model quantifies similarity between training and testing
+    conditions.
+  - HTW: ALM and EXAM models fit to individual participant data.
 
 ------------------------------------------------------------------------
+
+## Project Comparison
+
+- **Task Differences**:
+  - **HTT**:
+    - Complex parabolic trajectory.
+    - Both x and y velocities relevant.
+    - Perceptually salient varied conditions.
+  - **HTW**:
+    - Simple 1D force mapping.
+    - Only x velocity relevant.
+    - Less perceptually salient varied conditions.
+- **Task Complexity**:
+  - HTT: More complex task space with irregularities.
+  - HTW: Smooth, linear mapping between velocity and feedback.
+
+<div class="notes">
+
+the task spaces were different. HTT had a more complex task space with
+irregularities introduced by the barrier, making the learning
+environment less predictable. HTW had a smoother, linear mapping between
+velocity and feedback, providing a more predictable learning
+environment.
+
+</div>
 
 ## Conclusion
+
+<div class="notes">
+
+- The contrasting results highlight the importance of considering task
+  characteristics when designing experiments to assess the influence of
+  training interventions.
+- Combining empirical and computational modeling approaches can help
+  uncover the cognitive mechanisms supporting learning and
+  generalization.
+- Future research should continue to investigate the interplay between
+  task demands, training manipulations, and individual differences to
+  optimize educational and training outcomes.
+
+</div>
 
 ## References
 
@@ -999,6 +1041,23 @@ Bayesian computation. *Journal of Mathematical Psychology*, *56*(2),
 | Instance Retrieval | $P[X_i|X] = \frac{a_i(X)}{\sum_{k=1}^M a_k(X)}$ | Novel test stimulus $X$ activates input nodes $X_i$ |
 | Slope Computation | $S = \frac{m(X_{1})-m(X_{2})}{X_{1}-X_{2}}$ | Slope value, $S$ computed from nearest training instances |
 | Response | $E[Y|X_i] = m(X_i) + S \cdot [X - X_i]$ | Final EXAM response is the ALM response for the nearest training stimulus, $m(X_i)$, adjusted by local slope $S$. |
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## Comparison {.scrollable .unnumbered .unlisted, .smaller}
+
+| Dimension | HTT (Project 1) | HTW (Project 2) |
+|----|----|----|
+| Task Description | Projectile launching to hit a target | Projectile launching to hit wall at a specific velocity |
+| Task Complexity | More complex parabolic trajectory, both x and y velocities relevant to outcome | Simpler 1D mapping of force to outcome. Only x velocity is relevant. |
+| Task Space | More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier. | Simpler: smooth, linear mapping between velocity and feedback. |
+| Perceptual salience of Varied Conditions | Varied conditions (# of throwing distances) are perceptually distinct, i.e. salient differences in distance between launching box and target. | Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen. |
+| Testing Feedback | Testing always included feedback | Primary testing stage had no feedback. |
+| Potential for Learning during Testing | Limited potential for learning during testing due to feedback. | Some potential for learning during no-feedback testing by observing ball trajectory. |
+| Training Experience | Varied group gets half as much experience on any one position as the constant group. | Varied group gets 1/3 as much experience on any one velocity band as the constant group. |
+| Testing Structure | Random interleaving of trained/transfer testing distances. | Blocked structure, separately testing trained vs extrapolation testing bands. |
 
 ------------------------------------------------------------------------
 

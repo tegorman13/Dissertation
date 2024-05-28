@@ -1323,3 +1323,80 @@ exp2.Test %>% ggplot(aes(x=condit2,y=MeanTargetDeviance,group=conditType,fill=co
 
 ```
 
+
+
+
+Slide 1: Key Points from the General Discussion
+
+
+
+
+Slide 2: Key Points from the General Discussion (cont.)
+
+- HTT and HTW tasks differ in perceptual salience of varied conditions, task complexity, and task space.
+- In HTT, varied conditions (throwing distances) are perceptually distinct, while in HTW, varied conditions (velocity bands) are less salient.
+- HTT has a more complex parabolic trajectory and task space, while HTW has a simpler 1D mapping of force to outcome.
+- The contrasting results highlight the importance of considering task characteristics when designing experiments to assess the influence of training interventions.
+- Combining empirical and computational modeling approaches can help uncover the cognitive mechanisms supporting learning and generalization.
+- Future research should continue to investigate the interplay between task demands, training manipulations, and individual differences to optimize educational and training outcomes.
+
+
+
+
+### Slide 1: Empirical and Modeling Summary
+
+**Bullet Points:**
+
+- **Project Comparison**:
+  - **HTT (Project 1)**: Varied training led to superior testing performance.
+  - **HTW (Project 2)**: Varied training led to poorer performance.
+
+- **Key Findings**:
+  - HTT: Varied group outperformed constant group in both training and testing.
+  - HTW: Varied group exhibited poorer performance across training and testing stages.
+
+- **Modeling Approaches**:
+  - HTT: IGAS model quantifies similarity between training and testing conditions.
+  - HTW: ALM and EXAM models fit to individual participant data.
+
+**Script:**
+
+"In our studies, we explored the impact of training variability on learning and generalization in two projects: Hit The Target (HTT) and Hit The Wall (HTW). In HTT, experiments showed that varied training led to superior testing performance compared to constant training. Interestingly, the varied group even outperformed the constant group when tested from the constant group's trained position.
+
+In contrast, the HTW project found that varied training resulted in poorer performance than constant training across several metrics, including training accuracy, extrapolation testing accuracy, and the ability to discriminate between bands.
+
+Both projects employed computational modeling to interpret the results. In HTT, we introduced the IGAS model to quantify the similarity between training and testing conditions. This model helped account for the benefits of varied training by showing how training variability influences the generalization gradient.
+
+In HTW, we implemented the ALM and EXAM models, which have been used in numerous studies on function learning. We fit these models to individual participant data using a Bayesian parameter estimation method, allowing us to generate and compare the full posterior predictive distributions of each model. The EXAM model provided the best overall account of the testing data, particularly for the constant group."
+
+### Slide 2: Differences between HTT and HTW
+
+**Bullet Points:**
+
+- **Task Differences**:
+  - **HTT**:
+    - Complex parabolic trajectory.
+    - Both x and y velocities relevant.
+    - Perceptually salient varied conditions.
+  - **HTW**:
+    - Simple 1D force mapping.
+    - Only x velocity relevant.
+    - Less perceptually salient varied conditions.
+
+- **Task Complexity**:
+  - HTT: More complex task space with irregularities.
+  - HTW: Smooth, linear mapping between velocity and feedback.
+
+- **Training and Testing Structure**:
+  - HTT: Random interleaving of trained/transfer testing distances.
+  - HTW: Blocked structure, testing trained vs. extrapolation bands separately.
+
+**Script:**
+
+"To understand the differing outcomes between HTT and HTW, it's crucial to consider the differences in their tasks. HTT involved a more complex parabolic trajectory where both x and y velocities were relevant, and the varied conditions were perceptually distinct. This complexity and perceptual salience likely contributed to the observed benefits of varied training.
+
+In contrast, HTW had a simpler 1D force mapping where only the x velocity was relevant. The varied conditions in HTW were less perceptually salient, as they were indicated by numerals rather than distinct visual features. This simplicity and lack of perceptual salience might have limited the potential benefits of varied training.
+
+Additionally, the task spaces were different. HTT had a more complex task space with irregularities introduced by the barrier, making the learning environment less predictable. HTW had a smoother, linear mapping between velocity and feedback, providing a more predictable learning environment.
+
+The structure of training and testing also differed. In HTT, testing involved random interleaving of trained and transfer testing distances, while in HTW, testing was blocked, separately testing trained and extrapolation bands. These differences highlight the importance of task characteristics in determining the impact of training variability on learning and generalization."

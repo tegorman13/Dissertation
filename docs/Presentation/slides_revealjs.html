@@ -379,30 +379,16 @@
 <section class="slide level2 center">
 <h2>Variability</h2>
 <ul>
-<li>Variation during training linked to improved transfer in numerous domains</li>
-<li>What does “variability mean in the context of learning interventions?”</li>
-</ul>
-</section>
-<section class="slide level2 center">
-<h2>Types of Variability</h2>
+<li>Variation during training linked to improved transfer in numerous domains
 <ul>
+<li>sometimes alternatively termed diversity, heterogenity, numerosity etc.</li>
+</ul></li>
+<li>What does variability mean in the context of learning interventions?
+<ul>
+<li>How spread out examples are in the task space</li>
 <li>The number of unique items/problems experienced</li>
-<li>How spread out examples are</li>
-</ul>
-</section>
-<section class="slide level2 center">
-<h2>My Dissertation Focus</h2>
-<ul>
-<li><p>Number of unique examples</p></li>
-<li><p>Visuomotor skill learning and function learning</p></li>
-<li><p>Addressing methodological shortcomings of previous work</p></li>
-<li><p>Adapting cognitive models from other domains to account for results</p></li>
-</ul>
-</section>
-<section class="slide level2 center">
-<h2>Common Experimental Manipulations</h2>
-<ul>
-<li>Varied vs.&nbsp;Constant</li>
+<li>exposure to wider array of contexts/background conditions</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2 center">
@@ -512,11 +498,7 @@
 <div class="column">
 <p><img data-src="assets/agg_issues.png"></p>
 </div><div class="column">
-<p><br></p>
-<ul>
-<li>If generalization decays exponentially with distance, constant groups 1 and 2 may have far less generalization potential to the testing condition.</li>
-<li>performance of individual constant groups often not reported in analyses.</li>
-</ul>
+
 </div>
 </div>
 </div>
@@ -704,10 +686,7 @@
 </div><div class="column" style="width:50%;">
 <h4>Computing Similarity</h4>
 <ul>
-<li>Euclidean distance between each training throw, and each solution space
-<ul>
-<li>separately for each participant, and each of the testing positions</li>
-</ul></li>
+<li>Euclidean distance between each training throw, and each solution space</li>
 <li>Similarity computed as a Gaussian decay function of distance, i.e.&nbsp;larger distances result in lower similarity</li>
 <li>Each participant gets their own similarity score for each of the 6 testing positions
 <ul>
@@ -721,6 +700,19 @@
 </ul>
 </div>
 </div>
+<aside class="notes">
+<p>each participant has all of their training throws compared to each of the 6 testing positions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Non-linear similarity</h2>
@@ -1035,6 +1027,24 @@
           display:block!important;
       }</style></aside>
 </section>
+<section class="slide level2 smaller center">
+<h2>Modelling Results</h2>
+<h4>Best fitting models per participant</h4>
+
+<img data-src="assets/best_models.png" class="r-stretch"><aside class="notes">
+<p>Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section class="slide level2 center">
 <h2>Model Comparison - Experiment 1</h2>
 
@@ -1069,12 +1079,58 @@
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 smaller center">
-<h2>Modelling Results</h2>
-<h3>Best fitting models per participant</h3>
+<section class="slide level2 center">
 
-<img data-src="assets/best_models.png" class="r-stretch"><aside class="notes">
-<p>Difference in model errors for each participant, with models fit to both train and test data. Positive values favor EXAM, while negative values favor ALM</p>
+</section>
+<section class="slide level2 center">
+<h2>General Discussion</h2>
+</section>
+<section class="slide level2 smaller center">
+<h2>Summary</h2>
+<ul>
+<li><strong>Project Comparison</strong>:
+<ul>
+<li><strong>HTT (Project 1)</strong>: Varied training led to superior testing performance.</li>
+<li><strong>HTW (Project 2)</strong>: Varied training led to poorer performance.</li>
+</ul></li>
+<li><strong>Key Findings</strong>:
+<ul>
+<li>HTT: Varied group outperformed constant group in both training and testing.</li>
+<li>HTW: Varied group exhibited poorer performance across training and testing stages.</li>
+</ul></li>
+<li><strong>Modeling Approaches</strong>:
+<ul>
+<li>HTT: IGAS model quantifies similarity between training and testing conditions.</li>
+<li>HTW: ALM and EXAM models fit to individual participant data.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2 smaller center">
+<h2>Project Comparison</h2>
+<ul>
+<li><strong>Task Differences</strong>:
+<ul>
+<li><strong>HTT</strong>:
+<ul>
+<li>Complex parabolic trajectory.</li>
+<li>Both x and y velocities relevant.</li>
+<li>Perceptually salient varied conditions.</li>
+</ul></li>
+<li><strong>HTW</strong>:
+<ul>
+<li>Simple 1D force mapping.</li>
+<li>Only x velocity relevant.</li>
+<li>Less perceptually salient varied conditions.</li>
+</ul></li>
+</ul></li>
+<li><strong>Task Complexity</strong>:
+<ul>
+<li>HTT: More complex task space with irregularities.</li>
+<li>HTW: Smooth, linear mapping between velocity and feedback.</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>the task spaces were different. HTT had a more complex task space with irregularities introduced by the barrier, making the learning environment less predictable. HTW had a smoother, linear mapping between velocity and feedback, providing a more predictable learning environment.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1088,78 +1144,28 @@
       }</style></aside>
 </section>
 <section class="slide level2 center">
-
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>General Discussion</h1>
-<ul>
-<li>Compare HTT and HTW</li>
-<li>Empirical findings summary</li>
-<li>Computational modeling contributions</li>
-</ul>
-</section>
-<section class="slide level2 smaller center">
-<h2>Comparison</h2>
-<table>
-<colgroup>
-<col style="width: 21%">
-<col style="width: 43%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Dimension</th>
-<th>HTT (Project 1)</th>
-<th>HTW (Project 2)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Task Description</td>
-<td>Projectile launching to hit a target</td>
-<td>Projectile launching to hit wall at a specific velocity</td>
-</tr>
-<tr class="even">
-<td>Task Complexity</td>
-<td>More complex parabolic trajectory, both x and y velocities relevant to outcome</td>
-<td>Simpler 1D mapping of force to outcome. Only x velocity is relevant.</td>
-</tr>
-<tr class="odd">
-<td>Task Space</td>
-<td>More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.</td>
-<td>Simpler: smooth, linear mapping between velocity and feedback.</td>
-</tr>
-<tr class="even">
-<td>Perceptual salience of Varied Conditions</td>
-<td>Varied conditions (# of throwing distances) are perceptually distinct, i.e.&nbsp;salient differences in distance between launching box and target.</td>
-<td>Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen.</td>
-</tr>
-<tr class="odd">
-<td>Testing Feedback</td>
-<td>Testing always included feedback</td>
-<td>Primary testing stage had no feedback.</td>
-</tr>
-<tr class="even">
-<td>Potential for Learning during Testing</td>
-<td>Limited potential for learning during testing due to feedback.</td>
-<td>Some potential for learning during no-feedback testing by observing ball trajectory.</td>
-</tr>
-<tr class="odd">
-<td>Training Experience</td>
-<td>Varied group gets half as much experience on any one position as the constant group.</td>
-<td>Varied group gets 1/3 as much experience on any one velocity band as the constant group.</td>
-</tr>
-<tr class="even">
-<td>Testing Structure</td>
-<td>Random interleaving of trained/transfer testing distances.</td>
-<td>Blocked structure, separately testing trained vs extrapolation testing bands.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section class="slide level2 center">
 <h2>Conclusion</h2>
+<ul>
+<li>Task-specific characteristics are crucial in determining the benefits of varied training.</li>
+<li>Combining empirical research with computational modeling enhances understanding of learning and generalization.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>The contrasting results highlight the importance of considering task characteristics when designing experiments to assess the influence of training interventions.</li>
+<li>Combining empirical and computational modeling approaches can help uncover the cognitive mechanisms supporting learning and generalization.</li>
+<li>Future research should continue to investigate the interplay between task demands, training manipulations, and individual differences to optimize educational and training outcomes.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
 <h2>References</h2>
@@ -1298,6 +1304,68 @@ Turner, B. M., &amp; Van Zandt, T. (2012). A tutorial on approximate <span>Bayes
 <td>Response</td>
 <td><span class="math inline">\(E[Y|X_i] = m(X_i) + S \cdot [X - X_i]\)</span></td>
 <td>Final EXAM response is the ALM response for the nearest training stimulus, <span class="math inline">\(m(X_i)\)</span>, adjusted by local slope <span class="math inline">\(S\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section class="slide level2 center">
+<h2>Comparison {.scrollable .unnumbered .unlisted, .smaller}</h2>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 43%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>HTT (Project 1)</th>
+<th>HTW (Project 2)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Task Description</td>
+<td>Projectile launching to hit a target</td>
+<td>Projectile launching to hit wall at a specific velocity</td>
+</tr>
+<tr class="even">
+<td>Task Complexity</td>
+<td>More complex parabolic trajectory, both x and y velocities relevant to outcome</td>
+<td>Simpler 1D mapping of force to outcome. Only x velocity is relevant.</td>
+</tr>
+<tr class="odd">
+<td>Task Space</td>
+<td>More complex: xy velocity combinations closer to the solution space may still result in worse feedback due to striking the barrier.</td>
+<td>Simpler: smooth, linear mapping between velocity and feedback.</td>
+</tr>
+<tr class="even">
+<td>Perceptual salience of Varied Conditions</td>
+<td>Varied conditions (# of throwing distances) are perceptually distinct, i.e.&nbsp;salient differences in distance between launching box and target.</td>
+<td>Varied conditions (# of velocity bands) are less salient - only difference is the numeral displayed on screen.</td>
+</tr>
+<tr class="odd">
+<td>Testing Feedback</td>
+<td>Testing always included feedback</td>
+<td>Primary testing stage had no feedback.</td>
+</tr>
+<tr class="even">
+<td>Potential for Learning during Testing</td>
+<td>Limited potential for learning during testing due to feedback.</td>
+<td>Some potential for learning during no-feedback testing by observing ball trajectory.</td>
+</tr>
+<tr class="odd">
+<td>Training Experience</td>
+<td>Varied group gets half as much experience on any one position as the constant group.</td>
+<td>Varied group gets 1/3 as much experience on any one velocity band as the constant group.</td>
+</tr>
+<tr class="even">
+<td>Testing Structure</td>
+<td>Random interleaving of trained/transfer testing distances.</td>
+<td>Blocked structure, separately testing trained vs extrapolation testing bands.</td>
 </tr>
 </tbody>
 </table>
