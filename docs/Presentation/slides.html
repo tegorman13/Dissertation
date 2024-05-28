@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -193,7 +213,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides_revealjs.html"><i class="bi bi-file-slides"></i>RevealJS (clean)</a></li><li><a href="slides.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li><li><a href="slides_hugo.md"><i class="bi bi-file-code"></i>CommonMark (hugo)</a></li><li><a href="slides_gfm.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides_revealjs.html"><i class="bi bi-file-slides"></i>RevealJS (clean)</a></li><li><a href="slides.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li><li><a href="slides_gfm.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li></ul></div></div>
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
 
@@ -248,26 +268,47 @@ window.Quarto = {
 </div>
 <p><br><br><br><br><br><br></p>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="learning-generalization" class="level1">
+<h1>Learning Generalization</h1>
 <ul>
-<li>Investigate effects of training variability on learning and generalization</li>
-<li>Focus areas: visuomotor skill learning and function learning tasks</li>
+<li>Learning is often specific</li>
+<li>Longstanding scientific interest in how to improve generalization or transfer</li>
 </ul>
 <hr>
-<section id="background-and-motivation" class="level2">
-<h2 class="anchored" data-anchor-id="background-and-motivation">Background and Motivation</h2>
+<section id="variability" class="level2">
+<h2 class="anchored" data-anchor-id="variability">Variability</h2>
 <ul>
-<li>Importance of training variability</li>
-<li>Research gaps in visuomotor skill learning</li>
-<li>Previous research in category learning, language learning, and function learning</li>
+<li>Variation during training linked to improved transfer in numerous domains</li>
+<li>What does “variability mean in the context of learning interventions?”</li>
+</ul>
+</section>
+<section id="types-of-variability" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-variability">Types of Variability</h2>
+<ul>
+<li>The number of unique items/problems experienced</li>
+<li>How spread out examples are</li>
+</ul>
+</section>
+<section id="my-dissertation-focus" class="level2">
+<h2 class="anchored" data-anchor-id="my-dissertation-focus">My Dissertation Focus</h2>
+<ul>
+<li><p>Number of unique examples</p></li>
+<li><p>Visuomotor skill learning and function learning</p></li>
+<li><p>Addressing methodological shortcomings of previous work</p></li>
+<li><p>Adapting cognitive models from other domains to account for results</p></li>
 </ul>
 <hr>
+</section>
+<section id="common-experimental-manipulations" class="level2">
+<h2 class="anchored" data-anchor-id="common-experimental-manipulations">Common Experimental Manipulations</h2>
+<ul>
+<li>Varied vs.&nbsp;Constant</li>
+</ul>
 </section>
 <section id="common-empirical-patterns" class="level2">
 <h2 class="anchored" data-anchor-id="common-empirical-patterns">Common Empirical Patterns</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:55%;">
 <section id="training" class="level3">
 <h3 class="anchored" data-anchor-id="training">Training</h3>
 <ul>
@@ -276,7 +317,7 @@ window.Quarto = {
 </ul>
 <p><img src="assets/train_pattern.png" class="img-fluid"></p>
 </section>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:45%;">
 <div class="fragment">
 <section id="testing" class="level3">
 <h3 class="anchored" data-anchor-id="testing">Testing</h3>
@@ -294,7 +335,7 @@ window.Quarto = {
 <section id="but-also-plenty-of-contradictory-results-and-complications" class="level2">
 <h2 class="anchored" data-anchor-id="but-also-plenty-of-contradictory-results-and-complications">But also plenty of contradictory results and complications</h2>
 <ul>
-<li>Cases where varied training makes no difference</li>
+<li>Cases where varied training doesn’t benefit generalization</li>
 <li>Cases where more training variation results in worse outcomes</li>
 <li>Cases where the influence of variation interacts with some other factor
 <ul>
@@ -312,29 +353,63 @@ window.Quarto = {
 <li>Desirable Difficulties Framework (Bjork &amp; Bjork, 2011)</li>
 <li>Challenge Point Framework (Guadagnoli &amp; Lee, 2004)</li>
 </ul>
+<div class="footer">
+<p><span class="citation" data-cites="schmidtSchemaTheoryDiscrete1975">Schmidt (<a href="#ref-schmidtSchemaTheoryDiscrete1975" role="doc-biblioref">1975</a>)</span> <span class="citation" data-cites="bjorkMakingThingsHard2011">Bjork &amp; Bjork (<a href="#ref-bjorkMakingThingsHard2011" role="doc-biblioref">2011</a>)</span> <span class="citation" data-cites="guadagnoliChallengePointFramework2004">Guadagnoli &amp; Lee (<a href="#ref-guadagnoliChallengePointFramework2004" role="doc-biblioref">2004</a>)</span></p>
+</div>
 <!-- ![](assets/fig-toy-model1-1-1.png) -->
 <hr>
 </section>
 <section id="overview-of-current-work" class="level2">
 <h2 class="anchored" data-anchor-id="overview-of-current-work">Overview of Current Work</h2>
+<section id="project-11" class="level3">
+<h3 class="anchored" data-anchor-id="project-11">Project 1<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h3>
 <ul>
-<li>Project 1: Visuomotor projectile launching task</li>
-<li>Project 2: Visuomotor extrapolation task</li>
+<li>Visuomotor projectile launching task</li>
+<li>two experiments</li>
+<li>Beneficial effect of variability</li>
+<li>Instance-based similarity model</li>
+</ul>
+</section>
+<section id="project-2" class="level3">
+<h3 class="anchored" data-anchor-id="project-2">Project 2</h3>
+<ul>
+<li>Visuomotor extrapolation task</li>
+<li>Three experiments</li>
+<li>Effect of variability is null or negative</li>
+<li>Connectionist model (ALM) and hybrid associative &amp; rule model (EXAM)</li>
+</ul>
+<div class="footer">
+
+</div>
+<p>–</p>
+</section>
+</section>
+</section>
+<section id="project-1---issues-with-previous-research" class="level1 page-columns page-full">
+<h1>Project 1 - Issues with previous research</h1>
+<ul>
+<li>Assumptions about what is encoded</li>
+<li>Assumptions about the formation of abstractions</li>
+<li>Aggregation issues and similarity confounds</li>
+</ul>
+<hr>
+<section id="designs-that-seemingly-overcome-these-issues" class="level2">
+<h2 class="anchored" data-anchor-id="designs-that-seemingly-overcome-these-issues">designs that seemingly overcome these issues</h2>
+<ul>
+<li>Kerr &amp; Booth 1978</li>
+</ul>
+<div class="footer">
+<p><span class="citation" data-cites="kerrSpecificVariedPractice1978">Kerr &amp; Booth (<a href="#ref-kerrSpecificVariedPractice1978" role="doc-biblioref">1978</a>)</span></p>
+</div>
+</section>
+<section id="experiment-1" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-1">Experiment 1</h2>
+<ul>
+<li>Conceptual replication of Kerr &amp; Booth design</li>
+<li>Testing classic pattern as well</li>
 </ul>
 <hr>
 </section>
-</section>
-<section id="project-1" class="level1 page-columns page-full">
-<h1>Project 1</h1>
-<ul>
-<li>Influence of varied practice in a projectile launching task</li>
-<li>Experiments 1 &amp; 2:
-<ul>
-<li>Constant vs.&nbsp;varied training groups</li>
-<li>Performance metrics and transfer testing</li>
-</ul></li>
-</ul>
-<hr>
 <section id="hit-the-target-task" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="hit-the-target-task">Hit The Target Task</h2>
 <div class="column-page-right">
@@ -343,7 +418,7 @@ window.Quarto = {
 <p><video src="assets/htt_vid.mov" style="max-width: 100%" loop="true" autoplay="true" height="540" controls=""><a href="assets/htt_vid.mov">Video</a></video></p>
 </div><div class="column" style="width:40%;">
 <ul>
-<li><strong>Training Stage</strong> - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.</li>
+<li><strong>Training Stage</strong> - 200 training trials with feedback. Constant groups trains from single position. Varied group practices from two positions.</li>
 <li><strong>Transfer Stage</strong> - All subjects tested from both positions they were trained, and the positions trained by other group</li>
 <li><strong>Data recorded</strong> - For every throw, recorded the X velocity and Y velocity of ball at release</li>
 </ul>
@@ -352,40 +427,75 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="project-1---manipulations" class="level2">
-<h2 class="anchored" data-anchor-id="project-1---manipulations">Project 1 - Manipulations</h2>
+<section id="project-1---manipulations" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="project-1---manipulations">Project 1 - Manipulations</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="experiment-1" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-1">Experiment 1</h3>
+<section id="experiment-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-1-1">Experiment 1</h3>
 <ul>
-<li>Train a varied group from 2 positions, and a constant group from 1. Then test both groups, from the training positions and a novel position.</li>
+<li>Train varied group from 2 positions, and a constant group from 1.</li>
+<li>Test both groups from the trained positions - and 1 novel position</li>
 </ul>
+<p><img src="assets/igas_e1_manip.png" class="img-fluid"></p>
 </section>
 </div><div class="column" style="width:50%;">
 <section id="experiment-2" class="level3">
 <h3 class="anchored" data-anchor-id="experiment-2">Experiment 2</h3>
 <ul>
-<li>6 constant conditions, each trained from a unique location, and a varied condition trained from 2 locations</li>
+<li>6 distinct constant conditions</li>
 </ul>
+<p><img src="assets/igas_e2_manip.png" class="img-fluid"></p>
 </section>
 </div>
 </div>
 <hr>
 </section>
-<section id="project-1---results" class="level2">
-<h2 class="anchored" data-anchor-id="project-1---results">Project 1 - Results</h2>
+<section id="project-1---experiment-1-results" class="level2">
+<h2 class="anchored" data-anchor-id="project-1---experiment-1-results">Project 1 - Experiment 1 Results</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<section id="experiment-1-1" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-1-1">Experiment 1</h3>
-<p><img src="assets/fig-IGAS_Testing1-1-2.png" class="img-fluid"></p>
+<section id="experiment-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-1-2">Experiment 1</h3>
+<p><img src="assets/igas_e1_manip.png" class="img-fluid"></p>
 </section>
 </div><div class="column" style="width:60%;">
-<section id="experiment-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-2-1">Experiment 2</h3>
-<p><img src="assets/fig-e2testa-1-2.png" class="img-fluid"></p>
+<div class="fragment">
+<section id="training-1" class="level3">
+<h3 class="anchored" data-anchor-id="training-1">Training</h3>
+<p><img src="assets/htt_e1_train.png" class="img-fluid"></p>
 </section>
+</div>
+<div class="fragment">
+<section id="testing-1" class="level3">
+<h3 class="anchored" data-anchor-id="testing-1">Testing</h3>
+<p><img src="assets/fig-IGAS_Testing1-1-2.png" class="img-fluid"></p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="project-1---experiment-2-results" class="level2">
+<h2 class="anchored" data-anchor-id="project-1---experiment-2-results">Project 1 - Experiment 2 Results</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<section id="experiment-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-1-3">Experiment 1</h3>
+<p><img src="assets/igas_e2_manip.png" class="img-fluid"></p>
+</section>
+</div><div class="column" style="width:60%;">
+<div class="fragment">
+<section id="training-2" class="level3">
+<h3 class="anchored" data-anchor-id="training-2">Training</h3>
+<p><img src="assets/htt_e2_train.png" class="img-fluid"></p>
+</section>
+</div>
+<div class="fragment">
+<section id="testing-2" class="level3">
+<h3 class="anchored" data-anchor-id="testing-2">Testing</h3>
+<p><img src="assets/htt_e2_test.png" class="img-fluid"></p>
+</section>
+</div>
 </div>
 </div>
 <hr>
@@ -401,44 +511,105 @@ window.Quarto = {
 </section>
 <section id="project-1-computational-model" class="level2 smaller r-fit-text">
 <h2 class="smaller r-fit-text anchored" data-anchor-id="project-1-computational-model">Project 1 Computational Model</h2>
-</section>
-<section id="model-of-similarity-between-training-and-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="model-of-similarity-between-training-and-solutions">Model of Similarity between training and solutions</h2>
-<div id="fig-solspace" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-solspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/sol_space.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-solspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Solution space
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="model-of-similarity-between-training-and-solutions-1" class="level2">
-<h2 class="anchored" data-anchor-id="model-of-similarity-between-training-and-solutions-1">Model of Similarity between training and solutions</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
-<div id="fig-fullspace" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fullspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/full_space.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="700">
+<div class="column" style="width:50%;">
+<p><img src="assets/sol_space2.png" class="img-fluid" style="width:65.0%"> <img src="assets/full_space2.png" class="img-fluid" style="width:50.0%"></p>
+</div><div class="column" style="width:50%;">
+<section id="model-steps" class="level3">
+<h3 class="anchored" data-anchor-id="model-steps">Model Steps</h3>
+<ul>
+<li>each of the 6 positions has an empirical solution space</li>
+<li>Compute the summed similarity between training throws, and solution spaces
+<ul>
+<li>separately for each participant, and each of the testing positions</li>
+</ul></li>
+<li>We now have a measure of how similar training behavior was to testing solutions</li>
+</ul>
+</section>
+<section id="model-definition" class="level3">
+<h3 class="anchored" data-anchor-id="model-definition">Model Definition</h3>
+<ul>
+<li><span class="math inline">\(d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\)</span></li>
+<li><span class="math inline">\(Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})\)</span></li>
+</ul>
+</section>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fullspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
-</figcaption>
-</figure>
 </div>
-</div><div class="column" style="width:30%;">
-<p>some text</p>
-</div>
-</div>
-<hr>
 </section>
 <section id="project-1-computational-model-1" class="level2 smaller r-fit-text">
 <h2 class="smaller r-fit-text anchored" data-anchor-id="project-1-computational-model-1">Project 1 Computational Model</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img src="assets/sol_space.png" class="img-fluid"></p>
+<p><img src="assets/full_space.png" class="img-fluid"></p>
+</div><div class="column" style="width:30%;">
+<section id="model-steps-1" class="level3">
+<h3 class="anchored" data-anchor-id="model-steps-1">Model Steps</h3>
 <ul>
-<li>For each subject, compute similarity between training throws and each of the 6 testing locations</li>
+<li>each of the 6 positions has an empirical solution space</li>
+<li>Compute the summed similarity between training throws, and solution spaces
+<ul>
+<li>separately for each participant, and each of the testing positions</li>
+</ul></li>
+<li>We now have a measure of how similar training behavior was to testing solutions</li>
+</ul>
+</section>
+<section id="model-definition-1" class="level3">
+<h3 class="anchored" data-anchor-id="model-definition-1">Model Definition</h3>
+<ul>
+<li><span class="math inline">\(d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\)</span></li>
+<li><span class="math inline">\(Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})\)</span></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="project-1-computational-model-2" class="level2 smaller r-fit-text">
+<h2 class="smaller r-fit-text anchored" data-anchor-id="project-1-computational-model-2">Project 1 Computational Model</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<section id="solution-space" class="level3">
+<h3 class="anchored" data-anchor-id="solution-space">Solution Space</h3>
+<p><img src="assets/sol_space2.png" class="img-fluid"></p>
+</section>
+<section id="full-space" class="level3">
+<h3 class="anchored" data-anchor-id="full-space">Full Space</h3>
+<div id="fig-fullspace23" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fullspace23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/full_space2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fullspace23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
+</figcaption>
+</figure>
+</div>
+</section>
+</div><div class="column" style="width:40%;">
+<section id="model-steps-2" class="level3">
+<h3 class="anchored" data-anchor-id="model-steps-2">Model Steps</h3>
+<ul>
+<li>each of the 6 positions has an empirical solution space</li>
+<li>Compute the summed similarity between training throws, and solution spaces
+<ul>
+<li>separately for each participant, and each of the testing positions</li>
+</ul></li>
+<li>We now have a measure of how similar training behavior was to testing solutions</li>
+</ul>
+</section>
+<section id="model-definition-2" class="level3">
+<h3 class="anchored" data-anchor-id="model-definition-2">Model Definition</h3>
+<ul>
+<li><span class="math inline">\(d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\)</span></li>
+<li><span class="math inline">\(Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})\)</span></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="computational-model---does-similarity-account-for-effect-of-variability" class="level2">
+<h2 class="anchored" data-anchor-id="computational-model---does-similarity-account-for-effect-of-variability">Computational Model - Does Similarity Account for Effect of Variability?</h2>
+<ul>
 <li>Test whether similarity explains the difference in performance between Constant and Varied conditions
 <ul>
 <li>Assuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference</li>
@@ -454,7 +625,7 @@ Figure&nbsp;2: Full Space of Solution Throws and Missed Throws. Colored points r
 <hr>
 </section>
 </section>
-<section id="project-2---variability-and-extrapolation-in-a-function-learning-task" class="level1 page-columns page-full">
+<section id="project-2---variability-and-extrapolation-in-a-function-learning-task" class="level1">
 <h1>Project 2 - Variability and Extrapolation in a Function Learning Task</h1>
 <ul>
 <li>Influence of varied practice in a function learning task</li>
@@ -468,7 +639,7 @@ Figure&nbsp;2: Full Space of Solution Throws and Missed Throws. Colored points r
 <section id="project-2---questions-and-goals" class="level2">
 <h2 class="anchored" data-anchor-id="project-2---questions-and-goals">Project 2 - Questions and Goals</h2>
 <p><strong>Empirical</strong> - Design a task-space large enough to assess multiple degrees of extrapolation - Compare varied and constant generalization from several distinct distances from their nearest training condition</p>
-<p><strong>Model-based</strong> - If variation does influence extrapolation, can a connectionist model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses</p>
+<p><strong>Model-based</strong> - If variation does influence extrapolation, can an associative learning model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses</p>
 <hr>
 </section>
 <section id="hit-the-wall-task" class="level2">
@@ -476,115 +647,32 @@ Figure&nbsp;2: Full Space of Solution Throws and Missed Throws. Colored points r
 <!--  -->
 <p><video src="assets/htw_vid.mov" loop="true" autoplay="true" height="400" controls=""><a href="assets/htw_vid.mov">Video</a></video></p>
 <ul>
-<li>A total of 156 participants from IU’s online subject pool</li>
-<li>Varied group trains from 3 “velocity bands”, constant group from 1</li>
+<li>Target velocity presented at top of screen</li>
+<li>Participants attempt to “hit the wall” at the correct velocity</li>
+<li>Feedback during training - how many units above or below the target-band</li>
+<li>Only the “x velocity” component of the throw is relevant to the task</li>
 </ul>
 <hr>
 </section>
-<section id="project-2---methodology" class="level2">
-<h2 class="anchored" data-anchor-id="project-2---methodology">Project 2 - Methodology</h2>
-<ul>
-<li>A total of 156 participants from IU’s online subject pool</li>
-<li>Varied group trains from 3 “velocity bands”, constant group from 1</li>
-</ul>
-<p><img src="assets/htw_task_fig.png" class="img-fluid"></p>
-</section>
-<section id="project-2---methodology-1" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="project-2---methodology-1">Project 2 - Methodology</h2>
-<div class="cell page-columns page-full" data-fig-width="9" data-fig-height="3.2" data-layout-align="default">
-<div class="cell-output-display column-screen-inset-right">
-<div id="fig-design-e1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-design-e1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<svg width="864" height="307" viewbox="0.00 0.00 643.85 174.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 170)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-170 639.85,-170 639.85,4 -4,4"></polygon>
-<g id="clust1" class="cluster">
-<title>cluster</title>
-<polygon fill="none" stroke="black" points="152.49,-8 152.49,-158 455,-158 455,-8 152.49,-8"></polygon>
-<text text-anchor="middle" x="303.74" y="-141.4" font-family="Times,serif" font-size="14.00">Test Phase </text>
-<text text-anchor="middle" x="303.74" y="-124.6" font-family="Times,serif" font-size="14.00">(Counterbalanced Order)</text>
-</g>
-<!-- data1 -->
-<g id="node1" class="node">
-<title>data1</title>
-<polygon fill="#00a08a" stroke="black" points="118.54,-137.7 5.95,-137.7 5.95,-62.3 118.54,-62.3 118.54,-137.7"></polygon>
-<text text-anchor="middle" x="62.24" y="-121" font-family="Times,serif" font-size="14.00"> Varied Training </text>
-<text text-anchor="middle" x="62.24" y="-104.2" font-family="Times,serif" font-size="14.00">800-1000</text>
-<text text-anchor="middle" x="62.24" y="-87.4" font-family="Times,serif" font-size="14.00">1000-1200</text>
-<text text-anchor="middle" x="62.24" y="-70.6" font-family="Times,serif" font-size="14.00">1200-1400</text>
-</g>
-<!-- Test1 -->
-<g id="node4" class="node">
-<title>Test1</title>
-<polygon fill="#eccbae" stroke="black" points="252.81,-108 160.38,-108 160.38,-16 252.81,-16 252.81,-108"></polygon>
-<text text-anchor="middle" x="206.59" y="-91.4" font-family="Times,serif" font-size="14.00">Test &nbsp;</text>
-<text text-anchor="middle" x="206.59" y="-74.6" font-family="Times,serif" font-size="14.00">Novel Bands </text>
-<text text-anchor="middle" x="206.59" y="-57.8" font-family="Times,serif" font-size="14.00">100-300</text>
-<text text-anchor="middle" x="206.59" y="-41" font-family="Times,serif" font-size="14.00">350-550</text>
-<text text-anchor="middle" x="206.59" y="-24.2" font-family="Times,serif" font-size="14.00">600-800</text>
-</g>
-<!-- data1&#45;&gt;Test1 -->
-<g id="edge1" class="edge">
-<title>data1-&gt;Test1</title>
-<path fill="none" stroke="black" d="M118.69,-85.2C129.1,-82.42 139.98,-79.51 150.39,-76.74"></path>
-<polygon fill="black" stroke="black" points="151.43,-80.08 160.19,-74.12 149.62,-73.32 151.43,-80.08"></polygon>
-</g>
-<!-- data2 -->
-<g id="node2" class="node">
-<title>data2</title>
-<polygon fill="#ff0000" stroke="black" points="124.73,-44.6 -0.24,-44.6 -0.24,-3.4 124.73,-3.4 124.73,-44.6"></polygon>
-<text text-anchor="middle" x="62.24" y="-28.2" font-family="Times,serif" font-size="14.00"> Constant Training </text>
-<text text-anchor="middle" x="62.24" y="-11.4" font-family="Times,serif" font-size="14.00">800-1000</text>
-</g>
-<!-- data2&#45;&gt;Test1 -->
-<g id="edge2" class="edge">
-<title>data2-&gt;Test1</title>
-<path fill="none" stroke="black" d="M124.85,-40.45C133.39,-42.72 142.11,-45.05 150.51,-47.3"></path>
-<polygon fill="black" stroke="black" points="149.64,-50.68 160.2,-49.88 151.44,-43.92 149.64,-50.68"></polygon>
-</g>
-<!-- Test3 -->
-<g id="node3" class="node">
-<title>Test3</title>
-<polygon fill="#eccbae" stroke="black" points="635.77,-108 483.07,-108 483.07,-16 635.77,-16 635.77,-108"></polygon>
-<text text-anchor="middle" x="559.42" y="-91.4" font-family="Times,serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;Final Test </text>
-<text text-anchor="middle" x="559.42" y="-74.6" font-family="Times,serif" font-size="14.00"> &nbsp;Novel With Feedback &nbsp;</text>
-<text text-anchor="middle" x="559.42" y="-57.8" font-family="Times,serif" font-size="14.00">100-300</text>
-<text text-anchor="middle" x="559.42" y="-41" font-family="Times,serif" font-size="14.00">350-550</text>
-<text text-anchor="middle" x="559.42" y="-24.2" font-family="Times,serif" font-size="14.00">600-800</text>
-</g>
-<!-- Test2 -->
-<g id="node5" class="node">
-<title>Test2</title>
-<polygon fill="#eccbae" stroke="black" points="447.15,-108 288.55,-108 288.55,-16 447.15,-16 447.15,-108"></polygon>
-<text text-anchor="middle" x="367.85" y="-91.4" font-family="Times,serif" font-size="14.00"> &nbsp;Test </text>
-<text text-anchor="middle" x="367.85" y="-74.6" font-family="Times,serif" font-size="14.00"> &nbsp;Varied Training Bands &nbsp;</text>
-<text text-anchor="middle" x="367.85" y="-57.8" font-family="Times,serif" font-size="14.00">800-1000</text>
-<text text-anchor="middle" x="367.85" y="-41" font-family="Times,serif" font-size="14.00">1000-1200</text>
-<text text-anchor="middle" x="367.85" y="-24.2" font-family="Times,serif" font-size="14.00">1200-1400</text>
-</g>
-<!-- Test1&#45;&gt;Test2 -->
-<g id="edge3" class="edge">
-<title>Test1-&gt;Test2</title>
-<path fill="none" stroke="black" d="M252.8,-62C260.95,-62 269.7,-62 278.59,-62"></path>
-<polygon fill="black" stroke="black" points="278.67,-65.5 288.67,-62 278.67,-58.5 278.67,-65.5"></polygon>
-</g>
-<!-- Test2&#45;&gt;Test3 -->
-<g id="edge4" class="edge">
-<title>Test2-&gt;Test3</title>
-<path fill="none" stroke="black" d="M447.05,-62C455.55,-62 464.24,-62 472.83,-62"></path>
-<polygon fill="black" stroke="black" points="472.84,-65.5 482.84,-62 472.84,-58.5 472.84,-65.5"></polygon>
-</g>
-</g>
-</svg>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-design-e1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Experiment 1 Design. Constant and Varied participants complete different training conditions.
-</figcaption>
+<section id="project-2---experiment-1-design" class="level2 nostretch smaller">
+<h2 class="nostretch smaller anchored" data-anchor-id="project-2---experiment-1-design">Project 2 - Experiment 1 Design</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-top quarto-figure-left">
+<figure class="figure">
+<p><img src="assets/htw_e1_manip.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:65.0%" data-fig-align="top"></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-top quarto-figure-left">
+<figure class="figure">
+<p><img src="assets/e1_design.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%" data-fig-align="top"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>156 participants included in final analysis</li>
+<li>Varied group trains from 3 “velocity bands”, constant group from 1</li>
+</ul>
 </div>
 </div>
 <hr>
@@ -599,102 +687,26 @@ Figure&nbsp;3: Experiment 1 Design. Constant and Varied participants complete di
 </div>
 </div>
 </section>
-<section id="project-2---experiment-2-design" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="project-2---experiment-2-design">Project 2 - Experiment 2 Design</h2>
-<div class="cell page-columns page-full" data-fig-width="10" data-fig-height="4" data-fig-responsive="false" data-layout-align="default">
-<div class="cell-output-display column-screen-inset-right">
-<div id="fig-design-e2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-design-e2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<svg width="960" height="384" viewbox="0.00 0.00 647.35 174.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 170)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-170 643.35,-170 643.35,4 -4,4"></polygon>
-<g id="clust1" class="cluster">
-<title>cluster</title>
-<polygon fill="none" stroke="black" points="152.49,-8 152.49,-158 458.5,-158 458.5,-8 152.49,-8"></polygon>
-<text text-anchor="middle" x="305.49" y="-141.4" font-family="Times,serif" font-size="14.00">Test Phase </text>
-<text text-anchor="middle" x="305.49" y="-124.6" font-family="Times,serif" font-size="14.00">(Counterbalanced Order)</text>
-</g>
-<!-- data1 -->
-<g id="node1" class="node">
-<title>data1</title>
-<polygon fill="#00a08a" stroke="black" points="118.54,-137.7 5.95,-137.7 5.95,-62.3 118.54,-62.3 118.54,-137.7"></polygon>
-<text text-anchor="middle" x="62.24" y="-121" font-family="Times,serif" font-size="14.00"> Varied Training </text>
-<text text-anchor="middle" x="62.24" y="-104.2" font-family="Times,serif" font-size="14.00">100-300</text>
-<text text-anchor="middle" x="62.24" y="-87.4" font-family="Times,serif" font-size="14.00">350-550</text>
-<text text-anchor="middle" x="62.24" y="-70.6" font-family="Times,serif" font-size="14.00">600-800</text>
-</g>
-<!-- Test1 -->
-<g id="node4" class="node">
-<title>Test1</title>
-<polygon fill="#eccbae" stroke="black" points="256.06,-108 160.63,-108 160.63,-16 256.06,-16 256.06,-108"></polygon>
-<text text-anchor="middle" x="208.34" y="-91.4" font-family="Times,serif" font-size="14.00">Test &nbsp;</text>
-<text text-anchor="middle" x="208.34" y="-74.6" font-family="Times,serif" font-size="14.00">Novel Bands &nbsp;</text>
-<text text-anchor="middle" x="208.34" y="-57.8" font-family="Times,serif" font-size="14.00">800-1000</text>
-<text text-anchor="middle" x="208.34" y="-41" font-family="Times,serif" font-size="14.00">1000-1200</text>
-<text text-anchor="middle" x="208.34" y="-24.2" font-family="Times,serif" font-size="14.00">1200-1400</text>
-</g>
-<!-- data1&#45;&gt;Test1 -->
-<g id="edge1" class="edge">
-<title>data1-&gt;Test1</title>
-<path fill="none" stroke="black" d="M118.54,-85.42C129.01,-82.66 139.97,-79.77 150.49,-76.99"></path>
-<polygon fill="black" stroke="black" points="151.62,-80.31 160.4,-74.38 149.83,-73.55 151.62,-80.31"></polygon>
-</g>
-<!-- data2 -->
-<g id="node2" class="node">
-<title>data2</title>
-<polygon fill="#ff0000" stroke="black" points="124.73,-44.6 -0.24,-44.6 -0.24,-3.4 124.73,-3.4 124.73,-44.6"></polygon>
-<text text-anchor="middle" x="62.24" y="-28.2" font-family="Times,serif" font-size="14.00"> Constant Training </text>
-<text text-anchor="middle" x="62.24" y="-11.4" font-family="Times,serif" font-size="14.00">600-800</text>
-</g>
-<!-- data2&#45;&gt;Test1 -->
-<g id="edge2" class="edge">
-<title>data2-&gt;Test1</title>
-<path fill="none" stroke="black" d="M124.77,-40.23C133.35,-42.49 142.13,-44.8 150.61,-47.04"></path>
-<polygon fill="black" stroke="black" points="149.84,-50.46 160.41,-49.62 151.63,-43.69 149.84,-50.46"></polygon>
-</g>
-<!-- Test3 -->
-<g id="node3" class="node">
-<title>Test3</title>
-<polygon fill="#eccbae" stroke="black" points="639.27,-108 486.57,-108 486.57,-16 639.27,-16 639.27,-108"></polygon>
-<text text-anchor="middle" x="562.92" y="-91.4" font-family="Times,serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;Final Test </text>
-<text text-anchor="middle" x="562.92" y="-74.6" font-family="Times,serif" font-size="14.00"> &nbsp;Novel With Feedback &nbsp;</text>
-<text text-anchor="middle" x="562.92" y="-57.8" font-family="Times,serif" font-size="14.00">800-1000</text>
-<text text-anchor="middle" x="562.92" y="-41" font-family="Times,serif" font-size="14.00">1000-1200</text>
-<text text-anchor="middle" x="562.92" y="-24.2" font-family="Times,serif" font-size="14.00">1200-1400</text>
-</g>
-<!-- Test2 -->
-<g id="node5" class="node">
-<title>Test2</title>
-<polygon fill="#eccbae" stroke="black" points="450.65,-108 292.05,-108 292.05,-16 450.65,-16 450.65,-108"></polygon>
-<text text-anchor="middle" x="371.35" y="-91.4" font-family="Times,serif" font-size="14.00"> &nbsp;Test </text>
-<text text-anchor="middle" x="371.35" y="-74.6" font-family="Times,serif" font-size="14.00"> &nbsp;Varied Training Bands &nbsp;</text>
-<text text-anchor="middle" x="371.35" y="-57.8" font-family="Times,serif" font-size="14.00">100-300</text>
-<text text-anchor="middle" x="371.35" y="-41" font-family="Times,serif" font-size="14.00">350-550</text>
-<text text-anchor="middle" x="371.35" y="-24.2" font-family="Times,serif" font-size="14.00">600-800</text>
-</g>
-<!-- Test1&#45;&gt;Test2 -->
-<g id="edge3" class="edge">
-<title>Test1-&gt;Test2</title>
-<path fill="none" stroke="black" d="M256.35,-62C264.51,-62 273.22,-62 282.07,-62"></path>
-<polygon fill="black" stroke="black" points="282.09,-65.5 292.09,-62 282.09,-58.5 282.09,-65.5"></polygon>
-</g>
-<!-- Test2&#45;&gt;Test3 -->
-<g id="edge4" class="edge">
-<title>Test2-&gt;Test3</title>
-<path fill="none" stroke="black" d="M450.55,-62C459.05,-62 467.74,-62 476.33,-62"></path>
-<polygon fill="black" stroke="black" points="476.34,-65.5 486.34,-62 476.34,-58.5 476.34,-65.5"></polygon>
-</g>
-</g>
-</svg>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-design-e2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.
-</figcaption>
+<section id="project-2---experiment-2-design" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="project-2---experiment-2-design">Project 2 - Experiment 2 Design</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-top quarto-figure-left">
+<figure class="figure">
+<p><img src="assets/htw_e2_manip.png" class="img-fluid quarto-figure quarto-figure-left figure-img" data-fig-align="top"></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-top quarto-figure-left">
+<figure class="figure">
+<p><img src="assets/e2_design.png" class="img-fluid quarto-figure quarto-figure-left figure-img" data-fig-align="top"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br><br><br><br></p>
+<ul>
+<li>Training and Testing bands are in reversed order, relative to Experiment 1</li>
+<li>110 participants included in final analysis</li>
+</ul>
 </div>
 </div>
 </section>
@@ -711,8 +723,12 @@ Figure&nbsp;4: Experiment 2 Design. Constant and Varied participants complete di
 <section id="project-2---experiment-3" class="level2">
 <h2 class="anchored" data-anchor-id="project-2---experiment-3">Project 2 - Experiment 3</h2>
 <ul>
-<li>Ordinal Feedback</li>
-<li>Both Reverse and Original Feedback Order</li>
+<li>Ordinal Feedback
+<ul>
+<li>directional feedback indicating too high, too low, or correct</li>
+</ul></li>
+<li>Both Original (Experiment 1), and reverse (Experiment 2) orders included</li>
+<li>195 participants included in final analysis</li>
 </ul>
 </section>
 <section id="project-2---experiment-3-results" class="level2 nostretch">
@@ -953,98 +969,45 @@ Figure&nbsp;4: Experiment 2 Design. Constant and Varied participants complete di
 </table>
 <hr>
 </section>
-<section id="theoretical-contributions" class="level2">
-<h2 class="anchored" data-anchor-id="theoretical-contributions">Theoretical Contributions</h2>
-<ul>
-<li>Insights into training variability effects on learning and generalization</li>
-<li>Computational models applications</li>
-</ul>
-<hr>
-</section>
-<section id="practical-implications" class="level2">
-<h2 class="anchored" data-anchor-id="practical-implications">Practical Implications</h2>
-<ul>
-<li>Training programs design implications</li>
-<li>Future research considerations</li>
-</ul>
-<hr>
-</section>
-<section id="limitations-and-future-directions" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-and-future-directions">Limitations and Future Directions</h2>
-<ul>
-<li>Study limitations</li>
-<li>Future research suggestions</li>
-</ul>
-<hr>
-</section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li>Recap of key findings</li>
-<li>Final thoughts on training variability’s role in learning</li>
-</ul>
-<hr>
 </section>
-<section id="questions-and-discussion" class="level2">
-<h2 class="anchored" data-anchor-id="questions-and-discussion">Questions and Discussion</h2>
-<ul>
-<li>Open floor for questions from the committee and audience</li>
-</ul>
-</section>
-<section id="future-research-directions" class="level2 smaller r-fit-text">
-<h2 class="smaller r-fit-text anchored" data-anchor-id="future-research-directions">Future Research Directions</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment">
-<section id="theoretical-extensions" class="level3">
-<h3 class="anchored" data-anchor-id="theoretical-extensions">Theoretical Extensions</h3>
-<ul>
-<li>Investigate the role of individual differences in training variability effects.</li>
-<li>Explore the impact of different types of feedback on learning and generalization.</li>
-<li>Examine the influence of task complexity on the benefits of varied training.</li>
-</ul>
-</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bjorkMakingThingsHard2011" class="csl-entry" role="listitem">
+Bjork, E. L., &amp; Bjork, R. A. (2011). Making things hard on yourself, but in a good way: <span>Creating</span> desirable difficulties to enhance learning. <em>Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society</em>, <em>2</em>, 59–68.
 </div>
-<div class="fragment">
-<section id="methodological-innovations" class="level3">
-<h3 class="anchored" data-anchor-id="methodological-innovations">Methodological Innovations</h3>
-<ul>
-<li>Develop new experimental paradigms to test training variability in more complex tasks.</li>
-<li>Utilize advanced computational models to simulate learning processes under varied conditions.</li>
-<li>Implement longitudinal studies to assess long-term effects of training variability.</li>
-</ul>
-</section>
+<div id="ref-gormanInstancebasedModelAccount2022" class="csl-entry" role="listitem">
+Gorman, T. E., &amp; Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. <em>Cognitive Psychology</em>, <em>137</em>, 101491. <a href="https://doi.org/10.1016/j.cogpsych.2022.101491">https://doi.org/10.1016/j.cogpsych.2022.101491</a>
 </div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<section id="practical-applications" class="level3">
-<h3 class="anchored" data-anchor-id="practical-applications">Practical Applications</h3>
-<ul>
-<li>Design adaptive training programs that adjust variability based on learner performance.</li>
-<li>Apply findings to educational settings to enhance learning outcomes.</li>
-<li>Use insights to improve training protocols in professional skill development.</li>
-</ul>
-</section>
+<div id="ref-guadagnoliChallengePointFramework2004" class="csl-entry" role="listitem">
+Guadagnoli, M. A., &amp; Lee, T. D. (2004). Challenge <span>Point</span>: <span>A Framework</span> for <span>Conceptualizing</span> the <span>Effects</span> of <span>Various Practice Conditions</span> in <span>Motor Learning</span>. <em>Journal of Motor Behavior</em>, <em>36</em>(2), 212–224. <a href="https://doi.org/10.3200/JMBR.36.2.212-224">https://doi.org/10.3200/JMBR.36.2.212-224</a>
 </div>
-<div class="fragment">
-<section id="collaborative-opportunities" class="level3">
-<h3 class="anchored" data-anchor-id="collaborative-opportunities">Collaborative Opportunities</h3>
-<ul>
-<li>Partner with educational institutions to test training variability in classroom settings.</li>
-<li>Collaborate with industry professionals to apply research findings in real-world training programs.</li>
-<li>Engage with interdisciplinary teams to explore the broader implications of training variability.</li>
-</ul>
-</section>
+<div id="ref-kerrSpecificVariedPractice1978" class="csl-entry" role="listitem">
+Kerr, R., &amp; Booth, B. (1978). Specific and varied practice of motor skill. <em>Perceptual and Motor Skills</em>, <em>46</em>(2), 395–401. <a href="https://doi.org/10.1177/003151257804600201">https://doi.org/10.1177/003151257804600201</a>
+</div>
+<div id="ref-schmidtSchemaTheoryDiscrete1975" class="csl-entry" role="listitem">
+Schmidt, R. A. (1975). A schema theory of discrete motor skill learning. <em>Psychological Review</em>, <em>82</em>(4), 225–260. <a href="https://doi.org/10.1037/h0076770">https://doi.org/10.1037/h0076770</a>
 </div>
 </div>
-</div>
+</section>
+<section id="manuscript" class="level2 scrollable unnumbered unlisted">
+<h2 class="scrollable unnumbered unlisted anchored" data-anchor-id="manuscript">Manuscript</h2>
+<iframe width="800" height="750" src="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html" title="Webpage example"></iframe>
 <hr>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Now published in Cognitive Psychology <span class="citation" data-cites="gormanInstancebasedModelAccount2022">Gorman &amp; Goldstone (<a href="#ref-gormanInstancebasedModelAccount2022" role="doc-biblioref">2022</a>)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

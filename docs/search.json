@@ -880,7 +880,7 @@
     "href": "Presentation/slides.html#theoretical-frameworks",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Theoretical Frameworks",
-    "text": "Theoretical Frameworks\n\nSchema Theory (Schmidt, 1975)\nDesirable Difficulties Framework (Bjork & Bjork, 2011)\nChallenge Point Framework (Guadagnoli & Lee, 2004)",
+    "text": "Theoretical Frameworks\n\nSchema Theory (Schmidt, 1975)\nDesirable Difficulties Framework (Bjork & Bjork, 2011)\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\nSchmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)",
     "crumbs": [
       "Slides"
     ]
@@ -890,7 +890,7 @@
     "href": "Presentation/slides.html#overview-of-current-work",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Overview of Current Work",
-    "text": "Overview of Current Work\n\nProject 1: Visuomotor projectile launching task\nProject 2: Visuomotor extrapolation task",
+    "text": "Overview of Current Work\n\nProject 11\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)\n\n\n\n\n–",
     "crumbs": [
       "Slides"
     ]
@@ -1000,7 +1000,7 @@
     "href": "Presentation/slides.html#conclusion",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Conclusion",
-    "text": "Conclusion\n\nRecap of key findings\nFinal thoughts on training variability’s role in learning",
+    "text": "Conclusion",
     "crumbs": [
       "Slides"
     ]
@@ -1805,7 +1805,7 @@
     "href": "Presentation/slides.html#but-also-plenty-of-contradictory-results-and-complications",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "But also plenty of contradictory results and complications",
-    "text": "But also plenty of contradictory results and complications\n\nCases where varied training makes no difference\nCases where more training variation results in worse outcomes\nCases where the influence of variation interacts with some other factor\n\ndifficulty\nprior knowledge\nFrequency effects, or amount of training/learning before testing",
+    "text": "But also plenty of contradictory results and complications\n\nCases where varied training doesn’t benefit generalization\nCases where more training variation results in worse outcomes\nCases where the influence of variation interacts with some other factor\n\ndifficulty\nprior knowledge\nFrequency effects, or amount of training/learning before testing",
     "crumbs": [
       "Slides"
     ]
@@ -1835,7 +1835,7 @@
     "href": "Presentation/slides.html#project-1---manipulations",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Manipulations",
-    "text": "Project 1 - Manipulations\n\n\n\nExperiment 1\n\nTrain a varied group from 2 positions, and a constant group from 1. Then test both groups, from the training positions and a novel position.\n\n\n\n\nExperiment 2\n\n6 constant conditions, each trained from a unique location, and a varied condition trained from 2 locations",
+    "text": "Project 1 - Manipulations\n\n\n\nExperiment 1\n\nTrain varied group from 2 positions, and a constant group from 1.\nTest both groups from the trained positions - and 1 novel position\n\n\n\n\n\nExperiment 2\n\n6 distinct constant conditions",
     "crumbs": [
       "Slides"
     ]
@@ -1865,7 +1865,7 @@
     "href": "Presentation/slides.html#project-1-computational-model",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model",
+    "text": "Project 1 Computational Model\n\n\n \n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
     "crumbs": [
       "Slides"
     ]
@@ -1875,7 +1875,7 @@
     "href": "Presentation/slides.html#project-1-computational-model-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model\n\nFor each subject, compute similarity between training throws and each of the 6 testing locations\nTest whether similarity explains the difference in performance between Constant and Varied conditions\n\nAssuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference\nAssume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied.\n\n\n\nEquation 1: \\[ Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}}) \\] Equation 2: \\[ d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \\]",
+    "text": "Project 1 Computational Model\n\n\n\n\n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
     "crumbs": [
       "Slides"
     ]
@@ -1905,7 +1905,7 @@
     "href": "Presentation/slides.html#project-2---questions-and-goals",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Questions and Goals",
-    "text": "Project 2 - Questions and Goals\nEmpirical - Design a task-space large enough to assess multiple degrees of extrapolation - Compare varied and constant generalization from several distinct distances from their nearest training condition\nModel-based - If variation does influence extrapolation, can a connectionist model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses",
+    "text": "Project 2 - Questions and Goals\nEmpirical - Design a task-space large enough to assess multiple degrees of extrapolation - Compare varied and constant generalization from several distinct distances from their nearest training condition\nModel-based - If variation does influence extrapolation, can an associative learning model with similarity-based activation provide a good account? - Can our modelling framework simultaneously account for both training and testing data? - Accounting for the full distribution of responses",
     "crumbs": [
       "Slides"
     ]
@@ -1965,7 +1965,7 @@
     "href": "Presentation/slides.html#project-2---experiment-2-design",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 2 Design",
-    "text": "Project 2 - Experiment 2 Design\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n100-300\n350-550\n600-800\n\n\n\nTest1\n\nTest  \nNovel Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n600-800\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n100-300\n350-550\n600-800\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 4: Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1.",
+    "text": "Project 2 - Experiment 2 Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTraining and Testing bands are in reversed order, relative to Experiment 1\n110 participants included in final analysis",
     "crumbs": [
       "Slides"
     ]
@@ -2135,7 +2135,7 @@
     "href": "Presentation/slides.html#hit-the-target-task",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Hit The Target Task",
-    "text": "Hit The Target Task\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
+    "text": "Hit The Target Task\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials with feedback. Constant groups trains from single position. Varied group practices from two positions.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
     "crumbs": [
       "Slides"
     ]
@@ -2145,7 +2145,7 @@
     "href": "Presentation/slides.html#hit-the-wall-task",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Hit The Wall Task",
-    "text": "Hit The Wall Task\n\nVideo\n\nA total of 156 participants from IU’s online subject pool\nVaried group trains from 3 “velocity bands”, constant group from 1",
+    "text": "Hit The Wall Task\n\nVideo\n\nTarget velocity presented at top of screen\nParticipants attempt to “hit the wall” at the correct velocity\nFeedback during training - how many units above or below the target-band\nOnly the “x velocity” component of the throw is relevant to the task",
     "crumbs": [
       "Slides"
     ]
@@ -2155,7 +2155,7 @@
     "href": "Presentation/slides.html#model-of-similarity-between-training-and-solutions-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Model of Similarity between training and solutions",
-    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\n\n\nFigure 2: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses\n\n\n\n\nsome text",
+    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\n\n\nFigure 3: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses\n\n\n\n\nsome text",
     "crumbs": [
       "Slides"
     ]
@@ -2165,7 +2165,7 @@
     "href": "Presentation/slides.html#model-of-similarity-between-training-and-solutions",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Model of Similarity between training and solutions",
-    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\nFigure 1: Solution space",
+    "text": "Model of Similarity between training and solutions\n\n\n\n\n\n\nFigure 2: Solution space",
     "crumbs": [
       "Slides"
     ]
@@ -2279,7 +2279,254 @@
     "href": "Presentation/slides.html#project-2---experiment-3",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 3",
-    "text": "Project 2 - Experiment 3\n\nOrdinal Feedback\nBoth Reverse and Original Feedback Order",
+    "text": "Project 2 - Experiment 3\n\nOrdinal Feedback\n\ndirectional feedback indicating too high, too low, or correct\n\nBoth Original (Experiment 1), and reverse (Experiment 2) orders included\n195 participants included in final analysis",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---design",
+    "href": "Presentation/slides.html#project-2---design",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Design",
+    "text": "Project 2 - Design",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-2-design-1",
+    "href": "Presentation/slides.html#project-2---experiment-2-design-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 2 Design",
+    "text": "Project 2 - Experiment 2 Design",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---design-1",
+    "href": "Presentation/slides.html#project-2---design-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - design",
+    "text": "Project 2 - design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1\n\nTest  \nNovel Bands \n100-300\n350-550\n600-800\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n800-1000\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 3",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---design-2",
+    "href": "Presentation/slides.html#project-2---design-2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Design",
+    "text": "Project 2 - Design",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---design-3",
+    "href": "Presentation/slides.html#project-2---design-3",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Design",
+    "text": "Project 2 - Design\n\n\n\n\n\n\n\n\n\n\ncluster\n\nTest Phase \n(Counterbalanced Order)\n\n\n\ndata1\n\n Varied Training \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1\n\nTest  \nNovel Bands \n100-300\n350-550\n600-800\n\n\n\ndata1-&gt;Test1\n\n\n\n\n\ndata2\n\n Constant Training \n800-1000\n\n\n\ndata2-&gt;Test1\n\n\n\n\n\nTest3\n\n    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800\n\n\n\nTest2\n\n  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400\n\n\n\nTest1-&gt;Test2\n\n\n\n\n\nTest2-&gt;Test3\n\n\n\n\n\n\n\n\nFigure 4: Experiment 1 Design. Constant and Varied participants complete different training conditions.",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#variability",
+    "href": "Presentation/slides.html#variability",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Variability",
+    "text": "Variability\n\nVariation during training linked to improved transfer in numerous domains\nWhat does “variability mean in the context of learning interventions?”",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#types-of-variability",
+    "href": "Presentation/slides.html#types-of-variability",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Types of Variability",
+    "text": "Types of Variability\n\nThe number of unique items/problems experienced\nHow spread out examples are",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#my-dissertation-focus",
+    "href": "Presentation/slides.html#my-dissertation-focus",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "My Dissertation Focus",
+    "text": "My Dissertation Focus\n\nNumber of unique examples\nVisuomotor skill learning and function learning\nAddressing methodological shortcomings of previous work\nAdapting cognitive models from other domains to account for results",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#common-experimental-manipulations",
+    "href": "Presentation/slides.html#common-experimental-manipulations",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Common Experimental Manipulations",
+    "text": "Common Experimental Manipulations\n\nVaried vs. Constant",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#designs-that-seemingly-overcome-these-issues",
+    "href": "Presentation/slides.html#designs-that-seemingly-overcome-these-issues",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "designs that seemingly overcome these issues",
+    "text": "designs that seemingly overcome these issues\n\nKerr & Booth 1978\n\n\nKerr & Booth (1978)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#experiment-1",
+    "href": "Presentation/slides.html#experiment-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Experiment 1",
+    "text": "Experiment 1\n\nConceptual replication of Kerr & Booth design\nTesting classic pattern as well",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#footnotes",
+    "href": "Presentation/slides.html#footnotes",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nNow published in Cognitive Psychology Gorman & Goldstone (2022)↩︎",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides_revealjs.html#references",
+    "href": "Presentation/slides_revealjs.html#references",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "References",
+    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770"
+  },
+  {
+    "objectID": "Presentation/slides.html#references",
+    "href": "Presentation/slides.html#references",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "References",
+    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#manuscript",
+    "href": "Presentation/slides.html#manuscript",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Manuscript",
+    "text": "Manuscript",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1---results-1",
+    "href": "Presentation/slides.html#project-1---results-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 - Results",
+    "text": "Project 1 - Results\n\n\n\nExperiment 2\n\n\n\n\nTraining\n ### Testing",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1---results-2",
+    "href": "Presentation/slides.html#project-1---results-2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 - Results",
+    "text": "Project 1 - Results\n\n\n\nExperiment 1\n\n\n\n\nExperiment 2",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1---experiment-1-results",
+    "href": "Presentation/slides.html#project-1---experiment-1-results",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 - Experiment 1 Results",
+    "text": "Project 1 - Experiment 1 Results\n\n\n\nExperiment 1\n\n\n\n\n\nTraining\n\n\n\n\n\nTesting",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1---experiment-2-results",
+    "href": "Presentation/slides.html#project-1---experiment-2-results",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 - Experiment 2 Results",
+    "text": "Project 1 - Experiment 2 Results\n\n\n\nExperiment 1\n\n\n\n\n\nTraining\n\n\n\n\n\nTesting",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1-computational-model-2",
+    "href": "Presentation/slides.html#project-1-computational-model-2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 Computational Model",
+    "text": "Project 1 Computational Model\n\n\n\nSolution Space\n\n\n\nFull Space\n\n\n\n\n\n\nFigure 1: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses\n\n\n\n\n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1-computational-model-3",
+    "href": "Presentation/slides.html#project-1-computational-model-3",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 Computational Model",
+    "text": "Project 1 Computational Model\n\nFor each subject, compute similarity between training throws and each of the 6 testing locations\nTest whether similarity explains the difference in performance between Constant and Varied conditions\n\nAssuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference\nAssume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied.\n\n\n\nEquation 1: \\[ Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}}) \\] Equation 2: \\[ d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \\]",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#model-steps",
+    "href": "Presentation/slides.html#model-steps",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Model Steps",
+    "text": "Model Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#computational-model---does-similarity-account-for-effect-of-variability",
+    "href": "Presentation/slides.html#computational-model---does-similarity-account-for-effect-of-variability",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Computational Model - Does Similarity Account for Effect of Variability?",
+    "text": "Computational Model - Does Similarity Account for Effect of Variability?\n\nTest whether similarity explains the difference in performance between Constant and Varied conditions\n\nAssuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference\nAssume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied.\n\n\n\nEquation 1: \\[ Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}}) \\] Equation 2: \\[ d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } \\]",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---methods",
+    "href": "Presentation/slides.html#project-2---methods",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Methods",
+    "text": "Project 2 - Methods",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2---experiment-1-design",
+    "href": "Presentation/slides.html#project-2---experiment-1-design",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2 - Experiment 1 Design",
+    "text": "Project 2 - Experiment 1 Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n156 participants included in final analysis\nVaried group trains from 3 “velocity bands”, constant group from 1",
     "crumbs": [
       "Slides"
     ]

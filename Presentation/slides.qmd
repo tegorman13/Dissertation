@@ -4,6 +4,7 @@ page-layout: full
 aliases:
   - /slides.html
 css: /Assets/Style/slides.css
+format-links: [clean-revealjs, pptx,gfm]
 format: 
   html: 
     subtitle: "Dissertation Defense"
@@ -41,29 +42,46 @@ author:
 #engine: knitr
 ---
 
-
 {{< include /Presentation/embed_slides.qmd >}}
 
 
-# Introduction 
 
--   Investigate effects of training variability on learning and generalization
--   Focus areas: visuomotor skill learning and function learning tasks
+# Learning Generalization 
+
+- Learning is often specific
+- Longstanding scientific interest in how to improve generalization or transfer
+
+------------------------------------------------------------------------
+
+## Variability 
+
+- Variation during training linked to improved transfer in numerous domains 
+- What does "variability mean in the context of learning interventions?"
+
+## Types of Variability
+
+- The number of unique items/problems experienced
+- How spread out examples are 
+
+## My Dissertation Focus
+
+- Number of unique examples
+- Visuomotor skill learning and function learning
+
+- Addressing methodological shortcomings of previous work
+- Adapting cognitive models from other domains to account for results
 
 ------------------------------------------------------------------------
 
-## Background and Motivation 
+## Common Experimental Manipulations
 
--   Importance of training variability
--   Research gaps in visuomotor skill learning
--   Previous research in category learning, language learning, and function learning
+- Varied vs. Constant
 
-------------------------------------------------------------------------
 
 ## Common Empirical Patterns
 
 :::::::::  columns
-::: {.column width="60%"}
+::: {.column width="55%"}
 ### Training
 - Both training conditions complete the same number of training trials.
 - Varied group has worse training performance.
@@ -71,7 +89,7 @@ author:
 ![](assets/train_pattern.png)
 :::
 
-::: {.column width="40%"} 
+::: {.column width="45%"} 
 ::: {.fragment}
 ### Testing
 
@@ -87,7 +105,7 @@ author:
 
 ## But also plenty of contradictory results and complications
 
-- Cases where varied training makes no difference
+- Cases where varied training doesn't benefit generalization
 - Cases where more training variation results in worse outcomes
 - Cases where the influence of variation interacts with some other factor
     - difficulty
@@ -102,23 +120,56 @@ author:
 -   Desirable Difficulties Framework (Bjork & Bjork, 2011)
 -   Challenge Point Framework (Guadagnoli & Lee, 2004)
 
+::: footer
+@schmidtSchemaTheoryDiscrete1975 @bjorkMakingThingsHard2011 @guadagnoliChallengePointFramework2004
+:::
+
 <!-- ![](assets/fig-toy-model1-1-1.png) -->
 
 ------------------------------------------------------------------------
 
 ## Overview of Current Work
 
--   Project 1: Visuomotor projectile launching task
--   Project 2: Visuomotor extrapolation task
+### Project 1[^1]
 
-------------------------------------------------------------------------
+- Visuomotor projectile launching task
+- two experiments
+- Beneficial effect of variability
+- Instance-based similarity model
 
-# Project 1  
+### Project 2 
 
--   Influence of varied practice in a projectile launching task
--   Experiments 1 & 2:
-    -   Constant vs. varied training groups
-    -   Performance metrics and transfer testing
+- Visuomotor extrapolation task
+- Three experiments
+- Effect of variability is null or negative
+- Connectionist model (ALM) and hybrid associative & rule model (EXAM)
+
+
+::: footer
+[^1]: Now published in Cognitive Psychology @gormanInstancebasedModelAccount2022
+:::
+--
+
+# Project 1  - Issues with previous research
+
+- Assumptions about what is encoded
+- Assumptions about the formation of abstractions 
+- Aggregation issues and similarity confounds
+
+---
+
+## designs that seemingly overcome these issues
+
+- Kerr & Booth 1978
+
+::: footer
+@kerrSpecificVariedPractice1978
+:::
+
+## Experiment 1
+
+- Conceptual replication of Kerr & Booth design 
+- Testing classic pattern as well  
 
 ------------------------------------------------------------------------
 
@@ -139,7 +190,7 @@ author:
 ::::
 
 :::: {.column width="40%"}
-- **Training Stage** - 200 training trials. Constant groups throws from single position. Varied group 60 trials from 2 locations. 
+- **Training Stage** - 200 training trials with feedback. Constant groups trains from single position. Varied group practices from two positions. 
 - **Transfer Stage** - All subjects tested from both positions they were trained, and the positions trained by other group
 - **Data recorded** - For every throw, recorded the X velocity and Y velocity of ball at release
 ::::
@@ -150,38 +201,70 @@ author:
 ------------------------------------------------------------------------
 
 
-## Project 1 - Manipulations
+## Project 1 - Manipulations  {.smaller}
 
 
 :::: {.columns}
 ::: {.column width="50%"}
 
 ### Experiment 1
-- Train a varied group from 2 positions, and a constant group from 1. Then test both groups, from the training positions and a novel position.
+- Train varied group from 2 positions, and a constant group from 1.
+- Test both groups from the trained positions - and 1 novel position
+
+![](assets/igas_e1_manip.png)
 
 :::
 
 ::: {.column width="50%"}
 ### Experiment 2
-- 6 constant conditions, each trained from a unique location, and a varied condition trained from 2 locations
+- 6 distinct constant conditions
+
+![](assets/igas_e2_manip.png)
 :::
 
 ::::
 
 ------------------------------------------------------------------------
 
-## Project 1 - Results
+## Project 1 - Experiment 1 Results
 
 :::: {.columns}
 ::: {.column width="40%"}
 ### Experiment 1
-![](assets/fig-IGAS_Testing1-1-2.png)
+![](assets/igas_e1_manip.png)
 :::
 ::: {.column width="60%"}
-### Experiment 2
-![](assets/fig-e2testa-1-2.png)
+::: fragment
+### Training
+![](assets/htt_e1_train.png)
+:::
+::: fragment
+### Testing
+![](assets/fig-IGAS_Testing1-1-2.png)
+:::
 :::
 ::::
+
+## Project 1 - Experiment 2 Results
+
+:::: {.columns}
+::: {.column width="40%"}
+### Experiment 1
+![](assets/igas_e2_manip.png)
+:::
+::: {.column width="60%"}
+::: fragment
+### Training
+![](assets/htt_e2_train.png)
+:::
+::: fragment
+### Testing
+![](assets/htt_e2_test.png)
+:::
+:::
+::::
+
+
 
 ------------------------------------------------------------------------
 
@@ -197,34 +280,94 @@ author:
 
 ## Project 1 Computational Model {.smaller .r-fit-text}
 
-
-## Model of Similarity between training and solutions
-
-:::{#fig-solspace}
-![](assets/sol_space.png){fig-align="left" width="500px"}
-
-Solution space
-:::
-
-## Model of Similarity between training and solutions
-
 :::: {.columns}
-::: {.column width="70%"}
-:::{#fig-fullspace}
-![](assets/full_space.png){fig-align="left" width="700px"}
+::: {.column width="50%"}
 
-Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
+![](assets/sol_space2.png){width="65%"}
+![](assets/full_space2.png){width="50%"}
 :::
-:::
-::: {.column width="30%"}
-some text
+
+::: {.column width="50%"}
+
+### Model Steps 
+
+- each of the 6 positions has an empirical solution space
+- Compute the summed similarity between training throws, and solution spaces
+  - separately for each participant, and each of the testing positions
+- We now have a measure of how similar training behavior was to testing solutions
+
+### Model Definition 
+
+- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
+- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
+
+
 :::
 ::::
-------------------------------------------------------------------------
+
+
 
 ## Project 1 Computational Model {.smaller .r-fit-text}
 
-- For each subject, compute similarity between training throws and each of the 6 testing locations
+:::: {.columns}
+::: {.column width="70%"}
+
+![](assets/sol_space.png)
+
+
+
+![](assets/full_space.png)
+:::
+::: {.column width="30%"}
+### Model Steps 
+
+- each of the 6 positions has an empirical solution space
+- Compute the summed similarity between training throws, and solution spaces
+  - separately for each participant, and each of the testing positions
+- We now have a measure of how similar training behavior was to testing solutions
+
+### Model Definition 
+
+- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
+- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
+:::
+::::
+
+## Project 1 Computational Model {.smaller .r-fit-text}
+
+:::: {.columns}
+::: {.column width="60%"}
+### Solution Space
+![](assets/sol_space2.png)
+
+### Full Space
+:::{#fig-fullspace23}
+![](assets/full_space2.png)
+
+Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
+:::
+
+:::
+
+::: {.column width="40%"}
+
+### Model Steps 
+
+- each of the 6 positions has an empirical solution space
+- Compute the summed similarity between training throws, and solution spaces
+  - separately for each participant, and each of the testing positions
+- We now have a measure of how similar training behavior was to testing solutions
+
+### Model Definition 
+
+- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
+- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
+:::
+::::
+
+
+## Computational Model - Does Similarity Account for Effect of Variability?
+
 - Test whether similarity explains the difference in performance between Constant and Varied conditions
   - Assuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference
   - Assume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied. 
@@ -257,7 +400,7 @@ some text
 
 
 **Model-based**
-- If variation does influence extrapolation, can a connectionist model with similarity-based activation provide a good account?
+- If variation does influence extrapolation, can an associative learning model with similarity-based activation provide a good account?
 - Can our modelling framework simultaneously account for both training and testing data?
 - Accounting for the full distribution of responses
 
@@ -270,51 +413,34 @@ some text
 ::: {.content-visible when-format="html"}
 ![](assets/htw_vid.mov){height="400" loop="true" autoplay="true"}
 :::
--   A total of 156 participants from IU's online subject pool
--   Varied group trains from 3 "velocity bands", constant group from 1
 
 ::: {.content-visible unless-format="html"}
 ![](assets/htw_task_fig.png)
 :::
 
+- Target velocity presented at top of screen
+- Participants attempt to "hit the wall" at the correct velocity
+- Feedback during training - how many units above or below the target-band
+- Only the "x velocity" component of the throw is relevant to the task
+
 ------------------------------------------------------------------------
 
-## Project 2 - Methodology
 
--   A total of 156 participants from IU's online subject pool
--   Varied group trains from 3 "velocity bands", constant group from 1
+## Project 2 - Experiment 1 Design {.nostretch .smaller}
 
+:::: {.columns}
+::: {.column width="60%"}
+![](assets/htw_e1_manip.png){fig-align="left" fig-align="top" width="65%"}
 
-![](assets/htw_task_fig.png)
-
-## Project 2 - Methodology
-
-::: {.content-visible unless-format="markdown"}
-```{dot}
-//| label: fig-design-e1
-//| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
-//| fig-width: 9.0
-//| fig-height: 3.2
-//| echo: false  
-//| column: screen-inset-right 
-digraph {
-  graph [layout = dot, rankdir = LR]
-  node [shape = rectangle, style = filled]
-  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#00A08A"]
-  data2 [label = " Constant Training \n800-1000", fillcolor = "#FF0000"]
-  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
-  data1 -> Test1
-  data2 -> Test1
-  subgraph cluster {
-    label = "Test Phase \n(Counterbalanced Order)"
-    Test1 [label = "Test  \nNovel Bands \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
-    Test2 [label = "  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
-    Test1 -> Test2
-  }
-  Test2 -> Test3
-}
-```
+![](assets/e1_design.png){fig-align="left" fig-align="top" width="70%"}
 :::
+::: {.column width="40%"}
+
+- 156 participants included in final analysis
+- Varied group trains from 3 "velocity bands", constant group from 1
+:::
+:::: 
+
 
 ------------------------------------------------------------------------
 
@@ -334,38 +460,26 @@ digraph {
 :::
 
 
-## Project 2 - Experiment 2 Design
 
-::: {.content-visible unless-format="markdown"}
-```{dot}
-//| label: fig-design-e2
-//| fig-cap: "Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1. "
-//| fig-width: 10.0
-//| fig-height: 4
-//| fig-responsive: false
-//| echo: false 
-//| column: screen-inset-right
-//| 
-/////| column: screen-inset-right
-digraph {
-  graph [layout = dot, rankdir = LR]
-  node [shape = rectangle, style = filled]
-  data1 [label = " Varied Training \n100-300\n350-550\n600-800", fillcolor = "#00A08A"]
-  data2 [label = " Constant Training \n600-800", fillcolor = "#FF0000"]
-  Test3 [label = "    Final Test \n  Novel With Feedback  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
-  data1 -> Test1
-  data2 -> Test1
-  subgraph cluster {
-    label = "Test Phase \n(Counterbalanced Order)"
-    Test1 [label = "Test  \nNovel Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
-    Test2 [label = "  Test \n  Varied Training Bands  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
-    Test1 -> Test2
-  }
-  Test2 -> Test3
-}
-```
+## Project 2 - Experiment 2 Design {.smaller}
+
+:::: {.columns}
+::: {.column width="60%"}
+![](assets/htw_e2_manip.png){fig-align="left" fig-align="top"}
+
+![](assets/e2_design.png){fig-align="left" fig-align="top"}
 :::
+::: {.column width="40%"}
 
+
+<br><br><br><br>
+
+- Training and Testing bands are in reversed order, relative to Experiment 1
+- 110 participants included in final analysis
+
+
+:::
+:::: 
 
 
 ## Project 2 - Experiment 2 Results {.nostretch}
@@ -385,7 +499,10 @@ digraph {
 ## Project 2 - Experiment 3 
 
 - Ordinal Feedback
-- Both Reverse and Original Feedback Order
+  - directional feedback indicating too high, too low, or correct
+- Both Original (Experiment 1), and reverse (Experiment 2) orders included
+- 195 participants included in final analysis
+
 
 ## Project 2 - Experiment 3 Results {.nostretch}
 
@@ -515,79 +632,24 @@ digraph {
 
 ------------------------------------------------------------------------
 
-## Theoretical Contributions
-
--   Insights into training variability effects on learning and generalization
--   Computational models applications
-
-------------------------------------------------------------------------
-
-## Practical Implications
-
--   Training programs design implications
--   Future research considerations
-
-------------------------------------------------------------------------
-
-## Limitations and Future Directions
-
--   Study limitations
--   Future research suggestions
-
-------------------------------------------------------------------------
-
 ## Conclusion
 
--   Recap of key findings
--   Final thoughts on training variability's role in learning
-
-------------------------------------------------------------------------
-
-## Questions and Discussion
-
--   Open floor for questions from the committee and audience
 
 
 
 
-## Future Research Directions {.smaller .r-fit-text}
 
-::::::::: columns
-::::: {.column width="50%"}
-::: fragment
-### Theoretical Extensions
-
--   Investigate the role of individual differences in training variability effects.
--   Explore the impact of different types of feedback on learning and generalization.
--   Examine the influence of task complexity on the benefits of varied training.
+## References
+::: {#refs}
 :::
 
-::: fragment
-### Methodological Innovations
+::: {.content-visible when-format="html"}
+## Manuscript {.scrollable .unnumbered .unlisted}
 
--   Develop new experimental paradigms to test training variability in more complex tasks.
--   Utilize advanced computational models to simulate learning processes under varied conditions.
--   Implement longitudinal studies to assess long-term effects of training variability.
-:::
-:::::
-
-::::: {.column width="50%"}
-::: fragment
-### Practical Applications
-
--   Design adaptive training programs that adjust variability based on learner performance.
--   Apply findings to educational settings to enhance learning outcomes.
--   Use insights to improve training protocols in professional skill development.
+```{=html}
+<iframe width="800" height="750" src="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html" title="Webpage example"></iframe>
+```
 :::
 
-::: fragment
-### Collaborative Opportunities
-
--   Partner with educational institutions to test training variability in classroom settings.
--   Collaborate with industry professionals to apply research findings in real-world training programs.
--   Engage with interdisciplinary teams to explore the broader implications of training variability.
-:::
-:::::
-:::::::::
 
 ------------------------------------------------------------------------
