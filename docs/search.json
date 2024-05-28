@@ -880,7 +880,7 @@
     "href": "Presentation/slides.html#theoretical-frameworks",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Theoretical Frameworks",
-    "text": "Theoretical Frameworks\n\nSchema Theory (Schmidt, 1975)\nDesirable Difficulties Framework (Bjork & Bjork, 2011)\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\nSchmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)",
+    "text": "Theoretical Frameworks\n\n\n\nDesirable Difficulties Framework (Bjork & Bjork, 2011) \n\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\n\nSchema Theory (Schmidt, 1975)\n\n\nSchmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)\n\n\nVariety of theoretical explanations Schema theory in paticular has been extremely influential",
     "crumbs": [
       "Slides"
     ]
@@ -890,7 +890,7 @@
     "href": "Presentation/slides.html#overview-of-current-work",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Overview of Current Work",
-    "text": "Overview of Current Work\n\nProject 11\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)\n\n\n\n\n–",
+    "text": "Overview of Current Work\n\nProject 1\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)",
     "crumbs": [
       "Slides"
     ]
@@ -1865,7 +1865,7 @@
     "href": "Presentation/slides.html#project-1-computational-model",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model\n\n\n \n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
+    "text": "Project 1 Computational Model\n\nInstance encoding, and similarity-based generalization assumptions\n\ninstances refers to individual throws (x and y velocity)\nsimilarity refers to the distance between training throws and the solution space of each of the eventual testing positions.",
     "crumbs": [
       "Slides"
     ]
@@ -1875,7 +1875,7 @@
     "href": "Presentation/slides.html#project-1-computational-model-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model\n\n\n\n\n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
+    "text": "Project 1 Computational Model\n\n\n \n\n\nComputing Similarity\n\nEuclidean distance between each training throw, and each solution space\n\nseparately for each participant, and each of the testing positions\n\nSimilarity computed as a Gaussian decay function of distance, i.e. larger distances result in lower similarity\nEach participant gets their own similarity score for each of the 6 testing positions\n\nsimilarity score for a given testing position is the sum of the similarities between each training throw and the entire empirical solution space\n\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
     "crumbs": [
       "Slides"
     ]
@@ -2135,7 +2135,7 @@
     "href": "Presentation/slides.html#hit-the-target-task",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Hit The Target Task",
-    "text": "Hit The Target Task\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials with feedback. Constant groups trains from single position. Varied group practices from two positions.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release",
+    "text": "Hit The Target Task\n\n\n\nVideo\n\n\nTraining Stage - 200 training trials with feedback. Constant groups trains from single position. Varied group practices from two positions.\nTransfer Stage - All subjects tested from both positions they were trained, and the positions trained by other group\nData recorded - For every throw, recorded the X velocity and Y velocity of ball at release\n\n\n\n\n\n\nUse mouse to flick the ball towards the target\nMust release from orange square\nSubjects have flexibility in terms of trajectory and release point inside the square\nNicety of computerized task - we record the precise details easily",
     "crumbs": [
       "Slides"
     ]
@@ -2389,7 +2389,7 @@
     "href": "Presentation/slides.html#experiment-1",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Experiment 1",
-    "text": "Experiment 1\n\nConceptual replication of Kerr & Booth design\nTesting classic pattern as well",
+    "text": "Experiment 1\n\nConceptual replication of Kerr & Booth design\nAlso test positions novel to both groups\nValidate computerized visuomotor learning task",
     "crumbs": [
       "Slides"
     ]
@@ -2399,7 +2399,7 @@
     "href": "Presentation/slides.html#footnotes",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nNow published in Cognitive Psychology (Gorman & Goldstone, 2022)↩︎",
+    "text": "Footnotes\n\n\nNow published in Cognitive Psychology - (Gorman & Goldstone, 2022)↩︎",
     "crumbs": [
       "Slides"
     ]
@@ -2409,14 +2409,14 @@
     "href": "Presentation/slides_revealjs.html#references",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "References",
-    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770"
+    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nChua, L.-K., Dimapilis, M. K., Iwatsuki, T., Abdollahipour, R., Lewthwaite, R., & Wulf, G. (2019). Practice variability promotes an external focus of attention and enhances motor skill learning. Human Movement Science, 64, 307–319. https://doi.org/10.1016/j.humov.2019.02.015\n\n\nDel Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of Contextual Interference on Females With Varied Experience in Open Sport Skills. Research Quarterly for Exercise and Sport, 53(2), 108–115. https://doi.org/10.1080/02701367.1982.10605236\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nMcCracken, H. D., & Stelmach, G. E. (1977). A Test of the Schema Theory of Discrete Motor Learning. Journal of Motor Behavior, 9(3), 193–201. https://doi.org/10.1080/00222895.1977.10735109\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770"
   },
   {
     "objectID": "Presentation/slides.html#references",
     "href": "Presentation/slides.html#references",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "References",
-    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770",
+    "text": "References\n\n\nBjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, 2, 59–68.\n\n\nChua, L.-K., Dimapilis, M. K., Iwatsuki, T., Abdollahipour, R., Lewthwaite, R., & Wulf, G. (2019). Practice variability promotes an external focus of attention and enhances motor skill learning. Human Movement Science, 64, 307–319. https://doi.org/10.1016/j.humov.2019.02.015\n\n\nDel Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of Contextual Interference on Females With Varied Experience in Open Sport Skills. Research Quarterly for Exercise and Sport, 53(2), 108–115. https://doi.org/10.1080/02701367.1982.10605236\n\n\nGorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. Cognitive Psychology, 137, 101491. https://doi.org/10.1016/j.cogpsych.2022.101491\n\n\nGuadagnoli, M. A., & Lee, T. D. (2004). Challenge Point: A Framework for Conceptualizing the Effects of Various Practice Conditions in Motor Learning. Journal of Motor Behavior, 36(2), 212–224. https://doi.org/10.3200/JMBR.36.2.212-224\n\n\nKerr, R., & Booth, B. (1978). Specific and varied practice of motor skill. Perceptual and Motor Skills, 46(2), 395–401. https://doi.org/10.1177/003151257804600201\n\n\nMcCracken, H. D., & Stelmach, G. E. (1977). A Test of the Schema Theory of Discrete Motor Learning. Journal of Motor Behavior, 9(3), 193–201. https://doi.org/10.1080/00222895.1977.10735109\n\n\nSchmidt, R. A. (1975). A schema theory of discrete motor skill learning. Psychological Review, 82(4), 225–260. https://doi.org/10.1037/h0076770",
     "crumbs": [
       "Slides"
     ]
@@ -2456,7 +2456,7 @@
     "href": "Presentation/slides.html#project-1---experiment-1-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Experiment 1 Results",
-    "text": "Project 1 - Experiment 1 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting",
+    "text": "Project 1 - Experiment 1 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting\n\n\n\n\n\n\nVaried training significantly better at the position that was novel for all subjects. Also better even at the position that the constant group trained at.\n4 different positions, the varied group trained from the easiest and the hardest position, they also interpolated the constant group.",
     "crumbs": [
       "Slides"
     ]
@@ -2466,7 +2466,7 @@
     "href": "Presentation/slides.html#project-1---experiment-2-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Experiment 2 Results",
-    "text": "Project 1 - Experiment 2 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting",
+    "text": "Project 1 - Experiment 2 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting\n\n\n\n\n\n\n\nThis time we can compare varied and constant training - by just comparing the varied group to the 2 constant groups that trained at the same locations\nHere we have all 6 of the constant groups collapsed together\nalso did more fine grained grained comparisons",
     "crumbs": [
       "Slides"
     ]
@@ -2476,7 +2476,7 @@
     "href": "Presentation/slides.html#project-1-computational-model-2",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 Computational Model",
-    "text": "Project 1 Computational Model\n\n\n\nSolution Space\n\n\n\nFull Space\n\n\n\n\n\n\nFigure 1: Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses\n\n\n\n\n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
+    "text": "Project 1 Computational Model\n\n\n\n\n\n\nModel Steps\n\neach of the 6 positions has an empirical solution space\nCompute the summed similarity between training throws, and solution spaces\n\nseparately for each participant, and each of the testing positions\n\nWe now have a measure of how similar training behavior was to testing solutions\n\n\n\nModel Definition\n\n\\(d_{i,j} = \\sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }\\)\n\\(Similarity_{I,J} = \\sum_{i=I}\\sum_{j=J} (e^{-c^\\cdot d^{p}_{i,j}})\\)",
     "crumbs": [
       "Slides"
     ]
@@ -2566,7 +2566,7 @@
     "href": "Presentation/slides.html#experiment-2-design",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Experiment 2 Design",
-    "text": "Experiment 2 Design",
+    "text": "Experiment 2 Design\n\n\ntask mostly the same - minor adjustments to barrier 6 different constant groups varied group doesn’t train on either the easiest or the hardest position\nlarger design to give us more data to work with for modelling",
     "crumbs": [
       "Slides"
     ]
@@ -2577,6 +2577,146 @@
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Extras",
     "text": "Extras",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#issues-with-previous-research",
+    "href": "Presentation/slides.html#issues-with-previous-research",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Issues with previous research",
+    "text": "Issues with previous research\n\nAssumptions about what is encoded\nAssumptions about the formation of abstractions\nAggregation issues and similarity confounds\n\n\n\n\n\n\n\n\nIf generalization decays exponentially with distance, constant groups 1 and 2 may have far less generalization potential to the testing condition.\nperformance of individual constant groups often not reported in analyses.\n\n\n\n\n\ne.g. (Chua et al., 2019; Del Rey et al., 1982; McCracken & Stelmach, 1977)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1-1",
+    "href": "Presentation/slides.html#project-1-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1",
+    "text": "Project 1\n\n\nAn instance-based model account of the benefits of varied practice in visuomotor skill1",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#designs-that-avoid-similarity-issue",
+    "href": "Presentation/slides.html#designs-that-avoid-similarity-issue",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Designs that avoid similarity issue",
+    "text": "Designs that avoid similarity issue\n\nKerr & Booth 1978\n\n\n\n\n\nbean bag throwing task\nConstant and varied conditions train from distinct positions\nBoth groups are tested from the position where the constant group trained\nImpressive demonstration of varied training outperforming constant training\n\n\n\n\nKerr & Booth (1978)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#non-linear-similarity",
+    "href": "Presentation/slides.html#non-linear-similarity",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Non-linear similarity",
+    "text": "Non-linear similarity",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#does-this-similarity-metric-work",
+    "href": "Presentation/slides.html#does-this-similarity-metric-work",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Does this similarity metric work?",
+    "text": "Does this similarity metric work?\n\nOur similarity measure does is a significant predictor of testing performance.\n\nRemains significant when controlling for training accuracy, and training condition.",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#accounting-for-group-level-effect",
+    "href": "Presentation/slides.html#accounting-for-group-level-effect",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Accounting for group-level effect",
+    "text": "Accounting for group-level effect\n\n\nThe base version of the model fit a single \\(c\\) parameter\n\nthus assuming that everyone generalizes to the same degree\n\n\n\n\n\nWe next fit a 2-c version, separately optimizing for varied and constant groups, resulting in new 2-c similarity scores for each participant.\n\nThe optimal c value for the varied group is smaller than that of the constant group, indicative of broader generalization.\n\n\n\n\n\nWhen 2-c similarity is added to the linear model predicting testing performance as a function of condition, the effect of training condition is no longer significant.\n\nnot the case with the original 1-c similarities.\n\n\n\n\n\nThus the influence of varied training can be explained by an instance-based similarity model, IF one assumes flexibility in the generalization gradient.",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#conclusions",
+    "href": "Presentation/slides.html#conclusions",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Conclusions",
+    "text": "Conclusions\n\n\nNew empirical support for a benefit of variability in visuomotor skill tasks\n\n\n\n\nSome support for the less common pattern observed by Kerr & Booth (1978)\n\n\n\n\nDemonstrated the utility of a similarity based approach in this domain",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#non-linear-similarity-1",
+    "href": "Presentation/slides.html#non-linear-similarity-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Non-linear similarity",
+    "text": "Non-linear similarity",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-2-2",
+    "href": "Presentation/slides.html#project-2-2",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 2",
+    "text": "Project 2\n\nImpact of Training Variability on Visuomotor Function Learning and Extrapolation\n\nInfluence of varied practice in a function learning task\nExperiments 1, 2, and 3:\n\nTraining regimes and testing conditions\nLearning, discrimination, and extrapolation performance metrics",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#overview",
+    "href": "Presentation/slides.html#overview",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Overview",
+    "text": "Overview\n\nProject 1\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#accuracy-1",
+    "href": "Presentation/slides.html#accuracy-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Accuracy",
+    "text": "Accuracy",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#discrimination-1",
+    "href": "Presentation/slides.html#discrimination-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Discrimination",
+    "text": "Discrimination",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#experiment-3---accuracy",
+    "href": "Presentation/slides.html#experiment-3---accuracy",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Experiment 3 - Accuracy",
+    "text": "Experiment 3 - Accuracy",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#experiment-3---discrimination",
+    "href": "Presentation/slides.html#experiment-3---discrimination",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Experiment 3 - Discrimination",
+    "text": "Experiment 3 - Discrimination",
     "crumbs": [
       "Slides"
     ]

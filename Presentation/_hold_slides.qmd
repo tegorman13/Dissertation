@@ -5,6 +5,14 @@ format:
 ---
 
 
+## designs that seemingly overcome these issues
+
+- Kerr & Booth 1978
+
+::: footer
+@kerrSpecificVariedPractice1978
+:::
+
 ## Project 1 - Design  {.nostretch .smaller}
 
 :::: {.columns}
@@ -60,3 +68,50 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 - $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
 :::
 ::::
+
+
+
+## Project 1 Computational Model {.smaller .r-fit-text}
+
+:::: {.columns}
+::: {.column width="70%"}
+
+![](assets/sol_space.png)
+
+
+
+![](assets/full_space.png)
+:::
+::: {.column width="30%"}
+### Model Steps 
+
+- each of the 6 positions has an empirical solution space
+- Compute the summed similarity between training throws, and solution spaces
+  - separately for each participant, and each of the testing positions
+- We now have a measure of how similar training behavior was to testing solutions
+
+### Model Definition 
+
+- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
+- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
+:::
+::::
+
+
+
+
+## Computational Model - Does Similarity Account for Effect of Variability?
+
+- Test whether similarity explains the difference in performance between Constant and Varied conditions
+  - Assuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference
+  - Assume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied. 
+
+::: footer
+**Equation 1:** $$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) $$
+**Equation 2:** $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$
+:::
+
+
+## Project 1 General Discussion {.smaller .r-fit-text}
+
+------------------------------------------------------------------------

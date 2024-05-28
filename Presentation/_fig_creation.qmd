@@ -7,6 +7,44 @@ walk(c("Display_Functions"), ~source(here::here(paste0("Functions/", .x, ".R")))
 ```
 
 
+```{r}
+
+library(ggplot2)
+
+# Generate distance values
+distance <- seq(0, 10, length.out = 100)
+
+# Define the c parameter values
+c_values <- c(0.08, 0.5, 1)
+
+# Calculate similarity for each c value
+similarity_data <- data.frame(
+  distance = rep(distance, length(c_values)),
+  c = factor(rep(c_values, each = length(distance))),
+  similarity = exp(-rep(c_values, each = length(distance)) * distance^2)
+)
+
+# Create the faceted plot
+c_example <- ggplot(similarity_data, aes(x = distance, y = similarity)) +
+  geom_line(linewidth = 1) +
+  labs(x = "Distance", y = "Similarity") +
+  #scale_color_manual(values = c("blue", "green", "red")) +
+  facet_wrap(~ c, ncol = 3, labeller = labeller(c = function(x) paste("c =", x))) +
+  theme_minimal() +
+  theme(
+    # plot.title = element_text(hjust = 0.5, size = 14, face = "plain"),
+    # axis.title = element_text(size = 12),
+    legend.position = "none",
+    strip.text = element_text(size = 12)
+  ) +
+  ggtitle("Gaussian Similarity Decay")
+
+
+ggsave(here::here("Presentation/assets/c_example.png"), c_example, width = 4.0, height = 3, units = "in", dpi = 600)
+
+```
+
+
 # HTW Results
 
 ```{r}

@@ -123,23 +123,12 @@ author:
 
 ------------------------------------------------------------------------
 
-## Theoretical Frameworks
 
--   Schema Theory (Schmidt, 1975)
--   Desirable Difficulties Framework (Bjork & Bjork, 2011)
--   Challenge Point Framework (Guadagnoli & Lee, 2004)
 
-::: footer
-@schmidtSchemaTheoryDiscrete1975 @bjorkMakingThingsHard2011 @guadagnoliChallengePointFramework2004
-:::
 
-<!-- ![](assets/fig-toy-model1-1-1.png) -->
+## Overview {.smaller}
 
-------------------------------------------------------------------------
-
-## Overview of Current Work {.smaller}
-
-### Project 1[^1]
+### Project 1
 
 - Visuomotor projectile launching task
 - two experiments
@@ -154,31 +143,121 @@ author:
 - Connectionist model (ALM) and hybrid associative & rule model (EXAM)
 
 
-::: footer
-[^1]: Now published in Cognitive Psychology [@gormanInstancebasedModelAccount2022]
-:::
---
 
-# Project 1  - Issues with previous research
+
+
+------------------------------------------------------------------------
+
+
+
+
+
+---
+
+## Project 1 
+<br>
+
+### An instance-based model account of the benefits of varied practice in visuomotor skill[^1]
+
+<br><br><br>
+
+::: footer
+[^1]: Now published in Cognitive Psychology -  [@gormanInstancebasedModelAccount2022]
+:::
+
+---
+
+## Theoretical Frameworks
+
+<br>  
+
+::: {.fragment .semi-fade-out}
+- Desirable Difficulties Framework (Bjork & Bjork, 2011)
+<br>  
+- Challenge Point Framework (Guadagnoli & Lee, 2004)
+::: 
+- Schema Theory (Schmidt, 1975)
+
+
+::: footer
+@schmidtSchemaTheoryDiscrete1975 @bjorkMakingThingsHard2011 @guadagnoliChallengePointFramework2004
+:::
+
+::: notes
+Variety of theoretical explanations
+Schema theory in paticular has been extremely influential 
+:::
+
+___
+
+## Issues with previous research
 
 - Assumptions about what is encoded
 - Assumptions about the formation of abstractions 
 - Aggregation issues and similarity confounds
 
+::: fragment
+:::: columns
+::: {.column}
+
+![](assets/agg_issues.png)
+:::
+::: {.column}
+<br>
+
+-  If generalization decays exponentially with distance, constant groups 1 and 2 may have far less generalization potential to the testing condition. 
+- performance of individual constant groups often not reported in analyses.
+
+:::
+
+::::
+:::
+::: footnote
+e.g. [@mccrackenTestSchemaTheory1977; @chuaPracticeVariabilityPromotes2019; @delreyEffectsContextualInterference1982]
+:::
+
 ---
 
-## designs that seemingly overcome these issues
 
-- Kerr & Booth 1978
+## Designs that avoid similarity issue
 
+### Kerr & Booth 1978
+
+:::: columns
+::: {.column}
+![](assets/kerr_booth.png)
+:::
+::: {.column}
+- bean bag throwing task
+- Constant and varied conditions train from distinct positions
+- Both groups are tested from the position where the constant group trained
+- Impressive demonstration of varied training outperforming constant training 
+:::
+::::
 ::: footer
 @kerrSpecificVariedPractice1978
 :::
 
+---
+
 ## Experiment 1
 
 - Conceptual replication of Kerr & Booth design 
-- Testing classic pattern as well  
+- Also test positions novel to both groups
+- Validate computerized visuomotor learning task
+
+
+## Experiment 1 Design {.smaller}
+
+![](assets/igas_e1_manip.png){fig-align="left" fig-align="top"}
+
+- Constant trains from one position (760)
+  - 200 trials
+- Varied trains from two positions (610 and 910)
+  - 100 trials per position
+- Both groups are tested from all three training positions, and a new position novel to both groups (835)
+
+
 
 ------------------------------------------------------------------------
 
@@ -207,17 +286,16 @@ author:
 :::::
 :::::: 
 
+::: notes
+- Use mouse to flick the ball towards the target
+- Must release from orange square
+- Subjects have flexibility in terms of trajectory and release point inside the square
+- Nicety of computerized task - we record the precise details easily
+:::
+
+
 ------------------------------------------------------------------------
 
-## Experiment 1 Design {.smaller}
-
-![](assets/igas_e1_manip.png){fig-align="left" fig-align="top"}
-
-- Constant trains from one position (760)
-  - 200 trials
-- Varied trains from two positions (610 and 910)
-  - 100 trials per position
-- Both groups are tested from all three training positions, and a new position novel to both groups (835)
 
 ------------------------------------------------------------------------
 
@@ -238,11 +316,26 @@ author:
 :::
 ::::
 
+::: notes
+Varied training significantly better at the position that was novel for all subjects. Also better even at the position that the constant group trained at. 
+
+4 different positions, the varied group trained from the easiest and the hardest position, they also interpolated the constant group. 
+:::
+
 ___
 
 ## Experiment 2 Design
 
 ![](assets/igas_e2_manip.png)
+
+
+::: notes
+task mostly the same - minor adjustments to barrier
+6 different constant groups
+varied group doesn't train on either the easiest or the hardest position
+
+larger design to give us more data to work with for modelling
+:::
 
 ## Project 1 - Experiment 2 Results
 
@@ -262,18 +355,27 @@ ___
 :::
 ::::
 
+::: notes
+
+- This time we can compare varied and constant training - by just comparing the varied group to
+the 2 constant groups that trained at the same locations
+- Here we have all 6 of the constant groups collapsed together
+- also did more fine grained grained comparisons 
+
+
+:::
 
 
 ------------------------------------------------------------------------
 
+## Project 1 Computational Model {.smaller .r-fit-text}
 
-## Project 1 - Discussion
+### Instance encoding, and similarity-based generalization assumptions
 
--   Varied training group's superior performance
--   Computational modeling results with IGAS
--   Theoretical implications
+- instances refers to individual throws (x and y velocity)
+- similarity refers to the distance between training throws and the solution space of each of the eventual testing positions.
 
-------------------------------------------------------------------------
+___
 
 
 ## Project 1 Computational Model {.smaller .r-fit-text}
@@ -287,12 +389,14 @@ ___
 
 ::: {.column width="50%"}
 
-### Model Steps 
+### Computing Similarity 
 
-- each of the 6 positions has an empirical solution space
-- Compute the summed similarity between training throws, and solution spaces
+- Euclidean distance between each training throw, and each solution space
   - separately for each participant, and each of the testing positions
-- We now have a measure of how similar training behavior was to testing solutions
+- Similarity computed as a Gaussian decay function of distance, i.e. larger distances result in lower similarity
+- Each participant gets their own similarity score for each of the 6 testing positions
+  - similarity score for a given testing position is the sum of the similarities between each training throw and the entire empirical solution space
+
 
 ### Model Definition 
 
@@ -303,55 +407,66 @@ ___
 :::
 ::::
 
+## Non-linear similarity 
+
+![](assets/c_example.png)
 
 
-## Project 1 Computational Model {.smaller .r-fit-text}
+___
 
-:::: {.columns}
-::: {.column width="70%"}
+## Does this similarity metric work? 
 
-![](assets/sol_space.png)
+- Our similarity measure does is a significant predictor of testing performance. 
+  - Remains significant when controlling for training accuracy, and training condition. 
+  
+___
 
+## Accounting for group-level effect {.smaller}
 
-
-![](assets/full_space.png)
-:::
-::: {.column width="30%"}
-### Model Steps 
-
-- each of the 6 positions has an empirical solution space
-- Compute the summed similarity between training throws, and solution spaces
-  - separately for each participant, and each of the testing positions
-- We now have a measure of how similar training behavior was to testing solutions
-
-### Model Definition 
-
-- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
-- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
-:::
-::::
-
-
-
-
-## Computational Model - Does Similarity Account for Effect of Variability?
-
-- Test whether similarity explains the difference in performance between Constant and Varied conditions
-  - Assuming equivalent generalization (1 c for both groups) - similarity improves model fit, but does not explain group difference
-  - Assume training condition influences generalization gradient (fit c separately) - now similarity does explain the difference between Constant and Varied. 
-
-::: footer
-**Equation 1:** $$ Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}}) $$
-**Equation 2:** $$ d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 } $$
+::: fragment
+- The base version of the model fit a single $c$ parameter 
+  - thus assuming that everyone generalizes to the same degree
 :::
 
+::: fragment
+- We next fit a 2-c version, separately optimizing for varied and constant groups, resulting in new 2-c similarity scores for each participant. 
+  - The optimal c value for the varied group is smaller than that of the constant group, indicative of broader generalization. 
+:::
 
-## Project 1 General Discussion {.smaller .r-fit-text}
+::: fragment
+- When 2-c similarity is added to the linear model predicting testing performance as a function of condition, the effect of training condition is no longer significant. 
+  - not the case with the original 1-c similarities. 
+::: 
+ 
+::: fragment  
+- Thus the influence of varied training can be explained by an instance-based similarity model, IF one assumes flexibility in the generalization gradient. 
+:::
 
-------------------------------------------------------------------------
+## Conclusions
+
+::: fragment 
+- New empirical support for a benefit of variability in visuomotor skill tasks
+:::
+
+::: fragment 
+- Some support for the less common pattern observed by @kerrSpecificVariedPractice1978
+:::
+
+::: fragment 
+- Demonstrated the utility of a similarity based approach in this domain
+:::
+
+---
 
 
-# Project 2 - Variability and Extrapolation in a Function Learning Task
+# Project 2 
+
+
+---
+
+## Project 2 
+
+### Impact of Training Variability on Visuomotor Function Learning and Extrapolation
 
 -   Influence of varied practice in a function learning task
 -   Experiments 1, 2, and 3:
@@ -455,15 +570,16 @@ ___
 
 ::: {.columns}
 ::: {.column width="50%"}
-![](assets/htw_e2_test1.png){width="75%"}
-![](assets/htw_e2_test3.png){width="75%"}
+![](assets/htw_e2_test1.png){width="75%" .fragment fragment-index=1}
+![](assets/htw_e2_test3.png){width="75%" .fragment fragment-index=2}
 :::
 
 ::: {.column width="50%"}
-![](assets/htw_e2_test2.png){width="75%"}
-![](assets/htw_e2_test4.png){width="75%"}
+![](assets/htw_e2_test2.png){width="75%" .fragment fragment-index=1}
+![](assets/htw_e2_test4.png){width="75%" .fragment fragment-index=2}
 :::
 :::
+
 
 ## Project 2 - Experiment 3 
 
@@ -475,7 +591,7 @@ ___
 
 ## Project 2 - Experiment 3 Results {.nostretch}
 
-## Accuracy
+## Experiment 3 - Accuracy
 
 :::: {.columns}
 
@@ -489,7 +605,7 @@ ___
 
 ::::
 
-## Discrimination
+## Experiment 3 - Discrimination
 
 :::: {.columns}
 
