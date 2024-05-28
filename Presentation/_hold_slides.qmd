@@ -1,0 +1,62 @@
+---
+title: My Slide Show
+format:
+  revealjs: default
+---
+
+
+## Project 1 - Design  {.nostretch .smaller}
+
+:::: {.columns}
+::: {.column width="40%"}
+
+### Experiment 1222
+- Train varied group from 2 positions, and a constant group from 1.
+- Test both groups from the trained positions - and 1 novel position
+
+![](assets/igas_e1_manip.png){.absolute bottom=30 width="50%"}
+
+:::
+
+::: {.column width="60%"}
+### Experiment 2
+
+- 6 distinct constant conditions
+
+![](assets/igas_e2_manip.png){.absolute bottom=0 width="90%"}
+:::
+
+::::
+
+
+## Project 1 Computational Model {.smaller .r-fit-text}
+
+:::: {.columns}
+::: {.column width="60%"}
+### Solution Space
+![](assets/sol_space2.png)
+
+### Full Space
+:::{#fig-fullspace23}
+![](assets/full_space2.png)
+
+Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
+:::
+
+:::
+
+::: {.column width="40%"}
+
+### Model Steps 
+
+- each of the 6 positions has an empirical solution space
+- Compute the summed similarity between training throws, and solution spaces
+  - separately for each participant, and each of the testing positions
+- We now have a measure of how similar training behavior was to testing solutions
+
+### Model Definition 
+
+- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
+- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
+:::
+::::

@@ -1,5 +1,10 @@
 
 
+```{r}
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,stringr, here,conflicted, gt, ggh4x, patchwork, knitr)
+walk(c("Display_Functions"), ~source(here::here(paste0("Functions/", .x, ".R"))))
+
+```
 
 
 # HTW Results
@@ -745,13 +750,127 @@ constant_train <- c(2)     # Specify constant training position
 both_test <- c(1, 2, 3, 4)  # Specify test positions
 igas_e1 <-  create_plot(varied_train, constant_train, both_test)
 igas_e1
-ggsave(here::here("Presentation/assets/igas_e1_manip.png"), igas_e1, width = 7.0, height = 6, units = "in", dpi = 400)
+ggsave(here::here("Presentation/assets/igas_e1_manip.png"), igas_e1, width = 9.0, height = 6, units = "in", dpi = 300)
 
 
 ```
 
 
 
+```{r}
+#| fig-width: 10
+#| fig-height: 7
+
+
+
+library(ggplot2)
+library(dplyr)
+
+create_data <- function(varied_train, constant_train, both_test, test_labels_bottom) {
+  varied_labels <- "Varied-Train"
+  constant_labels <- "Constant-Train"
+  test_labels <- "Testing"
+  
+  data <- data.frame(
+    x = c(varied_train, constant_train, both_test),
+    y = c(rep(0.7, length(varied_train)), rep(1, length(constant_train)), rep(0.3, length(both_test))),
+    label = c(rep(varied_labels, length(varied_train)),
+              rep(constant_labels, length(constant_train)),
+              rep(test_labels, length(both_test))),
+    color = c(rep("#00A08A", length(varied_train)), rep("#FF0000", length(constant_train)), rep("#ECCBAE", length(both_test))),
+    label_bottom = c(rep(NA, length(varied_train) + length(constant_train)), test_labels_bottom)
+  )
+  
+  data
+}
+
+create_segments <- function(data) {
+  min_x <- min(data$x)
+  max_x <- max(data$x)
+  segments <- data.frame(
+    x = c(min_x - 0.5, min_x - 0.5, min_x - 0.5),
+    xend = c(max_x + 0.5, max_x + 0.5, max_x + 0.5),
+    y = c(0.7, 1, 0.3),
+    yend = c(0.7, 1, 0.3)
+  )
+  segments
+}
+
+create_plot <- function(varied_train, constant_train, both_test, test_labels_bottom) {
+  data <- create_data(varied_train, constant_train, both_test, test_labels_bottom)
+  segments <- create_segments(data)
+  
+  # Variables for Training segment position
+  train_x <- min(data$x) - .5
+  train_y_start <- 0.65
+  train_y_end <- 1.05
+  train_text_y <- 1
+  
+  # Variables for Testing segment position
+  test_x <- min(data$x) - .5
+  test_y_start <- 0.25
+  test_y_end <- 0.4
+  test_text_y <- 0.45
+  
+  ggplot() +
+    geom_segment(data = segments, aes(x = x, xend = xend, y = y, yend = yend),
+                 linewidth = 1.2, color = "gray40") +
+    geom_point(data = data, aes(x = x, y = y, color = color), size = 12) +
+    geom_text(data = data, aes(x = x, y = y+.01, label = label),
+              color = "black", size = 4, vjust = -1.8, hjust = 0.5, fontface = "italic") +
+    geom_text(data = data, aes(x = x, y = 0.2, label = label_bottom),
+              color = "black", size = 4, vjust = 1.8, hjust = 0.5, fontface = "italic") +
+    geom_segment(aes(x = train_x - 0.3, xend = train_x - 0.3, y = train_y_start, yend = train_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_end, yend = train_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_start, yend = train_y_start), color = "black", linewidth = 1.2) +
+    geom_text(aes(x = train_x - .6, y = train_text_y, label = "Training"), angle = 90, vjust = 0.5, hjust = 1.5, size = 4, fontface = "bold") +
+    geom_segment(aes(x = test_x - 0.3, xend = test_x - 0.3, y = test_y_start, yend = test_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = test_x - 0.5, xend = test_x, y = test_y_end, yend = test_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = test_x - 0.5, xend = test_x, y = test_y_start, yend = test_y_start), color = "black", linewidth = 1.2) +
+    geom_text(aes(x = test_x - .6, y = test_text_y, label = "Testing"), angle = 90, vjust = 0.5, hjust = 1.5, size = 4, fontface = "bold") +
+    scale_color_manual(values = c("#00A08A","#ECCBAE", "#FF0000")) +
+    xlim(min(data$x) - 2, max(data$x) + 1) +
+    ylim(0, 1.5) +
+    theme_void() +
+    theme(
+          # plot.margin = margin(10, 20, 10, 20),
+          # plot.background = element_rect(fill = "white", color = NA),
+          # panel.background = element_rect(fill = "white", color = NA), 
+          legend.position = "none",)
+}
+
+# Example usage
+
+varied_train <- c(4, 5, 6) # Specify varied training positions
+constant_train <- c(4)     # Specify constant training position
+both_test <- c(1, 2, 3, 4, 5, 6)  # Specify test positions
+test_labels_bottom <- c("100-350", "350-550", "600-800", "800-1000", "1000-1200", "1200-1400") # Labels for bottom of test points
+htw_e1 <- create_plot(varied_train, constant_train, both_test, test_labels_bottom)
+htw_e1
+
+
+varied_train <- c(1, 2, 3) # Specify varied training positions
+constant_train <- c(3)     # Specify constant training position
+both_test <- c(1, 2, 3, 4, 5, 6)  # Specify test positions
+htw_e2 <- create_plot(varied_train, constant_train, both_test,test_labels_bottom)
+htw_e2
+
+
+ggsave(here::here("Presentation/assets/htw_e1_manip.png"), htw_e1, width = 9.0, height = 6, units = "in", dpi = 300)
+ggsave(here::here("Presentation/assets/htw_e2_manip.png"), htw_e2, width = 9.0, height = 6, units = "in", dpi = 300)
+
+
+varied_train <- c(1, 4) # Specify varied training positions
+constant_train <- c(2)     # Specify constant training position
+both_test <- c(1, 2, 3, 4)  # Specify test positions
+test_labels_bottom <- c("610", "760", "835", "910") # Labels for bottom of test points
+igas_e1 <-  create_plot(varied_train, constant_train, both_test,test_labels_bottom)
+igas_e1
+ggsave(here::here("Presentation/assets/igas_e1_manip.png"), igas_e1, width = 9.0, height = 6, units = "in", dpi = 300)
+
+
+
+```
 
 
 
@@ -763,7 +882,7 @@ ggsave(here::here("Presentation/assets/igas_e1_manip.png"), igas_e1, width = 7.0
 #| fig-height: 7
 
 
-create_data <- function(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test) {
+create_data <- function(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test,test_labels_bottom) {
     varied_labels <- "Varied-Train"
     constant_labels1 <- "Constant-1-Train"
     constant_labels2 <- "Constant-2-Train"
@@ -788,7 +907,8 @@ create_data <- function(varied_train, constant_train1, constant_train2, constant
                   rep(test_labels, length(both_test))),
         color = c(rep("#00A08A", length(varied_train)), rep("#FF0000", length(constant_train1)), rep("#FF0000", length(constant_train2)),
                   rep("#FF0000", length(constant_train3)), rep("#FF0000", length(constant_train4)), rep("#FF0000", length(constant_train5)),
-                  rep("#FF0000", length(constant_train6)), rep("#ECCBAE", length(both_test)))
+                  rep("#FF0000", length(constant_train6)), rep("#ECCBAE", length(both_test))),
+        label_bottom = c(rep(NA, length(varied_train) + length(constant_train)*6), test_labels_bottom)
     )
     
     data
@@ -806,8 +926,8 @@ create_segments <- function(data) {
     segments
 }
 
-create_plot <- function(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test) {
-    data <- create_data(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test)
+create_plot <- function(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test,test_labels_bottom) {
+    data <- create_data(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test,test_labels_bottom)
     segments <- create_segments(data)
     
     # Variables for Training segment position
@@ -828,6 +948,8 @@ create_plot <- function(varied_train, constant_train1, constant_train2, constant
         geom_point(data = data, aes(x = x, y = y, color = color), size = 12) +
         geom_text(data = data, aes(x = x, y = y, label = label),
                   color = "black", size = 4, vjust = -1.8, hjust = 0.5, fontface = "italic") +
+      geom_text(data = data, aes(x = x, y = 0.2, label = label_bottom),
+              color = "black", size = 4, vjust = 1.8, hjust = 0.5, fontface = "italic") +
         geom_segment(aes(x = train_x - 0.3, xend = train_x - 0.3, y = train_y_start, yend = train_y_end), color = "black", linewidth = 1.2) +
         geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_end, yend = train_y_end), color = "black", linewidth = 1.2) +
         geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_start, yend = train_y_start), color = "black", linewidth = 1.2) +
@@ -840,10 +962,7 @@ create_plot <- function(varied_train, constant_train1, constant_train2, constant
         xlim(min(data$x) - 2, max(data$x) + 1) +
         ylim(0, 3.0) +
         theme_void() +
-        theme(legend.position = "none",
-              plot.margin = margin(10, 20, 10, 20),
-              plot.background = element_rect(fill = "white", color = NA),
-              panel.background = element_rect(fill = "white", color = NA))
+        theme(legend.position = "none")
 }
 
 # Example usage
@@ -855,10 +974,11 @@ constant_train4 <- c(4)                   # Specify constant training position f
 constant_train5 <- c(5) # Specify constant training position for group 5
 constant_train6 <- c(6) # Specify constant training position for group 6
 both_test <- c(1, 2, 3, 4, 5, 6) # Specify test positions
-igas_e2 <- create_plot(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test)
+test_labels_bottom <- c("400", "500", "625","675", "800", "900")
+igas_e2 <- create_plot(varied_train, constant_train1, constant_train2, constant_train3, constant_train4, constant_train5, constant_train6, both_test,test_labels_bottom)
 igas_e2
 
-ggsave(here::here("Presentation/assets/igas_e2_manip.png"), igas_e2, width = 7.5, height = 8, units = "in", dpi = 600)
+ggsave(here::here("Presentation/assets/igas_e2_manip.png"), igas_e2, width = 9, height = 6, units = "in", dpi = 300)
 
 ```
 

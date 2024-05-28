@@ -1835,7 +1835,7 @@
     "href": "Presentation/slides.html#project-1---manipulations",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Manipulations",
-    "text": "Project 1 - Manipulations\n\n\n\nExperiment 1\n\nTrain varied group from 2 positions, and a constant group from 1.\nTest both groups from the trained positions - and 1 novel position\n\n\n\n\n\nExperiment 2\n\n6 distinct constant conditions",
+    "text": "Project 1 - Manipulations\n\n\n\n\nExperiment 1\n\n\n\nExperiment 2",
     "crumbs": [
       "Slides"
     ]
@@ -2259,7 +2259,7 @@
     "href": "Presentation/slides.html#accuracy",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Accuracy",
-    "text": "Accuracy\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 3",
+    "text": "Accuracy",
     "crumbs": [
       "Slides"
     ]
@@ -2269,7 +2269,7 @@
     "href": "Presentation/slides.html#discrimination",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Discrimination",
-    "text": "Discrimination\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\nPlot 3",
+    "text": "Discrimination",
     "crumbs": [
       "Slides"
     ]
@@ -2399,7 +2399,7 @@
     "href": "Presentation/slides.html#footnotes",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nNow published in Cognitive Psychology Gorman & Goldstone (2022)↩︎",
+    "text": "Footnotes\n\n\nNow published in Cognitive Psychology (Gorman & Goldstone, 2022)↩︎",
     "crumbs": [
       "Slides"
     ]
@@ -2456,7 +2456,7 @@
     "href": "Presentation/slides.html#project-1---experiment-1-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Experiment 1 Results",
-    "text": "Project 1 - Experiment 1 Results\n\n\n\nExperiment 1\n\n\n\n\n\nTraining\n\n\n\n\n\nTesting",
+    "text": "Project 1 - Experiment 1 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting",
     "crumbs": [
       "Slides"
     ]
@@ -2466,7 +2466,7 @@
     "href": "Presentation/slides.html#project-1---experiment-2-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 1 - Experiment 2 Results",
-    "text": "Project 1 - Experiment 2 Results\n\n\n\nExperiment 1\n\n\n\n\n\nTraining\n\n\n\n\n\nTesting",
+    "text": "Project 1 - Experiment 2 Results\n\n\n\n\nTraining\n\n\n\n\n\n\nTesting",
     "crumbs": [
       "Slides"
     ]
@@ -2526,7 +2526,57 @@
     "href": "Presentation/slides.html#project-2---experiment-1-design",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 1 Design",
-    "text": "Project 2 - Experiment 1 Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n156 participants included in final analysis\nVaried group trains from 3 “velocity bands”, constant group from 1",
+    "text": "Project 2 - Experiment 1 Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n - 156 participants included in final analysis - Varied group trains from 3 “velocity bands”, constant group from 1",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#project-1---manipulations-1",
+    "href": "Presentation/slides.html#project-1---manipulations-1",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Project 1 - Manipulations",
+    "text": "Project 1 - Manipulations\n\n\n\nExperiment 1\n\nTrain varied group from 2 positions, and a constant group from 1.\nTest both groups from the trained positions - and 1 novel position\n\n\n\n\n\nExperiment 2\n\n6 distinct constant conditions",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#design",
+    "href": "Presentation/slides.html#design",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Design",
+    "text": "Design",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#experiment-1-design",
+    "href": "Presentation/slides.html#experiment-1-design",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Experiment 1 Design",
+    "text": "Experiment 1 Design\n\n\n\n\n\n\nConstant trains from one position (760)\n\n200 trials\n\nVaried trains from two positions (610 and 910)\n\n100 trials per position\n\nBoth groups are tested from all three training positions, and a new position novel to both groups (835)",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#experiment-2-design",
+    "href": "Presentation/slides.html#experiment-2-design",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Experiment 2 Design",
+    "text": "Experiment 2 Design",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "Presentation/slides.html#extras",
+    "href": "Presentation/slides.html#extras",
+    "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
+    "section": "Extras",
+    "text": "Extras",
     "crumbs": [
       "Slides"
     ]

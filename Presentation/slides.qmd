@@ -4,6 +4,11 @@ page-layout: full
 aliases:
   - /slides.html
 css: /Assets/Style/slides.css
+title-slide-attributes:
+  data-background-image: /Presentation/assets/sol_blank.png
+  data-background-size: 300px #contain
+  data-background-opacity: "0.15"
+  data-background-position: "0% 0%"
 format-links: [clean-revealjs, pptx,gfm]
 format: 
   html: 
@@ -21,15 +26,18 @@ format:
     scrollable: true
     chalkboard:
       theme: whiteboard
-  pptx:
-    incremental: false
-  hugo-md:
-    include: false
-    html-math-method: mathjax
-    output-file: slides_hugo.md
-  gfm:
-    output: false
-    output-file: slides_gfm.md
+  # pptx:
+  #   incremental: false
+  # hugo-md:
+  #   include: false
+  #   html-math-method: mathjax
+  #   output-file: slides_hugo.md
+  # gfm:
+  #   output: false
+  #   output-file: slides_gfm.md
+  # beamer:
+  #   incremental: false
+  #   colortheme: lily 
 author:
   - name: Thomas Gorman
     url: https://tegorman13.github.io
@@ -101,6 +109,7 @@ author:
 :::
 ::::::::: 
 
+
 ------------------------------------------------------------------------
 
 ## But also plenty of contradictory results and complications
@@ -128,7 +137,7 @@ author:
 
 ------------------------------------------------------------------------
 
-## Overview of Current Work
+## Overview of Current Work {.smaller}
 
 ### Project 1[^1]
 
@@ -146,7 +155,7 @@ author:
 
 
 ::: footer
-[^1]: Now published in Cognitive Psychology @gormanInstancebasedModelAccount2022
+[^1]: Now published in Cognitive Psychology [@gormanInstancebasedModelAccount2022]
 :::
 --
 
@@ -173,7 +182,7 @@ author:
 
 ------------------------------------------------------------------------
 
-## Hit The Target Task
+## Hit The Target Task {.smaller}
 
 :::::: column-page-right
 ::::: {.columns}
@@ -200,66 +209,55 @@ author:
 
 ------------------------------------------------------------------------
 
+## Experiment 1 Design {.smaller}
 
-## Project 1 - Manipulations  {.smaller}
+![](assets/igas_e1_manip.png){fig-align="left" fig-align="top"}
 
-
-:::: {.columns}
-::: {.column width="50%"}
-
-### Experiment 1
-- Train varied group from 2 positions, and a constant group from 1.
-- Test both groups from the trained positions - and 1 novel position
-
-![](assets/igas_e1_manip.png)
-
-:::
-
-::: {.column width="50%"}
-### Experiment 2
-- 6 distinct constant conditions
-
-![](assets/igas_e2_manip.png)
-:::
-
-::::
+- Constant trains from one position (760)
+  - 200 trials
+- Varied trains from two positions (610 and 910)
+  - 100 trials per position
+- Both groups are tested from all three training positions, and a new position novel to both groups (835)
 
 ------------------------------------------------------------------------
 
-## Project 1 - Experiment 1 Results
+## Project 1 - Experiment 1 Results {.smaller}
 
 :::: {.columns}
-::: {.column width="40%"}
-### Experiment 1
-![](assets/igas_e1_manip.png)
-:::
-::: {.column width="60%"}
+::: {.column width="50%"}
 ::: fragment
-### Training
-![](assets/htt_e1_train.png)
+#### Training
+![](assets/htt_e1_train.png){width="95%"}
 :::
+:::
+::: {.column width="50%"}
 ::: fragment
-### Testing
-![](assets/fig-IGAS_Testing1-1-2.png)
+#### Testing
+![](assets/fig-IGAS_Testing1-1-2.png){width="95%"}
 :::
 :::
 ::::
+
+___
+
+## Experiment 2 Design
+
+![](assets/igas_e2_manip.png)
 
 ## Project 1 - Experiment 2 Results
 
 :::: {.columns}
-::: {.column width="40%"}
-### Experiment 1
-![](assets/igas_e2_manip.png)
-:::
-::: {.column width="60%"}
+::: {.column width="50%"}
 ::: fragment
-### Training
-![](assets/htt_e2_train.png)
+#### Training {.smaller}
+![](assets/htt_e2_train.png){width="95%"}
 :::
+:::
+::: {.column width="50%"}
+
 ::: fragment
-### Testing
-![](assets/htt_e2_test.png)
+#### Testing {.smaller}
+![](assets/htt_e2_test.png){width="95%"}
 :::
 :::
 ::::
@@ -333,37 +331,7 @@ author:
 :::
 ::::
 
-## Project 1 Computational Model {.smaller .r-fit-text}
 
-:::: {.columns}
-::: {.column width="60%"}
-### Solution Space
-![](assets/sol_space2.png)
-
-### Full Space
-:::{#fig-fullspace23}
-![](assets/full_space2.png)
-
-Full Space of Solution Throws and Missed Throws. Colored points represent coordinates of target hits, brown points are coordinates of misses
-:::
-
-:::
-
-::: {.column width="40%"}
-
-### Model Steps 
-
-- each of the 6 positions has an empirical solution space
-- Compute the summed similarity between training throws, and solution spaces
-  - separately for each participant, and each of the testing positions
-- We now have a measure of how similar training behavior was to testing solutions
-
-### Model Definition 
-
-- $d_{i,j} = \sqrt{(x_{Train_i}-x_{Solution_j})^2 + (y_{Train_i}-y_{Solution_j})^2 }$
-- $Similarity_{I,J} = \sum_{i=I}\sum_{j=J} (e^{-c^\cdot d^{p}_{i,j}})$
-:::
-::::
 
 
 ## Computational Model - Does Similarity Account for Effect of Variability?
@@ -430,12 +398,13 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 
 :::: {.columns}
 ::: {.column width="60%"}
-![](assets/htw_e1_manip.png){fig-align="left" fig-align="top" width="65%"}
+![](assets/htw_e1_manip.png){fig-align="left" fig-align="top"}
 
-![](assets/e1_design.png){fig-align="left" fig-align="top" width="70%"}
+![](assets/e1_design.png){fig-align="left" fig-align="top"}
 :::
 ::: {.column width="40%"}
 
+<br><br><br>
 - 156 participants included in final analysis
 - Varied group trains from 3 "velocity bands", constant group from 1
 :::
@@ -445,17 +414,17 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 ------------------------------------------------------------------------
 
 
-## Project 2 - Experiment 1 Results {.nostretch}
+## Project 2 - Experiment 1 Results
 
 ::: {.columns}
 ::: {.column width="50%"}
-![Plot 1](assets/htw_e1_test1.png)
-![Plot 3](assets/htw_e1_test3.png)
+![](assets/htw_e1_test1.png){width="70%"}
+![](assets/htw_e1_test3.png){width="70%"}
 :::
 
 ::: {.column width="50%"}
-![Plot 2](assets/htw_e1_test2.png)
-![Plot 4](assets/htw_e1_test4.png)
+![](assets/htw_e1_test2.png){width="70%"}
+![](assets/htw_e1_test4.png){width="70%"}
 :::
 :::
 
@@ -482,17 +451,17 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 :::: 
 
 
-## Project 2 - Experiment 2 Results {.nostretch}
+## Project 2 - Experiment 2 Results
 
 ::: {.columns}
 ::: {.column width="50%"}
-![Plot 1](assets/htw_e2_test1.png)
-![Plot 3](assets/htw_e2_test3.png)
+![](assets/htw_e2_test1.png){width="75%"}
+![](assets/htw_e2_test3.png){width="75%"}
 :::
 
 ::: {.column width="50%"}
-![Plot 2](assets/htw_e2_test2.png)
-![Plot 4](assets/htw_e2_test4.png)
+![](assets/htw_e2_test2.png){width="75%"}
+![](assets/htw_e2_test4.png){width="75%"}
 :::
 :::
 
@@ -511,11 +480,11 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 :::: {.columns}
 
 ::: {.column width="50%"}
-![Plot 1](assets/htw_e3_test1.png)
+![](assets/htw_e3_test1.png){width="80%"}
 :::
 
 ::: {.column width="50%"}
-![Plot 3](assets/htw_e3_test2.png)
+![](assets/htw_e3_test2.png){width="80%"}
 :::
 
 ::::
@@ -525,11 +494,11 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 :::: {.columns}
 
 ::: {.column width="50%"}
-![Plot 1](assets/htw_e3_test3.png)
+![](assets/htw_e3_test3.png){width="80%"}
 :::
 
 ::: {.column width="50%"}
-![Plot 3](assets/htw_e3_test4.png)
+![](assets/htw_e3_test4.png){width="80%"}
 :::
 
 ::::
@@ -585,7 +554,7 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 :::: {.columns}
 
 ::: {.column width="60%"}
-![](assets/abc_diagram1.png)
+![](assets/abc_diagram1.png){width="80%"}
 :::
 
 ::: {.column width="40%"}
@@ -600,7 +569,7 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 ::::
 
 
-
+---
 
 
 ## Modelling Results
@@ -642,6 +611,14 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 ## References
 ::: {#refs}
 :::
+
+
+___
+
+## Extras
+
+
+___
 
 ::: {.content-visible when-format="html"}
 ## Manuscript {.scrollable .unnumbered .unlisted}
