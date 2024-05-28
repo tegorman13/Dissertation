@@ -880,7 +880,7 @@
     "href": "Presentation/slides.html#theoretical-frameworks",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Theoretical Frameworks",
-    "text": "Theoretical Frameworks\n\n\n\nDesirable Difficulties Framework (Bjork & Bjork, 2011) \n\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\n\nSchema Theory (Schmidt, 1975)\n\n\nSchmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)\n\n\nVariety of theoretical explanations Schema theory in paticular has been extremely influential",
+    "text": "Theoretical Frameworks\n\n\n\nDesirable Difficulties Framework (Bjork & Bjork, 2011) \n\nChallenge Point Framework (Guadagnoli & Lee, 2004)\n\n\n\nSchema Theory (Schmidt, 1975)\n\n\nSchmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)\n\n\n\nVariety of theoretical explanations have been proposed for the commonly observed effects\nIn visuomotor learning and most relevant for my work, Schema theory in paticular has been extremely influential, and seems to have inspired hundreds of studies",
     "crumbs": [
       "Slides"
     ]
@@ -1785,7 +1785,7 @@
     "href": "Presentation/slides.html#common-empirical-patterns",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Common Empirical Patterns",
-    "text": "Common Empirical Patterns\n\n\n\nTraining\n\nBoth training conditions complete the same number of training trials.\nVaried group has worse training performance.\n\n\n\n\n\n\nTesting\n\nTested from novel conditions.\nVaried group has better test performance",
+    "text": "Common Empirical Patterns\n\n\n\nTraining\n\nBoth training conditions complete the same number of training trials.\nVaried group has worse training performance.\n\n\n\n\n\n\nTesting\n\nTested from novel conditions.\nVaried group has better test performance\n\n\n\n\n\n\n\nhigher or lower variability can of course vary greatly between domains\nOne common manipulation in visuomotor learning is to have a group train with the lowest possible variability - constant\nThis is a fairly common pattern, at least to my reading. But….,",
     "crumbs": [
       "Slides"
     ]
@@ -1805,7 +1805,7 @@
     "href": "Presentation/slides.html#but-also-plenty-of-contradictory-results-and-complications",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "But also plenty of contradictory results and complications",
-    "text": "But also plenty of contradictory results and complications\n\nCases where varied training doesn’t benefit generalization\nCases where more training variation results in worse outcomes\nCases where the influence of variation interacts with some other factor\n\ndifficulty\nprior knowledge\nFrequency effects, or amount of training/learning before testing",
+    "text": "But also plenty of contradictory results and complications\n\nCases where varied training doesn’t benefit generalization\nCases where more training variation results in worse outcomes\nCases where the influence of variation interacts with some other factor\n\ndifficulty\nprior knowledge\nFrequency effects, or amount of training/learning before testing\n\n\n\nPlenty of discrepancy in results, sometimes even for very similar tasks. - and lots of work remains to unravel when exactly variability is or isn’t helpful",
     "crumbs": [
       "Slides"
     ]
@@ -1975,7 +1975,7 @@
     "href": "Presentation/slides.html#project-2---experiment-2-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 2 Results",
-    "text": "Project 2 - Experiment 2 Results",
+    "text": "Project 2 - Experiment 2 Results\n\n\n \n\n \n\n\n\nThe analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in Table 6, reveal no significant main effect of training condition ( However, the interaction between training condition and band type was significant with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands",
     "crumbs": [
       "Slides"
     ]
@@ -2055,7 +2055,7 @@
     "href": "Presentation/slides.html#project-2---experiment-1-results",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Project 2 - Experiment 1 Results",
-    "text": "Project 2 - Experiment 1 Results",
+    "text": "Project 2 - Experiment 1 Results\n\n\n \n\n \n\n\n\n\nTo compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in Table 3. The main effect of training condition was not significant ( The extrapolation testing items had a significantly greater deviation than the training bands ( Most importantly, the interaction between training condition and band type was significant ( As shown in Figure 5, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.\nFinally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant.\non. Most relevant to the issue of discrimination is the coefficient on the Band predictor ( Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition ( suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition",
     "crumbs": [
       "Slides"
     ]
@@ -2339,7 +2339,7 @@
     "href": "Presentation/slides.html#variability",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Variability",
-    "text": "Variability\n\nVariation during training linked to improved transfer in numerous domains\n\nsometimes alternatively termed diversity, heterogenity, numerosity etc.\n\nWhat does variability mean in the context of learning interventions?\n\nHow spread out examples are in the task space\nThe number of unique items/problems experienced\nexposure to wider array of contexts/background conditions",
+    "text": "Variability\n\nVariation during training linked to improved transfer in numerous domains\n\nCategory learning, perceptual learning, education, visuomotor learning\nsometimes alternatively termed diversity, heterogenity, numerosity etc.\n\n\n\n\nWhat does variability mean in the context of learning interventions?\n\nHow spread out examples are in the task space\nThe number of unique items/problems experienced\nexposure to wider array of contexts/background conditions\n\n\n\n\n\nThe influence of variability has been studied across many different domains\nalthough sometimes referred\n\nvariability can refer to many different",
     "crumbs": [
       "Slides"
     ]
@@ -2586,7 +2586,7 @@
     "href": "Presentation/slides.html#issues-with-previous-research",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Issues with previous research",
-    "text": "Issues with previous research\n\nAssumptions about what is encoded\nAssumptions about the formation of abstractions\nAggregation issues and similarity confounds\n\n\n\n\n\n\n\n\n\n\n\ne.g. (Chua et al., 2019; Del Rey et al., 1982; McCracken & Stelmach, 1977)",
+    "text": "Issues with previous research\n\nAssumptions about what is encoded\nAssumptions about the formation of abstractions\nAggregation issues and similarity confounds\n\n\n\n\n\n\n\n\n\n\n\ne.g. (Chua et al., 2019; Del Rey et al., 1982; McCracken & Stelmach, 1977)\n\n\n\nSchema theory assumes that learners encode abstractions, or parameters, that enable generalization, and that variation is parituiclarly helpful",
     "crumbs": [
       "Slides"
     ]
@@ -2676,7 +2676,7 @@
     "href": "Presentation/slides.html#overview",
     "title": "The Role of Variability in Learning Generalization: A Computational Modeling Approach",
     "section": "Overview",
-    "text": "Overview\n\nProject 1\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)",
+    "text": "Overview\n\nProject 1\n\nVisuomotor projectile launching task\ntwo experiments\nBeneficial effect of variability\nInstance-based similarity model\n\n\n\nProject 2\n\nVisuomotor extrapolation task\nThree experiments\nEffect of variability is null or negative\nConnectionist model (ALM) and hybrid associative & rule model (EXAM)\n\n\n\nDissertations consists of 2 primary projects.\nEach within their own subdomain of visuomotor learning\nand each employing a distinct type of computational modeling",
     "crumbs": [
       "Slides"
     ]

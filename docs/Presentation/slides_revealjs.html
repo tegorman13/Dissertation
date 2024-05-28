@@ -375,21 +375,59 @@
 <li>Learning is often specific</li>
 <li>Longstanding scientific interest in how to improve generalization or transfer</li>
 </ul>
+<aside class="notes">
+<p>thank you all for joining in my defense</p>
+<p>Learning is often more specific than we’d like. There has been longstanding scientific interest in trying to understand what factors we might be able to control that might have beneficial effects on generalization and transfer.</p>
+<p>One such factor, and the topic of my dissertation - is the influence of variability on generalization</p>
+<p>Over the next 45 minutes, I will walk through the specific empirical studies and computational modeling work</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Variability</h2>
 <ul>
 <li>Variation during training linked to improved transfer in numerous domains
 <ul>
+<li>Category learning, perceptual learning, education, visuomotor learning</li>
 <li>sometimes alternatively termed diversity, heterogenity, numerosity etc.</li>
 </ul></li>
+</ul>
+<div class="fragment">
+<ul>
 <li>What does variability mean in the context of learning interventions?
 <ul>
 <li>How spread out examples are in the task space</li>
-<li>The number of unique items/problems experienced</li>
+<li><strong>The number of unique items/problems experienced</strong></li>
 <li>exposure to wider array of contexts/background conditions</li>
 </ul></li>
 </ul>
+</div>
+<aside class="notes">
+<ul>
+<li>The influence of variability has been studied across many different domains</li>
+<li>although sometimes referred</li>
+</ul>
+<p>variability can refer to many different</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Common Empirical Patterns</h2>
@@ -413,6 +451,21 @@
 </div>
 </div>
 </div>
+<aside class="notes">
+<p>higher or lower variability can of course vary greatly between domains</p>
+<p>One common manipulation in visuomotor learning is to have a group train with the lowest possible variability - constant</p>
+<p>This is a fairly common pattern, at least to my reading. But….,</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>But also plenty of contradictory results and complications</h2>
@@ -426,6 +479,19 @@
 <li>Frequency effects, or amount of training/learning before testing</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>Plenty of discrepancy in results, sometimes even for very similar tasks. - and lots of work remains to unravel when exactly variability is or isn’t helpful</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 smaller center">
 <h2>Overview</h2>
@@ -443,9 +509,23 @@
 <li>Effect of variability is null or negative</li>
 <li>Connectionist model (ALM) and hybrid associative &amp; rule model (EXAM)</li>
 </ul>
-</section>
-<section class="slide level2 center">
-
+<aside class="notes">
+<ul>
+<li>Dissertations consists of 2 primary projects.</li>
+<li>Each within their own subdomain of visuomotor learning</li>
+<li>and each employing a distinct type of computational modeling</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center scrollable">
 <h2>Project 1</h2>
@@ -473,7 +553,10 @@
 <p><span class="citation" data-cites="schmidtSchemaTheoryDiscrete1975">Schmidt (<a href="#/references" role="doc-biblioref" onclick="">1975</a>)</span> <span class="citation" data-cites="bjorkMakingThingsHard2011">Bjork &amp; Bjork (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> <span class="citation" data-cites="guadagnoliChallengePointFramework2004">Guadagnoli &amp; Lee (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span></p>
 </div>
 <aside class="notes">
-<p>Variety of theoretical explanations Schema theory in paticular has been extremely influential</p>
+<ul>
+<li>Variety of theoretical explanations have been proposed for the commonly observed effects</li>
+<li>In visuomotor learning and most relevant for my work, Schema theory in paticular has been extremely influential, and seems to have inspired hundreds of studies</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -505,6 +588,21 @@
 <div class="footnote">
 <p>e.g. <span class="citation" data-cites="mccrackenTestSchemaTheory1977 chuaPracticeVariabilityPromotes2019 delreyEffectsContextualInterference1982">(<a href="#/references" role="doc-biblioref" onclick="">Chua et al., 2019</a>; <a href="#/references" role="doc-biblioref" onclick="">Del Rey et al., 1982</a>; <a href="#/references" role="doc-biblioref" onclick="">McCracken &amp; Stelmach, 1977</a>)</span></p>
 </div>
+<aside class="notes">
+<ul>
+<li>Schema theory assumes that learners encode abstractions, or parameters, that enable generalization, and that variation is parituiclarly helpful</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Designs that avoid similarity issue</h2>
@@ -846,6 +944,23 @@
 <p><img data-src="assets/htw_e1_test2.png" style="width:70.0%"> <img data-src="assets/htw_e1_test4.png" style="width:70.0%"></p>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li><p>To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs.&nbsp;constant) and band type (trained vs.&nbsp;extrapolation), with random intercepts for participants and bands. The model results are shown in Table 3. The main effect of training condition was not significant ( The extrapolation testing items had a significantly greater deviation than the training bands ( Most importantly, the interaction between training condition and band type was significant ( As shown in Figure 5, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.</p></li>
+<li><p>Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant.</p></li>
+<li><p>on. Most relevant to the issue of discrimination is the coefficient on the Band predictor ( Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition ( suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 smaller center">
 <h2>Project 2 - Experiment 2 Design</h2>
@@ -879,6 +994,19 @@
 <p><img data-src="assets/htw_e2_test2.png" class="fragment" style="width:75.0%" data-fragment-index="1"> <img data-src="assets/htw_e2_test4.png" class="fragment" style="width:75.0%" data-fragment-index="2"></p>
 </div>
 </div>
+<aside class="notes">
+<p>The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs.&nbsp;Constant) and band type (training vs.&nbsp;extrapolation bands). The results, summarized in Table 6, reveal no significant main effect of training condition ( However, the interaction between training condition and band type was significant with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Project 2 - Experiment 3</h2>

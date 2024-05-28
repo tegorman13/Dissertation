@@ -59,18 +59,42 @@ author:
 - Learning is often specific
 - Longstanding scientific interest in how to improve generalization or transfer
 
+::: notes
+thank you all for joining in my defense
+
+Learning is often more specific than we'd like. There has been longstanding scientific interest in trying to understand what factors we might
+be able to control that might have beneficial effects on generalization and transfer. 
+
+One such factor, and the topic of my dissertation - is the influence of variability on generalization 
+
+Over the next 45 minutes, I will walk through the specific empirical studies and computational modeling work
+
+:::
+
+
 ------------------------------------------------------------------------
 
 ## Variability 
 
 - Variation during training linked to improved transfer in numerous domains 
+  - Category learning, perceptual learning, education, visuomotor learning
   - sometimes alternatively termed diversity, heterogenity, numerosity etc. 
 
+::: {.fragment}
 - What does variability mean in the context of learning interventions?
   - How spread out examples are in the task space
-  - The number of unique items/problems experienced
+  - **The number of unique items/problems experienced**
   - exposure to wider array of contexts/background conditions
+:::
 
+::: notes
+
+- The influence of variability has been studied across many different domains
+- although sometimes referred 
+
+variability can refer to many different 
+
+:::
 
 ------------------------------------------------------------------------
 
@@ -99,6 +123,16 @@ author:
 ::::::::: 
 
 
+::: notes
+higher or lower variability can of course vary greatly between domains
+
+One common manipulation in visuomotor learning is to have a group train with the lowest possible variability - constant
+
+This is a fairly common pattern, at least to my reading. But....,
+
+:::
+
+
 ------------------------------------------------------------------------
 
 ## But also plenty of contradictory results and complications
@@ -109,6 +143,12 @@ author:
     - difficulty
     - prior knowledge
     - Frequency effects, or amount of training/learning before testing
+
+::: notes
+Plenty of discrepancy in results, sometimes even for very similar tasks. 
+- and lots of work remains to unravel when exactly variability is or isn't helpful
+:::
+
 
 ------------------------------------------------------------------------
 
@@ -132,14 +172,11 @@ author:
 - Connectionist model (ALM) and hybrid associative & rule model (EXAM)
 
 
-
-
-
-------------------------------------------------------------------------
-
-
-
-
+::: notes
+- Dissertations consists of 2 primary projects. 
+- Each within their own subdomain of visuomotor learning
+- and each employing a distinct type of computational modeling
+:::
 
 ---
 
@@ -173,8 +210,8 @@ author:
 :::
 
 ::: notes
-Variety of theoretical explanations
-Schema theory in paticular has been extremely influential 
+- Variety of theoretical explanations have been proposed for the commonly observed effects
+- In visuomotor learning and most relevant for my work, Schema theory in paticular has been extremely influential, and seems to have inspired hundreds of studies
 :::
 
 ___
@@ -201,6 +238,11 @@ ___
 :::
 ::: footnote
 e.g. [@mccrackenTestSchemaTheory1977; @chuaPracticeVariabilityPromotes2019; @delreyEffectsContextualInterference1982]
+:::
+
+
+::: notes
+- Schema theory assumes that learners encode abstractions, or parameters, that enable generalization, and that variation is parituiclarly helpful
 :::
 
 ---
@@ -537,6 +579,21 @@ ___
 :::
 :::
 
+::: notes
+- To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs. constant) and band type (trained vs. extrapolation), with random intercepts for participants and bands. The model results are shown in Table 3. The main effect of training condition was not significant (
+ The extrapolation testing items had a significantly greater deviation than the training bands (
+  Most importantly, the interaction between training condition and band type was significant (
+ As shown in Figure 5, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.
+
+ - Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant.
+
+- on. Most relevant to the issue of discrimination is the coefficient on the Band predictor (
+ Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition (
+ suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition 
+:::
+
+
+
 
 
 ## Project 2 - Experiment 2 Design {.smaller}
@@ -572,6 +629,13 @@ ___
 ![](assets/htw_e2_test2.png){width="75%" .fragment fragment-index=1}
 ![](assets/htw_e2_test4.png){width="75%" .fragment fragment-index=2}
 :::
+:::
+
+::: notes
+ The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs. Constant) and band type (training vs. extrapolation bands). The results, summarized in Table 6, reveal no significant main effect of training condition (
+ However, the interaction between training condition and band type was significant  with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands 
+
+
 :::
 
 

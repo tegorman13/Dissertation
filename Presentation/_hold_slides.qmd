@@ -187,3 +187,32 @@ e.g. [@mccrackenTestSchemaTheory1977; @chuaPracticeVariabilityPromotes2019; @del
 :::
 
 ---
+
+
+### Final Conclusion Slide
+
+**Title: Conclusion**
+
+**Bullet Points:**
+- **Empirical Findings**:
+  - HTT: Varied training led to superior performance.
+  - HTW: Varied training led to poorer performance.
+  - Differences attributed to task characteristics and complexity.
+
+- **Modeling Insights**:
+  - HTT: IGAS model highlighted the importance of similarity between training and testing conditions.
+  - HTW: EXAM model provided the best account of testing data, especially for the constant group.
+
+- **Implications**:
+  - Task-specific characteristics are crucial in determining the benefits of varied training.
+  - Combining empirical research with computational modeling enhances understanding of learning and generalization.
+
+**Script:**
+
+"In summary, our research provided significant insights into the effects of training variability on learning and generalization in different tasks. In the HTT project, we found that varied training led to superior performance, consistent with the benefits of variability hypothesis. In contrast, the HTW project demonstrated that varied training could be detrimental, particularly in simpler extrapolation tasks.
+
+These opposing patterns highlight the importance of task characteristics and complexity in determining the benefits of training variability. The HTT task's complexity and perceptual salience of varied conditions likely contributed to the positive effects, while the simpler, less perceptually salient HTW task showed negative effects.
+
+From a modeling perspective, the IGAS model in HTT emphasized the role of similarity between training and testing conditions, showing that controlling for similarity is crucial for understanding training outcomes. The EXAM model in HTW provided a robust account of the data, particularly for the constant training group, suggesting that linear extrapolation mechanisms and prior knowledge can influence performance in simpler tasks.
+
+Overall, our findings underscore the necessity of considering task-specific characteristics when designing training programs. The combination of empirical research and computational modeling proved invaluable in uncovering the cognitive mechanisms underlying learning and generalization. Future research should continue to explore the interplay between task demands, training manipulations, and individual differences to optimize educational and training outcomes across various domains. Thank you."
