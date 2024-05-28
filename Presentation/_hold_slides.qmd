@@ -114,4 +114,46 @@ Full Space of Solution Throws and Missed Throws. Colored points represent coordi
 
 ## Project 1 General Discussion {.smaller .r-fit-text}
 
-------------------------------------------------------------------------
+---------------------------------------------------------
+
+
+---------------
+
+
+## Project 2 - Experiment 2 Results
+
+::: {.columns}
+::: {.column width="50%"}
+![](assets/htw_e2_test1.png){width="75%"}
+![](assets/htw_e2_test3.png){width="75%"}
+:::
+
+::: {.column width="50%"}
+![](assets/htw_e2_test2.png){width="75%"}
+![](assets/htw_e2_test4.png){width="75%"}
+:::
+:::
+
+
+## Project 2 - Experiment 2 Results {.smaller margin="0"}
+
+::: {.columns}
+::: {.column width="50%"}
+![](assets/htw_e2_test1.png){width=65%"}
+:::
+::: {.column width="50%"}
+![](assets/htw_e2_test2.png){width="65%"}
+:::
+:::
+
+::: fragment
+::: {.columns}
+::: {.column width="50%"}
+
+![](assets/htw_e2_test3.png){width="65%"}
+:::
+::: {.column width="50%"}
+![](assets/htw_e2_test4.png){width="65%"}
+:::
+:::
+:::
