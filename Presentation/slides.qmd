@@ -212,6 +212,7 @@ Plenty of discrepancy in results, sometimes even for very similar tasks.
 ::: notes
 - Variety of theoretical explanations have been proposed for the commonly observed effects
 - In visuomotor learning and most relevant for my work, Schema theory in paticular has been extremely influential, and seems to have inspired hundreds of studies
+- Unlike the models I'll be presenting today, at least to my knowledge none of these have ever been formally specified and actually fit to human data
 :::
 
 ___
@@ -222,27 +223,10 @@ ___
 - Assumptions about the formation of abstractions 
 - Aggregation issues and similarity confounds
 
-::: fragment
-:::: columns
-::: {.column}
-
-![](assets/agg_issues.png)
-:::
-::: {.column}
-
-
-
-:::
-
-::::
-:::
-::: footnote
-e.g. [@mccrackenTestSchemaTheory1977; @chuaPracticeVariabilityPromotes2019; @delreyEffectsContextualInterference1982]
-:::
-
-
 ::: notes
 - Schema theory assumes that learners encode abstractions, or parameters, that enable generalization, and that variation is parituiclarly helpful
+- failures to consider nonlinear effects of learning 
+- failure to consider that, through lieu of being exposed to broader coverage of the task space, varied training manipulations can often 
 :::
 
 ---
