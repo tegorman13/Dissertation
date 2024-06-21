@@ -13,16 +13,17 @@ format:
     self-contained: false
 ---
 
-
-
-
-
 ## Project 1
 
+[{{< fa file-lines >}} Project 1 page](https://tegorman13.github.io/Dissertation/Sections/IGAS.html)
 
+[{{< fa file-pdf >}} pdf of the journal
+article](Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}\
+[{{< fa scroll >}} Link to online version of journal
+article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
 
 ## Project 2 
 
-[Link to HTW project page](https://tegorman13.github.io/htw/){target="_blank"} \
+[{{< fa file-lines >}} Link to project 2 page](https://tegorman13.github.io/htw/){target="_blank"} \
 
-[Working Draft of HTW Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
+[{{< fa file-pdf >}} Working Draft of Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}

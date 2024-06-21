@@ -10,6 +10,8 @@ execute:
 ---
 
 
+
+
 ```{r}
 # load and view data
 pacman::p_load(tidyverse,patchwork,here, pander, latex2exp, flextable)
