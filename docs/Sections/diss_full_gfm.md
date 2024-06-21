@@ -1,6 +1,6 @@
 # The Role of Variability in Learning Generalization: A Computational
 Modeling Approach
-Thomas Gorman
+Thomas E. Gorman
 
 - [Introduction](#introduction)
   - [Varied Training and
@@ -682,9 +682,7 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-toy-model1-1.png)
 
 
 Figure 1: Left panel- Generalization predicted from a simple model that
@@ -760,7 +758,7 @@ the constant group.
 The experimental task was programmed in JavaScript, using packages from
 the Phaser physics engine (https://phaser.io) and the jsPsych library
 (de Leeuw, 2015). The stimuli, presented on a black background,
-consisted of a circular blue ball – controlled by the participant via
+consisted of a circular blue ball - controlled by the participant via
 the mouse or trackpad cursor; a rectangular green target; a red
 rectangular barrier located between the ball and the target; and an
 orange square within which the participant could control the ball before
@@ -783,21 +781,21 @@ of the cursor. Participants can then “wind up” the ball by dragging it
 (within the confines of the orange square) and then launch the ball by
 releasing the cursor. If the ball does not land on the target,
 participants are presented with feedback in red text at the top right of
-the screen, on how many units away they were from the center of the
-target. If the ball was thrown outside of the boundary of the screen
-participants are given feedback as to how far away from the target
-center the ball would have been if it had continued its trajectory. If
-the ball strikes the barrier (from the side or by landing on top),
-feedback is presented telling participants to avoid hitting the barrier.
-If participants drag the ball outside of the orange square before
-releasing it, the trial terminates, and they are reminded to release the
-ball within the orange square. If the ball lands on the target, feedback
-is presented in green text, confirming that the target was hit, and
-presenting additional feedback on how many units away the ball was from
-the exact center of the target.
+the screen, specifying how many scaled units away the ball was from the
+center of the target. If the ball was thrown outside of the boundary of
+the screen participants are given feedback as to how far away from the
+target center the ball would have been if it had continued its
+trajectory. If the ball strikes the barrier (from the side or by landing
+on top), feedback is presented telling participants to avoid hitting the
+barrier. If participants drag the ball outside of the orange square
+before releasing it, the trial terminates, and they are reminded to
+release the ball within the orange square. If the ball lands on the
+target, feedback is presented in green text, confirming that the target
+was hit, and presenting additional feedback on how many units away the
+ball was from the exact center of the target.
 
 <a href="https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html"
-target="_blank">Link to abbrevaited example of task</a>.
+target="_blank">Link to abbreviated example of task</a>.
 
 <div id="fig-IGAS_Methods">
 
@@ -842,16 +840,16 @@ their training location, 2) the training location(s) of the other group,
 trials from each of the four locations, presented in a randomized order.
 All trials in the final testing phase included feedback. After finishing
 the final testing portion of the study, participants were queried as to
-whether they completed the study using a mouse, a trackpad or some other
-device (this information was used in the exclusion process described
-above). Finally, participants were debriefed as to the hypotheses and
-manipulation of the study.
+whether they completed the study using a mouse, a trackpad, or some
+other device (this information was used in the exclusion process
+described above). Finally, participants were debriefed as to the
+hypotheses and manipulation of the study.
 
 ### Results
 
 #### Data Processing and Statistical Packages
 
-To prepare the data, we first removed trials that were not easily
+To prepare the data, we removed trials that were not easily
 interpretable as performance indicators in our task. Removed trials
 included: 1) those in which participants dragged the ball outside of the
 orange starting box without releasing it, 2) trials in which
@@ -898,9 +896,7 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Training1-1.png)
 
 
 Figure 3: Training performance for varied and constant participants
@@ -926,9 +922,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Testing1-1.png)
 
 
 Figure 4: Testing performance for each of the 4 testing positions,
@@ -1083,9 +1077,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2train-1.png)
 
 
 Figure 5: Training performance for the six constant conditions, and the
@@ -1124,9 +1116,7 @@ groups.
 
 <div id="fig-e2testa">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2testa-1.png)
 
 
 Figure 6: Testing phase performance from each of the six testing
@@ -1219,9 +1209,7 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2test1-1.png)
 
 
 Figure 7: A comparison of throwing location that are identical to those
@@ -1318,9 +1306,7 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-taskSpace-1.png)
 
 
 Figure 8: A) A visual representation of the combinations of throw
@@ -1541,9 +1527,7 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-Toy-Model-dis-1.png)
 
 
 Figure 9: A simple model depicting the necessity of both of two
@@ -1842,9 +1826,7 @@ Filter for each shape stimulus.
 
 <div id="fig-delosh-extrap">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-delosh-extrap-1.png)
 
 
 Figure 10: Generalization reproduced patterns from DeLosh et al. (1997)
@@ -1997,9 +1979,7 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e1-train-dev-1.png)
 
 
 Figure 12: Experiment 1 Training Stage. Deviations from target band
@@ -2076,9 +2056,7 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-dev-1.png)
 
 
 Figure 13: Experiment 1 Testing Accuracy. A) Empricial Deviations from
@@ -2135,9 +2113,7 @@ the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-vx-1.png)
 
 
 Figure 14: Experiment 1. Empirical distribution of velocities producing
@@ -2147,9 +2123,7 @@ correct range for each velocity band.
 </div>
 <div id="fig-e1-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-bmm-vx-1.png)
 
 
 Figure 15: Experiment 1 Discrimination. A) Conditional effect of
@@ -2192,9 +2166,7 @@ completed the experiment (Varied: 55, Constant: 55).
 
 <div id="fig-e2-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2-train-dev-1.png)
 
 
 Figure 16: Experiment 2 Training Stage. Deviations from target band
@@ -2267,9 +2239,7 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-dev-1.png)
 
 
 Figure 17: Experiment 2 Testing Accuracy. A) Empricial Deviations from
@@ -2316,9 +2286,7 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-vx-1.png)
 
 
 Figure 18: Experiment 2. Empirical distribution of velocities produced
@@ -2328,9 +2296,7 @@ correct range for each velocity band.
 </div>
 <div id="fig-e2-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-bmm-vx-1.png)
 
 
 Figure 19: Experiment 2 Discrimination. A) Conditional effect of
@@ -2412,9 +2378,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e3-train-dev-1.png)
 
 
 Figure 20: Experiment 3 training. Deviations from target band during
@@ -2471,9 +2435,7 @@ significant.
 ::: -->
 <div id="fig-e3-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-dev-1.png)
 
 
 Figure 21: Experiment 3 Testing Accuracy. A) Empricial Deviations from
@@ -2530,9 +2492,7 @@ noticably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-vx-1.png)
 
 
 Figure 22: e3 testing x velocities. Translucent bands with dash lines
@@ -2544,9 +2504,7 @@ indicate the correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-bmm-vx-1.png)
 
 
 Figure 23: Experiment 3 Discrimination. A) Conditional effect of
@@ -2580,9 +2538,7 @@ when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-alm-diagram-1.png)
 
 
 Figure 24: The Associative Learning Model (ALM). The diagram illustrates
@@ -2845,9 +2801,7 @@ model was evaluated on.
 </div>
 <div id="fig-htw-post-dist">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-post-dist-1.png)
 
 
 Figure 25: Posterior Distributions of $c$ and $lr$ parameters. Points
@@ -2859,9 +2813,7 @@ logarithmically.
 </div>
 <div id="fig-htw-resid-pred">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-resid-pred-1.png)
 
 
 Figure 26: Model residuals for each combination of training condition,
@@ -2927,9 +2879,7 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-1.png)
 
 
 Figure 27: Empirical data and Model predictions for mean velocity across
@@ -2941,9 +2891,7 @@ EXAM, alongside the observed data.
 </div>
 <div id="fig-ee-e1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-ee-e1-1.png)
 
 
 Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3001,9 +2949,7 @@ evaluated on.
 
 <div id="fig-cm-vx-pat-e2-e3">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
 
 
 Figure 29: Empirical data and Model predictions from Experiment 2 and 3
@@ -3081,9 +3027,7 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
-width="864" />
+![](full_files/figure-commonmark/fig-e2_e3_ae-1.png)
 
 
 Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3154,9 +3098,7 @@ patterns they can produce (Dome & Wills, 2023).
 
 <div id="fig-htw-best-model">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-best-model-1.png)
 
 
 Figure 31: Difference in model errors for each participant, with models
@@ -3166,9 +3108,7 @@ negative values favor ALM.
 </div>
 <div id="fig-htw-indv-pred">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-indv-pred-1.png)
 
 
 Figure 32: Model predictions alongside observed data for a subset of

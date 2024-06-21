@@ -903,9 +903,9 @@ digraph {
   // define the global styles of the nodes
   node [shape = rectangle, style = filled]
 
-  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#FF0000"]
-  data2 [label = " Constant Training \n800-1000", fillcolor = "#00A08A"]
-  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#00A08A"]
+  data2 [label = " Constant Training \n800-1000", fillcolor = "#FF0000"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#00A08A"]
 
   // edge definitions with the node IDs
   data1 -> Test1
@@ -922,7 +922,6 @@ digraph {
 }
 ```
 :::
-
 ```{r}
 
 # pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,

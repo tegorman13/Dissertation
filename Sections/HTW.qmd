@@ -1,14 +1,15 @@
 ---
 title: HTW Project
-date: last-modified
 author:
 - name: Thomas E. Gorman
   affiliations: 
-  - Department of Psychological and Brain Sciences, Indiana University-Bloomington
-  affiliation-url: https://psych.indiana.edu/
+  - name:  Department of Psychological and Brain Sciences, Indiana University-Bloomington, USA
+    affiliation-url: https://psych.indiana.edu/
+  - name:  Program in Cognitive Science, Indiana University-Bloomington, USA
+    affiliation-url: https://cogs.indiana.edu/index.html
   url: https://tegorman13.github.io/
   email: tegorman@iu.edu
-  orcid: 0000-0001-5366-5442
+  orcid: "0000-0001-5366-5442"
 page-layout: full
 code-fold: true
 code-tools: true
@@ -16,11 +17,32 @@ cache: true
 toc: true
 toc-location: body
 toc-title: Contents
+format-links: [hikmah-manuscript-pdf, gfm]
+format: 
+  html: 
+    date: last-modified
+  hugo-md:
+    echo: false
+    include: false
+    html-math-method: mathjax
+    output-file: htw_hugo.md
+  gfm:
+    echo: false
+    output-file: htw_gfm.md
+  hikmah-manuscript-pdf:
+    echo: false
+    output-file: "htw_dis.pdf"
+    mainfont: "Linux Libertine O"
+    mainfontoptions:
+      - "Numbers=Proportional"
+      - "Numbers=OldStyle"
+    mathfont: "Libertinus Math"
 execute: 
   warning: false
   eval: true
 ---
 
+::: {.content-visible when-format="html"}
 _______________________________________________________________________________
 
 [{{< fa file-lines >}} Link to project page](https://tegorman13.github.io/htw/){target="_blank"} \
@@ -29,6 +51,8 @@ _______________________________________________________________________________
 
  [{{< fa brands github >}} repo](https://github.com/tegorman13/htw) \
 _______________________________________________________________________________
+:::
+
 
 # Introduction
 
@@ -168,9 +192,9 @@ digraph {
   // define the global styles of the nodes
   node [shape = rectangle, style = filled]
 
-  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#FF0000"]
-  data2 [label = " Constant Training \n800-1000", fillcolor = "#00A08A"]
-  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#00A08A"]
+  data2 [label = " Constant Training \n800-1000", fillcolor = "#FF0000"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#00A08A"]
 
   // edge definitions with the node IDs
   data1 -> Test1
@@ -187,7 +211,6 @@ digraph {
 }
 ```
 :::
-
 
 ```{r}
 

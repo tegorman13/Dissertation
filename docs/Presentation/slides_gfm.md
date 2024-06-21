@@ -8,34 +8,54 @@ Thomas Gorman
 - Longstanding scientific interest in how to improve generalization or
   transfer
 
+<div class="notes">
+
+thank you all for joining in my defense
+
+Learning is often more specific than we’d like. There has been
+longstanding scientific interest in trying to understand what factors we
+might be able to control that might have beneficial effects on
+generalization and transfer.
+
+One such factor, and the topic of my dissertation - is the influence of
+variability on generalization
+
+Over the next 45 minutes, I will walk through the specific empirical
+studies and computational modeling work
+
+</div>
+
 ------------------------------------------------------------------------
 
 ## Variability
 
 - Variation during training linked to improved transfer in numerous
   domains
-- What does “variability mean in the context of learning interventions?”
+  - Category learning, perceptual learning, education, visuomotor
+    learning
+  - sometimes alternatively termed diversity, heterogenity, numerosity
+    etc.
 
-## Types of Variability
+<div class="fragment">
 
-- The number of unique items/problems experienced
-- How spread out examples are
+- What does variability mean in the context of learning interventions?
+  - How spread out examples are in the task space
+  - **The number of unique items/problems experienced**
+  - exposure to wider array of contexts/background conditions
 
-## My Dissertation Focus
+</div>
 
-- Number of unique examples
+<div class="notes">
 
-- Visuomotor skill learning and function learning
+- The influence of variability has been studied across many different
+  domains
+- although sometimes referred
 
-- Addressing methodological shortcomings of previous work
+variability can refer to many different
 
-- Adapting cognitive models from other domains to account for results
+</div>
 
 ------------------------------------------------------------------------
-
-## Common Experimental Manipulations
-
-- Varied vs. Constant
 
 ## Common Empirical Patterns
 
@@ -69,6 +89,17 @@ Thomas Gorman
 
 </div>
 
+<div class="notes">
+
+higher or lower variability can of course vary greatly between domains
+
+One common manipulation in visuomotor learning is to have a group train
+with the lowest possible variability - constant
+
+This is a fairly common pattern, at least to my reading. But….,
+
+</div>
+
 ------------------------------------------------------------------------
 
 ## But also plenty of contradictory results and complications
@@ -80,6 +111,14 @@ Thomas Gorman
   - difficulty
   - prior knowledge
   - Frequency effects, or amount of training/learning before testing
+
+<div class="notes">
+
+Plenty of discrepancy in results, sometimes even for very similar
+tasks. - and lots of work remains to unravel when exactly variability is
+or isn’t helpful
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -99,7 +138,13 @@ Thomas Gorman
 - Effect of variability is null or negative
 - Connectionist model (ALM) and hybrid associative & rule model (EXAM)
 
-------------------------------------------------------------------------
+<div class="notes">
+
+- Dissertations consists of 2 primary projects.
+- Each within their own subdomain of visuomotor learning
+- and each employing a distinct type of computational modeling
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -138,8 +183,14 @@ Schmidt (1975) Bjork & Bjork (2011) Guadagnoli & Lee (2004)
 
 <div class="notes">
 
-Variety of theoretical explanations Schema theory in paticular has been
-extremely influential
+- Variety of theoretical explanations have been proposed for the
+  commonly observed effects
+- In visuomotor learning and most relevant for my work, Schema theory in
+  paticular has been extremely influential, and seems to have inspired
+  hundreds of studies
+- Unlike the models I’ll be presenting today, at least to my knowledge
+  none of these have ever been formally specified and actually fit to
+  human data
 
 </div>
 
@@ -151,36 +202,14 @@ extremely influential
 - Assumptions about the formation of abstractions
 - Aggregation issues and similarity confounds
 
-<div class="fragment">
+<div class="notes">
 
-<div class="columns">
-
-<div class="column">
-
-![](assets/agg_issues.png)
-
-</div>
-
-<div class="column">
-
-<br>
-
-- If generalization decays exponentially with distance, constant groups
-  1 and 2 may have far less generalization potential to the testing
-  condition.
-- performance of individual constant groups often not reported in
-  analyses.
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footnote">
-
-e.g. (Chua et al., 2019; Del Rey et al., 1982; McCracken & Stelmach,
-1977)
+- Schema theory assumes that learners encode abstractions, or
+  parameters, that enable generalization, and that variation is
+  parituiclarly helpful
+- failures to consider nonlinear effects of learning
+- failure to consider that, through lieu of being exposed to broader
+  coverage of the task space, varied training manipulations can often
 
 </div>
 
@@ -227,7 +256,7 @@ Kerr & Booth (1978)
 
 ## Experiment 1 Design
 
-<img src="assets/igas_e1_manip.png" data-fig-align="left" />
+<img src="assets/igas_e1_manip.png" data-fig-align="top" />
 
 - Constant trains from one position (760)
   - 200 trials
@@ -556,9 +585,9 @@ of responses
 
 <div class="column" width="60%">
 
-<img src="assets/htw_e1_manip.png" data-fig-align="left" />
+<img src="assets/htw_e1_manip.png" data-fig-align="top" />
 
-<img src="assets/e1_design.png" data-fig-align="left" />
+<img src="assets/e1_design.png" data-fig-align="top" />
 
 </div>
 
@@ -596,15 +625,46 @@ of responses
 
 </div>
 
+<div class="notes">
+
+- To compare accuracy between groups in the testing stage, we fit a
+  Bayesian mixed effects model predicting deviation from the target band
+  as a function of training condition (varied vs. constant) and band
+  type (trained vs. extrapolation), with random intercepts for
+  participants and bands. The model results are shown in Table 3. The
+  main effect of training condition was not significant ( The
+  extrapolation testing items had a significantly greater deviation than
+  the training bands ( Most importantly, the interaction between
+  training condition and band type was significant ( As shown in Figure
+  5, the varied group had disproportionately larger deviations compared
+  to the constant group in the extrapolation bands.
+
+- Finally, to assess the ability of both conditions to discriminate
+  between velocity bands, we fit a model predicting velocity as a
+  function of training condition and velocity band, with random
+  intercepts and random slopes for each participant.
+
+- on. Most relevant to the issue of discrimination is the coefficient on
+  the Band predictor ( Although the median slope does fall underneath
+  the ideal of value of 1, the fact that the 95% credible interval does
+  not contain 0 provides strong evidence that participants exhibited
+  some discrimination between bands. The significant negative estimate
+  for the interaction between slope and condition ( suggests that the
+  discrimination was modulated by training condition, with the varied
+  participants showing less sensitivity between bands than the constant
+  condition
+
+</div>
+
 ## Project 2 - Experiment 2 Design
 
 <div class="columns">
 
 <div class="column" width="60%">
 
-<img src="assets/htw_e2_manip.png" data-fig-align="left" />
+<img src="assets/htw_e2_manip.png" data-fig-align="top" />
 
-<img src="assets/e2_design.png" data-fig-align="left" />
+<img src="assets/e2_design.png" data-fig-align="top" />
 
 </div>
 
@@ -641,6 +701,18 @@ data-fragment-index="1" />
 data-fragment-index="2" />
 
 </div>
+
+</div>
+
+<div class="notes">
+
+The analysis of testing accuracy examined deviations from the target
+band as influenced by training condition (Varied vs. Constant) and band
+type (training vs. extrapolation bands). The results, summarized in
+Table 6, reveal no significant main effect of training condition (
+However, the interaction between training condition and band type was
+significant with the varied group showing disproportionately larger
+deviations compared to the constant group on the extrapolation bands
 
 </div>
 
@@ -792,6 +864,20 @@ EXAM, alongside the observed data.
 
 </div>
 
+## Modelling Results
+
+#### Best fitting models per participant
+
+![](assets/best_models.png)
+
+<div class="notes">
+
+Difference in model errors for each participant, with models fit to both
+train and test data. Positive values favor EXAM, while negative values
+favor ALM
+
+</div>
+
 ## Model Comparison - Experiment 1
 
 ![](assets/model_reg_e1.png)
@@ -823,23 +909,13 @@ also includes a control for the order of training vs. testing bands
 
 ------------------------------------------------------------------------
 
-## Modelling Results
+------------------------------------------------------------------------
 
-#### Best fitting models per participant
-
-![](assets/best_models.png)
-
-<div class="notes">
-
-Difference in model errors for each participant, with models fit to both
-train and test data. Positive values favor EXAM, while negative values
-favor ALM
-
-</div>
+## General Discussion
 
 ------------------------------------------------------------------------
 
-# Summary
+## Summary
 
 - **Project Comparison**:
   - **HTT (Project 1)**: Varied training led to superior testing
@@ -884,6 +960,11 @@ environment.
 
 ## Conclusion
 
+- Task-specific characteristics are crucial in determining the benefits
+  of varied training.
+- Combining empirical research with computational modeling enhances
+  understanding of learning and generalization.
+
 <div class="notes">
 
 - The contrasting results highlight the importance of considering task
@@ -909,25 +990,6 @@ Bjork, E. L., & Bjork, R. A. (2011). Making things hard on yourself, but
 in a good way: Creating desirable difficulties to enhance learning.
 *Psychology and the Real World: Essays Illustrating Fundamental
 Contributions to Society*, *2*, 59–68.
-
-</div>
-
-<div id="ref-chuaPracticeVariabilityPromotes2019" class="csl-entry">
-
-Chua, L.-K., Dimapilis, M. K., Iwatsuki, T., Abdollahipour, R.,
-Lewthwaite, R., & Wulf, G. (2019). Practice variability promotes an
-external focus of attention and enhances motor skill learning. *Human
-Movement Science*, *64*, 307–319.
-<https://doi.org/10.1016/j.humov.2019.02.015>
-
-</div>
-
-<div id="ref-delreyEffectsContextualInterference1982" class="csl-entry">
-
-Del Rey, P., Wughalter, E. H., & Whitehurst, M. (1982). The Effects of
-Contextual Interference on Females With Varied Experience in Open Sport
-Skills. *Research Quarterly for Exercise and Sport*, *53*(2), 108–115.
-<https://doi.org/10.1080/02701367.1982.10605236>
 
 </div>
 
@@ -982,14 +1044,6 @@ class="csl-entry">
 Kruschke, J. K. (1992). ALCOVE: An exemplar-based connectionist model of
 Category Learning. *Psychological Review*, *99*(1).
 <https://doi.org/10.1037/0033-295X.99.1.22>
-
-</div>
-
-<div id="ref-mccrackenTestSchemaTheory1977" class="csl-entry">
-
-McCracken, H. D., & Stelmach, G. E. (1977). A Test of the Schema Theory
-of Discrete Motor Learning. *Journal of Motor Behavior*, *9*(3),
-193–201. <https://doi.org/10.1080/00222895.1977.10735109>
 
 </div>
 

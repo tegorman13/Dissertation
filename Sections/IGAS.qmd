@@ -4,11 +4,13 @@ subtitle: An instance-based model account of the benefits of varied practice in 
 author:
 - name: Thomas E. Gorman
   affiliations: 
-  - Department of Psychological and Brain Sciences, Indiana University-Bloomington
-  affiliation-url: https://psych.indiana.edu/
+  - name:  Department of Psychological and Brain Sciences, Indiana University-Bloomington, USA
+    affiliation-url: https://psych.indiana.edu/
+  - name:  Program in Cognitive Science, Indiana University-Bloomington, USA
+    affiliation-url: https://cogs.indiana.edu/index.html
   url: https://tegorman13.github.io/
   email: tegorman@iu.edu
-  orcid: 0000-0001-5366-5442
+  orcid: "0000-0001-5366-5442"
 page-layout: full
 code-fold: true
 code-tools: true
@@ -16,6 +18,7 @@ toc: true
 toc-location: body
 toc-title: Contents
 toc-depth: 4
+format-links: [hikmah-manuscript-pdf, gfm]
 format:
   html: default
   hugo-md:
@@ -23,6 +26,9 @@ format:
     include: false
     html-math-method: mathjax
     output-file: igas_hugo.md
+  gfm:
+    echo: false
+    output-file: igas_gfm.md
   hikmah-manuscript-pdf:
     echo: false
     output-file: "igas_dis.pdf"
@@ -31,6 +37,9 @@ format:
       - "Numbers=Proportional"
       - "Numbers=OldStyle"
     mathfont: "Libertinus Math"
+  # hikmah-manuscript-docx: 
+  #   prefer-html: true
+  #   echo: false
 execute: 
   warning: false
   eval: true
@@ -700,13 +709,13 @@ It is common for psychological process models of categorization learning to use 
 
 Our experiments add to the longstanding body of research investigating  the effect of training variability on learning and generalization. Both experiments demonstrate a reliable benefit of varied training over constant training in a projectile launching task. We also introduce the Instance-based Generalization with Adaptive Similarity (IGAS) as a novel explanation for the effect of variability on generalization. The key assumption made by IGAS is that the amount of variation encountered during training influences the steepness of the generalization gradient. Instance-based models augmented with this assumption may be a valuable approach towards better understanding skill generalization and transfer.
 
-# References
-
-
-::: {#refs}
-:::
-
 
 # Appendix
 
 {{< include /Sections/Appendix/IGAS-Supplemental.qmd >}}
+
+
+# References
+
+::: {#refs}
+:::
