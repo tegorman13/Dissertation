@@ -11,6 +11,7 @@ project:
     - "!Manuscript/"
     - "!Scratch/"
     - "!Sections/docx_test.qmd"
+    - "!Presentation/slides2.qmd"
 
   resources: 
     - "Manuscript/output/"

@@ -1,6 +1,5 @@
 # HTW Project
 Thomas E. Gorman
-2024-06-21
 
 - [Introduction](#introduction)
   - [Function Learning and

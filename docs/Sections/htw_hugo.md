@@ -1,13 +1,14 @@
 ---
 title: HTW Project
-date: last-modified
 author:
   - name: Thomas E. Gorman
     affiliations:
-      - >-
-        Department of Psychological and Brain Sciences, Indiana
-        University-Bloomington
-    affiliation-url: 'https://psych.indiana.edu/'
+      - name: >-
+          Department of Psychological and Brain Sciences, Indiana
+          University-Bloomington, USA
+        affiliation-url: 'https://psych.indiana.edu/'
+      - name: 'Program in Cognitive Science, Indiana University-Bloomington, USA'
+        affiliation-url: 'https://cogs.indiana.edu/index.html'
     url: 'https://tegorman13.github.io/'
     email: tegorman@iu.edu
     orcid: 0000-0001-5366-5442
@@ -22,7 +23,8 @@ format-links:
   - hikmah-manuscript-pdf
   - gfm
 format:
-  html: default
+  html:
+    date: last-modified
   hugo-md:
     echo: false
     include: false
