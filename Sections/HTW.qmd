@@ -22,11 +22,12 @@ execute:
 ---
 
 _______________________________________________________________________________
-{{< fa file-lines >}} [Link to project page](https://tegorman13.github.io/htw/){target="_blank"} \
 
-{{< fa file-pdf >}} [Working Draft of Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
+[{{< fa file-lines >}} Link to project page](https://tegorman13.github.io/htw/){target="_blank"} \
 
-{{< fa brands github >}} [repo](https://github.com/tegorman13/htw) \
+ [{{< fa file-pdf >}} Working Draft of Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
+
+ [{{< fa brands github >}} repo](https://github.com/tegorman13/htw) \
 _______________________________________________________________________________
 
 # Introduction

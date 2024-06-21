@@ -1,8 +1,15 @@
 ---
 title: IGAS Project
 subtitle: An instance-based model account of the benefits of varied practice in visuomotor skill
-#date: last-modified
-#page-layout: full
+author:
+- name: Thomas E. Gorman
+  affiliations: 
+  - Department of Psychological and Brain Sciences, Indiana University-Bloomington
+  affiliation-url: https://psych.indiana.edu/
+  url: https://tegorman13.github.io/
+  email: tegorman@iu.edu
+  orcid: 0000-0001-5366-5442
+page-layout: full
 code-fold: true
 code-tools: true
 toc: true
@@ -16,19 +23,36 @@ format:
     include: false
     html-math-method: mathjax
     output-file: igas_hugo.md
+  hikmah-manuscript-pdf:
+    echo: false
+    output-file: "igas_dis.pdf"
+    mainfont: "Linux Libertine O"
+    mainfontoptions:
+      - "Numbers=Proportional"
+      - "Numbers=OldStyle"
+    mathfont: "Libertinus Math"
 execute: 
   warning: false
   eval: true
 editor: 
   markdown: 
     wrap: 72
+prefer-html: true
 ---
 
+::: {.content-visible when-format="html"}
 ____________________________________________________
-[pdf of the journal
-article](Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}\
-[Link to online version of journal
-article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
+
+[{{< fa file-pdf >}} pdf of the journal article](https://tegorman13.github.io/pdf/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}
+
+[{{< fa scroll >}} Link to online version of journal article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
+
+[{{< fa brands github >}} repo](https://github.com/tegorman13/IGAS_Variability) \
+
+---
+
+:::
+
 
 ```{r}
 pacman::p_load(tidyr,papaja, knitr, tinytex, RColorBrewer, kableExtra, cowplot, patchwork,here)

@@ -17,13 +17,27 @@ format:
 
 [{{< fa file-lines >}} Project 1 page](https://tegorman13.github.io/Dissertation/Sections/IGAS.html)
 
-[{{< fa file-pdf >}} pdf of the journal
-article](Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}\
-[{{< fa scroll >}} Link to online version of journal
-article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
+[{{< fa file-pdf >}} pdf of the journal article](https://tegorman13.github.io/pdf/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf){target="_blank"}\
+
+[{{< fa scroll >}} Link to online version of journal article](https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299){target="_blank"}
 
 ## Project 2 
 
 [{{< fa file-lines >}} Link to project 2 page](https://tegorman13.github.io/htw/){target="_blank"} \
 
 [{{< fa file-pdf >}} Working Draft of Manuscript](https://tegorman13.github.io/htw/paper.html){target="_blank"}
+
+
+## Full Manuscript 
+
+[{{< fa file-lines >}} Web page version](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html)
+
+[{{< fa file-lines >}} Version with code](https://tegorman13.github.io/Dissertation/Sections/full.html)
+
+[{{< fa file-pdf >}} pdf version](https://tegorman13.github.io/Dissertation/paper.html){target="_blank"}\
+
+## Slides
+
+[{{< fa file-lines >}} Slides overview](https://tegorman13.github.io/Dissertation/Presentation/slides.html)
+
+[{{< fa person-chalkboard size=1.0xs >}} Defense slides](https://tegorman13.github.io/Dissertation/Presentation/slides_revealjs.html#/)

@@ -16,6 +16,14 @@ format:
     include: false
     html-math-method: mathjax
     output-file: igas_hugo.md
+  hikmah-manuscript-pdf:
+    echo: false
+    output-file: igas_dis.pdf
+    mainfont: Linux Libertine O
+    mainfontoptions:
+      - Numbers=Proportional
+      - Numbers=OldStyle
+    mathfont: Libertinus Math
 execute:
   warning: false
   eval: true
@@ -77,10 +85,11 @@ editor:
 
 ------------------------------------------------------------------------
 
-<a href="Assets/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf" target="_blank">pdf of the journal
-article</a>  
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299" target="_blank">Link to online version of journal
-article</a>
+<a href="https://tegorman13.github.io/pdf/Gorman_Goldstone_2022_Instance-based_model_varied_practice.pdf" target="_blank"> pdf of the journal article</a>  
+
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0010028522000299" target="_blank"> Link to online version of journal article</a>
+
+[ repo](https://github.com/tegorman13/IGAS_Variability)  
 
 # Abstract
 
