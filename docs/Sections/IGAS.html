@@ -369,7 +369,7 @@ window.Quarto = {
 <hr>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyr,papaja, knitr, tinytex, RColorBrewer, kableExtra, cowplot, patchwork,here)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'Functions/IGAS_ProcessFunctions.R'</span>))</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -411,7 +411,7 @@ window.Quarto = {
 <p>Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis <span class="citation" data-cites="newellSchemaTheory19752003 vanrossumSchmidtSchemaTheory1990">(<a href="#ref-newellSchemaTheory19752003" role="doc-biblioref">Newell, 2003</a>; <a href="#ref-vanrossumSchmidtSchemaTheory1990" role="doc-biblioref">Van Rossum, 1990</a>)</span>. Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g.&nbsp;projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g.&nbsp;more unique combinations of x and y velocities). Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance <span class="citation" data-cites="ennisMultidimensionalStochasticTheory1988 ghahramaniGeneralizationLocalRemappings1996 loganInstanceTheoryAutomatization1988 nosofskySimilarityScalingCognitive1992 shepardUniversalLawGeneralization1987 thoroughmanRapidReshapingHuman2005">(<a href="#ref-ennisMultidimensionalStochasticTheory1988" role="doc-biblioref">Ennis et al., 1988</a>; <a href="#ref-ghahramaniGeneralizationLocalRemappings1996" role="doc-biblioref">Ghahramani et al., 1996</a>; <a href="#ref-loganInstanceTheoryAutomatization1988" role="doc-biblioref">Logan, 1988</a>; <a href="#ref-nosofskySimilarityScalingCognitive1992" role="doc-biblioref">Nosofsky, 1992</a>; <a href="#ref-shepardUniversalLawGeneralization1987" role="doc-biblioref">Shepard, 1987</a>; <a href="#ref-thoroughmanRapidReshapingHuman2005" role="doc-biblioref">Thoroughman &amp; Taylor, 2005</a>)</span>, it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure&nbsp;1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">=</span><span class="dv">2</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>c<span class="ot">&lt;-</span> .<span class="dv">0002</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>simdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">200</span>,<span class="dv">1000</span>),<span class="dv">3</span>),<span class="at">condit=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"varied"</span>,<span class="dv">1602</span>),<span class="fu">rep</span>(<span class="st">"constant"</span>,<span class="dv">801</span>)),</span>
@@ -479,7 +479,7 @@ Figure&nbsp;1: Left panel- Generalization predicted from a simple model that ass
 <p><a href="https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html" target="_blank">Link to abbreviated example of task</a>.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mf <span class="ot">&lt;-</span> cowplot<span class="sc">::</span><span class="fu">ggdraw</span>()<span class="sc">+</span>cowplot<span class="sc">::</span><span class="fu">draw_image</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"Assets/methodsFig1.png"</span>),<span class="at">hjust=</span><span class="dv">0</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(mf,<span class="at">ncol=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -516,7 +516,7 @@ Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the parti
 <p>We performed an ANOVA comparison with stage as a within-group factor and condition as between-group factor. The analysis revealed a significant effect of training stage F(2,142)=62.4, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> = .17, such that performance improved over the course of training. There was no significant effect of condition F(1,71)=1.42, p=.24, <span class="math inline">\(\eta^{2}_G\)</span> = .02, and no significant interaction between condition and training stage, F(2,142)=.10, p=.91, <span class="math inline">\(\eta^{2}_G\)</span> &lt; .01.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>exp1TrainPosition <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>,mode<span class="sc">==</span><span class="dv">1</span>) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,Group,conditType,trainHalf,positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MeanTargetDistance=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">.groups =</span> <span class="st">'keep'</span>)</span>
@@ -565,7 +565,7 @@ Figure&nbsp;3: Training performance for varied and constant participants binned 
 <p>In Experiment 1, a single constant-trained group was compared against a single varied-trained group. At the transfer phase, all participants were tested from 3 positions: 1) the positions(s) from their own training, 2) the training position(s) of the other group, and 3) a position novel to both groups. Overall, group performance was compared with a mixed type III ANOVA, with condition (varied vs.&nbsp;constant) as a between-subject factor and throwing location as a within-subject variable. The effect of throwing position was strong, F(3,213) = 56.12, p&lt;.001, η2G = .23. The effect of training condition was significant F(1,71)=8.19, p&lt;.01, η2G = .07. There was no significant interaction between group and position, F(3,213)=1.81, p=.15, η2G = .01.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>exp1.Test <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">==</span><span class="st">"Transfer"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>trainHalf)<span class="sc">%&gt;%</span> <span class="fu">group_by</span>(positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">globalAvg=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">globalSd=</span><span class="fu">sd</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span> </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,positionX) <span class="sc">%&gt;%</span> </span>
@@ -597,7 +597,7 @@ Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared
 </p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>exp1.Test <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">==</span><span class="st">"Transfer"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>trainHalf)<span class="sc">%&gt;%</span> <span class="fu">group_by</span>(positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">globalAvg=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">globalSd=</span><span class="fu">sd</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,positionX) <span class="sc">%&gt;%</span> </span>
@@ -693,7 +693,7 @@ Table&nbsp;1: Testing performance for varied and constant groups in experiment 1
 <p>The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. <a href="#fig-e2train" class="quarto-xref">Figure&nbsp;5</a> depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs.&nbsp;the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,412)=77.91, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,172)=56.29, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>e2<span class="sc">$</span>stage <span class="ot">&lt;-</span> <span class="fu">factor</span>(e2<span class="sc">$</span>stage, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Beginning"</span>, <span class="st">"Middle"</span>, <span class="st">"End"</span>,<span class="st">"Transfer"</span>),<span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>exp2TrainPosition <span class="ot">&lt;-</span> e2  <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
@@ -768,7 +768,7 @@ Table&nbsp;1: Testing performance for varied and constant groups in experiment 1
 </div>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">### New - 3 stage</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>e2train1<span class="ot">&lt;-</span>exp2TrainPosition3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>stage,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">group=</span>stage,<span class="at">fill=</span>stage),<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span></span>
@@ -808,7 +808,7 @@ Figure&nbsp;5: Training performance for the six constant conditions, and the var
 <p>In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs.&nbsp;varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> =.02. Descriptive statistics for each condition are shown in table 2. In <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> shows performance between the varied condition and the individual constant groups.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># manuscript plot</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>e2test1<span class="ot">&lt;-</span>exp2.Test <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>ThrowPosition,<span class="at">y=</span>MeanTargetDeviance,<span class="at">group=</span>conditType,<span class="at">fill=</span>conditType))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">"Mean Distance From Center Of Target"</span>) <span class="sc">+</span><span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)<span class="sc">+</span><span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Condition"</span>))<span class="sc">+</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>,<span class="at">size=</span><span class="dv">9</span>),</span>
@@ -851,7 +851,7 @@ Figure&nbsp;6: Testing phase performance from each of the six testing positions.
 </p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tab2<span class="ot">=</span> exp2.Test <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,positionX) <span class="sc">%&gt;%</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDeviance),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDeviance),<span class="dv">2</span>),<span class="at">.groups=</span><span class="st">"keep"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> tab2<span class="ot">=</span>tab2 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">GroupAvg=</span><span class="fu">round</span>(<span class="fu">mean</span>(Mean),<span class="dv">2</span>),<span class="at">groupSd=</span><span class="fu">round</span>(<span class="fu">sd</span>(Mean),<span class="dv">2</span>))</span>
@@ -921,7 +921,7 @@ Table&nbsp;2: Transfer performance from each of the 6 throwing locations from wh
 <p>Next, we compared the testing performance of constant and varied groups from only positions that participants had not encountered during training. Constant participants each had 5 novel positions, whereas varied participants tested from 4 novel positions (400,625,675,900). We first standardized performance within in each position, and then averaged across positions. Here again, we found a significant effect of condition (constant vs.&nbsp;varied): F(1,206)=4.30, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> = .02 .</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sum.novelAll <span class="ot">&lt;-</span> novelAll <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(sbjCode,conditType,positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MeanTargetDev=</span><span class="fu">mean</span>(AbsDistFromCenter,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">MeanScaledDev=</span><span class="fu">mean</span>(scaledDev,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">.groups=</span><span class="st">"keep"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -997,7 +997,7 @@ Table&nbsp;3: Testing performance from novel positions. Includes data only from 
 <p>Finally, corresponding to the comparison of position 760 from Experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure&nbsp;7</a> displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, <span class="math inline">\(\eta^{2}_G\)</span> = .02. Table 4 provides descriptive statistics.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sum.variedVsNovelIden <span class="ot">&lt;-</span> variedVsNovelIden  <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,conditType,positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MeanTargetDev=</span><span class="fu">mean</span>(AbsDistFromCenter,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">MeanScaledDev=</span><span class="fu">mean</span>(scaledDev,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">.groups=</span><span class="st">"keep"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
@@ -1025,7 +1025,7 @@ Figure&nbsp;7: A comparison of throwing location that are identical to those tra
 </p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tab4<span class="ot">=</span>sum.variedVsNovelIden <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,positionX) <span class="sc">%&gt;%</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDev),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDev),<span class="dv">2</span>),<span class="at">.groups=</span><span class="st">"keep"</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1092,7 +1092,7 @@ Table&nbsp;4: Testing performance from the locations trained by constant partici
 <p><em>Controlling for the similarity between training and testing.</em> The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions – thus resulting in six separate similarity scores for each participant. <a href="#fig-taskSpace" class="quarto-xref">Figure&nbsp;8</a> visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in <a href="#fig-taskSpace" class="quarto-xref">Figure&nbsp;8</a>, the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>taskspace <span class="ot">&lt;-</span> e2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(AbsDistFromCenter<span class="sc">&lt;</span><span class="dv">900</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>taskspace<span class="sc">$</span>hitOrMiss <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(taskspace<span class="sc">$</span>trialType<span class="sc">==</span><span class="dv">11</span>,<span class="st">"Hit Target"</span>,<span class="st">"Missed Target"</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1162,7 +1162,7 @@ Figure&nbsp;8: A) A visual representation of the combinations of throw parameter
 <p>Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in <a href="#fig-Toy-Model-dis" class="quarto-xref">Figure&nbsp;9</a> we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model – namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">=</span><span class="dv">2</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>c<span class="ot">&lt;-</span> .<span class="dv">000002</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1255,7 +1255,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 <h3 class="anchored" data-anchor-id="exponential-learning-models-fit-to-individual-subjects">exponential learning models fit to individual subjects</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'data/IGAS-e2TestFits-April4.rds'</span>))</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="ot">&lt;-</span> e2TestFits <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Asymptote.Minus.Start=</span>pAsym<span class="sc">-</span>pStart)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>exp2.fit2 <span class="ot">&lt;-</span> e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(sbjCode,conditType) <span class="sc">%&gt;%</span></span>
@@ -1270,7 +1270,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 <h3 class="anchored" data-anchor-id="group-comparison-of-learning-rate-fits">Group comparison of learning rate fits</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mr1=e2TestFits %&gt;% anova_test(dv=pRate,between=conditType,wid=sbjCode,within=positionX,type=3);show(mr1)</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mr2=exp2.fit2 %&gt;% anova_test(dv=MeanRate,between=conditType,wid=sbjCode,type=3);show(mr2) </span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1297,7 +1297,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 <h3 class="anchored" data-anchor-id="first-vs.-second-half-of-testing-stage">First vs.&nbsp;second half of testing stage</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>testSplit <span class="ot">&lt;-</span> transfer <span class="sc">%&gt;%</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode, conditType, positionX, testHalfSbj) <span class="sc">%&gt;%</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
@@ -1378,7 +1378,7 @@ Regardless, the above analysis suggests that the constant group would always be 
 <h3 class="anchored" data-anchor-id="group-comparison-for-asymptote-starting-performance">Group Comparison for asymptote-starting performance</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ma1=e2TestFits %&gt;% filter()%&gt;% anova_test(dv=Asymptote.Minus.Start,between=conditType,wid=sbjCode,within=positionX,type=3);show(ma1)</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ma2=exp2.fit2 %&gt;% anova_test(dv=asymMinusStart,between=conditType,wid=sbjCode,type=3);show(ma2) </span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1529,7 +1529,7 @@ Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
 <h4 class="anchored" data-anchor-id="experimenet-1---intermittent-testing">Experimenet 1 - intermittent testing</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>intTest.half <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/e1_intTest.rds"</span>))</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>intTest.half <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>positionX,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
@@ -1548,7 +1548,7 @@ Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>cnames<span class="ot">=</span><span class="fu">c</span>(<span class="st">"Condition"</span>,<span class="st">"610_First Half"</span>,<span class="st">"760_First Half"</span>,<span class="st">"910_First Half"</span>,<span class="st">"610_Second Half"</span>,<span class="st">"760_Second Half"</span>,<span class="st">"910_Second Half"</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>test<span class="ot">=</span> intTest.half <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,trainHalf,positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDistance),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDistance),<span class="dv">2</span>)) </span>
@@ -1574,7 +1574,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <h3 class="anchored" data-anchor-id="training-plots---experiment-1">Training plots - Experiment 1</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># possible that scaling required loading special package from devtools</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>exp1Train <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>,mode<span class="sc">==</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode) <span class="sc">%&gt;%</span><span class="fu">mutate</span>(<span class="at">scaleDev=</span><span class="fu">scale_this</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Group,sbjCode,stage,conditType)</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>exp1Train <span class="ot">=</span> exp1Train <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">MeanTargetDistance=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">scaledDist=</span><span class="fu">mean</span>(scaleDev,<span class="at">trim=</span>.<span class="dv">05</span>))</span>
@@ -1595,7 +1595,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lineplot.CI</span>(<span class="at">data=</span>exp1Train,<span class="at">x.factor=</span>stage,<span class="at">group=</span>conditType,<span class="at">response=</span>scaledDist,<span class="at">xlab=</span><span class="st">"Training Stage"</span>,<span class="at">x.leg=</span><span class="dv">2</span>,<span class="at">legend=</span><span class="cn">TRUE</span>,<span class="at">ylab=</span><span class="st">"Distance from Target (scaled)"</span>,<span class="at">main=</span><span class="st">"Training Performance - Experiment 1"</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"black"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -1606,7 +1606,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lineplot.CI</span>(<span class="at">data=</span>exp1Train,<span class="at">x.factor=</span>stage,<span class="at">group=</span>conditType,<span class="at">response=</span>MeanTargetDistance,<span class="at">xlab=</span><span class="st">"Training Stage"</span>,<span class="at">x.leg=</span><span class="dv">2</span>,<span class="at">legend=</span><span class="cn">TRUE</span>,<span class="at">ylab=</span><span class="st">"Distance From Target"</span>,<span class="at">main=</span><span class="st">"Training Performance - Experiment 1"</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -1624,7 +1624,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <h4 class="anchored" data-anchor-id="fit-to-testing-performance-averaged-across-positions">fit to testing performance averaged across positions</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'data/IGAS-e2Fits.AggPos-April_12.rds'</span>))</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pStart,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
@@ -1641,7 +1641,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pAsym,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
@@ -1656,7 +1656,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>e2Fits.AggPos <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Group,<span class="at">y=</span>pRate,<span class="at">fill=</span>Group))<span class="sc">+</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
@@ -1671,7 +1671,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#mr1=e2Fits.AggPos %&gt;% anova_test(dv=pRate,between=conditType,wid=sbjCode,type=3);show(mr1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -1680,7 +1680,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <h4 class="anchored" data-anchor-id="statistical-tests-for-starting-performance">statistical tests for starting performance</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>ms1<span class="ot">=</span>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">filter</span>(converged<span class="sc">==</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>pStart,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">within=</span>positionX,<span class="at">type=</span><span class="dv">3</span>);</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>ms2<span class="ot">=</span>exp2.fit2 <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>MeanStart,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">type=</span><span class="dv">3</span>);</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ms1</span></span>
@@ -1693,7 +1693,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 1 conditType   1 206 3.04 0.083       0.015</code></pre>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>conditType,<span class="at">y=</span>pStart,<span class="at">fill=</span>conditType))<span class="sc">+</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
@@ -1713,7 +1713,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 <h4 class="anchored" data-anchor-id="statistical-tests-for-asymptote">statistical tests for asymptote</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>ma1<span class="ot">=</span>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">filter</span>(converged<span class="sc">==</span><span class="cn">TRUE</span>)<span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>pAsym,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">within=</span>positionX,<span class="at">type=</span><span class="dv">3</span>);</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>ma2<span class="ot">=</span>exp2.fit2 <span class="sc">%&gt;%</span> <span class="fu">anova_test</span>(<span class="at">dv=</span>MeanAsym,<span class="at">between=</span>conditType,<span class="at">wid=</span>sbjCode,<span class="at">type=</span><span class="dv">3</span>);</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>ma2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1725,7 +1725,7 @@ varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(10
 1 conditType   1 206 3.38 0.067       0.016</code></pre>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>e2TestFits <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>conditType,<span class="at">y=</span>pAsym,<span class="at">fill=</span>conditType))<span class="sc">+</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> </span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span></span>
