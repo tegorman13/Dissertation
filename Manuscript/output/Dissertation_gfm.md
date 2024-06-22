@@ -610,7 +610,7 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-toy-model1-1.png)
 
 
 Figure 1: Left panel- Generalization predicted from a simple model that
@@ -824,7 +824,7 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-IGAS_Training1-1.png)
 
 
 Figure 3: Training performance for varied and constant participants
@@ -850,7 +850,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-IGAS_Testing1-1.png)
 
 
 Figure 4: Testing performance for each of the 4 testing positions,
@@ -1005,7 +1005,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2train-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2train-1.png)
 
 
 Figure 5: Training performance for the six constant conditions, and the
@@ -1044,7 +1044,7 @@ groups.
 
 <div id="fig-e2testa">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2testa-1.png)
 
 
 Figure 6: Testing phase performance from each of the six testing
@@ -1137,7 +1137,7 @@ $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2test1-1.png)
 
 
 Figure 7: A comparison of throwing location that are identical to those
@@ -1234,7 +1234,7 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-taskSpace-1.png)
 
 
 Figure 8: A) A visual representation of the combinations of throw
@@ -1455,7 +1455,7 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-Toy-Model-dis-1.png)
 
 
 Figure 9: A simple model depicting the necessity of both of two
@@ -1647,8 +1647,14 @@ learning is studied both in tasks where individuals are exposed to a
 sequence of input/output pairs (DeLosh et al., 1997; McDaniel et al.,
 2013), or situations where observers are presented with an incomplete
 scatterplot or line graph and make predictions about regions of the plot
-that don’t contain data (Ciccione & Dehaene, 2021; Courrieu, 2012; Said
-& Fischer, 2021; Schulz et al., 2020).
+that do not contain data (Ciccione & Dehaene, 2021; Courrieu, 2012; Said
+& Fischer, 2021; Schulz et al., 2020). Studies of function learning
+often compare the difficulty of learning functions of different
+underlying forms (e.g. linear, bi-linear, power, sinusoidal), and the
+extent to which participants can accurately respond to novel inputs that
+fall in-between previously experienced inputs (interpolation testing),
+or that fall outside the range of previously experienced inputs
+(extrapolation).
 
 Carroll (1963) conducted the earliest work on function learning. Input
 stimuli and output responses were both lines of varying length. The
@@ -1656,44 +1662,44 @@ correct output response was related to the length of the input line by a
 linear, quadratic, or random function. Participants in the linear and
 quadratic performed above chance levels during extrapolation testing,
 with those in the linear condition performing the best overall. Carroll
-argued that these results were best explained by a ruled based model
+argued that these results were best explained by a rule-based model
 wherein learners form an abstract representation of the underlying
-function. Subsequent work by Brehmer (1974),testing a wider array of
+function. Subsequent work by Brehmer (1974), testing a wider array of
 functional forms, provided further evidence for superior extrapolation
 in tasks with linear functions. Brehmer argued that individuals start
-out with an assumption of a linear function, but given sufficient error
-will progressively test alternative hypothesis with polynomials of
-greater degree. Koh & Meyer (1991) employed a visuomotor function
-learning task, wherein participants were trained on examples from an
-unknown function relating the length of an input line to the duration of
-a response (time between keystrokes). In this domain, participants
-performed best when the relation between line length and response
-duration was determined by a power, as opposed to linear function. Koh &
-Meyer developed the log-polynomial adaptive-regression model to account
-for their results.
+out assuming a linear function, but given sufficient error will
+progressively test alternative hypotheses with polynomials of greater
+degree. Koh & Meyer (1991) employed a visuomotor function learning task,
+wherein participants were trained on examples from an unknown function
+relating the length of an input line to the duration of a response (time
+between keystrokes). In this domain, participants performed best when
+the relation between line length and response duration was determined by
+a power law, as opposed to linear function. Koh and Meyer developed the
+log-polynomial adaptive-regression model to account for their results.
 
-The first significant challenge to the rule-based accounts of function
+The first significant challenge to rule-based accounts of function
 learning was put forth by DeLosh et al. (1997) . In their task,
 participants learned to associate stimulus magnitudes with response
 magnitudes that were related via either linear, exponential, or
 quadratic function. Participants approached ceiling performance by the
-end of training in each function condition, and were able to correctly
-respond in interpolation testing trials. All three conditions
+end of training in each function condition, and were able to accurately
+respond on interpolation testing trials. All three conditions
 demonstrated some capacity for extrapolation, however participants in
 the linear condition tended to underestimate the true function, while
 exponential and quadratic participants reliably overestimated the true
 function on extrapolation trials. Extrapolation and interpolation
-performance are depicted in
+performances are depicted in
 <a href="#fig-delosh-extrap" class="quarto-xref">Figure 10</a>.
 
-The authors evaluated both of the rule-based models introduced in
-earlier research (with some modifications enabling trial-by-trial
-learning). The polynomial hypothesis testing model (Brehmer, 1974;
-Carroll, 1963) tended to mimic the true function closely in
-extrapolation, and thus offered a poor account of the human data. The
-log-polynomial adaptive regression model (Koh & Meyer, 1991) was able to
-mimic some of the systematic deviations produced by human subjects, but
-also predicted overestimation in cases where underestimation occurred.
+The authors evaluated the rule-based models introduced in earlier
+research (with some modifications enabling trial-by-trial learning). The
+polynomial hypothesis testing model (Brehmer, 1974; Carroll, 1963)
+tended to mimic the true function closely in extrapolation, and thus
+offered a poor account of the under and over-estimation biases shown in
+the human data. The log-polynomial adaptive regression model (Koh &
+Meyer, 1991) was able to mimic some of the systematic deviations
+produced by human subjects, but also predicted overestimation in cases
+where underestimation occurred.
 
 The authors also introduced two new function-learning models. The
 Associative Learning Model (ALM) and the extrapolation-association model
@@ -1701,23 +1707,39 @@ Associative Learning Model (ALM) and the extrapolation-association model
 model in the category learning literature (Kruschke, 1992). ALM belongs
 to the general class of radial-basis function neural networks, and can
 be considered a similarity-based model in the sense that the nodes in
-the input layer of the network are activated as a function of distance.
-The EXAM model retains the same similarity based activation and
-associative learning mechanisms as ALM, while being augmented with a
-linear rule response mechanism. When presented with novel stimuli, EXAM
-will retrieve the most similar input-output examples encountered during
+the input layer of the network are activated as a function of distance
+(see <a href="#fig-alm-diagram" class="quarto-xref">Figure 24</a>). The
+EXAM model retains the same similarity-based activation and associative
+learning mechanisms as ALM, while being augmented with a linear rule
+response mechanism. When presented with novel stimuli, EXAM will
+retrieve the most similar input-output examples encountered during
 training, and from those examples compute a local slope. ALM was able to
-provide a good account of participant training and interpolation data in
-all three function conditions, however it was unable to extrapolate.
-EXAM, on the other hand, was able to reproduce both the extrapolation
+provide a good account of participants’ training and interpolation data
+in all three function conditions, however it was unable to extrapolate.
+EXAM, by contrast, was able to reproduce both the extrapolation
 underestimation, as well as the quadratic and exponential overestimation
 patterns exhibited by the human participants. Subsequent research
 identified some limitations in EXAM’s ability to account for cases where
-human participants learn and extrapolate sinusoidal function Bott & Heit
-(2004) or to scenarios where different functions apply to different
-regions of the input space Kalish et al. (2004), though EXAM has been
+human participants learn and extrapolate a sinusoidal function (Bott &
+Heit, 2004) or to scenarios where different functions apply to different
+regions of the input space (Kalish et al., 2004), though EXAM has been
 shown to provide a good account of human learning and extrapolation in
-tasks with bi-linear, V shaped input spaces Mcdaniel et al. (2009).
+tasks with bi-linear, V-shaped input spaces (Mcdaniel et al., 2009).
+
+<div id="fig-delosh-extrap">
+
+![](manuscript_files/figure-commonmark/fig-delosh-extrap-1.png)
+
+
+Figure 10: The generalization patterns of human particpiants observed in
+DeLosh et al. (1997) (reproduced from Figure 3 in their manuscript).
+Dots represent the average responses of human participants, and solid
+lines represent the true functions. The dashed vertical lines indicate
+the lower and upper bounds of the trained examples. Stimulii that fall
+within the dashed lines are interpolations of the training examples,
+while those that fall outside the dashed lines are extrapolations.
+
+</div>
 
 ### Variability and Function Learning
 
@@ -1725,8 +1747,8 @@ The influence of variability on function learning tasks has received
 relatively little attention. The study by DeLosh et al. (1997)
 (described in detail above) did include a variability manipulation
 (referred to as density in their paper), wherein participants were
-trained with either either 8, 20, or 50 unique input-output pairs, with
-the total number of training trials held constant. They found a minimal
+trained with either 8, 20, or 50 unique input-output pairs, with the
+total number of training trials held constant. They found a minimal
 influence of variability on training performance, and no difference
 between groups in interpolation or extrapolation, with all three
 variability conditions displaying accurate interpolation, and linearly
@@ -1737,31 +1759,20 @@ task which required participants to learn a linear function between the
 spikiness of shape stimuli and the correct horizontal position to make a
 rapid pointing response. The shapes ranged from very spiky to completely
 circular at the extreme ends of the space. Participants trained with
-intermediate shapes from a lower variation (2 shapes) or higher
-variation (5 shapes) condition, with the 2 items of the lower varied
+intermediate shapes having lower variation (2 shapes) or higher
+variation (5 shapes) condition, with the 2 items of the lower variation
 condition matching the items used on the extreme ends of the higher
 variation training space. Learning was significantly slower in the
 higher variation group. However, the two conditions did not differ when
 tested with novel shapes, with both groups producing extrapolation
-responses of comparable magnitudes to the most similar training item,
+responses of comparable magnitude to the most similar training item,
 rather than in accordance with the true linear function. The authors
 accounted for both learning and extrapolation performance with a
-Bayesian learning model. Similar to ALM, the Bayesian model assumes that
+Bayesian learning model. Similar to ALM, the model assumes that
 generalization occurs as a Gaussian function of the distance between
-stimuli. However unlike ALM, the Bayesian learning model utilizes more
+stimuli. However, unlike ALM, the Bayesian learning model utilizes more
 elaborate probabilistic stimulus representations, with a separate Kalman
 Filter for each shape stimulus.
-
-<div id="fig-delosh-extrap">
-
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.jpeg)
-
-
-Figure 10: Generalization reproduced patterns from DeLosh et al. (1997)
-Figure 3. Stimulii that fall within the dashed lines are interpolations
-of the training examples.
-
-</div>
 
 ### Overview Of Present Study
 
@@ -1907,7 +1918,7 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-train-dev-1.png)
 
 
 Figure 12: Experiment 1 Training Stage. Deviations from target band
@@ -1984,7 +1995,7 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-test-dev-1.png)
 
 
 Figure 13: Experiment 1 Testing Accuracy. A) Empricial Deviations from
@@ -2041,7 +2052,7 @@ the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-test-vx-1.png)
 
 
 Figure 14: Experiment 1. Empirical distribution of velocities producing
@@ -2051,7 +2062,7 @@ correct range for each velocity band.
 </div>
 <div id="fig-e1-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-bmm-vx-1.png)
 
 
 Figure 15: Experiment 1 Discrimination. A) Conditional effect of
@@ -2094,7 +2105,7 @@ completed the experiment (Varied: 55, Constant: 55).
 
 <div id="fig-e2-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-train-dev-1.png)
 
 
 Figure 16: Experiment 2 Training Stage. Deviations from target band
@@ -2167,7 +2178,7 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-test-dev-1.png)
 
 
 Figure 17: Experiment 2 Testing Accuracy. A) Empricial Deviations from
@@ -2214,7 +2225,7 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-test-vx-1.png)
 
 
 Figure 18: Experiment 2. Empirical distribution of velocities produced
@@ -2224,7 +2235,7 @@ correct range for each velocity band.
 </div>
 <div id="fig-e2-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-bmm-vx-1.png)
 
 
 Figure 19: Experiment 2 Discrimination. A) Conditional effect of
@@ -2306,7 +2317,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-train-dev-1.png)
 
 
 Figure 20: Experiment 3 training. Deviations from target band during
@@ -2363,7 +2374,7 @@ significant.
 ::: -->
 <div id="fig-e3-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-test-dev-1.png)
 
 
 Figure 21: Experiment 3 Testing Accuracy. A) Empricial Deviations from
@@ -2420,7 +2431,7 @@ noticably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-test-vx-1.png)
 
 
 Figure 22: e3 testing x velocities. Translucent bands with dash lines
@@ -2432,7 +2443,7 @@ indicate the correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-bmm-vx-1.png)
 
 
 Figure 23: Experiment 3 Discrimination. A) Conditional effect of
@@ -2466,7 +2477,7 @@ when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-alm-diagram-1.png)
 
 
 Figure 24: The Associative Learning Model (ALM). The diagram illustrates
@@ -2729,7 +2740,7 @@ model was evaluated on.
 </div>
 <div id="fig-htw-post-dist">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-post-dist-1.png)
 
 
 Figure 25: Posterior Distributions of $c$ and $lr$ parameters. Points
@@ -2741,7 +2752,7 @@ logarithmically.
 </div>
 <div id="fig-htw-resid-pred">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-resid-pred-1.png)
 
 
 Figure 26: Model residuals for each combination of training condition,
@@ -2807,7 +2818,7 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-cm-vx-pat-1.png)
 
 
 Figure 27: Empirical data and Model predictions for mean velocity across
@@ -2819,7 +2830,7 @@ EXAM, alongside the observed data.
 </div>
 <div id="fig-ee-e1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-ee-e1-1.png)
 
 
 Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
@@ -2874,7 +2885,7 @@ evaluated on.
 </div>
 <div id="fig-cm-vx-pat-e2-e3">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
 
 
 Figure 29: Empirical data and Model predictions from Experiment 2 and 3
@@ -2952,7 +2963,7 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2_e3_ae-1.png)
 
 
 Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3023,7 +3034,7 @@ patterns they can produce (Dome & Wills, 2023).
 
 <div id="fig-htw-best-model">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-best-model-1.png)
 
 
 Figure 31: Difference in model errors for each participant, with models
@@ -3033,7 +3044,7 @@ negative values favor ALM.
 </div>
 <div id="fig-htw-indv-pred">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-indv-pred-1.png)
 
 
 Figure 32: Model predictions alongside observed data for a subset of

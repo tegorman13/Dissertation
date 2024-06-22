@@ -84,7 +84,7 @@ format:
     cite-method: citeproc
   gfm:
     echo: false
-    output: false
+    #output: false
     output-file: Dissertation_gfm.md
 
 
