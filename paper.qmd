@@ -58,5 +58,5 @@ page-layout: full
   <span>Click buttons above to select format or download</span>
 </p>
 
-<iframe src="/Manuscript/output/TG_Full_Dissertation.pdf" frameborder="0" style="overflow:hidden;height:95%;width:100%;border:2px solid #ccc;" height="95%" width="100%" name="manuscript"></iframe>
+<iframe src="/Manuscript/output/manuscript.html" frameborder="0" style="overflow:hidden;height:95%;width:100%;border:2px solid #ccc;" height="95%" width="100%" name="manuscript"></iframe>
 ```

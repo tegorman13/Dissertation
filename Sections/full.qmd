@@ -11,7 +11,7 @@ author:
   email: tegorman@iu.edu
   orcid: "0000-0001-5366-5442"
 page-layout: full
-code-fold: true
+code-fold: show
 code-tools: true
 toc: true
 toc-location: body

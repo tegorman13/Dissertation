@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.5.47">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -429,7 +429,7 @@ window.Quarto = {
 <section id="project-1" class="level1">
 <h1>Project 1</h1>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(dplyr,purrr,tidyr,tibble,ggplot2,</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,</span>
@@ -495,7 +495,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="issues-with-previous-research">Issues with Previous Research</h3>
 <p>Although the benefits of training variation in visuomotor skill learning have been observed many times, null findings have also been repeatedly found, leading some researchers to question the veracity of the variability of practice hypothesis <span class="citation" data-cites="newellSchemaTheory19752003 vanrossumSchmidtSchemaTheory1990">(<a href="#ref-newellSchemaTheory19752003" role="doc-biblioref">Newell, 2003</a>; <a href="#ref-vanrossumSchmidtSchemaTheory1990" role="doc-biblioref">Van Rossum, 1990</a>)</span>. Critics have also pointed out that investigations of the effects of training variability, of the sort described above, often fail to control for the effect of similarity between training and testing conditions. For training tasks in which participants have numerous degrees of freedom (e.g., projectile throwing tasks where participants control the x and y velocity of the projectile), varied groups are likely to experience a wider range of the task space over the course of their training (e.g., more unique combinations of x and y velocities). Experimenters may attempt to account for this possibility by ensuring that the training location(s) of the varied and constant groups are an equal distance away from the eventual transfer locations, such that their training throws are, on average, equally similar to throws that would lead to good performance at the transfer locations. However, even this level of experimental control may still be insufficient to rule out the effect of similarity on transfer. Given that psychological similarity is typically best described as either a Gaussian or exponentially decaying function of psychological distance <span class="citation" data-cites="ennisMultidimensionalStochasticTheory1988 ghahramaniGeneralizationLocalRemappings1996 loganInstanceTheoryAutomatization1988 nosofskySimilarityScalingCognitive1992 shepardUniversalLawGeneralization1987 thoroughmanRapidReshapingHuman2005">(<a href="#ref-ennisMultidimensionalStochasticTheory1988" role="doc-biblioref">Ennis et al., 1988</a>; <a href="#ref-ghahramaniGeneralizationLocalRemappings1996" role="doc-biblioref">Ghahramani et al., 1996</a>; <a href="#ref-loganInstanceTheoryAutomatization1988" role="doc-biblioref">Logan, 1988</a>; <a href="#ref-nosofskySimilarityScalingCognitive1992" role="doc-biblioref">Nosofsky, 1992</a>; <a href="#ref-shepardUniversalLawGeneralization1987" role="doc-biblioref">Shepard, 1987</a>; <a href="#ref-thoroughmanRapidReshapingHuman2005" role="doc-biblioref">Thoroughman &amp; Taylor, 2005</a>)</span>, it is plausible that a subset of the most similar training instances could have a disproportionate impact on generalization to transfer conditions, even if the average distance between training and transfer conditions is identical between groups. <a href="#fig-toy-model1" class="quarto-xref">Figure&nbsp;1</a> demonstrates the consequences of a generalization gradient that drops off as a Gaussian function of distance from training, as compared to a linear drop-off.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">=</span><span class="dv">2</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>c<span class="ot">&lt;-</span> .<span class="dv">0002</span></span>
@@ -594,7 +594,7 @@ Figure&nbsp;2: The stimuli of the task consisted of a blue ball, which the parti
 <p><a href="#fig-IGAS_Training1" class="quarto-xref">Figure&nbsp;3</a> below shows aggregate training performance binned into three stages representing the beginning, middle, and end of the training phase. Because the two conditions trained from target distances that were not equally difficult, it was not possible to directly compare performance between conditions in the training phase. Our focus for the training data analysis was instead to establish that participants did improve their performance over the course of training, and to examine whether there was any interaction between training stage and condition. Descriptive statistics for the intermittent testing phase are provided in the supplementary materials.</p>
 <p>We performed an ANOVA comparison with stage as a within-group factor and condition as between-group factor. The analysis revealed a significant effect of training stage F(2,142)=62.4, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> = .17, such that performance improved over the course of training. There was no significant effect of condition F(1,71)=1.42, p=.24, <span class="math inline">\(\eta^{2}_G\)</span> = .02, and no significant interaction between condition and training stage, F(2,142)=.10, p=.91, <span class="math inline">\(\eta^{2}_G\)</span> &lt; .01.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>exp1TrainPosition <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">!=</span><span class="st">"Transfer"</span>,mode<span class="sc">==</span><span class="dv">1</span>) <span class="sc">%&gt;%</span><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,Group,conditType,trainHalf,positionX) <span class="sc">%&gt;%</span> </span>
@@ -643,7 +643,7 @@ Figure&nbsp;3: Training performance for varied and constant participants binned 
 <h4 class="anchored" data-anchor-id="testing-phase">Testing Phase</h4>
 <p>In Experiment 1, a single constant-trained group was compared against a single varied-trained group. At the transfer phase, all participants were tested from 3 positions: 1) the positions(s) from their own training, 2) the training position(s) of the other group, and 3) a position novel to both groups. Overall, group performance was compared with a mixed type III ANOVA, with condition (varied vs.&nbsp;constant) as a between-subject factor and throwing location as a within-subject variable. The effect of throwing position was strong, F(3,213) = 56.12, p&lt;.001, η2G = .23. The effect of training condition was significant F(1,71)=8.19, p&lt;.01, η2G = .07. There was no significant interaction between group and position, F(3,213)=1.81, p=.15, η2G = .01.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>exp1.Test <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">==</span><span class="st">"Transfer"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>trainHalf)<span class="sc">%&gt;%</span> <span class="fu">group_by</span>(positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">globalAvg=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">globalSd=</span><span class="fu">sd</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span> </span>
@@ -680,7 +680,7 @@ Figure&nbsp;4: Testing performance for each of the 4 testing positions, compared
 <br>
 </p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>exp1.Test <span class="ot">&lt;-</span> e1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(stage<span class="sc">==</span><span class="st">"Transfer"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>trainHalf)<span class="sc">%&gt;%</span> <span class="fu">group_by</span>(positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">globalAvg=</span><span class="fu">mean</span>(AbsDistFromCenter),<span class="at">globalSd=</span><span class="fu">sd</span>(AbsDistFromCenter)) <span class="sc">%&gt;%</span> </span>
@@ -774,7 +774,7 @@ Table&nbsp;1: Testing performance for varied and constant groups in experiment 1
 <h4 class="anchored" data-anchor-id="training-phase-1">Training Phase</h4>
 <p>The different training conditions trained from positions that were not equivalently difficult and are thus not easily amenable to comparison. As previously stated, the primary interest of the training data is confirmation that some learning did occur. <a href="#fig-e2train" class="quarto-xref">Figure&nbsp;5</a> depicts the training performance of the varied group alongside that of the aggregate of the six constant groups (5a), and each of the 6 separate constant groups (5b). An ANOVA comparison with training stage (beginning, middle, end) as a within-group factor and group (the varied condition vs.&nbsp;the 6 constant conditions collapsed together) as a between-subject factor revealed no significant effect of group on training performance, F(1,206)=.55,p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,412)=77.91, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.05, and no significant interaction between group and training stage, F(2,412)=.489 p=.61, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01. We also tested for a difference in training performance between the varied group and the two constant groups that trained matching throwing positions (i.e., the constant groups training from position 500, and position 800). The results of our ANOVA on this limited dataset mirrors that of the full-group analysis, with no significant effect of group F(1,86)=.48, p=.49, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01, a significant effect of training stage F(2,172)=56.29, p&lt;.001, <span class="math inline">\(\eta^{2}_G\)</span> =.11, and no significant interaction between group and training stage, F(2,172)=.341 p=.71, <span class="math inline">\(\eta^{2}_G\)</span> &lt;.01.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>e2<span class="sc">$</span>stage <span class="ot">&lt;-</span> <span class="fu">factor</span>(e2<span class="sc">$</span>stage, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Beginning"</span>, <span class="st">"Middle"</span>, <span class="st">"End"</span>,<span class="st">"Transfer"</span>),<span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -849,7 +849,7 @@ Table&nbsp;1: Testing performance for varied and constant groups in experiment 1
 </details>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">### New - 3 stage</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>e2train1<span class="ot">&lt;-</span>exp2TrainPosition3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>stage,<span class="at">y=</span>MeanTargetDistance))<span class="sc">+</span></span>
@@ -889,7 +889,7 @@ Figure&nbsp;5: Training performance for the six constant conditions, and the var
 <h4 class="anchored" data-anchor-id="testing-phase-1">Testing Phase</h4>
 <p>In Experiment 2, a single varied condition (trained from two positions, 500 and 800), was compared against six separate constant groups (trained from a single position, 400, 500, 625, 675, 800 or 900). For the testing phase, all participants were tested from all six positions, four of which were novel for the varied condition, and five of which were novel for each of the constant groups. For a general comparison, we took the absolute deviations for each throwing position and computed standardized scores across all participants, and then averaged across throwing position. The six constant groups were then collapsed together allowing us to make a simple comparison between training conditions (constant vs.&nbsp;varied). A type III between-subjects ANOVA was performed, yielding a significant effect of condition F(1,206)=4.33, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> =.02. Descriptive statistics for each condition are shown in table 2. In <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> visualizes the consistent advantage of the varied condition over the constant groups across the testing positions. <a href="#fig-e2testa" class="quarto-xref">Figure&nbsp;6</a> shows performance between the varied condition and the individual constant groups.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># manuscript plot</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>e2test1<span class="ot">&lt;-</span>exp2.Test <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>ThrowPosition,<span class="at">y=</span>MeanTargetDeviance,<span class="at">group=</span>conditType,<span class="at">fill=</span>conditType))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"summary"</span>,<span class="at">position=</span>dodge,<span class="at">fun=</span><span class="st">"mean"</span>)<span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_se,<span class="at">geom=</span><span class="st">"errorbar"</span>,<span class="at">position=</span>dodge,<span class="at">width=</span>.<span class="dv">5</span>)<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">"Mean Distance From Center Of Target"</span>) <span class="sc">+</span><span class="fu">xlab</span>(<span class="st">"Testing Location"</span>)<span class="sc">+</span><span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="st">"Training Condition"</span>))<span class="sc">+</span></span>
@@ -932,7 +932,7 @@ Figure&nbsp;6: Testing phase performance from each of the six testing positions.
 <br>
 </p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tab2<span class="ot">=</span> exp2.Test <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,positionX) <span class="sc">%&gt;%</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDeviance),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDeviance),<span class="dv">2</span>),<span class="at">.groups=</span><span class="st">"keep"</span>)</span>
@@ -999,7 +999,7 @@ Table&nbsp;2: Transfer performance from each of the 6 throwing locations from wh
 </div>
 <p>Next, we compared the testing performance of constant and varied groups from only positions that participants had not encountered during training. Constant participants each had 5 novel positions, whereas varied participants tested from 4 novel positions (400,625,675,900). We first standardized performance within in each position, and then averaged across positions. Here again, we found a significant effect of condition (constant vs.&nbsp;varied): F(1,206)=4.30, p=.039, <span class="math inline">\(\eta^{2}_G\)</span> = .02 .</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sum.novelAll <span class="ot">&lt;-</span> novelAll <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(sbjCode,conditType,positionX) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MeanTargetDev=</span><span class="fu">mean</span>(AbsDistFromCenter,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">MeanScaledDev=</span><span class="fu">mean</span>(scaledDev,<span class="at">trim=</span>.<span class="dv">05</span>),<span class="at">.groups=</span><span class="st">"keep"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
@@ -1072,7 +1072,7 @@ Table&nbsp;3: Testing performance from novel positions. Includes data only from 
 </div>
 <p>Finally, corresponding to the comparison of position 760 from Experiment 1, we compared the test performance of the varied group against the constant group from only the positions that the constant groups trained. Such positions were novel to the varied group (thus this analysis omitted two constant groups that trained from positions 500 or 800 as those positions were not novel to the varied group). <a href="#fig-e2test1" class="quarto-xref">Figure&nbsp;7</a> displays the particular subset of comparisons utilized for this analysis. Again, we standardized performance within each position before performing the analyses on the aggregated data. In this case, the effect of condition did not reach statistical significance F(1,149)=3.14, p=.079, <span class="math inline">\(\eta^{2}_G\)</span> = .02. Table 4 provides descriptive statistics.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sum.variedVsNovelIden <span class="ot">&lt;-</span> variedVsNovelIden  <span class="sc">%&gt;%</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sbjCode,conditType,positionX) <span class="sc">%&gt;%</span> </span>
@@ -1100,7 +1100,7 @@ Figure&nbsp;7: A comparison of throwing location that are identical to those tra
 <br>
 </p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tab4<span class="ot">=</span>sum.variedVsNovelIden <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Condition=</span><span class="st">"conditType"</span>) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Condition,positionX) <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Mean=</span><span class="fu">round</span>(<span class="fu">mean</span>(MeanTargetDev),<span class="dv">2</span>),<span class="at">sd=</span><span class="fu">round</span>(<span class="fu">sd</span>(MeanTargetDev),<span class="dv">2</span>),<span class="at">.groups=</span><span class="st">"keep"</span>)</span>
@@ -1168,7 +1168,7 @@ Table&nbsp;4: Testing performance from the locations trained by constant partici
 <h2 class="anchored" data-anchor-id="computational-model">Computational Model</h2>
 <p><em>Controlling for the similarity between training and testing.</em> The primary goal of Experiment 2 was to examine whether the benefits of variability would persist after accounting for individual differences in the similarity between trained and tested throwing locations. To this end, we modelled each throw as a two-dimensional point in the space of x and y velocities applied to the projectile at the moment of release. For each participant, we took each individual training throw, and computed the similarity between that throw and the entire population of throws within the solution space for each of the 6 testing positions. We defined the solution space empirically as the set of all combinations of x and y throw velocities that resulted in hitting the target. We then summed each of the trial-level similarities to produce a single similarity for each testing position score relating how the participant threw the ball during training and the solutions that would result in target hits from each of the six testing positions – thus resulting in six separate similarity scores for each participant. <a href="#fig-taskSpace" class="quarto-xref">Figure&nbsp;8</a> visualizes the solution space for each location and illustrates how different combinations of x and y velocity result in successfully striking the target from different launching positions. As illustrated in <a href="#fig-taskSpace" class="quarto-xref">Figure&nbsp;8</a>, the solution throws represent just a small fraction of the entire space of velocity combinations used by participants throughout the experiment.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>taskspace <span class="ot">&lt;-</span> e2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(AbsDistFromCenter<span class="sc">&lt;</span><span class="dv">900</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>taskspace<span class="sc">$</span>hitOrMiss <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(taskspace<span class="sc">$</span>trialType<span class="sc">==</span><span class="dv">11</span>,<span class="st">"Hit Target"</span>,<span class="st">"Missed Target"</span>)</span>
@@ -1236,7 +1236,7 @@ Figure&nbsp;8: A) A visual representation of the combinations of throw parameter
 <p>Across two experiments, we found evidence in support of the benefits of variability hypothesis in a simple, computerized projectile throwing task. Generalization was observed in both constant and varied participants, in that both groups tended to perform better at novel positions in the testing phase than did participants who started with those positions in the training phase. However, varied trained participants consistently performed better than constant trained participants, in terms of both the testing phase in general, and in a comparison that only included untrained positions. We also found some evidence for the less commonly observed pattern wherein varied-trained participants outperform constant-trained participants even from conditions identical to the constant group training <span class="citation" data-cites="goodeSuperiorityVariableRepeated2008 greenPracticeVariabilityTransfer1995a kerrSpecificVariedPractice1978">(<a href="#ref-goodeSuperiorityVariableRepeated2008" role="doc-biblioref">Goode et al., 2008</a>; <a href="#ref-greenPracticeVariabilityTransfer1995a" role="doc-biblioref">Green et al., 1995</a>; <a href="#ref-kerrSpecificVariedPractice1978" role="doc-biblioref">Kerr &amp; Booth, 1978</a>)</span>. In Experiment 1 varied participants performed significantly better on this identity comparison. In Experiment 2, the comparison was not significant initially, but became significant after controlling for the similarity measure that incorporates only a single value for the steepness of similarity-based generalization (c). Furthermore, we showed that the general pattern of results from Experiment 2 could be parsimoniously accommodated by an instance-based similarity model, but only with the assumption that constant and varied participants generalize their training experience to different degrees. Our results thus suggest that the benefits of variation cannot be explained by the varied-trained participants simply covering a broader range of the task space. Rather, the modeling suggests that varied participants also learn to adaptively tune their generalization function such that throwing locations generalize more broadly to one another than they do in the constant condition. A learning system could end up adopting a higher c value in the constant than variable training conditions by monitoring the trial-by-trial variability of the training items. The c parameter would be adapted downwards when adjacent training items are dissimilar to each other and adapted upwards when adjacent training items are the same. In this fashion, contextually appropriate c values could be empirically learned. This learning procedure would capture the insight that if a situation has a high amount variability, then the learner should be predisposed toward thinking that subsequent test items will also show considerable variability, in which case generalization gradients should be broad, as is achieved by low values for c.</p>
 <p>Also of interest is whether the IGAS model can predict the pattern of results wherein the varied condition outperforms the constant condition even from the position on which the constant condition trained. Although our models were fit using all of the Experiment 2 training and testing data, not just that of the identity comparisons, in <a href="#fig-Toy-Model-dis" class="quarto-xref">Figure&nbsp;9</a> we demonstrate how a simplified version of the IGAS model could in principle produce such a pattern. In addition to the assumption of differential generalization between varied and constant conditions, our simplified model makes explicit an assumption that is incorporated into the full IGAS model – namely that even when being tested from a position identical to that which was trained, there are always some psychological contextual differences between training and testing throws, resulting in a non-zero dissimilarity.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1477,7 +1477,7 @@ Figure&nbsp;12: Experiment 1 Design. Constant and Varied participants complete d
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   brms,tidybayes, rstanarm,emmeans,broom,bayestestR,</span></span>
@@ -1548,7 +1548,7 @@ Table&nbsp;5: <strong>Statistical Model Specifications</strong>. The specificati
 <section id="results-2" class="level3">
 <h3 class="anchored" data-anchor-id="results-2">Results</h3>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> trainE1 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Trial_Bin, <span class="at">y =</span> dist, <span class="at">color =</span> condit)) <span class="sc">+</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"line"</span>, <span class="at">fun =</span> mean) <span class="sc">+</span></span>
@@ -1574,7 +1574,7 @@ Figure&nbsp;13: Experiment 1 Training Stage. Deviations from target band across 
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| label: tbl-e1-train-dist</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="do">##| tbl-cap: "Experiment 1 - Learning curves. "</span></span>
@@ -1638,7 +1638,7 @@ Table&nbsp;6: <strong>Experiment 1 - End of training performance</strong>. Compa
 </p>
 <p><em>Training</em>. <a href="#fig-e1-train-dev" class="quarto-xref">Figure&nbsp;13</a> displays the average deviations across training blocks for the varied group, which trained on three velocity bands, and the constant group, which trained on one velocity band. To compare the training conditions at the end of training, we analyzed performance on the 800-1000 velocity band, which both groups trained on. The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, (<span class="math inline">\(\beta\)</span> = 79.64, 95% CrI [57.92, 101.63]; pd = 100%).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| label: tbl-e1-bmm-dist</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="do">##| tbl-cap: "E1. Training vs. Extrapolation"</span></span>
@@ -1724,7 +1724,7 @@ Table&nbsp;7: <strong>Experiment 1 testing accuracy</strong>. Main effects of co
 </div>
 <p><em>Testing.</em> To compare accuracy between groups in the testing stage, we fit a Bayesian mixed effects model predicting deviation from the target band as a function of training condition (varied vs.&nbsp;constant) and band type (trained vs.&nbsp;extrapolation), with random intercepts for participants and bands. The model results are shown in <a href="#tbl-e1-bmm-dist" class="quarto-xref">Table&nbsp;7</a>. The main effect of training condition was not significant (<span class="math inline">\(\beta\)</span> = 39, 95% CrI [-21.1, 100.81]; pd = 89.93%). The extrapolation testing items had a significantly greater deviation than the training bands (<span class="math inline">\(\beta\)</span> = 71.51, 95% CrI [33.24, 109.6]; pd = 99.99%). Most importantly, the interaction between training condition and band type was significant (<span class="math inline">\(\beta\)</span> = 66.46, 95% CrI [32.76, 99.36]; pd = 99.99%), As shown in <a href="#fig-e1-test-dev" class="quarto-xref">Figure&nbsp;14</a>, the varied group had disproportionately larger deviations compared to the constant group in the extrapolation bands.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>pe1td <span class="ot">&lt;-</span> testE1 <span class="sc">|&gt;</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> vb, <span class="at">y =</span> dist,<span class="at">fill=</span>condit)) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"bar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(), <span class="at">fun =</span> mean) <span class="sc">+</span></span>
@@ -1762,7 +1762,7 @@ Figure&nbsp;14: Experiment 1 Testing Accuracy. A) Empricial Deviations from targ
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| label: tbl-e1-bmm-vx</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="do">##| tbl-cap: "Experiment 1. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"</span></span>
@@ -1832,7 +1832,7 @@ Table&nbsp;8: <strong>Experiment 1 Testing Discrimination</strong>. Bayesian Mix
 </div>
 <p>Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table&nbsp;8</a> for the full model results. The estimated coefficient for training condition (<span class="math inline">\(\beta\)</span> = 164.05, 95% CrI [45.5, 278.85], pd = 99.61%) suggests that the varied group tends to produce harder throws than the constant group, though is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the coefficient on the Band predictor (<span class="math inline">\(\beta\)</span> = 0.71 95% CrI [0.62, 0.8], pd = 100%). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The significant negative estimate for the interaction between slope and condition (<span class="math inline">\(\beta\)</span> = -0.14, 95% CrI [-0.26, -0.01], pd = 98.39%), suggests that the discrimination was modulated by training condition, with the varied participants showing less sensitivity between bands than the constant condition (see <a href="#fig-e1-test-vx" class="quarto-xref">Figure&nbsp;15</a> and <a href="#fig-e1-bmm-vx" class="quarto-xref">Figure&nbsp;16</a>).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>testE1 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1850,7 +1850,7 @@ Figure&nbsp;15: Experiment 1. Empirical distribution of velocities producing in 
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>pe1vce <span class="ot">&lt;-</span> e1_vxBMM <span class="sc">|&gt;</span> <span class="fu">emmeans</span>( <span class="sc">~</span>condit <span class="sc">+</span> bandInt,<span class="at">re_formula=</span><span class="cn">NA</span>, </span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">at =</span> <span class="fu">list</span>(<span class="at">bandInt =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">350</span>, <span class="dv">600</span>, <span class="dv">800</span>, <span class="dv">1000</span>, <span class="dv">1200</span>))) <span class="sc">|&gt;</span></span>
@@ -1918,7 +1918,7 @@ Figure&nbsp;16: Experiment 1 Discrimination. A) Conditional effect of training c
 <section id="experiment-2-1" class="level2">
 <h2 class="anchored" data-anchor-id="experiment-2-1">Experiment 2</h2>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># walk(c("brms","dplyr","bayestestR"), conflict_prefer_all, quiet = TRUE)</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># walk(c("Display_Functions","org_functions"), ~ source(here::here(paste0("Functions/", .x, ".R"))))</span></span>
@@ -2036,7 +2036,7 @@ Figure&nbsp;17: Experiment 2 Design. Constant and Varied participants complete d
 <section id="results-3" class="level3">
 <h3 class="anchored" data-anchor-id="results-3">Results</h3>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> trainE2 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Trial_Bin, <span class="at">y =</span> dist, <span class="at">color =</span> condit)) <span class="sc">+</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"line"</span>, <span class="at">fun =</span> mean) <span class="sc">+</span></span>
@@ -2062,7 +2062,7 @@ Figure&nbsp;18: Experiment 2 Training Stage. Deviations from target band across 
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>bmm_e2_train <span class="ot">&lt;-</span> trainE2_max <span class="sc">%&gt;%</span> </span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">brm</span>(dist <span class="sc">~</span> condit, </span>
@@ -2122,7 +2122,7 @@ Table&nbsp;9: <strong>Experiment 2 - End of training performance</strong>. The I
 </p>
 <p><em>Training</em>. <a href="#fig-e2-train-dev" class="quarto-xref">Figure&nbsp;18</a> presents the deviations across training blocks for both constant and varied training groups. We again compared training performance on the band common to both groups (600-800). The full model results are shown in Table 1. The varied group had a significantly greater deviation than the constant group in the final training block, ( <span class="math inline">\(\beta\)</span> = 36.15, 95% CrI [16.35, 55.67]; pd = 99.95%).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>modelFile <span class="ot">&lt;-</span> <span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache/"</span>), <span class="st">"e2_dist_Cond_Type_RF_2"</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>bmtd2 <span class="ot">&lt;-</span> <span class="fu">brm</span>(dist <span class="sc">~</span> condit <span class="sc">*</span> bandType <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>bandInt) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>id), </span>
@@ -2202,7 +2202,7 @@ Table&nbsp;10: <strong>Experiment 2 testing accuracy</strong>. Main effects of c
 </p>
 <p><em>Testing Accuracy.</em> The analysis of testing accuracy examined deviations from the target band as influenced by training condition (Varied vs.&nbsp;Constant) and band type (training vs.&nbsp;extrapolation bands). The results, summarized in <a href="#tbl-e2-bmm-dist" class="quarto-xref">Table&nbsp;10</a>, reveal no significant main effect of training condition (<span class="math inline">\(\beta\)</span> = -20.58, 95% CrI [-72.94, 33.08]; pd = 77.81%). However, the interaction between training condition and band type was significant (<span class="math inline">\(\beta\)</span> = 82, 95% CrI [41.89, 121.31]; pd = 100%), with the varied group showing disproportionately larger deviations compared to the constant group on the extrapolation bands (see <a href="#fig-e2-test-dev" class="quarto-xref">Figure&nbsp;19</a>).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>condEffects <span class="ot">&lt;-</span> <span class="cf">function</span>(m,xvar){</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  m <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> {{xvar}}, <span class="at">y =</span> .value, <span class="at">color =</span> condit, <span class="at">fill =</span> condit)) <span class="sc">+</span> </span>
@@ -2241,7 +2241,7 @@ Figure&nbsp;19: Experiment 2 Testing Accuracy. A) Empricial Deviations from targ
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| label: tbl-e2-bmm-vx</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="do">##| tbl-cap: "Experiment 2. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"</span></span>
@@ -2310,7 +2310,7 @@ Table&nbsp;11: <strong>Experiment 2 Testing Discrimination</strong>. Bayesian Mi
 </div>
 <p><em>Testing Discrimination.</em> Finally, to assess the ability of both conditions to discriminate between velocity bands, we fit a model predicting velocity as a function of training condition and velocity band, with random intercepts and random slopes for each participant. The full model results are shown in <a href="#tbl-e2-bmm-vx" class="quarto-xref">Table&nbsp;11</a>. The overall slope on target velocity band predictor was significantly positive, (<span class="math inline">\(\beta\)</span> = 0.71, 95% CrI [0.58, 0.84]; pd= 100%), indicating that participants exhibited discrimination between bands. The interaction between slope and condition was not significant, (<span class="math inline">\(\beta\)</span> = -0.06, 95% CrI [-0.24, 0.13]; pd= 72.67%), suggesting that the two conditions did not differ in their ability to discriminate between bands (see <a href="#fig-e2-test-vx" class="quarto-xref">Figure&nbsp;20</a> and <a href="#fig-e2-bmm-vx" class="quarto-xref">Figure&nbsp;21</a>).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>testE2 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -2328,7 +2328,7 @@ Figure&nbsp;20: Experiment 2. Empirical distribution of velocities produced in t
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>condEffects <span class="ot">&lt;-</span> <span class="cf">function</span>(m,xvar){</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  m <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> {{xvar}}, <span class="at">y =</span> .value, <span class="at">color =</span> condit, <span class="at">fill =</span> condit)) <span class="sc">+</span> </span>
@@ -2400,7 +2400,7 @@ Figure&nbsp;21: Experiment 2 Discrimination. A) Conditional effect of training c
 <section id="experiment-3" class="level2">
 <h2 class="anchored" data-anchor-id="experiment-3">Experiment 3</h2>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>e3 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">"data/e3_08-04-23.rds"</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">trainCon=</span><span class="fu">case_when</span>(</span>
@@ -2423,7 +2423,7 @@ Figure&nbsp;21: Experiment 2 Discrimination. A) Conditional effect of training c
 <section id="results-4" class="level3">
 <h3 class="anchored" data-anchor-id="results-4">Results</h3>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>bmm_e3_train <span class="ot">&lt;-</span> trainE3_max <span class="sc">%&gt;%</span> </span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">brm</span>(dist <span class="sc">~</span> condit<span class="sc">*</span>bandOrder, </span>
@@ -2504,7 +2504,7 @@ Table&nbsp;12: <strong>Experiment 3 - End of training performance</strong>. The 
 </div>
 <p><em>Training</em>. <a href="#fig-e3-train-dev" class="quarto-xref">Figure&nbsp;22</a> displays the average deviations from the target band across training blocks, and <a href="#tbl-e3-train-dist" class="quarto-xref">Table&nbsp;12</a> shows the results of the Bayesian regression model predicting the deviation from the common band at the end of training (600-800 for reversed order, and 800-1000 for original order conditions). The main effect of training condition is significant, with the varied condition showing larger deviations ( <span class="math inline">\(\beta\)</span> = 64.93, 95% CrI [36.99, 90.8]; pd = 100%). The main effect of band order is not significant <span class="math inline">\(\beta\)</span> = 1.11, 95% CrI [-16.02, 18.16]; pd = 55.4%, however the interaction between training condition and band order is significant, with the varied condition showing greater accuracy in the reverse order condition ( <span class="math inline">\(\beta\)</span> = -77.02, 95% CrI [-114.16, -39.61]; pd = 100%).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> trainE3 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Trial_Bin, <span class="at">y =</span> dist, <span class="at">color =</span> condit)) <span class="sc">+</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"line"</span>, <span class="at">fun =</span> mean) <span class="sc">+</span></span>
@@ -2530,7 +2530,7 @@ Figure&nbsp;22: Experiment 3 training. Deviations from target band during traini
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#options(brms.backend="cmdstanr",mc.cores=4)</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>modelFile <span class="ot">&lt;-</span> <span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache/"</span>), <span class="st">"e3_dist_Cond_Type_RF_2"</span>)</span>
@@ -2652,7 +2652,7 @@ Table&nbsp;13: <strong>Experiment 3 testing accuracy</strong>. Main effects of c
 E3. A) Deviations from target band during testing without feedback stage. B) Estimated marginal means for the interaction between training condition and band type. Error bars represent 95% confidence intervals.
 ::: -->
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>condEffects <span class="ot">&lt;-</span> <span class="cf">function</span>(m,xvar){</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  m <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> {{xvar}}, <span class="at">y =</span> .value, <span class="at">color =</span> condit, <span class="at">fill =</span> condit)) <span class="sc">+</span> </span>
@@ -2693,7 +2693,7 @@ Figure&nbsp;23: Experiment 3 Testing Accuracy. A) Empricial Deviations from targ
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| label: tbl-e3-bmm-vx</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="do">##| tbl-cap: "Experiment 3. Bayesian Mixed Model Predicting Vx as a function of condition (Constant vs. Varied) and Velocity Band"</span></span>
@@ -2809,7 +2809,7 @@ Table&nbsp;14: <strong>Experiment 3 testing discrimination</strong>. Bayesian Mi
 </div>
 <p><em>Testing Discrimination.</em> The full results of the discrimination model are presented in <a href="#tbl-e3-bmm-dist" class="quarto-xref">Table&nbsp;13</a>. For the purposes of assessing group differences in discrimination, only the coefficients including the band variable are of interest. The baseline effect of band represents the slope cofficient for the constant training - original order condition, this effect was significant <span class="math inline">\(\beta\)</span> = 0.49, 95% CrI [0.36, 0.62]; pd = 100%. Neither of the two way interactions reached significance, <span class="math inline">\(\beta\)</span> = -0.04, 95% CrI [-0.23, 0.15]; pd = 66.63%, <span class="math inline">\(\beta\)</span> = -0.1, 95% CrI [-0.27, 0.08]; pd = 86.35%. However, the three way interaction between training condition, band order, and target band was significant, <span class="math inline">\(\beta\)</span> = 0.42, 95% CrI [0.17, 0.7]; pd = 99.96% - indicating a greater slope for the varied condition trained with reverse order bands. This interaction is shown in <a href="#fig-e3-test-vx" class="quarto-xref">Figure&nbsp;24</a>, where the steepness of the best fitting line for the varied-reversed condition is noticably steeper than the other conditions.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: screen-inset-right</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># testE3 |&gt; filter(bandOrder=="Original")|&gt; group_by(id,vb,condit) |&gt; plot_distByCondit()</span></span>
@@ -2833,7 +2833,7 @@ Figure&nbsp;24: e3 testing x velocities. Translucent bands with dash lines indic
 </div>
 <div style="page-break-after: always;"></div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pe3tv &lt;- testE3 %&gt;% group_by(id,vb,condit,bandOrder) |&gt; plot_distByCondit() + ggh4x::facet_nested_wrap(bandOrder~condit,scale="free_x")</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -2918,7 +2918,7 @@ Figure&nbsp;25: Experiment 3 Discrimination. A) Conditional effect of training c
 <section id="computational-model-1" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="computational-model-1">Computational Model</h2>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">####| cache: false</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pacman::p_load(dplyr,purrr,tidyr,ggplot2, data.table, here, patchwork, conflicted, </span></span>
@@ -2931,7 +2931,7 @@ Figure&nbsp;25: Experiment 3 Discrimination. A) Conditional effect of training c
 </details>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">###| cache: true</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">list2env</span>(<span class="fu">load_sbj_data</span>(), <span class="at">envir =</span> .GlobalEnv))</span>
@@ -2943,7 +2943,7 @@ Figure&nbsp;25: Experiment 3 Discrimination. A) Conditional effect of training c
 </details>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alm_plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -3098,7 +3098,7 @@ discrep_{Train,varied}(Data_{sim}, Data_{obs}) = \frac{1}{N_{blocks} \times 3} \
 <section id="modelling-results" class="level3">
 <h3 class="anchored" data-anchor-id="modelling-results">Modelling Results</h3>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>post_tabs <span class="ot">&lt;-</span> <span class="fu">abc_tables</span>(post_dat,post_dat_l)</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>train_tab <span class="ot">&lt;-</span> <span class="fu">abc_train_tables</span>(pd_train,pd_train_l)</span>
@@ -3675,7 +3675,7 @@ Table&nbsp;16: Models errors predicting empirical data from Experiment 1 - aggre
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>c_post <span class="ot">&lt;-</span> post_dat_avg <span class="sc">%&gt;%</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(id, condit, Model, Fit_Method, rank) <span class="sc">%&gt;%</span></span>
@@ -3706,7 +3706,7 @@ Figure&nbsp;27: Posterior Distributions of <span class="math inline">\(c\)</span
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>train_resid <span class="ot">&lt;-</span> pd_train <span class="sc">|&gt;</span> <span class="fu">group_by</span>(id,condit,Model,Fit_Method, Block,x) <span class="sc">|&gt;</span> </span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">y=</span><span class="fu">mean</span>(y), <span class="at">pred=</span><span class="fu">mean</span>(pred), <span class="at">mean_error=</span><span class="fu">abs</span>(y<span class="sc">-</span>pred)) <span class="sc">|&gt;</span></span>
@@ -3753,7 +3753,7 @@ Figure&nbsp;28: Model residuals for each combination of training condition, fit 
 <p>We used the posterior distribution of <span class="math inline">\(c\)</span> and <span class="math inline">\(lr\)</span> parameters to generate a posterior predictive distribution of the observed data for each participant, which then allows us to compare the empirical data to the full range of predictions from each model. Aggregated residuals are displayed in <a href="#fig-htw-resid-pred" class="quarto-xref">Figure&nbsp;28</a>. The pattern of training stage residual errors are unsurprising across the combinations of models and fitting method . Differences in training performance between ALM and EXAM are generally minor (the two models have identical learning mechanisms). The differences in the magnitude of residuals across the three fitting methods are also straightforward, with massive errors for the ‘fit to Test Only’ model, and the smallest errors for the ‘fit to train only’ models. It is also noteworthy that the residual errors are generally larger for the first block of training, which is likely due to the initial values of the ALM weights being unconstrained by whatever initial biases participants tend to bring to the task. Future work may explore the ability of the models to capture more fine grained aspects of the learning trajectories. However for the present purposes, our primary interest is in the ability of ALM and EXAM to account for the testing patterns while being constrained, or not constrained, by the training data. All subsequent analyses and discussion will thus focus on the testing stage.</p>
 <p>The residuals of the model predictions for the testing stage (<a href="#fig-htw-resid-pred" class="quarto-xref">Figure&nbsp;28</a>) also show an unsurprising pattern across fitting methods - with models fit only to the test data showing the best performance, followed by models fit to both training and test data, and with models fit only to the training data showing the worst performance (note that y axes are scaled different between plots). Although EXAM tends to perform better for both Constant and Varied participants (see also <a href="#fig-ee-e1" class="quarto-xref">Figure&nbsp;30</a>), the relative advantage of EXAM is generally larger for the Constant group - a pattern consistent across all three fitting methods. The primary predictive difference between ALM and EXAM is made clear in <a href="#fig-cm-vx-pat" class="quarto-xref">Figure&nbsp;29</a>, which directly compares the observed data against the posterior predictive distributions for both models. Regardless of how the models are fit, only EXAM can capture the pattern where participants are able to discriminate all 6 target bands.</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>post_dat_l <span class="sc">|&gt;</span> </span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(id,condit, Fit_Method,Resp,bandType,x,vb) <span class="sc">|&gt;</span> </span>
@@ -3786,7 +3786,7 @@ Figure&nbsp;29: Empirical data and Model predictions for mean velocity across ta
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="do">###| eval: false</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -3911,7 +3911,7 @@ Figure&nbsp;30: A-C) Conditional effects of Model (ALM vs EXAM) and Condition (C
 <p>To quantitatively assess whether the differences in performance between models, we fit a Bayesian regression predicting the errors of the posterior predictions of each models as a function of the Model (ALM vs.&nbsp;EXAM) and training condition (Constant vs.&nbsp;Varied).</p>
 <p>Model errors were significantly lower for EXAM (<span class="math inline">\(\beta\)</span> = -37.54, 95% CrI [-60.4, -14.17], pd = 99.85%) than ALM. There was also a significant interaction between Model and Condition (<span class="math inline">\(\beta\)</span> = 60.42, 95% CrI [36.17, 83.85], pd = 100%), indicating that the advantage of EXAM over ALM was significantly greater for the constant group. To assess whether EXAM predicts constant performance significantly better for Constant than for Varied subjects, we calculated the difference in model error between the Constant and Varied conditions specifically for EXAM. The results indicated that the model error for EXAM was significantly lower in the Constant condition compared to the Varied condition, with a mean difference of -22.88 (95% CrI [-46.02, -0.97], pd = 0.98).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>out_type <span class="ot">&lt;-</span> knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">get</span>(<span class="st">"rmarkdown.pandoc.to"</span>)</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>primary<span class="ot">=</span>out_type <span class="sc">==</span> <span class="st">"html"</span> <span class="sc">||</span> out_type <span class="sc">==</span> <span class="st">"pdf"</span> <span class="sc">||</span> out_type <span class="sc">==</span><span class="st">"latex"</span> <span class="sc">||</span> out_type <span class="sc">==</span> <span class="st">"docx"</span></span>
@@ -4537,7 +4537,7 @@ Table&nbsp;17: Models errors predicting empirical data - aggregated over all par
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(e2_model<span class="sc">$</span>post_dat_l <span class="sc">|&gt;</span> <span class="fu">filter</span>( Fit_Method<span class="sc">==</span><span class="st">"Test_Train"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(id,condit, Fit_Method,Resp,bandType,x,vb) <span class="sc">|&gt;</span> </span>
@@ -4573,7 +4573,7 @@ Figure&nbsp;31: Empirical data and Model predictions from Experiment 2 and 3 for
 </div>
 <div style="page-break-after: always;"></div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>e2_ee_brm_ae <span class="ot">&lt;-</span> <span class="fu">brm</span>(<span class="at">data=</span>pdl2,</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  aerror <span class="sc">~</span>  Model <span class="sc">*</span> condit <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>bandInt<span class="sc">|</span>id), </span>
@@ -5272,7 +5272,7 @@ Table&nbsp;18: Results of Bayesian Regression models predicting model error as a
 </div>
 <p><em>Model Fits to Experiment 2 and 3.</em> Data from Experiments 2 and 3 were fit to ALM and EXAM in the same manner as Experiment1 . For brevity, we only plot and discuss the results of the “fit to training and testing data” models - results from the other fitting methods can be found in the appendix. The model fitting results for Experiments 2 and 3 closely mirrored those observed in Experiment 1. The Bayesian regression models predicting model error as a function of Model (ALM vs.&nbsp;EXAM), Condition (Constant vs.&nbsp;Varied), and their interaction (see <a href="#tbl-htw-ee-e23" class="quarto-xref">Table&nbsp;18</a>) revealed a consistent main effect of Model across all three experiments. The negative coefficients for the ModelEXAM term (Exp 2: <span class="math inline">\(\beta\)</span> = -86.39, 95% CrI -113.52, -59.31, pd = 100%; Exp 3: <span class="math inline">\(\beta\)</span> = -40.61, 95% CrI -75.9, -3.02, pd = 98.17%) indicate that EXAM outperformed ALM in both experiments. Furthermore, the interaction between Model and Condition was significant in both Experiment 2 (<span class="math inline">\(\beta\)</span> = 56.87, 95% CrI 25.26, 88.04, pd = 99.98%) and Experiment 3 (<span class="math inline">\(\beta\)</span> = 41.9, 95% CrI 11.2, 72.54, pd = 99.35%), suggesting that the superiority of EXAM over ALM was more pronounced for the Constant group compared to the Varied group, as was the case in Experiment 1. Recall that Experiment 3 included participants in both the original and reverse order conditions - and that this manipulation interacted with the effect of training condition. We thus also controlled for band order in our Bayesian Regression assessing the relative performance of EXAM and ALM in Experiment 3. There was a significant three way interaction between Model, Training Condition, and Band Order (<span class="math inline">\(\beta\)</span> = -60.6, 95% CrI -101.8, -18.66, pd = 99.83%), indicating that the relative advantage of EXAM over ALM was only more pronounced in the original order condition, and not the reverse order condition (see <a href="#fig-e2_e3_ae" class="quarto-xref">Figure&nbsp;32</a>).</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#wrap_plots(plot(conditional_effects(e1_ee_brm_ae),points=FALSE,plot=FALSE))</span></span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">conditional_effects</span>(e2_ee_brm_ae, <span class="at">effects=</span><span class="st">"condit"</span>),<span class="at">points=</span><span class="cn">FALSE</span>, <span class="at">plot=</span><span class="cn">FALSE</span>)<span class="sc">$</span>condit <span class="sc">+</span> </span>
@@ -5324,7 +5324,7 @@ Figure&nbsp;32: Conditional effects of Model (ALM vs EXAM) and Condition (Consta
 <p><em>Modeling Limitations.</em> The present work compared models based on their ability to predict the observed data, without employing conventional model fit indices such as the Akaike Information Criterion (AIC) or the Bayesian Information Criterion (BIC). These indices, which penalize models based on their number of free parameters, would have been of limited utility in this case, as both ALM and EXAM have two free parameters. However, despite having the same number of free parameters, EXAM could still be considered the more complex model, as it incorporates all the components of ALM plus an additional mechanism for rule-based responding. A more comprehensive model comparison approach might involve performing cross-validation with a held-out subset of the data <span class="citation" data-cites="mezzadriHoldoutStrategySelecting2022">(<a href="#ref-mezzadriHoldoutStrategySelecting2022" role="doc-biblioref">Mezzadri et al., 2022</a>)</span> or penalizing models based on the range of patterns they can produce <span class="citation" data-cites="domeGdistanceComparisonModel2023">(<a href="#ref-domeGdistanceComparisonModel2023" role="doc-biblioref">Dome &amp; Wills, 2023</a>)</span>.</p>
 <div style="page-break-after: always;"></div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>tid1 <span class="ot">&lt;-</span> post_dat  <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Exp=</span><span class="st">"E1"</span>,<span class="at">bandOrder=</span><span class="st">"Original"</span>) <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>pred_dist, <span class="sc">-</span>dist) <span class="sc">|&gt;</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(e2_model<span class="sc">$</span>post_dat <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Exp=</span><span class="st">"E2"</span>,<span class="at">bandOrder=</span><span class="st">"Reverse"</span>)) <span class="sc">|&gt;</span></span>
@@ -5387,7 +5387,7 @@ Figure&nbsp;33: Difference in model errors for each participant, with models fit
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>cId_tr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">137</span>, <span class="dv">181</span>, <span class="dv">11</span>)</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>vId_tr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">14</span>, <span class="dv">193</span>, <span class="dv">47</span>)</span>
@@ -6562,7 +6562,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="co">  email: tegorman@iu.edu</span></span>
 <span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="co">  orcid: "0000-0001-5366-5442"</span></span>
 <span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> show</span></span>
 <span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
 <span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
 <span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="an">toc-location:</span><span class="co"> body</span></span>
