@@ -27,9 +27,6 @@ format-links:
 format:
   html:
     date: last-modified
-  apaquarto-pdf:
-    echo: false
-    output-file: htw_apaquarto.pdf
   hugo-md:
     echo: false
     include: false
