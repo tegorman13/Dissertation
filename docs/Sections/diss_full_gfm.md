@@ -1704,12 +1704,12 @@ Keele, 1968), visuomotor learning (Berniker et al., 2014; Schmidt,
 1975), language learning (Perry et al., 2010), and education
 (Braithwaite & Goldstone, 2015; Guo et al., 2014). The pattern of
 results is complex, with numerous studies finding both beneficial (Braun
-et al., 2009; Catalano & Kleiner, 1984; Roller et al., 2001), as well as
-null or negative effects (Brekelmans et al., 2022; Hu & Nosofsky, 2024;
-Van Rossum, 1990). The present study seeks to contribute to the large
-body of existing research by examining the influence of variability in
-visuomotor function learning - a domain in which it has been relatively
-under-studied.
+et al., 2009; Catalano & Kleiner, 1984; Gorman & Goldstone, 2022; Roller
+et al., 2001), as well as null or negative effects (Brekelmans et al.,
+2022; Hu & Nosofsky, 2024; Van Rossum, 1990). The present study seeks to
+contribute to the large body of existing research by examining the
+influence of variability in visuomotor function learning - a domain in
+which it has been relatively under-studied.
 
 ### Function Learning and Extrapolation
 
@@ -3839,6 +3839,15 @@ Goodwin, J. E., Eckerson, J. M., Grimes, C. R., & Gordon, P. M. (1998).
 Effect of Different Quantities of Variable Practice on Acquisition,
 Retention, and Transfer of An Applied Motor Skill. *Perceptual and Motor
 Skills*, *87*(1), 147–151. <https://doi.org/10.2466/pms.1998.87.1.147>
+
+</div>
+
+<div id="ref-gormanInstancebasedModelAccount2022" class="csl-entry">
+
+Gorman, T. E., & Goldstone, R. L. (2022). An instance-based model
+account of the benefits of varied practice in visuomotor skill.
+*Cognitive Psychology*, *137*, 101491.
+<https://doi.org/10.1016/j.cogpsych.2022.101491>
 
 </div>
 
