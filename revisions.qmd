@@ -23,6 +23,11 @@ title: Revisions
 
 - [link 2](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli.){target="_blank"}\
 
+#### **Relevant Papers**
+
+- @wifallPerceptualSimilarityAffects2014
+
+- @wifallReachingResponseSelection2017
 
 
 ## Learning c 
@@ -30,3 +35,14 @@ title: Revisions
 **How how does this show up in training data? Process by which c is updated? Can it account for massed vs. distributed presentation of stimulii?**
 
 - [link 1](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=However%2C%20previous%20research,the%20trained%20positions.)
+
+
+## Ordinal feedback rationale
+
+
+> In Experiment 3, we sought to further explore the generality of the findings from the first two experiments by modifying the type of feedback provided during training. Specifically, we provided ordinal feedback instead of the continuous feedback used in the previous two experiments. Ordinal feedback provides learners with directional information about the results of their throw (e.g., above the target, below the target, or hitting the target) rather than precise numerical deviations. This form of feedback resembles many real-world learning scenarios, such as a coach instructing an athlete to perform a movement using "more force" or "less force", or a teacher providing letter grades rather than numeric scores. Although ordinal feedback provides less detailed information per trial, prior research has shown that less detailed feedback isn't necessarily detrimental to learning. For example, Cornwall et al., manipulated whether participants received categorical (correct or incorrect) vs. numerical feedback (reward points ranging from 50-100).
+
+
+#### **Relevant Papers**
+
+- @cornwallEffectsCategoricalNumerical2022

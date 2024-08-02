@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -199,6 +219,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli." target="_blank">link 2</a><br>
 </p></li>
 </ul>
+<section id="relevant-papers" class="level4">
+<h4 class="anchored" data-anchor-id="relevant-papers"><strong>Relevant Papers</strong></h4>
+<ul>
+<li><p><span class="citation" data-cites="wifallPerceptualSimilarityAffects2014">Wifall et al. (<a href="#ref-wifallPerceptualSimilarityAffects2014" role="doc-biblioref">2014</a>)</span></p></li>
+<li><p><span class="citation" data-cites="wifallReachingResponseSelection2017">Wifall et al. (<a href="#ref-wifallReachingResponseSelection2017" role="doc-biblioref">2017</a>)</span></p></li>
+</ul>
+</section>
 </section>
 <section id="learning-c" class="level2">
 <h2 class="anchored" data-anchor-id="learning-c">Learning c</h2>
@@ -206,11 +233,34 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=However%2C%20previous%20research,the%20trained%20positions.">link 1</a></li>
 </ul>
+</section>
+<section id="ordinal-feedback-rationale" class="level2">
+<h2 class="anchored" data-anchor-id="ordinal-feedback-rationale">Ordinal feedback rationale</h2>
+<blockquote class="blockquote">
+<p>In Experiment 3, we sought to further explore the generality of the findings from the first two experiments by modifying the type of feedback provided during training. Specifically, we provided ordinal feedback instead of the continuous feedback used in the previous two experiments. Ordinal feedback provides learners with directional information about the results of their throw (e.g., above the target, below the target, or hitting the target) rather than precise numerical deviations. This form of feedback resembles many real-world learning scenarios, such as a coach instructing an athlete to perform a movement using “more force” or “less force”, or a teacher providing letter grades rather than numeric scores. Although ordinal feedback provides less detailed information per trial, prior research has shown that less detailed feedback isn’t necessarily detrimental to learning. For example, Cornwall et al., manipulated whether participants received categorical (correct or incorrect) vs.&nbsp;numerical feedback (reward points ranging from 50-100).</p>
+</blockquote>
+<section id="relevant-papers-1" class="level4">
+<h4 class="anchored" data-anchor-id="relevant-papers-1"><strong>Relevant Papers</strong></h4>
+<ul>
+<li><span class="citation" data-cites="cornwallEffectsCategoricalNumerical2022">Cornwall et al. (<a href="#ref-cornwallEffectsCategoricalNumerical2022" role="doc-biblioref">2022</a>)</span></li>
+</ul>
+
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-cornwallEffectsCategoricalNumerical2022" class="csl-entry" role="listitem">
+Cornwall, A. C., Davis, T., Byrne, K. A., &amp; Worthy, D. A. (2022). Effects of categorical and numerical feedback on category learning. <em>Cognition</em>, <em>225</em>, 105163. <a href="https://doi.org/10.1016/j.cognition.2022.105163">https://doi.org/10.1016/j.cognition.2022.105163</a>
+</div>
+<div id="ref-wifallReachingResponseSelection2017" class="csl-entry" role="listitem">
+Wifall, T., Buss, A. T., Farmer, T. A., Spencer, J. P., &amp; Hazeltine, E. (2017). Reaching into response selection: <span>Stimulus</span> and response similarity influence central operations. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>43</em>(3), 555–568. <a href="https://doi.org/10.1037/xhp0000301">https://doi.org/10.1037/xhp0000301</a>
+</div>
+<div id="ref-wifallPerceptualSimilarityAffects2014" class="csl-entry" role="listitem">
+Wifall, T., McMurray, B., &amp; Hazeltine, E. (2014). Perceptual <span>Similarity Affects</span> the <span>Learning Curve</span> (but <span>Not Necessarily Leaming</span>). <em>Journal of Experimental Psychology: General</em>, <em>143</em>(1), 312–331. <a href="https://doi.org/10.1037/a0030865">https://doi.org/10.1037/a0030865</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

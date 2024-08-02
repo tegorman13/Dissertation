@@ -1362,7 +1362,7 @@
     "href": "revisions.html#distinction-between-experienced-stimulii-and-behavioral-action",
     "title": "Revisions",
     "section": "Distinction between experienced stimulii and behavioral action",
-    "text": "Distinction between experienced stimulii and behavioral action\n\nlink 1\nlink 2"
+    "text": "Distinction between experienced stimulii and behavioral action\n\nlink 1\nlink 2\n\n\n\nRelevant Papers\n\nWifall et al. (2014)\nWifall et al. (2017)"
   },
   {
     "objectID": "revisions.html#learning-c",
@@ -1370,5 +1370,12 @@
     "title": "Revisions",
     "section": "Learning c",
     "text": "Learning c\nHow how does this show up in training data? Process by which c is updated? Can it account for massed vs. distributed presentation of stimulii?\n\nlink 1"
+  },
+  {
+    "objectID": "revisions.html#ordinal-feedback-rationale",
+    "href": "revisions.html#ordinal-feedback-rationale",
+    "title": "Revisions",
+    "section": "Ordinal feedback rationale",
+    "text": "Ordinal feedback rationale\n\nIn Experiment 3, we sought to further explore the generality of the findings from the first two experiments by modifying the type of feedback provided during training. Specifically, we provided ordinal feedback instead of the continuous feedback used in the previous two experiments. Ordinal feedback provides learners with directional information about the results of their throw (e.g., above the target, below the target, or hitting the target) rather than precise numerical deviations. This form of feedback resembles many real-world learning scenarios, such as a coach instructing an athlete to perform a movement using “more force” or “less force”, or a teacher providing letter grades rather than numeric scores. Although ordinal feedback provides less detailed information per trial, prior research has shown that less detailed feedback isn’t necessarily detrimental to learning. For example, Cornwall et al., manipulated whether participants received categorical (correct or incorrect) vs. numerical feedback (reward points ranging from 50-100).\n\n\nRelevant Papers\n\nCornwall et al. (2022)"
   }
 ]
