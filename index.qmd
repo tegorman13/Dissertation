@@ -54,3 +54,9 @@ format:
 [{{< fa file-lines >}} Slides overview](https://tegorman13.github.io/Dissertation/Presentation/slides.html)
 
 [{{< fa person-chalkboard size=1.0xs >}} Defense slides](https://tegorman13.github.io/Dissertation/Presentation/slides_revealjs.html#/)
+
+## 
+
+-----
+
+[Revisions](revisions.qmd)

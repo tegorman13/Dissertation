@@ -1,0 +1,32 @@
+---
+title: Revisions
+---
+
+
+
+## Primary Issues
+
+1) General Discussion, idea of fitting ALM & EXAM to project 1 - parameter comparison across projects. 
+2) Rationale for ordinal feedback in experiment 3. Literature suggesting ordinal is different from continuous. Discussion of how ordinal feedback could be implemented in the model
+3) Project 2 discussion - implications of empirical results, and of modeling, take-aways from project
+4) More foreshadowing of function learning literature. Show how Projects 1 and 2 are unified in terms of exploring theories of how variability during learning affects generalization.
+5) learning c - how how does this show up in training data? Process by which c is updated? Can it account for massed vs. distributed presentation of stimulii?
+6) Distinction between experienced stimulii and behavioral action
+
+
+
+
+
+## Distinction between experienced stimulii and behavioral action
+
+- [link 1](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Our%20modelling%20approach,of%20Knowledge%20II.){target="_blank"}
+
+- [link 2](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli.){target="_blank"}\
+
+
+
+## Learning c 
+
+**How how does this show up in training data? Process by which c is updated? Can it account for massed vs. distributed presentation of stimulii?**
+
+- [link 1](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=However%2C%20previous%20research,the%20trained%20positions.)
