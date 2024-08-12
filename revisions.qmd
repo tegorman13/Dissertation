@@ -3,21 +3,14 @@ title: Revisions
 toc: true
 ---
 
-
-
 ## Primary Issues
 
 1) **Plausiblity of fitting ALM & EXAM to project 1** - parameter comparison across projects. \ 
-
 2) **Rationale for ordinal feedback** in experiment 3. Literature suggesting ordinal is different from continuous. Discussion of how ordinal feedback could be implemented in the model \
 3) **Project 2 take aways** - implications of empirical results, and of modeling \
 4) **More foreshadowing of function learning literature**. Show how Projects 1 and 2 are unified in terms of exploring theories of how variability during learning affects generalization. \
 5) **How c is learned** - how how does this show up in training data? Process by which c is updated? Can it account for massed vs. distributed presentation of stimulii? \
 6) **Similarity spaces of stimuli vs. actions** - important distinctions? \
-
-
-
-
 
 ## Distinction between experienced stimulii and behavioral action
 <details><summary>
@@ -36,7 +29,6 @@ toc: true
 #### **Relevant Papers**
 
 - @wifallPerceptualSimilarityAffects2014
-
 - @wifallReachingResponseSelection2017
 
 
@@ -51,6 +43,11 @@ toc: true
 >However, previous research has suggested that participants may differ in their level of generalization as a function of prior experience, and that such differences in generalization gradients can be captured by fitting the generalization parameter of an instance-based model separately to each group (Hahn et al., 2005; Lamberts, 1994). Relatedly, the influential Bayesian generalization model developed by Tenenbaum & Griffiths (2001) predicts that the breadth of generalization will increase when a rational agent encounters a wider variety of examples. Following these leads, we assume that in addition to learning the task itself, participants are also adjusting how generalizable their experience should be. Varied versus constant participants may be expected to learn to generalize their experience to different degrees. To accommodate this difference, the generalization parameter of the instance-based model (in the present case, the c parameter) can be allowed to vary between the two groups to reflect the tendency of learners to adaptively tune the extent of their generalization. One specific hypothesis is that people adaptively set a value of c to fit the variability of their training experience (Nosofsky & Johansen, 2000; Sakamoto et al., 2006). If one’s training experience is relatively variable, as with the variable training condition, then one might infer that future test situations will also be variable, in which case a low value of c will allow better generalization because generalization will drop off slowly with training-to-testing distance. Conversely, if one’s training experience has little variability, as found in the constant training conditions, then one might adopt a high value of c so that generalization falls off rapidly away from the trained positions.
 </details>
 
+
+
+
+
+
 ## Ordinal feedback rationale
 
 <details><summary>Addition</summary>
@@ -60,6 +57,10 @@ toc: true
 #### **Relevant Papers**
 
 - @cornwallEffectsCategoricalNumerical2022
+
+
+
+
 
 
 
