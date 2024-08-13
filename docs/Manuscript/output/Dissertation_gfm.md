@@ -105,7 +105,7 @@ constant group when using the tennis racket at testing, and also
 performed better in conditions with several novel racket lengths.
 However, as is the case with many of the patterns commonly observed in
 the “benefits of variability” literature, the pattern wherein the varied
-group outperfroms the constant group even from the constants group’s
+group outperforms the constant group even from the constants group’s
 home turf has not been consistently replicated. One recent study
 attempted a near replication of the Kerr & Booth study (Willey & Liu,
 2018b), having subjects throw beanbags at a target, with the varied
@@ -121,39 +121,39 @@ Pitting varied against constant practice against each other on the home
 turf of the constant group provides a compelling argument for the
 benefits of varied training, as well as an interesting challenge for
 theoretical accounts that posit generalization to occur as some function
-of distance. However, despite its appeal this particular contrast is
-relatively uncommon in the literature. It is unclear whether this may be
-cause for concern over publication bias, or just researchers feeling the
-design is too risky. A far more common design is to have separate
-constant groups that each train exclusively from each of the conditions
-that the varied group encounters (Catalano & Kleiner, 1984; Chua et al.,
-2019; McCracken & Stelmach, 1977; Moxley, 1979; Newell & Shapiro, 1976),
-or for a single constant group to train from just one of the conditions
-experienced by the varied participants (Pigott & Shapiro, 1984; Roller
-et al., 2001; Wrisberg & McLean, 1984; Wrisberg & Mead, 1983). A less
-common contrast places the constant group training in a region of the
-task space outside of the range of examples experienced by the varied
-group, but distinct from the transfer condition (Wrisberg et al., 1987;
-Wulf & Schmidt, 1997). Of particular relevance to the current work is
-the early study of Catalano & Kleiner (1984), as theirs was one of the
-earliest studies to investigate the influence of varied vs. constant
-training on multiple testing locations of graded distance from the
-training condition. Participants were trained on coincident timing task,
-in which subjects observe a series of lightbulbs turning on sequentially
-at a consistent rate and attempt to time a button response with the
-onset of the final bulb. The constant groups trained with a single
-velocity of either 5,7,9, or 11 mph, while the varied group trained from
-all 4 of these velocities. Participants were then assigned to one of
-four possible generalization conditions, all of which fell outside of
-the range of the varied training conditions – 1, 3, 13 or 15 mph. As is
-often the case, the varied group performed worse during the training
-phase. In the testing phase, the general pattern was for all
-participants to perform worse as the testing conditions became further
-away from the training conditions, but since the drop off in performance
-as a function of distance was far less steep for the varied group, the
-authors suggested that varied training induced a decremented
-generalization gradient, such that the varied participants were less
-affected by the change between training and testing conditions.
+of distance. However, despite its appeal this contrast is relatively
+uncommon in the literature. It is unclear whether this may be cause for
+concern over publication bias, or just researchers feeling the design is
+too risky. A far more common design is to have separate constant groups
+that each train exclusively from each of the conditions that the varied
+group encounters (Catalano & Kleiner, 1984; Chua et al., 2019; McCracken
+& Stelmach, 1977; Moxley, 1979; Newell & Shapiro, 1976), or for a single
+constant group to train from just one of the conditions experienced by
+the varied participants (Pigott & Shapiro, 1984; Roller et al., 2001;
+Wrisberg & McLean, 1984; Wrisberg & Mead, 1983). A less common contrast
+places the constant group training in a region of the task space outside
+of the range of examples experienced by the varied group, but distinct
+from the transfer condition (Wrisberg et al., 1987; Wulf & Schmidt,
+1997). Of particular relevance to the current work is the early study of
+Catalano & Kleiner (1984), as theirs was one of the earliest studies to
+investigate the influence of varied vs. constant training on multiple
+testing locations of graded distance from the training condition.
+Participants were trained on coincident timing task, in which subjects
+observe a series of lightbulbs turning on sequentially at a consistent
+rate and attempt to time a button response with the onset of the final
+bulb. The constant groups trained with a single velocity of either
+5,7,9, or 11 mph, while the varied group trained from all 4 of these
+velocities. Participants were then assigned to one of four possible
+generalization conditions, all of which fell outside of the range of the
+varied training conditions – 1, 3, 13 or 15 mph. As is often the case,
+the varied group performed worse during the training phase. In the
+testing phase, the general pattern was for all participants to perform
+worse as the testing conditions became further away from the training
+conditions, but since the drop off in performance as a function of
+distance was far less steep for the varied group, the authors suggested
+that varied training induced a decremented generalization gradient, such
+that the varied participants were less affected by the change between
+training and testing conditions.
 
 Benefits of varied training have also been observed in many studies
 outside of the sensorimotor domain. Goode et al. (2008) trained
@@ -169,7 +169,7 @@ different constant groups were used. Both constant groups trained with
 three repetitions of the same word scramble, but for constant group A,
 the testing phase consisted of the identical letter arrangement to that
 seen during training (e.g., LDOOF), whereas for constant group B, the
-testing phase consisted of a arrangement they had not seen during
+testing phase consisted of an arrangement they had not seen during
 training, thus presenting them with a testing situation similar
 situation to the varied group. At the testing stage, the varied group
 outperformed both constant groups, a particularly impressive result,
@@ -177,12 +177,12 @@ given that constant group A had three prior exposures to the word
 arrangement (i.e. the particular permutation of letters) which the
 varied group had not explicitly seen. However varied subjects in this
 study did not exhibit the typical decrement in the training phase
-typical of other varied manipulations in the literature, and actually
-achieved higher levels of anagram solving accuracy by the end of
-training than either of the constant groups – solving two more anagrams
-on average than the constant group. This might suggest that for tasks of
-this nature where the learner can simply get stuck with a particular
-word scramble, repeated exposure to the identical scramble might be less
+typical of other varied manipulations in the literature, and achieved
+higher levels of anagram solving accuracy by the end of training than
+either of the constant groups – solving two more anagrams on average
+than the constant group. This might suggest that for tasks of this
+nature where the learner can simply get stuck with a particular word
+scramble, repeated exposure to the identical scramble might be less
 helpful towards finding the solution than being given a different
 arrangement of the same letters. This contention is supported by the
 fact that constant group A, who was tested on the identical arrangement
@@ -214,12 +214,12 @@ more highly-distorted items showed superior generalization to novel high
 distortion patterns in the subsequent testing phase. It should be noted
 that unlike the sensorimotor studies discussed earlier, the Posner &
 Keele (1968) study did not present low-varied and high-varied
-participants with an equal number of training rathers, but instead had
+participants with an equal number of training trials, but instead had
 participants remain in the training stage of the experiment until they
 reached a criterion level of performance. This train-until-criterion
 procedure led to the high-variability condition participants tending to
 complete a larger number of training trials before switching to the
-testing stage. More recent work (Hu & Nosofsky, 2024), also used dot
+testing stage. More recent work (Hu & Nosofsky, 2024) also used dot
 pattern categories, but matched the number of training trials across
 conditions. Under this procedure, higher-variability participants tended
 to reach lower levels of performance by the end of the training stage.
@@ -235,22 +235,22 @@ letter F), while Hu & Nosofsky (2024) employed random prototype
 patterns.
 
 Recent studies have also begun utilizing more complex or realistic
-sitmuli when assessing the influence of variability on category
+stimuli when assessing the influence of variability on category
 learning. Wahlheim et al. (2012) conducted one such study. In a
 within-participants design, participants were trained on bird categories
-with either high repetitions of a few exemplars, or few repetitions of
-many exemplars. Across four different experiments, which were conducted
-to address an unrelated question on metacognitive judgements, the
-researchers consistently found that participants generalized better to
-novel species following training with more unique exemplars (i.e. higher
-variability), while high repetition training produced significantly
-better performance categorizing the specific species they had trained
-on. A variability advantage was also found in the relatively complex
-domain of rock categorization (Nosofsky et al., 2019). For 10 different
-rock categories, participants were trained with either many repetitions
-of 3 unique examples of each category, or few repetitions of 9 unique
-examples, with an equal number of total training trials in each group
-(the design also included 2 other conditions less amenable to
+with either many repetitions of a few exemplars, or with few repetitions
+of many exemplars. Across four different experiments, which were
+conducted to address an unrelated question on metacognitive judgements,
+the researchers consistently found that participants generalized better
+to novel species following training with more unique exemplars
+(i.e. higher variability), while high repetition training produced
+significantly better performance categorizing the specific species they
+had trained on. A variability advantage was also found in the relatively
+complex domain of rock categorization (Nosofsky et al., 2019). For 10
+different rock categories, participants were trained with either many
+repetitions of 3 unique examples of each category, or few repetitions of
+9 unique examples, with an equal number of total training trials in each
+group (the design also included 2 other conditions less amenable to
 considering the impact of variation). The high-variability group,
 trained with 9 unique examples, showed significantly better
 generalization performance than the other conditions.
@@ -322,8 +322,8 @@ similarity-scaling parameters were such that the high-variability group
 was less sensitive to the distances between stimuli, resulting in
 greater similarity values between their training items and testing
 items. This model accounted for both the extended generalization
-gradients of the varied participants, and also for their poorer
-performance in a recognition condition.
+gradients of the varied participants, and for their poorer performance
+in a recognition condition.
 
 Variability has also been examined in the learning of higher-order
 linguistic categories (Perry et al., 2010). In nine training sessions
@@ -376,36 +376,35 @@ found that whether variation was beneficial depended on the prior
 knowledge of the participants – such that participants with some prior
 knowledge benefited from varied training, whereas participants with
 minimal prior knowledge performed better after training with similar
-examples. The authors hypothesized that in order to benefit from varied
-examples, participants must be able to detect the structure common to
-the diverse examples, and that participants with prior knowledge are
-more likely to be sensitive to such structure, and thus to benefit from
-varied training. To test this hypothesis more directly, the authors
-conducted a 2nd experiment, wherein they controlled prior knowledge by
-exposing some subjects to a short graphical or verbal pre-training
-lesson, designed to increase sensitivity to the training examples.
-Consistent with their hypothesis, participants exposed to the structural
-sensitivity pre-training benefited more from varied training than the
-controls participants who benefited more from training with similar
-examples. Interactions between prior experience and the influence of
-varied training have also been observed in sensorimotor learning (Del
-Rey et al., 1982; Guadagnoli et al., 1999). Del Rey et al. (1982)
-recruited participants who self-reported either extensive, or very
-little experience with athletic activities, and then trained
-participants on a coincident timing task under with either a single
-constant training velocity, with one of several varied training
-procedures. Unsurprisingly, athlete participants had superior
-performance during training, regardless of condition, and training
-performance was superior for all subjects in the constant group. Of
-greater interest is the pattern of testing results from novel transfer
-conditions. Among the athlete-participants, transfer performance was
-best for those who received variable training. Non-athletes showed the
-opposite pattern, with superior performance for those who had constant
-training.
+examples. The authors hypothesized that to benefit from varied examples,
+participants must be able to detect the structure common to the diverse
+examples, and that participants with prior knowledge are more likely to
+be sensitive to such structure, and thus to benefit from varied
+training. To test this hypothesis more directly, the authors conducted a
+2nd experiment, wherein they controlled prior knowledge by exposing some
+subjects to a short graphical or verbal pre-training lesson, designed to
+increase sensitivity to the training examples. Consistent with their
+hypothesis, participants exposed to the structural sensitivity
+pre-training benefited more from varied training than the controls
+participants who benefited more from training with similar examples.
+Interactions between prior experience and the influence of varied
+training have also been observed in sensorimotor learning (Del Rey et
+al., 1982; Guadagnoli et al., 1999). Del Rey et al. (1982) recruited
+participants who self-reported either extensive, or very little
+experience with athletic activities, and then trained participants on a
+coincident timing task with either a single constant training velocity,
+or with one of several varied training procedures. Unsurprisingly,
+athlete participants had superior performance during training,
+regardless of condition, and training performance was superior for all
+subjects in the constant group. Of greater interest is the pattern of
+testing results from novel transfer conditions. Among the
+athlete-participants, transfer performance was best for those who
+received variable training. Non-athletes showed the opposite pattern,
+with superior performance for those who had constant training.
 
 ## Existing Theoretical Frameworks
 
-A number of theoretical frameworks have been proposed to conceptually
+Several theoretical frameworks have been proposed to conceptually
 explain the effects of varied training on learning and generalization.
 Schema theory (described in more detail above), posts that varied
 practice leads to the formation of more flexible motor schemas, which
@@ -427,9 +426,9 @@ visuomotor skill learning. In contrast, the effects of variability have
 received more formal computational treatment in other domains, such as
 category learning Hu & Nosofsky (2024), language learning (Jones &
 Brandt, 2020), and function learning (DeLosh et al., 1997). A primary
-goal of the current dissertation is to to address this gap by adapting
-and applying modeling approaches from these other domains to investigate
-the effects of training variability in visuomotor skill learning and
+goal of the current dissertation is to address this gap by adapting and
+applying modeling approaches from these other domains to investigate the
+effects of training variability in visuomotor skill learning and
 function learning tasks.
 
 ## The current work
@@ -500,7 +499,7 @@ above) also put forward an influential argument concerning the nature of
 the mental representations acquired during learning - namely that
 learners tend to abstract a prototype, or aggregate representation of
 the dot pattern categories, rather than encoding each individual
-stimuli. Recall that participants are trained on only on distortions of
+stimulus. Recall that participants are trained on only on distortions of
 the category prototypes (e.g., low, medium or high distortions), never
 encountering the exact prototypes during the training stage. Then, in
 the testing phase, participants are tested with the prototype patterns,
@@ -517,8 +516,8 @@ and continues to be cited as evidence that prototype abstraction
 underlies the benefits of varied training. It’s also referenced as a key
 influence in the development of the “Schema Theory of Motor Learning”
 Schmidt (1975), which in turn influenced decades of research on the
-potential benefits of varied training in motor skill learning. However a
-number of the core assumptions utilized by Posner & Keele (1968) were
+potential benefits of varied training in motor skill learning. However,
+a number of the core assumptions utilized by Posner & Keele (1968) were
 later called into question both empirically and with competing
 theoretical accounts (Hintzman, 1984, 1986; Knapp & Anderson, 1984;
 McClelland & Rumelhart, 1985; Nosofsky & Kruschke, 1992; Palmeri &
@@ -529,7 +528,7 @@ of models with simpler representational assumptions. These authors
 conducted a near replication of the Posner & Keele (1968) study, but
 also had participants provide similarity judgements of the dot pattern
 stimuli after completing the training phase. A multidimensional scaling
-analysis of the similarity judgements revelead that the psychological
+analysis of the similarity judgements revealed that the psychological
 representations of the prototype stimuli were not located in the middle
 of the training stimuli, but were instead extreme points in the
 psychological space. The authors also demonstrated the generalization
@@ -610,7 +609,7 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-toy-model1-1.png)
 
 
 Figure 1: Left panel- Generalization predicted from a simple model that
@@ -641,7 +640,7 @@ attention within the subdomain of visuomotor skill learning focused on
 the benefits of varied training.
 
 The present work examines whether the commonly observed benefits of
-varied training can be accounted for by a theoretrically motivated
+varied training can be accounted for by a theoretically motivated
 measure of the similarity between training throws and the testing
 solution space. We first attempt to replicate previous work finding an
 advantage of varied training over constant training in a projectile
@@ -656,7 +655,7 @@ be explained by an instance-based similarity model.
 
 To obtain an independent estimate of effect size, we identified previous
 investigations which included between-subjects contrasts of varied and
-constant conditions following training on an accuracy based projectile
+constant conditions following training on an accuracy-based projectile
 launching task (Chua et al., 2019; Goodwin et al., 1998; Kerr & Booth,
 1978; Wulf, 1991). We then averaged effects across these studies,
 yielding a Cohen’s f =.43. The GPower 3.1 software package (Faul et al.,
@@ -824,7 +823,7 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-IGAS_Training1-1.png)
 
 
 Figure 3: Training performance for varied and constant participants
@@ -850,7 +849,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-IGAS_Testing1-1.png)
 
 
 Figure 4: Testing performance for each of the 4 testing positions,
@@ -895,12 +894,12 @@ varied training over constant training even at the constant training
 position is of particular note, given that testing at this position
 should have been highly similar for participants in the constant
 condition. It should also be noted, though, that testing at the constant
-trained position is not exactly identical to training from that
-position, given that the context of testing is different in several ways
-from that of training, such as the testing trials from the different
-positions being intermixed, as well as a simple change in context as a
-function of time. Such contextual differences will be further considered
-in the General Discussion.
+trained position is not identical to training from that position, given
+that the context of testing is different in several ways from that of
+training, such as the testing trials from the different positions being
+intermixed, as well as a simple change in context as a function of time.
+Such contextual differences will be further considered in the General
+Discussion.
 
 In addition to the variation of throwing position during training, the
 participants in the varied condition of Experiment 1 also received
@@ -1005,7 +1004,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2train-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2train-1.png)
 
 
 Figure 5: Training performance for the six constant conditions, and the
@@ -1015,8 +1014,8 @@ for the varied group. On the right side, the six constant groups are
 shown separately, with each set of bars representing the beginning,
 middle, and end of training for a single constant group that trained
 from the position indicated on the x-axis. Figure 5b also shows training
-performance separately for both of the throwing locations trained by the
-varied group. Error bars indicate standard error of the mean.
+performance separately for both throwing locations trained by the varied
+group. Error bars indicate standard error of the mean.
 
 </div>
 
@@ -1044,7 +1043,7 @@ groups.
 
 <div id="fig-e2testa">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2testa-1.png)
 
 
 Figure 6: Testing phase performance from each of the six testing
@@ -1129,15 +1128,15 @@ Such positions were novel to the varied group (thus this analysis
 omitted two constant groups that trained from positions 500 or 800 as
 those positions were not novel to the varied group).
 <a href="#fig-e2test1" class="quarto-xref">Figure 7</a> displays the
-particular subset of comparisons utilized for this analysis. Again, we
-standardized performance within each position before performing the
-analyses on the aggregated data. In this case, the effect of condition
-did not reach statistical significance F(1,149)=3.14, p=.079,
-$\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
+subset of comparisons utilized for this analysis. Again, we standardized
+performance within each position before performing the analyses on the
+aggregated data. In this case, the effect of condition did not reach
+statistical significance F(1,149)=3.14, p=.079, $\eta^{2}_G$ = .02.
+Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2test1-1.png)
 
 
 Figure 7: A comparison of throwing location that are identical to those
@@ -1181,10 +1180,10 @@ common finding of training under varied conditions producing worse
 performance during acquisition than training under constant conditions
 (Catalano & Kleiner, 1984; Wrisberg et al., 1987), which has been
 suggested to relate to the subsequent benefits of varied training in
-retention and generalization testing (Soderstrom & Bjork, 2015). However
-our finding of no difference in training performance between constant
-and varied groups has been observed in previous work (Chua et al., 2019;
-Moxley, 1979; Pigott & Shapiro, 1984).
+retention and generalization testing (Soderstrom & Bjork, 2015).
+However, our finding of no difference in training performance between
+constant and varied groups has been observed in previous work (Chua et
+al., 2019; Moxley, 1979; Pigott & Shapiro, 1984).
 
 In the testing phase, our varied group significantly outperformed the
 constant conditions in both a general comparison, and in an analysis
@@ -1234,7 +1233,7 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-taskSpace-1.png)
 
 
 Figure 8: A) A visual representation of the combinations of throw
@@ -1375,7 +1374,7 @@ computed with two c values over similarity computed with a single c
 value. When fit with separate c values, the best fitting c parameters
 for the model consistently optimized such that the c value for the
 varied group (c=.00008) was smaller in magnitude than the c value for
-the constant group(c= .00011). Recall that similarity decreases as a
+the constant group (c= .00011). Recall that similarity decreases as a
 Gaussian function of distance (equation 1 above), and a smaller value of
 c will result in a more gradual drop-off in similarity as the distance
 between training throws and testing solutions increases.
@@ -1455,7 +1454,7 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-Toy-Model-dis-1.png)
 
 
 Figure 9: A simple model depicting the necessity of both of two
@@ -1703,7 +1702,7 @@ where underestimation occurred.
 
 The authors also introduced two new function-learning models. The
 Associative Learning Model (ALM) and the extrapolation-association model
-(EXAM). ALM is a two layer connectionist model adapted from the ALCOVE
+(EXAM). ALM is a two-layer connectionist model adapted from the ALCOVE
 model in the category learning literature (Kruschke, 1992). ALM belongs
 to the general class of radial-basis function neural networks, and can
 be considered a similarity-based model in the sense that the nodes in
@@ -1728,10 +1727,10 @@ tasks with bi-linear, V-shaped input spaces (McDaniel et al., 2009).
 
 <div id="fig-delosh-extrap">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-delosh-extrap-1.png)
 
 
-Figure 10: The generalization patterns of human particpiants observed in
+Figure 10: The generalization patterns of human participants observed in
 DeLosh et al. (1997) (reproduced from Figure 3 in their manuscript).
 Dots represent the average responses of human participants, and solid
 lines represent the true functions. The dashed vertical lines indicate
@@ -1799,12 +1798,17 @@ for both the group level and individual level data.
 
 ### Methods
 
-*Participants* A total of 156 participants were recruited from Indiana
-University Introductory Psychology Courses. Participants were randomly
+*Participants.* A total of 183 participants were initially recruited
+from Indiana University Introductory Psychology Courses. Of these, 27
+participants were excluded from further analysis due to meeting the
+exclusion criteria, resulting in a final sample of 156 participants. The
+exclusion criteria was defined as performance worse (i.e., larger
+deviations) than the condition average in either the training or testing
+stage of the experiment. The remaining participants were randomly
 assigned to one of two training conditions: varied training or constant
 training.
 
-*Task.* The “Hit The Wall” (HTW) visuomotor extrapolation task task was
+*Task.* The “Hit The Wall” (HTW) visuomotor extrapolation task was
 programmed in JavaScript, making use of the
 [phaser.io](https://phaser.io/) game library. The HTW task involved
 launching a projectile such that it would strike the “wall” at the
@@ -1918,7 +1922,7 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-train-dev-1.png)
 
 
 Figure 12: Experiment 1 - Training Stage. Deviations from target band
@@ -1931,7 +1935,7 @@ Table 6: **Experiment 1 - End of training performance**. Comparing final
 training block accuracy in the band common to both groups. The Intercept
 represents the average of the baseline condition (constant training),
 and the conditVaried coefficient reflects the difference between the
-constant and varied groups. A larger positive estimates indicates a
+constant and varied groups. A larger positive estimate indicates a
 greater deviation (lower accuracy) for the varied group. CrI values
 indicate 95% credible intervals. pd is the probability of direction (the
 % of the posterior on the same side of 0 as the coefficient estimate).
@@ -1963,7 +1967,7 @@ and band type (training vs. extrapolation bands), and the interaction
 between the two factors. The Intercept represents the baseline condition
 (constant training & trained bands). Larger coefficients indicate larger
 deviations from the baselines - and a positive interaction coefficient
-indicates disproporionate deviation for the varied condition on the
+indicates disproportionate deviation for the varied condition on the
 extrapolation bands. CrI values indicate 95% credible intervals. pd is
 the probability of direction (the % of the posterior on the same side of
 0 as the coefficient estimate).
@@ -1995,7 +1999,7 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-test-dev-1.png)
 
 
 Figure 13: Experiment 1 Testing Accuracy. A) Empirical Deviations from
@@ -2052,7 +2056,7 @@ sensitivity between bands than the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-test-vx-1.png)
 
 
 Figure 14: Experiment 1. Empirical distribution of velocities produced
@@ -2062,14 +2066,14 @@ correct range for each velocity band.
 </div>
 <div id="fig-e1-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e1-bmm-vx-1.png)
 
 
 Figure 15: Experiment 1 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
 the lines serves as an indicator of how well participants discriminated
 between velocity bands. B) The distribution of slope coefficients for
-each condition. Larger slopes indicates better discrimination between
+each condition. Larger slopes indicate better discrimination between
 target bands. C) Individual participant slopes. Error bars represent 95%
 HDI.
 
@@ -2095,18 +2099,21 @@ encountered by either condition during training.
 
 ### Methods & Procedure
 
-The task and procedure of Experiment 2 was identical to Experiment 1,
-with the exception that the training and testing bands were reversed
-(see **?@fig-design-e2**). The Varied group trained on bands 100-300,
-350-550, 600-800, and the constant group trained on band 600-800. Both
-groups were tested from all six bands. A total of 110 participants
-completed the experiment (Varied: 55, Constant: 55).
+Initially, 131 participants were recruited. After applying the same
+exclusion procedure as in Experiment 1, 21 participants were excluded,
+resulting in a final sample of 110 participants who completed the
+experiment (Varied: 55, Constant: 55). The task and procedure of
+Experiment 2 was identical to Experiment 1, with the exception that the
+training and testing bands were reversed (see **?@fig-design-e2**). The
+Varied group trained on bands 100-300, 350-550, 600-800, and the
+constant group trained on band 600-800. Both groups were tested from all
+six bands.
 
 ### Results
 
 <div id="fig-e2-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-train-dev-1.png)
 
 
 Figure 16: Experiment 2 Training Stage. Deviations from target band
@@ -2179,7 +2186,7 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-test-dev-1.png)
 
 
 Figure 17: Experiment 2 Testing Accuracy. A) Empirical Deviations from
@@ -2226,7 +2233,7 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-test-vx-1.png)
 
 
 Figure 18: Experiment 2. Empirical distribution of velocities produced
@@ -2236,14 +2243,14 @@ correct range for each velocity band.
 </div>
 <div id="fig-e2-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2-bmm-vx-1.png)
 
 
 Figure 19: Experiment 2 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
 the lines serves as an indicator of how well participants discriminated
 between velocity bands. B) The distribution of slope coefficients for
-each condition. Larger slopes indicates better discrimination. C)
+each condition. Larger slopes indicate better discrimination. C)
 Individual participant slopes. Error bars represent 95% HDI.
 
 </div>
@@ -2254,7 +2261,7 @@ Experiment 2 extended the findings of Experiment 1 by examining the
 effects of training variability on extrapolation performance in a
 visuomotor function learning task, but with reversed training and
 testing bands. Similar to Experiment 1, the Varied group exhibited
-poorer performance during training and testing. However unlike
+poorer performance during training and testing. However, unlike
 experiment 1, the Varied and Constant groups did not show a significant
 difference in their discrimination between bands.
 
@@ -2318,7 +2325,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-train-dev-1.png)
 
 
 Figure 20: Experiment 3 training. Deviations from target band during
@@ -2374,7 +2381,7 @@ other interactions were significant.
 ::: -->
 <div id="fig-e3-test-dev">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-test-dev-1.png)
 
 
 Figure 21: Experiment 3 Testing Accuracy. A) Empirical Deviations from
@@ -2431,7 +2438,7 @@ noticeably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-test-vx-1.png)
 
 
 Figure 22: Experiment 3. Empirical distribution of velocities produced
@@ -2444,14 +2451,14 @@ correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e3-bmm-vx-1.png)
 
 
 Figure 23: Experiment 3 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
 the lines serves as an indicator of how well participants discriminated
 between velocity bands. B) The distribution of slope coefficients for
-each condition. Larger slopes indicates better discrimination. C)
+each condition. Larger slopes indicate better discrimination. C)
 Individual participant slopes. Error bars represent 95% HDI.
 
 </div>
@@ -2478,7 +2485,7 @@ but only when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-alm-diagram-1.png)
 
 
 Figure 24: The Associative Learning Model (ALM). The diagram illustrates
@@ -2743,7 +2750,7 @@ model was evaluated on.
 </div>
 <div id="fig-htw-post-dist">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-post-dist-1.png)
 
 
 Figure 25: Posterior Distributions of $c$ and $lr$ parameters. Points
@@ -2755,7 +2762,7 @@ logarithmically.
 </div>
 <div id="fig-htw-resid-pred">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-resid-pred-1.png)
 
 
 Figure 26: Model residuals for each combination of training condition,
@@ -2821,7 +2828,7 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-cm-vx-pat-1.png)
 
 
 Figure 27: Empirical data and Model predictions for mean velocity across
@@ -2833,7 +2840,7 @@ EXAM, alongside the observed data.
 </div>
 <div id="fig-ee-e1">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-ee-e1-1.png)
 
 
 Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
@@ -2848,7 +2855,7 @@ Constant) tended to have smaller model residuals.
 
 To quantitatively assess the differences in performance between models,
 we fit a Bayesian regression model predicting the errors of the
-posterior predictions of each models as a function of the Model (ALM
+posterior predictions of each model as a function of the Model (ALM
 vs. EXAM) and training condition (Constant vs. Varied).
 
 Model errors were significantly lower for EXAM ($\beta$ = -37.54, 95%
@@ -2887,7 +2894,7 @@ evaluated on.
 </div>
 <div id="fig-cm-vx-pat-e2-e3">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
 
 
 Figure 29: Empirical data and Model predictions from Experiment 2 and 3
@@ -2965,7 +2972,7 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-e2_e3_ae-1.png)
 
 
 Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3038,7 +3045,7 @@ fit a given pattern of results.
 
 <div id="fig-htw-best-model">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-best-model-1.png)
 
 
 Figure 31: Difference in model errors for each participant, with models
@@ -3048,7 +3055,7 @@ negative values favor ALM.
 </div>
 <div id="fig-htw-indv-pred">
 
-![](manuscript.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.jpeg)
+![](manuscript_files/figure-commonmark/fig-htw-indv-pred-1.png)
 
 
 Figure 32: Model predictions alongside observed data for a subset of
@@ -3117,14 +3124,14 @@ task (DeLosh et al., 1997; van Dam & Ernst, 2015), although the varied
 training condition of van Dam & Ernst (2015) also exhibited less
 learning, neither of these previous studies observed any difference
 between training conditions in extrapolation to novel items. Like DeLosh
-et al. (1997) , our participants exhibited above chance
+et al. (1997), our participants exhibited above chance
 extrapolation/discrimination of novel items, however they observed no
 difference between any of their three training conditions. A noteworthy
-difference difference between our studies is that DeLosh et al. (1997)
-trained participants with either 8, 20, or 50 unique items (all
-receiving the same total number of training trials). These larger sets
-of unique items, combined with the fact that participants achieved near
-ceiling level performance by the end of training, may have made it more
+difference between our studies is that DeLosh et al. (1997) trained
+participants with either 8, 20, or 50 unique items (all receiving the
+same total number of training trials). These larger sets of unique
+items, combined with the fact that participants achieved near ceiling
+level performance by the end of training, may have made it more
 difficult to observe any between-group differences of training variation
 in their study. van Dam & Ernst (2015) ’s variability manipulation was
 more similar to our own, as they trained participants with either 2 or 5
@@ -3143,7 +3150,7 @@ training variability on visuomotor function learning and extrapolation,
 there are several limitations that should be flagged. First, although
 the constant training group never had experience from a velocity band
 closer to the extrapolation bands than the varied group, they always had
-a three times more trials with the nearest velocity band. Such a
+three times more trials with the nearest velocity band. Such a
 difference may be an unavoidable consequence of a varied vs. constant
 design which matches the total number of training trials between the two
 groups. However, in order to more carefully tease apart the influence of
@@ -3278,8 +3285,8 @@ dimensions of the projectiles velocity (and to a lesser extent, the
 position within the launching box at which the ball was released).
 Conversely the HTW task was influenced to a greater extent by the tasks
 commonly utilized in the function learning literature, wherein the
-correct output respones are determined by a single input dimension.
-In HTW,the relationship between feedback and optimal behavioral
+correct output responses are determined by a single input dimension.
+In HTW, the relationship between feedback and optimal behavioral
 adjustment is also almost perfectly smooth, if participants produce a
 throw that is 100 units too hard, they’ll be told that they were 100
 units away from the target band. Whereas in HTT, the presence of the
@@ -3323,9 +3330,8 @@ and demonstrate the value of combining empirical and computational
 modeling approaches to uncover the cognitive mechanisms that support
 learning and generalization. Future research should continue to
 investigate the complex interplay between task demands, training
-manipulations, and individual differences, with the ultimate goal of
-optimizing educational and training outcomes across a wide range of
-domains.
+manipulations, and individual differences, with the goal of optimizing
+educational and training outcomes across a wide range of domains.
 
    
 
