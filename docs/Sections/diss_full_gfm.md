@@ -1491,23 +1491,37 @@ generalization (c). Furthermore, we showed that the general pattern of
 results from Experiment 2 could be parsimoniously accommodated by an
 instance-based similarity model, but only with the assumption that
 constant and varied participants generalize their training experience to
-different degrees. Our results thus suggest that the benefits of
-variation cannot be explained by the varied-trained participants simply
-covering a broader range of the task space. Rather, the modeling
-suggests that varied participants also learn to adaptively tune their
-generalization function such that throwing locations generalize more
-broadly to one another than they do in the constant condition. A
-learning system could end up adopting a higher c value in the constant
-than variable training conditions by monitoring the trial-by-trial
-variability of the training items. The c parameter would be adapted
-downwards when adjacent training items are dissimilar to each other and
-adapted upwards when adjacent training items are the same. In this
-fashion, contextually appropriate c values could be empirically learned.
-This learning procedure would capture the insight that if a situation
-has a high amount variability, then the learner should be predisposed
-toward thinking that subsequent test items will also show considerable
-variability, in which case generalization gradients should be broad, as
-is achieved by low values for c.
+different degrees.
+
+Our results thus suggest that the benefits of variation cannot be
+explained by the varied-trained participants simply covering a broader
+range of the task space. Rather, the modeling suggests that varied
+participants also learn to adaptively tune their generalization function
+such that throwing locations generalize more broadly to one another than
+they do in the constant condition. A learning system could end up
+adopting a higher c value in the constant than variable training
+conditions by monitoring the trial-by-trial variability of the training
+items. The c parameter would be adapted downwards when adjacent training
+items are dissimilar to each other and adapted upwards when adjacent
+training items are the same. In this fashion, contextually appropriate c
+values could be empirically learned. This learning procedure would
+capture the insight that if a situation has a high amount variability,
+then the learner should be predisposed toward thinking that subsequent
+test items will also show considerable variability, in which case
+generalization gradients should be broad, as is achieved by low values
+for c. Sakamoto et al. (2006) implemented a similar learning mechanism
+for updating the generalization paramater in an exemplar-based model
+(although in their model, a separate generalization parameter is
+assigned to each exemplar). In their experiment, participants were
+trained on a high variability and a low variability category, and the
+dynamically updated generalization parameter was necessary to account
+for broader generalization observed around the high variability category
+when participants were tested with an ambiguous intermediary item. In a
+subsequent work (Sakamoto et al., 2008), the same authors showed that a
+similar learning mechanism could account for the pattern wherein
+participants generalize more broadly around a category when the average
+distance between the category exemplars is larger (however the only
+model tested in this work was a prototype model).
 
 Also of interest is whether the IGAS model can predict the pattern of
 results wherein the varied condition outperforms the constant condition
@@ -1552,7 +1566,7 @@ $e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
 
 </div>
 
-As mentioned above, the idea that learners flexibly adjust their
+As described above, the idea that learners flexibly adjust their
 generalization gradient based on prior experience does have precedent in
 the domains of category learning (Aha & Goldstone, 1992; Briscoe &
 Feldman, 2011; Hahn et al., 2005; Lamberts, 1994; Op de Beeck et al.,
@@ -2339,9 +2353,30 @@ difference in their discrimination between bands.
 
 ## Experiment 3
 
+In Experiment 3, we sought to further explore the generality of the
+findings from the first two experiments by modifying the type of
+feedback provided during training. Specifically, we provided ordinal
+feedback instead of the continuous feedback used in the previous two
+experiments. Ordinal feedback provides learners with directional
+information about the results of their throw (e.g., above the target,
+below the target, or hitting the target) rather than precise numerical
+deviations. This form of feedback resembles many real-world learning
+scenarios, such as a coach instructing an athlete to perform a movement
+using “more force” or “less force”, or a teacher providing letter grades
+rather than numeric scores. Although ordinal feedback provides less
+detailed information per trial, prior research has shown that less
+detailed feedback isn’t necessarily detrimental to learning. For
+example, Cornwall et al. (2022) manipulated whether participants
+received categorical (correct or incorrect) vs. numerical feedback
+(reward points ranging from 50-100). They found that the categorical
+condition produced superior learning, which they explained as arising
+from larger prediction errors. Although we do not make specific
+predictions about the ordinal condition in our study, it serves as a
+manipulation that might influence the learning process.
+
 ### Methods & Procedure
 
-The major adjustment of Experiment 3 is for participants to receive
+The only adjustment of Experiment 3 is for participants to receive
 ordinal feedback during training, in contrast to the continuous feedback
 of the prior experiments. After each training throw, participants are
 informed whether a throw was too soft, too hard, or correct (i.e. within
@@ -3652,6 +3687,15 @@ Cohen, R. G., & Rosenbaum, D. A. (2004). Where grasps are made reveals
 how grasps are planned: Generation and recall of motor plans.
 *Experimental Brain Research*, *157*(4).
 <https://doi.org/10.1007/s00221-004-1862-9>
+
+</div>
+
+<div id="ref-cornwallEffectsCategoricalNumerical2022" class="csl-entry">
+
+Cornwall, A. C., Davis, T., Byrne, K. A., & Worthy, D. A. (2022).
+Effects of categorical and numerical feedback on category learning.
+*Cognition*, *225*, 105163.
+<https://doi.org/10.1016/j.cognition.2022.105163>
 
 </div>
 

@@ -676,9 +676,30 @@ difference in their discrimination between bands.
 
 # Experiment 3
 
+In Experiment 3, we sought to further explore the generality of the
+findings from the first two experiments by modifying the type of
+feedback provided during training. Specifically, we provided ordinal
+feedback instead of the continuous feedback used in the previous two
+experiments. Ordinal feedback provides learners with directional
+information about the results of their throw (e.g., above the target,
+below the target, or hitting the target) rather than precise numerical
+deviations. This form of feedback resembles many real-world learning
+scenarios, such as a coach instructing an athlete to perform a movement
+using “more force” or “less force”, or a teacher providing letter grades
+rather than numeric scores. Although ordinal feedback provides less
+detailed information per trial, prior research has shown that less
+detailed feedback isn’t necessarily detrimental to learning. For
+example, Cornwall et al. (2022) manipulated whether participants
+received categorical (correct or incorrect) vs. numerical feedback
+(reward points ranging from 50-100). They found that the categorical
+condition produced superior learning, which they explained as arising
+from larger prediction errors. Although we do not make specific
+predictions about the ordinal condition in our study, it serves as a
+manipulation that might influence the learning process.
+
 ## Methods & Procedure
 
-The major adjustment of Experiment 3 is for participants to receive
+The only adjustment of Experiment 3 is for participants to receive
 ordinal feedback during training, in contrast to the continuous feedback
 of the prior experiments. After each training throw, participants are
 informed whether a throw was too soft, too hard, or correct (i.e. within
@@ -1723,6 +1744,15 @@ on a graph? Accuracy and bias in the perception of scatterplots.
 Cohen, A. L., Nosofsky, R. M., & Zaki, S. R. (2001). Category
 variability, exemplar similarity, and perceptual classification. *Memory
 & Cognition*, *29*(8), 1165–1175. <https://doi.org/10.3758/BF03206386>
+
+</div>
+
+<div id="ref-cornwallEffectsCategoricalNumerical2022" class="csl-entry">
+
+Cornwall, A. C., Davis, T., Byrne, K. A., & Worthy, D. A. (2022).
+Effects of categorical and numerical feedback on category learning.
+*Cognition*, *225*, 105163.
+<https://doi.org/10.1016/j.cognition.2022.105163>
 
 </div>
 
