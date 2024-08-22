@@ -524,14 +524,24 @@ similarity between training experiences and transfer conditions, while
 also allowing for variability to influence the generalization gradient
 itself.
 
-Project 2 shifted focus to the domain of function learning by employing
-a visuomotor extrapolation task. Across three experiments, we examined
-how constant and varied training regimes affected learning,
-discrimination between stimuli, and the ability to extrapolate to novel
-regions of the function’s input space. To model human performance in
-this task, we fit the influential Associative Learning Model (ALM) and
-the Extrapolation-Association Model (EXAM) to individual participant
-data using advanced Bayesian parameter estimation techniques.
+Project 2 will focus on the domain of function learning and in
+particular the issue of extrapolation. Function learning research
+examines how people acquire and generalize knowledge about continuous
+input-output relationships, and the factors influencing extrapolation to
+novel inputs following an initial learning phase. The domain of function
+learning has yielded influential computational models like the
+Associative Learning Model (ALM) and the Extrapolation-Association Model
+(EXAM) (Busemeyer et al., 1997), which have successfully accounted for
+human learning, interpolation, and extrapolation in numerous
+investigationsMcDaniel & Busemeyer (2005). However, the influence of
+training variability on function learning, particularly in visuomotor
+function learning tasks, remains relatively unexplored. Project 2 of
+this dissertation will address this gap by investigating how constant
+and varied training regimes affect learning, discrimination, and
+extrapolation in a novel visuomotor function learning task. We will
+leverage the ALM and EXAM models, fitted to individual participant data
+using advanced Bayesian techniques, to provide a detailed computational
+account of the observed empirical patterns.
 
 
 
@@ -681,7 +691,9 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-![](full_files/figure-commonmark/fig-toy-model1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
+width="768" />
 
 
 Figure 1: Left panel- Generalization predicted from a simple model that
@@ -895,7 +907,9 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-![](full_files/figure-commonmark/fig-IGAS_Training1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
+width="768" />
 
 
 Figure 3: Training performance for varied and constant participants
@@ -921,7 +935,9 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-![](full_files/figure-commonmark/fig-IGAS_Testing1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
+width="768" />
 
 
 Figure 4: Testing performance for each of the 4 testing positions,
@@ -1076,7 +1092,9 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-![](full_files/figure-commonmark/fig-e2train-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
+width="1056" />
 
 
 Figure 5: Training performance for the six constant conditions, and the
@@ -1115,7 +1133,9 @@ groups.
 
 <div id="fig-e2testa">
 
-![](full_files/figure-commonmark/fig-e2testa-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
+width="1056" />
 
 
 Figure 6: Testing phase performance from each of the six testing
@@ -1208,7 +1228,9 @@ Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-![](full_files/figure-commonmark/fig-e2test1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
+width="768" />
 
 
 Figure 7: A comparison of throwing location that are identical to those
@@ -1305,7 +1327,9 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-![](full_files/figure-commonmark/fig-taskSpace-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
+width="1056" />
 
 
 Figure 8: A) A visual representation of the combinations of throw
@@ -1540,7 +1564,9 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-![](full_files/figure-commonmark/fig-Toy-Model-dis-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
+width="1056" />
 
 
 Figure 9: A simple model depicting the necessity of both of two
@@ -1813,7 +1839,9 @@ tasks with bi-linear, V-shaped input spaces (McDaniel et al., 2009).
 
 <div id="fig-delosh-extrap">
 
-![](full_files/figure-commonmark/fig-delosh-extrap-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
+width="960" />
 
 
 Figure 10: The generalization patterns of human participants observed in
@@ -2008,7 +2036,9 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-![](full_files/figure-commonmark/fig-e1-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
+width="768" />
 
 
 Figure 12: Experiment 1 - Training Stage. Deviations from target band
@@ -2085,7 +2115,9 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-![](full_files/figure-commonmark/fig-e1-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
+width="1056" />
 
 
 Figure 13: Experiment 1 Testing Accuracy. A) Empiricial Deviations from
@@ -2142,7 +2174,9 @@ sensitivity between bands than the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-![](full_files/figure-commonmark/fig-e1-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
+width="1056" />
 
 
 Figure 14: Experiment 1. Empirical distribution of velocities produced
@@ -2152,7 +2186,9 @@ correct range for each velocity band.
 </div>
 <div id="fig-e1-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e1-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
+width="1056" />
 
 
 Figure 15: Experiment 1 Discrimination. A) Conditional effect of
@@ -2199,7 +2235,9 @@ six bands.
 
 <div id="fig-e2-train-dev">
 
-![](full_files/figure-commonmark/fig-e2-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
+width="768" />
 
 
 Figure 16: Experiment 2 Training Stage. Deviations from target band
@@ -2272,7 +2310,9 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-![](full_files/figure-commonmark/fig-e2-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
+width="1056" />
 
 
 Figure 17: Experiment 2 Testing Accuracy. A) Empirical Deviations from
@@ -2319,7 +2359,9 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-![](full_files/figure-commonmark/fig-e2-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
+width="1056" />
 
 
 Figure 18: Experiment 2. Empirical distribution of velocities produced
@@ -2329,7 +2371,9 @@ correct range for each velocity band.
 </div>
 <div id="fig-e2-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e2-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
+width="1056" />
 
 
 Figure 19: Experiment 2 Discrimination. A) Conditional effect of
@@ -2433,7 +2477,9 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-![](full_files/figure-commonmark/fig-e3-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
+width="768" />
 
 
 Figure 20: Experiment 3 training. Deviations from target band during
@@ -2489,7 +2535,9 @@ other interactions were significant.
 ::: -->
 <div id="fig-e3-test-dev">
 
-![](full_files/figure-commonmark/fig-e3-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
+width="1056" />
 
 
 Figure 21: Experiment 3 Testing Accuracy. A) Empirical Deviations from
@@ -2546,7 +2594,9 @@ noticeably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-![](full_files/figure-commonmark/fig-e3-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
+width="1056" />
 
 
 Figure 22: Experiment 3. Empirical distribution of velocities produced
@@ -2559,7 +2609,9 @@ correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e3-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
+width="1056" />
 
 
 Figure 23: Experiment 3 Discrimination. A) Conditional effect of
@@ -2593,7 +2645,9 @@ but only when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-![](full_files/figure-commonmark/fig-alm-diagram-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
+width="768" />
 
 
 Figure 24: The Associative Learning Model (ALM). The diagram illustrates
@@ -2858,7 +2912,9 @@ model was evaluated on.
 </div>
 <div id="fig-htw-post-dist">
 
-![](full_files/figure-commonmark/fig-htw-post-dist-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
+width="960" />
 
 
 Figure 25: Posterior Distributions of $c$ and $lr$ parameters. Points
@@ -2870,7 +2926,9 @@ logarithmically.
 </div>
 <div id="fig-htw-resid-pred">
 
-![](full_files/figure-commonmark/fig-htw-resid-pred-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
+width="1056" />
 
 
 Figure 26: Model residuals for each combination of training condition,
@@ -2936,7 +2994,9 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-![](full_files/figure-commonmark/fig-cm-vx-pat-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
+width="960" />
 
 
 Figure 27: Empirical data and Model predictions for mean velocity across
@@ -2948,7 +3008,9 @@ EXAM, alongside the observed data.
 </div>
 <div id="fig-ee-e1">
 
-![](full_files/figure-commonmark/fig-ee-e1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
+width="960" />
 
 
 Figure 28: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3002,7 +3064,9 @@ evaluated on.
 </div>
 <div id="fig-cm-vx-pat-e2-e3">
 
-![](full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
+width="960" />
 
 
 Figure 29: Empirical data and Model predictions from Experiment 2 and 3
@@ -3080,7 +3144,9 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-![](full_files/figure-commonmark/fig-e2_e3_ae-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
+width="864" />
 
 
 Figure 30: Conditional effects of Model (ALM vs EXAM) and Condition
@@ -3153,7 +3219,9 @@ fit a given pattern of results.
 
 <div id="fig-htw-best-model">
 
-![](full_files/figure-commonmark/fig-htw-best-model-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
+width="1056" />
 
 
 Figure 31: Difference in model errors for each participant, with models
@@ -3163,7 +3231,9 @@ negative values favor ALM.
 </div>
 <div id="fig-htw-indv-pred">
 
-![](full_files/figure-commonmark/fig-htw-indv-pred-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
+width="960" />
 
 
 Figure 32: Model predictions alongside observed data for a subset of
@@ -3250,6 +3320,36 @@ the input shape. This entirely arbitrary mapping also would have
 precluded any sensible “0” point, which may partially explain why
 neither of their training conditions were able to extrapolate linearly
 in the manner observed in the current study or in DeLosh et al. (1997).
+
+To explain our results, we turned to the well established EXAM and ALM
+models. The disproportionate success of EXAM in capturing the
+performance of participants under the constant training condition
+suggests that rule-based extrapolation can emerge even from a limited
+set of training examples. This success hinges on the assumption that
+participants are able to leverage prior knowledge of the zero-point
+reference (Brown & Lacroix, 2017; Kwantes & Neal, 2006). The zero-point
+reference, combined with accurate learning of the single trained
+velocity band enabled EXAM to capture the extrapolation patterns of the
+constant participants. However, it’s important to acknowledge that the
+ALM model provided a better fit for a subset of participants in each of
+our three experiment, highlighting the presence of substantial
+individual differences in generalization patterns.
+
+This finding illustrates the importance of considering task structure
+when evaluating the effects of training variability on generalization
+and extrapolation. Some tasks, like the one in this study, may permit
+the use of zero-point knowledge or other prior information, while others
+may not. For example, a zero point may be less relevant in visuomotor
+tasks with complex rotations (Roller et al., 2001; van Dam & Ernst,
+2015), or in complex sports techniques (North et al., 2019). Future
+research should systematically investigate how different task structures
+interact with training variability to influence learning outcomes and
+generalization abilities, taking into account factors such as the
+availability of prior knowledge, the complexity of the task, and the
+specific learning mechanisms involved. This approach could help
+reconcile seemingly contradictory findings in the literature and provide
+more nuanced guidelines for designing effective training protocols
+across various domains.
 
 *Limitations*
 
@@ -4308,6 +4408,15 @@ Experimental Psychology: General*, *114*, 159–188.
 McCracken, H. D., & Stelmach, G. E. (1977). A Test of the Schema Theory
 of Discrete Motor Learning. *Journal of Motor Behavior*, *9*(3),
 193–201. <https://doi.org/10.1080/00222895.1977.10735109>
+
+</div>
+
+<div id="ref-mcdanielConceptualBasisFunction2005" class="csl-entry">
+
+McDaniel, M. A., & Busemeyer, J. R. (2005). The conceptual basis of
+function learning and extrapolation: Comparison of rule-based and
+associative-based models. *Psychonomic Bulletin & Review*, *12*(1),
+24–42. <https://doi.org/10.3758/BF03196347>
 
 </div>
 

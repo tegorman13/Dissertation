@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/full.html</loc>
-    <lastmod>2024-08-14T03:02:09.147Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/IGAS.html</loc>
+    <lastmod>2024-08-14T00:36:14.086Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW_old.html</loc>
-    <lastmod>2024-05-22T03:16:28.981Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW.html</loc>
+    <lastmod>2024-08-22T21:44:23.672Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/full.html</loc>
+    <lastmod>2024-08-22T22:51:38.786Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/htw_exam.html</loc>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Presentation/slides.html</loc>
-    <lastmod>2024-05-28T14:08:11.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Presentation/slides_revealjs.html</loc>
     <lastmod>2024-05-28T14:08:11.210Z</lastmod>
   </url>
   <url>
@@ -37,8 +37,8 @@
     <lastmod>2024-06-21T21:18:15.829Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/index.html</loc>
-    <lastmod>2024-08-02T14:52:47.968Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/plan.html</loc>
+    <lastmod>2023-10-10T11:50:59.094Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/Discussion.html</loc>
@@ -77,8 +77,8 @@
     <lastmod>2024-04-12T16:51:17.588Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/plan.html</loc>
-    <lastmod>2023-10-10T11:50:59.094Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/revisions.html</loc>
+    <lastmod>2024-08-22T22:51:15.317Z</lastmod>
   </url>
   <url>
     <loc>https://tegorman13.github.io/Dissertation/Sections/pre_sections/1_cover.html</loc>
@@ -101,19 +101,11 @@
     <lastmod>2024-05-18T21:30:22.436Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/IGAS.html</loc>
-    <lastmod>2024-08-14T00:36:14.086Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW_old.html</loc>
+    <lastmod>2024-05-22T03:16:28.981Z</lastmod>
   </url>
   <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/HTW.html</loc>
-    <lastmod>2024-08-14T03:04:33.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/Sections/test_apa.html</loc>
-    <lastmod>2024-06-22T04:23:15.066Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tegorman13.github.io/Dissertation/revisions.html</loc>
-    <lastmod>2024-08-14T03:00:10.952Z</lastmod>
+    <loc>https://tegorman13.github.io/Dissertation/index.html</loc>
+    <lastmod>2024-08-02T14:52:47.968Z</lastmod>
   </url>
 </urlset>

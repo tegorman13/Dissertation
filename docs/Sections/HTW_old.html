@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -322,7 +322,7 @@ window.Quarto = {
 <p><span class="citation" data-cites="carrollFunctionalLearningLearning1963">Carroll (<a href="#ref-carrollFunctionalLearningLearning1963" role="doc-biblioref">1963</a>)</span> conducted the earliest work on function learning. Input stimuli and output responses were both lines of varying length. The correct output response was related to the length of the input line by a linear, quadratic, or random function. Participants in the linear and quadratic performed above chance levels during extrapolation testing, with those in the linear condition performing the best overall. Carroll argued that these results were best explained by a ruled based model wherein learners form an abstract representation of the underlying function. Subsequent work by <span class="citation" data-cites="brehmerHypothesesRelationsScaled1974">Brehmer (<a href="#ref-brehmerHypothesesRelationsScaled1974" role="doc-biblioref">1974</a>)</span>,testing a wider array of functional forms, provided further evidence for superior extrapolation in tasks with linear functions. Brehmer argued that individuals start out with an assumption of a linear function, but given sufficient error will progressively test alternative hypothesis with polynomials of greater degree. <span class="citation" data-cites="kohFunctionLearningInduction1991">Koh &amp; Meyer (<a href="#ref-kohFunctionLearningInduction1991" role="doc-biblioref">1991</a>)</span> employed a visuomotor function learning task, wherein participants were trained on examples from an unknown function relating the length of an input line to the duration of a response (time between keystrokes). In this domain, participants performed best when the relation between line length and response duration was determined by a power, as opposed to linear function. Koh &amp; Meyer developed the log-polynomial adaptive-regression model to account for their results.</p>
 <p>The first significant challenge to the rule-based accounts of function learning was put forth by <span class="citation" data-cites="deloshExtrapolationSineQua1997">DeLosh et al. (<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">1997</a>)</span> . In their task, participants learned to associate stimulus magnitudes with response magnitudes that were related via either linear, exponential, or quadratic function. Participants approached ceiling performance by the end of training in each function condition, and were able to correctly respond in interpolation testing trials. All three conditions demonstrated some capacity for extrapolation, however participants in the linear condition tended to underestimate the true function, while exponential and quadratic participants reliably overestimated the true function on extrapolation trials. Extrapolation and interpolation performance are depicted in <a href="#fig-delosh-extrap" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <p>The authors evaluated both of the rule-based models introduced in earlier research (with some modifications enabling trial-by-trial learning). The polynomial hypothesis testing model <span class="citation" data-cites="carrollFunctionalLearningLearning1963 brehmerHypothesesRelationsScaled1974">(<a href="#ref-brehmerHypothesesRelationsScaled1974" role="doc-biblioref">Brehmer, 1974</a>; <a href="#ref-carrollFunctionalLearningLearning1963" role="doc-biblioref">Carroll, 1963</a>)</span> tended to mimic the true function closely in extrapolation, and thus offered a poor account of the human data. The log-polynomial adaptive regression model <span class="citation" data-cites="kohFunctionLearningInduction1991">(<a href="#ref-kohFunctionLearningInduction1991" role="doc-biblioref">Koh &amp; Meyer, 1991</a>)</span> was able to mimic some of the systematic deviations produced by human subjects, but also predicted overestimation in cases where underestimation occurred.</p>
-<p>The authors also introduced two new function-learning models. The Associative Learning Model (ALM) and the extrapolation-association model (EXAM). ALM is a two layer connectionist model adapted from the ALCOVE model in the category learning literature <span class="citation" data-cites="kruschkeALCOVEExemplarbasedConnectionist1992">(<a href="#ref-kruschkeALCOVEExemplarbasedConnectionist1992" role="doc-biblioref">Kruschke, 1992</a>)</span>. ALM belongs to the general class of radial-basis function neural networks, and can be considered a similarity-based model in the sense that the nodes in the input layer of the network are activated as a function of distance. The EXAM model retains the same similarity based activation and associative learning mechanisms as ALM, while being augmented with a linear rule response mechanism. When presented with novel stimuli, EXAM will retrieve the most similar input-output examples encountered during training, and from those examples compute a local slope. ALM was able to provide a good account of participant training and interpolation data in all three function conditions, however it was unable to extrapolate. EXAM, on the other hand, was able to reproduce both the extrapolation underestimation, as well as the quadratic and exponential overestimation patterns exhibited by the human participants. Subsequent research identified some limitations in EXAM’s ability to account for cases where human participants learn and extrapolate sinusoidal function <span class="citation" data-cites="bottNonmonotonicExtrapolationFunction2004">Bott &amp; Heit (<a href="#ref-bottNonmonotonicExtrapolationFunction2004" role="doc-biblioref">2004</a>)</span> or to scenarios where different functions apply to different regions of the input space <span class="citation" data-cites="kalishPopulationLinearExperts2004">Kalish et al. (<a href="#ref-kalishPopulationLinearExperts2004" role="doc-biblioref">2004</a>)</span>, though EXAM has been shown to provide a good account of human learning and extrapolation in tasks with bi-linear, V shaped input spaces <span class="citation" data-cites="mcdanielPredictingTransferPerformance2009">Mcdaniel et al. (<a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">2009</a>)</span>.</p>
+<p>The authors also introduced two new function-learning models. The Associative Learning Model (ALM) and the extrapolation-association model (EXAM). ALM is a two layer connectionist model adapted from the ALCOVE model in the category learning literature <span class="citation" data-cites="kruschkeALCOVEExemplarbasedConnectionist1992">(<a href="#ref-kruschkeALCOVEExemplarbasedConnectionist1992" role="doc-biblioref">Kruschke, 1992</a>)</span>. ALM belongs to the general class of radial-basis function neural networks, and can be considered a similarity-based model in the sense that the nodes in the input layer of the network are activated as a function of distance. The EXAM model retains the same similarity based activation and associative learning mechanisms as ALM, while being augmented with a linear rule response mechanism. When presented with novel stimuli, EXAM will retrieve the most similar input-output examples encountered during training, and from those examples compute a local slope. ALM was able to provide a good account of participant training and interpolation data in all three function conditions, however it was unable to extrapolate. EXAM, on the other hand, was able to reproduce both the extrapolation underestimation, as well as the quadratic and exponential overestimation patterns exhibited by the human participants. Subsequent research identified some limitations in EXAM’s ability to account for cases where human participants learn and extrapolate sinusoidal function <span class="citation" data-cites="bottNonmonotonicExtrapolationFunction2004">Bott &amp; Heit (<a href="#ref-bottNonmonotonicExtrapolationFunction2004" role="doc-biblioref">2004</a>)</span> or to scenarios where different functions apply to different regions of the input space <span class="citation" data-cites="kalishPopulationLinearExperts2004">Kalish et al. (<a href="#ref-kalishPopulationLinearExperts2004" role="doc-biblioref">2004</a>)</span>, though EXAM has been shown to provide a good account of human learning and extrapolation in tasks with bi-linear, V shaped input spaces <span class="citation" data-cites="mcdanielPredictingTransferPerformance2009">McDaniel et al. (<a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">2009</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-delosh-extrap" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -462,7 +462,7 @@ Figure&nbsp;2: Experiment 1 Design. Constant and Varied participants complete di
 <p>We compared varied and constant performance across two measures, deviation and discrimination. Deviation was quantified as the absolute deviation from the nearest boundary of the velocity band, or set to 0 if the throw velocity fell anywhere inside the target band. Thus, when the target band was 600-800, throws of 400, 650, and 1100 would result in deviation values of 200, 0, and 300, respectively. Discrimination was measured by fitting a linear model to the testing throws of each subjects, with the lower end of the target velocity band as the predicted variable, and the x velocity produced by the participants as the predictor variable. Participants who reliably discriminated between velocity bands tended to have positive slopes with values ~1, while participants who made throws irrespective of the current target band would have slopes ~0.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(test, <span class="st">"dist"</span>,<span class="st">"Deviation"</span>, <span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -632,7 +632,7 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 \end{equation}\]</span>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>test <span class="sc">|&gt;</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> vb, <span class="at">y =</span> dist,<span class="at">fill=</span>condit)) <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"bar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(), <span class="at">fun =</span> mean) <span class="sc">+</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"errorbar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(.<span class="dv">9</span>), <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> .<span class="dv">4</span>, <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span> </span>
@@ -653,7 +653,7 @@ Figure&nbsp;3: E1. Deviations from target band during testing without feedback s
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>modelName <span class="ot">&lt;-</span> <span class="st">"e1_testDistBand_RF_5K"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>e1_distBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(dist <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data=</span>test,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>,modelName)),</span>
@@ -819,7 +819,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 \end{equation}\]</span>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>test <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -837,7 +837,7 @@ Figure&nbsp;4: E1 testing x velocities. Translucent bands with dash lines indica
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(test, <span class="st">"vx"</span>,<span class="st">"X Velocity"</span>, <span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>constant <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span>
@@ -987,7 +987,7 @@ Table&nbsp;3: Testing vx - Empirical Summary
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>e1_vxBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(vx <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">data=</span>test,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>, <span class="st">"e1_testVxBand_RF_5k"</span>)),</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">iter=</span><span class="dv">5000</span>,<span class="at">chains=</span><span class="dv">4</span>,<span class="at">silent=</span><span class="dv">0</span>,</span>
@@ -1127,7 +1127,7 @@ Table&nbsp;4: Experiment 1. Bayesian Mixed Model Predicting Vx as a function of 
 <p>See <a href="#tbl-e1-bmm-vx" class="quarto-xref">Table&nbsp;4</a> for the full model results. The estimated coefficient for training condition (<span class="math inline">\(B\)</span> = 164.05, 95% CrI [45.5, 278.85]) suggests that the varied group tends to produce harder throws than the constant group, but is not in and of itself useful for assessing discrimination. Most relevant to the issue of discrimination is the slope on Velocity Band (<span class="math inline">\(B\)</span> = 0.71, 95% CrI [0.62, 0.8]). Although the median slope does fall underneath the ideal of value of 1, the fact that the 95% credible interval does not contain 0 provides strong evidence that participants exhibited some discrimination between bands. The estimate for the interaction between slope and condition (<span class="math inline">\(B\)</span> = -0.14, 95% CrI [-0.26, -0.01]), suggests that the discrimination was somewhat modulated by training condition, with the varied participants showing less senitivity between vands than the constant condition. This difference is depicted visually in <a href="#fig-e1-bmm-vx" class="quarto-xref">Figure&nbsp;5</a>.@tbl-e1-slope-quartile shows the average slope coefficients for varied and constant participants separately for each quartile. The constant participant participants appear to have larger slopes across quartiles, but the difference between conditions may be less pronounced for the top quartiles of subjects who show the strongest discrimination. Figure <a href="#fig-e1-bmm-bx2" class="quarto-xref">Figure&nbsp;6</a> shows the distributions of slope values for each participant, and the compares the probability density of slope coefficients between training conditions. <a href="#fig-e1-indv-slopes" class="quarto-xref">Figure&nbsp;7</a></p>
 <p>The second model, which focused solely on extrapolation bands, revealed similar patterns. The Velocity Band term (<span class="math inline">\(B\)</span> = 0.5, 95% CrI [0.42, 0.57]) still demonstrates a high degree of discrimination ability. However, the posterior distribution for interaction term (<span class="math inline">\(B\)</span> = -0.07, 95% CrI [-0.17, 0.04] ) does across over 0, suggesting that the evidence for decreased discrimination ability for the varied participants is not as strong when considering only the three extrapolation bands.</p>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>e1_vxBMM <span class="sc">|&gt;</span> <span class="fu">emmeans</span>( <span class="sc">~</span>condit <span class="sc">+</span> bandInt, </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">at =</span> <span class="fu">list</span>(<span class="at">bandInt =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">350</span>, <span class="dv">600</span>, <span class="dv">800</span>, <span class="dv">1000</span>, <span class="dv">1200</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">|&gt;</span> </span>
@@ -1181,7 +1181,7 @@ Figure&nbsp;5: Conditional effect of training condition and Band. Ribbons indica
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>new_data_grid<span class="ot">=</span><span class="fu">map_dfr</span>(<span class="dv">1</span>, <span class="sc">~</span><span class="fu">data.frame</span>(<span class="fu">unique</span>(test[,<span class="fu">c</span>(<span class="st">"id"</span>,<span class="st">"condit"</span>,<span class="st">"bandInt"</span>)]))) <span class="sc">|&gt;</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(id,bandInt) <span class="sc">|&gt;</span> </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">condit_dummy =</span> <span class="fu">ifelse</span>(condit <span class="sc">==</span> <span class="st">"Varied"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) </span>
@@ -1267,7 +1267,7 @@ Table&nbsp;5: Slope coefficients by quartile, per condition
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  indvSlopes <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>rankSlope, <span class="at">x=</span>SlopeInt,<span class="at">fill=</span>condit,<span class="at">color=</span>condit)) <span class="sc">+</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">xmin=</span>SlopeInt.lower , <span class="at">xmax=</span>SlopeInt.upper)) <span class="sc">+</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Estimated Slope"</span>, <span class="at">y=</span><span class="st">"Participant"</span>)  <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>condit)</span>
@@ -1313,7 +1313,7 @@ Figure&nbsp;6: Slope distributions between condition
 <p>test</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>nSbj <span class="ot">&lt;-</span> <span class="dv">3</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>indvDraws  <span class="sc">|&gt;</span> <span class="fu">indv_model_plot</span>(indvSlopes, testAvg, SlopeInt,<span class="at">rank_variable=</span>Slope,<span class="at">n_sbj=</span>nSbj,<span class="st">"max"</span>)</span>
@@ -1469,7 +1469,7 @@ dist_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot band_{ij} + \bet
 \end{equation}\]</span></p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(testE2, <span class="st">"dist"</span>,<span class="st">"Deviation"</span>, <span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>constant <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>varied <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
@@ -1620,7 +1620,7 @@ Table&nbsp;6: Testing Deviation - Empirical Summary
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>testE2 <span class="sc">|&gt;</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> vb, <span class="at">y =</span> dist,<span class="at">fill=</span>condit)) <span class="sc">+</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"bar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(), <span class="at">fun =</span> mean) <span class="sc">+</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"errorbar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(.<span class="dv">9</span>), <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> .<span class="dv">4</span>, <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span> </span>
@@ -1641,7 +1641,7 @@ Figure&nbsp;9: E2. Deviations from target band during testing without feedback s
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>modelName <span class="ot">&lt;-</span> <span class="st">"e2_testDistBand_RF_5K"</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>e2_distBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(dist <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data=</span>testE2,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>,modelName)),</span>
@@ -1806,7 +1806,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 \end{equation}\]</span></p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>testE2 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(id,vb,condit) <span class="sc">|&gt;</span> <span class="fu">plot_distByCondit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -1823,7 +1823,7 @@ Figure&nbsp;10: E2 testing x velocities. Translucent bands with dash lines indic
 </div>
 </div>
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(testE2, <span class="st">"vx"</span>,<span class="st">"X Velocity"</span> ,<span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>constant <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>varied <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1973,7 +1973,7 @@ Table&nbsp;8: Testing vx - Empirical Summary
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>e2_vxBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(vx <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">data=</span>testE2,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>, <span class="st">"e2_testVxBand_RF_5k"</span>)),</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">iter=</span><span class="dv">5000</span>,<span class="at">chains=</span><span class="dv">4</span>,<span class="at">silent=</span><span class="dv">0</span>,</span>
@@ -2042,7 +2042,7 @@ Table&nbsp;9: Experiment 2. Bayesian Mixed Model Predicting Vx as a function of 
 <p>When examining discrimination ability using the model predicting raw x-velocity, the results were less clear than those of the absolute deviation analysis. The slope on Velocity Band (β = 0.71, 95% CrI [0.58, 0.84]) indicates that participants showed good discrimination between bands overall. However, the interaction term suggested this effect was not modulated by training condition (β = -0.06, 95% CrI [-0.24, 0.13]) Thus, while varied training may provide some advantage for accuracy, both training conditions seem to have similar abilities to discriminate between velocity bands.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>e2_vxBMM <span class="sc">|&gt;</span> <span class="fu">emmeans</span>( <span class="sc">~</span>condit <span class="sc">+</span> bandInt, </span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">at =</span> <span class="fu">list</span>(<span class="at">bandInt =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">350</span>, <span class="dv">600</span>, <span class="dv">800</span>, <span class="dv">1000</span>, <span class="dv">1200</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">|&gt;</span></span>
@@ -2085,7 +2085,7 @@ Figure&nbsp;11: Conditional effect of training condition and Band. Ribbons indic
 <p>Descriptive summaries testing deviation data are provided in <a href="#tbl-e3-test-nf-deviation" class="quarto-xref">Table&nbsp;10</a> and <a href="#fig-e3-test-dev" class="quarto-xref">Figure&nbsp;12</a>. To model differences in accuracy between groups, we fit Bayesian mixed effects regression models to the trial level data from the testing phase. The primary model predicted the absolute deviation from the target velocity band (dist) as a function of training condition (condit), target velocity band (band), and their interaction, with random intercepts and slopes for each participant (id).</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>resultOrig <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(testE3 <span class="sc">|&gt;</span> <span class="fu">filter</span>(bandOrder<span class="sc">==</span><span class="st">"Original"</span>), <span class="st">"dist"</span>,<span class="st">"Deviation"</span>, <span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>resultOrig<span class="sc">$</span>constant <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>resultOrig<span class="sc">$</span>varied <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
@@ -2352,7 +2352,7 @@ Table&nbsp;10: Testing Deviation - Empirical Summary
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>testE3 <span class="sc">|&gt;</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> vb, <span class="at">y =</span> dist,<span class="at">fill=</span>condit)) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"bar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(), <span class="at">fun =</span> mean) <span class="sc">+</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"errorbar"</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(.<span class="dv">9</span>), <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> .<span class="dv">4</span>, <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span> </span>
@@ -2373,7 +2373,7 @@ Figure&nbsp;12: e3. Deviations from target band during testing without feedback 
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>modelName <span class="ot">&lt;-</span> <span class="st">"e3_testDistBand_RF_5K"</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>e3_distBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(dist <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data=</span>testE3,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>,modelName)),</span>
@@ -2442,7 +2442,7 @@ Table&nbsp;11: Experiment 3. Bayesian Mixed Model predicting absolute deviation 
 <p>The effect of training condition in Experiment 3 showed a similar pattern to Experiment 2, with the varied group tending to have lower deviation than the constant group (β = -90.65, 95% CrI [-182.79, 3.75]), with 97% of the posterior distribution falling under 0.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>e3_distBMM <span class="sc">|&gt;</span> <span class="fu">emmeans</span>( <span class="sc">~</span>condit <span class="sc">+</span> bandInt, </span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">at =</span> <span class="fu">list</span>(<span class="at">bandInt =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">350</span>, <span class="dv">600</span>, <span class="dv">800</span>, <span class="dv">1000</span>, <span class="dv">1200</span>))) <span class="sc">|&gt;</span></span>
@@ -2478,7 +2478,7 @@ vx_{ij} = \beta_0 + \beta_1 \cdot condit_{ij} + \beta_2 \cdot bandInt_{ij} + \be
 \end{equation}\]</span></p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># testE3 |&gt; filter(bandOrder=="Original")|&gt; group_by(id,vb,condit) |&gt; plot_distByCondit()</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># testE3 |&gt; filter(bandOrder=="Reverse")|&gt; group_by(id,vb,condit) |&gt; plot_distByCondit() +ggtitle("test")</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2502,7 +2502,7 @@ Figure&nbsp;14: e3 testing x velocities. Translucent bands with dash lines indic
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>resultOrig <span class="ot">&lt;-</span> <span class="fu">test_summary_table</span>(testE3 <span class="sc">|&gt;</span> <span class="fu">filter</span>(bandOrder<span class="sc">==</span><span class="st">"Original"</span>), <span class="st">"vx"</span>,<span class="st">"X Velocity"</span>, <span class="at">mfun =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">median =</span> median, <span class="at">sd =</span> sd))</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>resultOrig<span class="sc">$</span>constant <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>resultOrig<span class="sc">$</span>varied <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span>
@@ -2769,7 +2769,7 @@ Table&nbsp;12: Testing vx - Empirical Summary
 </div>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>e3_vxBMM <span class="ot">&lt;-</span> <span class="fu">brm</span>(vx <span class="sc">~</span> condit <span class="sc">*</span> bandInt <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> bandInt<span class="sc">|</span>id),</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">data=</span>testE3,<span class="at">file=</span><span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/model_cache"</span>, <span class="st">"e3_testVxBand_RF_5k"</span>)),</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">iter=</span><span class="dv">5000</span>,<span class="at">chains=</span><span class="dv">4</span>,<span class="at">silent=</span><span class="dv">0</span>,</span>
@@ -2913,7 +2913,7 @@ Kruschke, J. K. (1992). <span>ALCOVE</span>: <span>An</span> exemplar-based conn
 Makowski, D., Ben-Shachar, M. S., &amp; Lüdecke, D. (2019). <span class="nocase">bayestestR</span>: <span>Describing Effects</span> and their <span>Uncertainty</span>, <span>Existence</span> and <span>Significance</span> within the <span>Bayesian Framework</span>. <em>Journal of Open Source Software</em>, <em>4</em>(40), 1541. <a href="https://doi.org/10.21105/joss.01541">https://doi.org/10.21105/joss.01541</a>
 </div>
 <div id="ref-mcdanielPredictingTransferPerformance2009" class="csl-entry" role="listitem">
-Mcdaniel, M. A., Dimperio, E., Griego, J. A., &amp; Busemeyer, J. R. (2009). Predicting transfer performance: <span>A</span> comparison of competing function learning models. <em>Journal of Experimental Psychology. Learning, Memory, and Cognition</em>, <em>35</em>, 173–195. <a href="https://doi.org/10.1037/a0013982">https://doi.org/10.1037/a0013982</a>
+McDaniel, M. A., Dimperio, E., Jacqueline A. Griego, &amp; Busemeyer, J. R. (2009). Predicting transfer performance: <span>A</span> comparison of competing function learning models. <em>Journal of Experimental Psychology. Learning, Memory, and Cognition</em>, <em>35</em>, 173–195. <a href="https://doi.org/10.1037/a0013982">https://doi.org/10.1037/a0013982</a>
 </div>
 <div id="ref-mcdanielEffectsSpacedMassed2013" class="csl-entry" role="listitem">
 McDaniel, M. A., Fadler, C. L., &amp; Pashler, H. (2013). Effects of spaced versus massed training in function learning. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, <em>39</em>(5), 1417–1432. <a href="https://doi.org/10.1037/a0032184">https://doi.org/10.1037/a0032184</a>

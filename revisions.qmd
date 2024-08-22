@@ -15,20 +15,27 @@ toc: true
 
 -----
 
-## Project 2 Takeaways
 
 
 
-### Final paragraph on model implications:
+## Project Comparison
+
+
+
+
+
+
+
+
+
+
+
+## Project 2 implications:
 
 To explain our results, we turned to the well established EXAM and ALM models. The disproportionate success of EXAM in capturing the performance of participants under the constant training condition suggests that rule-based extrapolation can emerge even from a limited set of training examples. This success hinges on the assumption that participants are able to leverage prior knowledge of the zero-point reference [@brownUnderestimationLinearFunction2017; @kwantesWhyPeopleUnderestimate2006]. The zero-point reference, combined with accurate learning of the single trained velocity band enabled EXAM to capture the extrapolation patterns of the constant participants. However, it's important to acknowledge that the ALM model provided a better fit for a subset of participants in each of our three experiment, highlighting the presence of substantial individual differences in generalization patterns. 
 
-This finding illustrates the importance of considering task structure when evaluating the effects of training variability on generalization and extrapolation. Some tasks, like the one in this study, may permit the use of zero-point knowledge or other prior information, while others may not. For example, a zero point may be less relevant in visuomotor tasks with complex rotations [@vanDamMappingShapeVisuomotor2015; @rollerVariablePracticeLenses2001], or in complex sports techniques [@northEffectConsistentVaried2019]. Future research should systematically investigate how different task structures interact with training variability to influence learning outcomes and generalization abilities, taking into account factors such as the availability of prior knowledge, the complexity of the task, and the specific learning mechanisms involved. This approach could help reconcile seemingly contradictory findings in the literature and provide more nuanced guidelines for designing effective training protocols across various domains.
+This finding illustrates the importance of considering task structure when evaluating the effects of training variability on generalization and extrapolation. Some tasks, like the one in this study, may permit the use of zero-point knowledge or other prior information, while others may not. For example, a zero point may be less relevant in visuomotor tasks with complex rotations [@vandamMappingShapeVisuomotor2015; @rollerVariablePracticeLenses2001], or in complex sports techniques [@northEffectConsistentVaried2019]. Future research should systematically investigate how different task structures interact with training variability to influence learning outcomes and generalization abilities, taking into account factors such as the availability of prior knowledge, the complexity of the task, and the specific learning mechanisms involved. This approach could help reconcile seemingly contradictory findings in the literature and provide more nuanced guidelines for designing effective training protocols across various domains.
 
-
-
-
- 
 
 
 
@@ -102,7 +109,7 @@ This finding illustrates the importance of considering task structure when evalu
 ## Foreshadowing function learning literature
 
 
-Project 2 will focus on the domain of function learning and in particular the issue of extrapolation. Function learning research examines how people acquire and generalize knowledge about continuous input-output relationships, and the factors influencing extrapolation to novel inputs following an initial learning phase. The domain of function learning has yielded influential computational models like the Associative Learning Model (ALM) and the Extrapolation-Association Model (EXAM) [ @busemeyerLearningFunctionalRelations1997], which have successfully accounted for human learning, interpolation, and extrapolation in numerous investigations[@deloshExtrapolationSineQua1997 @mcdanielConceptualBasisFunction2005; @mcdanielPredictingTransferPerformance2009]. However, the influence of training variability on function learning, particularly in visuomotor function learning tasks, remains relatively unexplored. Project 2 of this dissertation will address this gap by investigating how constant and varied training regimes affect learning, discrimination, and extrapolation in a novel visuomotor function learning task. We will leverage the ALM and EXAM models, fitted to individual participant data using advanced Bayesian techniques, to provide a detailed computational account of the observed empirical patterns.
+Project 2 will focus on the domain of function learning and in particular the issue of extrapolation. Function learning research examines how people acquire and generalize knowledge about continuous input-output relationships, and the factors influencing extrapolation to novel inputs following an initial learning phase. The domain of function learning has yielded influential computational models like the Associative Learning Model (ALM) and the Extrapolation-Association Model (EXAM) [ @busemeyerLearningFunctionalRelations1997], which have successfully accounted for human learning, interpolation, and extrapolation in numerous investigations[@deloshExtrapolationSineQua1997; @mcdanielConceptualBasisFunction2005; @mcdanielPredictingTransferPerformance2009]. However, the influence of training variability on function learning, particularly in visuomotor function learning tasks, remains relatively unexplored. Project 2 of this dissertation will address this gap by investigating how constant and varied training regimes affect learning, discrimination, and extrapolation in a novel visuomotor function learning task. We will leverage the ALM and EXAM models, fitted to individual participant data using advanced Bayesian techniques, to provide a detailed computational account of the observed empirical patterns.
 
 
 

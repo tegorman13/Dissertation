@@ -1578,6 +1578,36 @@ precluded any sensible “0” point, which may partially explain why
 neither of their training conditions were able to extrapolate linearly
 in the manner observed in the current study or in DeLosh et al. (1997).
 
+To explain our results, we turned to the well established EXAM and ALM
+models. The disproportionate success of EXAM in capturing the
+performance of participants under the constant training condition
+suggests that rule-based extrapolation can emerge even from a limited
+set of training examples. This success hinges on the assumption that
+participants are able to leverage prior knowledge of the zero-point
+reference (Brown & Lacroix, 2017; Kwantes & Neal, 2006). The zero-point
+reference, combined with accurate learning of the single trained
+velocity band enabled EXAM to capture the extrapolation patterns of the
+constant participants. However, it’s important to acknowledge that the
+ALM model provided a better fit for a subset of participants in each of
+our three experiment, highlighting the presence of substantial
+individual differences in generalization patterns.
+
+This finding illustrates the importance of considering task structure
+when evaluating the effects of training variability on generalization
+and extrapolation. Some tasks, like the one in this study, may permit
+the use of zero-point knowledge or other prior information, while others
+may not. For example, a zero point may be less relevant in visuomotor
+tasks with complex rotations (Roller et al., 2001; van Dam & Ernst,
+2015), or in complex sports techniques (North et al., 2019). Future
+research should systematically investigate how different task structures
+interact with training variability to influence learning outcomes and
+generalization abilities, taking into account factors such as the
+availability of prior knowledge, the complexity of the task, and the
+specific learning mechanisms involved. This approach could help
+reconcile seemingly contradictory findings in the literature and provide
+more nuanced guidelines for designing effective training protocols
+across various domains.
+
 *Limitations*
 
 While the present study provides valuable insights into the influence of
@@ -1917,6 +1947,16 @@ Hold-out strategy for selecting learning models: Application to
 categorization subjected to presentation orders. *Journal of
 Mathematical Psychology*, *109*, 102691.
 <https://doi.org/10.1016/j.jmp.2022.102691>
+
+</div>
+
+<div id="ref-northEffectConsistentVaried2019" class="csl-entry">
+
+North, J. S., Bezodis, N. E., Murphy, C. P., Runswick, O. R., Pocock,
+C., & Roca, A. (2019). The effect of consistent and varied
+follow-through practice schedules on learning a table tennis backhand.
+*Journal of Sports Sciences*, *37*(6), 613–620.
+<https://doi.org/10.1080/02640414.2018.1522683>
 
 </div>
 

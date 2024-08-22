@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -250,7 +250,7 @@ window.Quarto = {
 
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load and view data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse,patchwork,here, pander, latex2exp, flextable)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">walk</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="fu">c</span>(<span class="st">"Functions/Display_Functions.R"</span>, <span class="st">"Functions/alm_core.R"</span>,<span class="st">"Functions/misc_model_funs.R"</span>)),source)</span>
@@ -282,7 +282,7 @@ window.Quarto = {
 </div>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">alm_plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -386,7 +386,7 @@ Table&nbsp;1: ALM &amp; EXAM Equations
 </section>
 <section id="model-fitting-and-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="model-fitting-and-comparison">Model Fitting and Comparison</h2>
-<p>Following the procedure used by <span class="citation" data-cites="mcdanielPredictingTransferPerformance2009">Mcdaniel et al. (<a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">2009</a>)</span>, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models were fit to the aggregated participant data by minimizing the root-mean squared deviation (RMSE). Because ALM has been shown to do poorly at accounting for human patterns extrapolation <span class="citation" data-cites="deloshExtrapolationSineQua1997">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>)</span>, we will also generate predictions from the EXAM model for the testing stage. EXAM which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.</p>
+<p>Following the procedure used by <span class="citation" data-cites="mcdanielPredictingTransferPerformance2009">McDaniel et al. (<a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">2009</a>)</span>, we will assess the ability of both ALM and EXAM to account for the empirical data when fitting the models to 1) only the training data, and 2) both training and testing data. Models were fit to the aggregated participant data by minimizing the root-mean squared deviation (RMSE). Because ALM has been shown to do poorly at accounting for human patterns extrapolation <span class="citation" data-cites="deloshExtrapolationSineQua1997">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>)</span>, we will also generate predictions from the EXAM model for the testing stage. EXAM which operates identically to ALM during training, but includes a linear extrapolation mechanism for generating novel responses during testing.</p>
 <p>For the hybrid model, predictions are computed by first generating separate predictions from ALM and EXAM, and then combining them using the following equation: <span class="math inline">\(\hat{y} = (1 - w) \cdot alm.pred + w \cdot exam.pred\)</span>. For the grid search, the weight parameter is varied from 0 to 1, and the resulting RMSE is recorded.</p>
 <p>Each model was fit to the data in 3 different ways. 1) To just the testing data, 2) Both the training and testing data, 3) Only the training data. In all cases, the model only updates its weights during the training phase, and the weights are frozen during the testing phase. In all cases, only the ALM model generates predictions during the training phase. For the testing phase, all 3 models are used to generate predictions.</p>
 <div style="page-break-after: always;"></div>
@@ -397,7 +397,7 @@ Table&nbsp;2: Fit Parameters and Model RMSE. The Test_RMSE column is the main pe
 </figcaption>
 <div aria-describedby="tbl-e1-cogmodel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: body-outset-right</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -439,7 +439,7 @@ Table&nbsp;2: Fit Parameters and Model RMSE. The Test_RMSE column is the main pe
 <h3 class="anchored" data-anchor-id="testing-observations-vs.-predictions">Testing Observations vs.&nbsp;Predictions</h3>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tvte<span class="ot">&lt;-</span> <span class="fu">pluck</span>(a_te_v, <span class="st">"test"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Fit_Method=</span><span class="st">"Test Only"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">ALM=</span>pred,<span class="at">Observed=</span>y) <span class="sc">%&gt;%</span> </span>
@@ -495,7 +495,7 @@ Table&nbsp;3: Model Perforamnce - averaged over all X values/Bands. ME=Mean Aver
 </figcaption>
 <div aria-describedby="tbl-e1-meanPreds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>allPreds <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">Error=</span><span class="fu">mean</span>(Error), <span class="at">Abs_Error=</span><span class="fu">sqrt</span>(<span class="fu">mean</span>(Abs_Error))) <span class="sc">|&gt;</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Fit_Method=</span><span class="fu">factor</span>(Fit_Method, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"Test Only"</span>, <span class="st">"Test &amp; Train"</span>, <span class="st">"Train Only"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabulator</span>(<span class="at">rows=</span><span class="fu">c</span>(<span class="st">"Fit_Method"</span>, <span class="st">"Model"</span>), <span class="at">columns=</span><span class="fu">c</span>(<span class="st">"Group"</span>), </span>
@@ -511,7 +511,7 @@ Table&nbsp;3: Model Perforamnce - averaged over all X values/Bands. ME=Mean Aver
 <h2 class="anchored" data-anchor-id="varied-testing-predictions">Varied Testing Predictions</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: screen-inset-right</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="do">####</span></span>
@@ -553,7 +553,7 @@ Table&nbsp;4: Varied group - mean model predictions vs.&nbsp;observations. Extra
 </figcaption>
 <div aria-describedby="tbl-e1-predsV-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: screen-inset-right</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -621,7 +621,7 @@ Table&nbsp;4: Varied group - mean model predictions vs.&nbsp;observations. Extra
 </div>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(tvte, <span class="at">caption=</span><span class="st">"Varied fit to test only"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(tvtetr,<span class="at">caption=</span><span class="st">"Varied fit to train and test"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(tvtr,<span class="at">caption=</span><span class="st">"Varied fit to train only"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -632,7 +632,7 @@ Table&nbsp;4: Varied group - mean model predictions vs.&nbsp;observations. Extra
 <h2 class="anchored" data-anchor-id="constant-testing-predictions">Constant Testing Predictions</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: screen-inset-right</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="do">####</span></span>
@@ -674,7 +674,7 @@ Table&nbsp;5: Constant group - mean model predictions vs.&nbsp;observations. The
 </figcaption>
 <div aria-describedby="tbl-e1-predsC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Display code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">##| column: screen-inset-right</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -743,7 +743,7 @@ DeLosh, E. L., McDaniel, M. A., &amp; Busemeyer, J. R. (1997). Extrapolation: <s
 Kruschke, J. K. (1992). <span>ALCOVE</span>: <span>An</span> exemplar-based connectionist model of <span>Category Learning</span>. <em>Psychological Review</em>, <em>99</em>(1). <a href="https://doi.org/10.1037/0033-295X.99.1.22">https://doi.org/10.1037/0033-295X.99.1.22</a>
 </div>
 <div id="ref-mcdanielPredictingTransferPerformance2009" class="csl-entry" role="listitem">
-Mcdaniel, M. A., Dimperio, E., Griego, J. A., &amp; Busemeyer, J. R. (2009). Predicting transfer performance: <span>A</span> comparison of competing function learning models. <em>Journal of Experimental Psychology. Learning, Memory, and Cognition</em>, <em>35</em>, 173–195. <a href="https://doi.org/10.1037/a0013982">https://doi.org/10.1037/a0013982</a>
+McDaniel, M. A., Dimperio, E., Jacqueline A. Griego, &amp; Busemeyer, J. R. (2009). Predicting transfer performance: <span>A</span> comparison of competing function learning models. <em>Journal of Experimental Psychology. Learning, Memory, and Cognition</em>, <em>35</em>, 173–195. <a href="https://doi.org/10.1037/a0013982">https://doi.org/10.1037/a0013982</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
