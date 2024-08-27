@@ -150,13 +150,13 @@ Future work could explore extending ALM and EXAM, which have traditionally been 
 
 
 
-<details>
+<details class="relevant-callout">
 <summary>relevant existing content 1 [link](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Our%20modelling%20approach,of%20Knowledge%20II.){target="_blank"}</summary>
 > Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as points in a multidimensional space of all of the attributes that define a category item (e.g., size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g., movement force, velocity, angle, posture) in addition to the decision and response time measures that typically exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor instance is a fundamental question beyond the scope of the current work – though as described in the introduction there is some evidence in support of this idea (Chamberlin & Magill, 1992a; Crump & Logan, 2010; Hommel, 1998; Meigh et al., 2018; Poldrack et al., 1999). A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues (R. G. Cohen & Rosenbaum, 2004; Rosenbaum et al., 1995). Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.
 </details>
 
 
-<details>
+<details class="relevant-callout">
 <summary>relevant existing content 2 [link](https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli.){target="_blank"}\
 </summary>
 
