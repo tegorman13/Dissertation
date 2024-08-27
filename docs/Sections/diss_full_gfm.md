@@ -70,7 +70,7 @@ Thomas E. Gorman
   - [Empirical and Modeling Summary](#empirical-and-modeling-summary)
   - [Differences between the two
     Projects](#differences-between-the-two-projects)
-    - [Conclusion](#conclusion-1)
+  - [Conclusion](#conclusion-1)
 - [Appendix](#appendix)
 - [References](#references)
 
@@ -533,15 +533,16 @@ learning has yielded influential computational models like the
 Associative Learning Model (ALM) and the Extrapolation-Association Model
 (EXAM) (Busemeyer et al., 1997), which have successfully accounted for
 human learning, interpolation, and extrapolation in numerous
-investigationsMcDaniel & Busemeyer (2005). However, the influence of
-training variability on function learning, particularly in visuomotor
-function learning tasks, remains relatively unexplored. Project 2 of
-this dissertation will address this gap by investigating how constant
-and varied training regimes affect learning, discrimination, and
-extrapolation in a novel visuomotor function learning task. We will
-leverage the ALM and EXAM models, fitted to individual participant data
-using advanced Bayesian techniques, to provide a detailed computational
-account of the observed empirical patterns.
+investigations(DeLosh et al., 1997; McDaniel et al., 2009; McDaniel &
+Busemeyer, 2005). However, the influence of training variability on
+function learning, particularly in visuomotor function learning tasks,
+remains relatively unexplored. Project 2 of this dissertation will
+address this gap by investigating how constant and varied training
+regimes affect learning, discrimination, and extrapolation in a novel
+visuomotor function learning task. We will leverage the ALM and EXAM
+models, fitted to individual participant data using advanced Bayesian
+techniques, to provide a detailed computational account of the observed
+empirical patterns.
 
 
 
@@ -1411,7 +1412,7 @@ the task itself, participants are also adjusting how generalizable their
 experience should be. Varied versus constant participants may be
 expected to learn to generalize their experience to different degrees.
 To accommodate this difference, the generalization parameter of the
-instance-based model (in the present case, the c parameter) can be
+instance-based model (in the present case, the $c$ parameter) can be
 allowed to vary between the two groups to reflect the tendency of
 learners to adaptively tune the extent of their generalization. One
 specific hypothesis is that people adaptively set a value of c to fit
@@ -1443,7 +1444,7 @@ Linear models 1 and 3 both show that similarity is a significant
 predictor of testing performance (p\<.01). Of greater interest is the
 difference between linear model 2, in which similarity is computed from
 a single c value fit from all participants (Similarity1c), with linear
-model 4, which fits the c parameter separately between groups
+model 4, which fits the $c$ parameter separately between groups
 (Similarity2c). In linear model 2, the effect of training group remains
 significant when controlling for Similarity1c (p\<.01), with the varied
 group still performing significantly better. However, in linear model 4
@@ -1467,7 +1468,7 @@ in R, we compared BIC values between linear model 1 (BIC=14604.00) and
 linear model 3 (BIC = 14587.64). The lower BIC value of model 3 suggests
 a modest advantage for predicting performance using a similarity measure
 computed with two c values over similarity computed with a single c
-value. When fit with separate c values, the best fitting c parameters
+value. When fit with separate c values, the best fitting $c$ parameters
 for the model consistently optimized such that the c value for the
 varied group (c=.00008) was smaller in magnitude than the c value for
 the constant group (c= .00011). Recall that similarity decreases as a
@@ -1525,27 +1526,28 @@ such that throwing locations generalize more broadly to one another than
 they do in the constant condition. A learning system could end up
 adopting a higher c value in the constant than variable training
 conditions by monitoring the trial-by-trial variability of the training
-items. The c parameter would be adapted downwards when adjacent training
-items are dissimilar to each other and adapted upwards when adjacent
-training items are the same. In this fashion, contextually appropriate c
-values could be empirically learned. This learning procedure would
-capture the insight that if a situation has a high amount variability,
-then the learner should be predisposed toward thinking that subsequent
-test items will also show considerable variability, in which case
-generalization gradients should be broad, as is achieved by low values
-for c. Sakamoto et al. (2006) implemented a similar learning mechanism
-for updating the generalization paramater in an exemplar-based model
-(although in their model, a separate generalization parameter is
-assigned to each exemplar). In their experiment, participants were
-trained on a high variability and a low variability category, and the
-dynamically updated generalization parameter was necessary to account
-for broader generalization observed around the high variability category
-when participants were tested with an ambiguous intermediary item. In a
-subsequent work (Sakamoto et al., 2008), the same authors showed that a
-similar learning mechanism could account for the pattern wherein
-participants generalize more broadly around a category when the average
-distance between the category exemplars is larger (however the only
-model tested in this work was a prototype model).
+items. The $c$ parameter would be adapted downwards when adjacent
+training items are dissimilar to each other and adapted upwards when
+adjacent training items are the same. In this fashion, contextually
+appropriate c values could be empirically learned. This learning
+procedure would capture the insight that if a situation has a high
+amount variability, then the learner should be predisposed toward
+thinking that subsequent test items will also show considerable
+variability, in which case generalization gradients should be broad, as
+is achieved by low values for c. Sakamoto et al. (2006) implemented a
+similar learning mechanism for updating the generalization paramater in
+an exemplar-based model (although in their model, a separate
+generalization parameter is assigned to each exemplar). In their
+experiment, participants were trained on a high variability and a low
+variability category, and the dynamically updated generalization
+parameter was necessary to account for broader generalization observed
+around the high variability category when participants were tested with
+an ambiguous intermediary item. In a subsequent work (Sakamoto et al.,
+2008), the same authors showed that a similar learning mechanism could
+account for the pattern wherein participants generalize more broadly
+around a category when the average distance between the category
+exemplars is larger (however the only model tested in this work was a
+prototype model).
 
 Also of interest is whether the IGAS model can predict the pattern of
 results wherein the varied condition outperforms the constant condition
@@ -2920,8 +2922,8 @@ width="960" />
 Figure 25: Posterior Distributions of $c$ and $lr$ parameters. Points
 represent median values, thicker intervals represent 66% credible
 intervals and thin intervals represent 95% credible intervals around the
-median. Note that the y-axes of the plots for the c parameter are scaled
-logarithmically.
+median. Note that the y-axes of the plots for the $c$ parameter are
+scaled logarithmically.
 
 </div>
 <div id="fig-htw-resid-pred">
@@ -3446,7 +3448,7 @@ behavior in numerous studies over the past 25 years (Brown & Lacroix,
 2017; DeLosh et al., 1997; Kane & Broomell, 2020; H. Kelley & Busemeyer,
 2008; Kwantes et al., 2012; McDaniel et al., 2009; Von Helversen &
 Rieskamp, 2010). The present work presents the first application of
-these models to to the study of training variability in a visuomotor
+these models to the study of training variability in a visuomotor
 function learning task. We fit both models to individual participant
 data, using a form of simulation-based Bayesian parameter estimation
 that allowed us to generate and compare the full posterior predictive
@@ -3466,8 +3468,8 @@ detrimental to performance in simple extrapolation tasks.
 
 The HTT and HTW tasks differ across numerous dimensions that may be
 relevant to the opposing patterns observed in the two projects (see
-<a href="#tbl-task-diff" class="quarto-xref">Table 19</a> provides for a
-detailed comparison of the two tasks).
+<a href="#tbl-task-diff" class="quarto-xref">Table 19</a> for a detailed
+comparison of the two tasks).
 
 In HTT, the salient perceptual elements of the task (i.e. the launching
 box, target and barrier) are subject to variation (i.e. different
@@ -3520,7 +3522,47 @@ Table 19: Comparison of the tasks in Project 1 (HTT) and Project 2
 
 </div>
 
-### Conclusion
+It is important to note that while both projects utilize computational
+models, direct comparisons are complicated by the distinct purposes and
+structures of the models employed in each project. The IGAS model of
+Project 1 serves as a descriptive measurement model, capturing the
+similarity between training throws and testing conditions. In contrast,
+the ALM and EXAM models of Project 2 are full process models, capable of
+generating exact predictions for both learning and testing stages. The
+difference is also reflected in the interpretion of the generalization
+parameter ($c$) across the models of the two projects. In IGAS, $c$
+moderates the similarity between executed throws and subsequent testing
+solutions, while in ALM and EXAM, $c$ governs the extent to which the
+perceived stimuli activate the input layer nodes. Despite these
+differences, insights from ALM/EXAM, particularly the role of zero-point
+knowledge, may offer potential explanations for the contrasting
+empirical results. Particularly, EXAM’s reliance on zero-point knowledge
+in the simpler HTW task may explain why constant training was more
+effective in Project 2, while the lack of a clear zero-point reference
+in the more complex HTT task of Project 1 may have increased the value
+of varied training. This suggests that the benefits of variability
+depend critically on how task structure interacts with prior knowledge
+and the learner’s capacity to leverage such knowledge for
+generalization.
+
+Future work could explore extending ALM and EXAM, which have
+traditionally been applied to one-dimensional function learning tasks,
+to more complex motor tasks such as HTT. The neural network structure of
+ALM could be adapted to handle 2D input by utilizing a 2D grid of input
+nodes, allowing the model to learn mappings between 2D throwing
+velocities and desired outcomes. This would allow the model to process
+the more complex spatial information inherent in tasks like HTT.
+Furthermore, the output layers of ALM/EXAM could be expanded to express
+more complex motor outputs in addition to velocity, such as the
+locations of grabbing and releasing the projectile or other parameters
+defining the unique trajectories produced. In addition to allowing the
+models to be applied to more complex tasks, these modifications could
+enable researchers to investigate how perceptual similarity (i.e., the
+similarity of stimuli) and motoric similarity (i.e., the similarity of
+behavioral actions) may separately and jointly influence learning and
+generalization.
+
+## Conclusion
 
 In summary, this dissertation provides a comprehensive examination of
 the effects of training variability on learning and generalization in

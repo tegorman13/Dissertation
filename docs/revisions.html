@@ -87,6 +87,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="Assets/Style/calloutTG.css">
 </head>
@@ -184,7 +213,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#primary-issues" id="toc-primary-issues" class="nav-link active" data-scroll-target="#primary-issues">Primary Issues</a></li>
-  <li><a href="#project-comparison" id="toc-project-comparison" class="nav-link" data-scroll-target="#project-comparison">Project Comparison</a></li>
+  <li><a href="#project-model-comparisondiscussion" id="toc-project-model-comparisondiscussion" class="nav-link" data-scroll-target="#project-model-comparisondiscussion">Project Model Comparison/Discussion</a></li>
   <li><a href="#project-2-implications" id="toc-project-2-implications" class="nav-link" data-scroll-target="#project-2-implications">Project 2 implications:</a></li>
   <li><a href="#distinction-between-experienced-stimulii-and-behavioral-action" id="toc-distinction-between-experienced-stimulii-and-behavioral-action" class="nav-link" data-scroll-target="#distinction-between-experienced-stimulii-and-behavioral-action">Distinction between experienced stimulii and behavioral action</a></li>
   <li><a href="#learning-c" id="toc-learning-c" class="nav-link" data-scroll-target="#learning-c">Learning c</a></li>
@@ -232,9 +261,12 @@ div.csl-indent {
 </li>
 </ol>
 <hr>
+<p><span class="math inline">\(c\)</span> vs.&nbsp;<em>c</em></p>
 </section>
-<section id="project-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="project-comparison">Project Comparison</h2>
+<section id="project-model-comparisondiscussion" class="level2">
+<h2 class="anchored" data-anchor-id="project-model-comparisondiscussion">Project Model Comparison/Discussion</h2>
+<p>It is important to note that while both projects utilize computational models, direct comparisons are complicated by the distinct purposes and structures of the models employed in each project. The IGAS model of Project 1 serves as a descriptive measurement model, capturing the similarity between training throws and testing conditions. In contrast, the ALM and EXAM models of Project 2 are full process models, capable of generating exact predictions for both learning and testing stages. The difference is also reflected in the interpretion of the generalization parameter (<span class="math inline">\(c\)</span>) across the models of the two projects. In IGAS, <span class="math inline">\(c\)</span> moderates the similarity between executed throws and subsequent testing solutions, while in ALM and EXAM, <span class="math inline">\(c\)</span> governs the extent to which the perceived stimuli activate the input layer nodes. Despite these differences, insights from ALM/EXAM, particularly the role of zero-point knowledge, may offer potential explanations for the contrasting empirical results. Particularly, EXAM’s reliance on zero-point knowledge in the simpler HTW task may explain why constant training was more effective in Project 2, while the lack of a clear zero-point reference in the more complex HTT task of Project 1 may have increased the value of varied training. This suggests that the benefits of variability depend critically on how task structure interacts with prior knowledge and the learner’s capacity to leverage such knowledge for generalization.</p>
+<p>Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization.</p>
 </section>
 <section id="project-2-implications" class="level2">
 <h2 class="anchored" data-anchor-id="project-2-implications">Project 2 implications:</h2>

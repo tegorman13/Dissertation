@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-08-22">
+<meta name="dcterms.date" content="2024-08-27">
 
 <title>General Discussion – Dissertation</title>
 <style>
@@ -88,6 +88,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../Assets/Style/calloutTG.css">
 </head>
@@ -198,7 +227,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 22, 2024</p>
+      <p class="date">August 27, 2024</p>
     </div>
   </div>
   
@@ -217,11 +246,11 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="empirical-and-modeling-summary">Empirical and Modeling Summary</h2>
 <p>Across both projects, we investigated the influence of training variability on learning and generalization in computerized visuomotor skill learning, and function learning tasks. In project 1 (HTT), experiments 1 and 2 demonstrated that varied training led to superior testing performance compared to constant training. In Experiment 1, the varied group even outperformed the constant group even when testing from the constant groups trained position. In contrast, Project 2 (HTW) found the opposite pattern - the varied training groups exhibited poorer performance than the constant groups, both in terms of training accuracy, accuracy in extrapolation testing, and, in a subset of the experiments, the varied group showed a diminished ability to discriminate between bands. This detrimental effect of variability was observed across three experiments, with the exception of the reverse order condition in Experiment 3, where the varied group was able to match the constant group’s performance.</p>
 <p>Both projects also included computational modeling componenents. In Project 1, the IGAS model was introduced as a means of addressing the lack of control for similarity between training and testing conditions common to previous work in the “benefits of variability” literature. The IGAS model provides a theoretically motivated method of quantifying the similarity between training experience and testing conditions. The resulting similarity metric (i.e.&nbsp;our 1c-similarity) is shown to be a significant predictor of testing performance on its own, and when added as a covariate to the statistical model used to compare the constant and varied training groups. We then showed the group-level effect of training variability on testing performance can be accounted for with the additional assumption that training variability influences the generalization gradient. The contribution of the IGAS model was thus twofold:&nbsp; 1) providing a theoretically justifiable method of quantifying/controlling for similarity between training and testing, and 2) demonstrating the viability of a flexible-similarity based generalization account for the empirically observed benefit of variability in our task. Although similar approaches have been employed in other domains, both contributions are novel additions to the large body of research assessing the effect of constant vs.&nbsp;varied training manipulations in visuomotor skill tasks.</p>
-<p>Although theoretically motivated, the IGAS model of Project 1 is best categorized as a descriptive measurement-model. Sufficient to account for group differences, but lacking the machinery necessary to provide a full process-level account of how the empirical quantities of interest are generated. In contrast, Project 2 (HTW) implemented a more robust computational modeling approach, implementing and comparing full process models (ALM &amp; EXAM), capable of generating predictions for both the learning and testing stages of the experiment. ALM and EXAM have been used as models of function learning, cue judgement, and forecasting behavior in numerous studies over the past 25 years <span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielPredictingTransferPerformance2009 brownUnderestimationLinearFunction2017 kwantesItemOrderMatters2012 kelleyComparisonModelsLearning2008 kaneApplicationsBiasVariance2020 vonhelversenLearningMultiplecueJudgment2010">(<a href="#ref-brownUnderestimationLinearFunction2017" role="doc-biblioref">Brown &amp; Lacroix, 2017</a>; <a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-kaneApplicationsBiasVariance2020" role="doc-biblioref">Kane &amp; Broomell, 2020</a>; <a href="#ref-kelleyComparisonModelsLearning2008" role="doc-biblioref">Kelley &amp; Busemeyer, 2008</a>; <a href="#ref-kwantesItemOrderMatters2012" role="doc-biblioref">Kwantes et al., 2012</a>; <a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">McDaniel et al., 2009</a>; <a href="#ref-vonhelversenLearningMultiplecueJudgment2010" role="doc-biblioref">Von Helversen &amp; Rieskamp, 2010</a>)</span>. The present work presents the first application of these models to to the study of training variability in a visuomotor function learning task. We fit both models to individual participant data, using a form of simulation-based Bayesian parameter estimation that allowed us to generate and compare the full posterior predictive distributions of each model. EXAM provided the best overall account of the testing data, and the advantage of EXAM over ALM was significantly greater for the constant group. Notably, EXAM captured the constant groups’ ability to extrapolate linearly to novel velocity bands, despite receiving training from only a single input-output pair. This finding suggests that EXAM’s linear extrapolation mechanism, combined with the assumption of prior knowledge about the origin point (0, 0), was sufficient to account for the constant groups’ accurate extrapolation performance. Such findings may offer a preliminary suggestion that experience with a more variable set of training examples may be detrimental to performance in simple extrapolation tasks.</p>
+<p>Although theoretically motivated, the IGAS model of Project 1 is best categorized as a descriptive measurement-model. Sufficient to account for group differences, but lacking the machinery necessary to provide a full process-level account of how the empirical quantities of interest are generated. In contrast, Project 2 (HTW) implemented a more robust computational modeling approach, implementing and comparing full process models (ALM &amp; EXAM), capable of generating predictions for both the learning and testing stages of the experiment. ALM and EXAM have been used as models of function learning, cue judgement, and forecasting behavior in numerous studies over the past 25 years <span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielPredictingTransferPerformance2009 brownUnderestimationLinearFunction2017 kwantesItemOrderMatters2012 kelleyComparisonModelsLearning2008 kaneApplicationsBiasVariance2020 vonhelversenLearningMultiplecueJudgment2010">(<a href="#ref-brownUnderestimationLinearFunction2017" role="doc-biblioref">Brown &amp; Lacroix, 2017</a>; <a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-kaneApplicationsBiasVariance2020" role="doc-biblioref">Kane &amp; Broomell, 2020</a>; <a href="#ref-kelleyComparisonModelsLearning2008" role="doc-biblioref">Kelley &amp; Busemeyer, 2008</a>; <a href="#ref-kwantesItemOrderMatters2012" role="doc-biblioref">Kwantes et al., 2012</a>; <a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">McDaniel et al., 2009</a>; <a href="#ref-vonhelversenLearningMultiplecueJudgment2010" role="doc-biblioref">Von Helversen &amp; Rieskamp, 2010</a>)</span>. The present work presents the first application of these models to the study of training variability in a visuomotor function learning task. We fit both models to individual participant data, using a form of simulation-based Bayesian parameter estimation that allowed us to generate and compare the full posterior predictive distributions of each model. EXAM provided the best overall account of the testing data, and the advantage of EXAM over ALM was significantly greater for the constant group. Notably, EXAM captured the constant groups’ ability to extrapolate linearly to novel velocity bands, despite receiving training from only a single input-output pair. This finding suggests that EXAM’s linear extrapolation mechanism, combined with the assumption of prior knowledge about the origin point (0, 0), was sufficient to account for the constant groups’ accurate extrapolation performance. Such findings may offer a preliminary suggestion that experience with a more variable set of training examples may be detrimental to performance in simple extrapolation tasks.</p>
 </section>
 <section id="differences-between-the-two-projects" class="level2">
 <h2 class="anchored" data-anchor-id="differences-between-the-two-projects">Differences between the two Projects</h2>
-<p>The HTT and HTW tasks differ across numerous dimensions that may be relevant to the opposing patterns observed in the two projects (see <a href="#tbl-task-diff" class="quarto-xref">Table&nbsp;1</a> provides for a detailed comparison of the two tasks).</p>
+<p>The HTT and HTW tasks differ across numerous dimensions that may be relevant to the opposing patterns observed in the two projects (see <a href="#tbl-task-diff" class="quarto-xref">Table&nbsp;1</a> for a detailed comparison of the two tasks).</p>
 <p>In HTT, the salient perceptual elements of the task (i.e.&nbsp;the launching box, target and barrier) are subject to variation (i.e.&nbsp;different distances between the launching box and target), and the spatial layout of these perceptually variable elements are intrinsically linked to the task objective of striking the target. Conversely, the perceptual task elements in HTW are invariant across trials, and the task objective is specified by the target velocity value specified as a numeral at the top of the screen. If the benefits of training variation do arise from the formation and flexible retrieval of distinct memory traces, then the lack of perceptual salience between training instances in the HTW task may have limited any potential benefits of variability. Future work could investigate this possibility further employing a modified version of the HTW task wherein the correct velocity value is indicated by some perceptual feature of the task (e.g., the color of the wall, or size of the ball), rather than displaying the target velocity numerically.</p>
 <p>The HTT and HTW tasks also differed in terms of general task complexity. The HTT task was designed to mimic projectile launching tasks commonly employed in visuomotor learning studies, and the parabolic trajectories necessary to strike the target in HTT were sensitive to both the x and y dimensions of the projectiles velocity (and to a lesser extent, the position within the launching box at which the ball was released). Conversely the HTW task was influenced to a greater extent by the tasks commonly utilized in the function learning literature, wherein the correct output respones are determined by a single input dimension. In&nbsp;HTW,the relationship between feedback and optimal behavioral adjustment is also almost perfectly smooth, if participants produce a throw that is 100 units too hard, they’ll be told that they were 100 units away from the target band. Whereas in HTT, the presence of the barrier in introduces irregularities in the task space. Even throws close to the solution space might result in failure, creating a less predictable learning environment.</p>
 <div id="tbl-task-diff" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -289,12 +318,14 @@ Table&nbsp;1: Comparison of the tasks in Project 1 (HTT) and Project 2 (HTW).
 </div>
 </figure>
 </div>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>It is important to note that while both projects utilize computational models, direct comparisons are complicated by the distinct purposes and structures of the models employed in each project. The IGAS model of Project 1 serves as a descriptive measurement model, capturing the similarity between training throws and testing conditions. In contrast, the ALM and EXAM models of Project 2 are full process models, capable of generating exact predictions for both learning and testing stages. The difference is also reflected in the interpretion of the generalization parameter (<span class="math inline">\(c\)</span>) across the models of the two projects. In IGAS, <span class="math inline">\(c\)</span> moderates the similarity between executed throws and subsequent testing solutions, while in ALM and EXAM, <span class="math inline">\(c\)</span> governs the extent to which the perceived stimuli activate the input layer nodes. Despite these differences, insights from ALM/EXAM, particularly the role of zero-point knowledge, may offer potential explanations for the contrasting empirical results. Particularly, EXAM’s reliance on zero-point knowledge in the simpler HTW task may explain why constant training was more effective in Project 2, while the lack of a clear zero-point reference in the more complex HTT task of Project 1 may have increased the value of varied training. This suggests that the benefits of variability depend critically on how task structure interacts with prior knowledge and the learner’s capacity to leverage such knowledge for generalization.</p>
+<p>Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>In summary, this dissertation provides a comprehensive examination of the effects of training variability on learning and generalization in visuomotor and function learning tasks. The contrasting results obtained from the Hit The Target (HTT) and Hit The Wall (HTW) tasks underscore the complexity inherent to the longstanding pedagogical and scientific goal of identifying training manipulations that consistently benefit learning and generalization. Moreover, through the development and application of computational models, we provide novel theoretical accounts for both the beneficial and detrimental effects of training variability observed in our experiments. These findings highlight the importance of considering task characteristics when designing experiments intended to assess the influence of training interventions, and demonstrate the value of combining empirical and computational modeling approaches to uncover the cognitive mechanisms that support learning and generalization. Future research should continue to investigate the complex interplay between task demands, training manipulations, and individual differences, with the ultimate goal of optimizing educational and training outcomes across a wide range of domains.</p>
 <p>&nbsp;<br>
 </p>
-</section>
 </section>
 </section>
 <section id="references" class="level1">
