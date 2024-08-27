@@ -16,9 +16,16 @@ toc: true
 -----
 
 
+$c$ vs. *c*
+
+## Project Model Comparison/Discussion
 
 
-## Project Comparison
+It is important to note that while both projects utilize computational models, direct comparisons are complicated by the distinct purposes and structures of the models employed in each project. The IGAS model of Project 1 serves as a descriptive measurement model, capturing the similarity between training throws and testing conditions. In contrast, the ALM and EXAM models of Project 2 are full process models, capable of generating exact predictions for both learning and testing stages. The difference is also reflected in the interpretion of the generalization parameter ($c$) across the models of the two projects. In IGAS, $c$ moderates the similarity between executed throws and subsequent testing solutions, while in ALM and EXAM, $c$ governs the extent to which the perceived stimuli activate the input layer nodes. Despite these differences, insights from ALM/EXAM, particularly the role of zero-point knowledge, may offer potential explanations for the contrasting empirical results. Particularly, EXAM's reliance on zero-point knowledge in the simpler HTW task may explain why constant training was more effective in Project 2, while the lack of a clear zero-point reference in the more complex HTT task of Project 1 may have increased the value of varied training. This suggests that the benefits of variability depend critically on how task structure interacts with prior knowledge and the learner's capacity to leverage such knowledge for generalization.
+
+Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization. 
+
+
 
 
 
