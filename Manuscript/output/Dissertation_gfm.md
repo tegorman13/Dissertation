@@ -457,9 +457,9 @@ particular the issue of extrapolation. Function learning research
 examines how people acquire and generalize knowledge about continuous
 input-output relationships, and the factors influencing extrapolation to
 novel inputs following an initial learning phase. The domain of function
-learning has yielded influential computational models like the
+learning has yielded influential computational models, including the
 Associative Learning Model (ALM) and the Extrapolation-Association Model
-(EXAM) (Busemeyer et al., 1997), which have successfully accounted for
+(EXAM)(Busemeyer et al., 1997), which have successfully accounted for
 human learning, interpolation, and extrapolation in numerous
 investigations(DeLosh et al., 1997; McDaniel et al., 2009; McDaniel &
 Busemeyer, 2005). However, the influence of training variability on
@@ -2306,14 +2306,15 @@ scenarios, such as a coach instructing an athlete to perform a movement
 using “more force” or “less force”, or a teacher providing letter grades
 rather than numeric scores. Although ordinal feedback provides less
 detailed information per trial, prior research has shown that less
-detailed feedback isn’t necessarily detrimental to learning. For
+detailed feedback is not necessarily detrimental to learning. For
 example, Cornwall et al. (2022) manipulated whether participants
 received categorical (correct or incorrect) vs. numerical feedback
 (reward points ranging from 50-100). They found that the categorical
 condition produced superior learning, which they explained as arising
-from larger prediction errors. Although we do not make specific
-predictions about the ordinal condition in our study, it serves as a
-manipulation that might influence the learning process.
+from larger prediction errors. While we do not make specific predictions
+about the ordinal condition, this manipulation allows us to explore how
+different types of feedback might interact with training variability to
+influence learning and generalization.
 
 ### Methods & Procedure
 
@@ -3392,26 +3393,25 @@ Table 19: Comparison of the tasks in Project 1 (HTT) and Project 2
 
 It is important to note that while both projects utilize computational
 models, direct comparisons are complicated by the distinct purposes and
-structures of the models employed in each project. The IGAS model of
-Project 1 serves as a descriptive measurement model, capturing the
-similarity between training throws and testing conditions. In contrast,
-the ALM and EXAM models of Project 2 are full process models, capable of
-generating exact predictions for both learning and testing stages. The
-difference is also reflected in the interpretion of the generalization
-parameter ($c$) across the models of the two projects. In IGAS, $c$
-moderates the similarity between executed throws and subsequent testing
-solutions, while in ALM and EXAM, $c$ governs the extent to which the
-perceived stimuli activate the input layer nodes. Despite these
-differences, insights from ALM/EXAM, particularly the role of zero-point
-knowledge, may offer potential explanations for the contrasting
-empirical results. Particularly, EXAM’s reliance on zero-point knowledge
-in the simpler HTW task may explain why constant training was more
-effective in Project 2, while the lack of a clear zero-point reference
-in the more complex HTT task of Project 1 may have increased the value
-of varied training. This suggests that the benefits of variability
-depend critically on how task structure interacts with prior knowledge
-and the learner’s capacity to leverage such knowledge for
-generalization.
+structures of the models used in each project. The IGAS model of Project
+1 serves as a descriptive measurement model, capturing the similarity
+between training throws and testing conditions. In contrast, the ALM and
+EXAM models of Project 2 are full process models, capable of generating
+exact predictions for both learning and testing stages. The difference
+is also reflected in the interpretion of the generalization parameter
+($c$) across the models of the two projects. In IGAS, $c$ moderates the
+similarity between executed throws and subsequent testing solutions,
+while in ALM and EXAM, $c$ governs the extent to which the perceived
+stimuli activate the input layer nodes. Despite these differences,
+insights from ALM/EXAM, particularly the role of zero-point knowledge,
+may offer potential explanations for the contrasting empirical results.
+Particularly, EXAM’s reliance on zero-point knowledge in the simpler HTW
+task may explain why constant training was more effective in Project 2,
+while the lack of a clear zero-point reference in the more complex HTT
+task of Project 1 may have increased the value of varied training. This
+suggests that the benefits of variability depend critically on how task
+structure interacts with prior knowledge and the learner’s capacity to
+leverage such knowledge for generalization.
 
 Future work could explore extending ALM and EXAM, which have
 traditionally been applied to one-dimensional function learning tasks,
