@@ -170,28 +170,9 @@ exponentially decaying function of psychological distance (Ennis et al.,
 most similar training instances could have a disproportionate impact on
 generalization to transfer conditions, even if the average distance
 between training and transfer conditions is identical between groups.
-<a href="#fig-toy-model1" class="quarto-xref">Figure 1</a> demonstrates
-the consequences of a generalization gradient that drops off as a
-Gaussian function of distance from training, as compared to a linear
-drop-off.
-
-<div id="fig-toy-model1">
-
-![](IGAS_files/figure-commonmark/fig-toy-model1-1.png)
-
-
-Figure 1: Left panel- Generalization predicted from a simple model that
-assumes a linear generalization function. A varied group (red vertical
-lines indicate the 2 training locations) trained from positions 400 and
-800, and a constant group (blue vertical line), trained from position
-600. Right panel- if a Gaussian generalization function is assumed, then
-varied training (400, 800) is predicted to result in better
-generalization to positions close to 400 and 800 than does constant
-training at 600. (For interpretation of the references to color in this
-figure legend, the reader is referred to the web version of this
-article.)
-
-</div>
+**?@fig-toy-model1** demonstrates the consequences of a generalization
+gradient that drops off as a Gaussian function of distance from
+training, as compared to a linear drop-off.
 
 In addition to largely overlooking the potential for non-linear
 generalization to confound interpretations of training manipulations,
@@ -265,45 +246,30 @@ locations was scaled such that relative distances were preserved
 regardless of screen size. For the sake of brevity, subsequent mentions
 of this relative distance between stimuli, or the position where the
 ball landed in relation to the center of the target, will be referred to
-simply as distance.
-<a href="#fig-IGAS_Methods" class="quarto-xref">Figure 2</a> displays
-the layout of the task, as it would appear to a participant at the start
-of a trial, with the ball appearing in the center of the orange square.
-Using a mouse or trackpad, participants click down on the ball to take
-control of the ball, connecting the movement of the ball to the movement
-of the cursor. Participants can then “wind up” the ball by dragging it
-(within the confines of the orange square) and then launch the ball by
-releasing the cursor. If the ball does not land on the target,
-participants are presented with feedback in red text at the top right of
-the screen, specifying how many scaled units away the ball was from the
-center of the target. If the ball was thrown outside of the boundary of
-the screen participants are given feedback as to how far away from the
-target center the ball would have been if it had continued its
-trajectory. If the ball strikes the barrier (from the side or by landing
-on top), feedback is presented telling participants to avoid hitting the
-barrier. If participants drag the ball outside of the orange square
-before releasing it, the trial terminates, and they are reminded to
-release the ball within the orange square. If the ball lands on the
-target, feedback is presented in green text, confirming that the target
-was hit, and presenting additional feedback on how many units away the
-ball was from the exact center of the target.
+simply as distance. **?@fig-IGAS_Methods** displays the layout of the
+task, as it would appear to a participant at the start of a trial, with
+the ball appearing in the center of the orange square. Using a mouse or
+trackpad, participants click down on the ball to take control of the
+ball, connecting the movement of the ball to the movement of the cursor.
+Participants can then “wind up” the ball by dragging it (within the
+confines of the orange square) and then launch the ball by releasing the
+cursor. If the ball does not land on the target, participants are
+presented with feedback in red text at the top right of the screen,
+specifying how many scaled units away the ball was from the center of
+the target. If the ball was thrown outside of the boundary of the screen
+participants are given feedback as to how far away from the target
+center the ball would have been if it had continued its trajectory. If
+the ball strikes the barrier (from the side or by landing on top),
+feedback is presented telling participants to avoid hitting the barrier.
+If participants drag the ball outside of the orange square before
+releasing it, the trial terminates, and they are reminded to release the
+ball within the orange square. If the ball lands on the target, feedback
+is presented in green text, confirming that the target was hit, and
+presenting additional feedback on how many units away the ball was from
+the exact center of the target.
 
 <a href="https://pcl.sitehost.iu.edu/tg/demos/igas_expt1_demo.html"
 target="_blank">Link to abbreviated example of task</a>.
-
-<div id="fig-IGAS_Methods">
-
-![](IGAS_files/figure-commonmark/fig-IGAS_Methods-1.png)
-
-
-Figure 2: The stimuli of the task consisted of a blue ball, which the
-participants would launch at the green target, while avoiding the red
-barrier. On each trial, the ball would appear in the center of the
-orange square, with the position of the orange square varying between
-experimental conditions. Participants were constrained to release the
-ball within the square
-
-</div>
 
 #### Procedure
 
@@ -367,17 +333,16 @@ rstatix package (Kassambara, 2021).
 
 ## Training Phase
 
-<a href="#fig-IGAS_Training1" class="quarto-xref">Figure 3</a> below
-shows aggregate training performance binned into three stages
-representing the beginning, middle, and end of the training phase.
-Because the two conditions trained from target distances that were not
-equally difficult, it was not possible to directly compare performance
-between conditions in the training phase. Our focus for the training
-data analysis was instead to establish that participants did improve
-their performance over the course of training, and to examine whether
-there was any interaction between training stage and condition.
-Descriptive statistics for the intermittent testing phase are provided
-in the supplementary materials.
+**?@fig-IGAS_Training1** below shows aggregate training performance
+binned into three stages representing the beginning, middle, and end of
+the training phase. Because the two conditions trained from target
+distances that were not equally difficult, it was not possible to
+directly compare performance between conditions in the training phase.
+Our focus for the training data analysis was instead to establish that
+participants did improve their performance over the course of training,
+and to examine whether there was any interaction between training stage
+and condition. Descriptive statistics for the intermittent testing phase
+are provided in the supplementary materials.
 
 We performed an ANOVA comparison with stage as a within-group factor and
 condition as between-group factor. The analysis revealed a significant
@@ -386,18 +351,6 @@ such that performance improved over the course of training. There was no
 significant effect of condition F(1,71)=1.42, p=.24, $\eta^{2}_G$ = .02,
 and no significant interaction between condition and training stage,
 F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
-
-<div id="fig-IGAS_Training1">
-
-![](IGAS_files/figure-commonmark/fig-IGAS_Training1-1.png)
-
-
-Figure 3: Training performance for varied and constant participants
-binned into three stages. Shorter bars indicate better performance (ball
-landing closer to the center of the target). Error bars indicate
-standard error of the mean.
-
-</div>
 
 ## Testing Phase
 
@@ -413,42 +366,8 @@ p\<.001, η2G = .23. The effect of training condition was significant
 F(1,71)=8.19, p\<.01, η2G = .07. There was no significant interaction
 between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
-<div id="fig-IGAS_Testing1">
-
-![](IGAS_files/figure-commonmark/fig-IGAS_Testing1-1.png)
-
-
-Figure 4: Testing performance for each of the 4 testing positions,
-compared between training conditions. Positions 610 and 910 were trained
-on by the varied group, and novel for the constant group. Position 760
-was trained on by the constant group, and novel for the varied group.
-Position 835 was novel for both groups. Shorter bars are indicative of
-better performance (the ball landing closer to the center of the
-target). Error bars indicate standard error of the mean.
-
-</div>
-
   
   
-
-<div id="tbl-IGAS_Table1">
-
-Table 1: Testing performance for varied and constant groups in
-experiment 1. Mean absolute deviation from the center of the target,
-with standard deviations in parenthesis.
-
-<div class="cell-output-display">
-
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 610      | 132.48(50.85)  | 104.2(38.92)   |
-| 760      | 207.26(89.19)  | 167.12(72.29)  |
-| 835      | 249.13(105.92) | 197.22(109.71) |
-| 910      | 289.36(122.48) | 212.86(113.93) |
-
-</div>
-
-</div>
 
 ## Discussion
 
@@ -547,8 +466,7 @@ package in R (Cochrane, 2020).
 The different training conditions trained from positions that were not
 equivalently difficult and are thus not easily amenable to comparison.
 As previously stated, the primary interest of the training data is
-confirmation that some learning did occur.
-<a href="#fig-e2train" class="quarto-xref">Figure 5</a> depicts the
+confirmation that some learning did occur. **?@fig-e2train** depicts the
 training performance of the varied group alongside that of the aggregate
 of the six constant groups (5a), and each of the 6 separate constant
 groups (5b). An ANOVA comparison with training stage (beginning, middle,
@@ -568,23 +486,6 @@ significant effect of training stage F(2,172)=56.29, p\<.001,
 $\eta^{2}_G$ =.11, and no significant interaction between group and
 training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
-<div id="fig-e2train">
-
-![](IGAS_files/figure-commonmark/fig-e2train-1.png)
-
-
-Figure 5: Training performance for the six constant conditions, and the
-varied condition, binned into three stages. On the left side, the six
-constant groups are averaged together, as are the two training positions
-for the varied group. On the right side, the six constant groups are
-shown separately, with each set of bars representing the beginning,
-middle, and end of training for a single constant group that trained
-from the position indicated on the x-axis. Figure 5b also shows training
-performance separately for both of the throwing locations trained by the
-varied group. Error bars indicate standard error of the mean.
-
-</div>
-
 ### Testing Phase
 
 In Experiment 2, a single varied condition (trained from two positions,
@@ -600,59 +501,14 @@ us to make a simple comparison between training conditions (constant
 vs. varied). A type III between-subjects ANOVA was performed, yielding a
 significant effect of condition F(1,206)=4.33, p=.039, $\eta^{2}_G$
 =.02. Descriptive statistics for each condition are shown in table 2. In
-<a href="#fig-e2testa" class="quarto-xref">Figure 6</a> visualizes the
-consistent advantage of the varied condition over the constant groups
-across the testing positions.
-<a href="#fig-e2testa" class="quarto-xref">Figure 6</a> shows
-performance between the varied condition and the individual constant
-groups.
-
-<div id="fig-e2testa">
-
-![](IGAS_files/figure-commonmark/fig-e2testa-1.png)
-
-
-Figure 6: Testing phase performance from each of the six testing
-positions. The six constant conditions are averaged together into a
-single constant group, compared against the single varied-trained
-group.B) Transfer performance from each of the 6 throwing locations from
-which all participants were tested. Each bar represents performance from
-one of seven distinct training groups (six constant groups in red, one
-varied group in blue). The x axis labels indicate the location(s) from
-which each group trained. Lower values along the y axis reflect better
-performance at the task (closer distance to target center). Error bars
-indicate standard error of the mean.
-
-</div>
+**?@fig-e2testa** visualizes the consistent advantage of the varied
+condition over the constant groups across the testing positions.
+**?@fig-e2testa** shows performance between the varied condition and the
+individual constant groups.
 
   
   
   
-
-<div id="tbl-e2table1">
-
-Table 2: Transfer performance from each of the 6 throwing locations from
-which all participants were tested. Each bar represents performance from
-one of seven distinct training groups (six constant groups in red, one
-varied group in blue). The x axis labels indicate the location(s) from
-which each group trained. Lower values along the y axis reflect better
-performance at the task (closer distance to target center). Error bars
-indicate standard error of the mean.
-
-<div class="cell-output-display">
-
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 400      | 100.59(46.3)   | 83.92(33.76)   |
-| 500      | 152.28(69.82)  | 134.38(61.38)  |
-| 625      | 211.21(90.95)  | 183.51(75.92)  |
-| 675      | 233.32(93.35)  | 206.32(94.64)  |
-| 800      | 283.24(102.85) | 242.65(89.73)  |
-| 900      | 343.51(114.33) | 289.62(110.07) |
-
-</div>
-
-</div>
 
 Next, we compared the testing performance of constant and varied groups
 from only positions that participants had not encountered during
@@ -663,79 +519,20 @@ averaged across positions. Here again, we found a significant effect of
 condition (constant vs. varied): F(1,206)=4.30, p=.039, $\eta^{2}_G$ =
 .02 .
 
-<div id="tbl-e2table2">
-
-Table 3: Testing performance from novel positions. Includes data only
-from positions that were not encountered during the training stage
-(e.g. excludes positions 500 and 800 for the varied group, and one of
-the six locations for each of the constant groups). Table presents Mean
-absolute deviations from the center of the target, and standard
-deviations in parenthesis.
-
-<div class="cell-output-display">
-
-| Position | Constant       | Varied         |
-|:---------|:---------------|:---------------|
-| 400      | 98.84(45.31)   | 83.92(33.76)   |
-| 500      | 152.12(69.94)  | NA             |
-| 625      | 212.91(92.76)  | 183.51(75.92)  |
-| 675      | 232.9(95.53)   | 206.32(94.64)  |
-| 800      | 285.91(102.81) | NA             |
-| 900      | 346.96(111.35) | 289.62(110.07) |
-
-</div>
-
-</div>
-
 Finally, corresponding to the comparison of position 760 from Experiment
 1, we compared the test performance of the varied group against the
 constant group from only the positions that the constant groups trained.
 Such positions were novel to the varied group (thus this analysis
 omitted two constant groups that trained from positions 500 or 800 as
-those positions were not novel to the varied group).
-<a href="#fig-e2test1" class="quarto-xref">Figure 7</a> displays the
-particular subset of comparisons utilized for this analysis. Again, we
-standardized performance within each position before performing the
-analyses on the aggregated data. In this case, the effect of condition
-did not reach statistical significance F(1,149)=3.14, p=.079,
-$\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
-
-<div id="fig-e2test1">
-
-![](IGAS_files/figure-commonmark/fig-e2test1-1.png)
-
-
-Figure 7: A comparison of throwing location that are identical to those
-trained by the constant participants (e.g. constant participants trained
-at position 900, tested from position 900), which are also novel to the
-varied-trained participants (thus excluding positions 500 and 800).
-Error bars indicate standard error of the mean.
-
-</div>
+those positions were not novel to the varied group). **?@fig-e2test1**
+displays the particular subset of comparisons utilized for this
+analysis. Again, we standardized performance within each position before
+performing the analyses on the aggregated data. In this case, the effect
+of condition did not reach statistical significance F(1,149)=3.14,
+p=.079, $\eta^{2}_G$ = .02. Table 4 provides descriptive statistics.
 
   
   
-
-<div id="tbl-e2tab3">
-
-Table 4: Testing performance from the locations trained by constant
-participants and novel to varied participants. Locations 500 and 800 are
-not included as these were trained by the varied participants. Table
-presents Mean absolute deviation from the center of the target, and
-standard deviations in parenthesis.
-
-<div class="cell-output-display">
-
-| Position | Constant      | Varied         |
-|:---------|:--------------|:---------------|
-| 400      | 108.85(50.63) | 83.92(33.76)   |
-| 625      | 204.75(84.66) | 183.51(75.92)  |
-| 675      | 235.75(81.15) | 206.32(94.64)  |
-| 900      | 323.5(130.9)  | 289.62(110.07) |
-
-</div>
-
-</div>
 
 ## Discussion
 
@@ -786,28 +583,13 @@ summed each of the trial-level similarities to produce a single
 similarity for each testing position score relating how the participant
 threw the ball during training and the solutions that would result in
 target hits from each of the six testing positions – thus resulting in
-six separate similarity scores for each participant.
-<a href="#fig-taskSpace" class="quarto-xref">Figure 8</a> visualizes the
-solution space for each location and illustrates how different
-combinations of x and y velocity result in successfully striking the
-target from different launching positions. As illustrated in
-<a href="#fig-taskSpace" class="quarto-xref">Figure 8</a>, the solution
-throws represent just a small fraction of the entire space of velocity
-combinations used by participants throughout the experiment.
-
-<div id="fig-taskSpace">
-
-![](IGAS_files/figure-commonmark/fig-taskSpace-1.png)
-
-
-Figure 8: A) A visual representation of the combinations of throw
-parameters (x and y velocities applied to the ball at launch), which
-resulted in target hits during the testing phase. This empirical
-solution space was compiled from all of the participants in experiment
-2. B) shows the solution space within the context of all of the throws
-made throughout the testing phase of the experiment.
-
-</div>
+six separate similarity scores for each participant. **?@fig-taskSpace**
+visualizes the solution space for each location and illustrates how
+different combinations of x and y velocity result in successfully
+striking the target from different launching positions. As illustrated
+in **?@fig-taskSpace**, the solution throws represent just a small
+fraction of the entire space of velocity combinations used by
+participants throughout the experiment.
 
 For each individual trial, the Euclidean distance (Equation 1) was
 computed between the velocity components (x and y) of that trial and the
@@ -879,7 +661,7 @@ the task itself, participants are also adjusting how generalizable their
 experience should be. Varied versus constant participants may be
 expected to learn to generalize their experience to different degrees.
 To accommodate this difference, the generalization parameter of the
-instance-based model (in the present case, the c parameter) can be
+instance-based model (in the present case, the $c$ parameter) can be
 allowed to vary between the two groups to reflect the tendency of
 learners to adaptively tune the extent of their generalization. One
 specific hypothesis is that people adaptively set a value of c to fit
@@ -911,7 +693,7 @@ Linear models 1 and 3 both show that similarity is a significant
 predictor of testing performance (p\<.01). Of greater interest is the
 difference between linear model 2, in which similarity is computed from
 a single c value fit from all participants (Similarity1c), with linear
-model 4, which fits the c parameter separately between groups
+model 4, which fits the $c$ parameter separately between groups
 (Similarity2c). In linear model 2, the effect of training group remains
 significant when controlling for Similarity1c (p\<.01), with the varied
 group still performing significantly better. However, in linear model 4
@@ -935,7 +717,7 @@ in R, we compared BIC values between linear model 1 (BIC=14604.00) and
 linear model 3 (BIC = 14587.64). The lower BIC value of model 3 suggests
 a modest advantage for predicting performance using a similarity measure
 computed with two c values over similarity computed with a single c
-value. When fit with separate c values, the best fitting c parameters
+value. When fit with separate c values, the best fitting $c$ parameters
 for the model consistently optimized such that the c value for the
 varied group (c=.00008) was smaller in magnitude than the c value for
 the constant group(c= .00011). Recall that similarity decreases as a
@@ -993,70 +775,42 @@ such that throwing locations generalize more broadly to one another than
 they do in the constant condition. A learning system could end up
 adopting a higher c value in the constant than variable training
 conditions by monitoring the trial-by-trial variability of the training
-items. The c parameter would be adapted downwards when adjacent training
-items are dissimilar to each other and adapted upwards when adjacent
-training items are the same. In this fashion, contextually appropriate c
-values could be empirically learned. This learning procedure would
-capture the insight that if a situation has a high amount variability,
-then the learner should be predisposed toward thinking that subsequent
-test items will also show considerable variability, in which case
-generalization gradients should be broad, as is achieved by low values
-for c. Sakamoto et al. (2006) implemented a similar learning mechanism
-for updating the generalization paramater in an exemplar-based model
-(although in their model, a separate generalization parameter is
-assigned to each exemplar). In their experiment, participants were
-trained on a high variability and a low variability category, and the
-dynamically updated generalization parameter was necessary to account
-for broader generalization observed around the high variability category
-when participants were tested with an ambiguous intermediary item. In a
-subsequent work (Sakamoto et al., 2008), the same authors showed that a
-similar learning mechanism could account for the pattern wherein
-participants generalize more broadly around a category when the average
-distance between the category exemplars is larger (however the only
-model tested in this work was a prototype model).
+items. The $c$ parameter would be adapted downwards when adjacent
+training items are dissimilar to each other and adapted upwards when
+adjacent training items are the same. In this fashion, contextually
+appropriate c values could be empirically learned. This learning
+procedure would capture the insight that if a situation has a high
+amount variability, then the learner should be predisposed toward
+thinking that subsequent test items will also show considerable
+variability, in which case generalization gradients should be broad, as
+is achieved by low values for c. Sakamoto et al. (2006) implemented a
+similar learning mechanism for updating the generalization paramater in
+an exemplar-based model (although in their model, a separate
+generalization parameter is assigned to each exemplar). In their
+experiment, participants were trained on a high variability and a low
+variability category, and the dynamically updated generalization
+parameter was necessary to account for broader generalization observed
+around the high variability category when participants were tested with
+an ambiguous intermediary item. In a subsequent work (Sakamoto et al.,
+2008), the same authors showed that a similar learning mechanism could
+account for the pattern wherein participants generalize more broadly
+around a category when the average distance between the category
+exemplars is larger (however the only model tested in this work was a
+prototype model).
 
 Also of interest is whether the IGAS model can predict the pattern of
 results wherein the varied condition outperforms the constant condition
 even from the position on which the constant condition trained. Although
 our models were fit using all of the Experiment 2 training and testing
 data, not just that of the identity comparisons, in
-<a href="#fig-Toy-Model-dis" class="quarto-xref">Figure 9</a> we
-demonstrate how a simplified version of the IGAS model could in
-principle produce such a pattern. In addition to the assumption of
-differential generalization between varied and constant conditions, our
-simplified model makes explicit an assumption that is incorporated into
-the full IGAS model – namely that even when being tested from a position
-identical to that which was trained, there are always some psychological
-contextual differences between training and testing throws, resulting in
-a non-zero dissimilarity.
-
-<div id="fig-Toy-Model-dis">
-
-![](IGAS_files/figure-commonmark/fig-Toy-Model-dis-1.png)
-
-
-Figure 9: A simple model depicting the necessity of both of two
-separately fit generalization parameters, c, and a positive distance
-between training and testing contexts, in order for an instance model to
-predict a pattern of varied training from stimuli 400 and 800
-outperforming constant training from position 600 at a test position of
-600. For the top left panel, in which the generalization model assumes a
-single c value (-.008) for both varied and constant conditions, and
-identical contexts across training and testing, the equation which
-generates the varied condition is - Amount of Generalization =
-$e^{(c\cdot|x-800|)} + e^{(c\cdot|x-400|)}$, whereas the constant group
-generalization is generated from $2\cdot e^{(c\cdot|x-600|)}$. For the
-top right panel, the c constants in the original equations are different
-for the 2 conditions, with $c=-.002$ for the varied condition, and
-$c=-.008$ for the constant condition. The bottom two panels are
-generated from identical equations to those immediately above, except
-for the addition of extra distance (100 units) to reflect the assumption
-of some change in context between training and testing conditions. Thus,
-the generalization model for the varied condition in the bottom-right
-panel is of the form - Amount of Generalization =
-$e^{(c_{varied}\cdot|x-800|)}+e^{(c_{varied}\cdot|x-400|)}$ .
-
-</div>
+**?@fig-Toy-Model-dis** we demonstrate how a simplified version of the
+IGAS model could in principle produce such a pattern. In addition to the
+assumption of differential generalization between varied and constant
+conditions, our simplified model makes explicit an assumption that is
+incorporated into the full IGAS model – namely that even when being
+tested from a position identical to that which was trained, there are
+always some psychological contextual differences between training and
+testing throws, resulting in a non-zero dissimilarity.
 
 As described above, the idea that learners flexibly adjust their
 generalization gradient based on prior experience does have precedent in
@@ -1208,15 +962,9 @@ Regardless, the above analysis suggests that the constant group would always be 
 
 ### Group comparison of learning rate fits
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-18-1.png)
-
 ### First vs. second half of testing stage
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-19-1.png)
-
 ### Group Comparison for asymptote-starting performance
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-20-1.png)
 
 ### Relative distance and under/overshooting
 
@@ -1242,117 +990,23 @@ there was any meaningful over- or undershooting.
 
 #### experiment 1 training - relative distances
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-21-1.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-21-2.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-21-3.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-21-4.png)
-
-
-    =========================================================================
-    conditType devianceDirection      610            760            910      
-    -------------------------------------------------------------------------
-    constant       Overshoot                    311.84(307.92)               
-    constant      Undershoot                    188.05(163.62)               
-    varied         Overshoot     211.69(234.97)                360.14(322.01)
-    varied        Undershoot     107.35(81.21)                 244.85(196.47)
-    -------------------------------------------------------------------------
-
-
-    ======================================================
-    conditType      610           760            910      
-    ------------------------------------------------------
-    constant                 121.03(269.17)               
-    varied     39.91(178.12)                150.53(290.04)
-    ------------------------------------------------------
-
-
-    ====================================================================
-    conditType     610           760            835            910      
-    --------------------------------------------------------------------
-    constant   7.13(124.02) 107.02(218.49) 142.42(252.34) 122.92(282.58)
-    varied     3.19(96.67)   92.1(173.9)   103.84(214.4)  108.12(234.59)
-    --------------------------------------------------------------------
-
 #### experiment 2 training - relative distances
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-22-1.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-22-2.png)
 
 #### Experiment 1 Testing - relative distances
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-23-1.png)
-
-
-    ====================================================================================================================================
-    conditType2         msdu_610       msdu_760       msdu_835       msdu_910      msds_610      msds_760      msds_835      msds_910   
-    ------------------------------------------------------------------------------------------------------------------------------------
-    Constant Training 136.27(84.29) 191.65(112.65) 219.46(139.91) 276.75(153.09) 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
-    Varied Training   105.12(51.39)  149.37(93.4)  180.54(129.52) 198.64(137.84) 13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
-    ------------------------------------------------------------------------------------------------------------------------------------
-
-
-    =========================================================================
-    Condition              610           760           835           910     
-    -------------------------------------------------------------------------
-    Constant Training 25.28(158.98) 50.82(217.48) 73.14(250.93) 50.76(313.77)
-    Varied Training   13.85(116.87) 50.59(169.59) 50.52(217.39) 49.94(237.71)
-    -------------------------------------------------------------------------
-
 #### Experiment 2 Testing - relative distances
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-24-1.png)
 
 #### Experimenet 1 - intermittent testing
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-25-1.png)
-
-
-    ======================================================================================================
-    Condition 610_First Half 760_First Half 910_First Half 610_Second Half 760_Second Half 910_Second Half
-    ------------------------------------------------------------------------------------------------------
-    constant  206.64(82.08)  286.51(121.07) 406.93(145.2)   187.2(55.24)    238.21(95.16)  313.27(114.86) 
-    varied    195.68(78.58)  278.9(105.37)  318.53(134.81)  177.79(70.82)  224.98(108.04)   276.86(110.5) 
-    ------------------------------------------------------------------------------------------------------
-
 ### Training plots - Experiment 1
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-26-1.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-26-2.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-26-3.png)
 
 #### Not in manuscript
 
 #### fit to testing performance averaged across positions
 
-![](IGAS_files/figure-commonmark/unnamed-chunk-27-1.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-27-2.png)
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-27-3.png)
-
 #### statistical tests for starting performance
 
-    ANOVA Table (type III tests)
-
-          Effect DFn DFd    F     p p<.05   ges
-    1 conditType   1 206 3.04 0.083       0.015
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-28-1.png)
-
 #### statistical tests for asymptote
-
-    ANOVA Table (type III tests)
-
-          Effect DFn DFd    F     p p<.05   ges
-    1 conditType   1 206 3.38 0.067       0.016
-
-![](IGAS_files/figure-commonmark/unnamed-chunk-29-1.png)
 
 # References
 

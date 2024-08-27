@@ -1337,15 +1337,15 @@ that future test situations will also be variable, in which case a low
 value of c will allow better generalization because generalization will
 drop off slowly with training-to-testing distance. Conversely, if one’s
 training experience has little variability, as found in the constant
-training conditions, then one might adopt a high value of c so that
+training conditions, then one might adopt a high value of $c$ so that
 generalization falls off rapidly away from the trained positions.
 
 To address this possibility, we compared the original instance-based
 model of similarity fit against a modified model which separately fits
-the generalization parameter, c, to varied and constant participants. To
-perform this parameter fitting, we used the optim function in R, and fit
-the model to find the c value(s) that maximized the correlation between
-similarity and testing performance.
+the generalization parameter, $c$, to varied and constant participants.
+To perform this parameter fitting, we used the optim function in R, and
+fit the model to find the $c$ value(s) that maximized the correlation
+between similarity and testing performance.
 
 Both models generate distinct similarity values between training and
 testing locations. Much like the analyses in Experiment 2, these
@@ -1357,7 +1357,7 @@ defined as the mean absolute distance from the center of the target
 Linear models 1 and 3 both show that similarity is a significant
 predictor of testing performance (p\<.01). Of greater interest is the
 difference between linear model 2, in which similarity is computed from
-a single c value fit from all participants (Similarity1c), with linear
+a single $c$ value fit from all participants (Similarity1c), with linear
 model 4, which fits the $c$ parameter separately between groups
 (Similarity2c). In linear model 2, the effect of training group remains
 significant when controlling for Similarity1c (p\<.01), with the varied
@@ -1381,14 +1381,15 @@ generated from the original Similarity1c model. Using the BIC function
 in R, we compared BIC values between linear model 1 (BIC=14604.00) and
 linear model 3 (BIC = 14587.64). The lower BIC value of model 3 suggests
 a modest advantage for predicting performance using a similarity measure
-computed with two c values over similarity computed with a single c
-value. When fit with separate c values, the best fitting $c$ parameters
-for the model consistently optimized such that the c value for the
-varied group (c=.00008) was smaller in magnitude than the c value for
-the constant group (c= .00011). Recall that similarity decreases as a
-Gaussian function of distance (equation 1 above), and a smaller value of
-c will result in a more gradual drop-off in similarity as the distance
-between training throws and testing solutions increases.
+computed with two $c$ values over similarity computed with a single $c$
+value. When fit with separate $c$ values, the best fitting $c$
+parameters for the model consistently optimized such that the $c$ value
+for the varied group (c=.00008) was smaller in magnitude than the $c$
+value for the constant group (c= .00011). Recall that similarity
+decreases as a Gaussian function of distance (equation 1 above), and a
+smaller value of $c$ will result in a more gradual drop-off in
+similarity as the distance between training throws and testing solutions
+increases.
 
 In summary, our modeling suggests that an instance-based model which
 assumes equivalent generalization gradients between constant and varied
@@ -1426,7 +1427,7 @@ participants performed significantly better on this identity comparison.
 In Experiment 2, the comparison was not significant initially, but
 became significant after controlling for the similarity measure that
 incorporates only a single value for the steepness of similarity-based
-generalization (c). Furthermore, we showed that the general pattern of
+generalization ($c$). Furthermore, we showed that the general pattern of
 results from Experiment 2 could be parsimoniously accommodated by an
 instance-based similarity model, but only with the assumption that
 constant and varied participants generalize their training experience to
@@ -1438,17 +1439,17 @@ range of the task space. Rather, the modeling suggests that varied
 participants also learn to adaptively tune their generalization function
 such that throwing locations generalize more broadly to one another than
 they do in the constant condition. A learning system could end up
-adopting a higher c value in the constant than variable training
+adopting a higher $c$ value in the constant than variable training
 conditions by monitoring the trial-by-trial variability of the training
 items. The $c$ parameter would be adapted downwards when adjacent
 training items are dissimilar to each other and adapted upwards when
 adjacent training items are the same. In this fashion, contextually
-appropriate c values could be empirically learned. This learning
+appropriate $c$ values could be empirically learned. This learning
 procedure would capture the insight that if a situation has a high
 amount variability, then the learner should be predisposed toward
 thinking that subsequent test items will also show considerable
 variability, in which case generalization gradients should be broad, as
-is achieved by low values for c. Sakamoto et al. (2006) implemented a
+is achieved by low values for $c$. Sakamoto et al. (2006) implemented a
 similar learning mechanism for updating the generalization paramater in
 an exemplar-based model (although in their model, a separate
 generalization parameter is assigned to each exemplar). In their

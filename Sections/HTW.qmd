@@ -1294,7 +1294,7 @@ e1_tab %>%
 
 ```{r}
 #| label: fig-htw-post-dist
-#| fig-cap: "Posterior Distributions of $c$ and $lr$ parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y-axes of the plots for the c parameter are scaled logarithmically."
+#| fig-cap: "Posterior Distributions of $c$ and $lr$ parameters. Points represent median values, thicker intervals represent 66% credible intervals and thin intervals represent 95% credible intervals around the median. Note that the y-axes of the plots for the $c$ parameter are scaled logarithmically."
 #| fig-height: 6
 #| fig-width: 10
 

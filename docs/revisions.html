@@ -213,13 +213,13 @@ window.Quarto = {
    
   <ul>
   <li><a href="#primary-issues" id="toc-primary-issues" class="nav-link active" data-scroll-target="#primary-issues">Primary Issues</a></li>
-  <li><a href="#project-model-comparisondiscussion" id="toc-project-model-comparisondiscussion" class="nav-link" data-scroll-target="#project-model-comparisondiscussion">Project Model Comparison/Discussion</a></li>
-  <li><a href="#project-2-implications" id="toc-project-2-implications" class="nav-link" data-scroll-target="#project-2-implications">Project 2 implications:</a></li>
-  <li><a href="#distinction-between-experienced-stimulii-and-behavioral-action" id="toc-distinction-between-experienced-stimulii-and-behavioral-action" class="nav-link" data-scroll-target="#distinction-between-experienced-stimulii-and-behavioral-action">Distinction between experienced stimulii and behavioral action</a></li>
-  <li><a href="#learning-c" id="toc-learning-c" class="nav-link" data-scroll-target="#learning-c">Learning c</a></li>
-  <li><a href="#ordinal-feedback-rationale" id="toc-ordinal-feedback-rationale" class="nav-link" data-scroll-target="#ordinal-feedback-rationale">Ordinal feedback rationale</a></li>
-  <li><a href="#foreshadowing-function-learning-literature" id="toc-foreshadowing-function-learning-literature" class="nav-link" data-scroll-target="#foreshadowing-function-learning-literature">Foreshadowing function learning literature</a></li>
-  <li><a href="#full-revision-instructions" id="toc-full-revision-instructions" class="nav-link" data-scroll-target="#full-revision-instructions">Full Revision Instructions</a></li>
+  <li><a href="#participanttrial-exclusion-conditions-for-project-2" id="toc-participanttrial-exclusion-conditions-for-project-2" class="nav-link" data-scroll-target="#participanttrial-exclusion-conditions-for-project-2">1) Participant/trial exclusion conditions for Project 2</a></li>
+  <li><a href="#igas-vs.-almexam-model-comparisondiscussion" id="toc-igas-vs.-almexam-model-comparisondiscussion" class="nav-link" data-scroll-target="#igas-vs.-almexam-model-comparisondiscussion">2) IGAS vs.&nbsp;ALM/EXAM Model Comparison/Discussion</a></li>
+  <li><a href="#ordinal-feedback-rationale" id="toc-ordinal-feedback-rationale" class="nav-link" data-scroll-target="#ordinal-feedback-rationale">3) Ordinal feedback rationale</a></li>
+  <li><a href="#project-2-take-aways" id="toc-project-2-take-aways" class="nav-link" data-scroll-target="#project-2-take-aways">4) Project 2 take-aways:</a></li>
+  <li><a href="#stimuli-vs.-action-similarity" id="toc-stimuli-vs.-action-similarity" class="nav-link" data-scroll-target="#stimuli-vs.-action-similarity">5) Stimuli vs.&nbsp;Action Similarity</a></li>
+  <li><a href="#how-c-might-be-learned" id="toc-how-c-might-be-learned" class="nav-link" data-scroll-target="#how-c-might-be-learned">6) How c might be learned</a></li>
+  <li><a href="#foreshadowing-function-learning-literature" id="toc-foreshadowing-function-learning-literature" class="nav-link" data-scroll-target="#foreshadowing-function-learning-literature">7) Foreshadowing function learning literature</a></li>
   </ul>
 </nav>
     </div>
@@ -245,111 +245,52 @@ window.Quarto = {
 </header>
 
 
+<style>
+/* Style for Addition callouts */
+.addition-callout summary {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addition-callout div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style for Relevant Content callouts */
+.relevant-callout summary {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.relevant-callout div {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+</style>
 <section id="primary-issues" class="level2">
 <h2 class="anchored" data-anchor-id="primary-issues">Primary Issues</h2>
 <ol type="1">
-<li><strong>Plausiblity of fitting ALM &amp; EXAM to project 1</strong> - parameter comparison across projects. &nbsp;</li>
-<li><strong>Rationale for ordinal feedback</strong> in experiment 3. Literature suggesting ordinal is different from continuous. Discussion of how ordinal feedback could be implemented in the model<br>
+<li><strong>Participant/trial exclusion conditions for Project 2</strong><br>
 </li>
-<li><strong>Project 2 take aways</strong> - implications of empirical results, and of modeling<br>
-</li>
-<li><strong>More foreshadowing of function learning literature</strong>. Show how Projects 1 and 2 are unified in terms of exploring theories of how variability during learning affects generalization.<br>
-</li>
-<li><strong>How c is learned</strong> - how how does this show up in training data? Process by which c is updated? Can it account for massed vs.&nbsp;distributed presentation of stimulii?<br>
-</li>
-<li><strong>Similarity spaces of stimuli vs.&nbsp;actions</strong> - important distinctions?<br>
-</li>
+<li><strong>Plausiblity of fitting ALM &amp; EXAM to project 1</strong> &nbsp;</li>
+<li><strong>Rationale for ordinal feedback</strong></li>
+<li><strong>Project 2 take aways</strong></li>
+<li><strong>More foreshadowing of function learning literature</strong>.</li>
+<li><strong>How c is learned/updated</strong></li>
+<li><strong>Similarity spaces of stimuli vs.&nbsp;actions</strong></li>
 </ol>
-<hr>
-<p><span class="math inline">\(c\)</span> vs.&nbsp;<em>c</em></p>
-</section>
-<section id="project-model-comparisondiscussion" class="level2">
-<h2 class="anchored" data-anchor-id="project-model-comparisondiscussion">Project Model Comparison/Discussion</h2>
-<p>It is important to note that while both projects utilize computational models, direct comparisons are complicated by the distinct purposes and structures of the models employed in each project. The IGAS model of Project 1 serves as a descriptive measurement model, capturing the similarity between training throws and testing conditions. In contrast, the ALM and EXAM models of Project 2 are full process models, capable of generating exact predictions for both learning and testing stages. The difference is also reflected in the interpretion of the generalization parameter (<span class="math inline">\(c\)</span>) across the models of the two projects. In IGAS, <span class="math inline">\(c\)</span> moderates the similarity between executed throws and subsequent testing solutions, while in ALM and EXAM, <span class="math inline">\(c\)</span> governs the extent to which the perceived stimuli activate the input layer nodes. Despite these differences, insights from ALM/EXAM, particularly the role of zero-point knowledge, may offer potential explanations for the contrasting empirical results. Particularly, EXAM’s reliance on zero-point knowledge in the simpler HTW task may explain why constant training was more effective in Project 2, while the lack of a clear zero-point reference in the more complex HTT task of Project 1 may have increased the value of varied training. This suggests that the benefits of variability depend critically on how task structure interacts with prior knowledge and the learner’s capacity to leverage such knowledge for generalization.</p>
-<p>Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization.</p>
-</section>
-<section id="project-2-implications" class="level2">
-<h2 class="anchored" data-anchor-id="project-2-implications">Project 2 implications:</h2>
-<p>To explain our results, we turned to the well established EXAM and ALM models. The disproportionate success of EXAM in capturing the performance of participants under the constant training condition suggests that rule-based extrapolation can emerge even from a limited set of training examples. This success hinges on the assumption that participants are able to leverage prior knowledge of the zero-point reference <span class="citation" data-cites="brownUnderestimationLinearFunction2017 kwantesWhyPeopleUnderestimate2006">(<a href="#ref-brownUnderestimationLinearFunction2017" role="doc-biblioref">Brown &amp; Lacroix, 2017</a>; <a href="#ref-kwantesWhyPeopleUnderestimate2006" role="doc-biblioref">Kwantes &amp; Neal, 2006</a>)</span>. The zero-point reference, combined with accurate learning of the single trained velocity band enabled EXAM to capture the extrapolation patterns of the constant participants. However, it’s important to acknowledge that the ALM model provided a better fit for a subset of participants in each of our three experiment, highlighting the presence of substantial individual differences in generalization patterns.</p>
-<p>This finding illustrates the importance of considering task structure when evaluating the effects of training variability on generalization and extrapolation. Some tasks, like the one in this study, may permit the use of zero-point knowledge or other prior information, while others may not. For example, a zero point may be less relevant in visuomotor tasks with complex rotations <span class="citation" data-cites="vandamMappingShapeVisuomotor2015 rollerVariablePracticeLenses2001">(<a href="#ref-rollerVariablePracticeLenses2001" role="doc-biblioref">Roller et al., 2001</a>; <a href="#ref-vandamMappingShapeVisuomotor2015" role="doc-biblioref">van Dam &amp; Ernst, 2015</a>)</span>, or in complex sports techniques <span class="citation" data-cites="northEffectConsistentVaried2019">(<a href="#ref-northEffectConsistentVaried2019" role="doc-biblioref">North et al., 2019</a>)</span>. Future research should systematically investigate how different task structures interact with training variability to influence learning outcomes and generalization abilities, taking into account factors such as the availability of prior knowledge, the complexity of the task, and the specific learning mechanisms involved. This approach could help reconcile seemingly contradictory findings in the literature and provide more nuanced guidelines for designing effective training protocols across various domains.</p>
-<hr>
-</section>
-<section id="distinction-between-experienced-stimulii-and-behavioral-action" class="level2">
-<h2 class="anchored" data-anchor-id="distinction-between-experienced-stimulii-and-behavioral-action">Distinction between experienced stimulii and behavioral action</h2>
 <details>
 <summary>
-<a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Our%20modelling%20approach,of%20Knowledge%20II." target="_blank">relevant content 1</a>
-</summary>
-<blockquote class="blockquote">
-<p>Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as points in a multidimensional space of all of the attributes that define a category item (e.g., size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g., movement force, velocity, angle, posture) in addition to the decision and response time measures that typically exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor instance is a fundamental question beyond the scope of the current work – though as described in the introduction there is some evidence in support of this idea (Chamberlin &amp; Magill, 1992a; Crump &amp; Logan, 2010; Hommel, 1998; Meigh et al., 2018; Poldrack et al., 1999). A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues (R. G. Cohen &amp; Rosenbaum, 2004; Rosenbaum et al., 1995). Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.</p>
-</blockquote>
-</details>
-<details>
-<summary>
-<a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli." target="_blank">relevant content 2</a><br>
-
-</summary>
-<blockquote class="blockquote">
-<p>It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations (Nosofsky, 1992; Shepard, 1987). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g., the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli.</p>
-</blockquote>
-</details>
-<section id="relevant-papers" class="level4">
-<h4 class="anchored" data-anchor-id="relevant-papers"><strong>Relevant Papers</strong></h4>
-<ul>
-<li><span class="citation" data-cites="wifallPerceptualSimilarityAffects2014">Wifall et al. (<a href="#ref-wifallPerceptualSimilarityAffects2014" role="doc-biblioref">2014</a>)</span></li>
-<li><span class="citation" data-cites="wifallReachingResponseSelection2017">Wifall et al. (<a href="#ref-wifallReachingResponseSelection2017" role="doc-biblioref">2017</a>)</span></li>
-</ul>
-</section>
-</section>
-<section id="learning-c" class="level2">
-<h2 class="anchored" data-anchor-id="learning-c">Learning c</h2>
-<p><strong>How how does this show up in training data? Process by which c is updated? Can it account for massed vs.&nbsp;distributed presentation of stimulii?</strong><br>
-</p>
-<details>
-<summary>
-<a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=However%2C%20previous%20research,the%20trained%20positions.">relevant content 1</a>
-</summary>
-<blockquote class="blockquote">
-<p>However, previous research has suggested that participants may differ in their level of generalization as a function of prior experience, and that such differences in generalization gradients can be captured by fitting the generalization parameter of an instance-based model separately to each group (Hahn et al., 2005; Lamberts, 1994). Relatedly, the influential Bayesian generalization model developed by Tenenbaum &amp; Griffiths (2001) predicts that the breadth of generalization will increase when a rational agent encounters a wider variety of examples. Following these leads, we assume that in addition to learning the task itself, participants are also adjusting how generalizable their experience should be. Varied versus constant participants may be expected to learn to generalize their experience to different degrees. To accommodate this difference, the generalization parameter of the instance-based model (in the present case, the c parameter) can be allowed to vary between the two groups to reflect the tendency of learners to adaptively tune the extent of their generalization. One specific hypothesis is that people adaptively set a value of c to fit the variability of their training experience (Nosofsky &amp; Johansen, 2000; Sakamoto et al., 2006). If one’s training experience is relatively variable, as with the variable training condition, then one might infer that future test situations will also be variable, in which case a low value of c will allow better generalization because generalization will drop off slowly with training-to-testing distance. Conversely, if one’s training experience has little variability, as found in the constant training conditions, then one might adopt a high value of c so that generalization falls off rapidly away from the trained positions.</p>
-</blockquote>
-</details>
-<details>
-<summary>
-<a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=A%20learning%20system,values%20for%20c.">original content 2</a>
-</summary>
-<blockquote class="blockquote">
-<p>Furthermore, we showed that the general pattern of results from Experiment 2 could be parsimoniously accommodated by an instance-based similarity model, but only with the assumption that constant and varied participants generalize their training experience to different degrees.</p>
-<p>Our results thus suggest that the benefits of variation cannot be explained by the varied-trained participants simply covering a broader range of the task space. Rather, the modeling suggests that varied participants also learn to adaptively tune their generalization function such that throwing locations generalize more broadly to one another than they do in the constant condition. A learning system could end up adopting a higher c value in the constant than variable training conditions by monitoring the trial-by-trial variability of the training items. The c parameter would be adapted downwards when adjacent training items are dissimilar to each other and adapted upwards when adjacent training items are the same. In this fashion, contextually appropriate c values could be empirically learned. This learning procedure would capture the insight that if a situation has a high amount variability, then the learner should be predisposed toward thinking that subsequent test items will also show considerable variability, in which case generalization gradients should be broad, as is achieved by low values for c. <span class="citation" data-cites="sakamotoTrackingVariabilityLearning2006">Sakamoto et al. (<a href="#ref-sakamotoTrackingVariabilityLearning2006" role="doc-biblioref">2006</a>)</span> implemented a similar learning mechanism for updating the generalization paramater in an exemplar-based model (although in their model, a separate generalization parameter is assigned to each exemplar). In their experiment, participants were trained on a high variability and a low variability category, and the dynamically updated generalization parameter was necessary to account for broader generalione zation observed around the high variability category when participants were tested with an ambiguous intermediary item. In a subsequent work <span class="citation" data-cites="sakamotoPuttingPsychologyBack2008">(<a href="#ref-sakamotoPuttingPsychologyBack2008" role="doc-biblioref">Sakamoto et al., 2008</a>)</span>, the same authors showed that a similar learning mechanism could account for the pattern wherein participants generalize more broadly around a category when the average distance between the category exemplars is larger (however the only model tested in this work was a prototype model).</p>
-<p>As described above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning (Aha &amp; Goldstone, 1992; Briscoe &amp; Feldman, 2011; Hahn et al., 2005; Lamberts, 1994; Op de Beeck et al., 2008), and sensorimotor adaptation (Marongelli &amp; Thoroughman, 2013; Taylor &amp; Ivry, 2013; Thoroughman &amp; Taylor, 2005). Lamberts (1994) showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been trained on categories that differ in their relative variability (Hahn et al., 2005; Sakamoto et al., 2006). However, to the best of our knowledge, IGAS is the first instance-based similarity model that has been put forward to account for the effect of varied training in a visuomotor skill task. Although IGAS was inspired by work in the domain of category learning, its success in a distinct domain may not be surprising in light of the numerous prior observations that at least certain aspects of learning and generalization may operate under common principles across different tasks and domains (Censor et al., 2012; Hills et al., 2010; Jamieson et al., 2022; Law &amp; Gold, 2010; Roark et al., 2021; Rosenbaum et al., 2001; Vigo et al., 2018; Wall et al., 2021; Wu et al., 2020; J. Yang et al., 2020).</p>
-</blockquote>
-</details>
-</section>
-<section id="ordinal-feedback-rationale" class="level2">
-<h2 class="anchored" data-anchor-id="ordinal-feedback-rationale">Ordinal feedback rationale</h2>
-<details>
-<summary>
-Addition
-</summary>
-<blockquote class="blockquote">
-<p>In Experiment 3, we sought to further explore the generality of the findings from the first two experiments by modifying the type of feedback provided during training. Specifically, we provided ordinal feedback instead of the continuous feedback used in the previous two experiments. Ordinal feedback provides learners with directional information about the results of their throw (e.g., above the target, below the target, or hitting the target) rather than precise numerical deviations. This form of feedback resembles many real-world learning scenarios, such as a coach instructing an athlete to perform a movement using “more force” or “less force”, or a teacher providing letter grades rather than numeric scores. Although ordinal feedback provides less detailed information per trial, prior research has shown that less detailed feedback isn’t necessarily detrimental to learning. For example, <span class="citation" data-cites="cornwallEffectsCategoricalNumerical2022">Cornwall et al. (<a href="#ref-cornwallEffectsCategoricalNumerical2022" role="doc-biblioref">2022</a>)</span> manipulated whether participants received categorical (correct or incorrect) vs.&nbsp;numerical feedback (reward points ranging from 50-100). They found that the categorical condition produced superior learning, which they explained as arising from larger prediction errors. Although we do not make specific predictions about the ordinal condition in our study, it serves as a manipulation that might influence the learning process.</p>
-</blockquote>
-</details>
-<section id="relevant-papers-1" class="level4">
-<h4 class="anchored" data-anchor-id="relevant-papers-1"><strong>Relevant Papers</strong></h4>
-<ul>
-<li><span class="citation" data-cites="cornwallEffectsCategoricalNumerical2022">Cornwall et al. (<a href="#ref-cornwallEffectsCategoricalNumerical2022" role="doc-biblioref">2022</a>)</span></li>
-</ul>
-</section>
-</section>
-<section id="foreshadowing-function-learning-literature" class="level2">
-<h2 class="anchored" data-anchor-id="foreshadowing-function-learning-literature">Foreshadowing function learning literature</h2>
-<p>Project 2 will focus on the domain of function learning and in particular the issue of extrapolation. Function learning research examines how people acquire and generalize knowledge about continuous input-output relationships, and the factors influencing extrapolation to novel inputs following an initial learning phase. The domain of function learning has yielded influential computational models like the Associative Learning Model (ALM) and the Extrapolation-Association Model (EXAM) <span class="citation" data-cites="busemeyerLearningFunctionalRelations1997">(<a href="#ref-busemeyerLearningFunctionalRelations1997" role="doc-biblioref">Busemeyer et al., 1997</a>)</span>, which have successfully accounted for human learning, interpolation, and extrapolation in numerous investigations<span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielConceptualBasisFunction2005 mcdanielPredictingTransferPerformance2009">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">McDaniel et al., 2009</a>; <a href="#ref-mcdanielConceptualBasisFunction2005" role="doc-biblioref">McDaniel &amp; Busemeyer, 2005</a>)</span>. However, the influence of training variability on function learning, particularly in visuomotor function learning tasks, remains relatively unexplored. Project 2 of this dissertation will address this gap by investigating how constant and varied training regimes affect learning, discrimination, and extrapolation in a novel visuomotor function learning task. We will leverage the ALM and EXAM models, fitted to individual participant data using advanced Bayesian techniques, to provide a detailed computational account of the observed empirical patterns.</p>
-</section>
-<section id="full-revision-instructions" class="level2">
-<h2 class="anchored" data-anchor-id="full-revision-instructions">Full Revision Instructions</h2>
-<details>
-<summary>
-show
+show full revision instructions from Rob
 </summary>
 <ol type="1">
 <li><p>Add participant/trial exclusion conditions for Project 2</p></li>
@@ -360,6 +301,125 @@ show
 <li><p>Are there new predictions to make about how the process of c being learned during training would show up in the performance during training, or anywhere else?&nbsp; For instance, do you propose that c is adjusted on the basis of experienced differences from one trial to the next, or on the basis of running estimates of SD in the data, etc.? Could differences in possible learning processes for c account for effects of massed vs.&nbsp;distributed presentation of stimuli?&nbsp;</p></li>
 <li><p>The distinction between experienced stimuli and behavioral actions &nbsp;seems like an important factor to explore more in a discussion, given that the similarity space in the two could differ in ways that could affect behavior (and appropriate modeling).</p></li>
 </ol>
+</details>
+<hr>
+<p><strong>Note.</strong> For each issue - callouts distinguish between novel text that has been added (Additions), and relevant existing content that is also relevant to the issue. Each item also includes a link to where the change was implemented in the full manuscript.</p>
+<hr>
+</section>
+<section id="participanttrial-exclusion-conditions-for-project-2" class="level2">
+<h2 class="anchored" data-anchor-id="participanttrial-exclusion-conditions-for-project-2">1) Participant/trial exclusion conditions for Project 2</h2>
+<details open="" class="addition-callout">
+<summary>
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#methods-30" target="_blank">link to context in full manuscript</a>
+</summary>
+<div>
+<p><em>Participants.</em> A total of 183 participants were initially recruited from Indiana University Introductory Psychology Courses. Of these, 27 participants were excluded from further analysis due to meeting the exclusion criteria, resulting in a final sample of 156 participants. The exclusion criteria was defined as performance worse (i.e., larger deviations) than the condition average in either the training or testing stage of the experiment. The remaining participants were randomly assigned to one of two training conditions: varied training or constant training.</p>
+</div>
+</details>
+</section>
+<section id="igas-vs.-almexam-model-comparisondiscussion" class="level2">
+<h2 class="anchored" data-anchor-id="igas-vs.-almexam-model-comparisondiscussion">2) IGAS vs.&nbsp;ALM/EXAM Model Comparison/Discussion</h2>
+<details open="" class="addition-callout">
+<summary>
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20important%20to%20note" target="_blank">link to context in full manuscript</a>
+</summary>
+<div>
+<p>It is important to note that while both projects utilize computational models, direct comparisons are complicated by the distinct purposes and structures of the models employed in each project. The IGAS model of Project 1 serves as a descriptive measurement model, capturing the similarity between training throws and testing conditions. In contrast, the ALM and EXAM models of Project 2 are full process models, capable of generating exact predictions for both learning and testing stages. The difference is also reflected in the interpretation of the generalization parameter (<span class="math inline">\(c\)</span>) across the models of the two projects. In IGAS, <span class="math inline">\(c\)</span> moderates the similarity between executed throws and subsequent testing solutions, while in ALM and EXAM, <span class="math inline">\(c\)</span> governs the extent to which the perceived stimuli activate the input layer nodes. Despite these differences, insights from ALM/EXAM, particularly the role of zero-point knowledge, may offer potential explanations for the contrasting empirical results. Particularly, EXAM’s reliance on zero-point knowledge in the simpler HTW task may explain why constant training was more effective in Project 2, while the lack of a clear zero-point reference in the more complex HTT task of Project 1 may have increased the value of varied training. This suggests that the benefits of variability depend critically on how task structure interacts with prior knowledge and the learner’s capacity to leverage such knowledge for generalization.</p>
+<p>Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization.</p>
+</div>
+</details>
+</section>
+<section id="ordinal-feedback-rationale" class="level2">
+<h2 class="anchored" data-anchor-id="ordinal-feedback-rationale">3) Ordinal feedback rationale</h2>
+<details open="" class="addition-callout">
+<summary>
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#experiment-3-38" target="_blank">link</a>
+</summary>
+<div>
+<blockquote class="blockquote">
+<p>In Experiment 3, we sought to further explore the generality of the findings from the first two experiments by modifying the type of feedback provided during training. Specifically, we provided ordinal feedback instead of the continuous feedback used in the previous two experiments. Ordinal feedback provides learners with directional information about the results of their throw (e.g., above the target, below the target, or hitting the target) rather than precise numerical deviations. This form of feedback resembles many real-world learning scenarios, such as a coach instructing an athlete to perform a movement using “more force” or “less force”, or a teacher providing letter grades rather than numeric scores. Although ordinal feedback provides less detailed information per trial, prior research has shown that less detailed feedback isn’t necessarily detrimental to learning. For example, <span class="citation" data-cites="cornwallEffectsCategoricalNumerical2022">Cornwall et al. (<a href="#ref-cornwallEffectsCategoricalNumerical2022" role="doc-biblioref">2022</a>)</span> manipulated whether participants received categorical (correct or incorrect) vs.&nbsp;numerical feedback (reward points ranging from 50-100). They found that the categorical condition produced superior learning, which they explained as arising from larger prediction errors. Although we do not make specific predictions about the ordinal condition in our study, it serves as a manipulation that might influence the learning process.</p>
+</blockquote>
+</div>
+</details>
+</section>
+<section id="project-2-take-aways" class="level2">
+<h2 class="anchored" data-anchor-id="project-2-take-aways">4) Project 2 take-aways:</h2>
+<details open="">
+<summary style="background-color: #f0f8ff; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=we%20turned%20to%20the%20well" target="_blank">link</a>
+</summary>
+<div style="background-color: #f9f9f9; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+<p>To explain our results, we turned to the well established EXAM and ALM models. The disproportionate success of EXAM in capturing the performance of participants under the constant training condition suggests that rule-based extrapolation can emerge even from a limited set of training examples. This success hinges on the assumption that participants are able to leverage prior knowledge of the zero-point reference <span class="citation" data-cites="brownUnderestimationLinearFunction2017 kwantesWhyPeopleUnderestimate2006">(<a href="#ref-brownUnderestimationLinearFunction2017" role="doc-biblioref">Brown &amp; Lacroix, 2017</a>; <a href="#ref-kwantesWhyPeopleUnderestimate2006" role="doc-biblioref">Kwantes &amp; Neal, 2006</a>)</span>. The zero-point reference, combined with accurate learning of the single trained velocity band enabled EXAM to capture the extrapolation patterns of the constant participants. However, it’s important to acknowledge that the ALM model provided a better fit for a subset of participants in each of our three experiment, highlighting the presence of substantial individual differences in generalization patterns.</p>
+<p>This finding illustrates the importance of considering task structure when evaluating the effects of training variability on generalization and extrapolation. Some tasks, like the one in this study, may permit the use of zero-point knowledge or other prior information, while others may not. For example, a zero point may be less relevant in visuomotor tasks with complex rotations <span class="citation" data-cites="vandamMappingShapeVisuomotor2015 rollerVariablePracticeLenses2001">(<a href="#ref-rollerVariablePracticeLenses2001" role="doc-biblioref">Roller et al., 2001</a>; <a href="#ref-vandamMappingShapeVisuomotor2015" role="doc-biblioref">van Dam &amp; Ernst, 2015</a>)</span>, or in complex sports techniques <span class="citation" data-cites="northEffectConsistentVaried2019">(<a href="#ref-northEffectConsistentVaried2019" role="doc-biblioref">North et al., 2019</a>)</span>. Future research should systematically investigate how different task structures interact with training variability to influence learning outcomes and generalization abilities, taking into account factors such as the availability of prior knowledge, the complexity of the task, and the specific learning mechanisms involved. This approach could help reconcile seemingly contradictory findings in the literature and provide more nuanced guidelines for designing effective training protocols across various domains.</p>
+</div>
+</details>
+<hr>
+</section>
+<section id="stimuli-vs.-action-similarity" class="level2">
+<h2 class="anchored" data-anchor-id="stimuli-vs.-action-similarity">5) Stimuli vs.&nbsp;Action Similarity</h2>
+<p><strong>Note.</strong> The novel text for this issue overlaps with the novel text for the IGAS vs.&nbsp;ALM/EXAM Model Comparison/Discussion issue.</p>
+<details open="" class="addition-callout">
+<summary>
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20important%20to%20note" target="_blank">link to context in full manuscript</a>
+</summary>
+<div>
+<p>Future work could explore extending ALM and EXAM, which have traditionally been applied to one-dimensional function learning tasks, to more complex motor tasks such as HTT. The neural network structure of ALM could be adapted to handle 2D input by utilizing a 2D grid of input nodes, allowing the model to learn mappings between 2D throwing velocities and desired outcomes. This would allow the model to process the more complex spatial information inherent in tasks like HTT. Furthermore, the output layers of ALM/EXAM could be expanded to express more complex motor outputs in addition to velocity, such as the locations of grabbing and releasing the projectile or other parameters defining the unique trajectories produced. In addition to allowing the models to be applied to more complex tasks, these modifications could enable researchers to investigate how perceptual similarity (i.e., the similarity of stimuli) and motoric similarity (i.e., the similarity of behavioral actions) may separately and jointly influence learning and generalization.</p>
+</div>
+</details>
+<details>
+<summary>
+relevant existing content 1 <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Our%20modelling%20approach,of%20Knowledge%20II." target="_blank">link</a>
+</summary>
+<blockquote class="blockquote">
+<p>Our modelling approach does differ from category learning implementations of instance-based models in several ways. One such difference is the nature of the training instances that are assumed to be stored. In category learning studies, instances are represented as points in a multidimensional space of all of the attributes that define a category item (e.g., size/color/shape). Rather than defining instances in terms of what stimuli learners experience, our approach assumes that stored, motor instances reflect how they act, in terms of the velocity applied to the ball on each throw. An advantage of many motor learning tasks is the relative ease with which task execution variables can be directly measured (e.g., movement force, velocity, angle, posture) in addition to the decision and response time measures that typically exhaust the data generated from more classical cognitive tasks. Of course, whether learners actually are storing each individual motor instance is a fundamental question beyond the scope of the current work – though as described in the introduction there is some evidence in support of this idea (Chamberlin &amp; Magill, 1992a; Crump &amp; Logan, 2010; Hommel, 1998; Meigh et al., 2018; Poldrack et al., 1999). A particularly noteworthy instance-based model of sensory-motor behavior is the Knowledge II model of Rosenbaum and colleagues (R. G. Cohen &amp; Rosenbaum, 2004; Rosenbaum et al., 1995). Knowledge II explicitly defines instances as postures (joint combinations), and is thus far more detailed than IGAS in regards to the contents of stored instances. Knowledge II also differs from IGAS in that learning is accounted for by both the retrieval of stored postures, and the generation of novel postures via the modification of retrieved postures. A promising avenue for future research would be to combine the adaptive similarity mechanism of IGAS with the novel instance generation mechanisms of Knowledge II.</p>
+</blockquote>
+</details>
+<details>
+<summary>
+relevant existing content 2 <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=It%20is%20common,the%20task%20stimuli." target="_blank">link</a><br>
+
+</summary>
+<blockquote class="blockquote">
+<p>It is common for psychological process models of categorization learning to use an approach such as multidimensional scaling so as to transform the stimuli from the physical dimensions used in the particular task into the psychological dimensions more reflective of the actual human representations (Nosofsky, 1992; Shepard, 1987). Such scaling typically entails having participants rate the similarity between individual items and using these similarity judgements to then compute the psychological distances between stimuli, which can then be fed into a subsequent model. In the present investigation, there was no such way to scale the x and y velocity components in terms of the psychological similarity, and thus our modelling does rely on the assumption that the psychological distances between the different throwing positions are proportional to absolute distances in the metric space of the task (e.g., the relative distance between positions 400 and 500 is equivalent to that between 800 and 900). However, an advantage of our approach is that we are measuring similarity in terms of how participants behave (applying a velocity to the ball), rather than the metric features of the task stimuli.</p>
+</blockquote>
+</details>
+</section>
+<section id="how-c-might-be-learned" class="level2">
+<h2 class="anchored" data-anchor-id="how-c-might-be-learned">6) How c might be learned</h2>
+<details open="" class="addition-callout">
+<summary>
+Addition in context (<strong>new text bolded</strong>) <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Our%20results%20thus%20suggest" target="_blank">link</a>
+</summary>
+<blockquote class="blockquote">
+<p>Our results thus suggest that the benefits of variation cannot be explained by the varied-trained participants simply covering a broader range of the task space. Rather, the modeling suggests that varied participants also learn to adaptively tune their generalization function such that throwing locations generalize more broadly to one another than they do in the constant condition. A learning system could end up adopting a higher c value in the constant than variable training conditions by monitoring the trial-by-trial variability of the training items. The <span class="math inline">\(c\)</span> parameter would be adapted downwards when adjacent training items are dissimilar to each other and adapted upwards when adjacent training items are the same. In this fashion, contextually appropriate <span class="math inline">\(c\)</span> values could be empirically learned. This learning procedure would capture the insight that if a situation has a high amount variability, then the learner should be predisposed toward thinking that subsequent test items will also show considerable variability, in which case generalization gradients should be broad, as is achieved by low values for <span class="math inline">\(c\)</span>. <strong><span class="citation" data-cites="sakamotoTrackingVariabilityLearning2006">Sakamoto et al. (<a href="#ref-sakamotoTrackingVariabilityLearning2006" role="doc-biblioref">2006</a>)</span> implemented a similar learning mechanism for updating the generalization paramater in an exemplar-based model (although in their model, a separate generalization parameter is assigned to each exemplar). In their experiment, participants were trained on a high variability and a low variability category, and the dynamically updated generalization parameter was necessary to account for broader generalione zation observed around the high variability category when participants were tested with an ambiguous intermediary item. In a subsequent work <span class="citation" data-cites="sakamotoPuttingPsychologyBack2008">(<a href="#ref-sakamotoPuttingPsychologyBack2008" role="doc-biblioref">Sakamoto et al., 2008</a>)</span>, the same authors showed that a similar learning mechanism could account for the pattern wherein participants generalize more broadly around a category when the average distance between the category exemplars is larger (however the only model tested in this work was a prototype model).</strong></p>
+</blockquote>
+</details>
+<details class="relevant-callout">
+<summary>
+Relevant existing content <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=A%20learning%20system,values%20for%20c." target="_blank">link 1</a>
+</summary>
+<blockquote class="blockquote">
+<p>As described above, the idea that learners flexibly adjust their generalization gradient based on prior experience does have precedent in the domains of category learning (Aha &amp; Goldstone, 1992; Briscoe &amp; Feldman, 2011; Hahn et al., 2005; Lamberts, 1994; Op de Beeck et al., 2008), and sensorimotor adaptation (Marongelli &amp; Thoroughman, 2013; Taylor &amp; Ivry, 2013; Thoroughman &amp; Taylor, 2005). Lamberts (1994) showed that a simple manipulation of background knowledge during a categorization test resulted in participants generalizing their training experience more or less broadly, and moreover that such a pattern could be captured by allowing the generalization parameter of an instance-based similarity model to be fit separately between conditions. The flexible generalization parameter has also successfully accounted for generalization behavior in cases where participants have been trained on categories that differ in their relative variability (Hahn et al., 2005; Sakamoto et al., 2006). However, to the best of our knowledge, IGAS is the first instance-based similarity model that has been put forward to account for the effect of varied training in a visuomotor skill task. Although IGAS was inspired by work in the domain of category learning, its success in a distinct domain may not be surprising in light of the numerous prior observations that at least certain aspects of learning and generalization may operate under common principles across different tasks and domains (Censor et al., 2012; Hills et al., 2010; Jamieson et al., 2022; Law &amp; Gold, 2010; Roark et al., 2021; Rosenbaum et al., 2001; Vigo et al., 2018; Wall et al., 2021; Wu et al., 2020; J. Yang et al., 2020).</p>
+</blockquote>
+</details>
+<details class="relevant-callout">
+<summary>
+Relevant existing content <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=However%2C%20previous%20research,the%20trained%20positions." target="_blank">link 2</a>
+</summary>
+<blockquote class="blockquote">
+<p>However, previous research has suggested that participants may differ in their level of generalization as a function of prior experience, and that such differences in generalization gradients can be captured by fitting the generalization parameter of an instance-based model separately to each group (Hahn et al., 2005; Lamberts, 1994). Relatedly, the influential Bayesian generalization model developed by Tenenbaum &amp; Griffiths (2001) predicts that the breadth of generalization will increase when a rational agent encounters a wider variety of examples. Following these leads, we assume that in addition to learning the task itself, participants are also adjusting how generalizable their experience should be. Varied versus constant participants may be expected to learn to generalize their experience to different degrees. To accommodate this difference, the generalization parameter of the instance-based model (in the present case, the <span class="math inline">\(c\)</span> parameter) can be allowed to vary between the two groups to reflect the tendency of learners to adaptively tune the extent of their generalization. One specific hypothesis is that people adaptively set a value of c to fit the variability of their training experience (Nosofsky &amp; Johansen, 2000; Sakamoto et al., 2006). If one’s training experience is relatively variable, as with the variable training condition, then one might infer that future test situations will also be variable, in which case a low value of c will allow better generalization because generalization will drop off slowly with training-to-testing distance. Conversely, if one’s training experience has little variability, as found in the constant training conditions, then one might adopt a high value of c so that generalization falls off rapidly away from the trained positions.</p>
+</blockquote>
+</details>
+</section>
+<section id="foreshadowing-function-learning-literature" class="level2">
+<h2 class="anchored" data-anchor-id="foreshadowing-function-learning-literature">7) Foreshadowing function learning literature</h2>
+<details open="" class="addition-callout">
+<summary>
+Addition <a href="https://tegorman13.github.io/Dissertation/Manuscript/output/manuscript.html#:~:text=Project%202%20will%20focus" target="_blank">link</a>
+</summary>
+<div>
+<p>Project 2 will focus on the domain of function learning and in particular the issue of extrapolation. Function learning research examines how people acquire and generalize knowledge about continuous input-output relationships, and the factors influencing extrapolation to novel inputs following an initial learning phase. The domain of function learning has yielded influential computational models like the Associative Learning Model (ALM) and the Extrapolation-Association Model (EXAM) <span class="citation" data-cites="busemeyerLearningFunctionalRelations1997">(<a href="#ref-busemeyerLearningFunctionalRelations1997" role="doc-biblioref">Busemeyer et al., 1997</a>)</span>, which have successfully accounted for human learning, interpolation, and extrapolation in numerous investigations<span class="citation" data-cites="deloshExtrapolationSineQua1997 mcdanielConceptualBasisFunction2005 mcdanielPredictingTransferPerformance2009">(<a href="#ref-deloshExtrapolationSineQua1997" role="doc-biblioref">DeLosh et al., 1997</a>; <a href="#ref-mcdanielPredictingTransferPerformance2009" role="doc-biblioref">McDaniel et al., 2009</a>; <a href="#ref-mcdanielConceptualBasisFunction2005" role="doc-biblioref">McDaniel &amp; Busemeyer, 2005</a>)</span>. However, the influence of training variability on function learning, particularly in visuomotor function learning tasks, remains relatively unexplored. Project 2 of this dissertation will address this gap by investigating how constant and varied training regimes affect learning, discrimination, and extrapolation in a novel visuomotor function learning task. We will leverage the ALM and EXAM models, fitted to individual participant data using advanced Bayesian techniques, to provide a detailed computational account of the observed empirical patterns.</p>
+</div>
 </details>
 
 
@@ -402,12 +462,6 @@ Sakamoto, Y., Love, B. C., &amp; Jones, M. (2006). Tracking <span>Variability</s
 </div>
 <div id="ref-vandamMappingShapeVisuomotor2015" class="csl-entry" role="listitem">
 van Dam, L. C. J., &amp; Ernst, M. O. (2015). Mapping <span>Shape</span> to <span>Visuomotor Mapping</span>: <span>Learning</span> and <span>Generalisation</span> of <span>Sensorimotor Behaviour Based</span> on <span>Contextual Information</span>. <em>PLOS Computational Biology</em>, <em>11</em>(3), e1004172. <a href="https://doi.org/10.1371/journal.pcbi.1004172">https://doi.org/10.1371/journal.pcbi.1004172</a>
-</div>
-<div id="ref-wifallReachingResponseSelection2017" class="csl-entry" role="listitem">
-Wifall, T., Buss, A. T., Farmer, T. A., Spencer, J. P., &amp; Hazeltine, E. (2017). Reaching into response selection: <span>Stimulus</span> and response similarity influence central operations. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>43</em>(3), 555–568. <a href="https://doi.org/10.1037/xhp0000301">https://doi.org/10.1037/xhp0000301</a>
-</div>
-<div id="ref-wifallPerceptualSimilarityAffects2014" class="csl-entry" role="listitem">
-Wifall, T., McMurray, B., &amp; Hazeltine, E. (2014). Perceptual <span>Similarity Affects</span> the <span>Learning Curve</span> (but <span>Not Necessarily Leaming</span>). <em>Journal of Experimental Psychology: General</em>, <em>143</em>(1), 312–331. <a href="https://doi.org/10.1037/a0030865">https://doi.org/10.1037/a0030865</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
