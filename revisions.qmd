@@ -5,6 +5,7 @@ author:
   url: https://tegorman13.github.io/
 page-layout: full
 toc: true
+suppress-bibliography: true
 format:
   html: default
   gfm: default
