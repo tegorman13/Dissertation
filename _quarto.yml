@@ -53,9 +53,9 @@ website:
       - text: "---"
       - text: "Full Dissertation w/Code"
         href: Sections/full.qmd
-      #- text: "---"
-      # - text: Intro
-      #   href: Sections/Introduction.qmd
+      - text: "---"
+      - text: Intro
+        href: Sections/Introduction.qmd
       - Sections/IGAS.qmd
       - Sections/HTW.qmd
       #- Sections/Discussion.qmd
