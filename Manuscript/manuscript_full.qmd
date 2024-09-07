@@ -1,0 +1,138 @@
+---
+code-repo: "Access the code, data, and analysis at <https://github.com/tegorman13/Dissertation>"
+toc: false
+toc-depth: 4
+toc-location: body
+#cache: true
+output-dir: output
+execute: 
+  warning: false
+  include: true
+  echo: false
+format:
+#   docx:
+#     prefer-html: true
+#     output-file: "TG_Full_Dissertation2.docx"
+#     toc: true
+#   html:
+#     toc: true
+#     language: 
+#       title-block-published: "Latest version"
+#     shift-heading-level-by: 0
+#     toc-depth: 4
+#     link-citations: true
+#     page-layout: full
+#     format-links: [pdf, gfm, docx]
+#     theme: 
+#        #- ../Assets/Style/lux-modified.scss 
+#        - cosmo
+#        - custom.scss
+#        - ../Assets/Style/style.scss
+#     css: ../Assets/Style/calloutTG.css
+#     citeproc: false
+#     filters: 
+#       - "_extensions/wordcount/citeproc.lua"
+#       - "_extensions/wordcount/wordcount.lua"
+#     lightbox: auto
+#     knitr:
+#       opts_chunk:
+#         dev: "ragg_png"
+#         dpi: 300
+  pdf:
+    cite-method: citeproc
+    #date: today
+    output-file: "TG_Full_Dissertation2.pdf"
+    mathfont: "Libertinus Math"
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 1.5
+          # Document styling
+    geometry:
+      - top=1in     
+      - bottom=1in  
+      - left=1in    
+      - right=1in  
+      - heightrounded
+      
+      # Citations and links
+    # lot: true
+    # lof: true
+    colorlinks: true
+    linkcolor: DarkSlateBlue
+    urlcolor: DarkSlateBlue
+    citecolor: DarkSlateBlue
+    link-citations: true
+    # linestretch: 1.05
+    include-in-header:
+      # The \everydisplay thing makes all math blocks use \small font
+      text: |
+        \usepackage{mathtools}
+        \everydisplay\expandafter{\the\everydisplay\small}
+        \usepackage{float}
+        \floatplacement{figure}{H}
+        \floatplacement{table}{H}
+        \usepackage{setspace}
+        \pagenumbering{arabic}
+        \usepackage{titlesec}
+        \titleformat{\section}{\fontsize{12}{14}\bfseries}{\thesection}{1em}{}
+        \titleformat{\subsection}{\fontsize{11}{14}\bfseries}{\thesubsection}{1em}{}
+---
+
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/pre_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/pre_pdf_full.qmd >}}
+
+:::
+
+::: {.content-visible when-format="docx"}
+{{< include pre_sections/pre_docx.qmd >}}
+:::
+
+{{< pagebreak >}}
+
+
+::: {.content-visible when-format="html"}
+
+{{< include pre_sections/toc_html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/toc_pdf.qmd >}}
+
+:::
+
+
+
+{{< pagebreak >}}
+
+# Introduction
+
+## Varied Training and Generalization
+
+Varied training has been shown to influence learning in a wide array of different tasks and domains, including categorization [@hahnEffectsCategoryDiversity2005; @maddoxStimulusRangeDiscontinuity2011; @posnerGenesisAbstractIdeas1968; @nosofskyModelguidedSearchOptimal2019; @morgensternOneshotCategorizationNovel2019; @plebanekEffectsFrequencyVariability2021], language learning [@jonesDensityDistinctivenessEarly2020; @perryLearnLocallyThink2010; @twomeyAllRightNoises2018; @wonnacottInputEffectsAcquisition2012; @brekelmansDoesHighVariability2022], anagram completion [@goodeSuperiorityVariableRepeated2008], perceptual learning [@manentiVariabilityTrainingUnlocks2023; @lovibondStimulusDiscriminabilityInduction2020; @robsonSpecificVariedPractice2022a; @zamanPerceptualVariabilityImplications2021], trajectory extrapolation [@fulvioTaskSpecificResponseStrategy2014], cognitive control tasks [@sabahWhenLessMore2019; @moshon-cohenStimulusVariabilityImproves2024], associative learning [@leeEvidentialDiversityIncreases2019; @reichmannVariabilityAbstractionEvaluative2023; @fanStimulusDiversityIncreases2022; @pradaExperiencedCategoryVariability2020; @liveseyRevisitingPeakShift2019], visual search [@georgeStimulusVariabilityTask2021; @gonzalezDiversityTrainingEnhances2011; @kelleyLearningAttendEffects2009], voice identity learning [@lavanEffectsHighVariability2019], face recognition [@honigPerceptualSimilarityModulates2022; @burtonIdentityVariationRepresentations2016; @menonVariationPhotosSame2015],  the perception of social group heterogeneity [@linvilleExemplarAbstractionModels1993; @konovalovaInformationSamplingExplanation2020; @parkPerceptionVariabilityCategory1987; @gershmanStructureLearningPrinciples2023] ,  simple motor learning [@braunMotorTaskVariation2009; @kerrSpecificVariedPractice1978; @rollerVariablePracticeLenses2001; @willeyLimitedGeneralizationVaried2018], sports training  [@greenPracticeVariabilityTransfer1995a; @northEffectConsistentVaried2019; @breslinConstantVariablePractice2012], and  complex skill learning [@seowTransferEffectsVaried2019; @huetEducationAttentionExplanation2011; @hacquesVisualControlClimbing2022]. See @czyzVariabilityPracticeInformation2021 or @ravivHowVariabilityShapes2022 for more detailed reviews. 
+
+
+{{< pagebreak >}}
+
+
+# References
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/diss_cv.qmd >}}
+
+:::

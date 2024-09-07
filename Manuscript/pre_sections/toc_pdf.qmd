@@ -1,7 +1,9 @@
-\pagenumbering{arabic}
 \tableofcontents
 \newpage
 \listoffigures
 \newpage
 \listoftables
 \newpage
+
+\clearpage
+\pagenumbering{arabic}

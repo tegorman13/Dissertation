@@ -1,0 +1,73 @@
+\pagenumbering{gobble}
+
+# Curriculum Vitae
+
+## Education {.unnumbered .unlisted}
+
+::: {.content-visible when-format="pdf"}
+```{=tex}
+\begin{tabular}{p{0.3\textwidth} p{0.7\textwidth}}
+2017 - May 2024 & \textbf{Indiana University - Bloomington} \\
+& PhD in Psychology and Cognitive Science \\ 
+& Dissertation: \textit{The Role of Variability in Learning Generalization: A Computational Modeling Approach}\\
+2011 - 2015 & \textbf{University of Wisconsin - Madison} \\
+& B.Sc. in Psychology \\
+& Thesis: \textit{Short-term mindfulness intervention reduces the negative attentional effects associated with heavy media multitasking} \\
+\end{tabular}
+```
+:::
+
+## Journal Articles and Conference Proceedings {.unnumbered .unlisted}
+
+-   **Gorman**, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. *Cognitive Psychology*, *137*, 101491.
+
+-   Kattner, F., Cochrane, A., Cox, C. R., **Gorman**, T. E., & Green, C. S. (2017). Perceptual learning generalization from sequential perceptual training as a change in learning rate. *Current Biology*, *27*(6), 840-846.
+
+-   **Gorman**, T.E., & Green, C.S. (2016). Short-term mindfulness intervention reduces the negative attentional effects associated with heavy media multitasking. *Scientific Reports*, *6*.
+
+## Reviews and Book Chapters {.unnumbered .unlisted}
+
+-   **Gorman**, T.E., Gentile, D.A., & Green, C.S. Problem gaming: a short primer (2018). *American Journal of Play*, *10* (3), 309-327
+
+-   **Gorman**, T.E., & Green, C.S. (2017). Young minds on video games. In *Cognitive development in digital contexts*. 121-143. Academic Press. 
+
+-   Green, C. S., **Gorman**, T., & Bavelier, D. (2016). Action Video-Game Training and Its Effects on Perception and Attentional Control. In *Cognitive Training* (pp. 107-116). Springer International Publishing.
+
+## Presentations {.unnumbered .unlisted}
+
+-   Half Day Tutorial on Measuring Mindfulness Behaviorally: Onsite/Online Data Col-lection with jsPsych
+    -   Cognitive Science Conference – 2018
+-   Does interleaving go the distance? Exploring the effect of dissimilarity on interleaved category learning
+    -   Math Psych/ICCM 2018
+-   Short term mindfulness intervention reduces cognitive deficits in heavy media multi-taskers
+    -   Undergraduate Research Symposium – UW-Madison – April 16th, 2015
+
+## Awards {.unnumbered .unlisted}
+
+IU-Bloomington – Development Training Grant – Fall 2019
+
+IU-Bloomington - Steinmetz Summer Research Award - 2018
+
+UW-Madison - Undergraduate Research Scholar Award – 2015
+
+UW-Madison - Hilldale Undergraduate/Faculty Research Fellowship – 2014
+
+## Ad-hoc Reviewer {.unnumbered .unlisted}
+
+Cognitive Science
+
+Journal of Experimental Psychology: General
+
+Journal of Experimental Psychology: Human Perception and Performance
+
+Contemporary Educational Psychology
+
+## Conferences {.unnumbered .unlisted}
+
+Cognitive Science Conference - 2021
+
+Cognitive Science Conference - 2018
+
+Mathematical Psychology & ICCM 2018
+
+Boston Meeting on Methods in Cognitive Training (NSF Sponsored) – May 2017

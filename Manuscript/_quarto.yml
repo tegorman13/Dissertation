@@ -2,6 +2,7 @@ project:
   title: "Manuscript"
   render: 
   - "manuscript.qmd"
+  - "manuscript_full.qmd"
 
 execute: 
   warning: false
