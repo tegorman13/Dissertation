@@ -7,13 +7,16 @@
 
 {Thomas E. Gorman}
 
-\vspace{13.5cm}
+\vspace{10.5cm}
 
 
 
-Submitted to the faculty of the University Graduate School in partial fulfillment of the
-requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
-Sciences and the Cognitive Science Program, Indiana University
+Submitted to the faculty of the University Graduate School \\
+in partial fulfillment of the requirements \\
+for the degree \\
+Doctor of Philosophy \\
+in the Cognitive Science Program and \\
+Department of Psychological and Brain Sciences, \\
 Indiana University \\
 September 2024
 
@@ -31,7 +34,7 @@ September 2024
 Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
 requirements for the degree of Doctor of Philosophy.
 \end{center}
-\vspace{2cm}
+\vspace{1cm}
 \
 Doctoral Committee
 \vspace{1cm}

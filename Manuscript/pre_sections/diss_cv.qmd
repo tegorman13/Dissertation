@@ -35,12 +35,9 @@
 
 ## Presentations {.unnumbered .unlisted}
 
--   Half Day Tutorial on Measuring Mindfulness Behaviorally: Onsite/Online Data Col-lection with jsPsych
-    -   Cognitive Science Conference – 2018
--   Does interleaving go the distance? Exploring the effect of dissimilarity on interleaved category learning
-    -   Math Psych/ICCM 2018
--   Short term mindfulness intervention reduces cognitive deficits in heavy media multi-taskers
-    -   Undergraduate Research Symposium – UW-Madison – April 16th, 2015
+-   Half Day Tutorial on Measuring Mindfulness Behaviorally: Onsite/Online Data Col-lection with jsPsych -   Cognitive Science Conference – 2018
+-   Does interleaving go the distance? Exploring the effect of dissimilarity on interleaved category learning -   Math Psych/ICCM 2018
+-   Short term mindfulness intervention reduces cognitive deficits in heavy media multi-taskers -   Undergraduate Research Symposium – UW-Madison – April 16th, 2015
 
 ## Awards {.unnumbered .unlisted}
 
@@ -59,8 +56,6 @@ Cognitive Science
 Journal of Experimental Psychology: General
 
 Journal of Experimental Psychology: Human Perception and Performance
-
-Contemporary Educational Psychology
 
 ## Conferences {.unnumbered .unlisted}
 

@@ -19,7 +19,7 @@ execute:
 
 ::: {.content-visible when-format="pdf"}
 
-{{< include pre_sections/pre_pdf.qmd >}}
+{{< include pre_sections/pre_pdf_full.qmd >}}
 
 :::
 
@@ -2674,5 +2674,13 @@ In summary, this dissertation provides a comprehensive examination of the effect
 
 # References
 ::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+::: {.content-visible when-format="pdf"}
+
+{{< include pre_sections/diss_cv.qmd >}}
+
 :::
 

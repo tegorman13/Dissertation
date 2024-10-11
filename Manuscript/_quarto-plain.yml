@@ -77,6 +77,11 @@ format:
         \floatplacement{table}{H}
         \usepackage{setspace}
         \pagenumbering{arabic}
+        \usepackage{titlesec}
+        \titleformat{\section}{\fontsize{12}{14}\bfseries}{\thesection}{1em}{}
+        \titleformat{\subsection}{\fontsize{11}{14}\bfseries}{\thesubsection}{1em}{}
+        \titleformat{\subsubsection}{\fontsize{11}{14}\bfseries}{\thesubsubsection}{1em}{}
+        \titleformat{\paragraph}{\fontsize{12}{14}\bfseries}{}{0em}{} 
   hugo:
     html-math-method: mathjax
     output-file: Dissertation-hugo.md
