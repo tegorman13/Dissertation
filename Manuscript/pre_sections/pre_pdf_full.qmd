@@ -18,7 +18,7 @@ Doctor of Philosophy \\
 in the Cognitive Science Program and \\
 Department of Psychological and Brain Sciences, \\
 Indiana University \\
-September 2024
+October 2024
 
 
 \vspace{6cm}
@@ -75,9 +75,5 @@ Thomas E. Gorman
 
 \end{centering}
 
-\newpage
-\begin{center}
-\textbf{Acknowledgements}
-\end{center}
 \newpage
 

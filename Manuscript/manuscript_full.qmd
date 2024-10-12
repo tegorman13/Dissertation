@@ -10,10 +10,10 @@ execute:
   include: true
   echo: false
 format:
-#   docx:
-#     prefer-html: true
-#     output-file: "TG_Full_Dissertation2.docx"
-#     toc: true
+  docx:
+    prefer-html: true
+    output-file: "TG_Full_Dissertation2.docx"
+    toc: true
 #   html:
 #     toc: true
 #     language: 
@@ -89,13 +89,16 @@ format:
 ::: {.content-visible when-format="pdf"}
 
 {{< include pre_sections/pre_pdf_full.qmd >}}
+{{< include pre_sections/acknowledgements.qmd >}}
+{{< include pre_sections/abstract.qmd >}}
 
 :::
 
 ::: {.content-visible when-format="docx"}
 {{< include pre_sections/pre_docx.qmd >}}
+{{< include pre_sections/acknowledgements.qmd >}}
+{{< include pre_sections/abstract.qmd >}}
 :::
-
 {{< pagebreak >}}
 
 

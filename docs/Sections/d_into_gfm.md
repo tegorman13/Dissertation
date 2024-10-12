@@ -76,55 +76,42 @@ Two groups of children, aged 8 and 12, were assigned to either constant
 or varied training of a bean bag throwing task. The constant group
 practiced throwing a bean-bag at a small target placed 3 feet in front
 of them, and the varied group practiced throwing from a distance of both
-2 feet and 4 feet. Participants were blindfolded and unable to see the
-target while making each throw but would receive feedback by looking at
-where the beanbag had landed in between each training trial. 12 weeks
-later, all of the children were given a final test from a distance of 3
-feet which was novel for the varied participants and repeated for the
-constant participants. Participants were also blindfolded for testing
-and did not receive trial by trial feedback in this stage. In both age
-groups, participants performed significantly better in the varied
-condition than the constant condition, though the effect was larger for
-the younger, 8-year-old children. This result provides particularly
-strong evidence for the benefits of varied practice, as the varied group
-outperformed the constant group even when tested at the “home-turf”
-distance that the constant group had exclusively practiced. A similar
-pattern of results was observed in another study wherein varied
-participants trained with tennis, squash, badminton, and short-tennis
-rackets were compared against constant subjects trained with only a
-tennis racket (Green et al., 1995). One of the testing conditions had
-subjects repeat the use of the tennis racket, which had been used on all
-128 training trials for the constant group, and only 32 training trials
-for the varied group. Nevertheless, the varied group outperformed the
-constant group when using the tennis racket at testing, and also
-performed better in conditions with several novel racket lengths.
-However, as is the case with many of the patterns commonly observed in
-the “benefits of variability” literature, the pattern wherein the varied
-group outperforms the constant group even from the constants group’s
-home turf has not been consistently replicated. One recent study
-attempted a near replication of the Kerr & Booth study (Willey & Liu,
-2018b), having subjects throw beanbags at a target, with the varied
-group training from positions (5 and 9 feet) on either side of the
-constant group (7 feet). This study did not find a varied advantage from
-the constant training position, though the varied group did perform
-better at distances novel to both groups. However, this study diverged
-from the original in that the participants were adults; and the amount
-of training was much greater (20 sessions with 60 practice trials each,
-spread out over 5-7 weeks).
-
-<div id="fig-ex-design1">
-
-![](Introduction_files/figure-commonmark/fig-ex-design1-1.png)
-
-
-Figure 1: A schematic representation of the Kerr & Booth (1978) study
-design. The varied group trained from two distances (2 and 4 feet),
-while the constant group trained from a single distance (3 feet). Both
-groups were tested from a distance of 3 feet. The varied group
-outperformed the constant group at testing, despite the constant group
-having exclusively practiced from the testing distance.
-
-</div>
+2 feet and 4 feet (see **?@fig-ex-design1**). Participants were
+blindfolded and unable to see the target while making each throw but
+would receive feedback by looking at where the beanbag had landed in
+between each training trial. 12 weeks later, all of the children were
+given a final test from a distance of 3 feet which was novel for the
+varied participants and repeated for the constant participants.
+Participants were also blindfolded for testing and did not receive trial
+by trial feedback in this stage. In both age groups, participants
+performed significantly better in the varied condition than the constant
+condition, though the effect was larger for the younger, 8-year-old
+children. This result provides particularly strong evidence for the
+benefits of varied practice, as the varied group outperformed the
+constant group even when tested at the “home-turf” distance that the
+constant group had exclusively practiced. A similar pattern of results
+was observed in another study wherein varied participants trained with
+tennis, squash, badminton, and short-tennis rackets were compared
+against constant subjects trained with only a tennis racket (Green et
+al., 1995). One of the testing conditions had subjects repeat the use of
+the tennis racket, which had been used on all 128 training trials for
+the constant group, and only 32 training trials for the varied group.
+Nevertheless, the varied group outperformed the constant group when
+using the tennis racket at testing, and also performed better in
+conditions with several novel racket lengths. However, as is the case
+with many of the patterns commonly observed in the “benefits of
+variability” literature, the pattern wherein the varied group
+outperforms the constant group even from the constants group’s home turf
+has not been consistently replicated. One recent study attempted a near
+replication of the Kerr & Booth study (Willey & Liu, 2018b), having
+subjects throw beanbags at a target, with the varied group training from
+positions (5 and 9 feet) on either side of the constant group (7 feet).
+This study did not find a varied advantage from the constant training
+position, though the varied group did perform better at distances novel
+to both groups. However, this study diverged from the original in that
+the participants were adults; and the amount of training was much
+greater (20 sessions with 60 practice trials each, spread out over 5-7
+weeks).
 
 Pitting varied against constant practice against each other on the home
 turf of the constant group provides a compelling argument for the

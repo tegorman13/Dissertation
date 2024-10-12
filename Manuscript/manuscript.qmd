@@ -20,11 +20,15 @@ execute:
 ::: {.content-visible when-format="pdf"}
 
 {{< include pre_sections/pre_pdf_full.qmd >}}
+{{< include pre_sections/acknowledgements.qmd >}}
+{{< include pre_sections/abstract.qmd >}}
 
 :::
 
 ::: {.content-visible when-format="docx"}
 {{< include pre_sections/pre_docx.qmd >}}
+{{< include pre_sections/acknowledgements.qmd >}}
+{{< include pre_sections/abstract.qmd >}}
 :::
 
 {{< pagebreak >}}
@@ -50,13 +54,98 @@ execute:
 
 ## Varied Training and Generalization
 
-Varied training has been shown to influence learning in a wide array of different tasks and domains, including categorization [@hahnEffectsCategoryDiversity2005; @maddoxStimulusRangeDiscontinuity2011; @posnerGenesisAbstractIdeas1968; @nosofskyModelguidedSearchOptimal2019; @morgensternOneshotCategorizationNovel2019; @plebanekEffectsFrequencyVariability2021], language learning [@jonesDensityDistinctivenessEarly2020; @perryLearnLocallyThink2010; @twomeyAllRightNoises2018; @wonnacottInputEffectsAcquisition2012; @brekelmansDoesHighVariability2022], anagram completion [@goodeSuperiorityVariableRepeated2008], perceptual learning [@manentiVariabilityTrainingUnlocks2023; @lovibondStimulusDiscriminabilityInduction2020; @robsonSpecificVariedPractice2022a; @zamanPerceptualVariabilityImplications2021], trajectory extrapolation [@fulvioTaskSpecificResponseStrategy2014], cognitive control tasks [@sabahWhenLessMore2019; @moshon-cohenStimulusVariabilityImproves2024], associative learning [@leeEvidentialDiversityIncreases2019; @reichmannVariabilityAbstractionEvaluative2023; @fanStimulusDiversityIncreases2022; @pradaExperiencedCategoryVariability2020; @liveseyRevisitingPeakShift2019], visual search [@georgeStimulusVariabilityTask2021; @gonzalezDiversityTrainingEnhances2011; @kelleyLearningAttendEffects2009], voice identity learning [@lavanEffectsHighVariability2019], face recognition [@honigPerceptualSimilarityModulates2022; @burtonIdentityVariationRepresentations2016; @menonVariationPhotosSame2015],  the perception of social group heterogeneity [@linvilleExemplarAbstractionModels1993; @konovalovaInformationSamplingExplanation2020; @parkPerceptionVariabilityCategory1987; @gershmanStructureLearningPrinciples2023] ,  simple motor learning [@braunMotorTaskVariation2009; @kerrSpecificVariedPractice1978; @rollerVariablePracticeLenses2001; @willeyLimitedGeneralizationVaried2018], sports training  [@greenPracticeVariabilityTransfer1995a; @northEffectConsistentVaried2019; @breslinConstantVariablePractice2012], and  complex skill learning [@seowTransferEffectsVaried2019; @huetEducationAttentionExplanation2011; @hacquesVisualControlClimbing2022]. See @czyzVariabilityPracticeInformation2021 or @ravivHowVariabilityShapes2022 for more detailed reviews. 
+Varied training has been shown to influence learning in a wide array of different tasks and domains, including categorization [@hahnEffectsCategoryDiversity2005; @maddoxStimulusRangeDiscontinuity2011; @posnerGenesisAbstractIdeas1968; @nosofskyModelguidedSearchOptimal2019; @morgensternOneshotCategorizationNovel2019; @plebanekEffectsFrequencyVariability2021], language learning [@jonesDensityDistinctivenessEarly2020; @perryLearnLocallyThink2010; @twomeyAllRightNoises2018; @wonnacottInputEffectsAcquisition2012; @brekelmansDoesHighVariability2022], pattern and anagram completion tasks [@goodeSuperiorityVariableRepeated2008; @zhangHighVariabilityLearning2024], perceptual learning [@manentiVariabilityTrainingUnlocks2023; @lovibondStimulusDiscriminabilityInduction2020; @robsonSpecificVariedPractice2022a; @zamanPerceptualVariabilityImplications2021], trajectory extrapolation [@fulvioTaskSpecificResponseStrategy2014], cognitive control tasks [@sabahWhenLessMore2019; @moshon-cohenStimulusVariabilityImproves2024], associative learning [@leeEvidentialDiversityIncreases2019; @reichmannVariabilityAbstractionEvaluative2023; @fanStimulusDiversityIncreases2022; @pradaExperiencedCategoryVariability2020; @liveseyRevisitingPeakShift2019; @ramAnticipatedVariabilityIncreases2024], visual search [@georgeStimulusVariabilityTask2021; @gonzalezDiversityTrainingEnhances2011; @kelleyLearningAttendEffects2009], voice identity learning [@lavanEffectsHighVariability2019], face recognition [@honigPerceptualSimilarityModulates2022; @burtonIdentityVariationRepresentations2016; @menonVariationPhotosSame2015], the perception of social group heterogeneity [@linvilleExemplarAbstractionModels1993; @konovalovaInformationSamplingExplanation2020; @parkPerceptionVariabilityCategory1987; @gershmanStructureLearningPrinciples2023], simple motor learning [@braunMotorTaskVariation2009; @velazquez-vargasRoleTrainingVariability2024; @rollerVariablePracticeLenses2001; @willeyLimitedGeneralizationVaried2018], sports training [@greenPracticeVariabilityTransfer1995a; @northEffectConsistentVaried2019; @breslinConstantVariablePractice2012], and complex skill learning [@seowTransferEffectsVaried2019; @huetEducationAttentionExplanation2011; @hacquesVisualControlClimbing2022]. See @czyzVariabilityPracticeInformation2021 and @ravivHowVariabilityShapes2022 for more detailed reviews.
 
 Research on the effects of varied training typically manipulates variability in one of two ways. In the first approach, a high variability group is exposed to a greater number of unique instances during training, while a low variability group receives fewer unique instances with more repetitions. Alternatively, both groups may receive the same number of unique instances, but the high variability group's instances are more widely distributed or spread out in the relevant psychological space, while the low variability group's instances are clustered more tightly together. Researchers then compare the training groups in terms of their performance during the training phase, as well as their generalization performance during a testing phase. Researchers usually compare the performance of the two groups during both the training phase and a subsequent testing phase. The primary theoretical interest is often to assess the influence of training variability on generalization to novel testing items or conditions. However, the test may also include some or all of the items that were used during the training stage, allowing for an assessment of whether the variability manipulation influenced the learning of the trained items themselves, or to easily measure how much performance degrades as a function of how far away testing items are from the training items.
 
 The influence of training variability has received a large amount of attention in the domain of sensorimotor skill learning. Much of this research has been influenced by the work of @schmidtSchemaTheoryDiscrete1975, who proposed a schema-based account of motor learning as an attempt to address the longstanding problem of how novel movements are produced. Schema theory presumes that learners possess general motor programs for a class of movements (e.g., an underhand throw). When called up for use motor programs are parameterized by schema rules which determine how the motor program is parameterized or scaled to the particular demands of the current task. Schema theory predicts that variable training facilitates the formation of more robust schemas, which will result in improved generalization or transfer. Experiments that test this hypothesis are often designed to compare the transfer performance of a constant-trained group against that of a varied-trained group. Both groups train on the same task, but the varied group practices with multiple instances along some task-relevant dimension that remains invariant for the constant group. For example, studies using a projectile throwing task might assign participants to either constant training that practice throwing from a single location, or to a varied group that throws from multiple locations. Following training, both groups are then tested from novel throwing locations [@pigottMotorSchemaStructure1984; @willeyLimitedGeneralizationVaried2018; @pachecoLearningSpecificIndividual2018; @wulfEffectTypePractice1991].
 
-One of the earliest and still often cited investigations of Schmidt's benefits of variability hypothesis was the work of @kerrSpecificVariedPractice1978. Two groups of children, aged 8 and 12, were assigned to either constant or varied training of a bean bag throwing task. The constant group practiced throwing a bean-bag at a small target placed 3 feet in front of them, and the varied group practiced throwing from a distance of both 2 feet and 4 feet. Participants were blindfolded and unable to see the target while making each throw but would receive feedback by looking at where the beanbag had landed in between each training trial. 12 weeks later, all of the children were given a final test from a distance of 3 feet which was novel for the varied participants and repeated for the constant participants. Participants were also blindfolded for testing and did not receive trial by trial feedback in this stage. In both age groups, participants performed significantly better in the varied condition than the constant condition, though the effect was larger for the younger, 8-year-old children. This result provides particularly strong evidence for the benefits of varied practice, as the varied group outperformed the constant group even when tested at the "home-turf" distance that the constant group had exclusively practiced. A similar pattern of results was observed in another study wherein varied participants trained with tennis, squash, badminton, and short-tennis rackets were compared against constant subjects trained with only a tennis racket [@greenPracticeVariabilityTransfer1995a]. One of the testing conditions had subjects repeat the use of the tennis racket, which had been used on all 128 training trials for the constant group, and only 32 training trials for the varied group. Nevertheless, the varied group outperformed the constant group when using the tennis racket at testing, and also performed better in conditions with several novel racket lengths. However, as is the case with many of the patterns commonly observed in the "benefits of variability" literature, the pattern wherein the varied group outperforms the constant group even from the constants group's home turf has not been consistently replicated. One recent study attempted a near replication of the  Kerr & Booth study [@willeyLongtermMotorLearning2018], having subjects throw beanbags at a target, with the varied group training from positions (5 and 9 feet) on either side of the constant group (7 feet). This study did not find a varied advantage from the constant training position, though the varied group did perform better at distances novel to both groups. However, this study diverged from the original in that the participants were adults; and the amount of training was much greater (20 sessions with 60 practice trials each, spread out over 5-7 weeks). 
+One of the earliest and still often cited investigations of Schmidt's benefits of variability hypothesis was the work of @kerrSpecificVariedPractice1978. Two groups of children, aged 8 and 12, were assigned to either constant or varied training of a bean bag throwing task. The constant group practiced throwing a bean-bag at a small target placed 3 feet in front of them, and the varied group practiced throwing from a distance of both 2 feet and 4 feet (see @fig-ex-design1). Participants were blindfolded and unable to see the target while making each throw but would receive feedback by looking at where the beanbag had landed in between each training trial. 12 weeks later, all of the children were given a final test from a distance of 3 feet which was novel for the varied participants and repeated for the constant participants. Participants were also blindfolded for testing and did not receive trial by trial feedback in this stage. In both age groups, participants performed significantly better in the varied condition than the constant condition, though the effect was larger for the younger, 8-year-old children. This result provides particularly strong evidence for the benefits of varied practice, as the varied group outperformed the constant group even when tested at the "home-turf" distance that the constant group had exclusively practiced. A similar pattern of results was observed in another study wherein varied participants trained with tennis, squash, badminton, and short-tennis rackets were compared against constant subjects trained with only a tennis racket [@greenPracticeVariabilityTransfer1995a]. One of the testing conditions had subjects repeat the use of the tennis racket, which had been used on all 128 training trials for the constant group, and only 32 training trials for the varied group. Nevertheless, the varied group outperformed the constant group when using the tennis racket at testing, and also performed better in conditions with several novel racket lengths. However, as is the case with many of the patterns commonly observed in the "benefits of variability" literature, the pattern wherein the varied group outperforms the constant group even from the constants group's home turf has not been consistently replicated. One recent study attempted a near replication of the  Kerr & Booth study [@willeyLongtermMotorLearning2018], having subjects throw beanbags at a target, with the varied group training from positions (5 and 9 feet) on either side of the constant group (7 feet). This study did not find a varied advantage from the constant training position, though the varied group did perform better at distances novel to both groups. However, this study diverged from the original in that the participants were adults; and the amount of training was much greater (20 sessions with 60 practice trials each, spread out over 5-7 weeks). 
+
+
+```{r}
+#| label: fig-ex-design1
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "A schematic representation of the @kerrSpecificVariedPractice1978 study design. The varied group trained from two distances (2 and 4 feet), while the constant group trained from a single distance (3 feet). Both groups were tested from a distance of 3 feet. The varied group outperformed the constant group at testing, despite the constant group having exclusively practiced from the testing distance."
+#| cache: false
+pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
+  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
+  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
+  ggh4x,htmltools,future,furrr,ez)
+
+create_data <- function(varied_train, constant_train, both_test) {
+  varied_labels <- "Varied-Train"
+  constant_labels <- "Constant-Train"
+  test_labels <- "Testing"
+  
+  data <- data.frame(
+    x = c(varied_train, constant_train, both_test),
+    y = c(rep(0.55, length(varied_train)), rep(0.75, length(constant_train)), rep(0.4, length(both_test))),
+    label = c(rep(varied_labels, length(varied_train)),
+              rep(constant_labels, length(constant_train)),
+              rep(test_labels, length(both_test))),
+    color = c(rep("#00A08A", length(varied_train)), rep("#FF0000", length(constant_train)), rep("#ECCBAE", length(both_test)))
+  )
+  
+  data
+}
+
+create_segments <- function(data) {
+  min_x <- min(data$x)
+  max_x <- max(data$x)
+  segments <- data.frame(
+    x = c(min_x - 0.5, min_x - 0.5, min_x - 0.5),
+    xend = c(max_x + 0.5, max_x + 0.5, max_x + 0.5),
+    y = c(0.55, 0.75, 0.4),
+    yend = c(0.55, 0.75, 0.4)
+  )
+  segments
+}
+
+create_plot <- function(varied_train, constant_train, both_test) {
+  data <- create_data(varied_train, constant_train, both_test)
+  segments <- create_segments(data)
+  
+  # Variables for Training segment position
+  train_x <- min(data$x) - .5
+  train_y_start <- 0.5
+  train_y_end <- 0.8
+  train_text_y <- 0.75
+  
+  # Variables for Testing segment position
+  test_x <- min(data$x) - .5
+  test_y_start <- 0.35
+  test_y_end <- 0.45
+  test_text_y <- 0.48
+  
+  ggplot() +
+    geom_segment(data = segments, aes(x = x, xend = xend, y = y, yend = yend),
+                 linewidth = 1.2, color = "gray40") +
+    geom_point(data = data, aes(x = x, y = y, color = color), size = 12) +
+    geom_text(data = data, aes(x = x, y = y, label = label),
+              color = "black", size = 4.5, vjust = -1.8, hjust = 0.5, fontface = "italic") +
+    geom_segment(aes(x = train_x - 0.3, xend = train_x - 0.3, y = train_y_start, yend = train_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_end, yend = train_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = train_x - 0.5, xend = train_x, y = train_y_start, yend = train_y_start), color = "black", linewidth = 1.2) +
+    geom_text(aes(x = train_x - .6, y = train_text_y, label = "Training"), angle = 90, vjust = 0.5, hjust = 1.5, size = 4.5, fontface = "bold") +
+    geom_segment(aes(x = test_x - 0.3, xend = test_x - 0.3, y = test_y_start, yend = test_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = test_x - 0.5, xend = test_x, y = test_y_end, yend = test_y_end), color = "black", linewidth = 1.2) +
+    geom_segment(aes(x = test_x - 0.5, xend = test_x, y = test_y_start, yend = test_y_start), color = "black", linewidth = 1.2) +
+    geom_text(aes(x = test_x - .6, y = test_text_y, label = "Testing"), angle = 90, vjust = 0.5, hjust = 1.5, size = 4.5, fontface = "bold") +
+    scale_color_manual(values = c("#00A08A","#ECCBAE", "#FF0000")) +
+    xlim(min(data$x) - 2, max(data$x) + 1) +
+    ylim(0.3, 1) +
+    theme_void() +
+    theme(legend.position = "none",
+          plot.margin = margin(10, 20, 10, 20),
+          plot.background = element_rect(fill = "white", color = NA),
+          panel.background = element_rect(fill = "white", color = NA))
+}
+
+kerr_booth_1978 <- create_plot(varied_train = c(2, 4), constant_train = c(3), both_test = c(3))
+kerr_booth_1978
+```
 
 Pitting varied against constant practice against each other on the home turf of the constant group provides a compelling argument for the benefits of varied training, as well as an interesting challenge for theoretical accounts that posit generalization to occur as some function of distance. However, despite its appeal this contrast is relatively uncommon in the literature. It is unclear whether this may be cause for concern over publication bias, or just researchers feeling the design is too risky. A far more common design is to have separate constant groups that each train exclusively from each of the conditions that the varied group encounters [@catalanoDistantTransferCoincident1984a; @chuaPracticeVariabilityPromotes2019;
 @newellVariabilityPracticeTransfer1976; @moxleySchemaVariabilityPractice1979;
@@ -107,10 +196,7 @@ Project 2 will focus on the domain of function learning and in particular the is
 #| cache: false
 
 
-pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,
-  brms,tidybayes, rstanarm,emmeans,broom,bayestestR,
-  stringr, here,conflicted, patchwork, knitr, cowplot, RColorBrewer,data.table,gt,
-  ggh4x,htmltools,future,furrr,ez)
+
 #options(brms.backend="cmdstanr",mc.cores=4)
 #options(digits=2, scipen=999, dplyr.summarise.inform=FALSE, kableExtra.auto_format=FALSE)
 walk(c("brms","dplyr","bayestestR","here","rstanarm"), conflict_prefer_all, quiet = TRUE)
@@ -154,6 +240,12 @@ e1Pos <- c("610","760","835","910")
 e1Var <- paste("Varied Train Position","Constant Train Position", "Novel Position", "Varied Training Position")
 e1Labels<- paste(c("610\n Varied Trained","760\n Constant Trained","835\n Novel Location","910\n Varied Trained"),sep="")
 ```
+
+
+This project is based on the following publication: 
+
+Gorman, T. E., & Goldstone, R. L. (2022). An instance-based model account of the benefits of varied practice in visuomotor skill. *Cognitive Psychology*, 137, 101491. 
+
 
 ## Abstract
 
