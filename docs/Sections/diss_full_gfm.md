@@ -85,22 +85,23 @@ different tasks and domains, including categorization (Hahn et al.,
 2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al.,
 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning
 (Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010;
-Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode
-et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et
-al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory
-extrapolation (Fulvio et al., 2014), cognitive control tasks
-(Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning
-(Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada &
-Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George &
-Egner, 2021; Gonzalez & Madhavan, 2011; T. A. Kelley & Yantis, 2009),
-voice identity learning (Lavan et al., 2019), face recognition (Burton
-et al., 2016; Honig et al., 2022; Menon et al., 2015), the perception of
-social group heterogeneity (Gershman & Cikara, 2023; Konovalova & Le
-Mens, 2020; Linville & Fischer, 1993; Park & Hastie, 1987) , simple
-motor learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al.,
-2001; Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green
-et al., 1995; North et al., 2019), and complex skill learning (Hacques
-et al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) or
+Twomey et al., 2018; Wonnacott et al., 2012), pattern and anagram
+completion tasks (Goode et al., 2008; Zhang & Fyfe, 2024), perceptual
+learning (Lovibond et al., 2020; Manenti et al., 2023; Robson et al.,
+2022; Zaman et al., 2021), trajectory extrapolation (Fulvio et al.,
+2014), cognitive control tasks (Moshon-Cohen et al., 2024; Sabah et al.,
+2019), associative learning (Fan et al., 2022; Lee et al., 2019; Livesey
+& McLaren, 2019; Prada & Garcia-Marques, 2020; Ram et al., 2024;
+Reichmann et al., 2023), visual search (George & Egner, 2021; Gonzalez &
+Madhavan, 2011; T. A. Kelley & Yantis, 2009), voice identity learning
+(Lavan et al., 2019), face recognition (Burton et al., 2016; Honig et
+al., 2022; Menon et al., 2015), the perception of social group
+heterogeneity (Gershman & Cikara, 2023; Konovalova & Le Mens, 2020;
+Linville & Fischer, 1993; Park & Hastie, 1987), simple motor learning
+(Braun et al., 2009; Roller et al., 2001; Velázquez-Vargas et al., 2024;
+Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green et
+al., 1995; North et al., 2019), and complex skill learning (Hacques et
+al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) and
 Raviv et al. (2022) for more detailed reviews.
 
 Research on the effects of varied training typically manipulates
@@ -193,9 +194,7 @@ weeks).
 
 <div id="fig-ex-design1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-ex-design1-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-ex-design1-1.png)
 
 Figure 1: A schematic representation of the Kerr & Booth (1978) study
 design. The varied group trained from two distances (2 and 4 feet),
@@ -715,9 +714,7 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-toy-model1-1.png)
 
 Figure 2: Left panel- Generalization predicted from a simple model that
 assumes a linear generalization function. A varied group (red vertical
@@ -929,9 +926,7 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Training1-1.png)
 
 Figure 4: Training performance for varied and constant participants
 binned into three stages. Shorter bars indicate better performance (ball
@@ -956,9 +951,7 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-IGAS_Testing1-1.png)
 
 Figure 5: Testing performance for each of the 4 testing positions,
 compared between training conditions. Positions 610 and 910 were trained
@@ -1112,9 +1105,7 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2train-1.png)
 
 Figure 6: Training performance for the six constant conditions, and the
 varied condition, binned into three stages. On the left side, the six
@@ -1152,9 +1143,7 @@ groups.
 
 <div id="fig-e2testa">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2testa-1.png)
 
 Figure 7: Testing phase performance from each of the six testing
 positions. The six constant conditions are averaged together into a
@@ -1246,9 +1235,7 @@ Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2test1-1.png)
 
 Figure 8: A comparison of throwing location that are identical to those
 trained by the constant participants (e.g., constant participants
@@ -1344,9 +1331,7 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-taskSpace-1.png)
 
 Figure 9: A) A visual representation of the combinations of throw
 parameters (x and y velocities applied to the ball at launch), which
@@ -1582,9 +1567,7 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-Toy-Model-dis-1.png)
 
 Figure 10: A simple model depicting the necessity of both of two
 separately fit generalization parameters, c, and a positive distance
@@ -1856,9 +1839,7 @@ tasks with bi-linear, V-shaped input spaces (McDaniel et al., 2009).
 
 <div id="fig-delosh-extrap">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-delosh-extrap-1.png)
 
 Figure 11: The generalization patterns of human participants observed in
 DeLosh et al. (1997) (reproduced from Figure 3 in their manuscript).
@@ -2051,9 +2032,7 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e1-train-dev-1.png)
 
 Figure 13: Experiment 1 - Training Stage. Deviations from target band
 across training blocks. Lower values represent greater accuracy.
@@ -2130,9 +2109,7 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-dev-1.png)
 
 Figure 14: Experiment 1 Testing Accuracy. A) Empiricial Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2188,9 +2165,7 @@ sensitivity between bands than the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-test-vx-1.png)
 
 Figure 15: Experiment 1. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dashed lines indicate the
@@ -2200,9 +2175,7 @@ correct range for each velocity band.
 
 <div id="fig-e1-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e1-bmm-vx-1.png)
 
 Figure 16: Experiment 1 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2248,9 +2221,7 @@ six bands.
 
 <div id="fig-e2-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e2-train-dev-1.png)
 
 Figure 17: Experiment 2 Training Stage. Deviations from target band
 across training blocks. Lower values represent greater accuracy.
@@ -2323,9 +2294,7 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-dev-1.png)
 
 Figure 18: Experiment 2 Testing Accuracy. A) Empirical Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2372,9 +2341,7 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-test-vx-1.png)
 
 Figure 19: Experiment 2. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dash lines indicate the
@@ -2384,9 +2351,7 @@ correct range for each velocity band.
 
 <div id="fig-e2-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e2-bmm-vx-1.png)
 
 Figure 20: Experiment 2 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2490,9 +2455,7 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-e3-train-dev-1.png)
 
 Figure 21: Experiment 3 training. Deviations from target band during
 training, shown separately for groups trained with the original order
@@ -2549,9 +2512,7 @@ other interactions were significant.
 
 <div id="fig-e3-test-dev">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-dev-1.png)
 
 Figure 22: Experiment 3 Testing Accuracy. A) Empirical Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2608,9 +2569,7 @@ noticeably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-test-vx-1.png)
 
 Figure 23: Experiment 3. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dash lines indicate the
@@ -2622,9 +2581,7 @@ correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-e3-bmm-vx-1.png)
 
 Figure 24: Experiment 3 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2657,9 +2614,7 @@ but only when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
-width="768" />
+![](full_files/figure-commonmark/fig-alm-diagram-1.png)
 
 Figure 25: The Associative Learning Model (ALM). The diagram illustrates
 the basic structure of the ALM model used in the present work. Input
@@ -2924,9 +2879,7 @@ model was evaluated on.
 
 <div id="fig-htw-post-dist">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-post-dist-1.png)
 
 Figure 26: Posterior Distributions of $c$ and $lr$ parameters. Points
 represent median values, thicker intervals represent 66% credible
@@ -2938,9 +2891,7 @@ scaled logarithmically.
 
 <div id="fig-htw-resid-pred">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-resid-pred-1.png)
 
 Figure 27: Model residuals for each combination of training condition,
 fit method, and model. Residuals reflect the difference between observed
@@ -3005,9 +2956,7 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-1.png)
 
 Figure 28: Empirical data and Model predictions for mean velocity across
 target bands. Fitting methods (Test Only, Test & Train, Train Only) -
@@ -3019,9 +2968,7 @@ EXAM, alongside the observed data.
 
 <div id="fig-ee-e1">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-ee-e1-1.png)
 
 Figure 29: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
 (Constant vs. Varied). Lower values on the y axis indicate better model
@@ -3075,9 +3022,7 @@ evaluated on.
 
 <div id="fig-cm-vx-pat-e2-e3">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
 
 Figure 30: Empirical data and Model predictions from Experiment 2 and 3
 for the testing stage. Observed data is shown on the right. Bolded bars
@@ -3155,9 +3100,7 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
-width="864" />
+![](full_files/figure-commonmark/fig-e2_e3_ae-1.png)
 
 Figure 31: Conditional effects of Model (ALM vs EXAM) and Condition
 (Constant vs. Varied) on Model Error for Experiments 2 and 3 data.
@@ -3229,9 +3172,7 @@ fit a given pattern of results.
 
 <div id="fig-htw-best-model">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
-width="1056" />
+![](full_files/figure-commonmark/fig-htw-best-model-1.png)
 
 Figure 32: Difference in model errors for each participant, with models
 fit to both train and test data. Positive values favor EXAM, while
@@ -3241,9 +3182,7 @@ negative values favor ALM.
 
 <div id="fig-htw-indv-pred">
 
-<img
-src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
-width="960" />
+![](full_files/figure-commonmark/fig-htw-indv-pred-1.png)
 
 Figure 33: Model predictions alongside observed data for a subset of
 individual participants. A) 3 constant and 3 varied participants fit to
@@ -4742,6 +4681,14 @@ Psychology*, *67*(1), 5–13. <https://doi.org/10.1027/1618-3169/a000469>
 
 </div>
 
+<div id="ref-ramAnticipatedVariabilityIncreases2024" class="csl-entry">
+
+Ram, H., Grinfeld, G., & Liberman, N. (2024). Anticipated variability
+increases generalization of predictive learning. *Npj Science of
+Learning*, *9*(1), 1–10. <https://doi.org/10.1038/s41539-024-00269-z>
+
+</div>
+
 <div id="ref-ravivHowVariabilityShapes2022" class="csl-entry">
 
 Raviv, L., Lupyan, G., & Green, S. C. (2022). How variability shapes
@@ -4997,6 +4944,16 @@ of the variability of practice hypothesis. *Human Movement Science*,
 
 </div>
 
+<div id="ref-velazquez-vargasRoleTrainingVariability2024"
+class="csl-entry">
+
+Velázquez-Vargas, C. A., Daw, N. D., & Taylor, J. A. (2024). The role of
+training variability for model-based and model-free learning of an
+arbitrary visuomotor mapping. *PLOS Computational Biology*, *20*(9),
+e1012471. <https://doi.org/10.1371/journal.pcbi.1012471>
+
+</div>
+
 <div id="ref-vigoLearningDifficultyVisual2018" class="csl-entry">
 
 Vigo, R., Doan, K.-M. C., Doan, C. A., & Pinegar, S. (2018). On the
@@ -5154,6 +5111,14 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T.,
 Vervliet, B., & Boddez, Y. (2021). Perceptual variability: Implications
 for learning and generalization. *Psychonomic Bulletin & Review*,
 *28*(1), 1–19. <https://doi.org/10.3758/s13423-020-01780-1>
+
+</div>
+
+<div id="ref-zhangHighVariabilityLearning2024" class="csl-entry">
+
+Zhang, T., & Fyfe, E. R. (2024). High variability in learning materials
+benefits children’s pattern practice. *Journal of Experimental Child
+Psychology*, *239*, 105829. <https://doi.org/10.1016/j.jecp.2023.105829>
 
 </div>
 

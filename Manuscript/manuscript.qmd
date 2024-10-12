@@ -65,8 +65,8 @@ One of the earliest and still often cited investigations of Schmidt's benefits o
 
 ```{r}
 #| label: fig-ex-design1
-#| fig-width: 10
-#| fig-height: 6
+#| fig-width: 7
+#| fig-height: 5
 #| fig-cap: "A schematic representation of the @kerrSpecificVariedPractice1978 study design. The varied group trained from two distances (2 and 4 feet), while the constant group trained from a single distance (3 feet). Both groups were tested from a distance of 3 feet. The varied group outperformed the constant group at testing, despite the constant group having exclusively practiced from the testing distance."
 #| cache: false
 pacman::p_load(dplyr,purrr,tidyr,tibble,ggplot2,

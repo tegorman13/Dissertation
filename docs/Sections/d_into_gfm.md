@@ -8,23 +8,24 @@ different tasks and domains, including categorization (Hahn et al.,
 2005; Maddox & Filoteo, 2011; Morgenstern et al., 2019; Nosofsky et al.,
 2019; Plebanek & James, 2021; Posner & Keele, 1968), language learning
 (Brekelmans et al., 2022; Jones & Brandt, 2020; Perry et al., 2010;
-Twomey et al., 2018; Wonnacott et al., 2012), anagram completion (Goode
-et al., 2008), perceptual learning (Lovibond et al., 2020; Manenti et
-al., 2023; Robson et al., 2022; Zaman et al., 2021), trajectory
-extrapolation (Fulvio et al., 2014), cognitive control tasks
-(Moshon-Cohen et al., 2024; Sabah et al., 2019), associative learning
-(Fan et al., 2022; Lee et al., 2019; Livesey & McLaren, 2019; Prada &
-Garcia-Marques, 2020; Reichmann et al., 2023), visual search (George &
-Egner, 2021; Gonzalez & Madhavan, 2011; Kelley & Yantis, 2009), voice
-identity learning (Lavan et al., 2019), face recognition (Burton et al.,
-2016; Honig et al., 2022; Menon et al., 2015), the perception of social
-group heterogeneity (Gershman & Cikara, 2023; Konovalova & Le Mens,
-2020; Linville & Fischer, 1993; Park & Hastie, 1987) , simple motor
-learning (Braun et al., 2009; Kerr & Booth, 1978; Roller et al., 2001;
-Willey & Liu, 2018a), sports training (Breslin et al., 2012; Green et
-al., 1995; North et al., 2019), and complex skill learning (Hacques et
-al., 2022; Huet et al., 2011; Seow et al., 2019). See Czyż (2021) or
-Raviv et al. (2022) for more detailed reviews.
+Twomey et al., 2018; Wonnacott et al., 2012), pattern and anagram
+completion tasks (Goode et al., 2008; Zhang & Fyfe, 2024), perceptual
+learning (Lovibond et al., 2020; Manenti et al., 2023; Robson et al.,
+2022; Zaman et al., 2021), trajectory extrapolation (Fulvio et al.,
+2014), cognitive control tasks (Moshon-Cohen et al., 2024; Sabah et al.,
+2019), associative learning (Fan et al., 2022; Lee et al., 2019; Livesey
+& McLaren, 2019; Prada & Garcia-Marques, 2020; Ram et al., 2024;
+Reichmann et al., 2023), visual search (George & Egner, 2021; Gonzalez &
+Madhavan, 2011; Kelley & Yantis, 2009), voice identity learning (Lavan
+et al., 2019), face recognition (Burton et al., 2016; Honig et al.,
+2022; Menon et al., 2015), the perception of social group heterogeneity
+(Gershman & Cikara, 2023; Konovalova & Le Mens, 2020; Linville &
+Fischer, 1993; Park & Hastie, 1987), simple motor learning (Braun et
+al., 2009; Roller et al., 2001; Velázquez-Vargas et al., 2024; Willey &
+Liu, 2018a), sports training (Breslin et al., 2012; Green et al., 1995;
+North et al., 2019), and complex skill learning (Hacques et al., 2022;
+Huet et al., 2011; Seow et al., 2019). See Czyż (2021) and Raviv et al.
+(2022) for more detailed reviews.
 
 Research on the effects of varied training typically manipulates
 variability in one of two ways. In the first approach, a high
@@ -1039,6 +1040,14 @@ Psychology*, *67*(1), 5–13. <https://doi.org/10.1027/1618-3169/a000469>
 
 </div>
 
+<div id="ref-ramAnticipatedVariabilityIncreases2024" class="csl-entry">
+
+Ram, H., Grinfeld, G., & Liberman, N. (2024). Anticipated variability
+increases generalization of predictive learning. *Npj Science of
+Learning*, *9*(1), 1–10. <https://doi.org/10.1038/s41539-024-00269-z>
+
+</div>
+
 <div id="ref-ravivHowVariabilityShapes2022" class="csl-entry">
 
 Raviv, L., Lupyan, G., & Green, S. C. (2022). How variability shapes
@@ -1170,6 +1179,16 @@ of the variability of practice hypothesis. *Human Movement Science*,
 
 </div>
 
+<div id="ref-velazquez-vargasRoleTrainingVariability2024"
+class="csl-entry">
+
+Velázquez-Vargas, C. A., Daw, N. D., & Taylor, J. A. (2024). The role of
+training variability for model-based and model-free learning of an
+arbitrary visuomotor mapping. *PLOS Computational Biology*, *20*(9),
+e1012471. <https://doi.org/10.1371/journal.pcbi.1012471>
+
+</div>
+
 <div id="ref-wahlheimMetacognitiveJudgmentsRepetition2012"
 class="csl-entry">
 
@@ -1263,6 +1282,14 @@ Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T.,
 Vervliet, B., & Boddez, Y. (2021). Perceptual variability: Implications
 for learning and generalization. *Psychonomic Bulletin & Review*,
 *28*(1), 1–19. <https://doi.org/10.3758/s13423-020-01780-1>
+
+</div>
+
+<div id="ref-zhangHighVariabilityLearning2024" class="csl-entry">
+
+Zhang, T., & Fyfe, E. R. (2024). High variability in learning materials
+benefits children’s pattern practice. *Journal of Experimental Child
+Psychology*, *239*, 105829. <https://doi.org/10.1016/j.jecp.2023.105829>
 
 </div>
 
