@@ -1,0 +1,119 @@
+<style>
+    body {
+        font-family: Times, "Times New Roman", serif;
+        line-height: 1.6;
+    }
+    .title {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .author {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 32px;
+    }
+    .submitted {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 16px;
+    }
+    .date {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 16px;
+    }
+    .committee {
+        text-align: center;
+        margin-top: 150px;
+        font-size: 16px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .signature {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .signature div {
+        width: 45%;
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 16px;
+        margin-bottom: 200px;
+        }
+</style>
+
+<div class="title">The Role of Variability in Learning Generalization: A Computational Modeling Approach</div>
+
+<div class="author">Thomas E. Gorman</div>
+
+<div class="submitted">
+Submitted to the faculty of the University Graduate School<br>
+in partial fulfillment of the requirements<br>
+for the degree<br>
+Doctor of Philosophy<br><br>
+in the Cognitive Science Program and<br>
+Department of Psychological and Brain Sciences,<br>
+Indiana University<br>
+October 2024
+</div>
+
+<div class="committee">
+Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the requirements for the degree of Doctor of Philosophy.
+</div>
+
+<div style="text-align: left; margin-top: 50px;">
+Doctoral Committee:
+</div>
+
+
+<div class="signature">
+<div>_________________________<br>Robert L. Goldstone, Ph.D.</div>
+<div>_________________________<br>Robert M. Nosofsky, Ph.D.</div>
+</div>
+<div class="signature">
+<div>_________________________<br>Peter M. Todd, Ph.D.</div>
+<div>_________________________<br>Michael N. Jones, Ph.D.</div>
+</div>
+
+<div style="text-align: left; margin-top: 50px;">
+May 28th, 2024
+</div>
+
+
+<br><br><br>
+
+
+<div class="copyright">&copy; 2024 <br><br> Thomas E. Gorman </div>
+
+
+
+
+## Acknowledgements
+
+
+My dissertation would not have been possible without the support and guidance of numerous individuals who have shaped my academic and personal growth.
+
+First, I am deeply grateful to my advisor, Rob Goldstone, for his nearly limitless patience, clear thinking, and unwavering guidance. His ability to effortlessly demonstrate the power of so many tools has been awe-inspiring, and I am forever thankful for his mentorship. I also extend my heartfelt thanks to Dr. Rob Nosofsky for his sharp questions and encouragement of model-based thinking, and to Dr. Peter Todd for being a constant source of encouragement.
+
+My foundation in psychological science was laid at the University of Wisconsin-Madison. I am indebted to Dr. Shawn Green, who took a chance on me despite my mediocre grades and lack of experience, introducing me to the world of psychological research. Special thanks to Aaron Cochrane for answering my countless questions, introducing me to R, and advanced data analysis techniques.
+
+I am grateful for the camaraderie and intellectual stimulation provided by my friends at Indiana University, particularly those in the Geolab and Psychology department. Johnathan Avery, Eleanor Schille-Hudson, Mahi Luthra, Dan Levitas, Sam Nordli, Brad Rogers, Marina Dubova, Eeshan Hasan, and many others have been integral to my graduate school experience. A special mention goes to Jack Avery for introducing me to rock climbing and engaging in fun conversations that often led to unexpected ideas.
+
+The teachers at Pardeeville High School played an essential role in nurturing my curiosity and establishing the educational foundation that shaped my early learning. The professors at UW-Madison and Indiana University further cultivated that curiosity, profoundly influencing my academic development.
+
+I would also like to extend my heartfelt thanks to my family. My parents, Mary and Jim Gorman, have always been a source of love and unwavering belief in my abilities. My brother, Joseph, played a pivotal role in helping me through the final stages of my dissertation by providing a supportive environment and the encouragement I needed. Their collective support has made this journey not only possible but meaningful, and I will always be deeply grateful for it.
+
+
+<br><br><br>
+
+## Abstract
+
+The impact of training variability on generalization has been a long-standing topic in the study of human learning, with conflicting evidence about its potential benefits. This dissertation addresses these ambiguities by examining the effects of varied versus constant training in visuomotor skill learning through a combination of experimental and computational modeling approaches. Across two projects, we systematically compare varied training (multiple items) to constant training (single item) in a projectile-throwing task. Empirical findings reveal both positive and negative impacts of variability, highlighting the complex interplay between training conditions and generalization performance. To provide a theoretical account of these findings, this dissertation employs both instance-based and connectionist computational modeling approaches. The instance-based modeling approach introduced in project 1 provides a theoretically justifiable method of quantifying/controlling for similarity between training and testing conditions, while also demonstrating that varied training may induce broader generalization in the similarity function relating training and test items. In project 2, the Extrapolation-Association Model (EXAM) provided the best account of the testing data across all experiments, capturing the
+constant groups' ability to extrapolate to novel regions despite limited training experience, while also revealing potential detriments of varied training for simple extrapolation tasks. These results challenge simplistic notions about the universality of variability benefits in training and emphasize the need for tailored approaches that consider both the structure of the task environment and the prior knowledge of the learners.

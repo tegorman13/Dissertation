@@ -14,30 +14,15 @@ format:
     prefer-html: true
     output-file: "TG_Full_Dissertation2.docx"
     toc: true
-#   html:
-#     toc: true
-#     language: 
-#       title-block-published: "Latest version"
-#     shift-heading-level-by: 0
-#     toc-depth: 4
-#     link-citations: true
-#     page-layout: full
-#     format-links: [pdf, gfm, docx]
-#     theme: 
-#        #- ../Assets/Style/lux-modified.scss 
-#        - cosmo
-#        - custom.scss
-#        - ../Assets/Style/style.scss
-#     css: ../Assets/Style/calloutTG.css
-#     citeproc: false
-#     filters: 
-#       - "_extensions/wordcount/citeproc.lua"
-#       - "_extensions/wordcount/wordcount.lua"
-#     lightbox: auto
-#     knitr:
-#       opts_chunk:
-#         dev: "ragg_png"
-#         dpi: 300
+  html:
+    toc: false
+    language: 
+      title-block-published: "Latest version"
+    shift-heading-level-by: 0
+    toc-depth: 4
+    link-citations: true
+    page-layout: full
+    format-links: [pdf, gfm, docx]
   pdf:
     cite-method: citeproc
     #date: today
@@ -82,7 +67,7 @@ format:
 
 ::: {.content-visible when-format="html"}
 
-{{< include pre_sections/pre_html.qmd >}}
+{{< include pre_sections/pre_html2.qmd >}}
 
 :::
 
@@ -99,6 +84,7 @@ format:
 {{< include pre_sections/acknowledgements.qmd >}}
 {{< include pre_sections/abstract.qmd >}}
 :::
+
 {{< pagebreak >}}
 
 

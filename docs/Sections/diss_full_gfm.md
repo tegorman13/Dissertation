@@ -2,13 +2,14 @@
 Modeling Approach
 Thomas E. Gorman
 
+- [Abstract](#abstract)
 - [Introduction](#introduction)
   - [Varied Training and
     Generalization](#varied-training-and-generalization)
   - [Existing Theoretical Frameworks](#existing-theoretical-frameworks)
   - [The current work](#the-current-work)
 - [Project 1](#project-1)
-  - [Abstract](#abstract)
+  - [Abstract](#abstract-1)
   - [Introduction](#introduction-1)
     - [Similarity and instance-based approaches to transfer of
       learning](#similarity-and-instance-based-approaches-to-transfer-of-learning)
@@ -75,6 +76,35 @@ Thomas E. Gorman
 - [References](#references)
 
 
+
+# Abstract
+
+The impact of training variability on generalization has been a
+long-standing topic in the study of human learning, with conflicting
+evidence about its potential benefits. This dissertation addresses these
+ambiguities by examining the effects of varied versus constant training
+in visuomotor skill learning through a combination of experimental and
+computational modeling approaches. Across two projects, we
+systematically compare varied training (multiple items) to constant
+training (single item) in a projectile-throwing task. Empirical findings
+reveal both positive and negative impacts of variability, highlighting
+the complex interplay between training conditions and generalization
+performance. To provide a theoretical account of these findings, this
+dissertation employs both instance-based and connectionist computational
+modeling approaches. The instance-based modeling approach introduced in
+project 1 provides a theoretically justifiable method of
+quantifying/controlling for similarity between training and testing
+conditions, while also demonstrating that varied training may induce
+broader generalization in the similarity function relating training and
+test items. In project 2, the Extrapolation-Association Model (EXAM)
+provided the best account of the testing data across all experiments,
+capturing the constant groups’ ability to extrapolate to novel regions
+despite limited training experience, while also revealing potential
+detriments of varied training for simple extrapolation tasks. These
+results challenge simplistic notions about the universality of
+variability benefits in training and emphasize the need for tailored
+approaches that consider both the structure of the task environment and
+the prior knowledge of the learners.
 
 # Introduction
 
@@ -194,7 +224,9 @@ weeks).
 
 <div id="fig-ex-design1">
 
-![](full_files/figure-commonmark/fig-ex-design1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-ex-design1-1.png"
+width="672" />
 
 Figure 1: A schematic representation of the Kerr & Booth (1978) study
 design. The varied group trained from two distances (2 and 4 feet),
@@ -714,7 +746,9 @@ drop-off.
 
 <div id="fig-toy-model1">
 
-![](full_files/figure-commonmark/fig-toy-model1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-toy-model1-1.png"
+width="768" />
 
 Figure 2: Left panel- Generalization predicted from a simple model that
 assumes a linear generalization function. A varied group (red vertical
@@ -926,7 +960,9 @@ F(2,142)=.10, p=.91, $\eta^{2}_G$ \< .01.
 
 <div id="fig-IGAS_Training1">
 
-![](full_files/figure-commonmark/fig-IGAS_Training1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Training1-1.png"
+width="768" />
 
 Figure 4: Training performance for varied and constant participants
 binned into three stages. Shorter bars indicate better performance (ball
@@ -951,7 +987,9 @@ between group and position, F(3,213)=1.81, p=.15, η2G = .01.
 
 <div id="fig-IGAS_Testing1">
 
-![](full_files/figure-commonmark/fig-IGAS_Testing1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-IGAS_Testing1-1.png"
+width="768" />
 
 Figure 5: Testing performance for each of the 4 testing positions,
 compared between training conditions. Positions 610 and 910 were trained
@@ -1105,7 +1143,9 @@ training stage, F(2,172)=.341 p=.71, $\eta^{2}_G$ \<.01.
 
 <div id="fig-e2train">
 
-![](full_files/figure-commonmark/fig-e2train-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2train-1.png"
+width="1056" />
 
 Figure 6: Training performance for the six constant conditions, and the
 varied condition, binned into three stages. On the left side, the six
@@ -1143,7 +1183,9 @@ groups.
 
 <div id="fig-e2testa">
 
-![](full_files/figure-commonmark/fig-e2testa-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2testa-1.png"
+width="1056" />
 
 Figure 7: Testing phase performance from each of the six testing
 positions. The six constant conditions are averaged together into a
@@ -1235,7 +1277,9 @@ Table 4 provides descriptive statistics.
 
 <div id="fig-e2test1">
 
-![](full_files/figure-commonmark/fig-e2test1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2test1-1.png"
+width="768" />
 
 Figure 8: A comparison of throwing location that are identical to those
 trained by the constant participants (e.g., constant participants
@@ -1331,7 +1375,9 @@ combinations used by participants throughout the experiment.
 
 <div id="fig-taskSpace">
 
-![](full_files/figure-commonmark/fig-taskSpace-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-taskSpace-1.png"
+width="1056" />
 
 Figure 9: A) A visual representation of the combinations of throw
 parameters (x and y velocities applied to the ball at launch), which
@@ -1567,7 +1613,9 @@ a non-zero dissimilarity.
 
 <div id="fig-Toy-Model-dis">
 
-![](full_files/figure-commonmark/fig-Toy-Model-dis-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-Toy-Model-dis-1.png"
+width="1056" />
 
 Figure 10: A simple model depicting the necessity of both of two
 separately fit generalization parameters, c, and a positive distance
@@ -1839,7 +1887,9 @@ tasks with bi-linear, V-shaped input spaces (McDaniel et al., 2009).
 
 <div id="fig-delosh-extrap">
 
-![](full_files/figure-commonmark/fig-delosh-extrap-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-delosh-extrap-1.png"
+width="960" />
 
 Figure 11: The generalization patterns of human participants observed in
 DeLosh et al. (1997) (reproduced from Figure 3 in their manuscript).
@@ -2032,7 +2082,9 @@ band would have slopes ~0.
 
 <div id="fig-e1-train-dev">
 
-![](full_files/figure-commonmark/fig-e1-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-train-dev-1.png"
+width="768" />
 
 Figure 13: Experiment 1 - Training Stage. Deviations from target band
 across training blocks. Lower values represent greater accuracy.
@@ -2109,7 +2161,9 @@ group in the extrapolation bands.
 
 <div id="fig-e1-test-dev">
 
-![](full_files/figure-commonmark/fig-e1-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-dev-1.png"
+width="1056" />
 
 Figure 14: Experiment 1 Testing Accuracy. A) Empiricial Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2165,7 +2219,9 @@ sensitivity between bands than the constant condition (see
 
 <div id="fig-e1-test-vx">
 
-![](full_files/figure-commonmark/fig-e1-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-test-vx-1.png"
+width="1056" />
 
 Figure 15: Experiment 1. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dashed lines indicate the
@@ -2175,7 +2231,9 @@ correct range for each velocity band.
 
 <div id="fig-e1-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e1-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e1-bmm-vx-1.png"
+width="1056" />
 
 Figure 16: Experiment 1 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2221,7 +2279,9 @@ six bands.
 
 <div id="fig-e2-train-dev">
 
-![](full_files/figure-commonmark/fig-e2-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-train-dev-1.png"
+width="768" />
 
 Figure 17: Experiment 2 Training Stage. Deviations from target band
 across training blocks. Lower values represent greater accuracy.
@@ -2294,7 +2354,9 @@ the extrapolation bands (see
 
 <div id="fig-e2-test-dev">
 
-![](full_files/figure-commonmark/fig-e2-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-dev-1.png"
+width="1056" />
 
 Figure 18: Experiment 2 Testing Accuracy. A) Empirical Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2341,7 +2403,9 @@ not differ in their ability to discriminate between bands (see
 
 <div id="fig-e2-test-vx">
 
-![](full_files/figure-commonmark/fig-e2-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-test-vx-1.png"
+width="1056" />
 
 Figure 19: Experiment 2. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dash lines indicate the
@@ -2351,7 +2415,9 @@ correct range for each velocity band.
 
 <div id="fig-e2-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e2-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2-bmm-vx-1.png"
+width="1056" />
 
 Figure 20: Experiment 2 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2455,7 +2521,9 @@ showing greater accuracy in the reverse order condition ( $\beta$ =
 
 <div id="fig-e3-train-dev">
 
-![](full_files/figure-commonmark/fig-e3-train-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-train-dev-1.png"
+width="768" />
 
 Figure 21: Experiment 3 training. Deviations from target band during
 training, shown separately for groups trained with the original order
@@ -2512,7 +2580,9 @@ other interactions were significant.
 
 <div id="fig-e3-test-dev">
 
-![](full_files/figure-commonmark/fig-e3-test-dev-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-dev-1.png"
+width="1056" />
 
 Figure 22: Experiment 3 Testing Accuracy. A) Empirical Deviations from
 target band during testing without feedback stage. B) Conditional effect
@@ -2569,7 +2639,9 @@ noticeably steeper than the other conditions.
 
 <div id="fig-e3-test-vx">
 
-![](full_files/figure-commonmark/fig-e3-test-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-test-vx-1.png"
+width="1056" />
 
 Figure 23: Experiment 3. Empirical distribution of velocities produced
 in the testing stage. Translucent bands with dash lines indicate the
@@ -2581,7 +2653,9 @@ correct range for each velocity band.
 
 <div id="fig-e3-bmm-vx">
 
-![](full_files/figure-commonmark/fig-e3-bmm-vx-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e3-bmm-vx-1.png"
+width="1056" />
 
 Figure 24: Experiment 3 Discrimination. A) Conditional effect of
 training condition and Band. Ribbons indicate 95% HDI. The steepness of
@@ -2614,7 +2688,9 @@ but only when the band order was reversed during testing.
 
 <div id="fig-alm-diagram">
 
-![](full_files/figure-commonmark/fig-alm-diagram-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-alm-diagram-1.png"
+width="768" />
 
 Figure 25: The Associative Learning Model (ALM). The diagram illustrates
 the basic structure of the ALM model used in the present work. Input
@@ -2879,7 +2955,9 @@ model was evaluated on.
 
 <div id="fig-htw-post-dist">
 
-![](full_files/figure-commonmark/fig-htw-post-dist-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-post-dist-1.png"
+width="960" />
 
 Figure 26: Posterior Distributions of $c$ and $lr$ parameters. Points
 represent median values, thicker intervals represent 66% credible
@@ -2891,7 +2969,9 @@ scaled logarithmically.
 
 <div id="fig-htw-resid-pred">
 
-![](full_files/figure-commonmark/fig-htw-resid-pred-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-resid-pred-1.png"
+width="1056" />
 
 Figure 27: Model residuals for each combination of training condition,
 fit method, and model. Residuals reflect the difference between observed
@@ -2956,7 +3036,9 @@ discriminate all 6 target bands.
 
 <div id="fig-cm-vx-pat">
 
-![](full_files/figure-commonmark/fig-cm-vx-pat-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-1.png"
+width="960" />
 
 Figure 28: Empirical data and Model predictions for mean velocity across
 target bands. Fitting methods (Test Only, Test & Train, Train Only) -
@@ -2968,7 +3050,9 @@ EXAM, alongside the observed data.
 
 <div id="fig-ee-e1">
 
-![](full_files/figure-commonmark/fig-ee-e1-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-ee-e1-1.png"
+width="960" />
 
 Figure 29: A-C) Conditional effects of Model (ALM vs EXAM) and Condition
 (Constant vs. Varied). Lower values on the y axis indicate better model
@@ -3022,7 +3106,9 @@ evaluated on.
 
 <div id="fig-cm-vx-pat-e2-e3">
 
-![](full_files/figure-commonmark/fig-cm-vx-pat-e2-e3-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-cm-vx-pat-e2-e3-1.png"
+width="960" />
 
 Figure 30: Empirical data and Model predictions from Experiment 2 and 3
 for the testing stage. Observed data is shown on the right. Bolded bars
@@ -3100,7 +3186,9 @@ reverse order condition (see
 
 <div id="fig-e2_e3_ae">
 
-![](full_files/figure-commonmark/fig-e2_e3_ae-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-e2_e3_ae-1.png"
+width="864" />
 
 Figure 31: Conditional effects of Model (ALM vs EXAM) and Condition
 (Constant vs. Varied) on Model Error for Experiments 2 and 3 data.
@@ -3172,7 +3260,9 @@ fit a given pattern of results.
 
 <div id="fig-htw-best-model">
 
-![](full_files/figure-commonmark/fig-htw-best-model-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-best-model-1.png"
+width="1056" />
 
 Figure 32: Difference in model errors for each participant, with models
 fit to both train and test data. Positive values favor EXAM, while
@@ -3182,7 +3272,9 @@ negative values favor ALM.
 
 <div id="fig-htw-indv-pred">
 
-![](full_files/figure-commonmark/fig-htw-indv-pred-1.png)
+<img
+src="full.markdown_strict_files/figure-markdown_strict/fig-htw-indv-pred-1.png"
+width="960" />
 
 Figure 33: Model predictions alongside observed data for a subset of
 individual participants. A) 3 constant and 3 varied participants fit to

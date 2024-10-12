@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.9">
+<meta name="generator" content="quarto-1.6.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="manuscript_full_files/libs/clipboard/clipboard.min.js"></script>
@@ -29,10 +49,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="manuscript_full_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="manuscript_full_files/libs/quarto-html/anchor.min.js"></script>
 <link href="manuscript_full_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="manuscript_full_files/libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="manuscript_full_files/libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="manuscript_full_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="manuscript_full_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="manuscript_full_files/libs/bootstrap/bootstrap-b922a9296033658bca28011bdd830c0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="manuscript_full_files/libs/bootstrap/bootstrap-5f766aa37af700ef845332339287e658.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 <link rel="stylesheet" href="../Assets/Style/calloutTG.css">
@@ -41,32 +61,118 @@ ul.task-list li input[type="checkbox"] {
 <body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-</div>
-<main class="content column-page" id="quarto-document-content">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="TG_Full_Dissertation2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="TG_Full_Dissertation2.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+<main class="content column-page-left" id="quarto-document-content">
 
 
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#table-of-contents" id="toc-table-of-contents">Table of contents</a></li>
-  <li><a href="#introduction" id="toc-introduction">Introduction</a>
-  <ul>
-  <li><a href="#varied-training-and-generalization" id="toc-varied-training-and-generalization">Varied Training and Generalization</a></li>
-  </ul></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="TG_Full_Dissertation2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="TG_Full_Dissertation2.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
-<div style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: bold;">
-<p>The Role of Variability in Learning Generalization: A Computational Modeling Approach</p>
+
+<style>
+    body {
+        font-family: Times, "Times New Roman", serif;
+        line-height: 1.6;
+    }
+    .title {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .author {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 32px;
+    }
+    .submitted {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 16px;
+    }
+    .date {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 16px;
+    }
+    .committee {
+        text-align: center;
+        margin-top: 150px;
+        font-size: 16px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .signature {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .signature div {
+        width: 45%;
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 16px;
+        margin-bottom: 200px;
+        }
+</style>
+<div class="title">
+The Role of Variability in Learning Generalization: A Computational Modeling Approach
 </div>
-<div style="text-align: center; margin-top: 300px; font-size: 32px;">
-<p>Thomas E. Gorman</p>
+<div class="author">
+Thomas E. Gorman
 </div>
+<div class="submitted">
+<p>Submitted to the faculty of the University Graduate School<br> in partial fulfillment of the requirements<br> for the degree<br> Doctor of Philosophy<br><br> in the Cognitive Science Program and<br> Department of Psychological and Brain Sciences,<br> Indiana University<br> October 2024</p>
+</div>
+<div class="committee">
+<p>Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the requirements for the degree of Doctor of Philosophy.</p>
+</div>
+<div style="text-align: left; margin-top: 50px;">
+<p>Doctoral Committee:</p>
+</div>
+<div class="signature">
+<div>
+_________________________<br>Robert L. Goldstone, Ph.D.
+</div>
+<div>
+_________________________<br>Robert M. Nosofsky, Ph.D.
+</div>
+</div>
+<div class="signature">
+<div>
+_________________________<br>Peter M. Todd, Ph.D.
+</div>
+<div>
+_________________________<br>Michael N. Jones, Ph.D.
+</div>
+</div>
+<div style="text-align: left; margin-top: 50px;">
+<p>May 28th, 2024</p>
+</div>
+<p><br><br><br></p>
+<div class="copyright">
+© 2024 <br><br> Thomas E. Gorman
+</div>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>My dissertation would not have been possible without the support and guidance of numerous individuals who have shaped my academic and personal growth.</p>
+<p>First, I am deeply grateful to my advisor, Rob Goldstone, for his nearly limitless patience, clear thinking, and unwavering guidance. His ability to effortlessly demonstrate the power of so many tools has been awe-inspiring, and I am forever thankful for his mentorship. I also extend my heartfelt thanks to Dr.&nbsp;Rob Nosofsky for his sharp questions and encouragement of model-based thinking, and to Dr.&nbsp;Peter Todd for being a constant source of encouragement.</p>
+<p>My foundation in psychological science was laid at the University of Wisconsin-Madison. I am indebted to Dr.&nbsp;Shawn Green, who took a chance on me despite my mediocre grades and lack of experience, introducing me to the world of psychological research. Special thanks to Aaron Cochrane for answering my countless questions, introducing me to R, and advanced data analysis techniques.</p>
+<p>I am grateful for the camaraderie and intellectual stimulation provided by my friends at Indiana University, particularly those in the Geolab and Psychology department. Johnathan Avery, Eleanor Schille-Hudson, Mahi Luthra, Dan Levitas, Sam Nordli, Brad Rogers, Marina Dubova, Eeshan Hasan, and many others have been integral to my graduate school experience. A special mention goes to Jack Avery for introducing me to rock climbing and engaging in fun conversations that often led to unexpected ideas.</p>
+<p>The teachers at Pardeeville High School played an essential role in nurturing my curiosity and establishing the educational foundation that shaped my early learning. The professors at UW-Madison and Indiana University further cultivated that curiosity, profoundly influencing my academic development.</p>
+<p>I would also like to extend my heartfelt thanks to my family. My parents, Mary and Jim Gorman, have always been a source of love and unwavering belief in my abilities. My brother, Joseph, played a pivotal role in helping me through the final stages of my dissertation by providing a supportive environment and the encouragement I needed. Their collective support has made this journey not only possible but meaningful, and I will always be deeply grateful for it.</p>
+<p><br><br><br></p>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The impact of training variability on generalization has been a long-standing topic in the study of human learning, with conflicting evidence about its potential benefits. This dissertation addresses these ambiguities by examining the effects of varied versus constant training in visuomotor skill learning through a combination of experimental and computational modeling approaches. Across two projects, we systematically compare varied training (multiple items) to constant training (single item) in a projectile-throwing task. Empirical findings reveal both positive and negative impacts of variability, highlighting the complex interplay between training conditions and generalization performance. To provide a theoretical account of these findings, this dissertation employs both instance-based and connectionist computational modeling approaches. The instance-based modeling approach introduced in project 1 provides a theoretically justifiable method of quantifying/controlling for similarity between training and testing conditions, while also demonstrating that varied training may induce broader generalization in the similarity function relating training and test items. In project 2, the Extrapolation-Association Model (EXAM) provided the best account of the testing data across all experiments, capturing the constant groups’ ability to extrapolate to novel regions despite limited training experience, while also revealing potential detriments of varied training for simple extrapolation tasks. These results challenge simplistic notions about the universality of variability benefits in training and emphasize the need for tailored approaches that consider both the structure of the task environment and the prior knowledge of the learners.</p>
 <div style="page-break-after: always;"></div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 </p>
+</section>
 <section id="table-of-contents" class="level1">
 <h1>Table of contents</h1>
 <div id="html-toc">
@@ -139,7 +245,156 @@ document.addEventListener("DOMContentLoaded", function(){
 <h1>Introduction</h1>
 <section id="varied-training-and-generalization" class="level2">
 <h2 class="anchored" data-anchor-id="varied-training-and-generalization">Varied Training and Generalization</h2>
+<p>Varied training has been shown to influence learning in a wide array of different tasks and domains, including categorization <span class="citation" data-cites="hahnEffectsCategoryDiversity2005 maddoxStimulusRangeDiscontinuity2011 posnerGenesisAbstractIdeas1968 nosofskyModelguidedSearchOptimal2019 morgensternOneshotCategorizationNovel2019 plebanekEffectsFrequencyVariability2021">(<a href="#ref-hahnEffectsCategoryDiversity2005" role="doc-biblioref">Hahn et al., 2005</a>; <a href="#ref-maddoxStimulusRangeDiscontinuity2011" role="doc-biblioref">Maddox &amp; Filoteo, 2011</a>; <a href="#ref-morgensternOneshotCategorizationNovel2019" role="doc-biblioref">Morgenstern et al., 2019</a>; <a href="#ref-nosofskyModelguidedSearchOptimal2019" role="doc-biblioref">Nosofsky et al., 2019</a>; <a href="#ref-plebanekEffectsFrequencyVariability2021" role="doc-biblioref">Plebanek &amp; James, 2021</a>; <a href="#ref-posnerGenesisAbstractIdeas1968" role="doc-biblioref">Posner &amp; Keele, 1968</a>)</span>, language learning <span class="citation" data-cites="jonesDensityDistinctivenessEarly2020 perryLearnLocallyThink2010 twomeyAllRightNoises2018 wonnacottInputEffectsAcquisition2012 brekelmansDoesHighVariability2022">(<a href="#ref-brekelmansDoesHighVariability2022" role="doc-biblioref">Brekelmans et al., 2022</a>; <a href="#ref-jonesDensityDistinctivenessEarly2020" role="doc-biblioref">Jones &amp; Brandt, 2020</a>; <a href="#ref-perryLearnLocallyThink2010" role="doc-biblioref">Perry et al., 2010</a>; <a href="#ref-twomeyAllRightNoises2018" role="doc-biblioref">Twomey et al., 2018</a>; <a href="#ref-wonnacottInputEffectsAcquisition2012" role="doc-biblioref">Wonnacott et al., 2012</a>)</span>, anagram completion <span class="citation" data-cites="goodeSuperiorityVariableRepeated2008">(<a href="#ref-goodeSuperiorityVariableRepeated2008" role="doc-biblioref">Goode et al., 2008</a>)</span>, perceptual learning <span class="citation" data-cites="manentiVariabilityTrainingUnlocks2023 lovibondStimulusDiscriminabilityInduction2020 robsonSpecificVariedPractice2022a zamanPerceptualVariabilityImplications2021">(<a href="#ref-lovibondStimulusDiscriminabilityInduction2020" role="doc-biblioref">Lovibond et al., 2020</a>; <a href="#ref-manentiVariabilityTrainingUnlocks2023" role="doc-biblioref">Manenti et al., 2023</a>; <a href="#ref-robsonSpecificVariedPractice2022a" role="doc-biblioref">Robson et al., 2022</a>; <a href="#ref-zamanPerceptualVariabilityImplications2021" role="doc-biblioref">Zaman et al., 2021</a>)</span>, trajectory extrapolation <span class="citation" data-cites="fulvioTaskSpecificResponseStrategy2014">(<a href="#ref-fulvioTaskSpecificResponseStrategy2014" role="doc-biblioref">Fulvio et al., 2014</a>)</span>, cognitive control tasks <span class="citation" data-cites="sabahWhenLessMore2019 moshon-cohenStimulusVariabilityImproves2024">(<a href="#ref-moshon-cohenStimulusVariabilityImproves2024" role="doc-biblioref">Moshon-Cohen et al., 2024</a>; <a href="#ref-sabahWhenLessMore2019" role="doc-biblioref">Sabah et al., 2019</a>)</span>, associative learning <span class="citation" data-cites="leeEvidentialDiversityIncreases2019 reichmannVariabilityAbstractionEvaluative2023 fanStimulusDiversityIncreases2022 pradaExperiencedCategoryVariability2020 liveseyRevisitingPeakShift2019">(<a href="#ref-fanStimulusDiversityIncreases2022" role="doc-biblioref">Fan et al., 2022</a>; <a href="#ref-leeEvidentialDiversityIncreases2019" role="doc-biblioref">Lee et al., 2019</a>; <a href="#ref-liveseyRevisitingPeakShift2019" role="doc-biblioref">Livesey &amp; McLaren, 2019</a>; <a href="#ref-pradaExperiencedCategoryVariability2020" role="doc-biblioref">Prada &amp; Garcia-Marques, 2020</a>; <a href="#ref-reichmannVariabilityAbstractionEvaluative2023" role="doc-biblioref">Reichmann et al., 2023</a>)</span>, visual search <span class="citation" data-cites="georgeStimulusVariabilityTask2021 gonzalezDiversityTrainingEnhances2011 kelleyLearningAttendEffects2009">(<a href="#ref-georgeStimulusVariabilityTask2021" role="doc-biblioref">George &amp; Egner, 2021</a>; <a href="#ref-gonzalezDiversityTrainingEnhances2011" role="doc-biblioref">Gonzalez &amp; Madhavan, 2011</a>; <a href="#ref-kelleyLearningAttendEffects2009" role="doc-biblioref">Kelley &amp; Yantis, 2009</a>)</span>, voice identity learning <span class="citation" data-cites="lavanEffectsHighVariability2019">(<a href="#ref-lavanEffectsHighVariability2019" role="doc-biblioref">Lavan et al., 2019</a>)</span>, face recognition <span class="citation" data-cites="honigPerceptualSimilarityModulates2022 burtonIdentityVariationRepresentations2016 menonVariationPhotosSame2015">(<a href="#ref-burtonIdentityVariationRepresentations2016" role="doc-biblioref">Burton et al., 2016</a>; <a href="#ref-honigPerceptualSimilarityModulates2022" role="doc-biblioref">Honig et al., 2022</a>; <a href="#ref-menonVariationPhotosSame2015" role="doc-biblioref">Menon et al., 2015</a>)</span>, the perception of social group heterogeneity <span class="citation" data-cites="linvilleExemplarAbstractionModels1993 konovalovaInformationSamplingExplanation2020 parkPerceptionVariabilityCategory1987 gershmanStructureLearningPrinciples2023">(<a href="#ref-gershmanStructureLearningPrinciples2023" role="doc-biblioref">Gershman &amp; Cikara, 2023</a>; <a href="#ref-konovalovaInformationSamplingExplanation2020" role="doc-biblioref">Konovalova &amp; Le Mens, 2020</a>; <a href="#ref-linvilleExemplarAbstractionModels1993" role="doc-biblioref">Linville &amp; Fischer, 1993</a>; <a href="#ref-parkPerceptionVariabilityCategory1987" role="doc-biblioref">Park &amp; Hastie, 1987</a>)</span> , simple motor learning <span class="citation" data-cites="braunMotorTaskVariation2009 kerrSpecificVariedPractice1978 rollerVariablePracticeLenses2001 willeyLimitedGeneralizationVaried2018">(<a href="#ref-braunMotorTaskVariation2009" role="doc-biblioref">Braun et al., 2009</a>; <a href="#ref-kerrSpecificVariedPractice1978" role="doc-biblioref">Kerr &amp; Booth, 1978</a>; <a href="#ref-rollerVariablePracticeLenses2001" role="doc-biblioref">Roller et al., 2001</a>; <a href="#ref-willeyLimitedGeneralizationVaried2018" role="doc-biblioref">Willey &amp; Liu, 2018</a>)</span>, sports training <span class="citation" data-cites="greenPracticeVariabilityTransfer1995a northEffectConsistentVaried2019 breslinConstantVariablePractice2012">(<a href="#ref-breslinConstantVariablePractice2012" role="doc-biblioref">Breslin et al., 2012</a>; <a href="#ref-greenPracticeVariabilityTransfer1995a" role="doc-biblioref">Green et al., 1995</a>; <a href="#ref-northEffectConsistentVaried2019" role="doc-biblioref">North et al., 2019</a>)</span>, and complex skill learning <span class="citation" data-cites="seowTransferEffectsVaried2019 huetEducationAttentionExplanation2011 hacquesVisualControlClimbing2022">(<a href="#ref-hacquesVisualControlClimbing2022" role="doc-biblioref">Hacques et al., 2022</a>; <a href="#ref-huetEducationAttentionExplanation2011" role="doc-biblioref">Huet et al., 2011</a>; <a href="#ref-seowTransferEffectsVaried2019" role="doc-biblioref">Seow et al., 2019</a>)</span>. See <span class="citation" data-cites="czyzVariabilityPracticeInformation2021">Czyż (<a href="#ref-czyzVariabilityPracticeInformation2021" role="doc-biblioref">2021</a>)</span> or <span class="citation" data-cites="ravivHowVariabilityShapes2022">Raviv et al. (<a href="#ref-ravivHowVariabilityShapes2022" role="doc-biblioref">2022</a>)</span> for more detailed reviews.</p>
+<div style="page-break-after: always;"></div>
 </section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-braunMotorTaskVariation2009" class="csl-entry" role="listitem">
+Braun, D. A., Aertsen, A., Wolpert, D. M., &amp; Mehring, C. (2009). Motor <span>Task Variation Induces Structural Learning</span>. <em>Current Biology</em>, <em>19</em>(4), 352–357. <a href="https://doi.org/10.1016/j.cub.2009.01.036">https://doi.org/10.1016/j.cub.2009.01.036</a>
+</div>
+<div id="ref-brekelmansDoesHighVariability2022" class="csl-entry" role="listitem">
+Brekelmans, G., Lavan, N., Saito, H., Clayards, M., &amp; Wonnacott, E. (2022). Does high variability training improve the learning of non-native phoneme contrasts over low variability training? <span>A</span> replication. <em>Journal of Memory and Language</em>, <em>126</em>, 104352. <a href="https://doi.org/10.1016/j.jml.2022.104352">https://doi.org/10.1016/j.jml.2022.104352</a>
+</div>
+<div id="ref-breslinConstantVariablePractice2012" class="csl-entry" role="listitem">
+Breslin, G., Hodges, N. J., Steenson, A., &amp; Williams, A. M. (2012). Constant or variable practice: <span>Recreating</span> the especial skill effect. <em>Acta Psychologica</em>, <em>140</em>(2), 154–157. <a href="https://doi.org/10.1016/j.actpsy.2012.04.002">https://doi.org/10.1016/j.actpsy.2012.04.002</a>
+</div>
+<div id="ref-burtonIdentityVariationRepresentations2016" class="csl-entry" role="listitem">
+Burton, A. M., Kramer, R. S. S., Ritchie, K. L., &amp; Jenkins, R. (2016). Identity <span>From Variation</span>: <span>Representations</span> of <span>Faces Derived From Multiple Instances</span>. <em>Cognitive Science</em>, <em>40</em>(1), 202–223. <a href="https://doi.org/10.1111/cogs.12231">https://doi.org/10.1111/cogs.12231</a>
+</div>
+<div id="ref-czyzVariabilityPracticeInformation2021" class="csl-entry" role="listitem">
+Czyż, S. H. (2021). Variability of <span>Practice</span>, <span>Information Processing</span>, and <span>Decision Making</span>—<span>How Much Do We Know</span>? <em>Frontiers in Psychology</em>, <em>12</em>. <a href="https://doi.org/10.3389/fpsyg.2021.639131">https://doi.org/10.3389/fpsyg.2021.639131</a>
+</div>
+<div id="ref-fanStimulusDiversityIncreases2022" class="csl-entry" role="listitem">
+Fan, M., Zhang, D., Zhao, S., Xie, Q., Chen, W., Jie, J., Wang, Y., &amp; Zheng, X. (2022). Stimulus diversity increases category-based fear generalization and the effect of intolerance of uncertainty. <em>Behaviour Research and Therapy</em>, <em>159</em>, 104201. <a href="https://doi.org/10.1016/j.brat.2022.104201">https://doi.org/10.1016/j.brat.2022.104201</a>
+</div>
+<div id="ref-fulvioTaskSpecificResponseStrategy2014" class="csl-entry" role="listitem">
+Fulvio, J. M., Green, C. S., &amp; Schrater, P. R. (2014). Task-<span>Specific Response Strategy Selection</span> on the <span>Basis</span> of <span>Recent Training Experience</span>. <em>PLOS Computational Biology</em>, <em>10</em>(1), e1003425. <a href="https://doi.org/10.1371/journal.pcbi.1003425">https://doi.org/10.1371/journal.pcbi.1003425</a>
+</div>
+<div id="ref-georgeStimulusVariabilityTask2021" class="csl-entry" role="listitem">
+George, N., &amp; Egner, T. (2021). Stimulus variability and task relevance modulate binding-learning. <em>Attention, Perception, &amp; Psychophysics</em>. <a href="https://doi.org/10.3758/s13414-021-02338-6">https://doi.org/10.3758/s13414-021-02338-6</a>
+</div>
+<div id="ref-gershmanStructureLearningPrinciples2023" class="csl-entry" role="listitem">
+Gershman, S. J., &amp; Cikara, M. (2023). Structure learning principles of stereotype change. <em>Psychonomic Bulletin &amp; Review</em>, <em>30</em>(4), 1273–1293. <a href="https://doi.org/10.3758/s13423-023-02252-y">https://doi.org/10.3758/s13423-023-02252-y</a>
+</div>
+<div id="ref-gonzalezDiversityTrainingEnhances2011" class="csl-entry" role="listitem">
+Gonzalez, C., &amp; Madhavan, P. (2011). Diversity during training enhances detection of novel stimuli. <em>Journal of Cognitive Psychology</em>, <em>23</em>(3), 342–350. <a href="https://doi.org/10.1080/20445911.2011.507187">https://doi.org/10.1080/20445911.2011.507187</a>
+</div>
+<div id="ref-goodeSuperiorityVariableRepeated2008" class="csl-entry" role="listitem">
+Goode, M. K., Geraci, L., &amp; Roediger, H. L. (2008). Superiority of variable to repeated practice in transfer on anagram solution. <em>Psychonomic Bulletin &amp; Review</em>, <em>15</em>(3), 662–666. <a href="https://doi.org/10.3758/PBR.15.3.662">https://doi.org/10.3758/PBR.15.3.662</a>
+</div>
+<div id="ref-greenPracticeVariabilityTransfer1995a" class="csl-entry" role="listitem">
+Green, D. P., Whitehead, J., &amp; Sugden, D. A. (1995). Practice <span>Variability</span> and <span>Transfer</span> of a <span>Racket Skill</span>. <em>Perceptual and Motor Skills</em>, <em>81</em>(3_suppl), 1275–1281. <a href="https://doi.org/10.2466/pms.1995.81.3f.1275">https://doi.org/10.2466/pms.1995.81.3f.1275</a>
+</div>
+<div id="ref-hacquesVisualControlClimbing2022" class="csl-entry" role="listitem">
+Hacques, G., Dicks, M., Komar, J., &amp; Seifert, L. (2022). Visual control during climbing: <span>Variability</span> in practice fosters a proactive gaze pattern. <em>PLOS ONE</em>, <em>17</em>(6), e0269794. <a href="https://doi.org/10.1371/journal.pone.0269794">https://doi.org/10.1371/journal.pone.0269794</a>
+</div>
+<div id="ref-hahnEffectsCategoryDiversity2005" class="csl-entry" role="listitem">
+Hahn, U., Bailey, T. M., &amp; Elvin, L. B. C. (2005). Effects of category diversity on learning, memory, and generalization. <em>Memory &amp; Cognition</em>, <em>33</em>(2), 289–302. <a href="https://doi.org/10.3758/BF03195318">https://doi.org/10.3758/BF03195318</a>
+</div>
+<div id="ref-honigPerceptualSimilarityModulates2022" class="csl-entry" role="listitem">
+Honig, T., Shoham, A., &amp; Yovel, G. (2022). Perceptual similarity modulates effects of learning from variability on face recognition. <em>Vision Research</em>, <em>201</em>, 108128. <a href="https://doi.org/10.1016/j.visres.2022.108128">https://doi.org/10.1016/j.visres.2022.108128</a>
+</div>
+<div id="ref-huetEducationAttentionExplanation2011" class="csl-entry" role="listitem">
+Huet, M., Jacobs, D. M., Camachon, C., Missenard, O., Gray, R., &amp; Montagne, G. (2011). The education of attention as explanation of variability of practice effects: <span>Learning</span> the final approach phase in a flight simulator. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>37</em>(6), 1841–1854. <a href="https://doi.org/10.1037/a0024386">https://doi.org/10.1037/a0024386</a>
+</div>
+<div id="ref-jonesDensityDistinctivenessEarly2020" class="csl-entry" role="listitem">
+Jones, S. D., &amp; Brandt, S. (2020). Density and <span>Distinctiveness</span> in <span>Early Word Learning</span>: <span>Evidence From Neural Network Simulations</span>. <em>Cognitive Science</em>, <em>44</em>(1), e12812. <a href="https://doi.org/10.1111/cogs.12812">https://doi.org/10.1111/cogs.12812</a>
+</div>
+<div id="ref-kelleyLearningAttendEffects2009" class="csl-entry" role="listitem">
+Kelley, T. A., &amp; Yantis, S. (2009). Learning to attend: <span>Effects</span> of practice on information selection. <em>Journal of Vision</em>, <em>9</em>(7), 16. <a href="https://doi.org/10.1167/9.7.16">https://doi.org/10.1167/9.7.16</a>
+</div>
+<div id="ref-kerrSpecificVariedPractice1978" class="csl-entry" role="listitem">
+Kerr, R., &amp; Booth, B. (1978). Specific and varied practice of motor skill. <em>Perceptual and Motor Skills</em>, <em>46</em>(2), 395–401. <a href="https://doi.org/10.1177/003151257804600201">https://doi.org/10.1177/003151257804600201</a>
+</div>
+<div id="ref-konovalovaInformationSamplingExplanation2020" class="csl-entry" role="listitem">
+Konovalova, E., &amp; Le Mens, G. (2020). An information sampling explanation for the in-group heterogeneity effect. <em>Psychological Review</em>, <em>127</em>(1), 47–73. <a href="https://doi.org/10.1037/rev0000160">https://doi.org/10.1037/rev0000160</a>
+</div>
+<div id="ref-lavanEffectsHighVariability2019" class="csl-entry" role="listitem">
+Lavan, N., Knight, S., Hazan, V., &amp; McGettigan, C. (2019). The effects of high variability training on voice identity learning. <em>Cognition</em>, <em>193</em>, 104026. <a href="https://doi.org/10.1016/j.cognition.2019.104026">https://doi.org/10.1016/j.cognition.2019.104026</a>
+</div>
+<div id="ref-leeEvidentialDiversityIncreases2019" class="csl-entry" role="listitem">
+Lee, J. C., Lovibond, P. F., &amp; Hayes, B. K. (2019). Evidential diversity increases generalisation in predictive learning. <em>Quarterly Journal of Experimental Psychology</em>, <em>72</em>(11), 2647–2657. <a href="https://doi.org/10.1177/1747021819857065">https://doi.org/10.1177/1747021819857065</a>
+</div>
+<div id="ref-linvilleExemplarAbstractionModels1993" class="csl-entry" role="listitem">
+Linville, P. W., &amp; Fischer, G. W. (1993). Exemplar and <span>Abstraction Models</span> of <span>Perceived Group Variability</span> and <span>Stereotypicality</span>. <em>Social Cognition</em>, <em>11</em>(1), 92–125. <a href="https://doi.org/10.1521/soco.1993.11.1.92">https://doi.org/10.1521/soco.1993.11.1.92</a>
+</div>
+<div id="ref-liveseyRevisitingPeakShift2019" class="csl-entry" role="listitem">
+Livesey, E. J., &amp; McLaren, I. P. (2019). Revisiting peak shift on an artificial dimension: <span>Effects</span> of stimulus variability on generalisation. <em>Quarterly Journal of Experimental Psychology</em>, <em>72</em>(2), 132–150. <a href="https://doi.org/10.1177/1747021817739832">https://doi.org/10.1177/1747021817739832</a>
+</div>
+<div id="ref-lovibondStimulusDiscriminabilityInduction2020" class="csl-entry" role="listitem">
+Lovibond, P. F., Lee, J. C., &amp; Hayes, B. K. (2020). Stimulus discriminability and induction as independent components of generalization. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, <em>46</em>(6), 1106–1120. <a href="https://doi.org/10.1037/xlm0000779">https://doi.org/10.1037/xlm0000779</a>
+</div>
+<div id="ref-maddoxStimulusRangeDiscontinuity2011" class="csl-entry" role="listitem">
+Maddox, W. T., &amp; Filoteo, J. V. (2011). Stimulus range and discontinuity effects on information-integration category learning and generalization. <em>Attention, Perception, &amp; Psychophysics</em>, <em>73</em>(4), 1279–1295. <a href="https://doi.org/10.3758/s13414-011-0101-2">https://doi.org/10.3758/s13414-011-0101-2</a>
+</div>
+<div id="ref-manentiVariabilityTrainingUnlocks2023" class="csl-entry" role="listitem">
+Manenti, G. L., Dizaji, A. S., &amp; Schwiedrzik, C. M. (2023). Variability in training unlocks generalization in visual perceptual learning through invariant representations. <em>Current Biology</em>, <em>33</em>(5), 817–826.e3. <a href="https://doi.org/10.1016/j.cub.2023.01.011">https://doi.org/10.1016/j.cub.2023.01.011</a>
+</div>
+<div id="ref-menonVariationPhotosSame2015" class="csl-entry" role="listitem">
+Menon, N., White, D., &amp; Kemp, R. I. (2015). Variation in <span>Photos</span> of the <span>Same Face Drives Improvements</span> in <span>Identity Verification</span>. <em>Perception</em>, <em>44</em>(11), 1332–1341. <a href="https://doi.org/10.1177/0301006615599902">https://doi.org/10.1177/0301006615599902</a>
+</div>
+<div id="ref-morgensternOneshotCategorizationNovel2019" class="csl-entry" role="listitem">
+Morgenstern, Y., Schmidt, F., &amp; Fleming, R. W. (2019). One-shot categorization of novel object classes in humans. <em>Vision Research</em>, <em>165</em>, 98–108. <a href="https://doi.org/10.1016/j.visres.2019.09.005">https://doi.org/10.1016/j.visres.2019.09.005</a>
+</div>
+<div id="ref-moshon-cohenStimulusVariabilityImproves2024" class="csl-entry" role="listitem">
+Moshon-Cohen, T. E., Weinbach, N., &amp; Bitan, T. (2024). Stimulus variability improves generalization following response inhibition training. <em>Psychological Research</em>, 1–17. <a href="https://doi.org/10.1007/s00426-023-01913-w">https://doi.org/10.1007/s00426-023-01913-w</a>
+</div>
+<div id="ref-northEffectConsistentVaried2019" class="csl-entry" role="listitem">
+North, J. S., Bezodis, N. E., Murphy, C. P., Runswick, O. R., Pocock, C., &amp; Roca, A. (2019). The effect of consistent and varied follow-through practice schedules on learning a table tennis backhand. <em>Journal of Sports Sciences</em>, <em>37</em>(6), 613–620. <a href="https://doi.org/10.1080/02640414.2018.1522683">https://doi.org/10.1080/02640414.2018.1522683</a>
+</div>
+<div id="ref-nosofskyModelguidedSearchOptimal2019" class="csl-entry" role="listitem">
+Nosofsky, R. M., Sanders, C. A., Zhu, X., &amp; McDaniel, M. A. (2019). Model-guided search for optimal natural-science-category training exemplars: <span>A</span> work in progress. <em>Psychonomic Bulletin &amp; Review</em>, <em>26</em>(1), 48–76. <a href="https://doi.org/10.3758/s13423-018-1508-8">https://doi.org/10.3758/s13423-018-1508-8</a>
+</div>
+<div id="ref-parkPerceptionVariabilityCategory1987" class="csl-entry" role="listitem">
+Park, B., &amp; Hastie, R. (1987). Perception of variability in category development: <span class="nocase">Instance-versus</span> abstraction-based stereotypes. <em>Journal of Personality and Social Psychology</em>, <em>53</em>(4), 621.
+</div>
+<div id="ref-perryLearnLocallyThink2010" class="csl-entry" role="listitem">
+Perry, L. K., Samuelson, L. K., Malloy, L. M., &amp; Schiffer, R. N. (2010). Learn <span>Locally</span>, <span>Think Globally</span>: <span>Exemplar Variability Supports Higher-Order Generalization</span> and <span>Word Learning</span>. <em>Psychological Science</em>, <em>21</em>(12), 1894–1902. <a href="https://doi.org/10.1177/0956797610389189">https://doi.org/10.1177/0956797610389189</a>
+</div>
+<div id="ref-plebanekEffectsFrequencyVariability2021" class="csl-entry" role="listitem">
+Plebanek, D. J., &amp; James, K. H. (2021). The <span>Effects</span> of <span>Frequency</span>, <span>Variability</span>, and <span class="nocase">Co-occurrence</span> on <span>Category Formation</span> in <span>Neural Systems</span>. <em>Journal of Cognitive Neuroscience</em>, 1–16. <a href="https://doi.org/10.1162/jocn_a_01738">https://doi.org/10.1162/jocn_a_01738</a>
+</div>
+<div id="ref-posnerGenesisAbstractIdeas1968" class="csl-entry" role="listitem">
+Posner, M. I., &amp; Keele, S. W. (1968). On the genesis of abstract ideas. <em>Journal of Experimental Psychology</em>, <em>77</em>(3), 353–363. <a href="https://doi.org/10.1037/h0025953">https://doi.org/10.1037/h0025953</a>
+</div>
+<div id="ref-pradaExperiencedCategoryVariability2020" class="csl-entry" role="listitem">
+Prada, M., &amp; Garcia-Marques, T. (2020). Experienced category variability modulates the impact of context on evaluative judgments. <em>Experimental Psychology</em>, <em>67</em>(1), 5–13. <a href="https://doi.org/10.1027/1618-3169/a000469">https://doi.org/10.1027/1618-3169/a000469</a>
+</div>
+<div id="ref-ravivHowVariabilityShapes2022" class="csl-entry" role="listitem">
+Raviv, L., Lupyan, G., &amp; Green, S. C. (2022). How variability shapes learning and generalization. <em>Trends in Cognitive Sciences</em>, S1364661322000651. <a href="https://doi.org/10.1016/j.tics.2022.03.007">https://doi.org/10.1016/j.tics.2022.03.007</a>
+</div>
+<div id="ref-reichmannVariabilityAbstractionEvaluative2023" class="csl-entry" role="listitem">
+Reichmann, K., Hütter, M., Kaup, B., &amp; Ramscar, M. (2023). Variability and abstraction in evaluative conditioning: <span>Consequences</span> for the generalization of likes and dislikes. <em>Journal of Experimental Social Psychology</em>, <em>108</em>, 104478. <a href="https://doi.org/10.1016/j.jesp.2023.104478">https://doi.org/10.1016/j.jesp.2023.104478</a>
+</div>
+<div id="ref-robsonSpecificVariedPractice2022a" class="csl-entry" role="listitem">
+Robson, S. G., Tangen, J. M., &amp; Searston, R. A. (2022). Specific versus varied practice in perceptual expertise training. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, <em>48</em>(12), 1336–1346. <a href="https://doi.org/10.1037/xhp0001057">https://doi.org/10.1037/xhp0001057</a>
+</div>
+<div id="ref-rollerVariablePracticeLenses2001" class="csl-entry" role="listitem">
+Roller, C. A., Cohen, H. S., Kimball, K. T., &amp; Bloomberg, J. J. (2001). Variable practice with lenses improves visuo-motor plasticity. <em>Cognitive Brain Research</em>, <em>12</em>(2), 341–352. <a href="https://doi.org/10.1016/S0926-6410(01)00077-5">https://doi.org/10.1016/S0926-6410(01)00077-5</a>
+</div>
+<div id="ref-sabahWhenLessMore2019" class="csl-entry" role="listitem">
+Sabah, K., Dolk, T., Meiran, N., &amp; Dreisbach, G. (2019). When less is more: Costs and benefits of varied vs. Fixed content and structure in short-term task switching training. <em>Psychological Research</em>, <em>83</em>(7), 1531–1542. <a href="https://doi.org/10.1007/s00426-018-1006-7">https://doi.org/10.1007/s00426-018-1006-7</a>
+</div>
+<div id="ref-seowTransferEffectsVaried2019" class="csl-entry" role="listitem">
+Seow, R. Y. T., Betts, S., &amp; Anderson, J. R. (2019). Transfer effects of varied practice and adaptation to changes in complex skill acquisition. <em>Proceedings of the 17th International Conference on Cognitive Modelling</em>, 222–227.
+</div>
+<div id="ref-twomeyAllRightNoises2018" class="csl-entry" role="listitem">
+Twomey, K. E., Ma, L., &amp; Westermann, G. (2018). All the <span>Right Noises</span>: <span>Background Variability Helps Early Word Learning</span>. <em>Cognitive Science</em>, <em>42</em>(S2), 413–438. <a href="https://doi.org/10.1111/cogs.12539">https://doi.org/10.1111/cogs.12539</a>
+</div>
+<div id="ref-willeyLimitedGeneralizationVaried2018" class="csl-entry" role="listitem">
+Willey, C. R., &amp; Liu, Z. (2018). Limited generalization with varied, as compared to specific, practice in short-term motor learning. <em>Acta Psychologica</em>, <em>182</em>, 39–45. <a href="https://doi.org/10.1016/j.actpsy.2017.11.008">https://doi.org/10.1016/j.actpsy.2017.11.008</a>
+</div>
+<div id="ref-wonnacottInputEffectsAcquisition2012" class="csl-entry" role="listitem">
+Wonnacott, E., Boyd, J. K., Thomson, J., &amp; Goldberg, A. E. (2012). Input effects on the acquisition of a novel phrasal construction in 5year olds. <em>Journal of Memory and Language</em>, <em>66</em>(3), 458–478. <a href="https://doi.org/10.1016/j.jml.2011.11.004">https://doi.org/10.1016/j.jml.2011.11.004</a>
+</div>
+<div id="ref-zamanPerceptualVariabilityImplications2021" class="csl-entry" role="listitem">
+Zaman, J., Chalkia, A., Zenses, A.-K., Bilgin, A. S., Beckers, T., Vervliet, B., &amp; Boddez, Y. (2021). Perceptual variability: <span>Implications</span> for learning and generalization. <em>Psychonomic Bulletin &amp; Review</em>, <em>28</em>(1), 1–19. <a href="https://doi.org/10.3758/s13423-020-01780-1">https://doi.org/10.3758/s13423-020-01780-1</a>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
 </section>
 
 </main>

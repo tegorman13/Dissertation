@@ -6,24 +6,7 @@
 
 \end{centering}
 
-Researchers and educators have long been interested in how the variability of training examples experienced
-during learning influences subsequent generalization. However, previous studies have reported both beneficial
-and detrimental effects, leaving the nature of this relationship unclear. Furthermore, a formal computational
-modeling approach to account for the effects of training variability has been largely lacking within the domain of
-visuomotor skill learning. The current work presents two projects which shed light on this issue, each consisting of
-several experiments which compare varied training (i.e., multiple training items) in comparison to constant
-training (training with a single item).
-The empirical results, much like those of the broader literature, provide evidence both for and against a benefit of
-variable training in visuomotor skill learning, highlighting the complex interplay between training conditions and
-generalization performance. To provide a theoretical account of these findings, this dissertation employs both
-instance-based and connectionist computational modeling approaches. The instance-based modeling approach
-introduced in project 1 provides a theoretically justifiable method of quantifying/controlling for similarity
-between training and testing conditions, while also demonstrating that varied training may induce broader
-generalization in the similarity function relating training and test items. In project 2, the Extrapolation-
-Association Model (EXAM) provided the best account of the testing data across all experiments, capturing the
-constant groups' ability to extrapolate linearly to novel regions despite limited training experience, while also
-revealing potential detriments of varied training for simple extrapolation tasks.
-By integrating empirical findings with computational modeling approaches, this dissertation sheds light on the
-complex relationship between training variability and generalization performance.
+The impact of training variability on generalization has been a long-standing topic in the study of human learning, with conflicting evidence about its potential benefits. This dissertation addresses these ambiguities by examining the effects of varied versus constant training in visuomotor skill learning through a combination of experimental and computational modeling approaches. Across two projects, we systematically compare varied training (multiple items) to constant training (single item) in a projectile-throwing task. Empirical findings reveal both positive and negative impacts of variability, highlighting the complex interplay between training conditions and generalization performance. To provide a theoretical account of these findings, this dissertation employs both instance-based and connectionist computational modeling approaches. The instance-based modeling approach introduced in project 1 provides a theoretically justifiable method of quantifying/controlling for similarity between training and testing conditions, while also demonstrating that varied training may induce broader generalization in the similarity function relating training and test items. In project 2, the Extrapolation-Association Model (EXAM) provided the best account of the testing data across all experiments, capturing the
+constant groups' ability to extrapolate to novel regions despite limited training experience, while also revealing potential detriments of varied training for simple extrapolation tasks. These results challenge simplistic notions about the universality of variability benefits in training and emphasize the need for tailored approaches that consider both the structure of the task environment and the prior knowledge of the learners.
 
 \newpage
