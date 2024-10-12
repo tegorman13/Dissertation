@@ -59,9 +59,9 @@ format:
     # lot: true
     # lof: true
     colorlinks: true
-    linkcolor: DarkSlateBlue
-    urlcolor: DarkSlateBlue
-    citecolor: DarkSlateBlue
+    linkcolor: Black
+    urlcolor: Black
+    citecolor: Black
     link-citations: true
     # linestretch: 1.05
     include-in-header:
