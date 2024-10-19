@@ -2,12 +2,18 @@
 
 # Curriculum Vitae
 
+# Thomas E. Gorman {.unnumbered .unlisted}
+
+**Email:** tegorman13@gmail.com  <br><br>
+
+**Website:** [tegorman13.github.io](https://tegorman13.github.io/)
+
 ## Education {.unnumbered .unlisted}
 
 ::: {.content-visible when-format="pdf"}
 ```{=tex}
 \begin{tabular}{p{0.3\textwidth} p{0.7\textwidth}}
-2017 - May 2024 & \textbf{Indiana University - Bloomington} \\
+2017 - October 2024 & \textbf{Indiana University - Bloomington} \\
 & PhD in Psychology and Cognitive Science \\ 
 & Dissertation: \textit{The Role of Variability in Learning Generalization: A Computational Modeling Approach}\\
 2011 - 2015 & \textbf{University of Wisconsin - Madison} \\

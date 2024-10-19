@@ -12,7 +12,7 @@ execute:
 format:
   docx:
     prefer-html: true
-    output-file: "TG_Full_Dissertation2.docx"
+    output-file: "TG_Diss_Test.docx"
     toc: true
   html:
     toc: false
@@ -26,7 +26,7 @@ format:
   pdf:
     cite-method: citeproc
     #date: today
-    output-file: "TG_Full_Dissertation2.pdf"
+    output-file: "TG_Diss_Test.pdf"
     mathfont: "Libertinus Math"
     documentclass: article
     papersize: letter
@@ -44,8 +44,8 @@ format:
     # lot: true
     # lof: true
     colorlinks: true
-    linkcolor: Black
-    urlcolor: Black
+    linkcolor: DarkSlateBlue
+    urlcolor: DarkSlateBlue
     citecolor: Black
     link-citations: true
     # linestretch: 1.05
@@ -112,6 +112,80 @@ Varied training has been shown to influence learning in a wide array of differen
 
 {{< pagebreak >}}
 
+
+
+::: {.content-visible unless-format="markdown"}
+```{dot}
+//| label: fig-design-e1
+//| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
+//| fig-width: 6.0
+//| fig-height: 1.9
+//| fig-responsive: false
+//| echo: false  
+///| eval: !expr out_type 
+/////| column: screen-inset-right
+digraph {
+  graph [layout = dot, rankdir = LR]
+
+  // define the global styles of the nodes
+  node [shape = rectangle, style = filled]
+
+  data1 [label = " Varied Training \n800-1000\n1000-1200\n1200-1400", fillcolor = "#00A08A"]
+  data2 [label = " Constant Training \n800-1000", fillcolor = "#FF0000"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+
+  // edge definitions with the node IDs
+  data1 -> Test1
+  data2 -> Test1
+
+  subgraph cluster {
+    label = "Test Phase \n(Counterbalanced Order)"
+    Test1 [label = "Test  \nNovel Bands \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+    Test2 [label = "  Test \n  Varied Training Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
+    Test1 -> Test2
+  }
+
+  Test2 -> Test3
+}
+```
+:::
+
+
+
+{{< pagebreak >}}
+
+
+::: {.content-visible unless-format="markdown"}
+```{dot}
+//| label: fig-design-e2
+//| fig-cap: "Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1. "
+//| fig-width: 6.0
+//| fig-height: 1.8
+//| fig-responsive: false
+//| echo: false 
+//| 
+/////| column: screen-inset-right
+digraph {
+  graph [layout = dot, rankdir = LR]
+  node [shape = rectangle, style = filled]
+  data1 [label = " Varied Training \n100-300\n350-550\n600-800", fillcolor = "#00A08A"]
+  data2 [label = " Constant Training \n600-800", fillcolor = "#FF0000"]
+  Test3 [label = "    Final Test \n  Novel With Feedback  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
+  data1 -> Test1
+  data2 -> Test1
+  subgraph cluster {
+    label = "Test Phase \n(Counterbalanced Order)"
+    Test1 [label = "Test  \nNovel Bands  \n800-1000\n1000-1200\n1200-1400", fillcolor = "#ECCBAE"]
+    Test2 [label = "  Test \n  Varied Training Bands  \n100-300\n350-550\n600-800", fillcolor = "#ECCBAE"]
+    Test1 -> Test2
+  }
+  Test2 -> Test3
+}
+```
+  
+:::
+
+{{< pagebreak >}}
 
 # References
 ::: {#refs}

@@ -983,8 +983,8 @@ A final training stage presented participants with "feedback" testing for each o
 ```{dot}
 //| label: fig-design-e1
 //| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
-//| fig-width: 7.0
-//| fig-height: 2.5
+//| fig-width: 6.0
+//| fig-height: 1.8
 //| fig-responsive: false
 //| echo: false  
 ///| eval: !expr out_type 
@@ -1322,8 +1322,8 @@ Initially, 131 participants were recruited. After applying the same exclusion pr
 ```{dot}
 //| label: fig-design-e2
 //| fig-cap: "Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1. "
-//| fig-width: 7.0
-//| fig-height: 2.2
+//| fig-width: 6.0
+//| fig-height: 1.8
 //| fig-responsive: false
 //| echo: false 
 //| 

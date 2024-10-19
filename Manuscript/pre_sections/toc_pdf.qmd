@@ -1,5 +1,12 @@
 \tableofcontents
+
+\addtocontents{toc}{\protect\contentsline{section}{Acceptance}{ii}{}}
+\addtocontents{toc}{\protect\contentsline{section}{Copyright}{iii}{}}
+\addtocontents{toc}{\protect\contentsline{section}{Acknowledgements}{iv}{}}
+\addtocontents{toc}{\protect\contentsline{section}{Abstract}{vi}{}}
+
 \newpage
+
 <!-- \listoffigures
 \newpage
 \listoftables

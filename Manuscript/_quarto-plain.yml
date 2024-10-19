@@ -56,17 +56,15 @@ format:
       - left=1in    
       - right=1in  
       - heightrounded
-      
-      # Citations and links
+    # Citations and links
     # lot: true
     # lof: true
     colorlinks: true
-    linkcolor: Black
+    linkcolor: DarkSlateBlue
     urlcolor: Black
     citecolor: Black
     link-citations: true
     # linestretch: 1.05
-
     include-in-header:
       # The \everydisplay thing makes all math blocks use \small font
       text: |
