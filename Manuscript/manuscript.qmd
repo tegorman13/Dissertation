@@ -27,8 +27,6 @@ execute:
 
 ::: {.content-visible when-format="docx"}
 {{< include pre_sections/pre_docx.qmd >}}
-{{< include pre_sections/acknowledgements.qmd >}}
-{{< include pre_sections/abstract.qmd >}}
 :::
 
 {{< pagebreak >}}

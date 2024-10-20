@@ -60,8 +60,8 @@ format:
     # lot: true
     # lof: true
     colorlinks: true
-    linkcolor: DarkSlateBlue
-    urlcolor: Black
+    linkcolor: Black
+    urlcolor: DarkSlateBlue
     citecolor: Black
     link-citations: true
     # linestretch: 1.05
