@@ -1,55 +1,72 @@
 \begin{centering}
-\LARGE
-{The Role of Variability in Learning Transfer: A Similarity-Based Computational Approach}
+
+{THE ROLE OF VARIABILITY IN LEARNING GENERALIZATION: A COMPUTATIONAL MODELING APPROACH}
 
  
-\vspace*{1.5cm}
+\vspace{5\baselineskip}
 
-\LARGE
 {Thomas E. Gorman}
 
-\vspace{16.5cm}
+\vspace{10.5cm}
 
-\end{centering}
 
-<!-- Submitted to the faculty of the Graduate School in partial fulfillment of the
-requirements for the degree Doctor of Philosophy in the Department of Psychology and Brain
-Sciences and the Cognitive Science Program, Indiana University
-Indiana University -->
+
+Submitted to the faculty of the Graduate School \\
+in partial fulfillment of the requirements \\
+for the degree \\
+Doctor of Philosophy \\
+in the Cognitive Science Program and \\
+Department of Psychological and Brain Sciences, \\
+Indiana University \\
+October 2024
+
 
 \vspace{6cm}
 
 \pagenumbering{gobble}
+\end{centering}
 
 \newpage
-
-<!-- \newpage
+\pagenumbering{roman}
+\setcounter{page}{2}
+\begin{center}
 
 Accepted by the Graduate Faculty, Indiana University, in partial fulfillment of the
 requirements for the degree of Doctor of Philosophy.
-\vspace{4cm}
+\end{center}
+\vspace{1cm}
+\
+Doctoral Committee
+\vspace{1cm}
+
+\begin{flushright}
+\underline{\hspace{5cm}} \\
+Robert L. Goldstone, Ph.D.
+\vspace{2cm}
+
+\underline{\hspace{5cm}} \\
+Robert M. Nosofsky, Ph.D.
+\vspace{2cm}
+
+\underline{\hspace{5cm}} \\
+Peter M. Todd, Ph.D.
+\vspace{2cm}
+
+\underline{\hspace{5cm}} \\
+Michael N. Jones, Ph.D.
+\end{flushright}
 
 \
-\_____________________________  Robert L. Goldstone, PhD
-\vspace{2.5cm}
-\
-\
-\_____________________________  Robert Nosofsky, PhD
-\vspace{2.5cm}
-\
-\_____________________________  Peter Todd, PhD
-\vspace{2.5cm}
-\
-\_____________________________  Mike Jones, PhD
+May 28th, 2024
 
-\newpage -->
+\newpage
 
-<!-- \begin{centering}
+\begin{centering}
 
 \vspace*{6.5cm}
 
-@2024 \\ -->
-<!-- \vspace{1cm} 
+Copyright @ 2024 \\
+\vspace{.5cm} 
 
 Thomas E. Gorman
 \vspace{.2cm}
@@ -59,8 +76,4 @@ Thomas E. Gorman
 \end{centering}
 
 \newpage
-\begin{center}
-\textbf{Acknowledgements}
-\end{center}
-\newpage -->
 

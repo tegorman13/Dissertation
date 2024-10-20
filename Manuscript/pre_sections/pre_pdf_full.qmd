@@ -65,7 +65,7 @@ May 28th, 2024
 
 \vspace*{6.5cm}
 
-@2024 \\
+Copyright @ 2024 \\
 \vspace{.5cm} 
 
 Thomas E. Gorman

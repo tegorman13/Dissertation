@@ -50,7 +50,7 @@ May 28th, 2024
 # {.unnumbered .unlisted}
 
 ::: {custom-style="Subtitle"}
-© 2024  
+Copyright © 2024  
 
 Thomas E. Gorman
 :::

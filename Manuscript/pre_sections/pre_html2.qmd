@@ -57,7 +57,7 @@
 Submitted to the faculty of the Graduate School<br>
 in partial fulfillment of the requirements<br>
 for the degree<br>
-Doctor of Philosophy<br><br>
+Doctor of Philosophy<br>
 in the Cognitive Science Program and<br>
 Department of Psychological and Brain Sciences,<br>
 Indiana University<br>
@@ -90,7 +90,7 @@ May 28th, 2024
 <br><br><br>
 
 
-<div class="copyright">&copy; 2024 <br><br> Thomas E. Gorman </div>
+<div class="copyright"> Copyright &copy; 2024 <br><br> Thomas E. Gorman </div>
 
 
 
