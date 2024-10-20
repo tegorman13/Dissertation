@@ -2110,7 +2110,7 @@ c_post + lr_post
 ```{r}
 #| label: fig-htw-resid-pred
 #| fig-cap: "Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y-axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands."
-#| fig-height: 14
+#| fig-height: 13.5
 #| fig-width: 11
 
 train_resid <- pd_train |> group_by(id,condit,Model,Fit_Method, Block,x) |> 

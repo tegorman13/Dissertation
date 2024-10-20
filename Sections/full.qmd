@@ -975,8 +975,8 @@ Following the training stage, participants proceeded immediately to the testing 
 ```{dot}
 //| label: fig-design-e1
 //| fig-cap: "Experiment 1 Design. Constant and Varied participants complete different training conditions."
-//| fig-width: 7.0
-//| fig-height: 2.5
+//| fig-width: 6.0
+//| fig-height: 1.8
 //| fig-responsive: false
 //| echo: false  
 ///| eval: !expr out_type 
@@ -1288,8 +1288,8 @@ Initially, 131 participants were recruited. After applying the same exclusion pr
 ```{dot}
 //| label: fig-design-e2
 //| fig-cap: "Experiment 2 Design. Constant and Varied participants complete different training conditions. The training and testing bands are the reverse of Experiment 1. "
-//| fig-width: 7.0
-//| fig-height: 2.2
+//| fig-width: 6.0
+//| fig-height: 1.8
 //| fig-responsive: false
 //| echo: false 
 //| 
@@ -2021,7 +2021,7 @@ c_post + lr_post
 ```{r}
 #| label: fig-htw-resid-pred
 #| fig-cap: "Model residuals for each combination of training condition, fit method, and model. Residuals reflect the difference between observed and predicted values. Lower values indicate better model fit. Note that y-axes are scaled differently between facets. A) Residuals predicting each block of the training data. B) Residuals predicting each band during the testing stage. Bolded bars indicate bands that were trained, non-bold bars indicate extrapolation bands."
-#| fig-height: 14
+#| fig-height: 13.5
 #| fig-width: 11
 
 train_resid <- pd_train |> group_by(id,condit,Model,Fit_Method, Block,x) |> 
